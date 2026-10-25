@@ -7,8 +7,12 @@
   gate_or_phase: "Gate 1"     # Gate 1 (0-5), Gate 2 (12-14), Gate 3 (20-35), SS0, SS1, or SS2
   cost_or_requirement: "..."  # Resource cost, policy lever, or combo requirement
   synergy_links: ["B:02"]     # Array of P:DD card IDs that combo with this card
+  co2e_impact:                # Optional CO2e badge rendered in top-right or bottom-right corner
+    display: "-10.0 MtCO2e/yr"
+    status: "computed"        # Enum: computed | indirect_enabler | hazard_increase | na
   effects:                    # Array of named game mechanics / rules text
     - label: "Mechanic Name"
       rule: "Exact quantitative and tabletop rule effect."
   flavor_text: "..."          # Thematic quote capturing the political-economy insight
   empirical_anchor: "..."     # Citation to Document 1A/1B/1C, QEA-2026, or historical data
+  

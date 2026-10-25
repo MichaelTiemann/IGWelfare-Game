@@ -1,0 +1,14 @@
+- id: "P:DD"                  # Unique prefix + 2-digit code (e.g., "B:01", "K:04", "E:02")
+  name: "Card Title"          # Full display title
+  deck: "base"                # Enum: base | traps | climate | kaupapa | nobel | orthodoxy | electrification
+  module_level: 1             # Onboarding level (1=Base Demo, 2=Climate, 3=Kaupapa, 4=Nobel/Boss, 5=Game-Changer)
+  type: "Card Type"           # e.g., "Cohort Identity", "Legendary Artifact", "Wayfinder Persona"
+  lens: ["Lens 1"]            # Lifecycle lenses affected: Lens 1 (0-19), Lens 2 (20-64), Lens 3 (65+)
+  gate_or_phase: "Gate 1"     # Gate 1 (0-5), Gate 2 (12-14), Gate 3 (20-35), SS0, SS1, or SS2
+  cost_or_requirement: "..."  # Resource cost, policy lever, or combo requirement
+  synergy_links: ["B:02"]     # Array of P:DD card IDs that combo with this card
+  effects:                    # Array of named game mechanics / rules text
+    - label: "Mechanic Name"
+      rule: "Exact quantitative and tabletop rule effect."
+  flavor_text: "..."          # Thematic quote capturing the political-economy insight
+  empirical_anchor: "..."     # Citation to Document 1A/1B/1C, QEA-2026, or historical data

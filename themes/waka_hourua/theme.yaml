@@ -1,0 +1,31 @@
+# Example: themes/waka_hourua/theme.yaml
+theme_id: "waka_hourua"
+theme_name: "Te Waka Hourua — Being, Becoming, & Crossing Over"
+version: "1.0.0"
+license: "CC-BY-SA-4.0"
+authors:
+  - "Lead Artist / Kaitiaki Contributors"
+
+# Cascading Fallback Chain:
+# 1. Check themes/waka_hourua/assets/{P_DD}.{png,webp,jpg,svg}
+# 2. Check themes/waka_hourua/cards/{P_DD}.md
+# 3. Check themes/foils_pakeha/...
+# 4. Ultimate fallback: themes/generic/ (renders structured Markdown directly from cards.yaml)
+fallback_chain:
+  - "foils_pakeha"
+  - "generic"
+
+layout:
+  card_size: "poker"                # 63.5mm x 88.9mm (or "tarot": 70mm x 120mm, "a6_study": 105mm x 148mm)
+  pdd_corner: "top-left"            # Face-value index (e.g., "B:01") in upper-left corner
+  co2e_corner: "top-right"          # Configurable: "top-right" or "bottom-right"
+  render_mode: "hybrid"             # "art_frame" (image + text box), "full_bleed", or "markdown_only"
+
+deck_palettes:
+  B: { border: "#1B4F72", badge_bg: "#D4E6F1", label: "Base Foil" }
+  T: { border: "#922B21", badge_bg: "#FADBD8", label: "Cautionary Trap" }
+  C: { border: "#117864", badge_bg: "#D1F2EB", label: "Climate & Resilience" }
+  K: { border: "#7D6608", badge_bg: "#FCF3CF", label: "Kaupapa Persona" }
+  N: { border: "#512E5F", badge_bg: "#EBDEF0", label: "Nobel Archive" }
+  H: { border: "#424949", badge_bg: "#E5E8E8", label: "Orthodoxy Hazard" }
+  E: { border: "#196F3D", badge_bg: "#D4EFDF", label: "Grid Game-Changer" }

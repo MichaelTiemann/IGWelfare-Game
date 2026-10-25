@@ -1,0 +1,6 @@
+# Addition to each card entry in decks/cards.yaml:
+  co2e_impact:
+    display: "-10.0 MtCO2e / yr"          # Rendered badge in top-right or bottom-right corner
+    cumulative_2050: "-105.0 MtCO2e"      # Cumulative 2026-2050 impact
+    social_value_usd_b: "+USD 12.0B / yr" # Valued at Bilal-Känzig USD 1,200/tCO2e (C:01)
+    status: "computed"                    # Enum: computed | indirect_enabler | hazard_increase | na

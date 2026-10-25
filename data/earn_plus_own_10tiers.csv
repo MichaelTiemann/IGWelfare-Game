@@ -1,0 +1,11 @@
+tier_id,archetype_label,annual_income_nzd_k,net_worth_nzd_m,nz_wealth_percentile,benchmark_source,tax_and_cooling_pain_pct,economic_and_cohesion_gain_pct,net_welfare_ce_tier_avg_pct,net_welfare_ce_active_zh_pct,net_welfare_ce_passive_zl_pct,post_reform_net_worth_avg_nzd_m,net_worth_retained_avg_pct,net_worth_retained_active_zh_pct
+1,50k + 0 (Q1 Hardship Renter),50,0.0,P10,Stats NZ HES Q1,0.0,24.6,24.6,24.6,24.6,0.062,100.0,100.0
+2,100k + 100k (Q2 Young Saver),100,0.1,P35,Stats NZ HES Q2,-0.2,18.6,18.4,18.4,18.4,0.148,148.0,148.0
+3,200k + 500k (Stats NZ Median),200,0.5,P50,Stats NZ Median NW = 529k,-1.4,14.2,12.8,13.5,11.2,0.545,109.0,110.5
+4,300k + 1M (Stats NZ Mean),300,1.0,P72,Stats NZ Mean NW = 1.041M,-2.7,11.1,8.4,9.8,5.9,1.040,104.0,106.0
+5,400k + 2M (Upper Professional),400,2.0,P88,Stats NZ / Rashbrooke P88,-4.7,9.3,4.6,7.2,1.1,1.980,99.0,101.5
+6,500k + 3M (Top 5% Threshold),500,3.0,P95,Rashbrooke Top 5%,-6.5,8.6,2.1,5.8,-2.1,2.910,97.0,99.2
+7,750k + 10M (Top 1% Mean),750,10.0,P99,Rashbrooke Top 1%,-10.7,9.3,-1.4,3.4,-6.8,9.420,94.2,98.4
+8,2M + 50M (IRD High-Wealth Median),2000,50.0,P99.9,IRD High-Wealth Report (2023),-13.3,9.1,-4.2,1.1,-9.8,45.800,91.6,96.0
+9,5M + 100M (Family Enterprise),5000,100.0,P99.97,IRD High-Wealth Upper,-14.4,8.9,-5.5,0.2,-10.9,90.500,90.5,95.2
+10,10M + 250M (NBR Rich List / Ultra),10000,250.0,P99.99,NBR Rich List / IRD Apex,-15.5,8.7,-6.8,-0.6,-11.8,223.500,89.4,94.5

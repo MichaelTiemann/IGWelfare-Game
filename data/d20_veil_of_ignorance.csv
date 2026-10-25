@@ -1,0 +1,41 @@
+sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_nzd_k,baseline_net_worth_nzd_m,ss0_stunting_risk_pct,ss0_annual_crown_drag_nzd_k,ss2_stunting_risk_pct,ss2_adult_fiscal_swing_nzd_k,ss2_welfare_ce_avg_pct,ss2_welfare_ce_active_zh_pct,ss2_welfare_ce_passive_zl_pct,ss2_post_reform_net_worth_nzd_m,ss2_net_worth_retained_avg_pct,ss2_net_worth_retained_active_zh_pct,destiny_note
+01:01,1,P0.00-0.25,OT Residential Care / Abuse Tier,18,-0.015,92.0,-180.0,12.0,14.2,38.4,38.4,38.4,0.062,100.0,100.0,Kept in Whanau Wraparound + NZD 62k Seed
+01:02,1,P0.25-0.50,OT Kin / Foster Care Tier,22,-0.012,89.0,-145.0,8.5,14.6,36.8,36.8,36.8,0.062,100.0,100.0,Exits State Care Pipeline + NZD 62k Seed
+01:03,1,P0.50-0.75,Emergency Motel Housing,25,-0.010,86.0,-125.0,6.5,15.0,35.2,35.2,35.2,0.062,100.0,100.0,Stable Social/Co-op Home + NZD 62k Seed
+01:04,1,P0.75-1.00,Severe Housing Deprivation,27,-0.008,84.0,-115.0,5.5,15.3,34.0,34.0,34.0,0.062,100.0,100.0,Warm Solar Home + Te Korowai Mokopuna
+01:05,1,P1.00-1.25,Substantiated Harm Risk,29,-0.006,82.0,-108.0,4.8,15.5,32.8,32.8,32.8,0.062,100.0,100.0,Whanau Ora + Graeme Dingle Stars Mentor
+01:06,1,P1.25-1.50,Dunedin Top-Decile Risk,31,-0.005,80.0,-105.0,4.2,15.8,31.6,31.6,31.6,0.062,100.0,100.0,Project K Wilderness Grit + NZD 62k Seed
+01:07,1,P1.50-1.75,Sole Parent Benefit Corner,33,-0.004,78.0,-98.0,3.8,16.0,30.5,30.5,30.5,0.062,100.0,100.0,Maternal Work + Universal Free ECE
+01:08,1,P1.75-2.00,Crowded Damp Metro Flat,35,-0.003,76.0,-92.0,3.4,16.1,29.6,29.6,29.6,0.062,100.0,100.0,Healthy School Readiness (Exit 2 Closed)
+01:09,1,P2.00-2.25,Unbuffered Job-Loss Shock,37,-0.002,74.0,-86.0,3.0,16.2,28.8,28.8,28.8,0.062,100.0,100.0,Tuakana-Teina Protected at Gate 2
+01:10,1,P2.25-2.50,Provincial Isolation Corner,39,-0.001,72.0,-80.0,2.8,16.3,28.0,28.0,28.0,0.062,100.0,100.0,4-Region Fuel & ECE Relief (C:05)
+01:11,1,P2.50-2.75,Zero-Asset Benefit Whanau,41,0.000,70.0,-75.0,2.5,16.4,27.3,27.3,27.3,0.062,100.0,100.0,First-Gen Trade/Tech Graduate
+01:12,1,P2.75-3.00,Supported Living Hardship,43,0.000,68.0,-70.0,2.3,16.5,26.7,26.7,26.7,0.062,100.0,100.0,Launches into Thriving Skill Tier (h6)
+01:13,1,P3.00-3.25,Precarious Casual Work,45,0.000,66.0,-66.0,2.1,16.6,26.2,26.2,26.2,0.062,100.0,100.0,Crowds in +NZD 15.3k Parental Care
+01:14,1,P3.25-3.50,Auckland Rent-Crushed Q1,47,0.000,64.0,-62.0,1.9,16.7,25.7,25.7,25.7,0.062,100.0,100.0,Rent Cooled -10.5% + Deposit Seed
+01:15,1,P3.50-3.75,Large City Hardship Renter,48,0.000,62.0,-58.0,1.8,16.8,25.3,25.3,25.3,0.062,100.0,100.0,18.5% PAYE + High Regional Wage
+01:16,1,P3.75-4.00,Rural Transport-Stressed,49,0.000,60.0,-55.0,1.7,16.9,25.0,25.0,25.0,0.062,100.0,100.0,Regional Enterprise Owner Track
+01:17,1,P4.00-4.25,Tier 1 Hardship Anchor,50,0.000,58.0,-52.0,1.6,17.0,24.6,24.6,24.6,0.062,100.0,100.0,Tier 1 Benchmark (NZD 50k + 0 -> 62k)
+01:18,1,P4.25-4.50,Minimum-Wage Shift Family,52,0.002,56.0,-49.0,1.5,17.1,24.2,24.2,24.2,0.065,100.0,100.0,Young Homeownership Track (41.5%)
+01:19,1,P4.50-4.75,High-Churn Tenancy,54,0.004,54.0,-46.0,1.4,17.2,23.8,23.8,23.8,0.068,100.0,100.0,Rooted High-Cohesion Community (C:06)
+01:20,1,P4.75-5.00,P5.0 Hardship Ceiling,56,0.006,52.0,-44.0,1.3,17.3,23.5,23.5,23.5,0.072,100.0,100.0,65%+ Thriving Launch Cohort
+20:01,20,P95.00-95.25,Tier 6 Top 5% Anchor,500,3.000,1.5,42.0,0.5,48.5,2.1,5.8,-2.1,2.910,97.0,99.2,Active Founders & Partners Win Outright
+20:02,20,P95.25-95.50,Upper Professional Household,510,3.200,1.5,43.0,0.5,49.5,1.9,5.7,-2.4,3.100,96.8,99.1,-3.5 pp PAYE + -60 bps Mortgage Relief
+20:03,20,P95.50-95.75,Senior Surgeon / Executive,520,3.400,1.4,44.0,0.5,50.5,1.7,5.5,-2.6,3.290,96.7,99.0,Retained Children & Grandchildren (C:06)
+20:04,20,P95.75-96.00,Law / Accounting Partner,530,3.600,1.4,45.0,0.5,51.5,1.6,5.4,-2.9,3.470,96.5,98.9,Higher Domestic Client & Talent Base
+20:05,20,P96.00-96.25,Top 4% Threshold,540,3.800,1.3,46.0,0.5,52.5,1.4,5.3,-3.1,3.660,96.4,98.9,Positive Blended & Active Welfare
+20:06,20,P96.25-96.50,Regional SME Owner,550,4.000,1.3,47.0,0.5,53.5,1.2,5.2,-3.4,3.850,96.2,98.8,Cheaper Working Capital & Skilled Staff
+20:07,20,P96.50-96.75,Agri / Hort / Tech Founder,560,4.200,1.2,48.0,0.5,54.5,1.0,5.0,-3.6,4.040,96.1,98.7,Dual-Use Solar + Enterprise Tax Shift
+20:08,20,P96.75-97.00,Top 3% Threshold,570,4.400,1.2,49.0,0.5,55.5,0.8,4.9,-3.9,4.220,96.0,98.7,Blended Portfolio Still Net Positive
+20:09,20,P97.00-97.25,Growth Enterprise Principal,580,4.600,1.1,50.0,0.5,56.5,0.7,4.8,-4.1,4.410,95.9,98.6,+38% Deeper Domestic Talent Pool
+20:10,20,P97.25-97.50,Top 2.5% Median,590,4.800,1.1,51.0,0.5,57.5,0.5,4.7,-4.3,4.590,95.7,98.6,Top Half of Top 5% Begins
+20:11,20,P97.50-97.75,Near Top 2% Threshold,595,4.900,1.0,52.0,0.5,58.0,0.4,4.6,-4.4,4.690,95.7,98.5,Strong Active Entrepreneur Gain (+4.6%)
+20:12,20,P97.75-98.00,Tier 7 Top 2% Anchor,600,5.000,1.0,53.0,0.5,59.0,0.3,4.6,-4.5,4.780,95.6,98.5,Tier 7 Benchmark (NZD 600k + 5M)
+20:13,20,P98.00-98.25,Blended Portfolio Breakeven,630,6.000,1.0,56.0,0.5,62.0,0.0,4.3,-5.0,5.710,95.2,98.5,13th of 20 Slices Still >= 0.0% Average!
+20:14,20,P98.25-98.50,Top 1.5% Threshold,665,7.200,0.9,60.0,0.5,66.0,-0.4,4.0,-5.6,6.830,94.9,98.4,Active Founders Gain +4.0% CE
+20:15,20,P98.50-98.75,Angel / Venture Syndicate,705,8.500,0.9,65.0,0.5,71.0,-0.9,3.7,-6.2,8.040,94.6,98.4,Rotates Land Bank into Venture Equity
+20:16,20,P98.75-99.00,Tier 8 Top 1% Anchor,750,10.000,0.8,72.0,0.5,78.0,-1.4,3.4,-6.8,9.420,94.2,98.4,Rashbrooke Top 1% (NZD 562k/yr net cash)
+20:17,20,P99.00-99.50,Tier 9 Top 0.3% Anchor,1000,20.000,0.8,110.0,0.5,118.0,-2.8,2.2,-8.4,18.600,93.0,97.2,Active Growth Investors Gain +2.2% CE
+20:18,20,P99.50-99.90,Tier 10 IRD High-Wealth Med,2000,50.000,0.7,240.0,0.5,255.0,-4.2,1.1,-9.8,45.800,91.6,96.0,IRD High-Wealth Project Median (+1.1% zh)
+20:19,20,P99.90-99.97,Tier 11 Family Enterprise,5000,100.000,0.6,580.0,0.5,610.0,-5.5,0.2,-10.9,90.500,90.5,95.2,19th Slice Active Founders Still Win (+0.2%)!
+20:20,20,P99.97-99.99+,Tier 12 NBR Rich List Ultra,10000,250.000,0.5,1250.0,0.5,1310.0,-6.8,-0.6,-11.8,223.500,89.4,94.5,Keeps NZD 223.5M-236.3M + NZD 7.05M/yr Cash

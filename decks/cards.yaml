@@ -1,0 +1,753 @@
+# ==============================================================================
+# FOILS & FOUNDERS: THE AOTEAROA DECK — MASTER CARD DATABASE (cards.yaml)
+# Companion to "Intergenerational Welfare, Capital Allocation, and Human Potential in NZ"
+# Author: Michael Tiemann (mdtiemann@gmail.com)
+# License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+# Repository: https://github.com/MichaelTiemann/IGWelfare
+# ==============================================================================
+
+metadata:
+  game_title: "Beyond the Magic Money Tree — Foils & Founders: The Aotearoa Deck"
+  version: "2026.10"
+  author: "Michael Tiemann"
+  license: "CC-BY-SA-4.0"
+  repository: "https://github.com/MichaelTiemann/IGWelfare"
+  currency_standard: "Real 2025/2026 NZD (unless USD/GBP explicitly noted)"
+  discount_rates:
+    treasury_central_real_srtp: 0.02
+    treasury_sensitivity_real: 0.08
+    attribution_haircut: 0.30
+  decks:
+    B: "Module 1: Base Game — Getting Aotearoa Up on Foils (B:00 to B:09)"
+    T: "Module 1B: Cautionary Trap Cards — Single-Lens Pitfalls (T:00 to T:03)"
+    C: "Module 2: Climate & Resilience — Rising Seas & Shifting Winds (C:01 to C:06)"
+    K: "Module 3: Wayfinders & Kaupapa — Companion Persona Deck (K:01 to K:07)"
+    N: "Module 4: Reaching Abundance & Crossing Infinite Horizons — Nobel Archive (N:01 to N:06)"
+    H: "Module 5: The Orthodoxy Boss Deck & Combo Counter-Plays (H:01 to H:05)"
+    E: "Module 6: Game-Changer Tutorial — Firming the Economic Grid (E:01 to E:03)"
+
+cards:
+  # ----------------------------------------------------------------------------
+  # MODULE 1: BASE GAME (B:00 - B:09)
+  # ----------------------------------------------------------------------------
+  - id: "B:00"
+    name: "The Rawlsian D20 (The Veil of Ignorance Die)"
+    deck: "base"
+    module_level: 1
+    type: "Rule Zero Artifact — The 20 Wealth Groups of Aotearoa"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Rule Zero (Pre-Game)"
+    cost_or_requirement: "Roll a 20-sided die (1 to 20, representing the 20 wealth vigintiles of New Zealand) before Turn 1."
+    synergy_links: ["B:01", "B:05", "B:06", "B:09"]
+    effects:
+      - label: "Who Goes First (The Rawlsian Maximin Rule)"
+        rule: "Lowest roll (1-4, the 22% Early Hardship Corner) goes first, or youngest player in a tie. Optional Wellington House Rule: 'Most ignorant of Rawls goes first'—hand the die to whoever is trapped behind the Tinted Limo Window of Ignorance and still thinks landlord tax breaks are a growth strategy."
+      - label: "Status Quo Roll (SS0 — Displacement Mode)"
+        rule: "Roll 1-4: Caught in the 22% early hardship corner. Roll 5-18: Crushed by 3.10x metro rents, brain drain, and PAYE climbing toward 28.22%. Roll 19-20: Surrounded by 200% Crown debt and departing grandchildren. Result: No matter what you roll, the board loses."
+      - label: "IGWelfare Roll (SS1 -> SS2 — Up on Foils)"
+        rule: "Roll 1-20: Every single median wealth group across all 20 faces is better off (+20.49% national welfare gain, NZ Super at 65, PAYE cut to 18.5%). Roll any number; you win."
+      - label: "Confirming the Fumble (Nat 1 Sub-Roll: 01:01 to 01:20)"
+        rule: "In SS0, all 20 sub-slices of the Bottom 5% face 52%-92% stunting risk and cost NZD 44k-180k/yr in reactive care/prisons. In SS2, all 20 faces are rescued (+23.5% to +38.4% CE gain, state care cut 94%, and NZD 62k+ Youth Capital Grant at age 20)."
+      - label: "Confirming the Crit (Nat 20 Sub-Roll: 20:01 to 20:20)"
+        rule: "Inside the Top 5% (NZD 500k income + 3M NW up to 10M + 250M), faces 20:01-20:13 win on a blended average, and 19 out of 20 faces (20:01-20:19, up to NZD 100M NW) win outright for Active Entrepreneurs (z_h). Even 20:20 retains 89.4%-94.5% of net worth."
+    flavor_text: "Orthodox economics asks you to play Russian roulette with a twenty-sided die and calls it 'market efficiency.' True systems design rewrites the physics of the board so every roll of a child's life comes up a winner."
+    empirical_anchor: "Rawls (1971); Document 1A Part IV Section 3 & 6B (12-Tier Earn + Own Audit); Stats NZ HES (2024); IRD High-Wealth Project (2023)."
+
+  - id: "B:01"
+    name: "Tamariki of the First 2000 Days"
+    deck: "base"
+    module_level: 1
+    type: "Cohort Identity — Gate 1 (Ages 0–5)"
+    lens: ["Lens 1"]
+    gate_or_phase: "Gate 1 (Ages 0-5)"
+    cost_or_requirement: "NZD 13.0k Public Resource / Turn"
+    synergy_links: ["B:02", "B:07", "K:01", "N:02"]
+    effects:
+      - label: "Hardship Corner"
+        rule: "If this card enters play without Whānau Wraparound, roll a d20. On a 1–4 (22% chance), attach a Stunted Trajectory token (causes 57%–81% of all late-game Hospital, Justice, and Care damage to your Treasury)."
+      - label: "Becoming (Dynamic Complementarity)"
+        rule: "If supported by Te Korowai Mokopuna / Whānau Ora, remove all Stunted tokens. This card gains +2 Productivity for every subsequent Schooling card played on it, and Crowds In +NZD 15.3k of Private Parental Care (NZD 8.7k cash + NZD 6.5k time) for free."
+    flavor_text: "Identify the corner at age three, or pay NZD 180,000 a year in state care at age fourteen. The math isn't hard; only the politics was."
+    empirical_anchor: "Dunedin Multidisciplinary Health & Development Study (22% cohort share); Barnardos Te Korowai Mokopuna (2026); Document 1A Part III."
+
+  - id: "B:02"
+    name: "Tuakana–Teina Navigator"
+    deck: "base"
+    module_level: 1
+    type: "Cohort Becoming — Gate 2 Mentor (Ages 12–14)"
+    lens: ["Lens 1"]
+    gate_or_phase: "Gate 2 (Ages 12-14)"
+    cost_or_requirement: "2 Social Cohesion + 1 Creative Agency"
+    synergy_links: ["B:01", "B:03", "C:03", "K:05", "N:04"]
+    effects:
+      - label: "Two-Way Ako (Reciprocal Buff)"
+        rule: "Pair this card with any younger Teina card. Both cards gain Indestructible against Family Unemployment & Housing Shocks."
+      - label: "Becoming"
+        rule: "When this card mentors a peer (via Stars / Project K, Kura Kaupapa, or Montessori Erdkinder), it levels up into a Thriving Launch Adult (+65% cohort rate) and grants the player +1 Executive Function & Mana."
+    flavor_text: "In teaching the younger sibling to stand against the storm, the older sibling becomes a mountain."
+    empirical_anchor: "Graeme Dingle Foundation Stars / Te Kāhui Whetū & Project K (2025); Berryman & Eley (2019); Lillard (2005); GUiNZ Now We Are 12."
+
+  - id: "B:03"
+    name: "Age-20 Renaissance Founder (Kaikōrero & Creator)"
+    deck: "base"
+    module_level: 1
+    type: "Evolved Identity — Gate 3 (Ages 20–35)"
+    lens: ["Lens 2"]
+    gate_or_phase: "Gate 3 (Ages 20-35)"
+    cost_or_requirement: "Evolved from B:02 (Tuakana–Teina Navigator) + Youth Capital Grant"
+    synergy_links: ["B:02", "B:05", "K:02", "K:05", "N:05"]
+    effects:
+      - label: "Brain-Drain Immunity"
+        rule: "This card cannot be exiled to the Abroad (Australia/OECD) Zone (cuts city emigration from 19.3%-23.4% down to 7.6% Nat.)."
+      - label: "Engine"
+        rule: "While metropolitan rents are cooled (-7.5% to -10.5% via B:05), this card generates +9.6% Real Regional Wages, +1 Domestic Cultural IP, and +26 Social Cohesion Index."
+    flavor_text: "Give a twenty-year-old a NZD 500-a-week survival flat and you get a barista in Melbourne. Give them a capital runway and you get the next Aotearoa renaissance."
+    empirical_anchor: "Document 1A Part II Lens 2 & Part IV Section 4 (3,550/yr retained graduates; NZD 62k seed deposit)."
+
+  - id: "B:04"
+    name: "The L-Shaped Hydrofoil (Coupled 4-Region Engine)"
+    deck: "base"
+    module_level: 1
+    type: "Legendary Artifact — System Architecture"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "SS0 -> SS1 -> SS2"
+    cost_or_requirement: "5 Coupled Levers (B:01 + B:02 + B:05 + B:06 + B:07)"
+    synergy_links: ["B:01", "B:02", "B:05", "B:06", "B:07"]
+    effects:
+      - label: "Rulebook Exploit"
+        rule: "Conventional Thinkers must keep their keel straight and slog through Displacement Mode. If you control a Front Lifting Foil (Dual-Gate Human Capability, B:01 + B:02), a Wing-Sail Power Plant (Property-to-Enterprise Shift, B:05), and a Rear T-Foil Stabilizer (2050 50/50 Protocol, B:06), lift your economy out of the water."
+      - label: "Effect"
+        rule: "Slash Fiscal Remediation Drag (Exits 1, 2, 4) by 75% (reducing annual drain from NZD 17.7B–28.5B down to NZD 4.2B). Your Cohort cards now generate +NZD 16.1k/yr Net Surplus instead of a deficit."
+    flavor_text: "The rules capped how wide the board could be, but said nothing about whether the board had to be straight. Curve the foil, couple the rudder, and fly."
+    empirical_anchor: "Emirates Team New Zealand 2013 America's Cup hydrofoil analogy (Document 1C Section 4); Document 1A Part III Fiscal Sankey."
+
+  - id: "B:05"
+    name: "Use-It-Or-Lose-It Rebalancer (The Guvenen Split)"
+    deck: "base"
+    module_level: 1
+    type: "Continuous Enchantment — Lens 3 Power Plant"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "SS1 -> SS2"
+    cost_or_requirement: "1.5% Land/Wealth Levy + 25% Peak Estate Levy (stepping down to 18% in SS2)"
+    synergy_links: ["B:03", "B:04", "K:02", "N:05", "H:03"]
+    effects:
+      - label: "Rotate Dormant Dirt"
+        rule: "Target opponent's NZD 1.6 Trillion Dormant Property Hoard. Exhaust all Passive Land Speculators (z_l) and cool Auckland housing overvaluation by -7.5% (SS1) to -10.5% (SS2)."
+      - label: "Unchain Productive Capital"
+        rule: "Convert that dormant value into Productive Enterprise Capital (z_h). All Active Entrepreneurs (all the way up to NZD 100M net worth!) gain +0.2% to +5.8% Welfare, -60 bps cheaper credit, and a +38% larger thriving talent pool."
+    flavor_text: "Even the ultra-wealthy keep 89% to 98% of their fortune—a smaller haircut than a routine market crash, except this time their grandkids don't move to Sydney."
+    empirical_anchor: "Guvenen et al. (2023) Use-It-Or-Lose-It wealth taxation; Hirano & Toda (2025); Document 1A Part IV Section 3."
+
+  - id: "B:06"
+    name: "The 2050 50/50 Stabilizer (SS2 Rocket Ship)"
+    deck: "base"
+    module_level: 1
+    type: "Legendary Engine — Phase 2 Harvest"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "SS2 (Post-Breakeven Harvest)"
+    cost_or_requirement: "Cross Year 18.8 Cash Breakeven (or Year 5 Actuarial Breakeven via B:07)"
+    synergy_links: ["B:04", "B:07", "C:04", "K:03", "H:05"]
+    effects:
+      - label: "Left Half (Sovereign Debt Sinking Fund)"
+        rule: "Partition all Net Fiscal Surpluses 50/50 at the end of every turn. Left 50% destroys NZD 17.8B–21.9B of Crown Debt per cohort wave and lowers all players' mortgage and business interest rates by 60 bps."
+      - label: "Right Half (Public Infrastructure Pool)"
+        rule: "Multiply the remaining 50% (NZD 11.5B–14.9B per wave) by 1.65x to build Resilient Grids, Coastal Adaptation, Schools/Marae Solar, and Core Health (C:04)."
+      - label: "Ultimate Bonus"
+        rule: "Keep Universal NZ Superannuation at Age 65 AND grant all Working-Age Players a -3.5 percentage-point PAYE Tax Cut (22.0% down to 18.5%, returning NZD 3,325/yr to median earners)."
+    flavor_text: "Austerity hawks wanted to raise the pension age to 70 and still pay 25.55% in tax. We kept Super at 65 and cut taxes to 18.5%."
+    empirical_anchor: "Document 1A Part IV Section 5 & Part V Section 1 (The 2050 50/50 Dynamic Allocation Rule)."
+
+  - id: "B:07"
+    name: "ACC Actuarial Time-Bend"
+    deck: "base"
+    module_level: 1
+    type: "Instant — Counter-Spell / Accounting Breakthrough"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Year 5 Parliamentary Audit (SS1)"
+    cost_or_requirement: "0 Cash (Uses Treasury Circular 2024/15 at 2.0% Real SRTP, net of 30% attribution haircut)"
+    synergy_links: ["B:01", "B:02", "B:08", "N:03", "H:01"]
+    effects:
+      - label: "Counter Austerity"
+        rule: "Play when an opponent casts 'Parliamentary 3-Year Deficit Trap' (H:01) or 'There's No Magic Money Tree.' Reveal the 25-Year Forward Liability Ledger. Against NZD 9.19B invested by Year 5, immediately book NZD 10.66B in Direct Cost Avoidance (1.16x outlay) and NZD 35.25B in Total Fiscal Return (3.84x outlay) on the Crown Balance Sheet."
+      - label: "Early Credibility Acceleration"
+        rule: "Young workers (ages 20-35) see the audited Year 5 surplus and cancel their one-way tickets to Australia 15 years early."
+    flavor_text: "When you prevent a car crash, ACC doesn't wait thirty years to book the saved hospital bill. Why were we treating our children worse than a dented bumper?"
+    empirical_anchor: "NZ Treasury CBAx User Guidance (Nov 2025) & Circular 2024/15; Barnardos Generational Plan Economic Case (Sept 2026); Document 1A Part V."
+
+  - id: "B:08"
+    name: "The 1925 Quantum Leap (OIA 20250878 Override)"
+    deck: "base"
+    module_level: 1
+    type: "Sorcery — Paradigm Shift"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "System-Wide Architecture"
+    cost_or_requirement: "50 Years of Dunedin Study Data + 8-PType GPU Solver"
+    synergy_links: ["B:07", "K:03", "K:04", "N:01", "N:03"]
+    effects:
+      - label: "Expose the Gap"
+        rule: "Expose the flaw in the opponent's Long-Term Fiscal Model (LTFM): 'Contains no data at the micro level' (Treasury OIA 20250878)."
+      - label: "Unified Board State"
+        rule: "Fuse Frontline Social Agencies, ACC Actuaries, and Macro OLG Planners into one unified board state. Unlock NZD 85.40B in Year 5 Booked GDP and NZD 1,510.7B in realized cash GDP over 60 Years."
+    flavor_text: "In 1925, physicists overthrew classical mechanics in thirty-six months because the matrix math was already sitting on the shelf. Our math is on the shelf. Stop governing like it's 1924."
+    empirical_anchor: "NZ Treasury Official Information Act Response OIA 20250878; Document 1C Section 2 (The 1925 Moment)."
+
+  - id: "B:09"
+    name: "Lifting the Gold from the River (He Tāngata)"
+    deck: "base"
+    module_level: 1
+    type: "Mythic Enchantment — Generational Victory"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "SS2 Victory Condition"
+    cost_or_requirement: "Cohort Stunting compressed to 1.5%, Social Cohesion Index at 126.0 (C:06), and all 7 Structural Engines online."
+    synergy_links: ["B:00", "B:04", "C:06", "K:07", "N:06"]
+    effects:
+      - label: "Generational Victory"
+        rule: "You win the game with a +20.49% National Welfare Gain (+14.28% Rural, +13.66% Small, +22.17% Large, +26.03% Auckland) and restore New Zealand to #1 on the Global Social Credit Rating."
+    flavor_text: "There is no magic money tree—because we are standing in a river of gold. In the nineteenth century we looked for it in the gravel of Otago; in the twentieth we mistook inflated urban dirt for wealth. Today we know the truth: human capability is the only inexhaustible resource on earth. We need only lift it up."
+    empirical_anchor: "Document 1A Part IV Section 1 & 6A (7-Factor Attribution); Document 1C Section 3 (A River of Gold)."
+
+  # ----------------------------------------------------------------------------
+  # MODULE 1B: CAUTIONARY TRAP CARDS (T:00 - T:03)
+  # ----------------------------------------------------------------------------
+  - id: "T:00"
+    name: "The Molesworth Street Cycle-Lane Paralysis (Limited-Edition Promo Trap)"
+    deck: "traps"
+    module_level: 1
+    type: "Orthodoxy Hazard — Ministerial Limo / Pedestrian Panic"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "SS0 Status Quo"
+    cost_or_requirement: "Triggered when leadership peeks through the Tinted Limo Window of Ignorance."
+    synergy_links: ["B:00", "B:05", "E:01"]
+    effects:
+      - label: "The Hazard"
+        rule: "A single painted cycle lane appears on Molesworth Street between Premier House and the Beehive. Your leadership is too terrified to cross on foot and summons a Crown limo for a 250-meter trip—burning transport subsidies and giving tax breaks to landlords while reading Ayn Rand in the backseat."
+      - label: "The Riddle & Counter-Play"
+        rule: "When the Prime Minister finally musters the courage to cross Molesworth Street, which crosses first—the chicken, or THE EGG? Hand the Minister a copy of Foils & Founders and introduce them to HANK to solve the intergenerational chicken-and-egg loop."
+    flavor_text: "Afraid to cross Molesworth Street? Here's a card game for you! We can't afford to give every beginner a whole national economy to wreck until they learn the rules—so please, stay on the footpath and play with HANK first."
+    empirical_anchor: "HANK and Kindergarten Lecture (Tiemann, 2026)."
+
+  - id: "T:01"
+    name: "The Scottish Devolution Ceiling"
+    deck: "traps"
+    module_level: 1
+    type: "Cautionary Trap — Single-Lens Pitch-Pole (Lens 1 Without Lens 3)"
+    lens: ["Lens 1", "Lens 2"]
+    gate_or_phase: "Round 2 Pitch-Pole Demo"
+    cost_or_requirement: "Play B:01 (First 2000 Days) + B:02 (Mentoring) without B:05 (Land/Estate Tax Powers)."
+    synergy_links: ["B:01", "B:02", "B:05", "H:05"]
+    effects:
+      - label: "The Devolution Ceiling"
+        rule: "You played First-2000-Days and MCR Pathways Mentoring (cutting child poverty by 6 points below the rest of the UK!), but you forgot to bring sovereign Land & Estate Tax powers. Your middle-earner PAYE tax rate hits 42%–48%, urban rents climb, and child poverty progress stalls out at 21% (missing the 18% target)."
+    flavor_text: "Compassion without sovereign capital-tax levers forces working families to pay for everything twice."
+    empirical_anchor: "Scottish Government Tackling Child Poverty Delivery Plan 2026-2031; JRF Poverty in Scotland 2026; MCR Pathways (2025); Document 1A Part VI."
+
+  - id: "T:02"
+    name: "The 1989 Tokyo Imperial Palace Bubble"
+    deck: "traps"
+    module_level: 1
+    type: "Cautionary Trap — Single-Lens Pitch-Pole (Lenses 1 & 2 Without Lens 3)"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "Round 2 Pitch-Pole Demo"
+    cost_or_requirement: "Play Deming's Industrial Miracle without B:05 (Use-It-Or-Lose-It) or B:06 (2050 50/50 Stabilizer)."
+    synergy_links: ["B:05", "B:06", "H:05"]
+    effects:
+      - label: "Hirano–Toda Land Bubble"
+        rule: "You built a world-beating industrial and schooling engine, but left Lens 3 unguarded. All corporate surpluses pour into finite urban land until 1.15 sq km of Tokyo costs more than the State of California. Take 30 Turns of Balance-Sheet Stagnation."
+    flavor_text: "New Zealand managed to catch the Tokyo property disease without first building the Tokyo industrial engine."
+    empirical_anchor: "Deming (1950 Mt. Hakone Lecture); Hirano & Toda (2025 Land Overvaluation Theorem); Document 1A Part VI Coda."
+
+  - id: "T:03"
+    name: "The Seoul Hagwon Squeeze"
+    deck: "traps"
+    module_level: 1
+    type: "Cautionary Trap — Primate-City Housing & Child-Cost Crush"
+    lens: ["Lens 1", "Lens 2"]
+    gate_or_phase: "Round 2 Pitch-Pole Demo"
+    cost_or_requirement: "Max out Schooling while leaving Primate-City Land Speculation and private tutoring costs unchecked."
+    synergy_links: ["B:01", "B:05", "C:05"]
+    effects:
+      - label: "Demographic Collapse"
+        rule: "Young couples are crushed between 3.10x primate-city housing costs and a private tutoring arms race (Hagwon). Your Total Fertility Rate collapses to 0.72 and old-age pension solvency implodes."
+    flavor_text: "When raising a child becomes a stressed luxury good in an overvalued primate city, the future simply stops being born."
+    empirical_anchor: "21st-Century South Korea TFR benchmark (0.72-0.75); Document 1A Part VI Section 2."
+
+  # ----------------------------------------------------------------------------
+  # MODULE 2: CLIMATE & RESILIENCE EXPANSION — RISING SEAS & SHIFTING WINDS (C:01 - C:06)
+  # ----------------------------------------------------------------------------
+  - id: "C:01"
+    name: "The Bilal–Känzig Shock (USD 1,200/tCO2e Reality Check)"
+    deck: "climate"
+    module_level: 2
+    type: "Global Environment — World Enchantment"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Every Turn (Accelerating Change Clock)"
+    cost_or_requirement: "Triggered automatically by Business-As-Usual turns"
+    synergy_links: ["B:06", "B:07", "C:02", "C:04"]
+    effects:
+      - label: "Order of Magnitude"
+        rule: "Reveal the true macroeconomic damage function: +1°C of Global Warming reduces World GDP by >20% and inflicts a >30% Present Welfare Loss. Set the true Social Cost of Carbon to USD 1,200+ per ton of CO2e."
+      - label: "Asymmetric Impact"
+        rule: "Conventional Thinkers relying on 'Country-Level Temperature' models or deferred maintenance take 3x Unbuffered Extreme Event Damage. IGWelfare Players gain Double Value on B:07 (ACC Forward Accounting) and C:04 (Coastal & Grid Armor)."
+    flavor_text: "Economists spent decades looking at local weather and guessing climate change would cost a percent or two. Then they looked at global extreme events—and realized the board itself was on fire."
+    empirical_anchor: "Bilal & Känzig (2024) NBER Working Paper on the Macroeconomic Impact of Climate Change."
+
+  - id: "C:02"
+    name: "Cognitive Flexibility (The Ultimate Resilient Asset)"
+    deck: "climate"
+    module_level: 2
+    type: "Continuous Aura — Human Capability Shield"
+    lens: ["Lens 1", "Lens 2"]
+    gate_or_phase: "SS1 -> SS2"
+    cost_or_requirement: "Compress Cohort Stunting to 1.5% via B:01 (First 2000 Days) + B:02 (Tuakana–Teina / Montessori)"
+    synergy_links: ["B:01", "B:02", "C:01", "C:03"]
+    effects:
+      - label: "Adaptive Pivot"
+        rule: "Attach to your 61.0%+ Thriving Adult Cohort. Whenever an Accelerating Change or Supply-Chain Shock card enters play, your workforce adapts: prevent all unemployment shock damage to Rangatahi (Ages 12–14) and convert the crisis into +1 Frontier Clean-Tech Innovation."
+    flavor_text: "Sea walls can crack and spreadsheets go obsolete overnight. A generation raised with executive function, creative agency, and whanaungatanga can rebuild the ship while it's flying."
+    empirical_anchor: "Heckman & Kautz (2012); Lillard (2005); Document 1A Part II Lens 1."
+
+  - id: "C:03"
+    name: "Project K Wilderness & Kura-ā-Iwi Resilience"
+    deck: "climate"
+    module_level: 2
+    type: "Cohort Becoming — Gate 2 Adaptation Training (Ages 12–14)"
+    lens: ["Lens 1"]
+    gate_or_phase: "Gate 2 (Ages 12-14)"
+    cost_or_requirement: "Scale Adolescent Mentoring from 17.3% to 65.0%+ of Years 8–10"
+    synergy_links: ["B:02", "C:02", "E:02", "K:01"]
+    effects:
+      - label: "Grit & Kinship"
+        rule: "Combine Graeme Dingle Foundation (Project K & Stars), Kura Kaupapa Māori / Kura-ā-Iwi, Pasifika Tuakana Academies, and Montessori Erdkinder. When family job loss or climate displacement strikes, Teina mentees take 0 Trajectory Damage, while Tuakana mentors gain +2 Self-Regulation, +2 Manaakitanga, and +2 Real-World Problem Solving."
+    flavor_text: "Resilience isn't taught in a cram-school Hagwon. It is forged in the wilderness, on the marae, and in the workshop—when a thirteen-year-old discovers their community needs their hands and their voice."
+    empirical_anchor: "Graeme Dingle Foundation Research & Evaluation Summary (2024-2025); Gluckman (2011)."
+
+  - id: "C:04"
+    name: "Coastal & Grid Armor (The 2050 Ring-Fenced Pool)"
+    deck: "climate"
+    module_level: 2
+    type: "Legendary Infrastructure — Rear T-Foil Stabilizer"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "SS2 (2050 Protocol)"
+    cost_or_requirement: "50% of Post-Breakeven Fiscal Surplus (NZD 11.5B–14.9B per Cohort Wave via B:06)"
+    synergy_links: ["B:06", "C:01", "E:01", "E:03", "H:05"]
+    effects:
+      - label: "1.65x Infrastructure Multiplier"
+        rule: "For every 1 Resource locked into this card via the 2050 50/50 Protocol (B:06), generate 1.65x in Resilient Grids, Coastal Adaptation, School/Marae Microgrids, and Core Health."
+      - label: "Sovereign Credit Shield"
+        rule: "Because the other 50% of your surplus retired NZD 17.8B–21.9B of Crown Debt, lower all green-build borrowing costs by 60 basis points. Your nation is now immune to Infrastructure Failure Cascades (such as the 2026 Moa Point wastewater collapse)."
+    flavor_text: "Displacement-mode governments borrow to pay for prisons and let the power grid and seawalls rot. Foil-borne nations cure the social drag and armor the coast with the surplus."
+    empirical_anchor: "Te Waihanga / NZ Infrastructure Commission National Infrastructure Plan (2026); Document 1A Executive Summary Section 2.5."
+
+  - id: "C:05"
+    name: "The 4-Region Just-Transition Compass (Income × Geography)"
+    deck: "climate"
+    module_level: 2
+    type: "Artifact — Spatial Balancing Engine"
+    lens: ["Lens 1", "Lens 2"]
+    gate_or_phase: "SS1 -> SS2"
+    cost_or_requirement: "Replace 'One-Size-Fits-All' National Rules"
+    synergy_links: ["B:01", "B:05", "E:02", "K:03"]
+    effects:
+      - label: "Regional Solidarity"
+        rule: "Recognize that Rural (16% pop) and Small Provincial Towns (24% pop) carry 2.7x to 2.8x the mandatory transport and fuel burden of metro cities. Grant Rural and Small-town players immediate Geographic Cost-of-Living Relief and universal in-kind ECE (+14.28% and +13.66% long-run welfare), while Large Cities (25.9%) and Auckland (34.1%) receive -7.5% to -10.5% Housing Cooling and retain their 3,550/yr Green-Collar Graduates."
+      - label: "Mutiny Shield"
+        rule: "Opponents cannot play 'Urban–Rural Divide' to block your climate transition."
+    flavor_text: "A climate transition that punishes a rural nurse for driving to work while rewarding an Auckland landlord for sitting on dirt isn't a transition—it's a mutiny waiting to happen."
+    empirical_anchor: "Labrousse & Perdereau (2026); Document 1A Part I Section 3 & Part IV Section 1."
+
+  - id: "C:06"
+    name: "Social Credit Rating: 126.0 (The High-Trust Lifeboat)"
+    deck: "climate"
+    module_level: 2
+    type: "Mythic Aura — National Integrity & Cohesion"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "SS2 Convergence"
+    cost_or_requirement: "Reverse the slide from #1 to #4 (81/100 CPI) by closing the Deprivation Pipeline (B:01), ending High-Churn Brain Drain (B:03), and taxing Passive Land Shelters (B:05)."
+    synergy_links: ["B:01", "B:03", "B:05", "B:09", "K:07"]
+    effects:
+      - label: "High-Trust Dividend"
+        rule: "Lift Aotearoa's Social Cohesion Index from 100.0 to 126.0, surpassing Denmark (89), Finland (88), and Singapore (84)."
+      - label: "Why Resilience Is Everything"
+        rule: "In a world of accelerating global shocks, high institutional trust acts as Economic Infrastructure—slashing friction in trade, investment, and emergency coordination."
+    flavor_text: "Resilience is not some mere thing—it is everything needed to survive in a world of accelerating change. And the bedrock of resilience is knowing your neighbor, your whānau, and your country won't leave you behind."
+    empirical_anchor: "Transparency International Corruption Perceptions Index (2025/2026) & TINZ National Integrity System Analysis; Controller and Auditor-General (2026); Document 1A Part II Synthesis."
+# ----------------------------------------------------------------------------
+  # MODULE 3: WAYFINDERS & KAUPAPA — COMPANION PERSONA DECK (K:01 - K:07)
+  # ----------------------------------------------------------------------------
+  - id: "K:01"
+    name: "The Catalytic Steward: Philanthropist, Iwi Trust, & Community Leader"
+    deck: "kaupapa"
+    module_level: 3
+    type: "Wayfinder Persona — Manaakitanga, Whanaungatanga, & R&D Seed (Lens 1)"
+    lens: ["Lens 1"]
+    gate_or_phase: "Command Zone (Continuous / Tap)"
+    cost_or_requirement: "Select as Primary or Dual-Class Persona at Game Start"
+    synergy_links: ["B:01", "B:02", "B:07", "K:04", "K:05", "N:04"]
+    effects:
+      - label: "Innate Kaupapa — Proof Before Scale (Tap)"
+        rule: "Spend 1 Catalytic R&D Token to pilot B:01 (First 2000 Days) or B:02/C:03 (Tuakana–Teina Mentoring) in one region at 50% cost. Once piloted, the Crown can scale that card nationally on the next turn with 0 friction penalty."
+      - label: "Dual-Class with K:05 (Artist as Community Leader)"
+        rule: "Turn statistical nodes into lived community trust. Double uptake of early-years wraparound and adolescent mentoring (to 65.0%+ of Years 8–10) and gain Immunity to H:02 (Wellington Micromanagement)."
+      - label: "Dual-Class with K:04 (Philanthropist as Economist)"
+        rule: "Anchor evaluations in cardinal adult outcomes (earnings, mental health, avoided state care) rather than arbitrary test scores—instantly unlocking B:07 (ACC Actuarial Time-Bend) and N:03 (Williamson's Ledger)."
+    flavor_text: "Markets don't lend to three-year-olds, and bureaucracies can't manufacture trust. We bring the aroha, the patience, and the proof that makes national transformation undeniable."
+    empirical_anchor: "Document 1A Executive Summary Section 5 & Part I Section 1; Document 1C Section 5.1."
+
+  - id: "K:02"
+    name: "The Enterprise Wayfinder: Venture Catalyst, Founder, & Growth Investor"
+    deck: "kaupapa"
+    module_level: 3
+    type: "Wayfinder Persona — Productive Capital & High-Wage Innovation (Lenses 2 & 3)"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "Command Zone (Continuous / Tap)"
+    cost_or_requirement: "Select as Primary or Dual-Class Persona at Game Start"
+    synergy_links: ["B:03", "B:05", "K:03", "K:04", "N:05"]
+    effects:
+      - label: "Innate Kaupapa — Unchain the NZD 1.6T Transfer (Tap)"
+        rule: "Whenever B:05 (Use-It-Or-Lose-It Rebalancer) is active, rotate 1 Dormant Property Token into High-Growth Operating Firms, lifting regional business wages by +3.2% to +9.6% while keeping active entrepreneurs net welfare positive up to NZD 100M net worth."
+      - label: "Dual-Class with B:02 / Teacher (Venture Catalyst as Mentor)"
+        rule: "Pair B:03 (Age-20 Youth Capital Grant) with hands-on founder mentorship at Gates 2 and 3. Cut city brain drain from 19.3%–23.4% down to 7.6% Nat. and turn first-generation graduates into domestic job creators."
+      - label: "Dual-Class with K:03 (The Sovereign Helmsman)"
+        rule: "Co-sign the Corporate Tax Cut + Land/Estate Rebalance (B:05), proving to the business community that taxing dormant dirt instead of productive enterprise grows the pie for 95% of households."
+    flavor_text: "Hoarding residential land is how a country flounders in displacement mode. Backing retained young talent with patient capital is how a nation gets up on the wing-sail."
+    empirical_anchor: "Document 1A Part I Section 2 & Part IV Section 3; Document 1C Section 5.2."
+
+  - id: "K:03"
+    name: "The Sovereign Helmsman: Policy-Maker, Minister, Treasury, & Reserve Bank Official"
+    deck: "kaupapa"
+    module_level: 3
+    type: "Wayfinder Persona — Actuarial Governance & Macro Stability (All 3 Lenses)"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Command Zone (Continuous / Tap)"
+    cost_or_requirement: "Select as Primary or Dual-Class Persona at Game Start"
+    synergy_links: ["B:06", "B:07", "B:08", "E:03", "K:01", "K:04"]
+    effects:
+      - label: "Innate Kaupapa — Bridge the OIA 20250878 Gap (Tap)"
+        rule: "Play B:08 (The 1925 Quantum Leap) to couple micro-cohort social outcomes directly to the Crown's LTFM. Book 3.84x Verified Actuarial Breakeven by Year 5 (1.16x from direct cost avoidance alone via B:07) and engage B:06 (The 2050 50/50 Stabilizer)."
+      - label: "Dual-Class with K:01 (The Catalytic Steward)"
+        rule: "Adopt N:04 (Ostrom's Polycentric Commons)—funding proven community wraparound at national scale while slashing NZD 17.7B–28.5B/yr in reactive hull drag down to NZD 4.2B/yr (B:04)."
+      - label: "Dual-Class with K:04 (The 1925 Moment Architect)"
+        rule: "Replace blunt OCR monetary hammering and reactive austerity with Energy & Housing Firming (C:04, E:03), cutting domestic interest rates by 60–100 bps, keeping NZ Super at Age 65, and delivering a -3.5 pp PAYE tax cut in SS2."
+    flavor_text: "For forty years, our rulebook forced us to count investment in children as debt and infrastructure neglect as thrift. Give us the right actuarial compass, and we will steer Aotearoa into clear air."
+    empirical_anchor: "Document 1A Part I Section 3 & Part V; Document 1C Section 5.3."
+
+  - id: "K:04"
+    name: "The '1925 Moment' Architect: Quantitative Economist & Open-Source Researcher"
+    deck: "kaupapa"
+    module_level: 3
+    type: "Wayfinder Persona — A System of Profound Knowledge & GPU Proof (System-Wide)"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Command Zone (Continuous / Tap)"
+    cost_or_requirement: "Select as Primary or Dual-Class Persona at Game Start"
+    synergy_links: ["B:08", "E:02", "K:02", "K:06", "N:01", "N:05"]
+    effects:
+      - label: "Innate Kaupapa — Inspect the 8-PType Engine (Tap)"
+        rule: "Reveal the hidden general-equilibrium feedback loops across Rural, Small, Large, Auckland, and Abroad (C:05). Neutralize any 'Ideological Bluff' or 'Zero-Sum Myth' card played by the Orthodoxy Deck (H:01–H:05) by citing Dunedin Study elasticities and the 11 Historical Precedents."
+      - label: "Dual-Class with K:02 (Founder as Economist)"
+        rule: "Combine N:01 (Coase), N:03 (Williamson), N:04 (Ostrom), and N:05 (Romer) to prove that lowering transaction costs and unlocking non-rival human capability generates a +20.49% National Welfare Gain and NZD 1,510.7B in 60-year cash GDP."
+      - label: "Dual-Class with K:06 (The Kaumātua Dividend)"
+        rule: "Synthesize 60 years of lived entrepreneurial and civic history into open-source VFI Toolkit code and interactive Sankeys—reducing the deployment cost of all Phase 1 (SS1), Phase 2 (SS2), and Challenge Mode (E:02) reforms by 100%."
+    flavor_text: "In 1925, physics had all the math on the shelf to leap from classical drag to quantum mechanics in three years. Macroeconomics stands at that exact threshold today."
+    empirical_anchor: "Document 1A Part I Section 4; Document 1C Section 2 & 5.4; QEA_2026.m."
+
+  - id: "K:05"
+    name: "The Pūrākau Weaver: Creative, Storyteller, & Cultural Catalyst"
+    deck: "kaupapa"
+    module_level: 3
+    type: "Wayfinder Persona — Narrative Imagination & National Renaissance (Gates 2 & 3)"
+    lens: ["Lens 1", "Lens 2"]
+    gate_or_phase: "Command Zone (Continuous / Tap)"
+    cost_or_requirement: "Select as Primary or Dual-Class Persona at Game Start"
+    synergy_links: ["B:02", "B:03", "C:06", "K:01", "K:02"]
+    effects:
+      - label: "Innate Kaupapa — Shatter the Myth of Managed Decline (Tap)"
+        rule: "Transform the 17 nodes of the Population Sankey and the 26 nodes of the Fiscal Ledger into a living story where every Kiwi sees their own whānau and mokopuna. Remove all 'Political Paralysis' and 'Tall Poppy Cynicism' counters from the board."
+      - label: "Dual-Class with K:01 (The Catalytic Steward)"
+        rule: "Infuse Gate 2 adolescent mentoring (B:02, C:03) with cultural identity (Ako, Tuakana–Teina, creative arts), lifting thriving youth launch from 23.5% to 65.0% and raising C:06 (Social Cohesion Index) from 100 to 126."
+      - label: "Dual-Class with K:02 (The Enterprise Wayfinder)"
+        rule: "Combine B:03 (Age-20 Renaissance Founder) and cooled urban rents (B:05) to ignite a Domestic Creative & Tech Renaissance—turning Wellington, Auckland, Christchurch, and provincial hubs into global magnets for talent."
+    flavor_text: "Equations and actuarial tables give us permission to fly, but nobody boards the vessel without a story worth believing in. Building the future is ultimately a creative act."
+    empirical_anchor: "Document 1C Section 5.5."
+
+  - id: "K:06"
+    name: "The Kaumātua & Founder's Dividend: Wisdom of the Golden Years (Ages 65+)"
+    deck: "kaupapa"
+    module_level: 3
+    type: "Wayfinder Lifecycle Identity — Intergenerational Wisdom & Catalytic Bequest (Lens 3)"
+    lens: ["Lens 3"]
+    gate_or_phase: "Ages 65+ (Continuous / Tap)"
+    cost_or_requirement: "Keep Universal NZ Superannuation Solvent at Age 65 (B:06) + Retain Domestic Youth (SS1 -> SS2)"
+    synergy_links: ["B:02", "B:03", "B:06", "K:04", "H:04"]
+    effects:
+      - label: "Freedom from Survival Mode"
+        rule: "Because Universal NZ Superannuation is secured at Age 65 and living/energy costs are firmed (E:02), retiring cohorts do not have to spend their golden years scrambling against poverty or mourning exiled grandchildren."
+      - label: "The 60-Year Synthesis (Non-Rival Wisdom — Tap)"
+        rule: "Contribute 1 Lifetime Experience Token every turn at zero fiscal cost. Spend to: (1) Reduce the cost of any Nobel Milestone (N:01–N:05) or Systems Innovation (B:04, B:08, E:02) card by 100%, OR (2) Pair with Gate 2 (B:02) or Gate 3 (B:03) to double first-gen startup survival and boost Social Cohesion from 100 to 126 (C:06)."
+    flavor_text: "It takes sixty years of scraped knees, contrarian bets, and lived history to see how the whole board fits together. Secure dignity in retirement, and a nation's elders become its greatest open-source library."
+    empirical_anchor: "Document 1A Part II Lens 3 & Part IV Section 5; Ka pū te ruha, ka hao te rangatahi."
+
+  - id: "K:07"
+    name: "Te Tiriti & The Big Table Crew: The Five-Crew Hydrofoil Formation"
+    deck: "kaupapa"
+    module_level: 3
+    type: "Legendary Kaupapa Enchantment — Multi-Persona Crew Synergy"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "SS1 -> SS2"
+    cost_or_requirement: "At least three Dual-Class Wayfinder Personas (K:01–K:06) active at the table (representing Crown Kāwanatanga, Iwi/Community Rangatiratanga, Enterprise, Science, and Story)."
+    synergy_links: ["B:06", "B:09", "C:06", "N:06"]
+    effects:
+      - label: "One Crew, One Foiling Vessel"
+        rule: "While The Big Table Crew (K:07) is active, every Persona at the table shares its Innate Kaupapa Ability with all other players."
+      - label: "Prosperity We Can Keep"
+        rule: "Restore New Zealand's Transparency International Social Credit Rating (C:06) to #1 in the World, permanently lock in B:06 (The 2050 50/50 Stabilizer), and unlock B:09 (Lifting the Gold from the River) and N:06 (The Aotearoa Synthesis)."
+    flavor_text: "We have found our new gold. We are standing in the river. When all five crews lift together, Aotearoa doesn't just survive the heavy seas—she flies."
+    empirical_anchor: "Document 1A Part VI Coda (Honoring Te Tiriti o Waitangi as good ancestors for our mokopuna); Document 1C Section 4 & 5."
+
+  # ----------------------------------------------------------------------------
+  # MODULE 4: REACHING ABUNDANCE & CROSSING INFINITE HORIZONS — NOBEL ARCHIVE (N:01 - N:06)
+  # ----------------------------------------------------------------------------
+  - id: "N:01"
+    name: "Ronald Coase's Transaction-Cost Scalpel (Nobel Prize, 1991)"
+    deck: "nobel"
+    module_level: 4
+    type: "Nobel Milestone — Rule-Bending Sorcery"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "SS1 -> SS2"
+    cost_or_requirement: "USD 6,000 Bootstrap Seed (or 1 Contrarian Conviction Token)"
+    synergy_links: ["B:04", "N:03", "N:05", "H:01", "H:03"]
+    effects:
+      - label: "Make Free Software (and Human Potential) Affordable"
+        rule: "Expose the hidden transaction costs of the status quo. Every time an opponent pays for reactive symptom remediation (Oranga Tamariki State Care at NZD 180k/yr, Avoidable Hospitalisations, or Corrections), they must pay an additional 2x Deadweight Drag Penalty."
+      - label: "Platform for Innovation"
+        rule: "Reduce the cost of deploying all open-source and preventative social infrastructure cards (B:01–B:08, E:02) in your hand by 75%."
+    flavor_text: "Orthodoxy only counts the price tag on the shelf and ignores the billions wasted in friction. Optimize the transaction costs, and you jump to light-speed."
+    empirical_anchor: "Coase (1937, 1960; Nobel Prize 1991); Cygnus Support tagline (1989); Document 1C Section 6."
+
+  - id: "N:02"
+    name: "James Heckman's Dynamic Complementarity Engine (Nobel Prize, 2000)"
+    deck: "nobel"
+    module_level: 4
+    type: "Nobel Artifact — Two-Stage Skill Multiplier (Lens 1)"
+    lens: ["Lens 1"]
+    gate_or_phase: "Gate 1 (Ages 0-5) -> Gate 2 (Ages 12-14)"
+    cost_or_requirement: "Front-Load NZD 13.0k/yr in Gate 1 (B:01, Ages 0–5)"
+    synergy_links: ["B:01", "B:02", "C:03", "N:04", "H:02"]
+    effects:
+      - label: "Skills Beget Skills"
+        rule: "Whenever you play B:01 (Tamariki of the First 2000 Days — Te Korowai Mokopuna / Whānau Ora), place a Readiness Counter on that cohort."
+      - label: "Two-Stage Synergy"
+        rule: "Cohorts with a Readiness Counter receive 3x the skill payoff from all subsequent Primary/Secondary Schooling and Gate 2 Montessori / Tuakana–Teina Mentoring (B:02, C:03) cards, and automatically crowd in +NZD 15.3k of Private Parental Care at zero fiscal cost."
+    flavor_text: "Remediation at age 18 is swimming up a waterfall. Readiness at age 3 turns every classroom into a launchpad."
+    empirical_anchor: "Cunha, Heckman, & Schennach (2010); Heckman (Nobel Prize 2000); Lee & Seshadri (2019); Document 1A Part IV Section 2."
+
+  - id: "N:03"
+    name: "Oliver Williamson's Actuarial Ledger (Nobel Prize, 2009 — Part I)"
+    deck: "nobel"
+    module_level: 4
+    type: "Nobel Enchantment — Institutional Governance & ACC Accounting"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Year 5 Parliamentary Audit (SS1)"
+    cost_or_requirement: "Escape the 'Cash-Flow Myopia' Rule (B:07)"
+    synergy_links: ["B:07", "B:08", "K:03", "N:01", "H:01"]
+    effects:
+      - label: "Year 5 Continuation Valuation"
+        rule: "You are no longer forced to wait 18.8 turns (years) to book the fiscal return on child and adolescent investments."
+      - label: "Audited Breakeven"
+        rule: "As soon as a cohort clears Gate 1 (Age 5, B:01) and Gate 2 (Age 14, B:02) with verified reductions in stunting, immediately unlock 3.84x Audited Fiscal Breakeven (NZD 35.25B Fiscal / NZD 85.40B GDP at Treasury's 2% discount rate)—including 1.16x breakeven (NZD 10.68B) from direct cost avoidance alone inside a single parliamentary term."
+    flavor_text: "Bad governance treats a child's future as an unrecoverable sunk cost. Good governance reads the actuarial balance sheet and books the liability release today."
+    empirical_anchor: "Williamson (1985; Nobel Prize 2009); Document 1A Part V Section 2; Document 1C Section 6."
+
+  - id: "N:04"
+    name: "Elinor Ostrom's Polycentric Commons (Nobel Prize, 2009 — Part II)"
+    deck: "nobel"
+    module_level: 4
+    type: "Nobel Aura — Community-Led Governance (Manaakitanga & Whanaungatanga)"
+    lens: ["Lens 1", "Lens 2"]
+    gate_or_phase: "Gates 1 & 2 (Community Delivery)"
+    cost_or_requirement: "Devolve Power from Central Bureaucracy to Local & Iwi Trusts (K:01)"
+    synergy_links: ["B:01", "B:02", "C:03", "K:01", "N:02", "H:02"]
+    effects:
+      - label: "Beyond Market vs. Leviathan"
+        rule: "Immune to 'Wellington Micromanagement' (H:02) and 'Privatization Failure' debuffs."
+      - label: "Reciprocal Leadership"
+        rule: "When paired with Iwi Trusts (K:01), Barnardos, or Graeme Dingle Foundation (Stars / Te Kāhui Whetū & Project K, B:02 / C:03), double the reach of adolescent mentoring (from 17.3% to 65.0%+ of Years 8–10) and insulate all mentored rangatahi against Family Unemployment Shocks."
+    flavor_text: "Nobel orthodoxy said communities couldn't govern the commons without a boss or a billionaire. Elinor Ostrom—and centuries of Tuakana–Teina—proved them wrong."
+    empirical_anchor: "Ostrom (1990, 2009 Nobel Prize Lecture); Wenger, McDermott, & Snyder (2002); Document 1C Section 6."
+
+  - id: "N:05"
+    name: "Paul Romer's Collective Intelligence Reactor (Nobel Prize, 2018)"
+    deck: "nobel"
+    module_level: 4
+    type: "Nobel Engine — Endogenous Non-Rival Knowledge Creation"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "Gate 3 (Ages 20-35) & Intergenerational Loop"
+    cost_or_requirement: "Retain Domestic Age 20–35 Talent + Seed the Age-20 Youth Capital Grant (B:03)"
+    synergy_links: ["B:03", "B:05", "K:02", "K:06", "H:03", "H:04"]
+    effects:
+      - label: "Compounding Ideas"
+        rule: "Unlike finite urban dirt, human capability and shared knowledge are non-rival—the more people use them, the more valuable they become."
+      - label: "The Three-Fourths Generational Multiplier"
+        rule: "For every cohort that launches into the Thriving Skill Tier (65.0%) and stays in Aotearoa instead of emigrating, permanently increase regional enterprise wages by +3.2% to +9.6% and multiply the next generation's starting human capital by 1.75x."
+    flavor_text: "A nation that hoards residential land runs out of dirt. A nation that unlocks the collective intelligence of its children never runs out of altitude."
+    empirical_anchor: "Romer (1990; Nobel Prize Oct 2018); Tiemann (Sept 2018, The Awesome Economics of Open Source); Document 1C Section 6."
+
+  - id: "N:06"
+    name: "The Unclaimed Medallion: The Aotearoa Synthesis (Nobel Horizon, 203X)"
+    deck: "nobel"
+    module_level: 4
+    type: "Mythic Victory Condition — The Coupled Hydrofoil (SS0 -> SS1 -> SS2)"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "SS2 Ultimate Victory"
+    cost_or_requirement: "Simultaneously control Dual-Gate Human Capability (B:01 + B:02), Use-It-Or-Lose-It Capital Rebalance (B:05), ACC Actuarial Accounting (B:07 / N:03), and The 2050 50/50 Stabilizer (B:06 / C:04)."
+    synergy_links: ["B:01", "B:02", "B:05", "B:06", "B:07", "B:09", "N:01", "N:02", "N:03", "N:04", "N:05"]
+    effects:
+      - label: "Flying, Not Floundering"
+        rule: "Compress cohort stunting to 1.5%, keep Universal NZ Superannuation solvent at Age 65, cut working-age PAYE taxes by -3.5 percentage points, and lift National Household Welfare by +20.49% CE (B:09)."
+      - label: "Write the Next Chapter"
+        rule: "When all four lenses operate as one coupled system, your team claims The Aotearoa Synthesis—proving to the world that when the math is right and the time is right, enormous change is possible, good, and sustainable."
+    flavor_text: "Five Nobel Laureates proved the parts. One small nation at the bottom of the world had the courage to bolt them together and fly."
+    empirical_anchor: "Document 1C Section 6 Conclusion."
+
+  # ----------------------------------------------------------------------------
+  # MODULE 5: THE ORTHODOXY BOSS DECK & COMBO COUNTER-PLAYS (H:01 - H:05)
+  # ----------------------------------------------------------------------------
+  - id: "H:01"
+    name: "The Cash-Flow Myopia Trap ('Wait 18.8 Years!') vs. The Coase–Williamson Audit"
+    deck: "orthodoxy"
+    module_level: 4
+    type: "Orthodoxy Hazard -> Nobel Combo Counter-Play (Instant)"
+    lens: ["Lens 1", "Lens 3"]
+    gate_or_phase: "Turn 1-5 Boss Hazard"
+    cost_or_requirement: "Combo Counter Requirement: Tap N:01 (Coase) + N:03 (Williamson) (or B:07 + K:03)."
+    synergy_links: ["B:07", "K:03", "N:01", "N:03"]
+    effects:
+      - label: "The Hazard (Played by the Board)"
+        rule: "'The 3-Year Election Cycle.' Treasury's legacy cash-flow model (LTFM) declares that early-childhood investment is an unrecoverable fiscal deficit because cash breakeven takes 18.8 years. Freeze all Gate 1 (B:01) and Gate 2 (B:02) funding and add +NZD 17.7B/yr in reactive remediation hull drag."
+      - label: "Counter-Play Effect — Bend the Accounting Daggerboard"
+        rule: "Switch the scoreboard from Cash-Flow Accounting to ACC-Style Actuarial Continuation Valuation (B:07). Instantly cancel the freeze and book 3.84x Audited Fiscal Breakeven in Year 5 (NZD 35.25B Fiscal / NZD 85.40B GDP at 2% real)—proving 1.16x breakeven (NZD 10.68B) from direct cost avoidance alone inside one parliamentary term."
+    flavor_text: "A displacement hull sees a 5-year expense. An actuarial hydrofoil sees 25 years of avoided prison cells and hospital beds booked on the balance sheet today."
+    empirical_anchor: "Document 1A Part V Section 2 (18.8-year cash vs. Year 5 actuarial breakeven)."
+
+  - id: "H:02"
+    name: "The 'Wellington Knows Best' Bottleneck vs. The Ostrom–Heckman Community Engine"
+    deck: "orthodoxy"
+    module_level: 4
+    type: "Orthodoxy Hazard -> Nobel Combo Counter-Play (Instant)"
+    lens: ["Lens 1"]
+    gate_or_phase: "Gate 1 & Gate 2 Boss Hazard"
+    cost_or_requirement: "Combo Counter Requirement: Tap N:02 (Heckman) + N:04 (Ostrom) (or K:01 + B:02)."
+    synergy_links: ["B:01", "B:02", "C:03", "K:01", "N:02", "N:04"]
+    effects:
+      - label: "The Hazard (Played by the Board)"
+        rule: "'Siloed Bureaucracy & Unbuffered Shock.' A regional unemployment shock hits families with 12-to-14-year-olds, while central agencies spend 30 cents of every dollar on compliance red tape. Unbuffered rangatahi lose their early childhood gains, and unrestricted cash transfers get swallowed by metropolitan rent."
+      - label: "Counter-Play Effect — Trust the Commons, Lock in the Skill"
+        rule: "Bypass central micromanagement by routing in-kind resources directly through Iwi Trusts (K:01), Whānau Ora, Barnardos' Te Korowai Mokopuna (B:01), and Montessori / Tuakana–Teina & Graeme Dingle Foundation (B:02, C:03) mentoring. Scale mentoring from 17.3% to 65.0%+, insulate the cohort against unemployment shocks, and compress adult stunting from 22.0% to 1.5%."
+    flavor_text: "Central bureaucracy writes concrete rules for yesterday's crisis. Polycentric communities adapt in real time and turn every older student into a leader."
+    empirical_anchor: "Document 1A Part II Lens 1; Ferriere et al. (2025) non-homothetic in-kind public provision."
+
+  - id: "H:03"
+    name: "The Trans-Tasman Brain-Drain Vortex vs. The Romer–Coase Talent Magnet"
+    deck: "orthodoxy"
+    module_level: 4
+    type: "Orthodoxy Hazard -> Nobel Combo Counter-Play (Instant)"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "Gate 3 (Ages 20-35) Boss Hazard"
+    cost_or_requirement: "Combo Counter Requirement: Tap N:01 (Coase) + N:05 (Romer) + B:05 (Use-It-Or-Lose-It Rebalancer)."
+    synergy_links: ["B:03", "B:05", "K:02", "N:01", "N:05"]
+    effects:
+      - label: "The Hazard (Played by the Board)"
+        rule: "'The Stepping-Stone Funnel to Sydney.' Speculative land hoarding inflates Auckland housing to 3.10x rural levels while local firms starve for expansion capital. 19.3% to 23.4% of freshly educated 20-to-35-year-old graduates in Auckland and Large regional cities emigrate to Australia."
+      - label: "Counter-Play Effect — Unchain Capital & Seed the Youth"
+        rule: "Shift taxes off productive enterprise onto dormant land wealth (1.5%) and the NZD 1.6T estate transfer (25%) to fund a universal Age-20 Youth Capital Grant (B:03). Cool metro housing (-7.5% to -10.5%), lift real regional wages by up to +9.6%, lift young-adult homeownership from 28.0% to 41.5%, and retain 3,550/yr skilled graduates in Aotearoa."
+    flavor_text: "Why export the most expensive education in the Southern Hemisphere for free when you can give young Kiwis a stake in the country they grew up in?"
+    empirical_anchor: "Document 1A Part II Lens 2 & Part IV Section 4; Ireland 1967-2002 brain-drain reversal."
+
+  - id: "H:04"
+    name: "The 'Actuarial Burden' Trap ('Raise the Pension Age to 70!') vs. The Living Bequest"
+    deck: "orthodoxy"
+    module_level: 4
+    type: "Orthodoxy Hazard -> Lens 3 Counter-Play (Instant)"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "Lens 3 Retirement Boss Hazard"
+    cost_or_requirement: "Combo Counter Requirement: Tap K:06 (Kaumātua Dividend) + N:05 (Romer) + B:05 (Use-It-Or-Lose-It)."
+    synergy_links: ["B:05", "B:06", "K:06", "N:05"]
+    effects:
+      - label: "The Hazard (Played by the Board)"
+        rule: "'The Demographic Vise.' Austerity orthodoxy demands raising the NZ Super age to 67 or 70 (triggering a 38%–45% disability/benefit substitution leak and regressively penalizing Māori, Pasifika, and manual workers while PAYE still climbs to 25.55%–26.85%). Exhaust all Age 65+ cards; 0 Lifetime Experience Tokens can be shared."
+      - label: "Counter-Play Effect — Pass the Torch, Not the Speculative Bubble"
+        rule: "Rotate dormant property hoarding from the NZD 1.6T transfer into the Age-20 Youth Capital Grant (B:03) while keeping Universal NZ Super at Age 65 (B:06, bending required PAYE down to 24.45%—outperforming Age 70!). Unlock both financial capital and 60 years of accumulated human wisdom (K:06)."
+    flavor_text: "A society that impoverishes its elders or exiles its youth breaks the chain of memory. A society that honors both turns a lifetime of learning into the next generation's launchpad."
+    empirical_anchor: "Document 1A Part IV Section 5 (Why keeping NZ Super at 65 beats raising the pension age to 67 or 70)."
+
+  - id: "H:05"
+    name: "The 1989 Tokyo Land-Bubble Boss vs. The 4-Laureate 2050 Stabilizer"
+    deck: "orthodoxy"
+    module_level: 4
+    type: "End-Game Crisis Boss -> Ultimate Coupled Counter-Play"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Phase 2 (SS2) End-Game Boss"
+    cost_or_requirement: "Combo Counter Requirement: Tap N:01–N:05 alongside B:06 (The 2050 50/50 Stabilizer) and C:04 (Coastal & Grid Armor)."
+    synergy_links: ["B:06", "C:04", "N:01", "N:02", "N:03", "N:04", "N:05", "T:01", "T:02"]
+    effects:
+      - label: "The Hazard (Played by the Board in Phase 2)"
+        rule: "'The Devolved Scotland Ceiling (T:01) & The Tokyo Speculative Trap (T:02).' Your Phase 1 social reforms succeeded! Productivity is rising and surpluses are rolling in—but speculative investors try to pour the newfound national wealth straight back into finite urban land, threatening a 1989 Tokyo-style bubble."
+      - label: "Counter-Play Effect — Engage the Rear T-Foil Stabilizer"
+        rule: "Legally lock 50% of every net fiscal surplus into the Sovereign Debt Reduction Sinking Fund (retiring NZD 17.8B–21.9B of debt per wave and cutting interest rates by 60 bps) and 50% into the Public Infrastructure Pool (at a 1.65x multiplier). Prevent the land bubble, keep NZ Super at 65, and deliver a permanent -3.5 pp PAYE tax cut in SS2."
+    flavor_text: "Generating a miracle takes a front foil and a wing-sail. Keeping it for your grandchildren takes a rear T-foil stabilizer."
+    empirical_anchor: "Document 1A Part V Section 1 & Part VI Coda (Deming's 1950 Lecture vs. 1989 Tokyo Bubble)."
+
+  # ----------------------------------------------------------------------------
+  # MODULE 6: GAME-CHANGER TUTORIAL — FIRMING THE ECONOMIC GRID (E:01 - E:03)
+  # ----------------------------------------------------------------------------
+  - id: "E:01"
+    name: "Swapping Fuels for Finance (The First-Order Electrification Card)"
+    deck: "electrification"
+    module_level: 5
+    type: "Player-Drafted Artifact — First-Order Energy Transition (Easy Mode)"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Track 1 Tutorial (First-Order Budget Pie)"
+    cost_or_requirement: "Cancel the NZD 6.2B Imported LNG Terminal + Sequence via End-of-Life Appliance Replacement (Option B) or C:04 Infra Pool for P01–P50 (Option D)."
+    synergy_links: ["B:01", "B:06", "B:07", "C:04", "C:05"]
+    effects:
+      - label: "The Crowd-Out Constraint (Why Option A Fails)"
+        rule: "If you fund a 100% upfront sprint by raiding B:01 (First 2000 Days) or B:02 (Tuakana–Teina Mentoring) in Phase 1 (SS1), take +NZD 105,000/yr per stunted child in reactive remediation hull drag."
+      - label: "Targeting Rule (Option D Beats Option C)"
+        rule: "Never spend Crown tax breaks subsidizing top-half homeowners (P50–P100) who already earn 15%–17% IRR on solar (Option C—triggers a regressive Grid Death Spiral for renters). Instead, route C:04 infrastructure capital into Bottom-Half Whānau, Social Housing, Schools, and Marae (Option D)—slashing Exit 2 (Paediatric Respiratory Hospitalisations) and accelerating B:07 (Year 5 ACC Breakeven)."
+      - label: "First-Order Payoff"
+        rule: "Gain +NZD 10.7B to +NZD 15.55B/yr in direct fuel and maintenance savings across Aotearoa and cut 10M tonnes/yr of emissions."
+    flavor_text: "In first-order economics, every dollar spent on a solar panel looks like a dollar stolen from a kindergartner. To get both at once without waiting twenty years, you have to look at the second-order math..."
+    empirical_anchor: "Griffith, Ellison, Pawson, & Conway (Aug 2024, Investing in Tomorrow: Rewiring Aotearoa); IG Welfare Game Changer Tutorial Part 1."
+
+  - id: "E:02"
+    name: "Energy as Endowment (The QEA-2026 Stationary Distribution Shift)"
+    deck: "electrification"
+    module_level: 5
+    type: "Open-Source Engine — Second-Order Lifecycle Transformation (Challenge Mode)"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "Track 2 Tutorial (VFI Toolkit Stationary Distribution PR)"
+    cost_or_requirement: "Fork QEA_2026.m on the GPU + Allow Households, Schools/Marae, Firms, Farms, and Transport to Acquire Solar + Battery Endowments (pv_regimes = [5])."
+    synergy_links: ["B:01", "B:05", "C:03", "C:05", "E:03", "K:04"]
+    effects:
+      - label: "Cancel the Crowd-Out Myth (Self-Financing Release)"
+        rule: "Converting energy from an unbounded AR(1) fossil-fuel shock (z2) into a Solar + Battery Endowment (pv) eliminates the need for Excess Precautionary Savings. Release NZD 60.8B–91.5B in hoarded precautionary buffers (Delta A_prec)—100% self-financing the NZD 60.2B–75.5B 5-sector national CapEx with zero crowd-out of B:01 or B:02!"
+      - label: "The Leisure & Bequest Dividend"
+        rule: "Increase household Leisure (leisure_h) across both working age and retirement, generate 50% grid feed-in income, and turn rooftop solar panels into a planned Intergenerational Bequest Asset (wg1=1.5, wg2=3)."
+    flavor_text: "Capital without energy is a statue; labor without energy is a corpse. Turn the sun into a household endowment, and the statue starts flying."
+    empirical_anchor: "Tiemann (June 2026, Firming the Economic Grid); QEA_2026.m (github.com/MichaelTiemann/QEA-2026); Kirkby (2025/2026)."
+
+  - id: "E:03"
+    name: "Firming the Economic Grid (The RBNZ & National Security Dividend)"
+    deck: "electrification"
+    module_level: 5
+    type: "Macroeconomic Enchantment — Monetary & Trade Stabilizer (Challenge Mode)"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "SS1 -> SS2 Macroeconomic Equilibrium"
+    cost_or_requirement: "Pair E:02 (Energy as Endowment) with K:03 (The Sovereign Helmsman — Treasury & RBNZ)"
+    synergy_links: ["B:05", "B:06", "C:04", "E:02", "K:03"]
+    effects:
+      - label: "Cure the Precautionary Paradox"
+        rule: "Because households and firms are no longer over-saving out of fear of commodity fuel shocks, the Reserve Bank of New Zealand no longer has to fight paradoxical demand drag with blunt OCR interest-rate hikes."
+      - label: "Triple Macro Payoff"
+        rule: "(1) Horsepower-to-Weight Lift: Generate +NZD 15.55B/yr in direct cash savings (4.5–5.2 yr payback) and +3.8% to +5.4% permanently higher GDP. (2) National Security Shield: Cancel the NZD 6.2B imported LNG terminal and insulate food/freight against foreign oil blockades. (3) Combined Rate Cut: Stack with B:06 to lower equilibrium NZ interest rates by 60 to 100 bps."
+    flavor_text: "Why spend NZD 6.2 billion on an LNG terminal to import foreign price shocks when you can firm the electricity grid and the macroeconomic grid with the same ray of sunshine?"
+    empirical_anchor: "Tiemann (June 2026, Firming the Economic Grid); RBNZ Monetary Policy Statement (Feb 2026); Keen (2022)."

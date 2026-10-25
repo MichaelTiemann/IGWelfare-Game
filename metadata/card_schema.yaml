@@ -1,0 +1,86 @@
+# ==============================================================================
+# FOILS & FOUNDERS: THE AOTEAROA DECK — FORMAL CARD VALIDATION SCHEMA
+# Path: metadata/card_schema.yaml
+# License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+# ==============================================================================
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "FoilsAndFoundersCardDeck"
+type: "object"
+required: ["metadata", "cards"]
+
+properties:
+  metadata:
+    type: "object"
+    required: ["game_title", "version", "author", "license", "decks"]
+  cards:
+    type: "array"
+    items:
+      type: "object"
+      required:
+        - "id"
+        - "name"
+        - "deck"
+        - "module_level"
+        - "type"
+        - "lens"
+        - "gate_or_phase"
+        - "cost_or_requirement"
+        - "synergy_links"
+        - "effects"
+        - "flavor_text"
+        - "empirical_anchor"
+      properties:
+        id:
+          type: "string"
+          pattern: "^[BTCKNHE]:[0-9]{2}$"
+          description: "Canonical P:DD card identifier (e.g., B:00, K:04, E:02)."
+        name:
+          type: "string"
+        deck:
+          type: "string"
+          enum: ["base", "traps", "climate", "kaupapa", "nobel", "orthodoxy", "electrification"]
+        module_level:
+          type: "integer"
+          minimum: 1
+          maximum: 5
+        type:
+          type: "string"
+        lens:
+          type: "array"
+          items:
+            type: "string"
+            enum: ["Lens 1", "Lens 2", "Lens 3"]
+        gate_or_phase:
+          type: "string"
+        cost_or_requirement:
+          type: "string"
+        synergy_links:
+          type: "array"
+          items:
+            type: "string"
+            pattern: "^[BTCKNHE]:[0-9]{2}$"
+        co2e_impact:
+          type: "object"
+          properties:
+            display:
+              type: "string"
+              description: "Short badge string rendered in top-right or bottom-right corner."
+            status:
+              type: "string"
+              enum: ["computed", "indirect_enabler", "hazard_increase", "na"]
+        effects:
+          type: "array"
+          minItems: 1
+          items:
+            type: "object"
+            required: ["label", "rule"]
+            properties:
+              label:
+                type: "string"
+              rule:
+                type: "string"
+        flavor_text:
+          type: "string"
+        empirical_anchor:
+          type: "string"

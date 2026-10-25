@@ -1,6 +1,6 @@
 # Beyond the Magic Money Tree — *Foils & Founders: The Aotearoa Deck*
 
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)]([https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/))
 [![Engine: VFI Toolkit GPU](https://img.shields.io/badge/Engine-VFI_Toolkit_GPU-blue.svg)](https://github.com/MichaelTiemann/IGWelfare)
 
 An open-source cooperative/competitive tabletop strategy game and macroeconomic simulation companion to ***Intergenerational Welfare, Capital Allocation, and Human Potential in New Zealand*** by Michael Tiemann ([Document 1A](https://github.com/MichaelTiemann/IGWelfare), `Document 1B`, and [Document 1C](https://github.com/MichaelTiemann/IGWelfare/blob/main/Document%201C.md)).
@@ -22,15 +22,16 @@ Pick up a 20-sided die (`1` to `20`, representing the 20 wealth vigintiles of Ao
 
 ## 2. Two Cultural Groundings: One Vessel, Two Hulls (*Te Waka Hourua*)
 
-Players can ground every card and strategy at the table in either (or both) of two isomorphic narratives:
-1. **The Pākehā / Systems Engineering Story (*Up on Foils*):** How Emirates Team New Zealand bent the straight-keel orthodoxy in 2013 by coupling a **Front Lifting Foil (`B:01` + `B:02`)**, a **Wing-Sail Power Plant (`B:05` + `B:03` + `E:02`)**, and a **Rear T-Foil Rudder Stabilizer (`B:06` + `B:07`)** to lift the catamaran out of the water and slash drag by 75%.
-2. **The Te Ao Māori & Pasifika *Pūrākau* (*Te Waka o Whānau — Being, Becoming, & Crossing Over*):** Wrapping the sacred seed (*He Kākano i Ruia mai i Rangiātea*) in *Te Korowai Mokopuna* and *Whānau Ora* (`B:01`), ascending *Te Aka Matua* together through reciprocal *Tuakana–Teina* and *Ako* (`B:02`, `C:03`), restoring *Tūrangawaewae* for our *rangatahi* (`B:03`, `B:05`), and honoring our *kaumātua* navigators as they pass down *Ngā Kete o te Wānanga* (`K:06`, `B:06`).
+Like *Te Waka Hourua*—the double-hulled voyaging vessel where two hulls are lashed together by *kīato* (cross-beams)—every mechanic on the board can be played through **two one-to-one isomorphic narratives** (see [**`STORIES.md`**](STORIES.md) for the full lore and [**Side-by-Side Translation Key**](STORIES.md#side-by-side-translation-key-one-game-two-groundings)):
+
+1. [**Story Lens A — *Up on Foils* (Pākehā / Systems Engineering):**](STORIES.md#story-lens-a-up-on-foils--how-emirates-team-new-zealand-bent-the-rulebook) How Emirates Team New Zealand bent the straight-keel orthodoxy in 2013 by coupling a **Front Lifting Foil (`B:01` + `B:02`)**, a **Wing-Sail Power Plant (`B:05` + `B:03` + `E:02`)**, and a **Rear T-Foil Rudder Stabilizer (`B:06` + `B:07`)** to lift the catamaran out of the water and slash hydrodynamic drag by 75%.
+2. [**Story Lens B — *Te Waka o Whānau* (Te Ao Māori & Moana Pasifika *Pūrākau*):**](STORIES.md#story-lens-b-te-waka-o-whānau--being-becoming--crossing-over-māori--pasifika-pūrākau) The three-stage intergenerational crossing from **Being** (*He Kākano i Ruia mai i Rangiātea*, wrapping the sacred seed in *Te Korowai Mokopuna* and *Whānau Ora*, `B:01`), through **Becoming** (ascending *Te Aka Matua* together via reciprocal *Tuakana–Teina* and *Ako*, `B:02`, `C:03`, and restoring *Tūrangawaewae* at home, `B:03`, `B:05`), to **Crossing Over** (honoring our *kaumātua* navigators as they pass down *Ngā Kete o te Wānanga*, `K:06`, `B:06`).
 
 ---
 
-## 3. Progressive Onboarding: The 6 Modular Decks (`P:DD` Taxonomy)
+## 3. Progressive Onboarding: The 7 Modular Decks (`P:DD` Taxonomy)
 
-Every card in [`decks/cards.yaml`](decks/cards.yaml) uses a permanent **`P:DD`** identifier so cross-references never break when the community adds new cards via Pull Request:
+Every card in [`decks/cards.yaml`](decks/cards.yaml) uses a permanent **`P:DD`** identifier (rendered in the upper-left corner, with an optional **`🌱 CO2e`** impact badge in the upper-right or bottom-right corner) so cross-references never break when the community adds new cards via Pull Request:
 
 | Prefix | Deck Name | Cards | Onboarding Level & Focus |
 | :---: | :--- | :---: | :--- |
@@ -44,8 +45,10 @@ Every card in [`decks/cards.yaml`](decks/cards.yaml) uses a permanent **`P:DD`**
 
 ---
 
-## 4. Contributing & Licensing
+## 4. Repository Layout, Contributing, & Licensing
 
-* **Game Rules, Card Text, & Data Tables (`rules/`, `decks/`, `data/`):** Licensed under [Creative Commons Attribution-ShareAlike 4.0 International (`CC-BY-SA-4.0`)](https://creativecommons.org/licenses/by-sa/4.0/).
-* **Simulation Code (`*.m`):** Compatible with `VFIToolkit-matlab` on GPU. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for instructions on submitting a **Track 1 (First-Order Card)** or **Track 2 (Second-Order Stationary Distribution Shift)** Pull Request.
-* 
+* **Narrative & Lore ([`STORIES.md`](STORIES.md)):** The full dual-lens grounding (*Up on Foils* and *Te Waka o Whānau*) plus the side-by-side translation table.
+* **Master Decks & Schemas (`decks/`, `metadata/`, `themes/`):** Canonical card definitions (`decks/cards.yaml`), YAML validation schemas and empirical source registries (`metadata/`), and cascading visual themes (`themes/generic/`, `themes/foils_pakeha/`, `themes/waka_hourua/`).
+* **Audit & Scorecard Data (`data/`):** Reproducible CSV scorecards for the Rawlsian D20 (`d20_veil_of_ignorance.csv`), the 10-Tier Earn + Own Incidence Audit (`earn_plus_own_10tiers.csv`), and the 5-Sector National Electrification Scorecard (`electrification_5sector.csv`).
+* **How to Submit a Pull Request ([`CONTRIBUTING.md`](CONTRIBUTING.md)):** Supports **Track 1** (First-Order Cards), **Track 2** (Second-Order VFI Toolkit Stationary Distribution Shifts), **Track 3** (Demographic & Baseline Customizations: 10 vs. 12 tiers, median vs. mean, bottom- vs. top-weighted), and **Track 4** (Artist Themes & Card Illustrations).
+* **License:** Game rules, stories, card text, artwork themes, and data tables are licensed under [Creative Commons Attribution-ShareAlike 4.0 International (`CC-BY-SA-4.0`)](https://creativecommons.org/licenses/by-sa/4.0/). Simulation and rendering scripts (`*.m`, `*.py`) are dual-licensed under `GPL-3.0-or-later` / `MIT`.

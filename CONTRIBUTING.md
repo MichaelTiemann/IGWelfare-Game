@@ -16,9 +16,16 @@ IGWelfare-Game/
 │   ├── cards.yaml                     # Canonical master database of all 41 P:DD cards
 │   └── cards.json                     # Auto-generated JSON mirror for web/UI rendering
 ├── themes/
-│   ├── generic/                       # Root fallback theme (Markdown-driven typography)
-│   ├── foils_pakeha/                  # America's Cup Hydrofoil & Systems Engineering art
-│   └── waka_hourua/                   # Te Ao Māori & Pasifika Pūrākau art (Kaitiaki-vetted)
+│   ├── generic/                    # Root fallback theme (Markdown-driven typography)
+│   │   ├── theme.yaml              # Base CSS variables, fonts, & deck color borders
+│   │   └── cards/                  # Optional per-card Markdown overrides (B_01.md)
+│   ├── foils_pakeha/               # America's Cup Hydrofoil & Systems Engineering art
+│   │   ├── theme.yaml              # fallback_chain: ["generic"]
+│   │   └── assets/                 # B_04.png, E_02.svg, T_00.webp, etc.
+│   └── waka_hourua/                # Te Ao Māori & Pasifika Pūrākau art (Kaitiaki-vetted)
+│       ├── theme.yaml              # fallback_chain: ["foils_pakeha", "generic"]
+│       ├── cards/                  # Optional localized Māori/Pasifika title overrides
+│       └── assets/                 # B_01.png (He Kākano), B_02.png (Tuakana-Teina), etc.
 ├── data/
 │   ├── d20_veil_of_ignorance.csv      # B:00 Rawlsian D20 (Nat 1 & Nat 20 sub-roll tables)
 │   ├── electrification_5sector.csv    # E:01-E:03 5-Sector CapEx & Precautionary Release

@@ -51,7 +51,7 @@ cards:
       - label: "Confirming the Crit (Nat 20 Sub-Roll: 20:01 to 20:20)"
         rule: "Inside the Top 5% (NZD 500k income + 3M NW up to 10M + 250M), faces 20:01-20:13 win on a blended average, and 19 out of 20 faces (20:01-20:19, up to NZD 100M NW) win outright for Active Entrepreneurs (z_h). Even 20:20 retains 89.4%-94.5% of net worth."
     flavor_text: "Orthodox economics asks you to play Russian roulette with a twenty-sided die and calls it 'market efficiency.' True systems design rewrites the physics of the board so every roll of a child's life comes up a winner."
-    empirical_anchor: "Rawls (1971); Document 1A Part IV Section 3 & 6B (12-Tier Earn + Own Audit); Stats NZ HES (2024); IRD High-Wealth Project (2023)."
+    empirical_anchor: "Rawls (1971); Document 1A Part IV Section 3 & 6B (10-Tier Earn + Own Audit); Stats NZ HES (2024); IRD High-Wealth Project (2023)."
 
   - id: "B:01"
     name: "Tamariki of the First 2000 Days"

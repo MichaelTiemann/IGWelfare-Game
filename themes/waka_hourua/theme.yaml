@@ -27,7 +27,8 @@ lexicon_replacements:
   "displacement mode": "Te Pō (heavy drag)"
   "Up on Foils": "Sailing in Te Ao Mārama (Te Waka Hourua)"
   "up on foils": "sailing across Te Moana-nui-a-Kiwa"
-  "gets up on the wing-sail": "catches the winds of Tawhirimātea in Te Rā (the voyaging sail)"
+  "Engage the Rear T-Foil Stabilizer": "Engage Te Urunga & Ngā Kete o te Wānanga (The Steering Paddle & Three Baskets)"
+  "gets up on the wing-sail": "catches the winds of Tāwhirimātea in Te Rā (the voyaging sail)"
   "Front Lifting Foil": "Teihu & He Kākano i Rangiātea (The Sacred Bow & Seed)"
   "front lifting foil": "sacred bow (Teihu)"
   "front foil": "sacred bow (Teihu)"
@@ -51,6 +52,10 @@ card_overrides:
         rule: "Roll 1–4: Whānau trapped in the 22% hardship corner. Roll 5–18: Crushed by 3.10x urban rents and rangatahi exiled across the Tasman. Roll 19–20: Surrounded by 200% Crown debt and broken whakapapa. Result: No matter what you roll, the waka founders."
       - label: "Te Waka Hourua Roll (SS1 -> SS2 — Sailing into Te Ao Mārama)"
         rule: "Roll 1–20: All 20 whānau wealth groups thrive (+20.49% national wellbeing gain, Kaumātua Super kept at Age 65, PAYE cut to 18.5%). Roll any number; the waka sails true."
+      - label: "Confirming the Fumble (Nat 1 Sub-Roll: 01:01 to 01:20)"
+        rule: "In SS0, all 20 sub-slices of the Bottom 5% face 52%–92% stunting risk in Te Pō and cost NZD 44k–180k/yr in reactive care/prisons. In SS2, all 20 faces are rescued (+23.5% to +38.4% CE gain, state care cut 94%, and NZD 62k+ Youth Capital Grant at age 20)."
+      - label: "Confirming the Crit (Nat 20 Sub-Roll: 20:01 to 20:20)"
+        rule: "Inside the Top 5% (NZD 500k income + 3M NW up to 10M + 250M), faces 20:01–20:13 win on a blended average, and 19 out of 20 faces (20:01–20:19, up to NZD 100M NW) win outright for Active Kaitiaki Entrepreneurs (z_h). Even 20:20 retains 89.4%–94.5% of net worth."
 
   "B:01":
     name: "He Kākano i Ruia mai i Rangiātea (Tamariki of the First 2000 Days)"

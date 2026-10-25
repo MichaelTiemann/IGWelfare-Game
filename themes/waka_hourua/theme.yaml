@@ -27,7 +27,7 @@ lexicon_replacements:
   "displacement mode": "Te Pō (heavy drag)"
   "Up on Foils": "Sailing in Te Ao Mārama (Te Waka Hourua)"
   "up on foils": "sailing across Te Moana-nui-a-Kiwa"
-  "up on the wing-sail": "catching the winds of Tawhirimātea in Te Rā (the voyaging sail)"
+  "gets up on the wing-sail": "catches the winds of Tawhirimātea in Te Rā (the voyaging sail)"
   "Front Lifting Foil": "Teihu & He Kākano i Rangiātea (The Sacred Bow & Seed)"
   "front lifting foil": "sacred bow (Teihu)"
   "front foil": "sacred bow (Teihu)"
@@ -93,7 +93,7 @@ card_overrides:
     flavor_text: "Half the harvest pays down the debts of the past; half builds the whare and the grid for our mokopuna—while honoring every kaumātua at Age 65."
 
   "B:07":
-    name: "TeссоWhakapapa Ledger (ACC Actuarial Time-Bend)"
+    name: "Te Whakapapa Ledger (ACC Actuarial Time-Bend)"
     type: "Instant — Tohunga Whakatere Waka Star-Reading"
 
   "B:09":
@@ -102,11 +102,11 @@ card_overrides:
     flavor_text: "Ui mai koe ki ahau he aha te mea nui o te ao, Māku e kī atu he tāngata, he tāngata, he tāngata — Ask me what is the greatest thing in the world; I will reply: it is people, it is people, it is people."
 
   "C:04":
-    name: "TeWhakaruruhau o Tangaroa (Coastal, Grid, & Marae Armor)"
+    name: "Te Whakaruruhau o Tangaroa (Coastal, Grid, & Marae Armor)"
     type: "Legendary Infrastructure — Te Urunga Steering Stabilizer"
 
   "K:03":
-    name: "TeKaihautū Kāwanatanga: Sovereign Navigator (Crown, Treasury, & RBNZ)"
+    name: "Te Kaihautū Kāwanatanga: Sovereign Navigator (Crown, Treasury, & RBNZ)"
     type: "Wayfinder Persona — Honourable Kāwanatanga & Actuarial Stewardship"
 
   "K:06":

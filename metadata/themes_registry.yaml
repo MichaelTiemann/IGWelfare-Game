@@ -1,0 +1,108 @@
+# ==============================================================================
+# FOILS & FOUNDERS: THE AOTEAROA DECK — VISUAL THEMES REGISTRY
+# Path: metadata/themes_registry.yaml
+# License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+# ==============================================================================
+
+schema_version: "2026.10"
+default_theme: "generic"
+
+rendering_rules:
+  canonical_id_transform: "replace(':', '_')"   # e.g., "B:01" -> "B_01" for filenames
+  supported_image_formats: [".svg", ".png", ".webp", ".jpg", ".jpeg"]
+  supported_text_formats: [".md"]
+  badge_slots:
+    pdd_face_index: "top-left"                  # Always displays canonical P:DD (e.g., B:01)
+    co2e_impact_badge: "top-right"              # Configurable: "top-right" | "bottom-right"
+
+deck_palettes:
+  B:
+    name: "Base Game: Up on Foils"
+    border_hex: "#1B4F72"
+    header_bg_hex: "#EBF5FB"
+    badge_hex: "#2874A6"
+  T:
+    name: "Cautionary Traps"
+    border_hex: "#922B21"
+    header_bg_hex: "#FDEDEC"
+    badge_hex: "#CB4335"
+  C:
+    name: "Climate & Resilience"
+    border_hex: "#117864"
+    header_bg_hex: "#E8F8F5"
+    badge_hex: "#148F77"
+  K:
+    name: "Wayfinders & Kaupapa"
+    border_hex: "#7D6608"
+    header_bg_hex: "#FEF9E7"
+    badge_hex: "#B7950B"
+  N:
+    name: "Nobel Archive"
+    border_hex: "#512E5F"
+    header_bg_hex: "#F5EEF8"
+    badge_hex: "#7D3C98"
+  H:
+    name: "Orthodoxy Boss Deck"
+    border_hex: "#424949"
+    header_bg_hex: "#F2F4F4"
+    badge_hex: "#5F6A6A"
+  E:
+    name: "Game-Changer Tutorial (Electrification)"
+    border_hex: "#196F3D"
+    header_bg_hex: "#EAFAF1"
+    badge_hex: "#229954"
+
+themes:
+  - id: "generic"
+    name: "Generic Typographic Deck (Markdown Native)"
+    directory: "themes/generic"
+    status: "complete"
+    fallback_chain: []                          # Root fallback: renders directly from decks/cards.yaml
+    cultural_grounding: "Universal / Dual-Lens"
+    render_mode: "markdown_only"
+    card_dimensions:
+      format: "poker"
+      width_mm: 63.5
+      height_mm: 88.9
+    description: >
+      Clean, high-contrast typographic layout generated directly from decks/cards.yaml.
+      Displays the P:DD index in the upper-left corner, the CO2e impact badge in the
+      upper-right corner, structured Markdown rules in the center, and synergy links in the footer.
+
+  - id: "foils_pakeha"
+    name: "Up on Foils — America's Cup & Systems Engineering Edition"
+    directory: "themes/foils_pakeha"
+    status: "in_progress"
+    fallback_chain:
+      - "generic"
+    cultural_grounding: "Story Lens A: Emirates Team New Zealand AC72 Hydrofoil & Systems Engineering"
+    render_mode: "hybrid"                       # Uses assets/{P_DD}.{svg,png} when present, else generic
+    card_dimensions:
+      format: "poker"
+      width_mm: 63.5
+      height_mm: 88.9
+    description: >
+      Visualizes the macroeconomic transition as an America's Cup hydrofoil catamaran:
+      Displacement Mode (SS0), Front Lifting Foil (Lens 1), Wing-Sail Power Plant (Lens 2 & 3),
+      and Rear T-Foil Rudder Stabilizer (The 2050 50/50 Protocol).
+
+  - id: "waka_hourua"
+    name: "Te Waka Hourua — Being, Becoming, & Crossing Over (Māori & Pasifika Pūrākau)"
+    directory: "themes/waka_hourua"
+    status: "kaitiaki_review"
+    fallback_chain:
+      - "foils_pakeha"
+      - "generic"
+    cultural_grounding: "Story Lens B: He Kākano i Rangiātea, Te Aka Matua, Ngā Kete o te Wānanga, & Te Waka o Whānau"
+    kawa_governance_note: >
+      Stewarded in partnership with tangata whenua and Moana Pasifika artists and kaitiaki
+      to respect tino rangatiratanga over taonga tuku iho and tribal pūrākau.
+    render_mode: "hybrid"
+    card_dimensions:
+      format: "poker"
+      width_mm: 63.5
+      height_mm: 88.9
+    description: >
+      Grounds every card in the double-hulled voyaging waka and intergenerational whakapapa:
+      Being (First 2000 Days wrapped in Te Korowai Mokopuna), Becoming (ascending Te Aka Matua
+      via Tuakana–Teina and Ako), and Crossing Over (Kaumātua navigators passing down the Three Baskets).

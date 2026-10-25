@@ -1,0 +1,143 @@
+# ==============================================================================
+# FOILS & FOUNDERS: THE AOTEAROA DECK — EMPIRICAL SOURCES & CITATION REGISTRY
+# Path: metadata/empirical_sources.yaml
+# License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+# ==============================================================================
+
+schema_version: "2026.10"
+
+primary_monograph_suite:
+  - id: "DOC_1A"
+    title: "Intergenerational Welfare, Capital Allocation, and Human Potential in New Zealand (4-Region + Abroad Multiphase Edition)"
+    author: "Michael Tiemann"
+    date: "October 2026"
+    repository: "https://github.com/MichaelTiemann/IGWelfare"
+    cards_anchored: ["B:00", "B:01", "B:02", "B:03", "B:04", "B:05", "B:06", "B:07", "B:09", "C:04", "C:05", "C:06"]
+
+  - id: "DOC_1B"
+    title: "Document 1B: Complete Quantitative Answer Key, Sankey Ledgers, & CSV Audit Tables"
+    author: "Michael Tiemann"
+    date: "October 2026"
+    repository: "https://github.com/MichaelTiemann/IGWelfare"
+    cards_anchored: ["B:00", "B:04", "B:05", "B:06", "B:07"]
+
+  - id: "DOC_1C"
+    title: "Document 1C: Strategic Companion, The 1925 Moment, & The Five-Laureate Nobel Synthesis"
+    author: "Michael Tiemann"
+    date: "October 2026"
+    repository: "https://github.com/MichaelTiemann/IGWelfare/blob/main/Document%201C.md"
+    cards_anchored: ["B:04", "B:08", "B:09", "K:01", "K:02", "K:03", "K:04", "K:05", "K:06", "K:07", "N:01", "N:02", "N:03", "N:04", "N:05", "N:06"]
+
+  - id: "QEA_2026"
+    title: "Firming the Economic Grid & QEA_2026.m (Queenstown Electrification Accelerator Lifecycle Model)"
+    author: "Michael Tiemann"
+    date: "June–October 2026"
+    repository: "https://github.com/MichaelTiemann/QEA-2026/blob/main/QEA_2026.m"
+    key_metrics:
+      precautionary_capital_released_nzd_b: "60.8 to 91.5"
+      five_sector_capex_nzd_b: "60.2 to 75.5"
+      annual_cash_savings_nzd_b: 15.55
+      payback_years: "4.5 to 5.2"
+    cards_anchored: ["E:01", "E:02", "E:03"]
+
+new_zealand_empirical_anchors:
+  - id: "DUNEDIN_STUDY"
+    citation: "Poulton, R., Moffitt, T. E., & Silva, P. A. (2015 / 2023). The Dunedin Multidisciplinary Health and Development Study."
+    institution: "University of Otago"
+    key_finding: "The most disadvantaged 22% of a birth cohort—identifiable as early as age 3—accounts for 57% to 81% of adult hospital nights, long-term welfare receipt, and criminal convictions."
+    cards_anchored: ["B:00", "B:01", "B:08", "H:01"]
+
+  - id: "GUINZ_2020_2023"
+    citation: "Morton, S. M. B., et al. (2020 / 2023). Growing Up in New Zealand: Now We Are Eight / Now We Are Twelve — Life in Early Adolescence."
+    institution: "University of Auckland & Ministry of Social Development"
+    key_finding: "Documents the 14.3% material hardship baseline, metropolitan housing crowding/dampness penalties, and the Ages 12–14 emerging autonomy and adolescent vulnerability gate."
+    cards_anchored: ["B:01", "B:02", "C:03", "H:02"]
+
+  - id: "BARNARDOS_2026"
+    citation: "Danalytics Consulting Ltd (Sept 2026). The Economic Case for a Generational Plan for Children (Te Korowai Mokopuna)."
+    institution: "Barnardos Aotearoa"
+    key_finding: "Poor childhood outcomes cost NZD 17.7B/yr today (~NZD 105,000/yr per hardship child), rising to NZD 28.5B/yr by 2050 (NZD 434B PV at 2% real). Cutting hardship from 14.3% to 1-2% avoids NZD 56B–81B by 2050; Oranga Tamariki care costs ~NZD 180,000 per care-year."
+    cards_anchored: ["B:00", "B:01", "B:04", "B:07", "K:01", "N:01"]
+
+  - id: "GRAEME_DINGLE_2025"
+    citation: "Graeme Dingle Foundation (2024–2025). Research & Evaluation Summary: Kiwi Can, Stars / Te Kāhui Whetū, Project K, & Career Navigator."
+    institution: "Graeme Dingle Foundation & University of Auckland"
+    key_finding: "Structured peer mentoring (Stars Year 12/13 tuakana mentoring Year 9 teina) and wilderness/community self-efficacy (Project K) build resilience, executive function, and school retention."
+    cards_anchored: ["B:02", "C:03", "K:01", "N:04", "H:02"]
+
+  - id: "TREASURY_CBAX_2025"
+    citation: "New Zealand Treasury (Nov 2025). CBAx Tool User Guidance & Treasury Circular 2024/15 (2.0% Real Social Discount Rate & 8.0% Sensitivity Rate); He Tirohanga Mokopuna 2025; OIA 20250878."
+    institution: "The Treasury / Kaitohutohu Kaupapa Rawa"
+    key_finding: "Establishes the 2.0% real social rate of time preference (SRTP), projects 200% of GDP net Crown debt by 2065 under the status quo, and confirms (OIA 20250878) that the legacy LTFM contains no micro-cohort data."
+    cards_anchored: ["B:00", "B:06", "B:07", "B:08", "K:03", "N:03", "H:01"]
+
+  - id: "STATS_NZ_IRD_WEALTH"
+    citation: "Statistics New Zealand (2024) Household Net Worth Survey; Inland Revenue (April 2023) High-Wealth Individuals Research Project Report; Rashbrooke, M. (2021/2024)."
+    institution: "Stats NZ & Inland Revenue (Te Tari Taake)"
+    key_finding: "Median NZ household net worth is NZD 529k; mean is NZD 1.041M; Top 5% threshold is ~NZD 3M; Top 1% is ~NZD 10M; IRD High-Wealth project median is NZD 50M+."
+    cards_anchored: ["B:00", "B:05", "K:02"]
+
+  - id: "REWIRING_AOTEAROA_2024"
+    citation: "Griffith, S., Ellison, J., Pawson, M., & Conway, P. (Aug 2024). Investing in Tomorrow: The Electrification Opportunity."
+    institution: "Rewiring Aotearoa"
+    key_finding: "NZ spends ~NZD 20B/yr on fossil fuels; household electrification saves NZD 10.7B/yr by 2040 and cuts 10 MtCO2e/yr (105 MtCO2e cumulative 2024–2040) by swapping fuels for finance."
+    cards_anchored: ["E:01", "E:02", "E:03"]
+
+  - id: "TE_WAIHANGA_2026"
+    citation: "New Zealand Infrastructure Commission / Te Waihanga (Dec 2025 / March 2026). National Infrastructure Plan / Mahere Tūāhanga ā-Motu."
+    institution: "Te Waihanga"
+    key_finding: "Highlights the cost of deferred maintenance, reactive asset failures, and the necessity of ring-fenced long-term infrastructure funding."
+    cards_anchored: ["B:06", "C:04", "H:05"]
+
+  - id: "TINZ_CPI_2026"
+    citation: "Transparency International (2025/2026) Corruption Perceptions Index & TINZ (2026) National Integrity System Assessment; Controller and Auditor-General (2026)."
+    institution: "Transparency International New Zealand"
+    key_finding: "Documents New Zealand's slide from #1 globally (88/100 in 2021) to #4 equal (81/100 in 2025/2026) behind Denmark (89), Finland (88), and Singapore (84)."
+    cards_anchored: ["B:09", "C:06", "K:07"]
+
+nobel_and_theoretical_literature:
+  - id: "COASE_1991"
+    citation: "Coase, R. H. (1937) 'The Nature of the Firm'; (1960) 'The Problem of Social Cost'. Nobel Prize in Economic Sciences (1991)."
+    cards_anchored: ["N:01", "H:01", "H:03"]
+
+  - id: "HECKMAN_2000"
+    citation: "Cunha, F., Heckman, J. J., & Schennach, S. M. (2010) 'Estimating the Technology of Cognitive and Noncognitive Skill Formation', Econometrica; Lee, S. Y., & Seshadri, A. (2019) JPE. Nobel Prize (2000)."
+    cards_anchored: ["B:01", "N:02", "H:02"]
+
+  - id: "WILLIAMSON_2009"
+    citation: "Williamson, O. E. (1985) The Economic Institutions of Capitalism; (2009) Nobel Prize Lecture on Transaction Cost Economics."
+    cards_anchored: ["B:07", "N:03", "H:01"]
+
+  - id: "OSTROM_2009"
+    citation: "Ostrom, E. (1990) Governing the Commons; (2009) Nobel Prize Lecture 'Beyond Markets and States: Polycentric Governance of Complex Economic Systems'."
+    cards_anchored: ["B:02", "K:01", "N:04", "H:02"]
+
+  - id: "ROMER_2018"
+    citation: "Romer, P. M. (1990) 'Endogenous Technological Change', JPE. Nobel Prize in Economic Sciences (Oct 2018)."
+    cards_anchored: ["B:03", "K:04", "N:05", "H:03", "H:04"]
+
+  - id: "GUVENEN_2023"
+    citation: "Guvenen, F., Kambourov, G., Kuruscu, B., Ocampo, S., & Chen, D. (2023) 'Use It or Lose It: Efficiency and Redistributional Effects of Wealth Taxation', QJE."
+    cards_anchored: ["B:05", "K:02"]
+
+  - id: "HIRANO_TODA_2025"
+    citation: "Hirano, T., & Toda, A. A. (2025) 'Bubble Necessity Theorem and Land Overvaluation in Unbalanced Growth', JPE / Econometrica."
+    cards_anchored: ["B:05", "T:02", "H:05"]
+
+  - id: "BILAL_KANZIG_2024"
+    citation: "Bilal, A., & Känzig, D. R. (2024) 'The Macroeconomic Impact of Climate Change: Global vs. Local Temperature', NBER Working Paper 32450."
+    key_finding: "+1°C of global temperature rise reduces world GDP by >20% and implies a Social Cost of Carbon exceeding USD 1,200/tCO2e."
+    cards_anchored: ["C:01", "C:04"]
+
+  - id: "KIRKBY_VFI_2025"
+    citation: "Kirkby, R. (2025/2026) VFI Toolkit for MATLAB (vfitoolkit.com) & Incomplete-Markets Precautionary Savings / Housing Portfolio Models."
+    cards_anchored: ["B:08", "E:02", "K:04"]
+
+international_historical_precedents:
+  - id: "SCOTLAND_2026"
+    citation: "Scottish Government (March 2026) Bringing Hope, Building Futures: Tackling Child Poverty Delivery Plan 2026–2031; Joseph Rowntree Foundation (Oct 2026) Poverty in Scotland 2026; MCR Pathways (2025) Annual Impact Report."
+    cards_anchored: ["T:01", "H:05"]
+
+  - id: "DEMING_JAPAN_1950"
+    citation: "Deming, W. E. (Aug 1950) Mt. Hakone JUSE Lecture to Japanese Top Management; (1986) Out of the Crisis; (1993) The New Economics."
+    cards_anchored: ["T:02", "H:05"]

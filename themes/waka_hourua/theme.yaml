@@ -1,31 +1,124 @@
-# Example: themes/waka_hourua/theme.yaml
+# ==============================================================================
+# TE WAKA HOURUA THEME DICTIONARY & MANIFEST
+# Path: themes/waka_hourua/theme.yaml
+# Grounding: Story Lens B — Te Waka o Whānau (Being, Becoming, & Crossing Over)
+# License: CC-BY-SA-4.0 (Subject to Tangata Whenua / Kaitiaki Vetting)
+# ==============================================================================
+
 theme_id: "waka_hourua"
 theme_name: "Te Waka Hourua — Being, Becoming, & Crossing Over"
-version: "1.0.0"
+version: "2026.10"
 license: "CC-BY-SA-4.0"
-authors:
-  - "Lead Artist / Kaitiaki Contributors"
 
-# Cascading Fallback Chain:
-# 1. Check themes/waka_hourua/assets/{P_DD}.{png,webp,jpg,svg}
-# 2. Check themes/waka_hourua/cards/{P_DD}.md
-# 3. Check themes/foils_pakeha/...
-# 4. Ultimate fallback: themes/generic/ (renders structured Markdown directly from cards.yaml)
 fallback_chain:
-  - "foils_pakeha"
   - "generic"
 
-layout:
-  card_size: "poker"                # 63.5mm x 88.9mm (or "tarot": 70mm x 120mm, "a6_study": 105mm x 148mm)
-  pdd_corner: "top-left"            # Face-value index (e.g., "B:01") in upper-left corner
-  co2e_corner: "top-right"          # Configurable: "top-right" or "bottom-right"
-  render_mode: "hybrid"             # "art_frame" (image + text box), "full_bleed", or "markdown_only"
+# 1. GLOBAL LEXICON TRANSLATION (Applied across all card texts in waka_hourua)
+lexicon_replacements:
+  "The Five-Crew Hydrofoil Formation": "Te Waka Hourua — The Five-Crew Double-Hulled Voyaging Formation"
+  "One Crew, One Foiling Vessel": "Kotahitanga — Two Hulls Lashed by One Kīato (Te Waka Hourua)"
+  "The Coupled Hydrofoil": "Te Waka Hourua (The Lashed Double-Hulled Waka)"
+  "The L-Shaped Hydrofoil": "Te Waka Hourua (The Double-Hulled Voyaging Waka)"
+  "An actuarial hydrofoil": "Te Waka Hourua (guided by Tohunga Whakatere Waka)"
+  "A displacement hull": "A waka bogged down in Te Pō"
+  "Displacement-mode governments": "Governments bogged down in Te Pō"
+  "Foil-borne nations": "Waka Hourua nations sailing in Te Ao Mārama"
+  "Displacement Mode": "Te Pō (Unbuffered Struggle & Heavy Drag)"
+  "displacement mode": "Te Pō (heavy drag)"
+  "Up on Foils": "Sailing in Te Ao Mārama (Te Waka Hourua)"
+  "up on foils": "sailing across Te Moana-nui-a-Kiwa"
+  "up on the wing-sail": "catching the winds of Tawhirimātea in Te Rā (the voyaging sail)"
+  "Front Lifting Foil": "Teihu & He Kākano i Rangiātea (The Sacred Bow & Seed)"
+  "front lifting foil": "sacred bow (Teihu)"
+  "front foil": "sacred bow (Teihu)"
+  "Wing-Sail Power Plant": "Te Rā & Tūrangawaewae (The Voyaging Sail & Standing Place)"
+  "wing-sail": "voyaging sail (Te Rā)"
+  "Rear T-Foil Stabilizer": "Te Urunga & Ngā Kete o te Wānanga (The Steering Paddle & Three Baskets)"
+  "rear T-foil stabilizer": "steering paddle (Te Urunga)"
+  "Bend the Accounting Daggerboard": "Read the Stars with Te Urunga (The Navigator's Steering Paddle)"
+  "Single-Lens Pitch-Pole": "Capsize in Heavy Seas (Unbalanced Kīato)"
+  "Pitch-Pole Demo": "Unbalanced Waka Demo"
 
-deck_palettes:
-  B: { border: "#1B4F72", badge_bg: "#D4E6F1", label: "Base Foil" }
-  T: { border: "#922B21", badge_bg: "#FADBD8", label: "Cautionary Trap" }
-  C: { border: "#117864", badge_bg: "#D1F2EB", label: "Climate & Resilience" }
-  K: { border: "#7D6608", badge_bg: "#FCF3CF", label: "Kaupapa Persona" }
-  N: { border: "#512E5F", badge_bg: "#EBDEF0", label: "Nobel Archive" }
-  H: { border: "#424949", badge_bg: "#E5E8E8", label: "Orthodoxy Hazard" }
-  E: { border: "#196F3D", badge_bg: "#D4EFDF", label: "Grid Game-Changer" }
+# 2. CARD-SPECIFIC OVERRIDES FOR STORY LENS B (TE WAKA HOURUA)
+card_overrides:
+  "B:00":
+    name: "Te Tatau o Rangiātea (The Rawlsian D20 of Whakapapa)"
+    type: "Rule Zero Taonga — The 20 Whānau Balance Sheets of Aotearoa"
+    effects:
+      - label: "Who Goes First (The Pōtiki / Mokopuna Rule)"
+        rule: "Every player rolls the d20 (1 to 20). The lowest roll (1–4, the 22% Hardship Corner in Te Pō) or the youngest player (pōtiki) leads first—because in tikanga Māori and Rawlsian justice alike, the health of the whole waka is decided by how we protect the youngest child."
+      - label: "Status Quo Roll (SS0 — Trapped in Te Pō)"
+        rule: "Roll 1–4: Whānau trapped in the 22% hardship corner. Roll 5–18: Crushed by 3.10x urban rents and rangatahi exiled across the Tasman. Roll 19–20: Surrounded by 200% Crown debt and broken whakapapa. Result: No matter what you roll, the waka founders."
+      - label: "Te Waka Hourua Roll (SS1 -> SS2 — Sailing into Te Ao Mārama)"
+        rule: "Roll 1–20: All 20 whānau wealth groups thrive (+20.49% national wellbeing gain, Kaumātua Super kept at Age 65, PAYE cut to 18.5%). Roll any number; the waka sails true."
+
+  "B:01":
+    name: "He Kākano i Ruia mai i Rangiātea (Tamariki of the First 2000 Days)"
+    type: "Whakapapa Identity — Gate 1: Being (Ages 0–5)"
+    effects:
+      - label: "Trapped in Te Pō (The Hardship Corner)"
+        rule: "No child is born broken; every tamaiti is a sacred seed from Rangiātea. But if a whānau is left in unbuffered poverty and damp housing, roll a d20: on 1–4 (22%), attach a Stunted Trajectory token (driving 57%–81% of late-game Hospital, State Care, and Justice trauma)."
+      - label: "Te Ao Mārama (Wrapped in Te Korowai Mokopuna & Whānau Ora)"
+        rule: "Wrap the whānau in universal aroha and in-kind support. Remove all Stunted tokens, gain +2 Mauri & Capability on every subsequent kura/schooling card, and Crowd In +NZD 15.3k of Whānau Care & Time for free."
+    flavor_text: "E kore au e ngaro, he kākano i ruia mai i Rangiātea — I shall never be lost, for I am a seed sown from Rangiātea."
+
+  "B:02":
+    name: "Te Aka Matua: Tuakana–Teina & Ako Navigator"
+    type: "Rangatahi Becoming — Gate 2: Ascending the Sacred Vine (Ages 12–14)"
+    flavor_text: "Tāne-nui-a-Rangi climbed the sacred vine not for himself, but to bring the Three Baskets of Knowledge back down for all his siblings."
+
+  "B:03":
+    name: "Tūrangawaewae: Kaikōrero, Ringa Raupā, & Enterprise Builder"
+    type: "Evolved Rangatiratanga — Gate 3: Standing Tall at Home (Ages 20–35)"
+    flavor_text: "Ka pū te ruha, ka hao te rangatahi — As the old net is laid aside with honor, the new net goes fishing in home waters."
+
+  "B:04":
+    name: "Te Waka Hourua (The Double-Hulled Voyaging Waka)"
+    type: "Legendary Taonga — Lashed Dual-Hull Architecture (Kīato)"
+    effects:
+      - label: "Lashing the Kīato (Cross-Beams)"
+        rule: "Conventional orthodoxy sails a single, waterlogged hull in Te Pō. When you lash together Teihu (Sacred Bow of Dual-Gate Whānau Capability, B:01 + B:02), Te Rā (Voyaging Sail of Kaitiaki Enterprise & Tūrangawaewae, B:05 + B:03), and Te Urunga (Steering Paddle of 2050 Stewardship, B:06 + B:07), your Waka Hourua rises onto the ocean swell."
+      - label: "Effect"
+        rule: "Slash reactive social trauma and Crown remediation drag (Exits 1, 2, 4) by 75% (from NZD 17.7B–28.5B/yr down to NZD 4.2B/yr). Every birth cohort now generates a +NZD 16.1k/yr Net Surplus for their mokopuna."
+    flavor_text: "One hull is Pākehā systems science; the other hull is Tikanga and Whakapapa. Lash them together with strong kīato, and no ocean on earth is too wide to cross."
+
+  "B:05":
+    name: "Kaitiakitanga o te Whenua (Stewarding Land & Enterprise)"
+    type: "Continuous Tikanga — Lens 3 Rebalance (Ka Hao te Rangatahi)"
+    flavor_text: "Whenua is meant to nourish the living and the yet-to-be-born—not sit locked in speculative vaults while our grandchildren leave for Australia."
+
+  "B:06":
+    name: "Ngā Kete o te Wānanga (The 2050 50/50 Kaitiaki Protocol)"
+    type: "Legendary Engine — Phase 2 Harvest for Mokopuna"
+    flavor_text: "Half the harvest pays down the debts of the past; half builds the whare and the grid for our mokopuna—while honoring every kaumātua at Age 65."
+
+  "B:07":
+    name: "TeссоWhakapapa Ledger (ACC Actuarial Time-Bend)"
+    type: "Instant — Tohunga Whakatere Waka Star-Reading"
+
+  "B:09":
+    name: "He Tāngata, He Tāngata, He Tāngata (Lifting the Mauri of the Nation)"
+    type: "Mythic Tikanga Victory — Restoration of Mana Motuhake & Mauri Ora"
+    flavor_text: "Ui mai koe ki ahau he aha te mea nui o te ao, Māku e kī atu he tāngata, he tāngata, he tāngata — Ask me what is the greatest thing in the world; I will reply: it is people, it is people, it is people."
+
+  "C:04":
+    name: "TeWhakaruruhau o Tangaroa (Coastal, Grid, & Marae Armor)"
+    type: "Legendary Infrastructure — Te Urunga Steering Stabilizer"
+
+  "K:03":
+    name: "TeKaihautū Kāwanatanga: Sovereign Navigator (Crown, Treasury, & RBNZ)"
+    type: "Wayfinder Persona — Honourable Kāwanatanga & Actuarial Stewardship"
+
+  "K:06":
+    name: "Te Kaumātua & Kuia Navigator: Keepers of Ngā Kete o te Wānanga (Ages 65+)"
+    type: "Wayfinder Lifecycle Identity — Crossing Over & Passing Down the Three Baskets (Lens 3)"
+
+  "K:07":
+    name: "Te Tiriti & Te Waka Hourua: The Five-Crew Voyaging Formation"
+    type: "Legendary Kotahitanga Enchantment — Tangata Whenua & Tangata Tiriti Synergy"
+    effects:
+      - label: "Two Hulls, One Waka Hourua (Kotahitanga)"
+        rule: "While Te Tiriti & Te Waka Hourua (K:07) is active, Tangata Whenua (Rangatiratanga hull) and Tangata Tiriti (Kāwanatanga hull) sail lashed together: every Persona at the table shares its Innate Kaupapa Ability with all other players."
+      - label: "Good Ancestors for Our Mokopuna"
+        rule: "Restore Aotearoa's Social Credit & Trust Rating (C:06) to #1 in the World, permanently lock in B:06 (Ngā Kete o te Wānanga 2050 Protocol), and unlock B:09 (He Tāngata) and N:06 (The Aotearoa Synthesis)."
+    flavor_text: "Nā tō rourou, nā taku rourou ka ora ai te iwi — With your food basket and my food basket, the people will thrive. When all five crews paddle as one Waka Hourua, Aotearoa crosses the deepest sea."

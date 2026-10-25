@@ -1,0 +1,11 @@
+# Compiled HTML/PDF previews
+build/
+
+# Auto-generated generic markdown dumps (derived from decks/cards.yaml)
+themes/generic/cards/
+
+# Python & OS clutter
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

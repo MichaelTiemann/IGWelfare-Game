@@ -37,6 +37,7 @@ DEFAULT_CO2E_BADGES = {
     "T:02": ("Sprawl Bubble", "hazard_increase"),
     "T:03": ("Urban Heat Trap", "hazard_increase"),
     "T:04": ("Stalls Clean-Tech R&D", "hazard_increase"),
+    "T:05": ("Paralyzes Climate Action", "hazard_increase"),
     "C:01": ("USD 1,200 / tCO2e", "computed"),
     "C:02": ("-2.5 MtCO2e / yr", "computed"),
     "C:03": ("Kaitiaki Resilience", "indirect_enabler"),

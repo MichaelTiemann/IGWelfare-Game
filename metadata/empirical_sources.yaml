@@ -149,6 +149,16 @@ international_historical_precedents:
     citation: "Scottish Government (March 2026) Bringing Hope, Building Futures: Tackling Child Poverty Delivery Plan 2026–2031; Joseph Rowntree Foundation (Oct 2026) Poverty in Scotland 2026; MCR Pathways (2025) Annual Impact Report."
     cards_anchored: ["T:01", "H:05"]
 
+  - id: "KOI_TU_FINLAND_MLI_2026"
+    citation: "Open Society Institute (2017–2026) European Media Literacy Index (Finland #1); Gluckman, P., & Sridhar, H. (2023–2026) Koi Tū: The Centre for Informed Futures Briefings on Disinformation & Social Cohesion; Zak, P. J., & Knack, S. (2001) 'Trust and Growth', Economic Journal."
+    key_finding: >
+      Finland ranks #1 in Europe for disinformation resilience (2017–2026) by embedding multiliteracy
+      (monilukutaito) and critical thinking into basic education (45% of index weight) on top of low
+      early childhood poverty (4.6%). Conversely, unbuffered early executive-function deficits and
+      economic inequality feed disinformation polarization, costing 0.4%–0.5% of GDP (~NZD 2.0B/yr)
+      and depressing institutional trust to 40% in NZ.
+    cards_anchored: ["B:01", "B:02", "T:05", "C:02", "C:06"]
+
   - id: "DEMING_JAPAN_1950"
     citation: "Deming, W. E. (Aug 1950) Mt. Hakone JUSE Lecture to Japanese Top Management; (1986) Out of the Crisis; (1993) The New Economics."
     cards_anchored: ["T:02", "H:05"]

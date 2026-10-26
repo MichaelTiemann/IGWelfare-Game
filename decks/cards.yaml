@@ -19,7 +19,7 @@ metadata:
     attribution_haircut: 0.30
   decks:
     B: "Module 1: Base Game — Getting Aotearoa Up on Foils (B:00 to B:09)"
-    T: "Module 1B: Cautionary Trap Cards — Single-Lens Pitfalls (T:00 to T:04)"
+    T: "Module 1B: Cautionary Trap Cards — Single-Lens Pitfalls (T:00 to T:05)"
     C: "Module 2: Climate & Resilience — Rising Seas & Shifting Winds (C:01 to C:06)"
     K: "Module 3: Wayfinders & Kaupapa — Companion Persona Deck (K:01 to K:07)"
     N: "Module 4: Reaching Abundance & Crossing Infinite Horizons — Nobel Archive (N:01 to N:06)"
@@ -78,7 +78,7 @@ cards:
     lens: ["Lens 1"]
     gate_or_phase: "Gate 2 (Ages 12-14)"
     cost_or_requirement: "2 Social Cohesion + 1 Creative Agency"
-    synergy_links: ["B:01", "B:03", "C:03", "K:05", "N:04"]
+    synergy_links: ["B:01", "B:03", "C:03", "K:05", "N:04", "T:05"]
     effects:
       - label: "Two-Way Ako (Reciprocal Buff)"
         rule: "Pair this card with any younger Teina card. Both cards gain Indestructible against Family Unemployment & Housing Shocks."
@@ -129,7 +129,7 @@ cards:
     lens: ["Lens 2", "Lens 3"]
     gate_or_phase: "SS1 -> SS2"
     cost_or_requirement: "1.5% Land/Wealth Levy + 25% Peak Estate Levy (stepping down to 18% in SS2)"
-    synergy_links: ["B:03", "B:04", "K:02", "N:05", "H:03"]
+    synergy_links: ["B:03", "B:04", "K:02", "N:05", "H:03", "T:05"]
     effects:
       - label: "Rotate Dormant Dirt"
         rule: "Target opponent's NZD 1.6 Trillion Dormant Property Hoard. Exhaust all Passive Land Speculators (z_l) and cool Auckland housing overvaluation by -7.5% (SS1) to -10.5% (SS2)."
@@ -168,7 +168,7 @@ cards:
     synergy_links: ["B:01", "B:02", "B:08", "N:03", "H:01"]
     effects:
       - label: "Counter Austerity"
-        rule: "Play when an opponent casts 'Parliamentary 3-Year Deficit Trap' (H:01) or 'There's No Magic Money Tree.' Reveal the 25-Year Forward Liability Ledger. Against NZD 9.19B invested by Year 5, immediately book NZD 10.66B in Direct Cost Avoidance (1.16x outlay) and NZD 35.25B in Total Fiscal Return (3.84x outlay) on the Crown Balance Sheet."
+        rule: "Play when an opponent casts 'Parliamentary 3-Year Deficit Trap' (H:01) or 'There's No Magic Money Tree.' Reveal the 25-Year Forward Liability Ledger. Against NZD 9.19B invested by Year 5, immediately book NZD 10.68B in Direct Cost Avoidance (1.16x outlay) and NZD 35.25B in Total Fiscal Return (3.84x outlay) on the Crown Balance Sheet."
       - label: "Early Credibility Acceleration"
         rule: "Young workers (ages 20-35) see the audited Year 5 surplus and cancel their one-way tickets to Australia 15 years early."
     flavor_text: "When you prevent a car crash, ACC doesn't wait thirty years to book the saved hospital bill. Why were we treating our children worse than a dented bumper?"
@@ -339,10 +339,10 @@ cards:
     lens: ["Lens 1", "Lens 2"]
     gate_or_phase: "SS1 -> SS2"
     cost_or_requirement: "Compress Cohort Stunting to 1.5% via B:01 (First 2000 Days) + B:02 (Tuakana–Teina / Montessori)"
-    synergy_links: ["B:01", "B:02", "C:01", "C:03"]
+    synergy_links: ["B:01", "B:02", "C:01", "C:03", "T:05"]
     effects:
       - label: "Adaptive Pivot"
-        rule: "Attach to your 61.0%+ Thriving Adult Cohort. Whenever an Accelerating Change or Supply-Chain Shock card enters play, your workforce adapts: prevent all unemployment shock damage to Rangatahi (Ages 12–14) and convert the crisis into +1 Frontier Clean-Tech Innovation."
+        rule: "Attach to your 65.0%+ Thriving Adult Cohort. Whenever an Accelerating Change or Supply-Chain Shock card enters play, your workforce adapts: prevent all unemployment shock damage to Rangatahi (Ages 12–14) and convert the crisis into +1 Frontier Clean-Tech Innovation."
     flavor_text: "Sea walls can crack and spreadsheets go obsolete overnight. A generation raised with executive function, creative agency, and whanaungatanga can rebuild the ship while it's flying."
     empirical_anchor: "Heckman & Kautz (2012); Lillard (2005); Document 1A Part II Lens 1."
 
@@ -441,7 +441,7 @@ cards:
     lens: ["Lens 2", "Lens 3"]
     gate_or_phase: "Command Zone (Continuous / Tap)"
     cost_or_requirement: "Select as Primary or Dual-Class Persona at Game Start"
-    synergy_links: ["B:03", "B:05", "K:03", "K:04", "N:05"]
+    synergy_links: ["B:03", "B:05", "K:03", "K:04", "N:05", "T:04"]
     effects:
       - label: "Innate Kaupapa — Unchain the NZD 1.6T Transfer (Tap)"
         rule: "Whenever B:05 (Use-It-Or-Lose-It Rebalancer) is active, rotate 1 Dormant Property Token into High-Growth Operating Firms, lifting regional business wages by +3.2% to +9.6% while keeping active entrepreneurs net welfare positive up to NZD 100M net worth."
@@ -498,7 +498,7 @@ cards:
     lens: ["Lens 1", "Lens 2"]
     gate_or_phase: "Command Zone (Continuous / Tap)"
     cost_or_requirement: "Select as Primary or Dual-Class Persona at Game Start"
-    synergy_links: ["B:02", "B:03", "C:06", "K:01", "K:02"]
+    synergy_links: ["B:02", "B:03", "C:06", "K:01", "K:02", "T:05"]
     effects:
       - label: "Innate Kaupapa — Shatter the Myth of Managed Decline (Tap)"
         rule: "Transform the 17 nodes of the Population Sankey and the 26 nodes of the Fiscal Ledger into a living story where every Kiwi sees their own whānau and mokopuna. Remove all 'Political Paralysis' and 'Tall Poppy Cynicism' counters from the board."
@@ -715,7 +715,7 @@ cards:
       - label: "The Hazard (Played by the Board)"
         rule: "'The Demographic Vise.' Austerity orthodoxy demands raising the NZ Super age to 67 or 70 (triggering a 38%–45% disability/benefit substitution leak and regressively penalizing Māori, Pasifika, and manual workers while PAYE still climbs to 25.55%–26.85%). Exhaust all Age 65+ cards; 0 Lifetime Experience Tokens can be shared."
       - label: "Counter-Play Effect — Pass the Torch, Not the Speculative Bubble"
-        rule: "Rotate dormant property hoarding from the NZD 1.6T transfer into the Age-20 Youth Capital Grant (B:03) while keeping Universal NZ Super at Age 65 (B:06, bending required PAYE down to 24.45%—outperforming Age 70!). Unlock both financial capital and 60 years of accumulated human wisdom (K:06)."
+        rule: "Rotate dormant property hoarding from the NZD 1.6T transfer into the Age-20 Youth Capital Grant (B:03) while keeping Universal NZ Super at Age 65 (B:06, bending required PAYE down to 24.90% in SS1 and 18.5% in SS2, both outperforming Age 70 alternative!). Unlock both financial capital and 60 years of accumulated human wisdom (K:06)."
     flavor_text: "A society that impoverishes its elders or exiles its youth breaks the chain of memory. A society that honors both turns a lifetime of learning into the next generation's launchpad."
     empirical_anchor: "Document 1A Part IV Section 5 (Why keeping NZ Super at 65 beats raising the pension age to 67 or 70)."
 

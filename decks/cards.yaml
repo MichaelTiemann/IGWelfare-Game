@@ -291,6 +291,26 @@ cards:
     flavor_text: "In 1780s France, the great chemist Lavoisier made his fortune as a tax collector because rent-seeking paid better than science. In 2020s New Zealand, we turned our brightest young minds into mortgage brokers and wondered why productivity died."
     empirical_anchor: "Murphy, Shleifer, & Vishny (1991, QJE: Tables III–VI & Section III); Baumol (1990); Document 1A Part II Lens 2."
 
+  - id: "T:05"
+    name: "Disinformation & Outrage Drag (The Polarisation Tax)"
+    deck: "traps"
+    module_level: 1
+    type: "Cautionary Trap — Epistemic & Social Cohesion Erosion (All Lenses)"
+    lens: ["Lens 1", "Lens 2", "Lens 3"]
+    gate_or_phase: "SS0 Status Quo / Continuous Hazard"
+    cost_or_requirement: "Triggered when Gate 1–2 Stunting & Housing Despair meet Unfiltered Algorithmic Outrage."
+    synergy_links: ["B:01", "B:02", "C:02", "C:06", "K:07"]
+    co2e_impact:
+      display: "Paralyzes Climate Action"
+      status: "hazard_increase"
+    effects:
+      - label: "Preying on Disengagement & Stunting"
+        rule: "Disinformation preys on early executive-function deficits (Gate 1) and economic alienation (Gate 3). While active in SS0, institutional trust drops to 40%, amplifying Exit 4 (Anti-Social & Justice Burden) by +25% and imposing a 0.5% GDP (~NZD 2.0B/yr) transaction-cost drag across public health and climate infrastructure."
+      - label: "The Finnish Inoculation Counter-Play (Monilukutaito)"
+        rule: "Following Finland (#1 in European Media Literacy Index 2017–2026), couple B:01 (First 2000 Days Executive Function) + B:02 (Ages 12–14 Mentoring) + C:02 (Cognitive Flexibility) to teach critical thinking and psychological inoculation from early childhood. Neutralizes T:05, lifts Social Cohesion from 100.0 to 126.0, and locks in C:06 (#1 Global Trust Rating)."
+    flavor_text: "Finland shares a 1,340 km border with the world's largest disinformation factory, yet leads the world in societal trust—because they vaccinated their children's minds in primary school instead of policing the wreckage at Parliament."
+    empirical_anchor: "OSI Media Literacy Index (2017–2026: Finland #1); Koi Tū Centre for Informed Futures (Gluckman & Sridhar, 2023–2026); UNESCO/Sopra Steria Global Disinformation Cost Audit; Zak & Knack (2001)."
+    
   # ----------------------------------------------------------------------------
   # MODULE 2: CLIMATE & RESILIENCE EXPANSION — RISING SEAS & SHIFTING WINDS (C:01 - C:06)
   # ----------------------------------------------------------------------------

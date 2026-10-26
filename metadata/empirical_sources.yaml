@@ -133,6 +133,17 @@ nobel_and_theoretical_literature:
     citation: "Kirkby, R. (2025/2026) VFI Toolkit for MATLAB (vfitoolkit.com) & Incomplete-Markets Precautionary Savings / Housing Portfolio Models."
     cards_anchored: ["B:08", "E:02", "K:04"]
 
+  - id: "MURPHY_SHLEIFER_VISHNY_1991"
+    citation: "Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991) 'The Allocation of Talent: Implications for Growth', Quarterly Journal of Economics, 106(2), 503–530."
+    key_finding: >
+      When a country has large existing wealth but slow growth, rent-seeking (fighting over existing
+      wealth via speculation, litigation, and lobbying) outcompetes productive entrepreneurship for the
+      ablest talent, permanently lowering the growth rate. Doubling engineering share raises GDP per
+      capita growth by +0.5% to +1.25%/yr, while doubling law/rent-seeking share cuts growth by -0.3%
+      to -0.78%/yr; engineering talent strongly co-moves with primary schooling (+1.02) and physical
+      investment (+0.432).
+    cards_anchored: ["B:03", "B:05", "T:04", "K:02", "H:03"]
+
 international_historical_precedents:
   - id: "SCOTLAND_2026"
     citation: "Scottish Government (March 2026) Bringing Hope, Building Futures: Tackling Child Poverty Delivery Plan 2026–2031; Joseph Rowntree Foundation (Oct 2026) Poverty in Scotland 2026; MCR Pathways (2025) Annual Impact Report."

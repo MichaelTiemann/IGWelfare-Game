@@ -99,7 +99,7 @@ WILDCARD_SPEC = {
     ),
     "H": (
         "H:??",
-        "Orthodoxy Boss Wildcard (Name theBlocker & Counter)",
+        "Orthodoxy Boss Wildcard (Name the Blocker & Counter)",
         "Institutional Hazard -> Coupled Combo Counter-Play",
         "Write an entrenched status-quo objection at the top, and the exact multi-card combo that defeats it below.",
     ),

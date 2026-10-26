@@ -127,7 +127,7 @@ To respect limited time and attention, this game is built in modular layers usin
   * *Nat 20 (the top 5% / active enterprise tier): the median wealth group still wins—because active entrepreneurs and business families stay net welfare positive all the way up to **NZD 100 million** in net worth (`B:05`), enjoying 60 bps cheaper credit, lower corporate tax drag, and a thriving Aotearoa where their own children and grandchildren choose to stay and build.*  
   * *Summary:* **Every single median wealth group across all 20 faces of the die is better off** (+20.49% national welfare gain, active entrepreneurs ahead up to NZD 100M, NZ Super at 65, and PAYE cut to 18.5%).  
   * *Result:* **Roll any number. You win.**  
-* **Flavor Text:** *"Orthodox economics asks you to play Russian roulette with a twenty-sided die and calls it 'market efficiency.' True systems design rewrites the physics of the board so every roll of a child's life comes up a winner."*
+* **Flavor Text:** *"Beware the Blindfold of Orthodoxy, used to play economic Russian roulette where more than 1 in 6 lose in the name of 'market efficiency.' True systems design rewrites the physics of the board so every roll of a child's life comes up a winner."*
 
 ### **Beyond The Veil**
 

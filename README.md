@@ -1,9 +1,19 @@
-# Beyond the Magic Money Tree — *Foils & Founders: The Aotearoa Deck*
+# **Foils & Founders: The Aotearoa Deck**
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)]([https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/))
 [![Engine: VFI Toolkit GPU](https://img.shields.io/badge/Engine-VFI_Toolkit_GPU-blue.svg)](https://github.com/MichaelTiemann/IGWelfare)
 
 An open-source cooperative/competitive tabletop strategy game and macroeconomic simulation companion to ***Intergenerational Welfare, Capital Allocation, and Human Potential in New Zealand*** by Michael Tiemann ([Document 1A](https://github.com/MichaelTiemann/IGWelfare), `Document 1B`, and [Document 1C](https://github.com/MichaelTiemann/IGWelfare/blob/main/Document%201C.md)).
+
+## 0. We Make Affordable Economics Understandable
+
+In 1989, [Cygnus Support](CREDITS.md) launched the commercial open-source revolution with a five-word double-entendre: ***"We make Free Software affordable"*** (`N:01`).
+
+Today, Aotearoa New Zealand faces the exact inverse problem. Orthodox politicians and legacy cash-flow models tell the public that eliminating child poverty (`B:01`), keeping Universal Superannuation at 65 (`B:06`), and electrifying every home and school (`E:02`) are *"unaffordable."* In reality, they are the most **affordable** investments a nation can make—returning **3.84x** on the Crown's actuarial balance sheet by Year 5 (`B:07`) and unlocking **NZD 60.8B–91.5B** in idle precautionary capital (`E:02`).
+
+Why doesn't the public know that? Because the proof is locked inside 5-dimensional overlapping-generations Bellman equations and Kolmogorov Forward stationary distributions in [**Document 1B** and **Document 2** of the `IGWelfare` repository](https://github.com/MichaelTiemann/IGWelfare).
+
+***Foils & Founders* makes affordable economics understandable.** Look at the two hardest equations in our GPU solver—and see how the deck compiles them into a **Two-Card Tabletop Synergy** you can play in thirty seconds: B:01 and E:02.
 
 ---
 

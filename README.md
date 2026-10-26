@@ -64,7 +64,7 @@ python3 scripts/render_cards.py --theme generic --co2-pos top-right --out build/
 # 2. Te Waka Hourua Theme — Māori & Pasifika Pūrākau (CO2e badge in bottom-right corner)
 python3 scripts/render_cards.py --theme waka_hourua --co2-pos bottom-right --out build/waka_preview.html
 
-# 3. Up on Foils Theme — America's Cup Systems Engineering
+# 3. Up on Foils Theme — America’s Cup Systems Engineering
 python3 scripts/render_cards.py --theme foils_pakeha --co2-pos top-right --out build/foils_preview.html
 ```
 *(Optional flags: `--no-wildcards` omits the 7 `P:??` write-in cards; `--export-generic-md` exports individual `.md` card files into `themes/generic/cards/`.)*

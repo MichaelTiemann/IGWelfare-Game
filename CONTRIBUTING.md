@@ -16,9 +16,13 @@ IGWelfare-Game/
 ├── CONTRIBUTING.md                    # Pull Request guidelines for cards, mechanics, & data
 ├── CREDITS.md                         # Theoretical, empirical, and open-source lineage
 ├── rules/
-│   └── game_changer_tutorial.md       # Full worked case study: Easy Mode (E:01) vs. Challenge Mode (E:02-E:03)
+│   ├── rules.md                       # Complete card rules, 3-Turn Demo, & P:DD modules
+│   ├── game_changer_tutorial.md       # Full worked case study: Easy Mode (E:01) vs. Challenge Mode (E:02-E:03)
+│   └── T_05_tutorial.md               # Worked case study: Finland vs. NZ Disinformation Drag (T:05)
 ├── decks/
-│   └── cards.yaml                     # Canonical master database of all 43 P:DD cards (+ 7 P:?? wildcards)
+│   ├── cards.yaml                     # Canonical master database of all 43 P:DD cards (+ 7 P:?? wildcards)
+│   ├── nat_1.md                       # Confirming the Fumble: 20 sub-roll slices of the Bottom 5% (01:01-01:20)
+│   └── nat_20.md                      # Confirming the Crit: 20 sub-roll slices of the Top 5% (20:01-20:20)
 ├── metadata/
 │   ├── card_template.yaml             # Blank copy-paste YAML template for new card PRs
 │   └── empirical_sources.yaml         # Master bibliography of empirical & theoretical anchors

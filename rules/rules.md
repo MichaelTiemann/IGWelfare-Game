@@ -251,6 +251,75 @@ At the start of every turn in this edition, the **Global Temperature Clock** tic
 
 ---
 
+## Module 2B: Expansion Pack — Wayfinders & *Kaupapa* Personas (`K:01` – `K:07`: The "Big Table" Roleplay Deck)
+
+When running a **40-Minute "Big Table" Roleplay Workshop**, each player around the table adopts one of the six **Dual-Class Wayfinder Personas (`K:01`–`K:06`)** and works together to activate the **Alliance Keystone (`K:07`)**. Instead of arguing from isolated institutional silos, players discover that no single sector can lift the hydrofoil alone—each Wayfinder holds a unique key required to unlock the full `+20.49%` national welfare harvest.
+
+### `K:01` — The Catalytic Steward (Philanthropist & Iwi Trust Wayfinder)
+* **Type:** Dual-Class Persona — Lens 1 & Community Commons (`Gate 1` & `Gate 2`)
+* **Requirement:** Commit Patient Catalytic Capital + Trust-Based *Whānau Ora* / Iwi Delivery (`N:04`)
+* **Synergy Links:** `B:01`, `B:02`, `C:03`, `N:04`, `K:07`
+* **Game Text:**
+  * **Bypass the Bureaucratic Bottleneck:** When you fund `B:01` (*Te Korowai Mokopuna* / *Whānau Ora* First-2000-Days Wraparound) or `B:02` / `C:03` (*Tuakana–Teina*, *Stars*, *Project K*, & *Kura-ā-Iwi* Mentoring), ignore the 30% central compliance tax of `H:02` ("Wellington Knows Best").
+  * **Catalytic Seed Multiplier:** Every **NZD 1.00** of philanthropic or Iwi endowment capital you deploy in Turn 1 unlocks **NZD 3.84** in audited Crown actuarial liability release (`B:07`) by Year 5—proving what works on the ground so the state can scale it universally.
+* **Flavor Text:** *"The state waits for a randomized controlled trial of a parachute before jumping. Catalytic stewards weave the parachute with the community, jump first, and hand Treasury the flight log."*
+
+### `K:02` — The Venture Catalyst (Founder, Angel, & Deep-Tech Builder)
+* **Type:** Dual-Class Persona — Lens 2 & Lens 3 Enterprise Engine (`z_h`)
+* **Requirement:** Rotate Portfolio Out of Passive Dirt (`z_l`) into High-Growth Operating Firms (`B:05`)
+* **Synergy Links:** `B:03`, `B:05`, `T:04`, `E:02`, `N:05`
+* **Game Text:**
+  * **Defeat the Lavoisier Trap (`T:04`):** Pair with `B:05` (Use-It-Or-Lose-It Rebalancer) and `B:03` (Age-20 Youth Capital Grant) to rotate dormant capital out of the **NZD 1.6T** property pool and co-invest alongside young founders.
+  * **Scale Domestic Champions:** Unlock **-60 bps cheaper expansion credit**, expand the thriving domestic talent pool (`h6–h7`) from **23.5% to 65.0%**, and lift real regional wages by **+3.2% to +9.6%** across all four regions while keeping **19 out of 20 Top-5% entrepreneurial slices (`20:01`–`20:19`)** net welfare positive!
+* **Flavor Text:** *"Landlords trade the same square meter of Auckland dirt back and forth and call it wealth creation. Builders take an idea from a garage in Dunedin or Hamilton and sell it to the world."*
+
+### `K:03` — The Sovereign Helmsman (Treasury & RBNZ Monetary Architect)
+* **Type:** Dual-Class Persona — Macroeconomic & Actuarial Scorekeeper (All Lenses)
+* **Requirement:** Replace Cash-Flow Myopia (`H:01`) with `B:07` (ACC Valuation) + `E:03` (Firmed Grid)
+* **Synergy Links:** `B:06`, `B:07`, `B:08`, `E:02`, `E:03`, `N:03`
+* **Game Text:**
+  * **Dual-Ledger Mastery:** You hold the keys to both the **Crown Actuarial Balance Sheet (`B:07`)** and the **Official Cash Rate (`E:03`)**.
+  * **Actuarial & Monetary Unlock:** In Phase 1 (`SS1`), authorize **ACC Continuation Valuation (`B:07`)** under Treasury Circular 2024/15 (2.0% real SRTP) to book **1.16x direct cost breakeven (`NZD 10.68B`)** in Year 5. In Phase 2 (`SS2`), pair the **2050 50/50 Debt-Sinking Protocol (`B:06`)** with **5-Sector Electrification (`E:02`–`E:03`)** to cure excess precautionary savings and cut equilibrium domestic interest rates by **60 to 100 bps** without stoking inflation!
+* **Flavor Text:** *"When you only measure three-year cash flows and fight oil shocks with mortgage hikes, you steer the ship into the reef. Change the instruments on the bridge, and the whole ocean opens up."*
+
+### `K:04` — The "1925 Moment" Architect (Open-Source Economist & VFI Modeler)
+* **Type:** Dual-Class Persona — Systems Engineer & Game Master
+* **Requirement:** Run the 8-PType GPU Solver (`B:08`) + [`QEA_2026.m`](game_changer_tutorial.md)
+* **Synergy Links:** `B:04`, `B:08`, `E:02`, `N:01`, `N:06`
+* **Game Text:**
+  * **See the Whole Board:** Reveal the hidden second-order connections across all 5 Lifecycle Gates and all 4 Regions (`Rural`, `Small`, `Large`, `Auckland`).
+  * **Author a Game Changer:** Once per game, when the table is deadlocked in a first-order "Crowd-Out" dispute (`E:01`), you may invoke **Challenge Mode** ([`rules/game_changer_tutorial.md`](game_changer_tutorial.md))—recomputing the stationary distribution to prove that eliminating energy tail-risk (`z2`) releases **NZD 60.8B–91.5B in precautionary savings**, self-financing all **NZD 60.2B–75.5B** of 5-sector electrification CapEx with zero social crowd-out!
+* **Flavor Text:** *"Orthodox models crash when you ask how a three-year-old's bedroom temperature affects the thirty-year bond yield. Put the matrix on the GPU, and the answer takes eleven seconds."*
+
+### `K:05` — The Cultural Weaver (Artist, Storyteller, & *Pūrākau* Guardian)
+* **Type:** Dual-Class Persona — Narrative & Epistemic Firewall
+* **Requirement:** Bridge Story Lens A (*Up on Foils*) and Story Lens B (*Te Waka Hourua*)
+* **Synergy Links:** `B:02`, `B:03`, `C:02`, `C:06`, `T:05`
+* **Game Text:**
+  * **Immunize Against Disinformation (`T:05`):** Pair with `B:02` (*Tuakana–Teina* Mentoring) and `C:02` (Cognitive Flexibility) to weave Finnish-style *Monilukutaito* (multiliteracy) and living cultural identity into schools, marae, and public media.
+  * **Social Cohesion Amplifier:** Neutralize `T:05` (Disinformation & Outrage Drag), save **~NZD 2.0B/yr** in polarization friction, and boost the national **Social Cohesion Index from `100.0` to `126.0` (`C:06`)**—ensuring no outrage merchant can trick future voters into raiding the 2050 50/50 Fiscal Stabilizer (`B:06`).
+* **Flavor Text:** *"Spreadsheets don't make people brave enough to build for their grandchildren. Stories do. Tell a true story big enough for everyone in the waka, and the lies lose their wind."*
+
+### `K:06` — The *Kaumātua* & Founder's Dividend (Elder Navigator & Living Bequest)
+* **Type:** Dual-Class Persona — Lens 3 Intergenerational Steward (Ages 65+)
+* **Requirement:** Keep Universal NZ Super at Age 65 (`B:06`) + Recycle the NZD 1.6T Estate Wave (`B:05`)
+* **Synergy Links:** `B:03`, `B:05`, `B:06`, `H:04`, `K:07`
+* **Game Text:**
+  * **Defeat the "Actuarial Burden" Myth (`H:04`):** Prove that keeping Universal NZ Superannuation at Age 65 inside the coupled reform (`24.90%` required PAYE in `SS1`, dropping to **`18.5%` in `SS2`**) beats orthodox pension austerity (raising the age to 67 or 70 while PAYE still climbs to `25.55%–28.22%`).
+  * **Pass Down *Ngā Kete o te Wānanga*:** Generate **Lifetime Experience Tokens** every turn. Attach them to `B:02` (*Tuakana–Teina* Navigators) and `B:03` (Age-20 Founders) to grant **+2 Governance Wisdom** and **+15% Enterprise Survival**.
+* **Flavor Text:** *"Ka pū te ruha, ka hao te rangatahi—as the old net is laid aside with honor, the new net goes fishing. Our elders are not a fiscal liability; they are the celestial navigators of the waka."*
+
+### `K:07` — *Kotahitanga* & *Te Tiriti* Partnership (The Two-Hulled Waka Keystone)
+* **Type:** Legendary Alliance — Multi-Persona Victory Enabler
+* **Requirement:** Active Cooperation Between Tangata Whenua & Tangata Tiriti Wayfinders (`K:01`–`K:06`)
+* **Synergy Links:** `B:00`, `B:04`, `B:09`, `C:06`, `T:05`, `N:04`
+* **Game Text:**
+  * **Lash the Two Hulls Together (*Kīato*):** While `K:07` is in play, abilities from Story Lens A (*Up on Foils*) and Story Lens B (*Te Waka Hourua*) trigger simultaneously on every card played.
+  * **Unbreakable Compact:** Opponents and the Board cannot play culture-war division (`T:05`) or regional resentment (`C:05`) to repeal your Phase 1 (`SS1`) human-capital investments or raid your Phase 2 (`SS2`) 50/50 Debt-Sinking and Infrastructure Pools. Unlocks the **`B:09` (*He Tāngata*)** and **`N:06` (*The Aotearoa Synthesis*)** Mythic Victory Conditions!
+* **Flavor Text:** *"A single hull capsizes in the Southern Ocean. Two hulls lashed together with pono and aroha can cross the widest sea on earth."*
+
+---
+
 ## **Module 3: Expansion Pack — Reaching Abundance & Crossing Infinite Horizons (`N:01` – `N:06`)**
 
 As detailed in Section 6 of [Document 1C](https://github.com/MichaelTiemann/IGWelfare/blob/main/Document%201C.md), what conventional orthodoxy dismisses as impossible is actually Nobel Prize-winning economics in action. Add these 6 cards to teach players the theoretical force-multipliers behind open source and intergenerational welfare—shifting the board from zero-sum scarcity to compounding, non-rival abundance.

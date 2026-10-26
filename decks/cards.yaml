@@ -129,7 +129,7 @@ cards:
     lens: ["Lens 2", "Lens 3"]
     gate_or_phase: "SS1 -> SS2"
     cost_or_requirement: "1.5% Land/Wealth Levy + 25% Peak Estate Levy (stepping down to 18% in SS2)"
-    synergy_links: ["B:03", "B:04", "K:02", "N:05", "H:03", "T:05"]
+    synergy_links: ["B:03", "B:04", "K:02", "N:05", "H:03", "T:04"]
     effects:
       - label: "Rotate Dormant Dirt"
         rule: "Target opponent's NZD 1.6 Trillion Dormant Property Hoard. Exhaust all Passive Land Speculators (z_l) and cool Auckland housing overvaluation by -7.5% (SS1) to -10.5% (SS2)."
@@ -207,7 +207,7 @@ cards:
     empirical_anchor: "Document 1A Part IV Section 1 & 6A (7-Factor Attribution); Document 1C Section 3 (A River of Gold)."
 
   # ----------------------------------------------------------------------------
-  # MODULE 1B: CAUTIONARY TRAP CARDS (T:00 - T:04)
+  # MODULE 1B: CAUTIONARY TRAP CARDS (T:00 - T:05)
   # ----------------------------------------------------------------------------
   - id: "T:00"
     name: "The Molesworth Street Cycle-Lane Paralysis (Limited-Edition Promo Trap)"
@@ -534,7 +534,7 @@ cards:
     lens: ["Lens 1", "Lens 2", "Lens 3"]
     gate_or_phase: "SS1 -> SS2"
     cost_or_requirement: "At least three Dual-Class Wayfinder Personas (K:01–K:06) active at the table (representing Crown Kāwanatanga, Iwi/Community Rangatiratanga, Enterprise, Science, and Story)."
-    synergy_links: ["B:06", "B:09", "C:06", "N:06"]
+    synergy_links: ["B:06", "B:09", "C:06", "N:06", "T:05"]
     effects:
       - label: "One Crew, One Foiling Vessel"
         rule: "While The Big Table Crew (K:07) is active, every Persona at the table shares its Innate Kaupapa Ability with all other players."

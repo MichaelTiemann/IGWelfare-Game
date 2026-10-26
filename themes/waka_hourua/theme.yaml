@@ -110,6 +110,11 @@ card_overrides:
     name: "Te Tara-ā-Whare: Fighting Over the Catch Instead of Fishing"
     type: "Cautionary Trap — Misallocating Rangatahi Pūmanawa (Talent)"
     flavor_text: "When fighting over old land titles pays ten times more than weaving a new net or building a new waka, the sharpest minds stop fishing—and the whole village goes hungry."
+
+  "T:05":
+    name: "Te Hau Kōrero Teka: The Ill Wind of Deceit & Division"
+    type: "Cautionary Trap — Eroding Mauri, Kotahitanga, & Tikanga Pono"
+    flavor_text: "When a waka leaves its young cold and hungry in the bilge, false navigators whisper in the dark that the other hull is the enemy—until the lashings are cut from within. Teach the tamariki to read the true stars early, and no lie can turn the crew against itself."
     
   "C:04":
     name: "Te Whakaruruhau o Tangaroa (Coastal, Grid, & Marae Armor)"

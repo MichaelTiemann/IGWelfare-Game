@@ -151,7 +151,48 @@ When a player scales the second-order mechanism in [`QEA_2026.m`](https://github
 
 ---
 
-### 2. Sector-by-Sector Notes for the Game Master (`K:04` Architect's Guide)
+### 2. Why Each Sector Multiplies the Next (The Five Coupled Mechanisms)
+
+#### (1) Households: Converting "Dead Precautionary Cash" into a Living Endowment
+
+* **The Math in [QEA\_2026.m](https://github.com/MichaelTiemann/QEA-2026/blob/main/QEA_2026.m):** With risk aversion \=2.2 and an AR(1) energy shock of magnitude 2 (z2=0.75), a typical Kiwi household holds **NZD 20,000 to NZD 28,000** in low-yield liquid precautionary savings (a) across its working life just to buffer the compound risk of an unemployment or medical shock (z1) colliding with a winter power or petrol spike (z2).  
+* **The Consequence:** When a household swaps **NZD 20,000** of that sterile precautionary buffer into **5 shares of Solar PV \+ Battery (pv \= 5)**, its exposure to z2 drops to zero (and turns positive via the 50% grid feed-in tariff). The household no longer needs to hoard precautionary cash *or* work frantic overtime hours (h) to rebuild buffer stocks—unlocking **NZD 32B to NZD 45B** in household balance-sheet capacity while leaving the panels as a physical bequest for their children.
+
+#### (2) Schools (\~2,500) & Marae (\~800): Zero-Lag Daytime Payback & Community Resilience
+
+* **Why Schools & Marae Have the Fastest Payback (3.5–4.3 Years):** Unlike homes (which peak in the morning and evening), **schools consume 85%+ of their electricity between 8:30 AM and 3:30 PM**—matching the solar generation bell curve without needing massive battery banks. Electrifying all 2,500 state/integrated schools and 800 marae costs just **NZD 1.2B to NZD 1.5B** (easily funded from a single year of the B:06 / C:04 Infrastructure Pool) and saves **NZD 350M/yr** in school and marae operational budgets—enough to fund **25,000+ student places** in *Tuakana–Teina* / Graeme Dingle Foundation mentoring (B:02) every year for free.  
+* **The *Manaakitanga* Resilience Dividend:** As Cyclone Gabrielle proved, when the transmission grid goes down, marae and schools become the civil defence lifeboats of Aotearoa. Equipping every marae and school with solar \+ bi-directional storage releases **NZD 1.8B–2.5B** in municipal emergency-response liabilities.
+
+#### (3) Commercial & Industrial Firms: Unchaining Corporate Working Capital ($z_h$)
+
+* **Curing Corporate Precautionary Hoarding:** In your Guvenen et al. (2023) firm module (ReturnFn\_Firm.m), collateral-constrained entrepreneurs (zh) must hold defensive cash buffers against input-cost volatility (especially dry-year wholesale electricity spikes and fossil process-heat shocks).  
+* **The Consequence:** Deploying **NZD 12B–15B** in commercial rooftop solar, heat-pump process heat, and behind-the-meter batteries cuts commercial energy bills by **NZD 3.1B/yr** (a **4.0–4.8 year payback**) and releases **NZD 14B–20B** in corporate precautionary working capital. Instead of sitting in bank deposits to hedge against Genesis or Methanex gas crises, that capital rotates directly into productive plant, software, and higher wages.
+
+#### (4) Agriculture & Horticulture: From Diesel Drag to "Dual-Use" Energy Endowments
+
+* **Proven in Central Otago & Across 19,000+ Farm Ponds:** As Mike Casey proved at Forest Lodge Orchard in Cromwell—and as your Acquasol floating-solar platform highlights across New Zealand's **19,000+ farm irrigation and wastewater ponds**—electrifying tractors, frost-fighting fans, irrigation pumps, and dairy sheds (plus deploying standardized 250kW–1MW floating solar arrays on existing farm water infrastructure) costs **NZD 6B–8B** and saves **NZD 1.4B/yr** in diesel and grid charges (**4.3–5.5 year payback**).  
+* **The Macroeconomic Shield:** Agriculture is the backbone of New Zealand's export ledger, yet under the status quo it is completely hostage to Middle East diesel price shocks. Electrifying the farm gate releases **NZD 5B–8B** in rural working-capital buffers and permanently insulates domestic food prices from imported oil inflation.
+
+#### (5) Transport: Eradicating the 2.8x Rural & Provincial Fuel Penalty
+
+* **The Fastest Marginal Payback on Earth (2.5–3.5 Years):** Transport is where New Zealand hemorrhages the most foreign exchange—burning **NZD 12B–14B/yr** on imported petrol and diesel. When households and freight operators replace the **84% of vehicles that can be cost-effectively electrified at the end of their normal useful life**, the *marginal* CapEx over buying another combustion vehicle is only **NZD 13B–19B** nationally, while the fuel and maintenance savings hit **NZD 5.9B/yr** (especially when charged off daytime workplace/school solar or home rooftop PV).  
+* **Coupling Directly to C:05 (The 4-Region Just-Transition Compass):** In your 4-Region OLG model, **Rural (16% pop)** and **Small Provincial Towns (24% pop)** spend **2.7x to 2.8x** more of their household budget on transport fuel than Aucklanders. Pairing rural rooftop solar with EVs/electric utes eliminates that geographic tax—releasing **NZD 8B–16B** in precautionary fuel buffers and boosting rural/provincial welfare by an extra **\+2.5% to \+3.8% CE**.
+
+### 3. The "Unexpectedly Higher GDP" Theorem: What Happens to the Whole Board?
+
+When you sum the five sectors together, look at the three macroeconomic equations that snap into place for **Treasury and the Reserve Bank (K:03)**:
+
+1. **Zero Social Crowd-Out (Self-Financing via Precautionary Release):**  
+   \$\$\\underbrace{\\text{Upfront 5-Sector CapEx}}\_{\\text{NZD } 60.2\\text{B–}75.5\\text{B}} \\quad \\le \\quad \\underbrace{\\text{Released Precautionary Capital } (\\Delta A\_{\\text{prec}})}\_{\\text{NZD } 60.8\\text{B–}91.5\\text{B}}\$\$  
+   Because converting energy from a stochastic shock (z2) into an endowment (pv) releases **NZD 61B to NZD 91B** of sterile precautionary savings across households, firms, and farms, **New Zealand already has 100% of the capital sitting idle on private balance sheets** to finance the entire transition without touching a single dollar of Phase 1 (SS1) social investment\!  
+2. **A \+NZD 15.5B/yr Balance-of-Payments & National Security Swing (Plus Canceling the NZD 6.2B LNG Terminal):** Stop sending **NZD 15B–20B every year** to foreign oil and coal producers (and cancel the **NZD 6.2B imported LNG terminal**). Keeping that **NZD 15.55B/yr** circulating inside Rural, Small, Large, and Auckland regional economies acts as a permanent, non-inflationary stimulus equal to **\~3.6% of New Zealand's GDP every single year**.  
+3. **The RBNZ "OCR Freedom" Dividend (-60 to \-100 bps Lower Interest Rates):**  
+   Right now, the Reserve Bank is trapped in a nightmare: every time a war in the Middle East spikes oil prices, imported "cost-push" inflation rises *at the exact same moment* that fearful households spike their precautionary savings—forcing RBNZ to hike or hold the OCR high and crush domestic businesses. Once all five sectors run on domestic solar, hydro, wind, and batteries:  
+   * Imported fossil-fuel inflation disappears from the CPI basket;  
+   * Excess precautionary savings drag vanishes; and  
+   * RBNZ and the **2050 50/50 Debt-Sinking Protocol (B:06)** can lower equilibrium New Zealand interest rates by **60 to 100 basis points**, supercharging productive enterprise investment (B:05) and cutting mortgage payments for every young family.
+
+### 4. Sector-by-Sector Notes for the Game Master (`K:04` Architect's Guide)
 
 1. **Households (`NZD 28B–32B` CapEx $\rightarrow$ `NZD 4.8B/yr` Savings + `NZD 32B–45B` Precautionary Release):**
    * With relative risk aversion `sigma = 2.2` and an AR(1) energy shock of magnitude `2x` (`rho_z2 = 0.75`), a typical Kiwi household holds **NZD 20,000 to NZD 28,000** in low-yield liquid precautionary savings (`a`) across its working life just to buffer the compound risk of an unemployment or medical shock (`z1`) colliding with a winter power or petrol spike (`z2`).
@@ -170,7 +211,7 @@ When a player scales the second-order mechanism in [`QEA_2026.m`](https://github
 
 ---
 
-### 3. The Three Macroeconomic Equations That Change the Board (`E:02` + `E:03`)
+### 5. The Three Macroeconomic Equations That Change the Board (`E:02` + `E:03`)
 
 The * **Unexpectedly Higher GDP** * Theorem: What Happens to the Whole Board?
 

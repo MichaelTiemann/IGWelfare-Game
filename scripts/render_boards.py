@@ -646,7 +646,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
     <div class="sheet-body">
       <header class="board-banner">
         <div>
-          <div class="banner-title">FOILS &amp; FOUNDERS: THE AOTEAROA DECK — NATIONAL TABLETOP BOARD</div>
+          <div class="banner-title">FOILS &amp; FOUNDERS: THE AOTEAROA DECK — NATIONAL REGION</div>
           <div class="banner-sub">{html.escape(sub_banner)}</div>
         </div>
         <div class="banner-right">

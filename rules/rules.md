@@ -208,7 +208,7 @@ At the start of every turn in this edition, the **Global Temperature Clock** tic
 * **Type:** Continuous Aura — Human Capability Shield  
 * **Cost:** Compress Cohort Stunting to 1.5% via **`B:01` (First 2000 Days)** \+ **`B:02` (*Tuakana–Teina* / Montessori)**  
 * **Game Text:**  
-  * *Attach to your 61.0%+ Thriving Adult Cohort.*  
+  * *Attach to your 65.0%+ Thriving Adult Cohort.*  
   * *Adaptive Pivot:* Whenever an **Accelerating Change** or **Supply-Chain Shock** card enters play, your workforce does not break—it adapts. Prevent all unemployment shock damage to your *Rangatahi* (Ages 12–14) and convert the crisis into **\+1 Frontier Clean-Tech Innovation**.  
 * **Flavor Text:** *"Sea walls can crack and spreadsheets go obsolete overnight. A generation raised with executive function, creative agency, and whanaungatanga can rebuild the ship while it's flying."*
 
@@ -438,7 +438,14 @@ Shuffle this 5-card Hazard Deck into play for the full 60-minute strategy experi
   * *Payoff:* Prevent the land bubble, keep **Universal NZ Superannuation solvent at Age 65**, and reward working families with a permanent **\-3.5 percentage-point PAYE income tax cut** in `SS2`.  
 * **Flavor Text:** *"Generating a miracle takes a front foil and a wing-sail. Keeping it for your grandchildren takes a rear T-foil stabilizer."*
 
-## **Game Legend & Credits: Why I Know This Game Works in the Real World**
+## Tabletop Board, Tokens, & Game Legend
+
+* **Tabletop Playmats, Seven Capitals, & Token Rules:** See [`rules/board_and_tokens.md`](board_and_tokens.md) and [`decks/board_and_tokens.yaml`](../decks/board_and_tokens.yaml).
+* **Game Legend, Credits, & "We Make Affordable Economics Understandable" (Equations $\rightarrow$ Cards):** See [`CREDITS.md`](../CREDITS.md).
+
+## Epilogue: Why I Know This Game Works in the Real World**
+
+Repetition is a form of emphasis.  You can read this story in [`CREDITS.md`](../CREDITS.md), but to make sure it stays with the rules, we repeat it here.
 
 In 1987, getting a compiler to generate code for a new microprocessor architecture cost millions of dollars and took years to accomplish. I found that I could port the GNU C compiler to a new architecture in a matter of weeks (and later days, and sometimes hours), generating code that outperformed the vendor's own compiler. I was convinced that such a competitive advantage warranted commercial success, but the idea was absolutely rejected by the economic and entrepreneurial orthodoxy of the day, for two reasons:
 

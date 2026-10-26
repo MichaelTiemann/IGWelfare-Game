@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Foils & Founders: The Aotearoa Deck — Multi-Theme Card Renderer (v3.0)
-Supports Theme Dictionaries (card_overrides + lexicon_replacements) & CO2e Badges
-Strict Stacked-Bond 5x2 A3 Landscape Imposition + Auto-Fit Text Scaling
+Foils & Founders: The Aotearoa Deck — Multi-Theme Card Renderer (v3.1)
+Supports Theme Dictionaries (card_overrides + lexicon_replacements), CO2e Badges,
+T:04 Lavoisier Syndrome, and 7+1 Open-Source Extensibility Wildcards (50/50 A3 Slots).
 License: CC-BY-SA-4.0 / GPL-3.0-or-later
 """
 
@@ -19,6 +19,7 @@ except ImportError:
     HAS_MARKDOWN = False
 
 IMAGE_EXTENSIONS = [".svg", ".png", ".webp", ".jpg", ".jpeg"]
+DECK_ORDER = ["B", "T", "C", "K", "N", "H", "E"]
 
 DEFAULT_CO2E_BADGES = {
     "B:00": ("Fair Transition", "indirect_enabler"),
@@ -35,6 +36,7 @@ DEFAULT_CO2E_BADGES = {
     "T:01": ("Stalled Retrofit", "hazard_increase"),
     "T:02": ("Sprawl Bubble", "hazard_increase"),
     "T:03": ("Urban Heat Trap", "hazard_increase"),
+    "T:04": ("Stalls Clean-Tech R&D", "hazard_increase"),
     "C:01": ("USD 1,200 / tCO2e", "computed"),
     "C:02": ("-2.5 MtCO2e / yr", "computed"),
     "C:03": ("Kaitiaki Resilience", "indirect_enabler"),
@@ -64,9 +66,54 @@ DEFAULT_CO2E_BADGES = {
     "E:03": ("-3.2 MtCO2e (No LNG)", "computed"),
 }
 
+WILDCARD_SPEC = {
+    "B": (
+        "B:??",
+        "Base Foil Wildcard (Design a Lifecycle Lever)",
+        "Cohort Identity or Structural Foil — Lenses 1, 2, or 3",
+        "Propose a new developmental gate, housing lever, or actuarial rule within the NZD 9.19B SS1 envelope.",
+    ),
+    "T": (
+        "T:??",
+        "Cautionary Trap Wildcard (Spot a Policy Pitfall)",
+        "Single-Lens Pitch-Pole or Rent-Seeking Trap",
+        "Document a real-world domestic or international policy trap where solving one lens in isolation backfires.",
+    ),
+    "C": (
+        "C:??",
+        "Climate & Resilience Wildcard (Armor the Waka)",
+        "Adaptation, Biodiversity, or Regional Just-Transition Card",
+        "Propose a community microgrid, catchment restoration, or spatial resilience buffer anchored to C:01–C:06.",
+    ),
+    "K": (
+        "K:??",
+        "Wayfinder & Kaupapa Wildcard (Bring Your Mandate)",
+        "Companion Persona — Innate Kaupapa + Two Dual-Class Synergies",
+        "Add a new community, iwi, union, local-government, or youth persona who brings a vital lens to the Big Table.",
+    ),
+    "N": (
+        "N:??",
+        "Theoretical Milestone Wildcard (Stand on Giants)",
+        "Economic / Systems Theory Proof — Open-Source Archive",
+        "Cite a peer-reviewed theorem or natural experiment that unlocks a non-rival multiplier across the board.",
+    ),
+    "H": (
+        "H:??",
+        "Orthodoxy Boss Wildcard (Name theBlocker & Counter)",
+        "Institutional Hazard -> Coupled Combo Counter-Play",
+        "Write an entrenched status-quo objection at the top, and the exact multi-card combo that defeats it below.",
+    ),
+    "E": (
+        "E:??",
+        "Game-Changer Wildcard (Fork the VFI GPU Engine)",
+        "Track 2 Stationary-Distribution Shift — Challenge Mode",
+        "Modify a state variable or shock in VFI Toolkit (like QEA-2026) to unlock trapped precautionary capital.",
+    ),
+}
+
 
 def normalize_card_id(card_id: str) -> str:
-    return card_id.strip().replace(":", "_")
+    return card_id.strip().replace(":", "_").replace("?", "X")
 
 
 def load_yaml(path: Path) -> dict:
@@ -173,11 +220,65 @@ def md_to_html(md_text: str) -> str:
     return "\n".join(out)
 
 
+def build_wildcard_html(
+    deck_prefix: str,
+    cid: str,
+    title: str,
+    subtitle: str,
+    prompt_text: str,
+    active_theme_name: str,
+    co2_pos: str,
+) -> str:
+    """Render an interactive/write-in Open-Source Extensibility Card for each deck."""
+    co2_badge_html = '<div class="co2e-badge status-na">🌱 CO2e: ______</div>'
+    if co2_pos == "top-right":
+        top_center = "OPEN-SOURCE PR SLOT"
+        top_right = co2_badge_html
+        bottom_right = f'<span class="theme-tag">Theme: {html.escape(active_theme_name)}</span>'
+    else:
+        top_center = f'<span class="theme-tag">Theme: {html.escape(active_theme_name)}</span>'
+        top_right = '<span class="gate-label">OPEN-SOURCE PR SLOT</span>'
+        bottom_right = co2_badge_html
+
+    return f"""
+    <article class="game-card wildcard-card deck-{deck_prefix}" id="card-{normalize_card_id(cid)}">
+      <header class="card-header">
+        <div class="pdd-corner wildcard-pdd">{html.escape(cid)}</div>
+        <div class="header-center">{top_center}</div>
+        <div class="header-right">{top_right}</div>
+      </header>
+      <main class="card-content">
+        <h2>{html.escape(title)}</h2>
+        <p><em>{html.escape(subtitle)}</em></p>
+        <p class="wildcard-prompt">{html.escape(prompt_text)}</p>
+        <h3>Write-In Card Draft (Or Submit via GitHub PR)</h3>
+        <div class="write-in-lines">
+          <div class="write-line"><span>Card Name &amp; Gate:</span></div>
+          <div class="write-line"><span>Cost / Requirement:</span></div>
+          <div class="write-line"><span>Mechanic 1 (Effect):</span></div>
+          <div class="write-line"></div>
+          <div class="write-line"><span>Mechanic 2 (Synergy / Crowd-Out Check):</span></div>
+          <div class="write-line"></div>
+          <div class="write-line"><span>Empirical Anchor / Citation:</span></div>
+        </div>
+        <blockquote>
+          <em>"This game is licensed under CC-BY-SA-4.0. Copy metadata/card_template.yaml and submit a Pull Request to github.com/MichaelTiemann/IGWelfare-Game!"</em>
+        </blockquote>
+      </main>
+      <footer class="card-footer">
+        <div class="synergy-bar">🔗 <strong>Synergies:</strong> ____, ____, ____</div>
+        <div class="footer-right">{bottom_right}</div>
+      </footer>
+    </article>
+    """
+
+
 def render_deck_html(
     cards_data: dict,
     theme_chain: list[Path],
     co2_pos: str = "top-right",
     populate_generic_md: bool = False,
+    include_wildcards: bool = True,
 ) -> str:
     active_theme_name = theme_chain[0].name
     theme_manifests = [load_yaml(t / "theme.yaml") for t in theme_chain]
@@ -186,69 +287,101 @@ def render_deck_html(
         generic_cards_dir = theme_chain[-1] / "cards"
         generic_cards_dir.mkdir(parents=True, exist_ok=True)
 
-    card_blocks = []
+    # Group cards by deck prefix so T:04 sits right after T:03 and each deck can end with its P:?? wildcard
+    grouped_cards: dict[str, list[dict]] = {p: [] for p in DECK_ORDER}
     for raw_card in cards_data.get("cards", []):
-        cid = raw_card["id"]
-        deck_prefix = cid.split(":")[0]
-        stem = normalize_card_id(cid)
+        prefix = raw_card["id"].split(":")[0]
+        grouped_cards.setdefault(prefix, []).append(raw_card)
 
-        if populate_generic_md:
-            (generic_cards_dir / f"{stem}.md").write_text(
-                generate_card_markdown(raw_card), encoding="utf-8"
+    for prefix in grouped_cards:
+        grouped_cards[prefix].sort(key=lambda c: c["id"])
+
+    card_blocks = []
+    for deck_prefix in DECK_ORDER:
+        for raw_card in grouped_cards.get(deck_prefix, []):
+            cid = raw_card["id"]
+            stem = normalize_card_id(cid)
+
+            if populate_generic_md:
+                (generic_cards_dir / f"{stem}.md").write_text(
+                    generate_card_markdown(raw_card), encoding="utf-8"
+                )
+
+            card = localize_card_for_theme(raw_card, theme_manifests)
+            localized_md_text = generate_card_markdown(card)
+            asset_type, asset_path, resolved_theme = resolve_card_asset(cid, theme_chain)
+
+            co2_obj = card.get("co2e_impact", {})
+            default_badge, default_status = DEFAULT_CO2E_BADGES.get(cid, ("CO2e: N/A", "na"))
+            co2_badge = co2_obj.get("display", default_badge)
+            co2_status = co2_obj.get("status", default_status)
+
+            if asset_type == "image" and asset_path is not None:
+                rel_img = asset_path.as_posix()
+                body_html = (
+                    f'<div class="card-art"><img src="{rel_img}" alt="{html.escape(card["name"])}"/></div>'
+                    f'<div class="card-md-body">{md_to_html(localized_md_text)}</div>'
+                )
+            elif asset_type == "markdown_file" and asset_path is not None and resolved_theme == active_theme_name:
+                custom_md = asset_path.read_text(encoding="utf-8")
+                body_html = f'<div class="card-md-body">{md_to_html(custom_md)}</div>'
+            else:
+                body_html = f'<div class="card-md-body">{md_to_html(localized_md_text)}</div>'
+
+            synergies = ", ".join(card.get("synergy_links", []))
+            co2_badge_html = (
+                f'<div class="co2e-badge status-{co2_status}" title="Anticipated CO2e Impact">'
+                f'🌱 {html.escape(co2_badge)}</div>'
             )
 
-        card = localize_card_for_theme(raw_card, theme_manifests)
-        localized_md_text = generate_card_markdown(card)
-        asset_type, asset_path, resolved_theme = resolve_card_asset(cid, theme_chain)
+            if co2_pos == "top-right":
+                top_center_slot = html.escape(card.get("gate_or_phase", ""))
+                top_right_slot = co2_badge_html
+                bottom_right_slot = f'<span class="theme-tag">Theme: {html.escape(active_theme_name)}</span>'
+            else:
+                top_center_slot = f'<span class="theme-tag">Theme: {html.escape(active_theme_name)}</span>'
+                top_right_slot = f'<span class="gate-label">{html.escape(card.get("gate_or_phase", ""))}</span>'
+                bottom_right_slot = co2_badge_html
 
-        co2_obj = card.get("co2e_impact", {})
-        default_badge, default_status = DEFAULT_CO2E_BADGES.get(cid, ("CO2e: N/A", "na"))
-        co2_badge = co2_obj.get("display", default_badge)
-        co2_status = co2_obj.get("status", default_status)
+            card_blocks.append(f"""
+            <article class="game-card deck-{deck_prefix}" id="card-{stem}">
+              <header class="card-header">
+                <div class="pdd-corner">{html.escape(cid)}</div>
+                <div class="header-center">{top_center_slot}</div>
+                <div class="header-right">{top_right_slot}</div>
+              </header>
+              <main class="card-content">
+                {body_html}
+              </main>
+              <footer class="card-footer">
+                <div class="synergy-bar">🔗 <strong>Synergies:</strong> {html.escape(synergies)}</div>
+                <div class="footer-right">{bottom_right_slot}</div>
+              </footer>
+            </article>
+            """)
 
-        if asset_type == "image" and asset_path is not None:
-            rel_img = asset_path.as_posix()
-            body_html = (
-                f'<div class="card-art"><img src="{rel_img}" alt="{html.escape(card["name"])}"/></div>'
-                f'<div class="card-md-body">{md_to_html(localized_md_text)}</div>'
+        # Append the Deck-Specific Extensibility Wildcard (B:??, T:??, C:??, K:??, N:??, H:??, E:??)
+        if include_wildcards and deck_prefix in WILDCARD_SPEC:
+            w_cid, w_title, w_sub, w_prompt = WILDCARD_SPEC[deck_prefix]
+            card_blocks.append(
+                build_wildcard_html(
+                    deck_prefix, w_cid, w_title, w_sub, w_prompt, active_theme_name, co2_pos
+                )
             )
-        elif asset_type == "markdown_file" and asset_path is not None and resolved_theme == active_theme_name:
-            custom_md = asset_path.read_text(encoding="utf-8")
-            body_html = f'<div class="card-md-body">{md_to_html(custom_md)}</div>'
-        else:
-            body_html = f'<div class="card-md-body">{md_to_html(localized_md_text)}</div>'
 
-        synergies = ", ".join(card.get("synergy_links", []))
-        co2_badge_html = (
-            f'<div class="co2e-badge status-{co2_status}" title="Anticipated CO2e Impact">'
-            f'🌱 {html.escape(co2_badge)}</div>'
+    # If 42 cards + 7 wildcards = 49 cards, add the 50th Master Open-Source Contributor Card to fill Sheet 5!
+    if include_wildcards and len(card_blocks) % 10 == 9:
+        card_blocks.append(
+            build_wildcard_html(
+                "B",
+                "*:50",
+                "Fork the Deck: How to Contribute a Pull Request",
+                "Tracks 1–4 Open-Source Contribution Guide (CC-BY-SA-4.0)",
+                "Track 1: First-Order Card | Track 2: VFI GPU Shift | Track 3: Demographic CSVs | Track 4: Art Theme.",
+                active_theme_name,
+                co2_pos,
+            )
         )
-
-        if co2_pos == "top-right":
-            top_center_slot = html.escape(card.get("gate_or_phase", ""))
-            top_right_slot = co2_badge_html
-            bottom_right_slot = f'<span class="theme-tag">Theme: {html.escape(active_theme_name)}</span>'
-        else:
-            top_center_slot = f'<span class="theme-tag">Theme: {html.escape(active_theme_name)}</span>'
-            top_right_slot = f'<span class="gate-label">{html.escape(card.get("gate_or_phase", ""))}</span>'
-            bottom_right_slot = co2_badge_html
-
-        card_blocks.append(f"""
-        <article class="game-card deck-{deck_prefix}" id="card-{stem}">
-          <header class="card-header">
-            <div class="pdd-corner">{html.escape(cid)}</div>
-            <div class="header-center">{top_center_slot}</div>
-            <div class="header-right">{top_right_slot}</div>
-          </header>
-          <main class="card-content">
-            {body_html}
-          </main>
-          <footer class="card-footer">
-            <div class="synergy-bar">🔗 <strong>Synergies:</strong> {html.escape(synergies)}</div>
-            <div class="footer-right">{bottom_right_slot}</div>
-          </footer>
-        </article>
-        """)
 
     # Build strict 5-column x 2-row Stacked-Bond A3 Landscape sheets (10 cards per sheet)
     cols = 5
@@ -264,10 +397,9 @@ def render_deck_html(
             row_cards = sheet_cards[r * cols : (r + 1) * cols]
             if not row_cards:
                 continue
-            # Pad incomplete row with empty placeholder cells so column widths stay locked
             while len(row_cards) < cols:
                 row_cards.append('<div class="game-card empty-slot"></div>')
-            cells = "".join(f'<td>{c}</td>' for c in row_cards)
+            cells = "".join(f"<td>{c}</td>" for c in row_cards)
             row_htmls.append(f"<tr>{cells}</tr>")
 
         sheet_blocks.append(f"""
@@ -309,7 +441,6 @@ def render_deck_html(
       padding: 16px;
       color: #1a202c;
     }}
-    /* Exact A3 Landscape Printable Sheet (408mm x 285mm inside 6mm margins) */
     .a3-sheet {{
       width: 408mm;
       height: 285mm;
@@ -325,7 +456,6 @@ def render_deck_html(
       page-break-inside: avoid;
       break-inside: avoid;
     }}
-    /* Rigid Stacked-Bond Table: 5 columns x 2 rows, zero stagger possible */
     .stacked-bond-table {{
       width: 100%;
       border-collapse: separate;
@@ -346,7 +476,6 @@ def render_deck_html(
       text-align: right;
       padding-right: 3mm;
     }}
-    /* Fixed physical card dimensions: 76.8mm wide x 133mm tall */
     .game-card {{
       width: 76.8mm;
       height: 133mm;
@@ -360,6 +489,36 @@ def render_deck_html(
       justify-content: space-between;
       padding: 2.2mm 2.8mm;
       overflow: hidden;
+    }}
+    .game-card.wildcard-card {{
+      background: #fcfcfd;
+      border-style: dashed;
+    }}
+    .wildcard-pdd {{
+      background: #475569 !important;
+    }}
+    .wildcard-prompt {{
+      font-size: 6.2pt;
+      color: #334155;
+      background: #f1f5f9;
+      padding: 1.2mm 1.6mm;
+      border-radius: 1mm;
+    }}
+    .write-in-lines {{
+      display: flex;
+      flex-direction: column;
+      gap: 2.8mm;
+      margin: 1.8mm 0;
+    }}
+    .write-line {{
+      border-bottom: 0.35mm dotted #94a3b8;
+      height: 4.8mm;
+      font-size: 5.6pt;
+      font-weight: 700;
+      color: #64748b;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 0.4mm;
     }}
     .game-card.empty-slot {{
       border: 0.3mm dashed #e2e8f0;
@@ -424,6 +583,11 @@ def render_deck_html(
       background: #fff5f5;
       color: #9b2c2c;
       border-color: #feb2b2;
+    }}
+    .co2e-badge.status-na {{
+      background: #f8fafc;
+      color: #475569;
+      border-color: #cbd5e1;
     }}
     .card-content {{
       flex: 1 1 auto;
@@ -499,7 +663,6 @@ def render_deck_html(
 <body>
   {''.join(sheet_blocks)}
   <script>
-    // Auto-scale dense cards (like B:00) so text never clips inside the fixed 133mm card height
     function fitAllCards() {{
       document.querySelectorAll('.game-card:not(.empty-slot)').forEach(card => {{
         const content = card.querySelector('.card-content');
@@ -526,6 +689,7 @@ if __name__ == "__main__":
     parser.add_argument("--themes-dir", default="themes", help="Directory containing theme folders")
     parser.add_argument("--theme", default="generic", help="Active theme name (e.g., generic, waka_hourua, foils_pakeha)")
     parser.add_argument("--co2-pos", choices=["top-right", "bottom-right"], default="top-right")
+    parser.add_argument("--no-wildcards", action="store_true", help="Omit the 7+1 open-source write-in wildcard cards")
     parser.add_argument("--export-generic-md", action="store_true", help="Export raw .md files to themes/generic/cards/")
     parser.add_argument("--out", default="build/deck_preview.html", help="Output HTML path")
     args = parser.parse_args()
@@ -533,10 +697,14 @@ if __name__ == "__main__":
     cards_data = load_yaml(Path(args.cards))
     chain = build_theme_chain(Path(args.themes_dir), args.theme)
     html_out = render_deck_html(
-        cards_data, chain, co2_pos=args.co2_pos, populate_generic_md=args.export_generic_md
+        cards_data,
+        chain,
+        co2_pos=args.co2_pos,
+        populate_generic_md=args.export_generic_md,
+        include_wildcards=not args.no_wildcards,
     )
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html_out, encoding="utf-8")
-    print(f"Rendered {len(cards_data.get('cards', []))} cards in 5x2 Stacked-Bond A3 sheets -> {out_path}")
+    print(f"Rendered deck (wildcards={not args.no_wildcards}) in 5x2 Stacked-Bond A3 sheets -> {out_path}")

@@ -271,6 +271,26 @@ cards:
     flavor_text: "When raising a child becomes a stressed luxury good in an overvalued primate city, the future simply stops being born."
     empirical_anchor: "21st-Century South Korea TFR benchmark (0.72-0.75); Document 1A Part VI Section 2."
 
+  - id: "T:04"
+    name: "The Lavoisier Syndrome (Rent-Seekers vs. Builders)"
+    deck: "traps"
+    module_level: 1
+    type: "Cautionary Trap — Talent Misallocation (Lens 2 & Lens 3)"
+    lens: ["Lens 2", "Lens 3"]
+    gate_or_phase: "SS0 Status Quo / Round 2 Demo"
+    cost_or_requirement: "Triggered when a NZD 1.6T Untaxed Property Pool coexists with under-capitalized firms (High Rent-Seeking Tax T)."
+    synergy_links: ["B:03", "B:05", "K:02", "N:01", "H:03"]
+    co2e_impact:
+      display: "Stalls Clean-Tech R&D"
+      status: "hazard_increase"
+    effects:
+      - label: "The Superstar Drain into Rent-Seeking"
+        rule: "In a country with large existing land wealth and slow wage growth, fighting over existing dirt and tax loopholes pays higher private returns than building new technology. Divert your top-ability graduates (A > A*) out of Engineering & Enterprise (z_h) into Property Speculation, Conveyancing, and Lobbying (z_l)."
+      - label: "Growth & Wage Penalty"
+        rule: "Per Murphy, Shleifer, & Vishny (1991), doubling your rent-seeking share permanently cuts real per-capita GDP growth by -0.3% to -0.78%/yr and starves domestic firms of scale. To break this trap, play B:05 (Use-It-Or-Lose-It) + B:03 (Youth Capital Grant) to shift the talent cutoff back to builders (+0.5% to +1.25%/yr growth boost)."
+    flavor_text: "In 1780s France, the great chemist Lavoisier made his fortune as a tax collector because rent-seeking paid better than science. In 2020s New Zealand, we turned our brightest young minds into mortgage brokers and wondered why productivity died."
+    empirical_anchor: "Murphy, Shleifer, & Vishny (1991, QJE: Tables III–VI & Section III); Baumol (1990); Document 1A Part II Lens 2."
+
   # ----------------------------------------------------------------------------
   # MODULE 2: CLIMATE & RESILIENCE EXPANSION — RISING SEAS & SHIFTING WINDS (C:01 - C:06)
   # ----------------------------------------------------------------------------

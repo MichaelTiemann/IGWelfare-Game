@@ -7,13 +7,15 @@ An open-source cooperative/competitive tabletop strategy game and macroeconomic 
 
 ## 0. We Make Affordable Economics Understandable
 
-In 1989, [Cygnus Support](CREDITS.md) launched the commercial open-source revolution with a five-word double-entendre: ***"We make Free Software affordable"*** (`N:01`).
+In 1989, [Cygnus Support](CREDITS.md) launched the commercial open-source revolution with a five-word double-entendre: ***"We make Free Software affordable"*** ([`N:01`](rules/rules.md#n01--ronald-coases-transaction-cost-scalpel-nobel-prize-1991)).
 
-Today, Aotearoa New Zealand faces the exact inverse problem. Orthodox politicians and legacy cash-flow models tell the public that eliminating child poverty (`B:01`), keeping Universal Superannuation at 65 (`B:06`), and electrifying every home and school (`E:02`) are *"unaffordable."* In reality, they are the most **affordable** investments a nation can make—returning **3.84x** on the Crown's actuarial balance sheet by Year 5 (`B:07`) and unlocking **NZD 60.8B–91.5B** in idle precautionary capital (`E:02`).
+Today, Aotearoa New Zealand faces the exact inverse problem. Orthodox politicians and legacy cash-flow models tell the public that eliminating child poverty ([`B:01`](rules/rules.md#b01--tamariki-of-the-first-2000-days)), keeping Universal Superannuation at 65 ([`B:06`](rules/rules.md#b06--the-2050-5050-stabilizer-ss2-rocket-ship)), and electrifying every home and school ([`E:02`](rules/game_changer_tutorial.md#e02--energy-as-endowment-the-qea-2026-stationary-distribution-shift)) are *"unaffordable."* In reality, they are the most **affordable** investments a nation can make—returning **3.84x** on the Crown's actuarial balance sheet by Year 5 ([`B:07`](rules/rules.md#b07--acc-actuarial-time-bend)) and unlocking **NZD 60.8B–91.5B** in idle precautionary capital ([`E:02`](rules/game_changer_tutorial.md#e02--energy-as-endowment-the-qea-2026-stationary-distribution-shift)).
 
 Why doesn't the public know that? Because the proof is locked inside 5-dimensional overlapping-generations Bellman equations and Kolmogorov Forward stationary distributions in [**Document 1B** and **Document 2** of the `IGWelfare` repository](https://github.com/MichaelTiemann/IGWelfare).
 
-***Foils & Founders* makes affordable economics understandable.** Look at the two hardest equations in our GPU solver—and see how the deck compiles them into a **Two-Card Tabletop Synergy** you can play in thirty seconds: B:01 and E:02.
+***Foils & Founders* [makes affordable economics understandable](CREDITS.md#we-make-affordable-economics-understandable).** Look at the [two hardest equations in our GPU solver](CREDITS.md#equation-1-multi-stage-ces-human-capability-formation-under-non-homothetic-subsistence-corners)—and see how the deck compiles them into two **Two-Card Tabletop Synergies** you can play in thirty seconds:
+* **[Equation 1 (Bellman & CES Skill Technology)](CREDITS.md#equation-1-multi-stage-ces-human-capability-formation-under-non-homothetic-subsistence-corners) $\rightarrow$ Play [`B:01` (*Tamariki of the First 2000 Days*)](rules/rules.md#b01--tamariki-of-the-first-2000-days) + [`N:02` (*Heckman's Dynamic Complementarity*)](rules/rules.md#n02--james-heckmans-dynamic-complementarity-engine-nobel-prize-2000)**
+* **[Equation 2 (Stationary Distribution & Precautionary Release)](CREDITS.md#equation-2-the-guvenenmsvqea-stationary-distribution--precautionary-capital-release) $\rightarrow$ Play [`B:05` (*Use-It-Or-Lose-It Rebalancer*)](rules/rules.md#b05--use-it-or-lose-it-rebalancer-the-guvenen-split) + [`E:02` (*Energy as Endowment*)](rules/game_changer_tutorial.md#e02--energy-as-endowment-the-qea-2026-stationary-distribution-shift)**
 
 ---
 

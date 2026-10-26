@@ -106,6 +106,11 @@ card_overrides:
     type: "Mythic Tikanga Victory — Restoration of Mana Motuhake & Mauri Ora"
     flavor_text: "Ui mai koe ki ahau he aha te mea nui o te ao, Māku e kī atu he tāngata, he tāngata, he tāngata — Ask me what is the greatest thing in the world; I will reply: it is people, it is people, it is people."
 
+  "T:04":
+    name: "Te Tara-ā-Whare: Fighting Over the Catch Instead of Fishing"
+    type: "Cautionary Trap — Misallocating Rangatahi Pūmanawa (Talent)"
+    flavor_text: "When fighting over old land titles pays ten times more than weaving a new net or building a new waka, the sharpest minds stop fishing—and the whole village goes hungry."
+    
   "C:04":
     name: "Te Whakaruruhau o Tangaroa (Coastal, Grid, & Marae Armor)"
     type: "Legendary Infrastructure — Te Urunga Steering Stabilizer"

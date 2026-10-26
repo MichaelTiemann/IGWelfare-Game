@@ -14,13 +14,15 @@ IGWelfare-Game/
 ├── README.md                          # Game overview, Dual-Lens Lore, and A3 Quick-Start Guide
 ├── STORIES.md                         # Dual cultural groundings: Up on Foils & Te Waka Hourua
 ├── CONTRIBUTING.md                    # Pull Request guidelines for cards, mechanics, & data
-├── CREDITS.md                         # Theoretical, empirical, and open-source lineage
+├── CREDITS.md                         # Game Legend & "We Make Affordable Economics Understandable"
 ├── rules/
 │   ├── rules.md                       # Complete card rules, 3-Turn Demo, & P:DD modules
+│   ├── boards_and_tokens.md           # Tabletop Playmats, Seven Capitals, Obligations, & Tokens guide
 │   ├── game_changer_tutorial.md       # Full worked case study: Easy Mode (E:01) vs. Challenge Mode (E:02-E:03)
 │   └── T_05_tutorial.md               # Worked case study: Finland vs. NZ Disinformation Drag (T:05)
 ├── decks/
 │   ├── cards.yaml                     # Canonical master database of all 43 P:DD cards (+ 7 P:?? wildcards)
+│   ├── boards_and_tokens.yaml         # Canonical schema for A3 playmats, 7 capitals, & 5 double-sided tokens
 │   ├── nat_1.md                       # Confirming the Fumble: 20 sub-roll slices of the Bottom 5% (01:01-01:20)
 │   └── nat_20.md                      # Confirming the Crit: 20 sub-roll slices of the Top 5% (20:01-20:20)
 ├── metadata/
@@ -37,11 +39,13 @@ IGWelfare-Game/
 │       ├── theme.yaml                 # fallback_chain: ["foils_pakeha", "generic"]
 │       └── assets/                    # Optional per-card illustrations (B_01.png, B_02.png)
 ├── data/
-│   ├── d20_veil_of_ignorance.csv      # B:00 Rawlsian D20 (Nat 1 & Nat 20 sub-roll tables)
+│   ├── d20_veil_of_ignorance.csv      # B:00 Rawlsian D20 (All 20 faces + Nat 1 & Nat 20 sub-rolls)
 │   ├── electrification_5sector.csv    # E:01-E:03 5-Sector CapEx & Precautionary Release
 │   └── earn_plus_own_10tiers.csv      # B:05 Guvenen Use-It-Or-Lose-It 10-Tier Audit
 └── scripts/
-    └── render_cards.py                # Compiles cards.yaml + theme into 5x2 Stacked-Bond A3 HTML/PDF sheets
+    ├── render_common.py               # Shared YAML/theme loader, copyright constants, & base A3 CSS
+    ├── render_cards.py                # Compiles cards.yaml + theme into 5x2 Stacked-Bond A3 HTML/PDF sheets
+    └── render_boards.py               # Compiles boards_and_tokens.yaml + theme into 2 A3 Playmat & Token sheets
 ```
 
 ---

@@ -477,6 +477,7 @@ def render_deck_html(
       font-family: var(--font-mono);
       font-size: 7pt;
       color: #64748b;
+      display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 3mm;

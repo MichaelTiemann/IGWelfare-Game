@@ -19,6 +19,24 @@ sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_n
 01:18,1,P4.25-4.50,Minimum-Wage Shift Family,52,0.002,56.0,-49.0,1.5,17.1,24.2,24.2,24.2,0.065,100.0,100.0,Young Homeownership Track (41.5%)
 01:19,1,P4.50-4.75,High-Churn Tenancy,54,0.004,54.0,-46.0,1.4,17.2,23.8,23.8,23.8,0.068,100.0,100.0,Rooted High-Cohesion Community (C:06)
 01:20,1,P4.75-5.00,P5.0 Hardship Ceiling,56,0.006,52.0,-44.0,1.3,17.3,23.5,23.5,23.5,0.072,100.0,100.0,65%+ Thriving Launch Cohort
+02:00,2,P05.00-10.00,Tier 1 Vigintile 2 (Q1 Hardship Renter),50,0.000,56.0,-38.0,2.8,14.5,24.6,24.6,24.6,0.062,100.0,100.0,Tier 1 Anchor: Exits Hardship Corner + NZD 62k Seed
+03:00,3,P10.00-15.00,Vigintile 3 (GUiNZ 14.3% Hardship Edge),60,0.015,48.0,-26.0,2.4,15.0,23.2,23.2,23.2,0.078,520.0,520.0,First-2000-Days Wraparound + Free ECE (B:01)
+04:00,4,P15.00-20.00,Vigintile 4 (Dunedin 22% Risk Boundary),70,0.035,40.0,-16.0,2.0,15.4,21.8,21.8,21.8,0.095,271.4,271.4,Exits Dunedin 22% Stunting Corner at Gate 1 & 2
+05:00,5,P20.00-25.00,Vigintile 5 (Lower-Wage Service Renter),80,0.055,28.0,-8.5,1.7,15.8,20.5,20.5,20.5,0.112,203.6,203.6,Tuakana-Teina Protected + Rent Cooled -10.5%
+06:00,6,P25.00-30.00,Vigintile 6 (Young Regional Family),90,0.075,22.0,-3.5,1.5,16.1,19.4,19.4,19.4,0.130,173.3,173.3,4-Region Transport & Solar Relief (C:05 + E:02)
+07:00,7,P30.00-35.00,Tier 2 Vigintile 7 (Q2 Young Saver),100,0.100,18.0,1.2,1.4,16.5,18.4,18.4,18.4,0.148,148.0,148.0,Tier 2 Benchmark: NZD 62k Youth Grant + Home Deposit
+08:00,8,P35.00-40.00,Vigintile 8 (Skilled Trades & Technician),130,0.220,15.0,4.5,1.3,17.2,16.6,16.8,16.1,0.260,118.2,119.0,Homeownership Rises 28.0% -> 41.5% + -3.5 pp PAYE
+09:00,9,P40.00-45.00,Vigintile 9 (Mid-Career Nurse / Teacher),165,0.350,12.5,7.8,1.2,18.0,14.7,15.1,13.7,0.392,112.0,113.1,Saves NZD 3,325/yr PAYE + -60 bps Mortgage Cut
+10:00,10,P45.00-50.00,Tier 3 Vigintile 10 (Stats NZ Median),200,0.500,10.5,11.0,1.1,19.2,12.8,13.5,11.2,0.545,109.0,110.5,Tier 3 Benchmark (Median NW = NZD 529k; +12.8% CE)
+11:00,11,P50.00-55.00,Vigintile 11 (Upper-Middle Homeowner),220,0.610,9.0,13.5,1.0,20.4,11.8,12.6,10.0,0.656,107.5,109.2,Solar Endowment (E:02) Releases NZD 25k Buffer
+12:00,12,P55.00-60.00,Vigintile 12 (Dual-Income Professional),245,0.720,7.5,16.0,0.9,21.8,10.8,11.8,8.8,0.768,106.7,108.3,+6.8% to +9.6% Real Wage Lift + Retained Graduate Kids
+13:00,13,P60.00-65.00,Vigintile 13 (Established Provincial Owner),265,0.830,6.5,18.5,0.9,23.2,9.8,11.0,7.6,0.878,105.8,107.5,Universal NZ Super Secured at Age 65 (B:06)
+14:00,14,P65.00-70.00,Vigintile 14 (Metro Professional Owner),285,0.940,5.5,21.0,0.8,24.8,9.0,10.3,6.6,0.985,104.8,106.6,Zero Brain Drain: Children Build Domestic Careers
+15:00,15,P70.00-75.00,Tier 4 Vigintile 15 (Stats NZ Mean),300,1.000,4.5,23.5,0.8,26.5,8.4,9.8,5.9,1.040,104.0,106.0,Tier 4 Benchmark (Mean NW = NZD 1.041M; +8.4% CE)
+16:00,16,P75.00-80.00,Vigintile 16 (Senior Engineer / Clinician),330,1.300,3.8,27.0,0.7,29.5,7.1,8.9,4.3,1.335,102.7,104.8,Builder Tax Cut (18.5% PAYE) Outweighs Land Cooling
+17:00,17,P80.00-85.00,Vigintile 17 (Commercial Farm / SME Equity),365,1.650,3.0,31.0,0.7,33.5,5.8,8.0,2.7,1.668,101.1,103.2,Firm Working Capital Unchained (B:05 + E:02)
+18:00,18,P85.00-90.00,Tier 5 Vigintile 18 (Upper Professional),400,2.000,2.4,35.0,0.6,38.0,4.6,7.2,1.1,1.980,99.0,101.5,Tier 5 Benchmark: Both Builders (+7.2%) & Landlords (+1.1%) Win
+19:00,19,P90.00-95.00,Vigintile 19 (Pre-Top-5% Enterprise Owner),450,2.500,1.9,38.5,0.6,43.0,3.3,6.5,-0.5,2.450,98.0,100.4,19th Face of D20: Strong Net Gain (+3.3% Avg / +6.5% zh)
 20:01,20,P95.00-95.25,Tier 6 Top 5% Anchor,500,3.000,1.5,42.0,0.5,48.5,2.1,5.8,-2.1,2.910,97.0,99.2,Active Founders & Partners Win Outright
 20:02,20,P95.25-95.50,Upper Professional Household,510,3.200,1.5,43.0,0.5,49.5,1.9,5.7,-2.4,3.100,96.8,99.1,-3.5 pp PAYE + -60 bps Mortgage Relief
 20:03,20,P95.50-95.75,Senior Surgeon / Executive,520,3.400,1.4,44.0,0.5,50.5,1.7,5.5,-2.6,3.290,96.7,99.0,Retained Children & Grandchildren (C:06)
@@ -30,12 +48,12 @@ sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_n
 20:09,20,P97.00-97.25,Growth Enterprise Principal,580,4.600,1.1,50.0,0.5,56.5,0.7,4.8,-4.1,4.410,95.9,98.6,+38% Deeper Domestic Talent Pool
 20:10,20,P97.25-97.50,Top 2.5% Median,590,4.800,1.1,51.0,0.5,57.5,0.5,4.7,-4.3,4.590,95.7,98.6,Top Half of Top 5% Begins
 20:11,20,P97.50-97.75,Near Top 2% Threshold,595,4.900,1.0,52.0,0.5,58.0,0.4,4.6,-4.4,4.690,95.7,98.5,Strong Active Entrepreneur Gain (+4.6%)
-20:12,20,P97.75-98.00,Tier 7 Top 2% Anchor,600,5.000,1.0,53.0,0.5,59.0,0.3,4.6,-4.5,4.780,95.6,98.5,Tier 7 Benchmark (NZD 600k + 5M)
+20:12,20,P97.75-98.00,Top 2% Sub-Slice,600,5.000,1.0,53.0,0.5,59.0,0.3,4.6,-4.5,4.780,95.6,98.5,Top 2% Sub-Slice (NZD 600k + 5M)
 20:13,20,P98.00-98.25,Blended Portfolio Breakeven,630,6.000,1.0,56.0,0.5,62.0,0.0,4.3,-5.0,5.710,95.2,98.5,13th of 20 Slices Still >= 0.0% Average!
 20:14,20,P98.25-98.50,Top 1.5% Threshold,665,7.200,0.9,60.0,0.5,66.0,-0.4,4.0,-5.6,6.830,94.9,98.4,Active Founders Gain +4.0% CE
 20:15,20,P98.50-98.75,Angel / Venture Syndicate,705,8.500,0.9,65.0,0.5,71.0,-0.9,3.7,-6.2,8.040,94.6,98.4,Rotates Land Bank into Venture Equity
-20:16,20,P98.75-99.00,Tier 8 Top 1% Anchor,750,10.000,0.8,72.0,0.5,78.0,-1.4,3.4,-6.8,9.420,94.2,98.4,Rashbrooke Top 1% (NZD 562k/yr net cash)
-20:17,20,P99.00-99.50,Tier 9 Top 0.3% Anchor,1000,20.000,0.8,110.0,0.5,118.0,-2.8,2.2,-8.4,18.600,93.0,97.2,Active Growth Investors Gain +2.2% CE
-20:18,20,P99.50-99.90,Tier 10 IRD High-Wealth Med,2000,50.000,0.7,240.0,0.5,255.0,-4.2,1.1,-9.8,45.800,91.6,96.0,IRD High-Wealth Project Median (+1.1% zh)
-20:19,20,P99.90-99.97,Tier 11 Family Enterprise,5000,100.000,0.6,580.0,0.5,610.0,-5.5,0.2,-10.9,90.500,90.5,95.2,19th Slice Active Founders Still Win (+0.2%)!
-20:20,20,P99.97-99.99+,Tier 12 NBR Rich List Ultra,10000,250.000,0.5,1250.0,0.5,1310.0,-6.8,-0.6,-11.8,223.500,89.4,94.5,Keeps NZD 223.5M-236.3M + NZD 7.05M/yr Cash
+20:16,20,P98.75-99.00,Tier 7 Top 1% Anchor,750,10.000,0.8,72.0,0.5,78.0,-1.4,3.4,-6.8,9.420,94.2,98.4,Tier 7 Benchmark: Rashbrooke Top 1%
+20:17,20,P99.00-99.50,Top 0.3% Sub-Slice,1000,20.000,0.8,110.0,0.5,118.0,-2.8,2.2,-8.4,18.600,93.0,97.2,Active Growth Investors Gain +2.2% CE
+20:18,20,P99.50-99.90,Tier 8 IRD High-Wealth Med,2000,50.000,0.7,240.0,0.5,255.0,-4.2,1.1,-9.8,45.800,91.6,96.0,Tier 8 Benchmark: IRD Median (+1.1% zh)
+20:19,20,P99.90-99.97,Tier 9 Family Enterprise,5000,100.000,0.6,580.0,0.5,610.0,-5.5,0.2,-10.9,90.500,90.5,95.2,Tier 9 Benchmark: 19th Slice Wins (+0.2%)!
+20:20,20,P99.97-99.99+,Tier 10 NBR Rich List Ultra,10000,250.000,0.5,1250.0,0.5,1310.0,-6.8,-0.6,-11.8,223.500,89.4,94.5,Tier 10 Benchmark: Keeps NZD 223.5M-236.3M

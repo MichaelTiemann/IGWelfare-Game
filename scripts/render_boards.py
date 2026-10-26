@@ -263,7 +263,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
     }}
     .banner-title {{
       font-family: var(--font-heading);
-      font-size: 18pt;
+      font-size: 22pt;
       font-weight: 900;
       color: var(--accent);
       letter-spacing: -0.02em;
@@ -646,7 +646,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
     <div class="sheet-body">
       <header class="board-banner">
         <div>
-          <div class="banner-title">FOILS &amp; FOUNDERS: THE AOTEAROA DECK — NATIONAL REGION</div>
+          <div class="banner-title">FOILS &amp; FOUNDERS: THE AOTEAROA DECK — NATIONAL</div>
           <div class="banner-sub">{html.escape(sub_banner)}</div>
         </div>
         <div class="banner-right">

@@ -26,7 +26,7 @@ sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_n
 06:00,6,P25.00-30.00,Vigintile 6 (Young Regional Family),90,0.075,22.0,-3.5,1.5,16.1,19.4,19.4,19.4,0.130,173.3,173.3,4-Region Transport & Solar Relief (C:05 + E:02)
 07:00,7,P30.00-35.00,Tier 2 Vigintile 7 (Q2 Young Saver),100,0.100,18.0,1.2,1.4,16.5,18.4,18.4,18.4,0.148,148.0,148.0,Tier 2 Benchmark: NZD 62k Youth Grant + Home Deposit
 08:00,8,P35.00-40.00,Vigintile 8 (Skilled Trades & Technician),130,0.220,15.0,4.5,1.3,17.2,16.6,16.8,16.1,0.260,118.2,119.0,Homeownership Rises 28.0% -> 41.5% + -3.5 pp PAYE
-09:00,9,P40.00-45.00,Vigintile 9 (Mid-Career Nurse / Teacher),165,0.350,12.5,7.8,1.2,18.0,14.7,15.1,13.7,0.392,112.0,113.1,Saves NZD 3,325/yr PAYE + -60 bps Mortgage Cut
+09:00,9,P40.00-45.00,Vigintile 9 (Mid-Career Nurse / Teacher),165,0.350,12.5,7.8,1.2,18.0,14.7,15.1,13.7,0.392,112.0,113.1,Saves NZD 3325/yr PAYE + -60 bps Mortgage Cut
 10:00,10,P45.00-50.00,Tier 3 Vigintile 10 (Stats NZ Median),200,0.500,10.5,11.0,1.1,19.2,12.8,13.5,11.2,0.545,109.0,110.5,Tier 3 Benchmark (Median NW = NZD 529k; +12.8% CE)
 11:00,11,P50.00-55.00,Vigintile 11 (Upper-Middle Homeowner),220,0.610,9.0,13.5,1.0,20.4,11.8,12.6,10.0,0.656,107.5,109.2,Solar Endowment (E:02) Releases NZD 25k Buffer
 12:00,12,P55.00-60.00,Vigintile 12 (Dual-Income Professional),245,0.720,7.5,16.0,0.9,21.8,10.8,11.8,8.8,0.768,106.7,108.3,+6.8% to +9.6% Real Wage Lift + Retained Graduate Kids

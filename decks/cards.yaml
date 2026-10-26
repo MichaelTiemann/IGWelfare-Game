@@ -19,7 +19,7 @@ metadata:
     attribution_haircut: 0.30
   decks:
     B: "Module 1: Base Game — Getting Aotearoa Up on Foils (B:00 to B:09)"
-    T: "Module 1B: Cautionary Trap Cards — Single-Lens Pitfalls (T:00 to T:03)"
+    T: "Module 1B: Cautionary Trap Cards — Single-Lens Pitfalls (T:00 to T:04)"
     C: "Module 2: Climate & Resilience — Rising Seas & Shifting Winds (C:01 to C:06)"
     K: "Module 3: Wayfinders & Kaupapa — Companion Persona Deck (K:01 to K:07)"
     N: "Module 4: Reaching Abundance & Crossing Infinite Horizons — Nobel Archive (N:01 to N:06)"
@@ -207,7 +207,7 @@ cards:
     empirical_anchor: "Document 1A Part IV Section 1 & 6A (7-Factor Attribution); Document 1C Section 3 (A River of Gold)."
 
   # ----------------------------------------------------------------------------
-  # MODULE 1B: CAUTIONARY TRAP CARDS (T:00 - T:03)
+  # MODULE 1B: CAUTIONARY TRAP CARDS (T:00 - T:04)
   # ----------------------------------------------------------------------------
   - id: "T:00"
     name: "The Molesworth Street Cycle-Lane Paralysis (Limited-Edition Promo Trap)"

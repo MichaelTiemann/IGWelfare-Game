@@ -36,7 +36,7 @@ Every card in [`decks/cards.yaml`](decks/cards.yaml) uses a permanent **`P:DD`**
 | Prefix | Deck Name | Cards | Onboarding Level & Focus |
 | :---: | :--- | :---: | :--- |
 | **`B`** | **Base Game: Up on Foils** | `B:00` – `B:09` | **Level 1 (15-Min Demo):** The Rawlsian D20, the 3 Lifecycle Gates, the Guvenen Split, ACC Time-Bend, & the 2050 50/50 Stabilizer. |
-| **`T`** | **Cautionary Traps** | `T:00` – `T:03` | **Level 1B (Pitch-Pole Warnings):** Molesworth St Cycle-Lane Promo, Scottish Devolution Ceiling, 1989 Tokyo Bubble, & Seoul Hagwon Squeeze. |
+| **`T`** | **Cautionary Traps** | `T:00` – `T:05` | **Level 1B (Pitch-Pole Warnings):** Molesworth St Cycle-Lane Promo, Scottish Devolution Ceiling, 1989 Tokyo Bubble, Seoul Hagwon Squeeze, Lavoisier Talent Drain, & Disinformation Drag. |
 | **`C`** | **Climate & Resilience** | `C:01` – `C:06` | **Level 2 (Rising Seas):** Bilal–Känzig `USD 1,200/tCO2e` Shock, Cognitive Flexibility, Project K / Kura-ā-Iwi, Coastal Armor, & 4-Region Compass. |
 | **`K`** | **Wayfinders & Kaupapa** | `K:01` – `K:07` | **Level 3 (Co-Op Personas):** Philanthropist/Iwi (`K:01`), Venture (`K:02`), Treasury/RBNZ (`K:03`), Economist (`K:04`), Artist (`K:05`), & Kaumātua (`K:06`). |
 | **`N`** | **Nobel Archive** | `N:01` – `N:06` | **Level 4A (Theoretical Proof):** Coase (1991), Heckman (2000), Williamson (2009), Ostrom (2009), Romer (2018), & The Aotearoa Synthesis. |
@@ -45,10 +45,46 @@ Every card in [`decks/cards.yaml`](decks/cards.yaml) uses a permanent **`P:DD`**
 
 ---
 
-## 4. Repository Layout, Contributing, & Licensing
+## 4. Quick-Start: Rendering & Printing the Deck (5×2 Stacked-Bond A3 Sheets)
+
+The repository includes a Python compiler ([`scripts/render_cards.py`](scripts/render_cards.py)) that merges [`decks/cards.yaml`](decks/cards.yaml) with any theme dictionary in `themes/<theme>/theme.yaml` and outputs print-ready **5×2 Stacked-Bond A3 Landscape** sheets (10 cards per sheet across 5 A3 sheets = 50 card slots, comprising the 43 canonical cards and 7 `P:??` open-source write-in wildcards).
+
+### Step 1: Install Dependencies
+```bash
+python3 -m pip install pyyaml markdown
+```
+
+### Step 2: Render HTML Previews by Theme
+Run `scripts/render_cards.py` from the root of the repository:
+
+```bash
+: "1. Generic Typographic Theme (CO2e badge in upper-right corner)"
+python3 scripts/render_cards.py --theme generic --co2-pos top-right --out build/generic.html
+
+: "2. Te Waka Hourua Theme — Māori & Pasifika Pūrākau (CO2e badge in bottom-right corner)"
+python3 scripts/render_cards.py --theme waka_hourua --co2-pos bottom-right --out build/waka_preview.html
+
+: "3. Up on Foils Theme — America's Cup Systems Engineering"
+python3 scripts/render_cards.py --theme foils_pakeha --co2-pos top-right --out build/foils_preview.html
+```
+*(Optional flags: `--no-wildcards` omits the 7 `P:??` write-in cards; `--export-generic-md` exports individual `.md` card files into `themes/generic/cards/`.)*
+
+### Step 3: Print or Export to A3 Landscape PDF
+* **From Chrome / Edge (`Ctrl+P` / `Cmd+P`):** Open `build/generic.html` or `build/waka_preview.html`, press `Ctrl+P`, and set **Destination:** `Save as PDF`, **Paper size:** `A3`, **Layout:** `Landscape`, **Margins:** `Default` (or `Minimum`), **Scale:** `Default (100%)`, and check **Background graphics**.
+* **One-Command Headless Chrome PDF Build (Windows PowerShell):**
+  ```powershell
+  & "C:\Program Files\Google\Chrome\Application\chrome.exe" `
+    --headless --disable-gpu --no-pdf-header-footer `
+    --print-to-pdf="$PWD\build\deck_A3_sheets.pdf" `
+    "file:///$PWD/build/generic.html"
+  ```
+
+---
+
+## 5. Repository Layout, Contributing, & Licensing
 
 * **Narrative & Lore ([`STORIES.md`](STORIES.md)):** The full dual-lens grounding (*Up on Foils* and *Te Waka o Whānau*) plus the side-by-side translation table.
-* **Master Decks & Schemas (`decks/`, `metadata/`, `themes/`):** Canonical card definitions (`decks/cards.yaml`), YAML validation schemas and empirical source registries (`metadata/`), and cascading visual themes (`themes/generic/`, `themes/foils_pakeha/`, `themes/waka_hourua/`).
+* **Master Decks & Schemas (`decks/`, `metadata/`, `themes/`):** Canonical card definitions (`decks/cards.yaml`), YAML card template and empirical source registries (`metadata/`), and cascading visual themes (`themes/generic/`, `themes/foils_pakeha/`, `themes/waka_hourua/`).
 * **Audit & Scorecard Data (`data/`):** Reproducible CSV scorecards for the Rawlsian D20 (`d20_veil_of_ignorance.csv`), the 10-Tier Earn + Own Incidence Audit (`earn_plus_own_10tiers.csv`), and the 5-Sector National Electrification Scorecard (`electrification_5sector.csv`).
 * **How to Submit a Pull Request ([`CONTRIBUTING.md`](CONTRIBUTING.md)):** Supports **Track 1** (First-Order Cards), **Track 2** (Second-Order VFI Toolkit Stationary Distribution Shifts), **Track 3** (Demographic & Baseline Customizations: 10 vs. 12 tiers, median vs. mean, bottom- vs. top-weighted), and **Track 4** (Artist Themes & Card Illustrations).
 * **License:** Game rules, stories, card text, artwork themes, and data tables are licensed under [Creative Commons Attribution-ShareAlike 4.0 International (`CC-BY-SA-4.0`)](https://creativecommons.org/licenses/by-sa/4.0/). Simulation and rendering scripts (`*.m`, `*.py`) are dual-licensed under `GPL-3.0-or-later` / `MIT`.

@@ -270,6 +270,7 @@ def build_wildcard_html(
         <div class="synergy-bar">🔗 <strong>Synergies:</strong> ____, ____, ____</div>
         <div class="footer-right">{bottom_right}</div>
       </footer>
+      <div class="card-copyright">&copy; 2026 Michael Tiemann &bull; CC BY-SA 4.0</div>
     </article>
     """
 
@@ -358,6 +359,7 @@ def render_deck_html(
                 <div class="synergy-bar">🔗 <strong>Synergies:</strong> {html.escape(synergies)}</div>
                 <div class="footer-right">{bottom_right_slot}</div>
               </footer>
+              <div class="card-copyright">&copy; 2026 Michael Tiemann &bull; CC BY-SA 4.0</div>
             </article>
             """)
 
@@ -411,7 +413,8 @@ def render_deck_html(
             </tbody>
           </table>
           <div class="sheet-footer">
-            Foils &amp; Founders: The Aotearoa Deck ({html.escape(active_theme_name)}) — A3 Landscape Sheet {s + 1} of {total_sheets} (5&times;2 Stacked Bond — Cut along dashed lines)
+            <span>&copy; 2026 Michael Tiemann. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).</span>
+            <span>Foils &amp; Founders: The Aotearoa Deck ({html.escape(active_theme_name)}) — A3 Landscape Sheet {s + 1} of {total_sheets} (5&times;2 Stacked Bond — Cut along dashed lines)</span>
           </div>
         </section>
         """)
@@ -474,8 +477,10 @@ def render_deck_html(
       font-family: var(--font-mono);
       font-size: 7pt;
       color: #64748b;
-      text-align: right;
-      padding-right: 3mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3mm;
     }}
     .game-card {{
       width: 76.8mm;
@@ -644,6 +649,16 @@ def render_deck_html(
       margin-top: 0.9mm;
       font-size: 5.5pt;
       color: #475569;
+      flex-shrink: 0;
+    }}
+    .card-copyright {{
+      font-family: var(--font-mono);
+      font-size: 4.5pt;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 0.4mm;
+      line-height: 1;
+      letter-spacing: 0.02em;
       flex-shrink: 0;
     }}
     @media print {{

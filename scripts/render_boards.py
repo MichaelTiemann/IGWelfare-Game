@@ -2,7 +2,7 @@
 """
 Foils & Founders: The Aotearoa Deck — A3 Landscape Playmat & Token Renderer
 ============================================================================
-Compiles `decks/board_and_tokens.yaml` + a visual theme (`generic`, `waka_hourua`,
+Compiles `decks/boards_and_tokens.yaml` + a visual theme (`generic`, `waka_hourua`,
 or `foils_pakeha`) into a 2-Sheet A3 Landscape (420mm x 297mm) HTML/PDF document:
   - Sheet 1: The National Hydrofoil & Te Waka Hourua Board (5 Gates, 4 Exits,
              4 Obligations, and 7 Forms of Capital Dashboard)
@@ -708,7 +708,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
         </div>
         <div class="banner-right">
           <div><strong>Tabletop Setup:</strong> Print on A3 Cardstock &bull; Cut Player Mats &amp; Fold-Over Tokens Along Dashed Lines</div>
-          <div><strong>Full Rules &amp; Sub-Rolls:</strong> rules/board_and_tokens.md &bull; decks/nat_1.md &bull; decks/nat_20.md</div>
+          <div><strong>Full Rules &amp; Sub-Rolls:</strong> rules/boards_and_tokens.md &bull; decks/nat_1.md &bull; decks/nat_20.md</div>
         </div>
       </header>
 
@@ -742,8 +742,8 @@ def main() -> None:
     parser.add_argument(
         "--board-yaml",
         type=Path,
-        default=Path("decks/board_and_tokens.yaml"),
-        help="Path to board_and_tokens.yaml (default: decks/board_and_tokens.yaml)",
+        default=Path("decks/boards_and_tokens.yaml"),
+        help="Path to boards_and_tokens.yaml (default: decks/boards_and_tokens.yaml)",
     )
     parser.add_argument(
         "--themes-dir",

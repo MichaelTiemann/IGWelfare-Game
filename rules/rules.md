@@ -443,7 +443,7 @@ Shuffle this 5-card Hazard Deck into play for the full 60-minute strategy experi
 * **Tabletop Playmats, Seven Capitals, & Token Rules:** See [`rules/board_and_tokens.md`](board_and_tokens.md) and [`decks/board_and_tokens.yaml`](../decks/board_and_tokens.yaml).
 * **Game Legend, Credits, & "We Make Affordable Economics Understandable" (Equations $\rightarrow$ Cards):** See [`CREDITS.md`](../CREDITS.md).
 
-## Epilogue: Why I Know This Game Works in the Real World**
+## Epilogue: Why I Know This Game Works in the Real World
 
 Repetition is a form of emphasis.  You can read this story in [`CREDITS.md`](../CREDITS.md), but to make sure it stays with the rules, we repeat it here.
 

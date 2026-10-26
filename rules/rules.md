@@ -1,244 +1,170 @@
-# **Beyond the Magic Money Tree — Foils & Founders: The Aotearoa Deck**
+# Beyond the Magic Money Tree — *Foils & Founders: The Aotearoa Deck*
 
-**Core Mechanics & Expansion Decks (`B:01–09`, `T:01–03`, `C:01–06`, `N:01–06`, `H:01–05`)**  
-**Companion Persona Deck:** [Kaupapa Identities (`K:01–07`)](https://docs.google.com/document/d/1gn4YWDP8BAP5BQqZa7PRndnk9X-ZWcs9gCo18cNGjXs/edit?tab=t.0) \| **Monograph Repository:** [github.com/MichaelTiemann/IGWelfare](https://github.com/MichaelTiemann/IGWelfare)
+**Core Mechanics & Expansion Decks (`B:00–09`, `T:00–05`, `C:01–06`, `K:01–07`, `N:01–06`, `H:01–05`, `E:01–03` — 43 Canonical Cards + 7 Write-In Wildcards)**  
+**Narrative Lore:** [`STORIES.md`](../STORIES.md) | **Game-Changer Tutorial (`E:01–03`):** [`rules/game_changer_tutorial.md`](game_changer_tutorial.md) | **Monograph Repository:** [`github.com/MichaelTiemann/IGWelfare`](https://github.com/MichaelTiemann/IGWelfare)
 
-To teach young people—and challenge conventional thinkers who believe "there is no magic money tree"—we cast the [IGWelfare](https://github.com/MichaelTiemann/IGWelfare) framework into a strategy card game called **Foils & Founders: The Aotearoa Deck**.
+To teach young people—and challenge conventional thinkers who believe "there is no magic money tree"—we cast the [`IGWelfare`](https://github.com/MichaelTiemann/IGWelfare) framework into a strategy card game called ***Foils & Founders: The Aotearoa Deck***.
 
-In classic strategy card games (using generic, IP-safe mechanics like **Resource Pool**, **Exhaust/Ready**, **Continuous**, and **Instant**), bad players lose because they lock all their resources into dead weight and take massive "hull drag" damage every turn. Master players win by building an **Engine**—combining small, early plays that compound into massive mid-game momentum.
+In classic strategy card games (using generic, IP-safe mechanics like *Resource Pool*, *Exhaust/Ready*, *Continuous*, and *Instant*), bad players lose because they lock all their resources into dead weight and take massive "hull drag" damage every turn. Master players win by building an **Engine**—combining small, early plays that compound into massive mid-game momentum.
 
-Please read on to learn the Two Stories of the Board (for Pakeha and Maori) and The Game’s Core Mechanic, which answers the former Finance Minister, followed by playable cards drawn directly from the monograph.
-
-## **The Two Stories of the Board: The Coupled Hydrofoil & Te Waka Hourua (Being, Becoming, & Crossing Over)**
-
-In Aotearoa New Zealand, a truly national strategy game does not force every player to think inside a single cultural frame. Like *Te Waka Hourua*—the great double-hulled voyaging vessel where two hulls arelashed together by *kīato* (cross-beams) to cross the deepest ocean on earth—every mechanic in this game can be understood and played through **two equally rigorous, one-to-one isomorphic stories**:
-
-1. **The Pākehā / Systems Engineering Story:** *Bending the Daggerboard & Getting Aotearoa "Up on Foils"* (Emirates Team New Zealand's 2013 hydrofoil breakthrough).  
-2. **The Te Ao Māori & Moana Pasifika *Pūrākau*:** *Te Aka Matua, Ngā Kete o te Wānanga, & The Voyaging Waka of Whānau Becoming* (the sacred journey from *Te Kore* and *Te Pō* into *Te Ao Mārama*, ascending for the Three Baskets of Knowledge and passing *mātauranga* from *kaumātua* to *mokopuna*).
+> **Read the Two Stories of the Board First ([`STORIES.md`](../STORIES.md)):** Every mechanic in this game can be played through two one-to-one isomorphic groundings: **Story Lens A (*Up on Foils* — Pākehā / America's Cup Systems Engineering)** and **Story Lens B (*Te Waka o Whānau* — Te Ao Māori & Moana Pasifika *Pūrākau*: Being, Becoming, & Crossing Over)**. See [`STORIES.md`](../STORIES.md) for the full narratives and the [Side-by-Side Translation Key](../STORIES.md#side-by-side-translation-key-one-game-two-groundings).
 
 ---
 
-### **Side-by-Side Translation Key: One Game, Two Groundings**
+## Part 0: Core Rules, The 3-Turn Demo, & Modular Onboarding (`P:DD` System)
 
-| Game Phase / Card | Pākehā / Hydrofoil Engineering Grounding | Māori & Pasifika *Pūrākau* Grounding (*Te Waka Hourua*) |
-| :---- | :---- | :---- |
-| **`SS0` Status Quo** | **Displacement Mode:** Plowing through heavy water with a straight keel; 75% of energy lost to hull drag. | ***Te Pō*** **& Broken *Whakapapa*:** *Whānau* trapped in unbuffered survival corners; *rangatahi* exiled across the Tasman. |
-| **`B:01` (Ages 0–5)** | **Front Lifting Foil (Stage 1):** Heckman dynamic complementarity; lifting the bow out of the 22% hardship corner. | ***He Kākano i Rangiātea*** **(Being):** Wrapping the sacred seed in *Te Korowai Mokopuna* & *Whānau Ora* to enter *Te Ao Mārama*. |
-| **`B:02` & `C:03` (12–14)** | **Front Foil Strut (Stage 2):** Two-way cross-age mentoring insulating cohorts against unemployment shocks. | ***Tuakana–Teina*** **& *Te Aka Matua* (Becoming):** Ascending the sacred vine together via reciprocal *Ako* and *Manaakitanga*. |
-| **`B:03` & `B:05` (20–64)** | **Wing-Sail Power Plant:** Rotating NZD 1.6T from dormant land (`z_l`) into productive firms (`z_h`) & youth capital. | ***Tūrangawaewae*** **& *Kaitiakitanga*:** Restoring a standing place at home so *rangatahi* build the new net (*Ka hao te rangatahi*). |
-| **`B:06`, `B:07`, & `K:06` (65+)** | **Rear T-Foil Stabilizer & ACC Ledger:** Booking 25-year liability releases and locking surpluses 50/50 into debt & grid. | ***Ngā Kete o te Wānanga*** **& *Pono* (Crossing Over):** *Kaumātua* navigators passing down the Three Baskets to guide *mokopuna*. |
+### The Core Game Rule: Why There Is No Magic Money Tree (It's a River)
 
-### 
-
-### **Story Lens A: "Up on Foils" — How Emirates Team New Zealand Bent the Rulebook**
-
-In 2012, naval architects at Emirates Team New Zealand looked at the America's Cup AC72 Box Rule and noticed a hidden blind spot in the orthodoxy. The rulebook strictly regulated the maximum width of the catamaran and forbade extra movable control flaps—so every conventional syndicate assumed the hulls had to plow through the water in **Displacement Mode**, fighting massive hydrodynamic hull drag.
-
-New Zealand's engineers noticed what the rulebook *didn't* say: the rule capped how wide the daggerboard could be, **but said nothing about whether the daggerboard had to be straight.**
-
-By curving the daggerboard into an **L-shaped lifting hydrofoil (`B:04`)**, the boat no longer had to push millions of liters of seawater out of its way. Once the vessel reached takeoff speed, the curved front foil lifted the entire 6-ton catamaran out of the water and into the air—slashing water drag by **75%** and multiplying boat speed to over 40 knots.
-
-**Why a Hydrofoil Requires All Three Coupled Surfaces (The Game Strategy):**
-
-* **Displacement Mode (`SS0` Status Quo):** Plowing through the water with a straight keel is New Zealand's fiscal status quo—burning **NZD 17.7B to 28.5B/yr** pushing against preventable Oranga Tamariki care, hospital nights, and prisons while sovereign debt climbs toward 200% of GDP.  
-* **The Front Lifting Foil (`Lens 1`: `B:01` First 2000 Days \+ `B:02` *Tuakana–Teina* Mentoring):** Lifts the bow out of the water by compressing cohort stunting from **22.0% down to 1.5%**.  
-* **The Wing-Sail Power Plant (`Lens 2 & 3`: `B:05` Use-It-Or-Lose-It Tax Shift \+ `B:03` Youth Capital Grant \+ `E:02` Electrification):** Converts the **NZD 1.6T property transfer** and **NZD 61B–91B of trapped precautionary savings** into forward thrust for high-wage operating enterprises.  
-* **The Rear T-Foil Rudder Elevator (`Lens 3`: `B:06` The 2050 50/50 Stabilizer \+ `B:07` ACC Actuarial Valuation):** If you lift the front of a catamaran on an L-foil without a rear T-foil stabilizer on the rudder, the bow shoots up, stalls, and **pitch-poles** (nose-dives into the sea—just like devolved Scotland in `T:01` or 1989 Bubble Tokyo in `T:02`). Locking 50% of surpluses into Debt Sinking and 50% into Resilient Infrastructure (`C:04`) is the rear T-foil that locks the vessel in level flight.
-
----
-
-### **Story Lens B: *Te Waka o Whānau* — Being, Becoming, & Crossing Over (*Māori & Pasifika Pūrākau*)**
-
-> ***Kawa & Kaitiakitanga Note (For Tangata Whenua Review):*** *This narrative framing is offered with humility as a living invitation to Iwi, Hapū, Whānau Ora leaders, and Kaumātua to vet, adapt, and localize according to their own tribal kawa, tikanga, and pūrākau, respecting tangata whenua authority (tino rangatiratanga) over taonga tuku iho.*
-
-Long before modern macroeconomists wrote down overlapping-generations equations, Māori and Moana Pasifika wayfinders understood that human life is not an isolated individual balance sheet—it is an unbroken genealogical rope (*Te Taura Tangata / Whakapapa*) stretching from ancestors (*tūpuna*) to grandchildren (*mokopuna*). In this story, the game is a three-stage intergenerational crossing from **Being (*Te Kore & Te Pō*)**, through **Becoming (*Te Ao Mārama & Teekenga o Tāne*)**, to **Passing Down Wisdom Across the Horizon (*Te Tai Ao & Hawaiki Anamata*)**:
-
-1. **Gate 1 — *He Kākano i Ruia mai i Rangiātea* (Being & The Sacred Seed in the First 2000 Days, `B:01`):**  
-     
-   * In Te Ao Māori, no child is born as a "fiscal liability" or a blank slate; every *tamaiti* is a seed sown from Rangiātea, carrying inherent *mana Atua*, *tapu*, and *mauri*.  
-   * When a *whānau* is crushed into the "Hardship Corner" by colonial land loss, damp overcrowded housing, and poverty, it is as if the seedling is trapped in *Te Pō* (the heavy darkness of unbuffered struggle). Wrapping the *whānau* in ***Te Korowai Mokopuna*** **(the feathered cloak of care)** and ***Whānau Ora*** (`B:01`, `K:01`) does not "fix a broken child"—it honors the child's innate *mana* so the shoot (*te tupu*) can break through into *Te Ao Mārama* (the world of light and readiness).
-
-   
-
-2. **Gate 2 & Gate 3 — *Te Panda o Tāne & Ngā Kete o te Wānanga* (Becoming Through Reciprocal *Ako*, `B:02`, `C:03`, `B:03`):**  
-     
-   * In the classical *pūrākau*, Tāne-nui-a-Rangi did not ascend the twelve heavens to retrieve ***Ngā Kete o te Wānanga*** **(the Three Baskets of Knowledge: *Te Kete Tuauri*, *Te Kete Tuatea*, and *Te Kete Aronui*)** for his own private enrichment—he climbed *Te Aka Matua* (the sacred parent vine anchored solidly in the earth) against fierce winds (*Teinihoro*) to bring wisdom back down for all his siblings and descendants.  
-   * At **Gate 2 (Ages 12–14, `B:02` & `C:03`)**, when a *tuakana* (older sibling/peer) guides and protects a *teina* (younger sibling) through ***Ako***, ***Manaakitanga***, and ***Whanaungatanga***, both ascend the vine together: the *teina* is shielded against the storms of family job loss, and the *tuakana* steps into adult *rangatiratanga* (self-determination).  
-   * At **Gate 3 (Ages 20–35, `B:03`)**, instead of being forced across Te Moana-nui-a-Kiwa into economic exile in Australia (`H:03`) because they have no standing place (*tūrangawaewae*) at home, the **Youth Capital Endowment** restores a modern *tūrangawaewae* and *pūtea*—allowing our *rangatahi* to stand as *kaikōrero*, creators, and enterprise builders in their own land.
-
-   
-
-3. **Lens 3 — *Ka Pū te Ruha, Ka Hao te Rangatahi* (Crossing Over & The *Kaumātua* Bequest, `K:06`, `B:05`, `B:06`):**  
-     
-   * The ancient *whakataukī* teaches: *"Ka pū te ruha, ka hao te rangatahi"*—as the old fishing net is laid aside with honor, the new net goes fishing.  
-   * Under orthodox austerity (`H:04`), elders are treated as an "actuarial burden" while passive speculators hoard the land (*whenua*) as a commodity (`z_l`). In the *Kaupapa* way of playing, *whenua* and accumulated wealth (`B:05`) are stewarded through ***Kaitiakitanga*** to nourish the rising generation, while **Universal Superannuation at Age 65 (`B:06`)** honors our *kaumātua* and *kuia* (`K:06`). Freed from survival anxiety, elders pass down the **Three Baskets of Lived Wisdom** (*Lifetime Experience Tokens*) as the celestial navigators (*tohunga whakatere waka*) who read the stars so the young crew can sail across the changing seas (`C:01`–`C:06`).
-
----
-
----
-
-## **Part 0: Core Rules, The 3-Turn Demo, & Modular Onboarding (`P:DD` System)**
-
-### **The Core Game Rule: Why There Is No Magic Money Tree (It's a River)**
-
-In this game, Conventional Thinkers play a **"Zero-Sum Land Deck"**—they believe wealth is a fixed pie of residential dirt and tax revenue. They hoard **Dormant Land**, let **22%** of their Cohort take early damage, and hemorrhage **NZD 17.7B to 28.5B** in **Fiscal Hull Drag** every turn until their Crown Debt hits **200%** and they lose the game.
+In this game, Conventional Thinkers play a **"Zero-Sum Land Deck"**—they believe wealth is a fixed pie of residential dirt and tax revenue. They hoard *Dormant Land*, let *22%* of their Cohort take early damage, and hemorrhage **NZD 17.7B to 28.5B** in *Fiscal Hull Drag* every turn until their Crown Debt hits **200%** and they lose the game.
 
 The **IGWelfare Deck** teaches players that human capability is not a zero-sum pie; it is a **compounding creative fountain**. You don't need a "magic money tree" when you stop burning 75% of your treasury on preventable crises and unlock the gold already standing in the river.
 
-Future game editions add a climate change dimension, teaching that resilience is not some mere thing—it is everything needed to survive in a world of accelerating change.
+### How This Plays in a Classroom or Workshop (The "3-Turn Demo")
 
-### **How This Plays in a Classroom or Workshop (The "3-Turn Demo")**
+As a 20-minute interactive game with students, young voters, or policy officials, the demo runs in three rounds:
 
-As a 20-minute interactive game with students, young voters, or policy officials, the demo is:
+1. **Round 1 (Displacement Mode / `SS0`):** Players try to survive using only conventional tools (raising PAYE taxes, cutting infrastructure maintenance, or relying on high-churn replacement migration). They watch the *Oranga Tamariki / Hospital / Justice drag* eat their budget while debt spirals toward 200% of GDP.
+2. **Round 2 (Single-Lens Pitch-Pole):** Players try playing *only* early-childhood spending without taxing land wealth or changing Treasury's cash-flow accounting (`T:01`, the *Scotland scenario*), or *only* industrial growth without land-value recycling (`T:02`, the *1989 Tokyo scenario*). They see firsthand why the boat nose-dives when one foil is missing.
+3. **Round 3 (Up on Foils / `SS0 -> SS1 -> SS2`):** Players link the coupled hydrofoil levers (`B:01`–`B:09`) with the Nobel Laureate cards (`N:01`–`N:06`), *Kaupapa* Personas (`K:01`–`K:07`), and `QEA-2026` Electrification (`E:01`–`E:03`)—unlocking the Year 5 actuarial breakeven, surviving the Orthodoxy Hazards (`H:01`–`H:05`), and landing the `SS2` PAYE tax cut and infrastructure harvest.
 
-1. **Round 1 (Displacement Mode / `SS0`):** Players try to survive using only conventional tools (raising PAYE taxes, cutting infrastructure maintenance, or relying on high-churn replacement migration). They watch the **Oranga Tamariki / Hospital / Justice drag** eat their budget while debt spirals toward 200% of GDP.  
-2. **Round 2 (Single-Lens Pitch-Pole):** Players try playing *only* early-childhood spending without taxing land wealth or changing Treasury's cash-flow accounting (`T:01`, the **Scotland scenario**), or *only* industrial growth without land-value recycling (`T:02`, the **1989 Tokyo scenario**). They see firsthand why the boat nose-dives when one foil is missing.  
-3. **Round 3 (Up on Foils / `SS0 -> SS1 -> SS2`):** Players link the coupled hydrofoil levers (`B:01` – `B:09`) with the Nobel Laureate cards (`N:01` – `N:06`) and *Kaupapa* Personas (`K:01` – `K:07`)—unlocking the Year 5 actuarial breakeven, surviving the Orthodoxy Hazards (`H:01` – `H:05`), and landing the `SS2` PAYE tax cut and infrastructure harvest.
+### Five Ways to Run the Table (Controlling Complexity)
 
-### **Four Ways to Run the Table (Controlling Complexity)**
-
-To respect limited time and attention, this game is built in modular layers using a `P:DD` card prefix system. You never have to put all 36 cards on the table at once:
+To respect limited time and attention, this game is built in modular layers using a `P:DD` card prefix system. You never have to put all 43 canonical cards on the table at once:
 
 | Session Format | Decks Used (`P:DD` Prefix) | Target Audience & Goal |
-| :---- | :---- | :---- |
-| **1\. 20-Minute "Elevator Pitch" Demo** | **Base Game (`B:01` – `B:09`)  \+ Traps (`T:01` – `T:03`)** | **First-time readers, students, & busy officials:** Learn the 5 coupled levers of the hydrofoil (`SS0 -> SS1 -> SS2`) and see why single-lens fixes pitch-pole while coupled levers fly. |
-| **2\. "Climate & Resilience" Workshop (30 Mins)** | **Base Game  \+ Climate Expansion (`C:01` – `C:06`)** | **Climate, energy, & regional leaders:** Add the *Accelerating Change Clock* to test cognitive flexibility, grid armor, and the 4-region just transition. |
-| **3\. "Big Table" Roleplay Workshop (40 Mins)** | **Add Companion  [Kaupapa Identities (`K:01` – `K:07`)](https://docs.google.com/document/d/1gn4YWDP8BAP5BQqZa7PRndnk9X-ZWcs9gCo18cNGjXs/edit?tab=t.0)** | **Philanthropists, Iwi leaders, VCs, Policy-Makers, Creatives, & Retirees:** Each player takes a Dual-Class Persona and discovers how cross-sector alliances (*Kotahitanga*) unlock national scale. |
-| **4\. "Orthodoxy Boss-Fight" (45–60 Mins)** | **Add Abundance/Nobel (`N:01` – `N:06`)  & Orthodoxy Hazards (`H:01` – `H:05`)** | **Economists, Treasury/RBNZ analysts, & strategy gamers:** The board actively fights back with Cash-Flow Myopia, Brain-Drain Vortexes, and the 1989 Tokyo Land Bubble, requiring Nobel Combo Counter-Plays to win. |
+| :--- | :--- | :--- |
+| **1. 20-Minute "Elevator Pitch" Demo** | **Base Game (`B:00`–`B:09`) + Traps (`T:00`–`T:05`)** | *First-time readers, students, & busy officials:* Learn the coupled levers of the hydrofoil (`SS0 -> SS1 -> SS2`) and see why single-lens fixes pitch-pole while coupled levers fly. |
+| **2. "Climate & Resilience" Workshop (30 Mins)** | **Base Game + Climate Expansion (`C:01`–`C:06`)** | *Climate, energy, & regional leaders:* Add the *Accelerating Change Clock* to test cognitive flexibility, grid armor, and the 4-region just transition. |
+| **3. "Big Table" Roleplay Workshop (40 Mins)** | **Add Companion Wayfinders (`K:01`–`K:07`)** | *Philanthropists, Iwi leaders, VCs, Policy-Makers, Creatives, & Retirees:* Each player takes a Dual-Class Persona and discovers how cross-sector alliances (*Kotahitanga*) unlock national scale. |
+| **4. "Orthodoxy Boss-Fight" (45–60 Mins)** | **Add Nobel (`N:01`–`N:06`) & Orthodoxy Hazards (`H:01`–`H:05`)** | *Economists, Treasury/RBNZ analysts, & strategy gamers:* The board actively fights back with Cash-Flow Myopia, Brain-Drain Vortexes, and the 1989 Tokyo Land Bubble, requiring Nobel Combo Counter-Plays to win. |
+| **5. "Game Changer" Modding Lab (`QEA-2026`)** | **Add Electrification (`E:01`–`E:03`) + Write-In Wildcards (`P:??`)** | *Open-source modders & energy strategists:* Compare First-Order Easy Mode (`E:01`) against Second-Order VFI Toolkit Challenge Mode (`E:02`–`E:03`; see [`rules/game_changer_tutorial.md`](game_changer_tutorial.md)). |
 
 ---
 
-## 
+## Module 1: The Base Game (`B:00`–`B:09` & `T:00`–`T:05`) — Getting Aotearoa "Up on Foils"
 
-## **Module 1: The Base Game (`B:01` – `B:09` & `T:01` – `T:03`) — Getting Aotearoa "Up on Foils"**
-
-### **`B:00` — The Rawlsian D20 (The Veil of Ignorance Die)**
-
-* **Type:** Rule Zero Artifact — The 20 Wealth Groups of Aotearoa  
-* **Who Goes First (The Rawlsian Maximin Rule):** Every player rolls the d20 to see which family balance sheet they are born into (`1` to `20`). **The lowest roll goes first** (or in a tie, the youngest player at the table)—because behind the Veil of Ignorance, the health of the whole board is decided by what happens to the child who starts with the least. *(Optional Wellington House Rule: "Most ignorant of Rawls goes first"—hand the die to whoever is trapped behind the Tinted Limo Window of Ignorance and still thinks landlord tax breaks are a growth strategy.)*  
-* **Status Quo Roll (`SS0`):**  
-  * *1–4:* Caught in the 22% early hardship corner.  
-  * *5–18:* Crushed by metropolitan rents, delayed fertility, brain drain, and PAYE taxes climbing toward 28.2%.  
-  * *19–20:* Surrounded by 200% Crown debt, failing infrastructure, social credit rating gone, and departing grandchildren.  
-  * *Result:* **No matter what you roll, the board loses.**  
-* **IGWelfare Roll (`SS1 -> SS2`):**  
-  * *1-4: First-2000-Days wraparound (`B:01`) plus Tuakana–Teina / Montessori mentoring (`B:02`) lifts you into the thriving launch tier (compressing stunting to 1.5%).*  
-  * *5-19 (the first 95% of households): you gain **\+14.3% to \+26.0% in permanent lifetime welfare**, cooler housing costs, the Age-20 Youth Capital Grant (`B:03`), Universal NZ Super kept at Age 65, and a **\-3.5 percentage-point PAYE tax cut** (`B:06`).*  
-  * *Nat 20 (the top 5% / active enterprise tier): the median wealth group still wins—because active entrepreneurs and business families stay net welfare positive all the way up to **NZD 100 million** in net worth (`B:05`), enjoying 60 bps cheaper credit, lower corporate tax drag, and a thriving Aotearoa where their own children and grandchildren choose to stay and build.*  
-  * *Summary:* **Every single median wealth group across all 20 faces of the die is better off** (+20.49% national welfare gain, active entrepreneurs ahead up to NZD 100M, NZ Super at 65, and PAYE cut to 18.5%).  
-  * *Result:* **Roll any number. You win.**  
+### `B:00` — The Rawlsian D20 (The Veil of Ignorance Die)
+* **Type:** Rule Zero Artifact — The 20 Wealth Groups of Aotearoa
+* **Who Goes First (The Rawlsian Maximin Rule):** Every player rolls the d20 to see which family balance sheet they are born into (`1` to `20`). **The lowest roll goes first** (or in a tie, the youngest player at the table)—because behind the Veil of Ignorance, the health of the whole board is decided by what happens to the child who starts with the least. *(Optional Wellington House Rule: "Most ignorant of Rawls goes first"—hand the die to whoever is trapped behind the Tinted Limo Window of Ignorance and still thinks landlord tax breaks are a growth strategy.)*
+* **Status Quo Roll (`SS0`):**
+  * **1–4:** Caught in the 22% early hardship corner.
+  * **5–18:** Crushed by metropolitan rents, delayed fertility, brain drain, and PAYE taxes climbing toward 28.2%.
+  * **19–20:** Surrounded by 200% Crown debt, failing infrastructure, social credit rating gone, and departing grandchildren.
+  * **Result:** *No matter what you roll, the board loses.*
+* **IGWelfare Roll (`SS1 -> SS2`):**
+  * **1–4:** First-2000-Days wraparound (`B:01`) plus *Tuakana–Teina* / Montessori mentoring (`B:02`) lifts you into the thriving launch tier (compressing stunting to 1.5%).
+  * **5–19 (the first 95% of households):** You gain **+14.3% to +26.0% in permanent lifetime welfare**, cooler housing costs, the Age-20 Youth Capital Grant (`B:03`), Universal NZ Super kept at Age 65, and a **-3.5 percentage-point PAYE tax cut** (`B:06`).
+  * **Nat 20 (the top 5% / active enterprise tier):** The median wealth group *still* wins—because active entrepreneurs and business families stay net welfare positive all the way up to **NZD 100 million** in net worth (`B:05`), enjoying 60 bps cheaper credit, lower corporate tax drag, and a thriving Aotearoa where their own children and grandchildren choose to stay and build.
+  * **Summary:** *Every single median wealth group across all 20 faces of the die is better off* (`+20.49%` national welfare gain, active entrepreneurs ahead up to NZD 100M, NZ Super at 65, and PAYE cut to 18.5%).
+  * **Result:** *Roll any number. You win.*
 * **Flavor Text:** *"Beware the Blindfold of Orthodoxy, used to play economic Russian roulette where more than 1 in 6 lose in the name of 'market efficiency.' True systems design rewrites the physics of the board so every roll of a child's life comes up a winner."*
 
-### **Beyond The Veil**
+### Beyond The Veil: Confirming the Crit ([`decks/nat_20.md`](../decks/nat_20.md)) & Confirming the Fumble ([`decks/nat_1.md`](../decks/nat_1.md))
+* **Confirming the Crit (What If You Roll a Nat 20 and Roll Again? — Full Table in [`decks/nat_20.md`](../decks/nat_20.md)):** In tabletop RPGs, when you roll a Natural 20 (landing in the Top 5% of wealth, `NZD 500k income + NZD 3M net worth`, Tier 6), you roll the d20 a second time (`20:01` to `20:20`, slicing the Top 5% into twenty 0.25% brackets across **Tiers 6 through 10** all the way to `NZD 250M+`). On that second roll:
+  * **1–13 (`P95.0` to `P98.25`, NZD 3M–6M net worth):** Even on a blended portfolio average, **the first 13 faces of the Top 5% STILL come out ahead (`+2.1%` to `0.0%` CE)**!
+  * **1–19 for Active Entrepreneurs (`P95.0` to `P99.97`, up to NZD 100M net worth in Tier 9):** If you invest in productive businesses (`z_h`) instead of hoarding dormant dirt (`z_l`), **19 out of 20 faces on the second die (`+5.8%` to `+0.2%` CE) win outright**!
+  * **The Double-20 (`20:20`, NZD 250M+ Dynasty in Tier 10):** Even on a 20 followed by a 20, an active enterprise family is virtually flat (`-0.6%` CE) and keeps **94.5% of its fortune (NZD 236.3M)**—and even a passive property dynasty keeps **89.4% (NZD 223.5M)**, a smaller adjustment than a routine once-a-decade market crash, except this time their grandkids stay in Aotearoa.
+* **Confirming the Fumble (What If You Roll a Nat 1 and Roll Again? — Full Table in [`decks/nat_1.md`](../decks/nat_1.md)):** Rolling a Natural 1 lands you in the Bottom 5% of household wealth (`P0.0` to `P5.0`, `NZD 50k income + 0 or negative net worth`, Tier 1). Roll the d20 a second time (`01:01` to `01:20`, slicing the Bottom 5% into twenty 0.25% brackets from Oranga Tamariki state care at `P0.00` to the working-poor rental corner at `P5.00`):
+  * **In the Status Quo (`SS0`):** All 20 faces (`01:01` to `01:20`) are trapped in the unmitigated hardship corner (`i_c = 0`), facing a **52% to 92% risk of adult skill stunting** while costing the Crown **NZD 44,000 to NZD 180,000 per child-year** in reactive state care, emergency motels, hospital nights, and prisons (`Exits 1, 2, 4`).
+  * **In the IGWelfare Scenario (`SS1 -> SS2`):** **All 20 faces of the Nat 1 sub-roll are rescued!** Universal First-2000-Days wraparound (`B:01`, NZD 13.0k/yr) and *Tuakana–Teina* / Montessori mentoring (`B:02`, `C:03`) slash state-care entries by **94%** (from 5,500 to under 300), compress stunting across the group from **52%–92% down to 1.3%–12.0%**, deliver a **+23.5% to +38.4% permanent lifetime welfare gain**, and launch every 20-year-old with an **NZD 62,000+ Youth Capital Grant seed (`B:03`)**—turning the Crown's costliest fiscal liability into a **+NZD 14.2k to +NZD 17.3k/yr net fiscal surplus**!
 
-* **Confirming the Crit (What If You Roll a Nat 20 and Roll Again?):** In tabletop RPGs, when you roll a Natural 20 (landing in the Top 5% of wealth, `NZD 500k income + NZD 3M net worth`), you roll the d20 a second time (`20:01` to `20:20`, slicing the Top 5% into twenty 0.25% brackets all the way to `NZD 250M+`). On that second roll:  
-  * **1–13 (`P95.0` to `P98.25`, NZD 3M–6M net worth):** Even on a blended portfolio average, **the first 13 faces of the Top 5% STILL come out ahead (`+2.1%` to `0.0%` CE)**\!  
-  * **1–19 for Active Entrepreneurs (`P95.0` to `P99.97`, up to NZD 100M net worth):** If you invest in productive businesses (`z_h`) instead of hoarding dormant dirt (`z_l`), **19 out of 20 faces on the second die (`+5.8%` to `+0.2%` CE) win outright**\!  
-  * **The Double-20 (`20:20`, NZD 250M+ Dynasty):** Even on a `20` followed by a `20`, an active enterprise family is virtually flat (`-0.6%` CE) and keeps **94.5% of its fortune (NZD 236.3M)**—and even a passive property dynasty keeps **89.4% (NZD 223.5M)**, a smaller adjustment than a routine once-a-decade market crash, except this time their grandkids stay in Aotearoa.  
-* **Confirming the Fumble (What If You Roll a Nat 1 and Roll Again?):** In tabletop RPGs, rolling a Natural 1 is a "Critical Fail"—landing you in the Bottom 5% of household wealth (`P0.0` to `P5.0`, `NZD 50k income + 0 or negative net worth`). Roll the d20 a second time (`01:01` to `01:20`, slicing the Bottom 5% into twenty 0.25% brackets from Oranga Tamariki state care at `P0.00` to the working-poor rental corner at `P5.00`):  
-  * **In the Status Quo (`SS0`):** All 20 faces (`01:01` to `01:20`) are trapped in the unmitigated hardship corner (`i_c = 0`), facing a **52% to 92% risk of adult skill stunting** while costing the Crown **NZD 44,000 to NZD 180,000 per child-year** in reactive state care, emergency motels, hospital nights, and prisons (`Exits 1, 2, 4`).  
-  * **In the IGWelfare Scenario (`SS1 -> SS2`):** **All 20 faces of the Nat 1 sub-roll are rescued\!** Universal First-2000-Days wraparound (`B:01`, NZD 13.0k/yr) and *Tuakana–Teina* / Montessori mentoring (`B:02`, `C:03`) slash state-care entries by **94%** (from 5,500 to under 300), compress stunting across the group from **52%–92% down to 1.3%–12.0%**, deliver a **\+23.5% to \+38.4% permanent lifetime welfare gain**, and launch every 20-year-old with an **NZD 62,000+ Youth Capital Grant seed (`B:03`)**—turning the Crown's costliest fiscal liability into a **\+NZD 14.2k to \+NZD 17.3k/yr net fiscal surplus**\!
+---
 
-*These cards teach players how early investments transform citizens across Gates 1, 2, and 3\.*
+## Set 1: Identities & "Becomings" (The Cohort Cards)
 
-### **Set 1: Identities & "Becomings" (The Cohort Cards)**
+*These cards teach players how early investments transform citizens across Gates 1, 2, and 3.*
 
-### **B:01 — Tamariki of the First 2000 Days**
-
-* **Type:** Cohort Identity — Gate 1 (Ages 0–5)  
-* **Cost:** NZD 13.0k Public Resource / Turn  
-* **Game Text:**  
-  * *Hardship Corner:* If this card enters play without **Whānau Wraparound**, roll a d20. On a 1–4 (22% chance), attach a **Stunted Trajectory** token (causes 57%–81% of all late-game Hospital, Justice, and Care damage to your Treasury).  
-  * *Becoming (Dynamic Complementarity):* If supported by ***Te Korowai Mokopuna*** **/ *Whānau Ora***, remove all Stunted tokens. This card gains **\+2 Productivity** for every subsequent Schooling card played on it, and **Crowds In \+NZD 15.3k** of Private Parental Care for free\!  
+### `B:01` — Tamariki of the First 2000 Days
+* **Type:** Cohort Identity — Gate 1 (Ages 0–5)
+* **Cost:** NZD 13.0k Public Resource / Turn
+* **Game Text:**
+  * **Hardship Corner:** If this card enters play without *Whānau Wraparound*, roll a d20. On a 1–4 (22% chance), attach a *Stunted Trajectory* token (causes 57%–81% of all late-game Hospital, Justice, and Care damage to your Treasury).
+  * **Becoming (Dynamic Complementarity):** If supported by *Te Korowai Mokopuna* / *Whānau Ora*, remove all Stunted tokens. This card gains **+2 Productivity** for every subsequent Schooling card played on it, and **Crowds In +NZD 15.3k** of Private Parental Care for free!
 * **Flavor Text:** *"Identify the corner at age three, or pay NZD 180,000 a year in state care at age fourteen. The math isn't hard; only the politics was."*
 
-### **B:02 — *Tuakana–Teina* Navigator**
-
-* **Type:** Cohort Becoming — Gate 2 Mentor (Ages 12–14)  
-* **Cost:** 2 Social Cohesion \+ 1 Creative Agency  
-* **Game Text:**  
-  * *Two-Way Ako (Reciprocal Buff):* Pair this card with any younger *Teina* card. Both cards gain **Indestructible** against **Family Unemployment & Housing Shocks**.  
-  * *Becoming:* When this card mentors a peer (via ***Stars*** **/ *Project K***, *Kura Kaupapa*, or *Montessori Erdkinder*), it levels up into a **Thriving Launch Adult (+65% cohort rate)** and grants the player **\+1 Executive Function & Mana**.  
+### `B:02` — Tuakana–Teina Navigator
+* **Type:** Cohort Becoming — Gate 2 Mentor (Ages 12–14)
+* **Cost:** 2 Social Cohesion + 1 Creative Agency
+* **Game Text:**
+  * **Two-Way Ako (Reciprocal Buff):** Pair this card with any younger *Teina* card. Both cards gain **Indestructible** against *Family Unemployment & Housing Shocks* and immunity to *Disinformation Drag (`T:05`)*.
+  * **Becoming:** When this card mentors a peer (via *Stars* / *Project K*, *Kura Kaupapa*, or *Montessori Erdkinder*), it levels up into a **Thriving Launch Adult (+65% cohort rate)** and grants the player **+1 Executive Function & Mana**.
 * **Flavor Text:** *"In teaching the younger sibling to stand against the storm, the older sibling becomes a mountain."*
 
-### **B:03 — Age-20 Renaissance Founder (*Kaikōrero* & Creator)**
-
-* **Type:** Evolved Identity — Gate 3 (Ages 20–35)  
-* **Cost:** Evolved from a **`B:02` (*Tuakana–Teina* Navigator) \+ Youth Capital Grant**  
-* **Game Text:**  
-  * *Brain-Drain Immunity:* This card cannot be exiled to the **Abroad (Australia/OECD) Zone**.  
-  * *Engine:* While metropolitan rents are cooled (**\-7.5% to \-10.5%** via **`B:05`**), this card generates **\+9.6% Real Regional Wages**, **\+1 Domestic Cultural IP**, and **\+26 Social Cohesion Index**.  
+### `B:03` — Age-20 Renaissance Founder (*Kaikōrero* & Creator)
+* **Type:** Evolved Identity — Gate 3 (Ages 20–35)
+* **Cost:** Evolved from a `B:02` (*Tuakana–Teina* Navigator) + Youth Capital Grant
+* **Game Text:**
+  * **Brain-Drain Immunity:** This card cannot be exiled to the *Abroad (Australia/OECD) Zone*.
+  * **Engine:** While metropolitan rents are cooled (**-7.5% to -10.5%** via `B:05`), this card generates **+9.6% Real Regional Wages**, **+1 Domestic Cultural IP**, and **+26 Social Cohesion Index**.
 * **Flavor Text:** *"Give a twenty-year-old a NZD 500-a-week survival flat and you get a barista in Melbourne. Give them a capital runway and you get the next Aotearoa renaissance."*
 
 ---
 
-### **Set 2: The Hydrofoil Engines (Artifacts & Policy Levers)**
+## Set 2: The Hydrofoil Engines (Artifacts & Policy Levers)
 
 *These cards teach players how coupled systems lift the economy out of "Displacement Mode".*
 
-### **B:04 — The L-Shaped Hydrofoil (Coupled 4-Region Engine)**
-
-* **Type:** Legendary Artifact — System Architecture  
-* **Cost:** 5 Coupled Levers  
-* **Game Text:**  
-  * *Rulebook Exploit:* Conventional Thinkers must keep their keel straight and slog through **Displacement Mode**. If you control a Front Lifting Foil (**Dual-Gate Human Capability, `B:01` \+ `B:02`**), a Wing-Sail Power Plant (**Property-to-Enterprise Shift, `B:05`**), and a Rear T-Foil Stabilizer (**2050 50/50 Protocol, `B:06`**), lift your economy out of the water.  
-  * *Effect:* Slash **Fiscal Remediation Drag (Exits 1, 2, 4\)** by **75%** (reducing annual drain from NZD 17.7B–28.5B down to NZD 4.2B). Your Cohort cards now generate **\+NZD 16.1k/yr Net Surplus** instead of a deficit.  
+### `B:04` — The L-Shaped Hydrofoil (Coupled 4-Region Engine)
+* **Type:** Legendary Artifact — System Architecture
+* **Cost:** 5 Coupled Levers
+* **Game Text:**
+  * **Rulebook Exploit:** Conventional Thinkers must keep their keel straight and slog through *Displacement Mode*. If you control a Front Lifting Foil (*Dual-Gate Human Capability*, `B:01` + `B:02`), a Wing-Sail Power Plant (*Property-to-Enterprise Shift*, `B:05`), and a Rear T-Foil Stabilizer (*2050 50/50 Protocol*, `B:06`), lift your economy out of the water.
+  * **Effect:** Slash *Fiscal Remediation Drag (Exits 1, 2, 4)* by **75%** (reducing annual drain from NZD 17.7B–28.5B down to NZD 4.2B). Your Cohort cards now generate **+NZD 16.1k/yr Net Surplus** instead of a deficit.
 * **Flavor Text:** *"The rules capped how wide the board could be, but said nothing about whether the board had to be straight. Curve the foil, couple the rudder, and fly."*
 
-### **B:05 — Use-It-Or-Lose-It Rebalancer (The Guvenen Split)**
-
-* **Type:** Continuous Enchantment — Lens 3 Power Plant  
-* **Cost:** 1.5% Land/Wealth Levy \+ 25% Peak Estate Levy  
-* **Game Text:**  
-  * *Rotate Dormant Dirt:* Target opponent's **NZD 1.6 Trillion Dormant Property Hoard**. Exhaust all **Passive Land Speculators (`z_l`)** and cool Auckland housing overvaluation by **\-10.5%**.  
-  * *Unchain Productive Capital:* Convert that dormant value into **Productive Enterprise Capital (`z_h`)**. All **Active Entrepreneurs** (all the way up to NZD 100M net worth\!) gain **\+0.2% to \+5.8% Welfare**, **\-60 bps cheaper credit**, and a **\+38% larger thriving talent pool**.  
+### `B:05` — Use-It-Or-Lose-It Rebalancer (The Guvenen Split)
+* **Type:** Continuous Enchantment — Lens 3 Power Plant
+* **Cost:** 1.5% Land/Wealth Levy + 25% Peak Estate Levy
+* **Game Text:**
+  * **Rotate Dormant Dirt:** Target opponent's *NZD 1.6 Trillion Dormant Property Hoard*. Exhaust all *Passive Land Speculators (`z_l`)* and cool Auckland housing overvaluation by **-10.5%**.
+  * **Unchain Productive Capital:** Convert that dormant value into *Productive Enterprise Capital (`z_h`)*. All *Active Entrepreneurs* (all the way up to NZD 100M net worth!) gain **+0.2% to +5.8% Welfare**, **-60 bps cheaper credit**, and a **+38% larger thriving talent pool**.
 * **Flavor Text:** *"Even the ultra-wealthy keep 89% to 98% of their fortune—a smaller haircut than a routine market crash, except this time their grandkids don't move to Sydney."*
 
-### **B:06 — The 2050 50/50 Stabilizer (`SS2` Rocket Ship)**
-
-* **Type:** Legendary Engine — Phase 2 Harvest  
-* **Cost:** Cross Year 18.8 Cash Breakeven (or Year 5 via **`B:07`**)  
-* **Game Text:**  
-  * *Partition all Net Fiscal Surpluses equally at the end of every turn:*  
-    * **Left Half (Sovereign Debt Sinking Fund):** Destroy **NZD 17.8B–21.9B** of Crown Debt per cohort wave and lower all players' mortgage and business interest rates by **60 bps**.  
-    * **Right Half (Public Infrastructure Pool):** Multiply this resource by **1.65x** to build Resilient Grids, Coastal Adaptation, and Core Health (**`C:04`**).  
-  * *Ultimate Bonus:* Keep **Universal NZ Superannuation at Age 65** AND grant all Working-Age Players a **\-3.5 percentage-point PAYE Tax Cut** (NZD 3,325/yr cash back to median earners)\!  
+### `B:06` — The 2050 50/50 Stabilizer (`SS2` Rocket Ship)
+* **Type:** Legendary Engine — Phase 2 Harvest
+* **Cost:** Cross Year 18.8 Cash Breakeven (or Year 5 via `B:07`)
+* **Game Text:**
+  * **Partition all Net Fiscal Surpluses equally at the end of every turn:**
+  * **Left Half (Sovereign Debt Sinking Fund):** Destroy **NZD 17.8B–21.9B** of Crown Debt per cohort wave and lower all players' mortgage and business interest rates by **60 bps**.
+  * **Right Half (Public Infrastructure Pool):** Multiply this resource by **1.65x** to build Resilient Grids, Coastal Adaptation, and Core Health (`C:04`).
+  * **Ultimate Bonus:** Keep **Universal NZ Superannuation at Age 65** AND grant all Working-Age Players a **-3.5 percentage-point PAYE Tax Cut** (NZD 3,325/yr cash back to median earners)!
 * **Flavor Text:** *"Austerity hawks wanted to raise the pension age to 70 and still pay 25.55% in tax. We kept Super at 65 and cut taxes to 18.5%."*
 
 ---
 
-### **Set 3: "Instants" & Counter-Spells (To Stun Conventional Thinkers)**
+## Set 3: "Instants" & Counter-Spells (To Stun Conventional Thinkers)
 
 *These cards let youth players counter the classic "we can't afford it" arguments in real time.*
 
-### **B:07 — ACC Actuarial Time-Bend**
-
-* **Type:** Instant — Counter-Spell / Accounting Breakthrough  
-* **Cost:** 0 Cash (Uses Treasury Circular 2024/15 at 2.0% Real SRTP)  
-* **Game Text:**  
-  * *Trigger:* Play only when an opponent casts *"Parliamentary 3-Year Deficit Trap"* (**`H:01`**) or *"There's No Magic Money Tree."*  
-  * *Effect:* Counter target austerity argument. Reveal the **25-Year Forward Liability Ledger**. Because your Gate 1 (**`B:01`**) & Gate 2 (**`B:02`**) cohorts exited stunting by Year 5, immediately book **NZD 10.68B in Direct Cost Avoidance (1.16x outlay)** and **NZD 35.25B in Total Fiscal Return (3.84x outlay)** on the Crown Balance Sheet.  
-  * *Secondary Effect:* Triggers **Early Credibility Acceleration**—young workers see the Year 5 audit and cancel their one-way tickets to Australia 15 years early\!  
+### `B:07` — ACC Actuarial Time-Bend
+* **Type:** Instant — Counter-Spell / Accounting Breakthrough
+* **Cost:** 0 Cash (Uses Treasury Circular 2024/15 at 2.0% Real SRTP)
+* **Game Text:**
+  * **Trigger:** Play only when an opponent casts *"Parliamentary 3-Year Deficit Trap"* (`H:01`) or *"There's No Magic Money Tree."*
+  * **Effect:** Counter target austerity argument. Reveal the *25-Year Forward Liability Ledger*. Because your Gate 1 (`B:01`) & Gate 2 (`B:02`) cohorts exited stunting by Year 5, immediately book **NZD 10.68B in Direct Cost Avoidance (1.16x outlay)** and **NZD 35.25B in Total Fiscal Return (3.84x outlay)** on the Crown Balance Sheet.
+  * **Secondary Effect:** Triggers *Early Credibility Acceleration*—young workers see the Year 5 audit and cancel their one-way tickets to Australia 15 years early!
 * **Flavor Text:** *"When you prevent a car crash, ACC doesn't wait thirty years to book the saved hospital bill. Why were we treating our children worse than a dented bumper?"*
 
-### **B:08 — The 1925 Quantum Leap (OIA 20250878 Override)**
-
-* **Type:** Sorcery — Paradigm Shift  
-* **Cost:** 50 Years of Dunedin Study Data \+ 8-PType GPU Solver  
-* **Game Text:**  
-  * *Expose the Gap:* Expose the flaw in the opponent's Long-Term Fiscal Model (`LTFM`) (*"Contains no data at the micro level"* — Treasury OIA 20250878).  
-  * *Unified Board State:* Fuse **Frontline Social Agencies**, **ACC Actuaries**, and **Macro OLG Planners** into one unified board state. Unlock **NZD 85.40B in Year 5 Booked GDP** and **NZD 1,510.7B over 60 Years**.  
+### `B:08` — The 1925 Quantum Leap (OIA 20250878 Override)
+* **Type:** Sorcery — Paradigm Shift
+* **Cost:** 50 Years of Dunedin Study Data + 8-PType GPU Solver
+* **Game Text:**
+  * **Expose the Gap:** Expose the flaw in the opponent's Long-Term Fiscal Model (`LTFM`) (*"Contains no data at the micro level"* — Treasury OIA 20250878).
+  * **Unified Board State:** Fuse *Frontline Social Agencies*, *ACC Actuaries*, and *Macro OLG Planners* into one unified board state. Unlock **NZD 85.40B in Year 5 Booked GDP** and **NZD 1,510.7B over 60 Years**.
 * **Flavor Text:** *"In 1925, physicists overthrew classical mechanics in thirty-six months because the matrix math was already sitting on the shelf. Our math is on the shelf. Stop governing like it's 1924."*
 
 ---
 
-### **Set 4: Cautionary Trap Cards (`T:01` – `T:03`: What Happens When You Only Play One Lens)**
+## Set 4: Cautionary Trap Cards (`T:00` – `T:05`: What Happens When You Pitch-Pole or Leave a Lens Unguarded)
 
-*To teach systems thinking, players can also draw Cautionary Trap cards from Part VI of the monograph:*
+*To teach systems thinking, players can also draw Cautionary Trap cards from Part VI of the monograph and our international peer comparisons:*
 
-* **`T:01` — The Scottish Devolution Ceiling (Trap Card):** You played First-2000-Days (**`B:01`**) and *MCR Pathways* Mentoring (**`B:02`**), cutting child poverty by 6 points\!—but you forgot to bring sovereign Land & Estate Tax powers (**`B:05`**). Your PAYE tax rate hits 48% and your progress stalls out at 21%\!  
-* **`T:02` — The 1989 Tokyo Imperial Palace Bubble (Trap Card):** You played Deming's Industrial Miracle (Lens 1 & 2), but left Lens 3 (**`B:05` & `B:06`**) unguarded. All your corporate surpluses poured into finite urban land until 1.15 sq km of Tokyo costs more than California. Take **30 Turns of Balance-Sheet Stagnation**.  
+* **`T:00` — The Molesworth Street Cycle-Lane Paralysis (Limited-Edition Promo Trap):** A single painted cycle lane appears on Molesworth Street between Premier House and the Beehive. Your leadership is now too terrified to cross the street on foot and must summon a Crown limo to travel 250 meters—burning transport subsidies and giving tax breaks to landlords while reading Ayn Rand in the backseat. *Counter-Play:* Hand the Minister a copy of *Foils & Founders* and introduce them to `HANK` before giving them a whole national economy to drive!
+* **`T:01` — The Scottish Devolution Ceiling (Trap Card):** You played First-2000-Days (`B:01`) and *MCR Pathways* Mentoring (`B:02`), cutting child poverty by 6 points!—but you forgot to bring sovereign Land & Estate Tax powers (`B:05`). Your PAYE tax rate hits 48% and your progress stalls out at 21%!
+* **`T:02` — The 1989 Tokyo Imperial Palace Bubble (Trap Card):** You played Deming's Industrial Miracle (Lens 1 & 2), but left Lens 3 (`B:05` & `B:06`) unguarded. All your corporate surpluses poured into finite urban land until 1.15 sq km of Tokyo costs more than California. Take **30 Turns of Balance-Sheet Stagnation**.
 * **`T:03` — The Seoul Hagwon Squeeze (Trap Card):** You maxed out Schooling, but let Primate-City Land Speculation and private tutoring costs run wild. Your **Total Fertility Rate collapses to 0.72**.
+* **`T:04` — The Lavoisier Syndrome: Rent-Seekers vs. Builders (Trap Card):** Named after Antoine Lavoisier (the father of modern chemistry who became a reviled royal tax farmer in pre-revolutionary France; Murphy, Shleifer, & Vishny, 1991 *QJE*). Leaving an untaxed **NZD 1.6T** residential property pool open (`z_l`, 8.9% effective tax rate in IRD's High-Wealth audit) siphons your nation's brightest engineering, legal, and entrepreneurial minds out of productive firm-building (`z_h`) and into zero-sum land speculation. *Counter-Play:* Play `B:05` (Use-It-Or-Lose-It Rebalancer) + `B:03` (Youth Capital Grant) to flip the occupational talent cutoff back to builders (+3.2% to +9.6% real wages).
+* **`T:05` — Disinformation & Outrage Drag: The Polarisation Tax (Trap Card — Full Tutorial in [`rules/T_05_tutorial.md`](T_05_tutorial.md)):** Disinformation preys on early executive-function deficits (Gate 1 stunting) and economic alienation (Gate 3 housing despair), depressing institutional trust to 40%, amplifying `Exit 4` (Anti-Social & Justice Burden) by +25%, and imposing a 0.5% GDP (`~NZD 2.0B/yr`) drag across public health and climate infrastructure. *Counter-Play (The Finnish Inoculation):* Couple `B:01` + `B:02` + `C:02` (*Monilukutaito* multiliteracy) from early childhood to neutralize `T:05` and lift Social Cohesion to `126.0` (`C:06`).
 
 ---
 
@@ -442,14 +368,6 @@ Shuffle this 5-card Hazard Deck into play for the full 60-minute strategy experi
   * *Engage the Rear T-Foil Stabilizer:* Legally lock **50% of every net fiscal surplus into the Sovereign Debt Reduction Sinking Fund** (retiring **NZD 17.8B–21.9B** of debt per cohort wave and cutting interest rates by **60 bps**) and **50% into the Public Infrastructure & Core Health Reinvestment Pool** (at a **1.65x productivity multiplier**).  
   * *Payoff:* Prevent the land bubble, keep **Universal NZ Superannuation solvent at Age 65**, and reward working families with a permanent **\-3.5 percentage-point PAYE income tax cut** in `SS2`.  
 * **Flavor Text:** *"Generating a miracle takes a front foil and a wing-sail. Keeping it for your grandchildren takes a rear T-foil stabilizer."*
-
-### **T:00 — The Molesworth Street Cycle-Lane Paralysis (Limited-Edition Promo Trap)**
-
-* **Type:** Orthodoxy Hazard — Ministerial Limo / Pedestrian Panic  
-* **The Hazard:** A single painted cycle lane appears on Molesworth Street between Premier House and the Beehive. Your leadership is now too terrified to cross the street on foot and must summon a Crown limo to travel 250 meters—burning transport subsidies and giving tax breaks to landlords while reading Ayn Rand in the backseat.  
-* **The Riddle:** When the Prime Minister finally musters the courage to cross Molesworth Street, which crosses first—the chicken, or **THE EGG**?  
-* **Counter-Play Effect:** Hand the Minister a copy of **Foils & Founders: The Aotearoa Deck** and introduce them to **HANK**. Solve the intergenerational chicken-and-egg loop from the safety of the backseat without having to look both ways for a bicycle.  
-* **Flavor Text:** *"Afraid to cross Molesworth Street? Here's a card game for you\! We can't afford to give every beginner a whole-ass national economy to wreck until they learn the rules—so please, stay on the footpath and play with HANK first."*
 
 ## **Game Legend & Credits: Why I Know This Game Works in the Real World**
 

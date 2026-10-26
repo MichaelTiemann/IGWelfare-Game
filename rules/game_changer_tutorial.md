@@ -1,7 +1,8 @@
 # Module 5: The "Game Changer" Tutorial — What Happens When You Want to Play a Card That Doesn't Exist?
 
-> *"The only way to learn is by playing; the only way to win is by learning; and the only way to begin is by beginning."*
-> — **The *Game Changer* Premise:** In conventional politics, players treat the economic board as fixed and fight zero-sum battles over a shrinking pie. In *Foils & Founders*, every card in the deck is a dense, empirically anchored systems-engineering argument. When a player discovers that a vital card is missing from the game, the table doesn't just make up a wishful rule—it puts the proposal through the crucible of first-order fiscal honesty (**Easy Mode**) and second-order general-equilibrium discovery (**Challenge Mode**).
+> *"Welcome to **game CHANGER**, the only game show where the game changes every show. [...] The only way to learn is by playing; the only way to win is by learning; and the only way to begin is by beginning."* — **Sam Reich**
+
+We have our own **Game Changer** Premise: In conventional politics, players treat the economic board as fixed and fight zero-sum battles over a shrinking pie. In *Foils & Founders*, every card in the deck is a dense, empirically anchored systems-engineering argument. When a player discovers that a vital card is missing from the game, the table doesn't just make up a wishful rule—it puts the proposal through the crucible of first-order fiscal honesty (**Easy Mode**) and second-order general-equilibrium discovery (**Challenge Mode**).
 
 Suppose a player sits down at the Big Table and says: **"I want to play the Energy Transition / Electrify Aotearoa Card!"**
 

@@ -184,4 +184,4 @@ When you sum the five sectors together, look at the three macroeconomic equation
 3. **The RBNZ "OCR Freedom" Dividend (`-60 to -100 bps` Lower Interest Rates):**
    Eliminating imported oil-shock inflation from the CPI basket and curing paradoxical precautionary hoarding allows the Reserve Bank (`K:03`) and the 2050 50/50 Debt-Sinking Protocol (`B:06`) to lower equilibrium New Zealand interest rates by **60 to 100 basis points**—cutting mortgage stress for every young family and supercharging productive enterprise across Aotearoa.
 
-Energy Expert Saul Griffiths has observed that where Solar PVs have replaced reliance on imported fossil fuel, regions and countries have observed "unexpectedly higher GDP".  We explain it!
+Energy Expert [Saul Griffith](https://en.wikipedia.org/wiki/Saul_Griffith) has observed that where Solar PVs have replaced reliance on imported fossil fuel, regions and countries have observed "unexpectedly higher GDP".  We explain it!

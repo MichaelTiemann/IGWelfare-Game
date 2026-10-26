@@ -172,6 +172,10 @@ When a player scales the second-order mechanism in [`QEA_2026.m`](https://github
 
 ### 3. The Three Macroeconomic Equations That Change the Board (`E:02` + `E:03`)
 
+The * **Unexpectedly Higher GDP** * Theorem: What Happens to the Whole Board?
+
+When you sum the five sectors together, look at the three macroeconomic equations that snap into place for Treasury and the Reserve Bank (K:03):
+
 1. **Zero Social Crowd-Out (`Delta A_prec >= CapEx`):**
    $$\text{Upfront 5-Sector CapEx } (\text{NZD } 60.2\text{B}–75.5\text{B}) \le \text{Released Precautionary Capital } (\text{NZD } 60.8\text{B}–91.5\text{B})$$
    Removing energy tail-risk releases enough trapped precautionary capital from private balance sheets to self-finance the entire national transition without touching Phase 1 (`SS1`) social investment.
@@ -179,3 +183,5 @@ When a player scales the second-order mechanism in [`QEA_2026.m`](https://github
    Stopping NZD 15B–20B/yr in foreign fossil-fuel outflows (and canceling the NZD 6.2B imported LNG terminal) keeps **NZD 15.55B/yr** compounding inside Rural, Small, Large, and Auckland regional economies—explaining Saul Griffith's observation that nations that electrify achieve unexpectedly higher GDP.
 3. **The RBNZ "OCR Freedom" Dividend (`-60 to -100 bps` Lower Interest Rates):**
    Eliminating imported oil-shock inflation from the CPI basket and curing paradoxical precautionary hoarding allows the Reserve Bank (`K:03`) and the 2050 50/50 Debt-Sinking Protocol (`B:06`) to lower equilibrium New Zealand interest rates by **60 to 100 basis points**—cutting mortgage stress for every young family and supercharging productive enterprise across Aotearoa.
+
+Energy Expert Saul Griffiths has observed that where Solar PVs have replaced reliance on imported fossil fuel, regions and countries have observed "unexpectedly higher GDP".  We explain it!

@@ -16,3 +16,17 @@
   flavor_text: "..."          # Thematic quote capturing the political-economy insight
   empirical_anchor: "..."     # Citation to Document 1A/1B/1C, QEA-2026, or historical data
   
+# ------------------------------------------------------------------------------
+# OPTIONAL COMPANION ENTRY FOR `decks/study_cards.yaml` ("PLAY THE NERD CARD")
+# Required for Track 2 (Challenge Mode / VFI Toolkit Stationary Distribution PRs)
+# ------------------------------------------------------------------------------
+# - id: "E:04"
+#   monograph_ref: "Doc 1B §5.X • Doc 2: My_Forked_QEA_2026.m"
+#   equation_title: "Formal Bellman / CES / Kolmogorov Forward Specification"
+#   latex_equation: |
+#     \Delta A_{\text{prec}} \equiv \int_{\mathcal{S}} a \, d\mu^\star(s \mid \mathcal{P}_0) - \int_{\mathcal{S}} a \, d\mu^\star(s \mid \mathcal{P}_1) \ge \text{CapEx}
+#   parameters: "σ = 2.2 CRRA | Key Elasticity = ... | Stationary Distribution Shift Δμ* = ..."
+#   proof_bridge: "One sentence explaining how the mathematical identity proves the tabletop card mechanic."
+#   citations:
+#     - "Author, A., & Author, B. (Year). Title of peer-reviewed paper. Journal Name, Vol(Issue), Pages."
+#     - "Empirical Dataset / NZ Longitudinal Source (Year). Title of report or audit."

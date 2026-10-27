@@ -89,6 +89,18 @@ new_zealand_empirical_anchors:
     key_finding: "Highlights the cost of deferred maintenance, reactive asset failures, and the necessity of ring-fenced long-term infrastructure funding."
     cards_anchored: ["B:06", "C:04", "H:05"]
 
+  - id: "SRC:BERENTSON_SHAW_2018"
+    citation: "Berentson-Shaw, J. (2018). A Matter of Fact: Talking Truth in a Post-Truth World. Wellington: Bridget Williams Books (BWB Texts, ISBN 9781988545387)."
+    domain: "Epistemic Resilience, Values-Based Framing, & Science Communication (Cards T:05, C:02, K:07)"
+    key_metrics:
+      - "Demonstrates why raw 'fact-brawling' fails under high polarisation and why shared values + causal metaphors (Up on Foils / Te Waka Hourua) inoculate public discourse against disinformation (T:05)."
+
+  - id: "SRC:GUINZ_2025"
+    citation: "Morton, S. M. B., et al. (2023–2025). Growing Up in New Zealand (GUiNZ): Now We Are 12 & Now We Are 15 Longitudinal Reports. University of Auckland."
+    domain: "Gate 1–2 Hardship Drift, Rental Transience, & Adolescent Mental Health (Cards B:01, B:02, H:06)"
+    key_metrics:
+      - "14.3% acute persistent material hardship + 15.7% private rental squeeze/transience (>45% moved 2+ times before age 5) = 30.0% Gate 1 exposure (Vigintiles 1–6), driving NZD 28.5B/yr unbuffered hull drag (H:06)."
+
   - id: "TINZ_CPI_2026"
     citation: "Transparency International (2025/2026) Corruption Perceptions Index & TINZ (2026) National Integrity System Assessment; Controller and Auditor-General (2026)."
     institution: "Transparency International New Zealand"

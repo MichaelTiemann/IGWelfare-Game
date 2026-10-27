@@ -17,6 +17,8 @@ Why doesn't the public know that? Because the proof is locked inside 5-dimension
 * **[Equation 1 (Bellman & CES Skill Technology)](CREDITS.md#equation-1-multi-stage-ces-human-capability-formation-under-non-homothetic-subsistence-corners) $\rightarrow$ Play [`B:01` (*Tamariki of the First 2000 Days*)](rules/rules.md#b01--tamariki-of-the-first-2000-days) + [`N:02` (*Heckman's Dynamic Complementarity*)](rules/rules.md#n02--james-heckmans-dynamic-complementarity-engine-nobel-prize-2000)**
 * **[Equation 2 (Stationary Distribution & Precautionary Release)](CREDITS.md#equation-2-the-guvenenmsvqea-stationary-distribution--precautionary-capital-release) $\rightarrow$ Play [`B:05` (*Use-It-Or-Lose-It Rebalancer*)](rules/rules.md#b05--use-it-or-lose-it-rebalancer-the-guvenen-split) + [`E:02` (*Energy as Endowment*)](rules/game_changer_tutorial.md#e02--energy-as-endowment-the-qea-2026-stationary-distribution-shift)**
 
+* **Want to "Play the Nerd Card" at the Table?** Print the **Fold-Over Study Deck** ([`decks/study_cards.yaml`](decks/study_cards.yaml) + [`scripts/render_study_cards.py`](scripts/render_study_cards.py)). Each card folds along its horizontal crease so the front plays as a standard portrait game card while the back flips open in widescreen landscape (`138mm × 79mm`) with the full MathJax equation, GPU calibration parameters, one-sentence proof bridge, and peer-reviewed academic citations!
+
 ---
 
 ## 1. Why a Card Game? (Rule Zero: The Rawlsian D20 Test)
@@ -57,49 +59,58 @@ Every card in [`decks/cards.yaml`](decks/cards.yaml) uses a permanent **`P:DD`**
 
 ---
 
-## 4. Quick-Start: Rendering & Printing the Deck (5×2 Stacked-Bond A3 Sheets)
+## 4. Quick-Start: Rendering & Printing the Deck, Playmats, & Fold-Over Study Cards
 
-The repository includes a Python compiler ([`scripts/render_cards.py`](scripts/render_cards.py)) that merges [`decks/cards.yaml`](decks/cards.yaml) with any theme dictionary in `themes/<theme>/theme.yaml` and outputs print-ready **5×2 Stacked-Bond A3 Landscape** sheets (10 cards per sheet across 5 A3 sheets = 50 card slots, comprising the 43 canonical cards and 7 `P:??` open-source write-in wildcards).
+The repository includes three Python compilers sharing [`scripts/render_common.py`](scripts/render_common.py):
+* **[`scripts/render_cards.py`](scripts/render_cards.py):** Merges [`decks/cards.yaml`](decks/cards.yaml) with any theme in `themes/<theme>/theme.yaml` to output **5 A3 Landscape sheets** (`5×2` stacked-bond grid = 10 cards per sheet: 43 canonical cards + 7 `P:??` write-in wildcards).
+* **[`scripts/render_boards.py`](scripts/render_boards.py):** Compiles [`decks/boards_and_tokens.yaml`](decks/boards_and_tokens.yaml) into **2 A3 Landscape sheets** (Sheet 1: National Region 5-Gate River, 4 Exits, 4 Obligations, & 7 Capitals Dashboard; Sheet 2: Two *Whānau & Wayfinder* Player Mats + 5 Double-Sided Cut-Out Token Strips).
+* **[`scripts/render_study_cards.py`](scripts/render_study_cards.py) (*"Play the Nerd Card" Mode*):** Merges [`decks/cards.yaml`](decks/cards.yaml) and [`decks/study_cards.yaml`](decks/study_cards.yaml) into **9 A3 Landscape sheets** (5 fold-over cards per sheet, organized into 5-card core packs + overflow packs: 43 canonical cards + 2 write-in study wildcards), with the standard portrait game card on the bottom row and a rotated `138mm × 79mm` landscape MathJax equation & citation blackboard on the top row.
 
 ### Step 1: Install Dependencies
 ```bash
 python3 -m pip install pyyaml markdown
 ```
 
-### Step 2: Render A3 HTML Previews for Cards & Tabletop Playmats by Theme
-Run [`scripts/render_cards.py`](scripts/render_cards.py) (5 A3 sheets = 43 canonical cards + 7 write-in wildcards) and [`scripts/render_boards.py`](scripts/render_boards.py) (2 A3 sheets = National Hydrofoil / *Te Waka Hourua* Board + 2 Player *Whānau* Ledgers & Cut-Out Double-Sided Tokens) from the root of the repository:
+### Step 2: Render A3 HTML Previews for Cards, Playmats, & Fold-Over Study Cards by Theme
+Run the compilers from the root of the repository:
 
 ```bash
-: "1. Generic Typographic Theme (Cards + A3 Playmats & Tokens)"
+: "1. Generic Typographic Theme (Cards + A3 Playmats + Fold-Over Study Cards)"
 python3 scripts/render_cards.py --theme generic --co2-pos top-right --out build/generic.html
 python3 scripts/render_boards.py --theme generic --out build/boards_generic.html
+python3 scripts/render_study_cards.py --theme generic --co2-pos top-right --out build/study_generic.html
 
 : "2. Te Waka Hourua Theme — Māori & Pasifika Pūrākau (CO2e badge in bottom-right corner)"
 python3 scripts/render_cards.py --theme waka_hourua --co2-pos bottom-right --out build/waka_preview.html
 python3 scripts/render_boards.py --theme waka_hourua --out build/boards_waka.html
+python3 scripts/render_study_cards.py --theme waka_hourua --co2-pos bottom-right --out build/study_waka.html
 
 : "3. Up on Foils Theme — America's Cup Systems Engineering"
 python3 scripts/render_cards.py --theme foils_pakeha --co2-pos top-right --out build/foils_preview.html
 python3 scripts/render_boards.py --theme foils_pakeha --out build/boards_foils.html
+python3 scripts/render_study_cards.py --theme foils_pakeha --co2-pos top-right --out build/study_foils.html
 ```
 
 ### Step 3: Print to A3 Landscape Paper (or Export to PDF)
-1. Open `build/generic.html` (or `build/waka_preview.html` / `build/boards_generic.html`) in **Chrome**, **Edge**, **Firefox**, or **Safari**.
+1. Open any rendered `.html` file in `build/` (`build/generic.html`, `build/boards_waka.html`, `build/study_foils.html`, etc.) in **Chrome**, **Edge**, **Firefox**, or **Safari**.
 2. Press **`Cmd + P`** (macOS) or **`Ctrl + P`** (Windows/Linux).
 3. Set **Paper Size** to **`A3`**, **Orientation** to **`Landscape`**, **Margins** to **`None`**, **Scale** to **`100%`**, and check **`Background graphics`**.
-4. Slice the card sheets along the dashed `0.25mm` stacked-bond gridlines (`5 vertical cuts × 1 horizontal cut` per sheet), and fold the cut-out `SS0 <-> SS2` token pairs on Playmat Sheet 2 in half!
+4. **Cutting & Folding:**
+   * **Standard Cards (`render_cards.py`):** Slice along the dashed `0.25mm` stacked-bond gridlines (`5 columns × 2 rows = 10 cards/sheet`).
+   * **Fold-Over Study Cards (`render_study_cards.py`):** Slice into **5 vertical strips** (`79mm × 276mm` each) and fold each strip in half along the solid center horizontal crease (`138mm` mark) so the rotated Landscape equation back sits directly behind the Portrait game card front!
+   * **Tokens (`render_boards.py` Sheet 2):** Cut around the dashed token pairs and fold in half (`SS0` liability on Side A $\leftrightarrow$ `SS2` endowment on Side B).
 
 ---
 
 ## 5. Repository Layout, Contributing, & Licensing
 
 * **Narrative & Lore ([`STORIES.md`](STORIES.md)):** The full dual-lens grounding (*Up on Foils* and *Te Waka o Whānau*) plus the side-by-side translation table.
-* **Master Card & Board Databases (`decks/`):** All 43 canonical cards live in [`decks/cards.yaml`](decks/cards.yaml), all 5 double-sided tokens, 5 lifecycle gates, 4 exits, and 7 capital tracks live in [`decks/boards_and_tokens.yaml`](decks/boards_and_tokens.yaml), and the 20 sub-roll slices for Nat 1 and Nat 20 live in [`decks/nat_1.md`](decks/nat_1.md) and [`decks/nat_20.md`](decks/nat_20.md).  Cascading visual themes are available, see: (`themes/generic/`, `themes/foils_pakeha/`, `themes/waka_hourua/`).
+* **Master Card, Study Card, & Board Databases (`decks/`):** All 43 canonical cards live in [`decks/cards.yaml`](decks/cards.yaml), all 43 fold-over LaTeX equations, calibrations, proof bridges, and citations live in [`decks/study_cards.yaml`](decks/study_cards.yaml), all 5 double-sided tokens, 5 lifecycle gates, 4 exits, and 7 capital tracks live in [`decks/boards_and_tokens.yaml`](decks/boards_and_tokens.yaml), and the 20 sub-roll slices for Nat 1 and Nat 20 live in [`decks/nat_1.md`](decks/nat_1.md) and [`decks/nat_20.md`](decks/nat_20.md). Cascading visual themes live in `themes/generic/`, `themes/foils_pakeha/`, and `themes/waka_hourua/`.
 * **Core Rules & Card Design Tutorials (`rules/`):** Complete tabletop rules ([`rules/rules.md`](rules/rules.md)), the Tabletop Playmat & Seven Capitals Guide ([`rules/boards_and_tokens.md`](rules/boards_and_tokens.md)), the `QEA-2026` Game-Changer Tutorial ([`rules/game_changer_tutorial.md`](rules/game_changer_tutorial.md)), and the Finland vs. NZ Disinformation Tutorial ([`rules/T_05_tutorial.md`](rules/T_05_tutorial.md)).
 * **Demographic & Macroeconomic Data (`data/`):** Auditable CSV tables for the Rawlsian `d20` Veil of Ignorance ([`data/d20_veil_of_ignorance.csv`](data/d20_veil_of_ignorance.csv)), the 5-Sector Electrification Scorecard ([`data/electrification_5sector.csv`](data/electrification_5sector.csv)), and the 10-Tier `Earn + Own` Incidence Audit ([`data/earn_plus_own_10tiers.csv`](data/earn_plus_own_10tiers.csv)).
-* **Empirical Source Registry:** See (`metadata/`)
-* **Submitting Pull Requests:** See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines on **Track 1 ("Easy Mode" First-Order Cards)**, **Track 2 ("Challenge Mode" VFI Toolkit Stationary Distribution Shifts)**, **Track 3 (10-Tier / 20-Vigintile Data Customization)**, and **Track 4 (Visual Themes & Card Artwork)**.
+* **Schemas & Empirical Source Registry (`metadata/`):** Formal schemas for game cards ([`metadata/card_schema.yaml`](metadata/card_schema.yaml)), fold-over study cards ([`metadata/study_card_schema.yaml`](metadata/study_card_schema.yaml)), card PR templates ([`metadata/card_template.yaml`](metadata/card_template.yaml)), CO2e badges ([`metadata/co2e_impact.yaml`](metadata/co2e_impact.yaml)), themes ([`metadata/themes_registry.yaml`](metadata/themes_registry.yaml)), and the master bibliography ([`metadata/empirical_sources.yaml`](metadata/empirical_sources.yaml)).
+* **Submitting Pull Requests:** See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines on **Track 1 ("Easy Mode" First-Order Cards)**, **Track 2 ("Challenge Mode" VFI Toolkit Stationary Distribution Shifts + Study Card Equations)**, **Track 3 (10-Tier / 20-Vigintile Data Customization)**, and **Track 4 (Visual Themes & Card Artwork)**.
 * **Lineage, Credits, & Equations-to-Cards Rosetta Stone:** See [`CREDITS.md`](CREDITS.md).
-* **License:** Game rules, cards, playmats, and documentation are licensed under **Creative Commons Attribution-ShareAlike 4.0 International (`CC-BY-SA-4.0`)**. Simulation and rendering scripts are licensed under **`GPL-3.0-or-later` / `MIT`**.
+* **License:** Game rules, cards, study cards, playmats, and documentation are licensed under **Creative Commons Attribution-ShareAlike 4.0 International (`CC-BY-SA-4.0`)**. Simulation and rendering scripts are licensed under **`GPL-3.0-or-later` / `MIT`**.
 
 Donations to [Barnardos Aotearoa](https://investinchildren.nz/donate) (who inspired, but in no way funded, any of this game development) are very welcome.  Ngā mihi nui!

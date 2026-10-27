@@ -132,7 +132,7 @@ lifecycle_gates:
   - id: "GATE:05"
     name: "GATE 5 • KAUMĀTUA & CROSSING OVER (65+)"
     foils_title: "Rear T-Foil Stabilizer & Bequest"
-    waka_title: "Ngā Kete o te Wānanga & Hawaiki Anamata"
+    waka_title: "Ngā Kete o te Wānanga &\nHawaiki Anamata"
     key_cards: ["B:06", "K:06", "N:05", "H:04"]
     ss0_outcome: "Orthodoxy demands raising Super age to 67–70 (H:04); wealth locked in passive dirt until accidental death bequests."
     ss2_outcome: "Universal NZ Super kept at 65; elders pass down Ngā Kete wisdom tokens (1.8x multiplier), Solar PV, & Youth Grant seeds."

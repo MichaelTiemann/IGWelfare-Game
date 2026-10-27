@@ -309,7 +309,7 @@ cards:
       - label: "The Finnish Inoculation Counter-Play (Monilukutaito)"
         rule: "Following Finland (#1 in European Media Literacy Index 2017–2026), couple B:01 (First 2000 Days Executive Function) + B:02 (Ages 12–14 Mentoring) + C:02 (Cognitive Flexibility) to teach critical thinking and psychological inoculation from early childhood. Neutralizes T:05, lifts Social Cohesion from 100.0 to 126.0, and locks in C:06 (#1 Global Trust Rating)."
     flavor_text: "Finland shares a 1,340 km border with the world's largest disinformation factory, yet leads the world in societal trust—because they vaccinated their children's minds in primary school instead of policing the wreckage at Parliament."
-    empirical_anchor: "OSI Media Literacy Index (2017–2026: Finland #1); Koi Tū Centre for Informed Futures (Gluckman & Sridhar, 2023–2026); UNESCO/Sopra Steria Global Disinformation Cost Audit; Zak & Knack (2001)."
+    empirical_anchor: "OSI Media Literacy Index (2017–2026: Finland #1); Koi Tū Centre for Informed Futures (Gluckman & Sridhar, 2023–2026); UNESCO/Sopra Steria Global Disinformation Cost Audit; Zak & Knack (2001).; Berentson-Shaw (2018, BWB: A Matter of Fact)."
     
   # ----------------------------------------------------------------------------
   # MODULE 2: CLIMATE & RESILIENCE EXPANSION — RISING SEAS & SHIFTING WINDS (C:01 - C:06)
@@ -344,7 +344,7 @@ cards:
       - label: "Adaptive Pivot"
         rule: "Attach to your 65.0%+ Thriving Adult Cohort. Whenever an Accelerating Change or Supply-Chain Shock card enters play, your workforce adapts: prevent all unemployment shock damage to Rangatahi (Ages 12–14) and convert the crisis into +1 Frontier Clean-Tech Innovation."
     flavor_text: "Sea walls can crack and spreadsheets go obsolete overnight. A generation raised with executive function, creative agency, and whanaungatanga can rebuild the ship while it's flying."
-    empirical_anchor: "Heckman & Kautz (2012); Lillard (2005); Document 1A Part II Lens 1."
+    empirical_anchor: "Heckman & Kautz (2012); Lillard (2005); Document 1A Part II Lens 1.; Berentson-Shaw (2018, BWB: A Matter of Fact)."
 
   - id: "C:03"
     name: "Project K Wilderness & Kura-ā-Iwi Resilience"

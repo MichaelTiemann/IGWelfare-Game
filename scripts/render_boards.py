@@ -368,7 +368,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
       white-space: nowrap;
     }}
     .gate-subtitle {{
-      font-size: 8pt;
+      font-size: 10pt;
       font-style: italic;
       font-weight: 700;
       color: #0f766e;

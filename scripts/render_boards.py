@@ -28,8 +28,13 @@ from render_common import (
 
 
 def fmt(text: str) -> str:
-    """Escapes HTML and replaces any ASCII '->' with a true right arrow."""
-    return html.escape(str(text)).replace(" -&gt; ", " &rarr; ").replace("-&gt;", "&rarr;")
+    """Escapes HTML, converts newlines to <br/>, and replaces ASCII '->' with right arrows."""
+    return (
+        html.escape(str(text))
+        .replace("\n", "<br/>")
+        .replace(" -&gt; ", " &rarr; ")
+        .replace("-&gt;", "&rarr;")
+    )
 
 
 def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:

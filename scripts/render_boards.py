@@ -68,7 +68,12 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
         kcards = ", ".join(g.get("key_cards", []))
         ss0_out = fmt(g.get("ss0_outcome", ""))
         ss2_out = fmt(g.get("ss2_outcome", ""))
-        subtitle = waka_t if theme_id == "waka_hourua" else f"{foils_t} &bull; {waka_t}"
+        if theme_id == "waka_hourua":
+            subtitle = waka_t
+        elif theme_id == "foils_pakeha":
+            subtitle = foils_t
+        else:
+            subtitle = f"{foils_t}<br/>{waka_t}"
 
         gate_cards_html.append(f"""
         <div class="gate-box">

@@ -6,7 +6,7 @@ Compiles `decks/study_cards.yaml` + `decks/cards.yaml` into A3 Landscape
 (420mm x 297mm) sheets with 5 fold-over cards per sheet (5 columns x 2 rows):
   - Top Row (Back Face): 138mm x 79mm Landscape (rotated -90deg in the 79x138mm
     top slot) featuring MathJax 3 SVG equations, calibrated parameters, proof
-    bridge, and peer-reviewed citations.
+    bridge, peer-reviewed citations, and right-justified Doc 1B/2 reference.
   - Bottom Row (Front Face): Standard 79mm x 138mm Portrait game card.
 
 By default, renders ONLY the cards present in `decks/study_cards.yaml` (padded
@@ -122,19 +122,32 @@ def build_front_card_html(
     """
 
 
+def get_fold_instruction(orient: str) -> str:
+    if orient == "landscape-ccw":
+        return "Fold along left crease &bull; Foils &amp; Founders Study Deck"
+    if orient == "landscape-cw":
+        return "Fold along right crease &bull; Foils &amp; Founders Study Deck"
+    return "Fold along bottom crease &bull; Foils &amp; Founders Study Deck"
+
+
 def build_study_back_html(
     card_front: Dict[str, Any],
     study_entry: Dict[str, Any],
     palettes: Dict[str, Dict[str, str]],
+    card_overrides: Dict[str, Any],
     orient: str,
+    standalone_copyright: bool,
 ) -> str:
     """
     Renders the top-row Back Face (79mm x 138mm slot containing a 138mm x 79mm
     rotated Landscape blackboard with MathJax equation, parameters, proof bridge,
-    and academic citations).
+    academic citations, and right-justified Doc 1B/2 reference in the footer).
     """
     cid = str(card_front.get("id", study_entry.get("id", "B:??"))).strip()
     cname = str(card_front.get("name", "Write-In Study Card")).strip()
+    if cid in card_overrides and "name" in card_overrides[cid]:
+        cname = str(card_overrides[cid]["name"]).strip()
+
     prefix = cid.split(":")[0] if ":" in cid else "B"
     palette = palettes.get(prefix, palettes["B"])
 
@@ -157,16 +170,16 @@ def build_study_back_html(
     rot_class = "rot-ccw" if orient == "landscape-ccw" else (
         "rot-cw" if orient == "landscape-cw" else "rot-180"
     )
+    fold_txt = get_fold_instruction(orient)
+    if standalone_copyright:
+        fold_txt = f"{fold_txt} &bull; {COPYRIGHT_CARD_HTML}"
 
     return f"""
     <div class="study-back-slot" style="--card-border: {border_col}; --header-bg: {header_bg}; --badge-bg: {badge_bg}; --badge-txt: {badge_txt};">
       <div class="study-landscape-canvas {rot_class}">
         <header class="sb-header">
-          <div class="sb-header-left">
-            <span class="pdd-badge">{html.escape(cid)}</span>
-            <span class="sb-card-name">{html.escape(cname)}</span>
-          </div>
-          <span class="sb-mono-ref">📐 {mono_ref}</span>
+          <span class="pdd-badge">{html.escape(cid)}</span>
+          <span class="sb-card-name">{html.escape(cname)}</span>
         </header>
 
         <div class="sb-eq-frame">
@@ -188,8 +201,8 @@ def build_study_back_html(
         </div>
 
         <footer class="sb-footer">
-          <span>Fold along bottom crease &bull; Foils &amp; Founders Study Deck</span>
-          <span>{COPYRIGHT_CARD_HTML}</span>
+          <span class="sb-fold-note">{fold_txt}</span>
+          <span class="sb-mono-ref">📐 {mono_ref}</span>
         </footer>
       </div>
     </div>
@@ -200,6 +213,7 @@ def build_wildcard_study_back_html(
     prefix: str,
     palette: Dict[str, str],
     orient: str,
+    standalone_copyright: bool,
 ) -> str:
     border_col = palette.get("border", "#334155")
     header_bg = palette.get("header_bg", "#f1f5f9")
@@ -208,16 +222,16 @@ def build_wildcard_study_back_html(
     rot_class = "rot-ccw" if orient == "landscape-ccw" else (
         "rot-cw" if orient == "landscape-cw" else "rot-180"
     )
+    fold_txt = get_fold_instruction(orient)
+    if standalone_copyright:
+        fold_txt = f"{fold_txt} &bull; {COPYRIGHT_CARD_HTML}"
 
     return f"""
     <div class="study-back-slot" style="--card-border: {border_col}; --header-bg: {header_bg}; --badge-bg: {badge_bg}; --badge-txt: {badge_txt};">
       <div class="study-landscape-canvas {rot_class}">
         <header class="sb-header">
-          <div class="sb-header-left">
-            <span class="pdd-badge">{html.escape(prefix)}:??</span>
-            <span class="sb-card-name">Write-In Study Card (Track 2 Challenge Mode PR)</span>
-          </div>
-          <span class="sb-mono-ref">📐 Doc 1B §____ • Doc 2: ____________.m</span>
+          <span class="pdd-badge">{html.escape(prefix)}:??</span>
+          <span class="sb-card-name">Write-In Study Card (Track 2 Challenge Mode PR)</span>
         </header>
 
         <div class="sb-eq-frame">
@@ -244,8 +258,8 @@ def build_wildcard_study_back_html(
         </div>
 
         <footer class="sb-footer">
-          <span>Fold along bottom crease &bull; Foils &amp; Founders Study Deck</span>
-          <span>{COPYRIGHT_CARD_HTML}</span>
+          <span class="sb-fold-note">{fold_txt}</span>
+          <span class="sb-mono-ref">📐 Doc 1B §____ • Doc 2: ____________.m</span>
         </footer>
       </div>
     </div>
@@ -261,6 +275,7 @@ def render_study_deck_html(
     co2_pos: str,
     orient: str,
     all_cards: bool,
+    standalone_copyright: bool,
     out_path: Path,
 ) -> str:
     all_front_cards: List[Dict[str, Any]] = cards_data.get("cards", [])
@@ -283,18 +298,19 @@ def render_study_deck_html(
     card_overrides = theme_cfg.get("card_overrides", {})
     search_order = build_theme_search_order(themes_dir, theme_id, theme_cfg)
 
-    # Determine which cards to render (default: only those in study_cards.yaml)
     target_ids: List[str] = (
         [str(c.get("id", "")).strip() for c in all_front_cards]
         if all_cards
         else [str(s.get("id", "")).strip() for s in study_list]
     )
 
-    pairs: List[tuple[str, str]] = []  # (top_back_html, bottom_front_html)
+    pairs: List[tuple[str, str]] = []
     for cid in target_ids:
         front_card = front_by_id.get(cid, {"id": cid, "name": cid})
         study_entry = study_by_id.get(cid, {"id": cid})
-        back_html = build_study_back_html(front_card, study_entry, palettes, orient)
+        back_html = build_study_back_html(
+            front_card, study_entry, palettes, card_overrides, orient, standalone_copyright
+        )
         front_html = build_front_card_html(
             front_card, palettes, card_overrides, themes_dir, search_order, co2_pos, out_path
         )
@@ -309,7 +325,7 @@ def render_study_deck_html(
         pal = palettes.get(pfx, palettes["B"])
         pairs.append(
             (
-                build_wildcard_study_back_html(pfx, pal, orient),
+                build_wildcard_study_back_html(pfx, pal, orient, standalone_copyright),
                 build_wildcard_html(pfx, pal, co2_pos),
             )
         )
@@ -322,7 +338,7 @@ def render_study_deck_html(
         bottom_row_html = "".join(b[1] for b in batch)
         footer_html = build_sheet_footer_html(
             f"Foils &amp; Founders Study Deck ({html.escape(active_theme_name)}) &mdash; "
-            f"A3 Sheet {s + 1} of {total_sheets} (5 Fold-Over Study Cards: Cut 5 Vertical Strips &amp; Fold Top Back Behind Bottom Front)"
+            f"A3 Sheet {s + 1} of {total_sheets} (5 Fold-Over Study Cards: Cut 5 Vertical Strips &amp; Fold Along Center Crease)"
         )
         sheet_blocks.append(f"""
         <section class="a3-sheet">
@@ -354,7 +370,6 @@ def render_study_deck_html(
       startup: {{
         pageReady: () => {{
           return MathJax.startup.defaultPageReady().then(() => {{
-            // Auto-fit any wide equations inside their 130mm container
             document.querySelectorAll('.sb-eq-math').forEach(box => {{
               const svg = box.querySelector('svg');
               if (svg) {{
@@ -464,7 +479,7 @@ def render_study_deck_html(
       left: 50%;
       width: 138mm;
       height: 79mm;
-      padding: 2.6mm 3.2mm 2mm 3.2mm;
+      padding: 2.4mm 3.2mm 1.8mm 3.2mm;
       border-top: 2.2mm solid var(--card-border);
       display: flex;
       flex-direction: column;
@@ -482,7 +497,6 @@ def render_study_deck_html(
     /* Landscape Study Card Interior Elements */
     .sb-header {{
       display: flex;
-      justify-content: space-between;
       align-items: center;
       background: var(--header-bg);
       padding: 1.2mm 2mm;
@@ -491,32 +505,14 @@ def render_study_deck_html(
       gap: 2mm;
       flex-shrink: 0;
     }}
-    .sb-header-left {{
-      display: flex;
-      align-items: center;
-      gap: 1.8mm;
-      min-width: 0;
-    }}
     .sb-card-name {{
       font-family: var(--font-heading);
-      font-size: 8.2pt;
+      font-size: 8.6pt;
       font-weight: 800;
       color: #0f172a;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }}
-    .sb-mono-ref {{
-      font-family: var(--font-mono);
-      font-size: 5.8pt;
-      font-weight: 700;
-      color: #334155;
-      background: #ffffff;
-      padding: 0.5mm 1.5mm;
-      border-radius: 0.8mm;
-      border: 0.25mm solid #cbd5e1;
-      white-space: nowrap;
-      flex-shrink: 0;
     }}
     .sb-eq-frame {{
       background: #f8fafc;
@@ -599,11 +595,24 @@ def render_study_deck_html(
       justify-content: space-between;
       align-items: center;
       font-family: var(--font-mono);
-      font-size: 4.8pt;
-      color: #94a3b8;
-      border-top: 0.2mm solid #e2e8f0;
-      padding-top: 0.5mm;
+      border-top: 0.25mm solid #cbd5e1;
+      padding-top: 0.6mm;
       flex-shrink: 0;
+    }}
+    .sb-fold-note {{
+      font-size: 5.0pt;
+      color: #64748b;
+    }}
+    .sb-mono-ref {{
+      font-family: var(--font-mono);
+      font-size: 5.4pt;
+      font-weight: 700;
+      color: #1e293b;
+      background: #f1f5f9;
+      padding: 0.3mm 1.4mm;
+      border-radius: 0.8mm;
+      border: 0.25mm solid #cbd5e1;
+      white-space: nowrap;
     }}
   </style>
 </head>
@@ -662,6 +671,11 @@ def main() -> None:
         help="Render all 43 cards in cards.yaml instead of only the entries in study_cards.yaml",
     )
     parser.add_argument(
+        "--standalone-copyright",
+        action="store_true",
+        help="Include copyright notice on the study card back as well (for standalone printing)",
+    )
+    parser.add_argument(
         "--out",
         type=Path,
         default=Path("build/study_generic.html"),
@@ -682,6 +696,7 @@ def main() -> None:
         args.co2_pos,
         args.back_orient,
         args.all_cards,
+        args.standalone_copyright,
         args.out,
     )
 

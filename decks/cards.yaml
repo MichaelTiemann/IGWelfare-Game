@@ -23,7 +23,7 @@ metadata:
     C: "Module 2: Climate & Resilience — Rising Seas & Shifting Winds (C:01 to C:06)"
     K: "Module 3: Wayfinders & Kaupapa — Companion Persona Deck (K:01 to K:07)"
     N: "Module 4: Reaching Abundance & Crossing Infinite Horizons — Nobel Archive (N:01 to N:06)"
-    H: "Module 5: The Orthodoxy Boss Deck & Combo Counter-Plays (H:01 to H:05)"
+    H: "Module 5: The Orthodoxy Boss Deck & Combo Counter-Plays (H:01 to H:06)"
     E: "Module 6: Game-Changer Tutorial — Firming the Economic Grid (E:01 to E:03)"
 
 cards:
@@ -482,7 +482,7 @@ cards:
     synergy_links: ["B:08", "E:02", "K:02", "K:06", "N:01", "N:05"]
     effects:
       - label: "Innate Kaupapa — Inspect the 8-PType Engine (Tap)"
-        rule: "Reveal the hidden general-equilibrium feedback loops across Rural, Small, Large, Auckland, and Abroad (C:05). Neutralize any 'Ideological Bluff' or 'Zero-Sum Myth' card played by the Orthodoxy Deck (H:01–H:05) by citing Dunedin Study elasticities and the 11 Historical Precedents."
+        rule: "Reveal the hidden general-equilibrium feedback loops across Rural, Small, Large, Auckland, and Abroad (C:05). Neutralize any 'Ideological Bluff' or 'Zero-Sum Myth' card played by the Orthodoxy Deck (H:01–H:06) by citing Dunedin Study elasticities and the 11 Historical Precedents."
       - label: "Dual-Class with K:02 (Founder as Economist)"
         rule: "Combine N:01 (Coase), N:03 (Williamson), N:04 (Ostrom), and N:05 (Romer) to prove that lowering transaction costs and unlocking non-rival human capability generates a +20.49% National Welfare Gain and NZD 1,510.7B in 60-year cash GDP."
       - label: "Dual-Class with K:06 (The Kaumātua Dividend)"
@@ -649,7 +649,7 @@ cards:
     empirical_anchor: "Document 1C Section 6 Conclusion."
 
   # ----------------------------------------------------------------------------
-  # MODULE 5: THE ORTHODOXY BOSS DECK & COMBO COUNTER-PLAYS (H:01 - H:05)
+  # MODULE 5: THE ORTHODOXY BOSS DECK & COMBO COUNTER-PLAYS (H:01 - H:06)
   # ----------------------------------------------------------------------------
   - id: "H:01"
     name: "The Cash-Flow Myopia Trap ('Wait 18.8 Years!') vs. The Coase–Williamson Audit"
@@ -735,6 +735,24 @@ cards:
         rule: "Legally lock 50% of every net fiscal surplus into the Sovereign Debt Reduction Sinking Fund (retiring NZD 17.8B–21.9B of debt per wave and cutting interest rates by 60 bps) and 50% into the Public Infrastructure Pool (at a 1.65x multiplier). Prevent the land bubble, keep NZ Super at 65, and deliver a permanent -3.5 pp PAYE tax cut in SS2."
     flavor_text: "Generating a miracle takes a front foil and a wing-sail. Keeping it for your grandchildren takes a rear T-foil stabilizer."
     empirical_anchor: "Document 1A Part V Section 1 & Part VI Coda (Deming's 1950 Lecture vs. 1989 Tokyo Bubble)."
+
+- id: "H:06"
+    name: "The 1972 Nostalgia Baseline (Dunedin vs. GUiNZ Shift)"
+    type: "Orthodoxy Boss Hazard — Structural Safety-Net Decay"
+    gate_or_phase: "Gate 1 (Ages 0–5) & Gate 2 (Ages 12–14)"
+    cost_or_requirement: "Boss Hazard: Active in SS0 whenever Gate 1 (B:01) & Housing Cooling (B:05/K:03) are unplayed."
+    co2e_impact:
+      category: "hazard"
+      badge_text: "🏠 Damp Rental Churn"
+      note: "Uninsulated private rental transience locks bottom-30% whānau into winter heating poverty and respiratory hospital admissions."
+    effects:
+      - label: "First-Order Effect (The 1972 → 2010 Safety-Net Erosion)"
+        rule: "Orthodox models calibrate to the 1972 Dunedin birth cohort (22% vulnerability under 1.2x rents and Universal Family Benefit), ignoring the 2010 GUiNZ reality where 3.1x urban rents and >45% rental transience drag Vigintiles 5 & 6 (d20 rolls 1–6 = 30%) into the Stone–Geary corner (i_c = 0)."
+      - label: "Second-Order Effect (Compounding Misery & Fiscal Penalty)"
+        rule: "Increases SS0 Remediation Hull Drag from NZD 17.7B/yr to NZD 28.5B/yr (+NZD 10.8B/yr across Exits 1, 2, & 4), drops Social Cohesion by -8.5 pts (100.0 → 91.5), and pushes 2050 PAYE drift to 30.4%. Countered by B:01 + B:05/K:03 + B:02 (boosting B:07 Year-5 Actuarial Return by +0.6x to 4.4x!)."
+    flavor_text: "You cannot budget for a 2026 housing and child-poverty crisis using a rearview mirror pointed at 1972."
+    empirical_anchor: "Dunedin Study (1972–73 cohort, n=1,037: 22% vulnerability) vs. Growing Up in NZ (2009–10 cohort, n=6,853: 14.3% acute persistent deprivation + 13.7% transient rental squeeze = 28%–30% total exposure; Now We Are 12 & 15 waves)."
+    synergy_links: ["B:00", "B:01", "B:02", "B:05", "B:07", "K:03"]
 
   # ----------------------------------------------------------------------------
   # MODULE 6: GAME-CHANGER TUTORIAL — FIRMING THE ECONOMIC GRID (E:01 - E:03)

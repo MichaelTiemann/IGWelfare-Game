@@ -137,3 +137,8 @@ card_overrides:
       - label: "Good Ancestors for Our Mokopuna"
         rule: "Restore Aotearoa's Social Credit & Trust Rating (C:06) to #1 in the World, permanently lock in B:06 (Ngā Kete o te Wānanga 2050 Protocol), and unlock B:09 (He Tāngata) and N:06 (The Aotearoa Synthesis)."
     flavor_text: "Nā tō rourou, nā taku rourou ka ora ai te iwi — With your food basket and my food basket, the people will thrive. When all five crews paddle as one Waka Hourua, Aotearoa crosses the deepest sea."
+
+"H:06":
+    name: "Te Maru o Mua — The Broken 1972 Safety-Net Illusion (Dunedin vs. GUiNZ)"
+    type: "Orthodoxy Boss Hazard — Structural Whānau & Housing Erosion"
+    flavor_text: "Measuring today's mokopuna against the shelter of 1972 hides the storm that stripped the roof away."

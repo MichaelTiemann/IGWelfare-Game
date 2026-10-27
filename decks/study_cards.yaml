@@ -314,7 +314,7 @@ study_cards:
     monograph_ref: "Doc 1B §2.4 • Rules: STORIES.md"
     equation_title: "Akerlof–Kranton Identity Utility & Pūrākau Engagement Operator"
     latex_equation: |
-      U_j^i(c, \ell, e_2) = u(c, \ell) + \lambda_{\text{id}} \, \mathcal{I}_{\text{p\={u}r\={a}kau}}\big(e_2, M_{\text{tuakana}}, \text{Cohesion}_t\big), \qquad \frac{\partial e_2^\star}{\partial \mathcal{I}_{\text{p\={u}r\={a}kau}}} > 0
+      U_j^i(c, \ell, e_2) = u(c, \ell) + \lambda_{\text{id}} \, \mathcal{I}_{\mathrm{p\bar{u}r\bar{a}kau}}\big(e_2, M_{\text{tuakana}}, \text{Cohesion}_t\big), \qquad \frac{\partial e_2^\star}{\partial \mathcal{I}_{\mathrm{p\bar{u}r\bar{a}kau}}} > 0
     parameters: "Lifts Gate 2 school/mentoring engagement from 17.3% → 65.0%+ | Blocks alienated dropout (Exit 4) and T:05 outrage susceptibility"
     proof_bridge: "When rangatahi see their own whakapapa and pūrākau reflected in kura, arts, and mentoring (B:02 + C:03), identity utility (I_pūrākau) reinforces educational effort e₂* rather than warring against it."
     citations:
@@ -336,7 +336,7 @@ study_cards:
     monograph_ref: "Doc 1B §6.2 • Rules: STORIES.md"
     equation_title: "Double-Hull Supermodularity & Nash Cooperative Bargaining Theorem"
     latex_equation: |
-      \mathcal{W}\big(\text{Hull}_{\text{Foils}} \cup \text{Hull}_{\text{Waka}}\big) - \Big[ \mathcal{W}\big(\text{Hull}_{\text{Foils}}\big) + \mathcal{W}\big(\text{Hull}_{\text{Waka}}\big) \Big] = \Delta_{\text{k\={\i}ato}} > 0
+      \mathcal{W}\big(\text{Hull}_{\text{Foils}} \cup \text{Hull}_{\text{Waka}}\big) - \Big[ \mathcal{W}\big(\text{Hull}_{\text{Foils}}\big) + \mathcal{W}\big(\text{Hull}_{\text{Waka}}\big) \Big] = \Delta_{\mathrm{k\bar{\imath}ato}} > 0
     parameters: "Supermodular Kīato Cross-Beam Dividend Δ_kīato > 0 | Drives Social Cohesion Index to 126.0 and neutralizes T:05 polarisation"
     proof_bridge: "By Topkis's Supermodularity Theorem, lashing institutional/actuarial precision (Hull A) to whakapapa/kaitiakitanga (Hull B) via the Kīato cross-beams generates strictly higher welfare than either tradition alone."
     citations:
@@ -350,7 +350,7 @@ study_cards:
     monograph_ref: "Doc 1B §3.3 • Doc 2: Compute_Actuarial_NPV_4Region.m"
     equation_title: "Coase–North Institutional Transaction-Cost & Red-Tape Compression"
     latex_equation: |
-      G_{\text{effective},1} = \big(1 - \tau_{\text{friction}}\big) G_{\text{nominal},1}, \qquad \tau_{\text{friction}}(\text{SS0 Silos}) \approx 0.32 \;\longrightarrow\; \tau_{\text{friction}}(\text{SS2 Wh\={a}nau Ora}) \le 0.08
+      G_{\text{effective},1} = \big(1 - \tau_{\text{friction}}\big) G_{\text{nominal},1}, \qquad \tau_{\text{friction}}(\text{SS0 Silos}) \approx 0.32 \;\longrightarrow\; \tau_{\text{friction}}(\text{SS2 Wh}\bar{\text{a}}\text{nau Ora}) \le 0.08
     parameters: "Cuts institutional agency/compliance friction by 75% (from 32% siloed overhead to ≤8% high-trust commissioning)"
     proof_bridge: "Replacing fragmented, adversarial agency silos (H:02) with unified high-trust Whānau Ora / Te Korowai commissioning ensures 92%+ of every public dollar reaches the child's CES skill production function."
     citations:

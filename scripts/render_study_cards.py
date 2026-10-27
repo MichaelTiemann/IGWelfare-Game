@@ -298,47 +298,71 @@ def render_study_deck_html(
     card_overrides = theme_cfg.get("card_overrides", {})
     search_order = build_theme_search_order(themes_dir, theme_id, theme_cfg)
 
-    target_ids: List[str] = (
+    raw_ids: List[str] = (
         [str(c.get("id", "")).strip() for c in all_front_cards]
         if all_cards
         else [str(s.get("id", "")).strip() for s in study_list]
     )
 
-    pairs: List[tuple[str, str]] = []
-    for cid in target_ids:
-        front_card = front_by_id.get(cid, {"id": cid, "name": cid})
-        study_entry = study_by_id.get(cid, {"id": cid})
-        back_html = build_study_back_html(
-            front_card, study_entry, palettes, card_overrides, orient, standalone_copyright
-        )
-        front_html = build_front_card_html(
-            front_card, palettes, card_overrides, themes_dir, search_order, co2_pos, out_path
-        )
-        pairs.append((back_html, front_html))
+    # Group cards into 5-card core packs per deck prefix, then collect overflows
+    by_prefix: Dict[str, List[str]] = {p: [] for p in DECK_ORDER}
+    for cid in raw_ids:
+        pfx = cid.split(":")[0] if ":" in cid else "B"
+        by_prefix.setdefault(pfx, []).append(cid)
 
-    # Pad to a multiple of 5 (5 fold-over cards per A3 sheet)
-    cards_per_sheet = 5
-    rem = len(pairs) % cards_per_sheet
-    pad_count = (cards_per_sheet - rem) if rem != 0 else 0
-    for i in range(pad_count):
-        pfx = DECK_ORDER[i % len(DECK_ORDER)]
-        pal = palettes.get(pfx, palettes["B"])
-        pairs.append(
-            (
-                build_wildcard_study_back_html(pfx, pal, orient, standalone_copyright),
-                build_wildcard_html(pfx, pal, co2_pos),
-            )
-        )
+    full_packs: List[tuple[str, List[str]]] = []
+    overflow_ids: List[str] = []
+    for pfx in DECK_ORDER:
+        cids = by_prefix.get(pfx, [])
+        num_full = len(cids) // 5
+        for p_idx in range(num_full):
+            chunk = cids[p_idx * 5 : (p_idx + 1) * 5]
+            pack_label = f"Pack {pfx}{p_idx + 1} ({chunk[0]}&ndash;{chunk[-1]})"
+            full_packs.append((pack_label, chunk))
+        rem_cids = cids[num_full * 5 :]
+        overflow_ids.extend(rem_cids)
 
-    total_sheets = len(pairs) // cards_per_sheet
+    # Pack overflow cards into sheets of 5
+    for ov_idx in range(0, len(overflow_ids), 5):
+        chunk = overflow_ids[ov_idx : ov_idx + 5]
+        ov_num = (ov_idx // 5) + 1
+        label_ids = ", ".join(chunk)
+        full_packs.append((f"Overflow Pack {ov_num} ({label_ids})", chunk))
+
+    total_sheets = len(full_packs)
     sheet_blocks: List[str] = []
-    for s in range(total_sheets):
-        batch = pairs[s * cards_per_sheet : (s + 1) * cards_per_sheet]
+    wildcard_counter = 0
+
+    for s_idx, (pack_label, chunk_ids) in enumerate(full_packs):
+        batch: List[tuple[str, str]] = []
+        for cid in chunk_ids:
+            front_card = front_by_id.get(cid, {"id": cid, "name": cid})
+            study_entry = study_by_id.get(cid, {"id": cid})
+            back_html = build_study_back_html(
+                front_card, study_entry, palettes, card_overrides, orient, standalone_copyright
+            )
+            front_html = build_front_card_html(
+                front_card, palettes, card_overrides, themes_dir, search_order, co2_pos, out_path
+            )
+            batch.append((back_html, front_html))
+
+        # Pad any partial overflow sheet to 5 cards with Write-In Study Wildcards
+        while len(batch) < 5:
+            pfx = DECK_ORDER[wildcard_counter % len(DECK_ORDER)]
+            wildcard_counter += 1
+            pal = palettes.get(pfx, palettes["B"])
+            batch.append(
+                (
+                    build_wildcard_study_back_html(pfx, pal, orient, standalone_copyright),
+                    build_wildcard_html(pfx, pal, co2_pos),
+                )
+            )
+
         top_row_html = "".join(b[0] for b in batch)
         bottom_row_html = "".join(b[1] for b in batch)
         footer_html = build_sheet_footer_html(
             f"Foils &amp; Founders Study Deck ({html.escape(active_theme_name)}) &mdash; "
-            f"A3 Sheet {s + 1} of {total_sheets} (5 Fold-Over Study Cards: Cut 5 Vertical Strips &amp; Fold Along Center Crease)"
+            f"A3 Sheet {s_idx + 1} of {total_sheets}: {pack_label}"
         )
         sheet_blocks.append(f"""
         <section class="a3-sheet">

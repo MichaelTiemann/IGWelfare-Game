@@ -98,7 +98,7 @@ tokens:
 # ------------------------------------------------------------------------------
 lifecycle_gates:
   - id: "GATE:01"
-    name: "GATE 1 • FIRST 2000 DAYS (0–5)"
+    name: "GATE 1 • (Ages 0–5)\nFIRST 2000 DAYS"
     foils_title: "Front Lifting Foil (Stage 1)"
     waka_title: "He Kākano i Rangiātea (Being)"
     key_cards: ["B:00", "B:01", "N:02", "K:01"]
@@ -106,7 +106,7 @@ lifecycle_gates:
     ss2_outcome: "NZD 13.0k/yr in-kind wraparound compresses stunting to 1.5% and crowds in +NZD 15.3k private parental care."
 
   - id: "GATE:02"
-    name: "GATE 2 • RANGATAHI NAVIGATION (12–14)"
+    name: "GATE 2 • (Ages 12–14)\nRANGATAHI NAVIGATION"
     foils_title: "Front Foil Strut (Stage 2)"
     waka_title: "Te Pikinga o Tāne & Tuakana–Teina (Becoming)"
     key_cards: ["B:02", "C:02", "C:03", "T:05"]
@@ -114,7 +114,7 @@ lifecycle_gates:
     ss2_outcome: "65.0%+ mentored via Stars, Project K, Kura-ā-Iwi, & Montessori; immune to job shocks and T:05 outrage drag."
 
   - id: "GATE:03"
-    name: "GATE 3 • YOUNG ADULT LAUNCH (20–35)"
+    name: "GATE 3 • (Ages 20–35)\nYOUNG ADULT LAUNCH"
     foils_title: "Wing-Sail Power Plant (Launch)"
     waka_title: "Tūrangawaewae & Ka Hao te Rangatahi"
     key_cards: ["B:03", "B:05", "T:04", "H:03"]
@@ -122,7 +122,7 @@ lifecycle_gates:
     ss2_outcome: "Universal NZD 62k+ Youth Capital Grant seed; homeownership 28.0% → 41.5%; 3,550/yr graduates retained."
 
   - id: "GATE:04"
-    name: "GATE 4 • MID-CAREER STEWARDSHIP (36–64)"
+    name: "GATE 4 • (Ages 36–64)\nMID-CAREER STEWARDSHIP"
     foils_title: "Full Foil Flight & Grid Firming"
     waka_title: "Kaitiakitanga & Whānau Flourishing"
     key_cards: ["B:04", "B:05", "E:02", "E:03"]
@@ -130,7 +130,7 @@ lifecycle_gates:
     ss2_outcome: "PAYE cut to 18.5% (-3.5 pp); +3.2% to +9.6% real wages; pv=5 Solar Endowment frees leisure and working capital."
 
   - id: "GATE:05"
-    name: "GATE 5 • KAUMĀTUA & CROSSING OVER (65+)"
+    name: "GATE 5 • (Ages 65+)\nKAUMĀTUA & CROSSING OVER"
     foils_title: "Rear T-Foil Stabilizer & Bequest"
     waka_title: "Ngā Kete o te Wānanga &\nHawaiki Anamata"
     key_cards: ["B:06", "K:06", "N:05", "H:04"]
@@ -164,49 +164,49 @@ exits_and_drains:
 # ------------------------------------------------------------------------------
 capital_tracks:
   - id: "CAP:01"
-    name: "1. Financial & Actuarial Capital (Crown & Household Ledger)"
+    name: "1. Financial & Actuarial Capital\n    (Crown & Household Ledger)"
     ss0_baseline: "-NZD 17.7B/yr Drag | 200% Debt Path | 22.0% → 28.2% PAYE"
     ss1_milestone: "Year 5 ACC Breakeven: 1.2x Direct (NZD 10.7B) / 3.8x Total (NZD 35.3B)"
     ss2_victory: "<40% Crown Debt | -60 to -100 bps Rates | 18.5% PAYE (-3.5 pp Cut)"
     primary_cards: ["B:05", "B:06", "B:07", "N:03"]
 
   - id: "CAP:02"
-    name: "2. Built Environment & Grid Infrastructure"
+    name: "2. Built Environment &\n    Grid Infrastructure"
     ss0_baseline: "3.1x Metro Rent Crush | Brittle Grid | NZD 6.2B LNG Boondoggle"
     ss1_milestone: "Rents Cooled -7.5% | Schools & Marae Solar Microgrids (NZD 1.2B–1.5B)"
     ss2_victory: "1.7x Coastal & Grid Armor (C:04) | Rents -10.5% | +NZD 15.6B/yr Energy Savings"
     primary_cards: ["C:04", "E:01", "E:02", "E:03"]
 
   - id: "CAP:03"
-    name: "3. Domestic & Whānau Care Capital"
+    name: "3. Domestic &\n    Whānau Care Capital"
     ss0_baseline: "Stone–Geary Subsistence Corner (i_c = 0) | Crushed Working-Age Leisure"
     ss1_milestone: "+NZD 15.3k/yr Crowded-In Parental Care (NZD 8.7k Cash + 6.5k Time)"
     ss2_victory: "Expanded Lifespan Leisure (leisure_h) + Warm Intergenerational Solar Homes"
     primary_cards: ["B:01", "N:02", "E:02"]
 
   - id: "CAP:04"
-    name: "4. Natural & Ecological Capital (Kaitiakitanga & CO2e)"
+    name: "4. Natural & Ecological Capital\n    (Kaitiakitanga & CO2e)"
     ss0_baseline: "+1°C Bilal–Känzig Shock (USD 1,200/tCO2e) | 20B/yr Imported Fossil Fuels"
     ss1_milestone: "-10.0 MtCO2e/yr (E:01) | No Imported LNG Terminal (-3.2 MtCO2e)"
     ss2_victory: "-14.8 MtCO2e/yr (5-Sector Solar + 19k Farm Ponds) | Resilient Catchments"
     primary_cards: ["C:01", "C:04", "E:01", "E:02", "E:03"]
 
   - id: "CAP:05"
-    name: "5. Social & Epistemic Capital (Trust & Cohesion)"
+    name: "5. Social & Epistemic Capital\n    (Trust & Cohesion)"
     ss0_baseline: "Index 100.0 (81/100 CPI Slide; 40.0% Govt Trust; T:05 Outrage Tax)"
     ss1_milestone: "Index 114.8 | Finnish Monilukutaito Inoculation at Gates 1 & 2"
     ss2_victory: "Index 126.0 (#1 Global Trust Rating — Surpassing Finland & Denmark)"
     primary_cards: ["B:02", "C:02", "C:06", "T:05"]
 
   - id: "CAP:06"
-    name: "6. Cultural & Pūrākau Capital (Te Tiriti & Creative IP)"
+    name: "6. Cultural & Pūrākau Capital\n    (Te Tiriti & Creative IP)"
     ss0_baseline: "Siloed Hulls | Alienated Rangatahi | Cultural Talent Drained Abroad"
     ss1_milestone: "Two Hulls Lashed by Kīato (K:07) | Kura-ā-Iwi & Pasifika Academies"
     ss2_victory: "Aotearoa Creative & Kaikōrero Renaissance (B:03 + K:05 + K:07)"
     primary_cards: ["B:03", "C:03", "K:05", "K:07"]
 
   - id: "CAP:07"
-    name: "7. Technology & Collective Intelligence Capital"
+    name: "7. Technology &\n    Collective Intelligence Capital"
     ss0_baseline: "Lavoisier Syndrome (T:04: Top Minds in z_l Property Speculation)"
     ss1_milestone: "Talent Cutoff Flipped to Builders (z_h) | 8-PType GPU Solver Online (B:08)"
     ss2_victory: "65.0% Thriving Launch | +3.2%–9.6% Real Wages | 1.8x Romer Multiplier (N:05)"

@@ -27,13 +27,19 @@ from render_common import (
 )
 
 
+import re
+
 def fmt(text: str) -> str:
-    """Escapes HTML, converts newlines to <br/>, and replaces ASCII '->' with right arrows."""
-    return (
+    """Escapes HTML, converts newlines + leading spaces to <br/> + &nbsp;, and replaces '->'."""
+    escaped = (
         html.escape(str(text))
-        .replace("\n", "<br/>")
         .replace(" -&gt; ", " &rarr; ")
         .replace("-&gt;", "&rarr;")
+    )
+    return re.sub(
+        r"\n( *)",
+        lambda m: "<br/>" + ("&nbsp;" * len(m.group(1))),
+        escaped,
     )
 
 
@@ -359,7 +365,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
     }}
     .gate-pill-title {{
       font-family: var(--font-heading);
-      font-size: 8.8pt;
+      font-size: 11pt;
       font-weight: 900;
       letter-spacing: 0.01em;
       white-space: nowrap;
@@ -367,7 +373,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
     }}
     .gate-pill-keys {{
       font-family: var(--font-mono);
-      font-size: 7.2pt;
+      font-size: 8pt;
       color: #e2e8f0;
       font-weight: 700;
       white-space: nowrap;

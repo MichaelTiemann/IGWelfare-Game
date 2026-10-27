@@ -1,0 +1,82 @@
+# ==============================================================================
+# FOILS & FOUNDERS: THE AOTEAROA DECK — STUDY CARD SCHEMA (JSON SCHEMA DRAFT 2020-12)
+# Validates `decks/study_cards.yaml` (Fold-Over Equations, Calibrations, & Citations)
+# Companion to `metadata/card_schema.yaml`
+# ==============================================================================
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://github.com/MichaelTiemann/IGWelfare-Game/blob/main/metadata/study_card_schema.yaml"
+title: "Foils & Founders Study Deck Schema"
+description: >
+  Schema for `decks/study_cards.yaml`, which pairs each canonical `P:DD` card in
+  `decks/cards.yaml` with a rotated 138mm x 79mm Landscape Back Face containing
+  a formal LaTeX equation, GPU solver calibration parameters, a one-sentence
+  tabletop proof bridge, and peer-reviewed literature citations.
+type: object
+required:
+  - metadata
+  - study_cards
+properties:
+  metadata:
+    type: object
+    required:
+      - title
+      - version
+      - author
+      - license
+    properties:
+      title:
+        type: string
+      version:
+        type: string
+      author:
+        type: string
+      license:
+        type: string
+
+  study_cards:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/StudyCard"
+
+$defs:
+  StudyCard:
+    type: object
+    required:
+      - id
+      - monograph_ref
+      - equation_title
+      - latex_equation
+      - parameters
+      - proof_bridge
+      - citations
+    properties:
+      id:
+        type: string
+        pattern: "^[BTCKNHE]:[0-9]{2}$"
+        description: "Permanent P:DD card identifier matching an entry in `decks/cards.yaml`."
+      monograph_ref:
+        type: string
+        description: "Cross-reference to Document 1B section and Document 2 MATLAB/GPU script (rendered bottom-right)."
+      equation_title:
+        type: string
+        description: "Concise uppercase header naming the formal mathematical identity or theorem."
+      latex_equation:
+        type: string
+        description: >
+          Display-mode LaTeX equation rendered via MathJax 3 SVG (`[ ... ]`).
+          Note: Use standard LaTeX macron escapes (e.g., `\={a}`, `\={u}`, `\={\i}`)
+          inside `\text{...}` blocks for clean SVG glyph rendering.
+      parameters:
+        type: string
+        description: "Pipe-delimited summary of calibrated parameter values and stationary-distribution shifts."
+      proof_bridge:
+        type: string
+        description: "Single punchy sentence explaining why the formal equation guarantees the card's tabletop effect."
+      citations:
+        type: array
+        minItems: 1
+        maxItems: 4
+        items:
+          type: string
+        description: "Peer-reviewed econometric, theoretical, and longitudinal empirical citations."

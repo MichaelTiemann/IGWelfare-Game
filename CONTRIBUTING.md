@@ -22,12 +22,17 @@ IGWelfare-Game/
 │   └── T_05_tutorial.md               # Worked case study: Finland vs. NZ Disinformation Drag (T:05)
 ├── decks/
 │   ├── cards.yaml                     # Canonical master database of all 43 P:DD cards (+ 7 P:?? wildcards)
+│   ├── study_cards.yaml               # Fold-over Landscape backs: LaTeX equations, parameters, & citations
 │   ├── boards_and_tokens.yaml         # Canonical schema for A3 playmats, 7 capitals, & 5 double-sided tokens
 │   ├── nat_1.md                       # Confirming the Fumble: 20 sub-roll slices of the Bottom 5% (01:01-01:20)
 │   └── nat_20.md                      # Confirming the Crit: 20 sub-roll slices of the Top 5% (20:01-20:20)
 ├── metadata/
+│   ├── card_schema.yaml               # JSON Schema validating decks/cards.yaml
+│   ├── study_card_schema.yaml         # JSON Schema validating decks/study_cards.yaml
 │   ├── card_template.yaml             # Blank copy-paste YAML template for new card PRs
-│   └── empirical_sources.yaml         # Master bibliography of empirical & theoretical anchors
+│   ├── co2e_impact.yaml               # Schema & methodology for card CO2e badges
+│   ├── empirical_sources.yaml         # Master bibliography of empirical & theoretical anchors
+│   └── themes_registry.yaml           # Registry of available visual themes & fallback chains
 ├── themes/
 │   ├── generic/                       # Root fallback theme (Markdown-driven typography)
 │   │   ├── theme.yaml                 # Base CSS variables, fonts, & deck color borders

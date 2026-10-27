@@ -75,7 +75,7 @@ DEFAULT_CO2E_BADGES: Dict[str, Dict[str, str]] = {
     "E:03": {"display": "-3.2 MtCO2e (No LNG)", "status": "computed"},
 }
 
- DECK_ORDER = ["B", "T", "C", "K", "N", "H", "E"]
+DECK_ORDER = ["B", "T", "C", "K", "N", "H", "E"]
 
 
 def find_card_asset(themes_dir: Path, search_order: List[str], card_id: str) -> Optional[Path]:

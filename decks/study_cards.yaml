@@ -413,7 +413,7 @@ study_cards:
       - "Stiglitz, J. E., Sen, A., & Fitoussi, J.-P. (2009). Report by the Commission on the Measurement of Economic Performance and Social Progress."
 
   # ============================================================================
-  # MODULE 5: ORTHODOXY BOSS DECK (H:01 - H:05)
+  # MODULE 5: ORTHODOXY BOSS DECK (H:01 - H:06)
   # ============================================================================
   - id: "H:01"
     monograph_ref: "Doc 1B §3.4 • Doc 2: Compute_Actuarial_NPV_4Region.m"
@@ -469,6 +469,18 @@ study_cards:
     citations:
       - "Chamley, C. (1986), & Judd, K. L. (1985) vs. Straub, L., & Werning, I. (2020). Positive long-run capital taxation: Chamley–Judd revisited. American Economic Review, 110(1), 86–119."
       - "Guvenen, F., et al. (2023). Use it or lose it: Efficiency and redistributional effects of wealth taxation. Quarterly Journal of Economics, 138(2), 835–894."
+
+- id: "H:06"
+    monograph_ref: "Doc 1A §3.6 & Doc 1B §2.3 • Script: scripts/audit_guinz_vs_dunedin.py"
+    equation_title: "Cohort Distribution Drift & Stone–Geary Subsistence Boundary Shift (1972 → 2010)"
+    latex_equation: |
+      \Delta \mathcal{D}_{\text{GUiNZ}} = \sum_{x \in \{1,2,4\}} \int_{\mathcal{S}} C_x(s) \, d\Big(\mu_{2010}^{\text{GUiNZ}}(s) - \mu_{1972}^{\text{Dunedin}}(s)\Big) = +\text{NZD } 10.8\text{B/yr}, \qquad \frac{\partial^2 h_2}{\partial G_{\text{ECE},1}^{\text{in-kind}} \, \partial \Pr(i_c = 0)} > 0
+    parameters: "Pr(i_c = 0): 22.0% (1972 Dunedin, d20 1–4) → 30.0% (2010 GUiNZ, d20 1–6) | >45% rental transience cuts γ₁ by −25% | SS0 Drag: NZD 17.7B → 28.5B/yr"
+    proof_bridge: "When 3.1× urban rents and 1991 safety-net cuts expand the zero-investment corner (i_c = 0) from 22% to 30% of births, unbuffered fiscal drag surges by +NZD 10.8B/yr—while the marginal actuarial return (B:07) of in-kind wraparound (B:01) rises from 3.8× to 4.4×."
+    citations:
+      - "Morton, S. M. B., et al. (2023–2025). Growing Up in New Zealand: Now We Are 12 & Now We Are 15 Longitudinal Reports (Material Hardship, Transience, & Youth Mental Health)."
+      - "Poulton, R., Moffitt, T. E., & Silva, P. A. (2015). The Dunedin Multidisciplinary Health and Development Study: Overview of the first 40 years. Social Psychiatry and Psychiatric Epidemiology, 50(5), 679–693."
+      - "Cunha, F., Heckman, J. J., & Schennach, S. M. (2010). Estimating the technology of cognitive and noncognitive skill formation. Econometrica, 78(3), 883–931."
 
   # ============================================================================
   # MODULE 6: ELECTRIFICATION & GRID FIRMING PACK (E:01 - E:03)

@@ -736,7 +736,7 @@ cards:
     flavor_text: "Generating a miracle takes a front foil and a wing-sail. Keeping it for your grandchildren takes a rear T-foil stabilizer."
     empirical_anchor: "Document 1A Part V Section 1 & Part VI Coda (Deming's 1950 Lecture vs. 1989 Tokyo Bubble)."
 
-- id: "H:06"
+  - id: "H:06"
     name: "The 1972 Nostalgia Baseline (Dunedin vs. GUiNZ Shift)"
     type: "Orthodoxy Boss Hazard — Structural Safety-Net Decay"
     gate_or_phase: "Gate 1 (Ages 0–5) & Gate 2 (Ages 12–14)"

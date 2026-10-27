@@ -56,19 +56,37 @@ The most remarkable feature of adding **Finnish-style Disinformation Inoculation
 
 ---
 
-## 4. Resulting Card Specification: `T:05 — Disinformation & Outrage Drag`
+## 4. The Aotearoa Bridge: Why Shared Values & Metaphors Beat "Fact-Brawling" (Berentson-Shaw, 2018)
+
+While Finland’s *Monilukutaito* (`C:02`) provides the structural curriculum model for epistemic inoculation at Gates 1 and 2, New Zealand’s own cognitive-communication literature explains **how** players must communicate policy on the tabletop to defeat `T:05` (*Disinformation & Outrage Drag*).
+
+In *[A Matter of Fact: Talking Truth in a Post-Truth World](https://www.unitybooks.co.nz/products/matter-of-fact-talking-truth-in-a-post-truth-world)* (Bridget Williams Books, 2018; ISBN `9781988545387`), Dr. Jess Berentson-Shaw synthesizes empirical evidence across immunisation, the gender pay gap, climate change, and social policy in Aotearoa to establish three rules directly encoded into *Foils & Founders*:
+
+1. **The Backfire & Exhaustion of Raw "Fact-Brawling":**
+   - Battling over raw facts in a polarised environment is exhausting and counterproductive. When citizens are under acute economic or housing stress (`i_c = 0` at Gate 1, exacerbated by `H:06`), repeating dry statistical rebuttals—or repeating a myth in order to debunk it—reinforces neural familiarity with the false claim and triggers identity-protective cognition.
+2. **Leading with Shared Intrinsic Values (*Te Korowai Mokopuna* & *Fairness*):**
+   - Constructive, empathetic communication requires opening with "what matters to all of us"—shared, universal human values such as ensuring every child in Aotearoa has a warm, dry launchpad (`B:01`) and every young builder has a fair shot (`B:03` / `B:05`)—before introducing the actuarial ledger (`B:07`).
+3. **Explanatory Metaphors Over Technical Jargon (*Hydrofoil Lift* & *Te Waka Hourua*):**
+   - People do not update mental models by deleting a false belief in a vacuum; they replace it when given a vivid, causal **explanatory metaphor** that shows *how* the whole system works:
+     - **The *Up on Foils* Metaphor:** Replacing abstract "remediation expenditure elasticity" with **Hull Drag vs. Hydrofoil Lift** (`B:04`) makes it immediately obvious why paying `NZD 17.7B–28.5B/yr` for ambulances at the bottom of the cliff keeps the national vessel bogged down in displacement mode.
+     - **The *Te Waka Hourua* Metaphor:** Lashing the two hulls together via the *Kīato* cross-beams (`K:07`) turns a zero-sum culture-war wedge (`T:05`) into a cooperative navigation problem where both hulls rise together.
+
+---
+
+## 5. Resulting Card Specification: `T:05 — Disinformation & Outrage Drag`
 
 Adding **`T:05`** to the **Cautionary Traps (`T`)** deck right after `T:04 — The Lavoisier Syndrome` pairs our two human-capital and social-cohesion traps together: **`T:04`** shows how top-tier talent is hijacked into property rent-seeking (`z_l`), while **`T:05`** shows how stunted and economically squeezed citizens are hijacked by outrage and disinformation merchants.
 
-### `T:05` — Disinformation & Outrage Drag (The Polarisation Tax)
-* **Deck / Level:** Cautionary Traps (`traps`, Module Level 1B)
-* **Type:** Cautionary Trap — Epistemic & Social Cohesion Erosion (All Lenses)
-* **CO2e Impact Badge:** `🌱 Paralyzes Climate Action` (`hazard_increase`)
-* **Cost / Requirement:** Triggered when Gate 1–2 Stunting & Housing Despair meet Unfiltered Algorithmic Outrage.
-* **Synergy Links:** `B:01`, `B:02`, `C:02`, `C:06`, `K:07`
-* **Effects & Mechanics:**
-  * **Preying on Disengagement & Stunting:** Disinformation preys on early executive-function deficits (Gate 1) and economic alienation (Gate 3). While active in `SS0`, institutional trust drops to 40%, amplifying `Exit 4` (Anti-Social & Justice Burden) by `+25%` and imposing a `0.5% GDP` (`~NZD 2.0B/yr`) transaction-cost drag across public health and climate infrastructure.
-  * **The Finnish Inoculation Counter-Play (*Monilukutaito*):** Following Finland (#1 in European Media Literacy Index 2017–2026), couple `B:01` (First 2000 Days Executive Function) + `B:02` (Ages 12–14 Mentoring) + `C:02` (Cognitive Flexibility) to teach critical thinking and psychological inoculation from early childhood. Neutralizes `T:05`, lifts Social Cohesion from `100.0` to `126.0`, and locks in `C:06` (#1 Global Trust Rating).
-* **Flavor Text (*Generic*):** *"Finland shares a 1,340 km border with the world's largest disinformation factory, yet leads the world in societal trust—because they vaccinated their children's minds in primary school instead of policing the wreckage at Parliament."*
-* **Flavor Text (*Te Waka Hourua* — *Te Hau Kōrero Teka*):** *"When a waka leaves its young cold and hungry in the bilge, false navigators whisper in the dark that the other hull is the enemy—until the lashings are cut from within. Teach the tamariki to read the true stars early, and no lie can turn the crew against itself."*
-* **Empirical Anchor:** OSI Media Literacy Index (2017–2026: Finland #1); Koi Tū Centre for Informed Futures (Gluckman & Sridhar, 2023–2026); UNESCO/Sopra Steria Global Disinformation Cost Audit; Zak & Knack (2001).
+### `T:05 — Disinformation & Outrage Drag (The Polarisation Tax)`
+
+- **Deck / Level:** Cautionary Traps (`traps`, Module Level 1B)
+- **Type:** Cautionary Trap — Epistemic & Social Cohesion Erosion (All Lenses)
+- **CO2e Impact Badge:** `🌱 Paralyzes Climate Action` (`hazard_increase`)
+- **Cost / Requirement:** Triggered when Gate 1–2 Stunting & Housing Despair meet Unfiltered Algorithmic Outrage.
+- **Synergy Links:** `B:01`, `B:02`, `C:02`, `C:06`, `K:07`
+- **Effects & Mechanics:**
+  - **Preying on Disengagement & Stunting:** Disinformation preys on early executive-function deficits (Gate 1) and economic alienation (Gate 3). While active in `SS0`, institutional trust drops to 40%, amplifying `Exit 4` (Anti-Social & Justice Burden) by `+25%` and imposing a `0.5% GDP` (`~NZD 2.0B/yr`) transaction-cost drag across public health and climate infrastructure.
+  - **The Finnish Inoculation & Values-Framing Counter-Play (*Monilukutaito* & *A Matter of Fact*):** Following Finland (#1 in European Media Literacy Index 2017–2026) and Dr. Jess Berentson-Shaw (*A Matter of Fact*, 2018), couple `B:01` (First 2000 Days Executive Function) + `B:02` (Ages 12–14 Mentoring) + `C:02` (Cognitive Flexibility) with shared-values metaphors (`B:04` / `K:07`) to teach critical thinking and psychological inoculation from early childhood. Neutralizes `T:05`, lifts Social Cohesion from `100.0` to `126.0`, and locks in `C:06` (#1 Global Trust Rating).
+- **Flavor Text (*Generic*):** *"Finland shares a 1,340 km border with the world's largest disinformation factory, yet leads the world in societal trust—because they vaccinated their children's minds in primary school instead of policing the wreckage at Parliament."*
+- **Flavor Text (*Te Waka Hourua* — *Te Hau Kōrero Teka*):** *"When a waka leaves its young cold and hungry in the bilge, false navigators whisper in the dark that the other hull is the enemy—until the lashings are cut from within. Teach the tamariki to read the true stars early, and no lie can turn the crew against itself."*
+- **Empirical Anchor:** OSI Media Literacy Index (2017–2026: Finland #1); Koi Tū Centre for Informed Futures (Gluckman & Sridhar, 2023–2026); Berentson-Shaw (2018, BWB: *A Matter of Fact: Talking Truth in a Post-Truth World*); UNESCO/Sopra Steria Global Disinformation Cost Audit; Zak & Knack (2001).

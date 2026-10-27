@@ -470,7 +470,7 @@ study_cards:
       - "Chamley, C. (1986), & Judd, K. L. (1985) vs. Straub, L., & Werning, I. (2020). Positive long-run capital taxation: Chamley–Judd revisited. American Economic Review, 110(1), 86–119."
       - "Guvenen, F., et al. (2023). Use it or lose it: Efficiency and redistributional effects of wealth taxation. Quarterly Journal of Economics, 138(2), 835–894."
 
-- id: "H:06"
+  - id: "H:06"
     monograph_ref: "Doc 1A §3.6 & Doc 1B §2.3 • Script: scripts/audit_guinz_vs_dunedin.py"
     equation_title: "Cohort Distribution Drift & Stone–Geary Subsistence Boundary Shift (1972 → 2010)"
     latex_equation: |

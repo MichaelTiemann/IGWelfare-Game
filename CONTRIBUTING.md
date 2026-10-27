@@ -50,6 +50,7 @@ IGWelfare-Game/
 └── scripts/
     ├── render_common.py               # Shared YAML/theme loader, copyright constants, & base A3 CSS
     ├── render_cards.py                # Compiles cards.yaml + theme into 5x2 Stacked-Bond A3 HTML/PDF sheets
+    ├── render_study_cards.py          # Compiles study_cards.yaml + cards.yaml into 9 A3 Fold-Over Study sheets
     └── render_boards.py               # Compiles boards_and_tokens.yaml + theme into 2 A3 Playmat & Token sheets
 ```
 

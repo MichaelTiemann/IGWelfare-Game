@@ -1,0 +1,47 @@
+study_cards:
+  - id: "B:01"
+    monograph_ref: "Doc 1B §2.2 • Doc 2: PolicyExperiment_LeeSeshadri_4Region.m"
+    equation_title: "Stone–Geary Subsistence Corner & In-Kind CES Skill Bypass"
+    latex_equation: |
+      h_{2} = A_1 \left[ \gamma_1 h_1^{\phi_1} + (1-\gamma_1)\left( G_{\text{ECE},1}^{\text{in-kind}} + \kappa_1 \max\big\{0,\, i_c(y_1 - p_h^r\bar{h} - p_e(z_2))\big\} + \omega_1 \tau_c w_1 h_1 \right)^{\phi_1} \right]^{\frac{\rho_1}{\phi_1}}
+    parameters: "ϕ₁ = −0.50 (complementary) | G_ECE = NZD 13.0k/yr | Crowded-in Δi_c + ω₁Δτ_c = +NZD 15.3k/yr | Stunting: 22.0% → 1.5%"
+    proof_bridge: "When metro rent (p_h^r h̄) and energy shocks p_e(z₂) push cash investment to the zero corner (i_c = 0), in-kind wraparound G_ECE bypasses the liquidity trap directly and raises the marginal product of parental time τ_c."
+    citations:
+      - "Cunha, F., Heckman, J. J., & Schennach, S. M. (2010). Estimating the technology of cognitive and noncognitive skill formation. Econometrica, 78(3), 883–931."
+      - "Lee, S. Y., & Seshadri, A. (2019). On the intergenerational transmission of economic status. Journal of Political Economy, 127(2), 855–921."
+      - "Poulton, R., et al. (2020). Dunedin Multidisciplinary Health & Development Study: 22% early vulnerability cohort driving 57%–81% of adult fiscal burden."
+
+  - id: "B:05"
+    monograph_ref: "Doc 1B §4.1 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Guvenen 'Use-It-Or-Lose-It' Wealth Tax & MSV Talent Cutoff Flip"
+    latex_equation: |
+      r_{\text{net}}(z, \tau_a, \tau_k) = (1 - \tau_k) z_h k^{\alpha - 1} + z_\ell \left(\frac{\dot{P}_L}{P_L}\right) - \tau_a \;\Longrightarrow\; \frac{\partial A^\star(\tau_a)}{\partial \tau_a} < 0 \;\implies\; \Delta \mu^\star(z_h) > 0
+    parameters: "τ_a = 1.5% land/wealth | Estate = 25%→18% | Top-5% Builders (z_h) Net Welfare > 0 in 19/20 vigintiles (20:01–20:19, up to NZD 100M NW)"
+    proof_bridge: "Taxing book-value assets (τ_a = 1.5%) while cutting corporate/PAYE taxes penalizes low-return land hoarding (z_l) and raises after-tax returns for high-productivity builders (z_h), cooling urban rents −10.5% and lifting wages +3.2% to +9.6%."
+    citations:
+      - "Guvenen, F., Kambourov, G., Kuruscu, B., Ocampo, S., & Chen, D. (2023). Use it or lose it: Efficiency and redistributional effects of wealth taxation. Quarterly Journal of Economics, 138(2), 835–894."
+      - "Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991). The allocation of talent: Implications for growth. Quarterly Journal of Economics, 106(2), 503–530."
+
+  - id: "B:07"
+    monograph_ref: "Doc 1B §3.4 • Doc 2: Compute_Actuarial_NPV_4Region.m"
+    equation_title: "Williamson–ACC Actuarial Present-Value Liability Release"
+    latex_equation: |
+      \text{NPV}_{\text{ACC}}(t=5) = \sum_{s=1}^{81} \frac{\Delta \mathbb{E}\big[\tau_y w_s h_s - \sum_{x \in \{1,2,4\}} C_x \mathbb{I}(\text{Exit}_x)\big]}{(1 + r_{\text{SRTP}})^s} = \text{NZD } 35.25\text{B} \;\; (3.84\times \text{Cost})
+    parameters: "r_SRTP = 2.0% real (vs. 5.0%–8.0% orthodox hurdle) | Year-5 Direct Avoided Crisis Cost = NZD 10.68B (1.16×) | Total Return = 3.84×"
+    proof_bridge: "Replacing 1-year cash-flow expensing with ACC forward liability discounting at the 2.0% Social Rate of Time Preference books NZD 10.68B in direct fiscal savings and NZD 35.25B in total return by Year 5."
+    citations:
+      - "Williamson, O. E. (2009). Transaction Cost Economics: The natural progression (Nobel Prize Lecture). American Economic Review, 100(3), 673–690."
+      - "New Zealand Treasury (2025). CBAx Tool & Public Sector Discount Rates Guidance (2.0% real SRTP for long-horizon social investments)."
+
+  - id: "E:02"
+    monograph_ref: "Doc 1B §5.2 • Doc 2: QEA_2026.m"
+    equation_title: "Second-Order Precautionary Capital Release Under Solar Endowment"
+    latex_equation: |
+      \Delta A_{\text{prec}} \equiv \int_{\mathcal{S}} a \, d\mu^\star\big(s \,\big|\, pv=0, \sigma_{z_2}=0.25\big) - \int_{\mathcal{S}} a \, d\mu^\star\big(s \,\big|\, pv=5, \sigma_{z_2}=0\big) = \text{NZD } 60.8\text{B–}91.5\text{B} \ge \text{CapEx}
+    parameters: "σ = 2.2 CRRA | Farmer–Toda 9-state AR(1) z₂ | 5-Sector CapEx = NZD 60.2B–75.5B | Annual OPEX Savings = +NZD 15.55B/yr | −14.8 MtCO₂e"
+    proof_bridge: "Eliminating imported fossil-fuel price variance (σ_{z₂} → 0 via rooftop/farm solar + battery endowment pv=5) collapses household and firm precautionary cash hoarding across μ*, self-financing 100%+ of national electrification."
+    citations:
+      - "Farmer, L. E., & Toda, A. A. (2017). Discretizing nonlinear, non-Gaussian Markov processes with exact conditional moments. Quantitative Economics, 8(2), 651–683."
+      - "Aiyagari, S. R. (1994). Uninsured idiosyncratic risk and aggregate saving. Quarterly Journal of Economics, 109(3), 659–684."
+      - "Rewiring Aotearoa (2025–2026). Electric Homes, Farms, & Community Hubs Empirical Cost-Savings Dataset."
+  

@@ -1,4 +1,31 @@
+# ==============================================================================
+# FOILS & FOUNDERS: THE AOTEAROA DECK — FOLD-OVER STUDY CARDS (EQUATIONS & CITATIONS)
+# Companion to "Intergenerational Welfare, Capital Allocation, and Human Potential in NZ"
+# Author: Michael Tiemann (mdtiemann@gmail.com)
+# License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+# ==============================================================================
+
+metadata:
+  title: "Foils & Founders — Fold-Over Study Deck (Equations, Parameters, & Citations)"
+  version: "2026.11"
+  author: "Michael Tiemann"
+  license: "CC-BY-SA-4.0"
+
 study_cards:
+  # ============================================================================
+  # MODULE 1A: BASE GAME — UP ON FOILS / TE WAKA HOURUA (B:00 - B:09)
+  # ============================================================================
+  - id: "B:00"
+    monograph_ref: "Doc 1B §1.1 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Rawls–Harsanyi Ex-Ante Veil of Ignorance Social Welfare Functional"
+    latex_equation: |
+      \mathcal{W}(\mathcal{P}) = \sum_{k=1}^{20} \pi_k \, \mathbb{E}_0 \left[ \sum_{j=1}^{J} \beta^{j-1} \psi_j \, u\big(c_j(s), \ell_j(s)\big) + \beta^J \mathcal{B}(a_J, pv_J) \;\middle|\; s_1 \in \mathcal{V}_k,\, \mathcal{P} \right], \quad \pi_k = \frac{1}{20}
+    parameters: "20 Vigintiles (π_k = 5.0% each) | 8 PTypes × 4 Regions | CRRA σ = 2.2 | Ex-Ante Aggregate Welfare Gain (SS2 vs. SS0) = +20.49% CE"
+    proof_bridge: "Before knowing whether you roll a Nat 1 (Bottom 5% hardship corner) or a Nat 20 (Top 5% dynasty), every rational citizen maximizes expected lifetime utility across all 20 birth vigintiles."
+    citations:
+      - "Rawls, J. (1971). A Theory of Justice. Harvard University Press (The Original Position & Veil of Ignorance)."
+      - "Harsanyi, J. C. (1955). Cardinal welfare, individualistic ethics, and interpersonal comparisons of utility. Journal of Political Economy, 63(4), 309–321."
+
   - id: "B:01"
     monograph_ref: "Doc 1B §2.2 • Doc 2: PolicyExperiment_LeeSeshadri_4Region.m"
     equation_title: "Stone–Geary Subsistence Corner & In-Kind CES Skill Bypass"
@@ -11,6 +38,39 @@ study_cards:
       - "Lee, S. Y., & Seshadri, A. (2019). On the intergenerational transmission of economic status. Journal of Political Economy, 127(2), 855–921."
       - "Poulton, R., et al. (2020). Dunedin Multidisciplinary Health & Development Study: 22% early vulnerability cohort driving 57%–81% of adult fiscal burden."
 
+  - id: "B:02"
+    monograph_ref: "Doc 1B §2.4 • Doc 2: PolicyExperiment_LeeSeshadri_4Region.m"
+    equation_title: "Cross-Period Dynamic Complementarity & Tuakana–Teina Shock Buffer"
+    latex_equation: |
+      \frac{\partial^2 h_{3}}{\partial h_{2} \, \partial I_{\text{mentor},2}} > 0, \qquad h_3 = A_2 \left[ \gamma_2 h_2^{\phi_2} + (1-\gamma_2)\big(G_{\text{sch},2} + \theta_{\text{ako}} M_{\text{tuakana}}\big)^{\phi_2} \right]^{\frac{\rho_2}{\phi_2}} \big(1 - \delta_{\text{shock}}(1 - \mathbb{I}_{\text{B:02}})\big)
+    parameters: "ϕ₂ = −0.25 | Mentoring Reach: 17.3% (SS0) → 65.0%+ (SS2) | Neutralizes parental unemployment shock δ_shock and T:05 outrage drag"
+    proof_bridge: "Because Gate 1 readiness (h₂) and Gate 2 adolescent mentoring (I_mentor,2) are strong complements (∂²h₃/∂h₂∂I₂ > 0), pairing B:01 with B:02 locks in a 65.0% thriving adult launch rate and blocks family job-loss scarring."
+    citations:
+      - "Heckman, J. J., & Mosso, S. (2014). The economics of human development and social mobility. Annual Review of Economics, 6(1), 689–733."
+      - "Graeme Dingle Foundation (2025). Stars & Project K Peer-Mentoring Longitudinal Impact Evaluations in Aotearoa Secondary Schools."
+
+  - id: "B:03"
+    monograph_ref: "Doc 1B §3.2 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Universal Youth Capital Grant & Trans-Tasman Retention Condition"
+    latex_equation: |
+      a_{20}^{\text{SS2}} = a_{20}^{\text{bequest}} + B_{\text{youth}}\big(\tau_{\text{estate}} \mathcal{E}_{65+}\big) \ge \kappa_{\text{down}} P_{h,r}^{\text{SS2}}, \qquad V_{20}^{\text{NZ}}(a_{20}^{\text{SS2}}, h_3) \ge V_{20}^{\text{AUS}}(a_{20}^{\text{SS0}}, h_3) - c_{\text{mig}}
+    parameters: "B_youth = NZD 62,000+ (recycled from 25%→18% estate levy) | Youth Homeownership: 28.0% → 41.5% | Graduate Brain Drain: 21.8% → 7.6% (+3,550/yr kept)"
+    proof_bridge: "Seeding every 20-year-old with NZD 62k+ in ring-fenced equity overcomes the deposit/collateral barrier (κ_down P_h) for enterprise and housing, flipping the trans-Tasman migration inequality in Aotearoa's favor."
+    citations:
+      - "Ackerman, B., & Alstott, A. (1999). The Stakeholder Society. Yale University Press (Universal Young Adult Capital Endowment)."
+      - "Kiyotaki, N., & Moore, J. (1997). Credit cycles. Journal of Political Economy, 105(2), 211–248."
+
+  - id: "B:04"
+    monograph_ref: "Doc 1B §3.1 • Doc 2: Compute_Actuarial_NPV_4Region.m"
+    equation_title: "Hydrofoil Lift-to-Drag Fiscal Ratio & Remediation Collapse"
+    latex_equation: |
+      \mathcal{D}_{\text{hull}}(\mathcal{P}) = \sum_{x \in \{1,2,3,4\}} \int_{\mathcal{S}} C_x(s) \, d\mu^\star(s \mid \mathcal{P}), \qquad \mathcal{D}_{\text{hull}}(\text{SS0}) = \text{NZD } 17.7\text{B/yr} \;\longrightarrow\; \mathcal{D}_{\text{hull}}(\text{SS2}) = \text{NZD } 4.2\text{B/yr} \;\;(-75.0\%)
+    parameters: "SS0 Remediation Drag = NZD 17.7B–28.5B/yr (Exits 1–4) | SS2 Drag = NZD 4.2B/yr | Net Adult Fiscal Surplus = +NZD 16.1k/yr per thriving cohort"
+    proof_bridge: "Shifting the stationary distribution μ*(s) out of the stunted corner (i_c = 0) collapses downstream hospital, state-care, and justice expenditure by 75%, lifting the sovereign hull onto its foils."
+    citations:
+      - "Heckman, J. J., Moon, S. H., Pinto, R., Savelyev, P. A., & Yavitz, A. (2010). The rate of return to the HighScope Perry Preschool Program. Journal of Public Economics, 94(1–2), 114–128."
+      - "Infometrics & Barnardos Aotearoa (2026). Fiscal Incidence of Early Childhood Adversity Across Health, Justice, and Social Protection."
+
   - id: "B:05"
     monograph_ref: "Doc 1B §4.1 • Doc 2: NZ_4Region_Master.m"
     equation_title: "Guvenen 'Use-It-Or-Lose-It' Wealth Tax & MSV Talent Cutoff Flip"
@@ -21,6 +81,17 @@ study_cards:
     citations:
       - "Guvenen, F., Kambourov, G., Kuruscu, B., Ocampo, S., & Chen, D. (2023). Use it or lose it: Efficiency and redistributional effects of wealth taxation. Quarterly Journal of Economics, 138(2), 835–894."
       - "Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991). The allocation of talent: Implications for growth. Quarterly Journal of Economics, 106(2), 503–530."
+
+  - id: "B:06"
+    monograph_ref: "Doc 1B §4.4 • Doc 2: Solve_SS2_2050_5050Rule.m"
+    equation_title: "The 2050 50/50 Fiscal Allocation Rule & Universal Super Solvency"
+    latex_equation: |
+      \Delta \mathcal{S}_{2050} = \underbrace{0.50 \left( \Delta B_{\text{debt}\downarrow} + I_{\text{grid}}^{\text{C:04}} \right)}_{\text{Sovereign Balance Sheet & 1.65}\times\text{ Armor}} + \underbrace{0.50 \left( \Delta \tau_y^{\downarrow} \cdot WL + \text{Super}_{65} \right)}_{\text{PAYE } 22.0\% \to 18.5\% \text{ & Super @ 65}}
+    parameters: "PAYE Income Tax: 22.0% → 18.5% (−3.5 pp vs. 28.22% SS0 drift) | Crown Debt < 40% GDP | Borrowing Spread: −60 to −100 bps | Super Kept at Age 65"
+    proof_bridge: "Splitting the mature 2050 human-capital and solar harvest 50/50 between debt/infrastructure sinking and household tax relief permanently funds Universal NZ Super at 65 while cutting PAYE to 18.5%."
+    citations:
+      - "Barro, R. J. (1979). On the determination of the public debt. Journal of Political Economy, 87(5, Part 1), 940–971 (Tax-Smoothing & Debt Stabilization)."
+      - "New Zealand Treasury (2025). He Tirohanga Mokopuna: Long-Term Fiscal Statement (Sovereign Debt Trajectory & Superannuation Solvency)."
 
   - id: "B:07"
     monograph_ref: "Doc 1B §3.4 • Doc 2: Compute_Actuarial_NPV_4Region.m"
@@ -33,6 +104,386 @@ study_cards:
       - "Williamson, O. E. (2009). Transaction Cost Economics: The natural progression (Nobel Prize Lecture). American Economic Review, 100(3), 673–690."
       - "New Zealand Treasury (2025). CBAx Tool & Public Sector Discount Rates Guidance (2.0% real SRTP for long-horizon social investments)."
 
+  - id: "B:08"
+    monograph_ref: "Doc 1B §1.3 • Doc 2: NZ_4Region_Master.m & QEA_2026.m"
+    equation_title: "Coupled 8-PType × 4-Region Discrete VFI & Kolmogorov Forward Solver"
+    latex_equation: |
+      V_j^i(a, h, pv, z) = \max_{c, \ell, i_c, a'} \Big\{ u(c, \ell) + \beta \psi_j \sum_{z'} \Pi(z'|z) V_{j+1}^i(a', h', pv', z') \Big\}, \qquad \mu^\star = \mathcal{T}^\star(\mu^\star)
+    parameters: "8 PTypes (2 Regions/Macro × Early Corner × Entrepreneur Split) | Exact discrete grid (no log-linearization) | Solved in <28 min on GPU"
+    proof_bridge: "Linearized representative-agent models erase subsistence corners (i_c = 0) and precautionary buffers; solving the exact non-linear Bellman and KFE equations on the GPU reveals the full +20.49% CE welfare gain."
+    citations:
+      - "Kirkby, R. (2017–2026). VFI Toolkit: A MATLAB GPU Toolkit for Macroeconomic Life-Cycle and Heterogeneous-Agent Models."
+      - "Huggett, M. (1996). Wealth distribution in life-cycle economies. Journal of Monetary Economics, 38(3), 469–494."
+
+  - id: "B:09"
+    monograph_ref: "Doc 1B §6.1 • Doc 2: Compute_Welfare_CE_4Region.m"
+    equation_title: "Consumption-EquivalentIntergenerational Welfare Victory Condition"
+    latex_equation: |
+      \text{CE}(\text{SS2}, \text{SS0}) = \left( \frac{\mathcal{W}(\text{SS2}) - \mathcal{W}_{\text{bequest}}}{\mathcal{W}(\text{SS0}) - \mathcal{W}_{\text{bequest}}} \right)^{\frac{1}{1-\sigma}} - 1 = +20.49\%, \qquad \text{Stunting} \le 1.5\%, \quad \text{Cohesion} = 126.0
+    parameters: "+20.49% Aggregate CE | +42.8% Bottom-Decile CE | 65.0% Thriving Launch | −14.8 MtCO₂e/yr | Super @ 65 | PAYE = 18.5%"
+    proof_bridge: "When human capability (B:01–B:03), productive capital rotation (B:05–B:06), actuarial accounting (B:07), and solar endowment (E:02) lock together, every generation and region achieves Pareto-superior flourishing."
+    citations:
+      - "Lucas, R. E. (1987). Models of Business Cycles. Basil Blackwell (Consumption-Equivalent Welfare Calculus)."
+      - "Tiemann, M. (2026). Intergenerational Welfare, Capital Allocation, and Human Potential in New Zealand (Documents 1A, 1B, & 2)."
+
+  # ============================================================================
+  # MODULE 1B: CAUTIONARY TRAP CARDS (T:00 - T:05)
+  # ============================================================================
+  - id: "T:00"
+    monograph_ref: "Doc 1B §2.6 • Doc 2: Test_LinearTaxTransfer_Trap.m"
+    equation_title: "Unconditional Cash-Transfer Crowd-Out & Limousine Leakage"
+    latex_equation: |
+      \frac{\partial i_c}{\partial T_{\text{cash}}} = 0 \;\;\forall\, y_1 + T_{\text{cash}} < p_h^r \bar{h} + p_e(z_2), \qquad \text{Leakage} = \int_{y > \bar{y}} T_{\text{universal}} \, d\mu^\star(s) \gg \Delta h_2
+    parameters: "MPC into early child skill ∂i_c/∂T_cash ≈ 0.08 in deep rent/energy distress vs. 1.00 for in-kind G_ECE (B:01)"
+    proof_bridge: "Unconditional cash transfers without housing/energy cooling or in-kind ECE infrastructure are absorbed by landlord rent extraction (p_h^r h̄) at the bottom or leaked to non-constrained households at the top."
+    citations:
+      - "Currie, J., & Gahvari, F. (2008). Transfers in cash and in-kind: Theory meets the data. Journal of Economic Literature, 46(2), 333–383."
+      - "Nichols, A. L., & Zeckhauser, R. J. (1982). Targeting transfers through restrictions on recipients. American Economic Review, 72(2), 372–377."
+
+  - id: "T:01"
+    monograph_ref: "Doc 1B §2.7 • Doc 2: PolicyExperiment_LeeSeshadri_4Region.m"
+    equation_title: "Late-Remediation Elasticity Decay Under Low Early Readiness"
+    latex_equation: |
+      \lim_{h_2 \to h_{\min}} \frac{\partial h_3}{\partial G_{\text{tertiary},3}} = A_2 \rho_2 \gamma_2^{\frac{\rho_2}{\phi_2}} h_2^{\phi_2 - 1} \longrightarrow 0 \quad \text{when } \phi_2 < 0 \text{ (Strong Complementarity)}
+    parameters: "ϕ₁ = −0.50, ϕ₂ = −0.25 | Tertiary/vocational ROI drops by >70% when Gate 1 (B:01) and Gate 2 (B:02) foundations are skipped"
+    proof_bridge: "Because human skill formation exhibits negative elasticity of substitution (ϕ < 0), pouring subsidies into age-18+ remedial training after ignoring ages 0–5 yields near-zero marginal skill gain."
+    citations:
+      - "Cunha, F., & Heckman, J. J. (2007). The technology of skill formation. American Economic Review, 97(2), 31–47."
+      - "Carneiro, P., & Heckman, J. J. (2003). Human capital policy. In Inequality in America: What Role for Human Capital Policies? MIT Press."
+
+  - id: "T:02"
+    monograph_ref: "Doc 1B §4.2 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Inelastic Housing Supply Capitalization of Demand Subsidies"
+    latex_equation: |
+      \epsilon_S^{\text{land}} \approx 0 \;\Longrightarrow\; \frac{d P_{h,\text{AKL}}}{d S_{\text{buyer}}} = \frac{\epsilon_D}{\epsilon_D + \epsilon_S^{\text{land}}} \approx 1.00 \;\implies\; \Delta \left(\frac{p_h^r \bar{h}}{y_1}\right) > 0
+    parameters: "Auckland Price-to-Income Ratio = 3.10× rural baseline | Buyer subsidies without B:05 land-tax rebalancing inflate house prices 1-for-1"
+    proof_bridge: "Subsidizing mortgage demand or first-home deposits when urban land is hoarded tax-free (τ_a = 0) simply capitalizes into higher land prices, worsening the Gate 1 Stone–Geary rent squeeze."
+    citations:
+      - "Glaeser, E. L., Gyourko, J., & Saks, R. E. (2005). Why have housing prices gone up? American Economic Review, 95(2), 329–333."
+      - "Hirano, T., & Toda, A. A. (2025). Bubble necessity theorem in overlapping generations models with land."
+
+  - id: "T:03"
+    monograph_ref: "Doc 1B §4.5 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Primate-City Agglomeration Congestion vs. Regional Starvation"
+    latex_equation: |
+      w_{\text{AKL}}(N_{\text{AKL}}) - p_{h,\text{AKL}}^r(N_{\text{AKL}})\bar{h} < w_{\text{reg}}(N_{\text{reg}}) - p_{h,\text{reg}}^r\bar{h} - \tau_{\text{fuel}}(z_2)\, d_{\text{reg}} \quad \text{under Unbuffered } z_2
+    parameters: "4 Regions: Rural (16%), Small (24%), Large (27%), Auckland (33%) | Rural transport fuel burden = 2.7×–2.8× metro baseline in SS0"
+    proof_bridge: "Concentrating infrastructure solely in Auckland while leaving rural and provincial regions exposed to 2.8× fossil-fuel transport costs and underfunded grids triggers simultaneous urban rent crush and regional hollowing."
+    citations:
+      - "Krugman, P. (1991). Increasing returns and economic geography. Journal of Political Economy, 99(3), 483–499."
+      - " Grimes, A., & Young, C. (2011). Spatial effects of infrastructure and housing shocks across New Zealand regions. Motu Working Paper."
+
+  - id: "T:04"
+    monograph_ref: "Doc 1B §4.1 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "The Lavoisier Syndrome: Murphy–Shleifer–Vishny Rent-Seeking Trap"
+    latex_equation: |
+      \text{If } z_\ell \left(\frac{\dot{P}_L}{P_L}\right) > (1 - \tau_k) z_h k^{\alpha - 1}, \quad \text{then } \mu^\star\big(z \in \text{Speculation}\big) \uparrow \;\text{and}\; g_{\text{TFP}} = \theta \int_{z_h} z \, d\mu^\star(z) \downarrow
+    parameters: "NZD 1.6T untaxed property pool (τ_a = 0) vs. 28% corporate / 39% top PAYE tax on active builders (z_h)"
+    proof_bridge: "When untaxed leveraged land appreciation out-yields taxed enterprise, the economy's sharpest minds become property speculators and tax lawyers instead of founders—stalling national productivity."
+    citations:
+      - "Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991). The allocation of talent: Implications for growth. Quarterly Journal of Economics, 106(2), 503–530."
+      - "Pikett, K., & Wilkinson, R. / Tax Working Group New Zealand (2019). Future of Tax: Final Report on Capital Income Disharmony."
+
+  - id: "T:05"
+    monograph_ref: "Doc 1B §5.5 • Rules: rules/T_05_tutorial.md"
+    equation_title: "Algorithmic Outrage & Epistemic Polarisation Drag Function"
+    latex_equation: |
+      \mathcal{D}_{\text{Exit 4}}^{\text{T:05}} = \mathcal{D}_{\text{Exit 4}}^0 \Big( 1 + \eta_{\text{outrage}} \, \Pr(i_c = 0) \big(1 - \mathbb{I}_{\text{C:02}}\big) \Big), \qquad \text{Trust}_{t+1} = \text{Trust}_t - \chi \, \sigma_{\text{disinfo}}^2 \big(1 - h_2^{\text{crit}}\big)
+    parameters: "η_outrage = +0.25 (+25% Exit 4 justice drag ≈ NZD 2B/yr) | NZ CPI Trust Slide: 91 → 81 (40% govt trust) vs. Finland 88/100 (#1 Monilukutaito)"
+    proof_bridge: "Foreign and algorithmic outrage mills exploit unbuffered childhood hardship (i_c = 0) and unmentored adolescents, inflating justice drag by +25% unless inoculated at Gates 1–2 by B:01 + B:02 + C:02 (Monilukutaito)."
+    citations:
+      - "Transparency International (2025). Corruption Perceptions Index & Edelman Trust Barometer (Finland 88/100 vs. New Zealand 81/100 slide)."
+      - "Finnish National Agency for Education (EDUFI, 2024). Monilukutaito (Multiliteracy) Cross-Curricular Epistemic Inoculation Framework."
+
+  # ============================================================================
+  # MODULE 2: CLIMATE & RESILIENCE EXPANSION (C:01 - C:06)
+  # ============================================================================
+  - id: "C:01"
+    monograph_ref: "Doc 1B §5.1 • Doc 2: ClimateDamage_BilalKanzig.m"
+    equation_title: "Bilal–Känzig Macroeconomic Temperature Shock & Capital Destruction"
+    latex_equation: |
+      \frac{\Delta Y_{t+h}}{Y_t} = -\beta_h^{\text{BK}} \Delta T_t^{\text{global}} \big(1 - \alpha_{\text{armor}} \mathbb{I}_{\text{C:04}}\big), \qquad \text{SCC}_{\text{BK}} \approx \text{USD } 1,200 / \text{tCO}_2\text{e}, \quad \delta_k(\Delta T) = \delta_0 + \xi (\Delta T)^2
+    parameters: "+1°C global temperature shock reduces unarmored GDP by −12% peak and destroys 2%–5% of unbuffered physical capital K_t per decade"
+    proof_bridge: "Macroeconomic climate damage is 6× larger than legacy DICE estimates (USD 1,200/tCO₂e); leaving infrastructure unarmored exposes both physical capital and Gate 1–2 whānau to compounding cyclone/flood shocks."
+    citations:
+      - "Bilal, A., & Känzig, D. R. (2024). The macroeconomic impact of climate change: Global vs. local temperature. NBER Working Paper No. 32450."
+      - "Weitzman, M. L. (2009). On modeling and interpreting the economics of catastrophic climate change. Review of Economics and Statistics, 91(1), 1–19."
+
+  - id: "C:02"
+    monograph_ref: "Doc 1B §2.5 • Rules: rules/T_05_tutorial.md"
+    equation_title: "Nelson–Phelps–Schultz Adaptive Skill & Epistemic Immunity Return"
+    latex_equation: |
+      \frac{\partial V_j(h, z_{\text{tech}})}{\partial \sigma_{\text{tech}}^2} > 0 \;\;\text{for } h \ge h_{\text{flex}}^{\text{C:02}}, \qquad \text{Immunity}(\text{T:05}) = 1 - \exp\!\big(-\lambda_{\text{ML}} \, h_2(\text{B:01}) \cdot I_{\text{C:02}}\big)
+    parameters: "Attaches to 65.0%+ Thriving Cohort | +1 Productivity under technological/climate disruption | Full immunity to T:05 disinformation drag"
+    proof_bridge: "General cognitive flexibility and Finnish-style multiliteracy (Monilukutaito) have their highest marginal return precisely when technological and climate regimes are shifting rapidly."
+    citations:
+      - "Nelson, R. R., & Phelps, E. S. (1966). Investment in humans, technological diffusion, and economic growth. American Economic Review, 56(1/2), 69–75."
+      - "Schultz, T. W. (1975). The value of the ability to deal with disequilibria. Journal of Economic Literature, 13(3), 827–846."
+
+  - id: "C:03"
+    monograph_ref: "Doc 1B §5.3 • Doc 2: QEA_2026.m (Sector 2: Schools & Marae)"
+    equation_title: "Polycentric Marae & School Microgrid Civil-Defence Resilience"
+    latex_equation: |
+      R_{\text{hub},r}(pv_{\text{hub}}=5) = \Pr\big(\text{Power, Water, & Learning Continuity} \mid \text{Cyclone Shock } z_{\text{clim}}\big) \longrightarrow 0.99, \quad \Delta \text{OPEX}_{\text{sch}} = +\text{NZD } 0.25\text{B/yr}
+    parameters: "CapEx = NZD 1.2B–1.5B across 2,500 Schools + 800 Marae | Frees NZD 250M/yr into classroom teaching/mentoring | −0.4 MtCO₂e/yr"
+    proof_bridge: "Equipping every school and marae with commercial solar + BESS microgrids simultaneously funds Gate 2 Tuakana–Teina mentoring in peacetime and guarantees civil-defence shelter during grid blackouts."
+    citations:
+      - "Ostrom, E. (2010). Polycentric systems for coping with collective action and global environmental change. Global Environmental Change, 20(4), 550–557."
+      - "Kenny, C., & Phibbs, S. (2015). A Māori love story: Community-led disaster management on Marae following the Christchurch earthquakes. International Journal of Disaster Risk Reduction, 14, 46–55."
+
+  - id: "C:04"
+    monograph_ref: "Doc 1B §5.4 • Doc 2: Solve_SS2_2050_5050Rule.m"
+    equation_title: "1.65× Ring-Fenced Sovereign Infrastructure & Coastal Armor Pool"
+    latex_equation: |
+      K_{\text{infra},t+1} = (1 - \delta_{\text{clim}}) K_{\text{infra},t} + I_{\text{C:04}}, \qquad I_{\text{C:04}}^{\text{SS2}} = 1.65 \, I_{\text{baseline}}^{\text{SS0}}, \qquad \delta_{\text{clim}}\big(I_{\text{C:04}}^{\text{SS2}}\big) = 0.25 \, \delta_{\text{clim}}^{\text{SS0}}
+    parameters: "1.65× Ring-Fenced Infrastructure Pool (funded via B:06 50/50 Rule) | Cuts C:01 physical capital depreciation spikes by 75%"
+    proof_bridge: "Pre-funding a 1.65× ring-fenced resilience pool out of B:06 surpluses armors grids, water catchments, and coastal corridors before cyclones strike, avoiding post-disaster debt spirals."
+    citations:
+      - "Hallegatte, S., Rentschler, J., & Rozenberg, J. (2019). Lifelines: The Resilient Infrastructure Opportunity. World Bank Publications."
+      - "New Zealand Infrastructure Commission / Te Waihanga (2025). Rautaki Hanganga o Aotearoa: 30-Year Infrastructure Strategy."
+
+  - id: "C:05"
+    monograph_ref: "Doc 1B §5.2 • Doc 2: QEA_2026.m (Sector 5: Transport & Farms)"
+    equation_title: "Regional Transport & Ag-Machinery Electrification Incidence"
+    latex_equation: |
+      \Delta c_{\text{rural}}^{\text{net}} = d_{\text{rural}} \big( p_{\text{diesel}}(z_2) - c_{\text{solar-EV}}(pv=5) \big) > 0, \qquad \frac{\text{Fuel Burden}_{\text{Rural}}^{\text{SS0}}}{\text{Fuel Burden}_{\text{Metro}}^{\text{SS0}}} = 2.8\times \;\longrightarrow\; 1.0\times \text{ in SS2}
+    parameters: "Cancels 2.7×–2.8× rural transport fuel penalty | Paired with 19,000+ farm-pond floating solar arrays | Saves NZD 9.8B/yr in imported fuel"
+    proof_bridge: "Because rural households and farmers drive 2.8× more kilometers and run heavy machinery, replacing imported diesel with farm-pond and rooftop solar electricity delivers the largest proportional cost-of-living boost to provincial Aotearoa."
+    citations:
+      - "Rewiring Aotearoa (2025). Electric Farms & Rural Transport Transition: Empirical Cost and Emissions Analysis for New Zealand Primary Producers."
+      - "Stats NZ (2025). Household Economic Survey: Regional Expenditure on Transport Energy by Urban/Rural Classification."
+
+  - id: "C:06"
+    monograph_ref: "Doc 1B §5.5 • Doc 2: Compute_Welfare_CE_4Region.m"
+    equation_title: "Endogenous Social Cohesion & Institutional Trust Trajectory"
+    latex_equation: |
+      \text{Cohesion}_t = 100.0 + \alpha_1 \big(1 - \text{Stunting}_t\big) + \alpha_2 \, \text{Mentored}_t - \alpha_3 \text{Gini}_{\text{disp},t} + \alpha_4 \mathbb{I}_{\text{K:07}} \;\longrightarrow\; 126.0 \text{ in SS2}
+    parameters: "Trajectory: 100.0 (SS0 Baseline) → 114.8 (SS1 Year-5) → 126.0 (SS2 Victory — Surpassing Finland 88 & Denmark 90 on Global Trust)"
+    proof_bridge: "Social trust is not an exogenous cultural accident; it is an endogenous state variable generated by universal early care (B:01), mentoring (B:02), fair capital taxation (B:05), and Te Tiriti partnership (K:07)."
+    citations:
+      - "Knack, S., & Keefer, P. (1997). Does social capital have an economic payoff? A cross-country investigation. Quarterly Journal of Economics, 112(4), 1251–1288."
+      - "Algan, Y., & Cahuc, P. (2010). Inherited trust and growth. American Economic Review, 100(5), 2060–2092."
+  # ============================================================================
+  # MODULE 3: KAUPAPA & WAYFINDERS PERSONA DECK (K:01 - K:07)
+  # ============================================================================
+  - id: "K:01"
+    monograph_ref: "Doc 1B §2.2 • Doc 2: PolicyExperiment_LeeSeshadri_4Region.m"
+    equation_title: "Early-Stage In-Kind Floor Operator & State-Care Entry Bound"
+    latex_equation: |
+      G_{\text{ECE},1}^{\text{in-kind}} \ge \bar{g}_1 \;\Longrightarrow\; \Pr\big(i_c(s_1) = 0\big) \le 0.015, \qquad N_{\text{Exit 1}}(\text{SS2}) = N_0 \int_{\mathcal{S}_1} \mathbb{I}\big(h_2(s_1) < \underline{h}\big) d\mu^\star(s_1) < 300
+    parameters: "Compresses Gate 1 stunting from 22.0% → 1.5% | Cuts Oranga Tamariki reactive state-care entries by >94% (<300 nationally)"
+    proof_bridge: "By guaranteeing universal in-kind early wraparound before the household budget constraint binds, the Kaitiaki operator eliminates the subsistence corner and shuts off the reactive state-care pipeline at its root."
+    citations:
+      - "Cunha, F., Heckman, J. J., & Schennach, S. M. (2010). Estimating the technology of cognitive and noncognitive skill formation. Econometrica, 78(3), 883–931."
+      - "Barnardos Aotearoa (2026). Te Korowai Mokopuna: Universal Early Childhood & Whānau Wraparound Actuarial Case."
+
+  - id: "K:02"
+    monograph_ref: "Doc 1B §4.1 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Murphy–Shleifer–Vishny Occupational Choice & Retained-Founder Operator"
+    latex_equation: |
+      z_h \ge z^\star(\tau_a, B_{\text{youth}}) \iff \pi_{\text{firm}}\big(z_h, a_{20} + B_{\text{youth}}, r_b^{\text{SS2}}\big) \ge \max\big\{ w_{\text{NZ}} h_3,\, w_{\text{AUS}} h_3 - c_{\text{mig}} \big\}
+    parameters: "Lowers founder entry threshold ∂z*/∂B_youth < 0 | Retains +3,550/yr skilled graduates in NZ | Lifts real wages +3.2% to +9.6%"
+    proof_bridge: "Combining the NZD 62k+ Youth Capital Grant (B:03) with Use-It-Or-Lose-It tax rebalancing (B:05) lowers the collateral barrier to entrepreneurship so young builders launch firms in Aotearoa instead of emigrating."
+    citations:
+      - "Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991). The allocation of talent: Implications for growth. Quarterly Journal of Economics, 106(2), 503–530."
+      - "Evans, D. S., & Jovanovic, B. (1989). An estimated model of entrepreneurial choice under liquidity constraints. Journal of Political Economy, 97(4), 808–827."
+
+  - id: "K:03"
+    monograph_ref: "Doc 1B §4.3 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Aiyagari–Kiyotaki–Moore Regional Collateral & Spread Compressor"
+    latex_equation: |
+      r_b^r(\text{SS2}) = r^\star + \Omega_{\text{sovereign}}\!\left(\frac{B_{\text{gov}}}{Y}\right) \longrightarrow r_b^r(\text{SS0}) - 60\text{ bps}, \qquad \frac{p_{h,r}^r \bar{h}}{y_{1,r}} \le 0.30 \;\;\forall\, r \in \{1..4\}
+    parameters: "Sovereign/household borrowing spread: −60 to −100 bps | Urban rent cooling: −7.5% (SS1) to −10.5% (SS2) across all 4 regions"
+    proof_bridge: "Sinking sovereign debt below 40% of GDP (B:06) and rotating speculative land into housing supply (B:05) compresses mortgage and business credit spreads by 60–100 bps nationwide."
+    citations:
+      - "Kiyotaki, N., & Moore, J. (1997). Credit cycles. Journal of Political Economy, 105(2), 211–248."
+      - "Aiyagari, S. R. (1994). Uninsured idiosyncratic risk and aggregate saving. Quarterly Journal of Economics, 109(3), 659–684."
+
+  - id: "K:04"
+    monograph_ref: "Doc 1B §1.3 • Doc 2: QEA_2026.m"
+    equation_title: "8-PType Discrete Grid Bellman & Kolmogorov Forward Fixed-Point Operator"
+    latex_equation: |
+      \mu^\star(s') = \sum_{i=1}^{8} \omega_i \sum_{s \in \mathcal{S}} \mathbb{I}\big(d_i^\star(s) = s'\big) \Pi(z'|z) \mu_i^\star(s), \qquad \left\| \mathcal{T}(\mu^{(k)}) - \mu^{(k)} \right\|_\infty < 10^{-8}
+    parameters: "8 Permanent Types × 81 Annual Ages × 9 Farmer–Toda AR(1) Shock States | Zero log-linearization error around subsistence corners"
+    proof_bridge: "By computing exact discrete policy functions d_i*(s) and stationary measures μ*(s) on the GPU, the Systems Architect proves when a policy self-finances via precautionary release (ΔA_prec) versus when it crowds out."
+    citations:
+      - "Kirkby, R. (2017–2026). VFI Toolkit: A MATLAB GPU Toolkit for Macroeconomic Life-Cycle and Heterogeneous-Agent Models."
+      - "Farmer, L. E., & Toda, A. A. (2017). Discretizing nonlinear, non-Gaussian Markov processes with exact conditional moments. Quantitative Economics, 8(2), 651–683."
+
+  - id: "K:05"
+    monograph_ref: "Doc 1B §2.4 • Rules: STORIES.md"
+    equation_title: "Akerlof–Kranton Identity Utility & Pūrākau Engagement Operator"
+    latex_equation: |
+      U_j^i(c, \ell, e_2) = u(c, \ell) + \lambda_{\text{id}} \, \mathcal{I}_{\text{pūrākau}}\big(e_2, M_{\text{tuakana}}, \text{Cohesion}_t\big), \qquad \frac{\partial e_2^\star}{\partial \mathcal{I}_{\text{pūrākau}}} > 0
+    parameters: "Lifts Gate 2 school/mentoring engagement from 17.3% → 65.0%+ | Blocks alienated dropout (Exit 4) and T:05 outrage susceptibility"
+    proof_bridge: "When rangatahi see their own whakapapa and pūrākau reflected in kura, arts, and mentoring (B:02 + C:03), identity utility (I_pūrākau) reinforces educational effort e₂* rather than warring against it."
+    citations:
+      - "Akerlof, G. A., & Kranton, R. E. (2000). Economics and identity. Quarterly Journal of Economics, 115(3), 715–753."
+      - "Durie, M. (2001). Mauri Ora: The Dynamics of Māori Health & Whānau Capacity. Oxford University Press."
+
+  - id: "K:06"
+    monograph_ref: "Doc 1B §4.4 • Doc 2: QEA_2026.m"
+    equation_title: "De Nardi Warm-Glow Solar Bequest & Ngā Kete Wisdom Spillover"
+    latex_equation: |
+      \mathcal{B}(a_J, pv_J, K_{\text{kete}}) = \text{wg}_1 \frac{\big(a_J + \text{wg}_2 \, P_{\text{pv}} \, pv_J\big)^{1-\sigma}}{1-\sigma}, \qquad h_{1,\text{next}} = \big(1 + \theta_{\text{kete}} \mathbb{I}_{\text{Super}=65}\big) h_{1,\text{base}}
+    parameters: "wg₁ = 1.5, wg₂ = 3.0 (3× bequest weight on paid-off solar pv=5) | Ngā Kete Human-Capital Multiplier (1 + θ_kete) = 1.75×"
+    proof_bridge: "Keeping Universal NZ Super solvent at age 65 (countering H:04) allows Kaumātua and Kuia to pass down debt-free rooftop solar (pv=5) and 1.75× intergenerational mentoring wisdom (Ngā Kete) to their mokopuna."
+    citations:
+      - "De Nardi, M. (2004). Wealth inequality and intergenerational links. Review of Economic Studies, 71(3), 743–768."
+      - "Mead, H. M. (2016). Tikanga Māori: Living by Māori Values (Kaumātua Stewardship & Ngā Kete o te Wānanga). Huia Publishers."
+
+  - id: "K:07"
+    monograph_ref: "Doc 1B §6.2 • Rules: STORIES.md"
+    equation_title: "Double-Hull Supermodularity & Nash Cooperative Bargaining Theorem"
+    latex_equation: |
+      \mathcal{W}\big(\text{Hull}_{\text{Foils}} \cup \text{Hull}_{\text{Waka}}\big) - \Big[ \mathcal{W}\big(\text{Hull}_{\text{Foils}}\big) + \mathcal{W}\big(\text{Hull}_{\text{Waka}}\big) \Big] = \Delta_{\text{kīato}} > 0
+    parameters: "Supermodular Kīato Cross-Beam Dividend Δ_kīato > 0 | Drives Social Cohesion Index to 126.0 and neutralizes T:05 polarisation"
+    proof_bridge: "By Topkis's Supermodularity Theorem, lashing institutional/actuarial precision (Hull A) to whakapapa/kaitiakitanga (Hull B) via the Kīato cross-beams generates strictly higher welfare than either tradition alone."
+    citations:
+      - "Topkis, D. M. (1998). Supermodularity and Complementarity. Princeton University Press."
+      - "Nash, J. F. (1950). The bargaining problem. Econometrica, 18(2), 155–162."
+
+  # ============================================================================
+  # MODULE 4: NOBEL LAUREATE ARCHIVE (N:01 - N:06)
+  # ============================================================================
+  - id: "N:01"
+    monograph_ref: "Doc 1B §3.3 • Doc 2: Compute_Actuarial_NPV_4Region.m"
+    equation_title: "Coase–North Institutional Transaction-Cost & Red-Tape Compression"
+    latex_equation: |
+      G_{\text{effective},1} = \big(1 - \tau_{\text{friction}}\big) G_{\text{nominal},1}, \qquad \tau_{\text{friction}}(\text{SS0 Silos}) \approx 0.32 \;\longrightarrow\; \tau_{\text{friction}}(\text{SS2 Whānau Ora}) \le 0.08
+    parameters: "Cuts institutional agency/compliance friction by 75% (from 32% siloed overhead to ≤8% high-trust commissioning)"
+    proof_bridge: "Replacing fragmented, adversarial agency silos (H:02) with unified high-trust Whānau Ora / Te Korowai commissioning ensures 92%+ of every public dollar reaches the child's CES skill production function."
+    citations:
+      - "Coase, R. H. (1937). The nature of the firm. Economica, 4(16), 386–405 (Nobel Prize in Economic Sciences 1991)."
+      - "North, D. C. (1990). Institutions, Institutional Change and Economic Performance. Cambridge University Press (Nobel Prize 1993)."
+
+  - id: "N:02"
+    monograph_ref: "Doc 1B §2.1 • Doc 2: PolicyExperiment_LeeSeshadri_4Region.m"
+    equation_title: "Cunha–Heckman Self-Productivity & Dynamic Complementarity Matrix"
+    latex_equation: |
+      h_{t+1} = f_t(h_t, I_t), \qquad \underbrace{\frac{\partial h_{t+1}}{\partial h_t} > 0}_{\text{Self-Productivity}}, \qquad \underbrace{\frac{\partial^2 h_{t+1}}{\partial h_t \, \partial I_t} > 0}_{\text{Dynamic Complementarity}}, \qquad \frac{\text{ROI}(\text{Gate 1})}{\text{ROI}(\text{Gate 3})} \ge 3.0\times
+    parameters: "Early elasticity of substitution ϕ₁ = −0.50 vs. late ϕ₃ = +0.30 | Gate 1 investments yield ≥3× the lifetime return of late remediation"
+    proof_bridge: "Skills beget skills (∂h_{t+1}/∂h_t > 0) and early readiness raises the productivity of all later schooling and mentoring (∂²h_{t+1}/∂h_t∂I_t > 0)—the foundational theorem of Foils & Founders."
+    citations:
+      - "Heckman, J. J. (2000). Policies to foster human capital. Research in Economics, 54(1), 3–56 (Nobel Prize in Economic Sciences 2000)."
+      - "Cunha, F., & Heckman, J. J. (2007). The technology of skill formation. American Economic Review, 97(2), 31–47."
+
+  - id: "N:03"
+    monograph_ref: "Doc 1B §3.4 • Doc 2: Compute_Actuarial_NPV_4Region.m"
+    equation_title: "Williamson Governance-Structure Alignment & Forward Liability Booking"
+    latex_equation: |
+      \min_{\mathcal{G}} \Big\{ C_{\text{production}}(\mathcal{G}) + C_{\text{governance}}\big(\mathcal{G} \mid k_{\text{specificity}},\, T_{\text{horizon}}\big) \Big\} \implies \mathcal{G}^\star = \text{ACC Actuarial Balance Sheet}
+    parameters: "Matches 81-year human-capital asset horizon (T_horizon) with 2.0% real SRTP actuarial governance (3.84× Year-5 return)"
+    proof_bridge: "Evaluating a 25-to-80-year human-capital investment with a 1-year cash-budget rule (H:01) is a fatal governance mismatch; aligning the accounting horizon with ACC actuarial valuation unlocks immediate fiscal solvency."
+    citations:
+      - "Williamson, O. E. (1985). The Economic Institutions of Capitalism. Free Press (Nobel Prize in Economic Sciences 2009)."
+      - "Williamson, O. E. (2009). Transaction Cost Economics: The natural progression. American Economic Review, 100(3), 673–690."
+
+  - id: "N:04"
+    monograph_ref: "Doc 1B §5.3 • Doc 2: QEA_2026.m"
+    equation_title: "Ostrom Polycentric Commons Governance & Local Information Advantage"
+    latex_equation: |
+      \mathbb{E}\big[\Delta h_2 \mid \mathcal{I}_{\text{local}}(\text{Marae, Kura, Iwi})\big] > \mathbb{E}\big[\Delta h_2 \mid \mathcal{I}_{\text{central}}(\text{Wellington})\big], \qquad \text{Default/Waste}_{\text{polycentric}} \downarrow
+    parameters: "8 Design Principles for Polycentric Commons | Powers C:03 (2,500 Schools + 800 Marae hubs) and B:01/B:02 local delivery"
+    proof_bridge: "Polycentric community governance (Iwi, Hapu, Marae, local schools, Barnardos hubs) possesses superior local information I_local and monitoring trust compared to either remote state monopolies or atomized markets."
+    citations:
+      - "Ostrom, E. (1990). Governing the Commons: The Evolution of Institutions for Collective Action. Cambridge University Press (Nobel Prize 2009)."
+      - "Ostrom, E. (2010). Beyond markets and states: Polycentric governance of complex economic systems. American Economic Review, 100(3), 641–672."
+
+  - id: "N:05"
+    monograph_ref: "Doc 1B §4.6 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Romer Endogenous Growth & Non-Rival Knowledge Spillover Multiplier"
+    latex_equation: |
+      Y_t = A_t K_t^\alpha \big(L_{Y,t} \bar{h}_t\big)^{1-\alpha}, \qquad \frac{\dot{A}_t}{A_t} = \delta_{\text{R\&D}} \, H_{A,t}\big(\text{B:03}, \text{B:05}, \text{K:06}\big) \;\Longrightarrow\; \text{Multiplier}_{\text{N:05}} = 1.75\times
+    parameters: "Non-rival ideas ∂²Y/∂A∂H > 0 | Retaining 3,550/yr graduates (B:03) + Kaumātua wisdom (K:06) yields a 1.75× TFP/skill multiplier"
+    proof_bridge: "Unlike physical dirt (z_l), ideas and cultural/technical knowledge (A_t) are non-rival; stopping the graduate brain drain and honoring Kaumātua knowledge compounds national productivity by 1.75×."
+    citations:
+      - "Romer, P. M. (1990). Endogenous technological change. Journal of Political Economy, 98(5, Part 2), S71–S102 (Nobel Prize 2018)."
+      - "Acemoglu, D., Johnson, S., & Robinson, J. A. (2005). Institutions as a fundamental cause of long-run growth (Nobel Prize 2024)."
+
+  - id: "N:06"
+    monograph_ref: "Doc 1B §6.1 • Doc 2: Compute_Welfare_CE_4Region.m"
+    equation_title: "Sen–Stiglitz–Fitoussi Multi-Capital Capability & Well-Being Synthesis"
+    latex_equation: |
+      \mathcal{W}_{\text{Sen–Stiglitz}} = \Phi\!\Big( \text{CE}(+20.5\%),\, \text{Stunting}(\le 1.5\%),\, \Delta\text{CO}_2\text{e}(-14.8\text{ Mt}),\, \text{Cohesion}(126.0),\, \text{Super}_{65} \Big)
+    parameters: "Simultaneous Pareto-improving victory across all 7 Capitals, all 4 Regions, and all 20 Rawlsian Birth Vigintiles"
+    proof_bridge: "GDP alone mismeasures national wealth when children are stunted and grids are brittle; true intergenerational welfare requires simultaneous flourishing across human capability, clean energy, and social trust."
+    citations:
+      - "Sen, A. (1999). Development as Freedom. Oxford University Press (Nobel Prize in Economic Sciences 1998)."
+      - "Stiglitz, J. E., Sen, A., & Fitoussi, J.-P. (2009). Report by the Commission on the Measurement of Economic Performance and Social Progress."
+
+  # ============================================================================
+  # MODULE 5: ORTHODOXY BOSS DECK (H:01 - H:05)
+  # ============================================================================
+  - id: "H:01"
+    monograph_ref: "Doc 1B §3.4 • Doc 2: Compute_Actuarial_NPV_4Region.m"
+    equation_title: "Myopic 3-Year Cash-Budget Truncation Bias (Orthodox Boss Hazard)"
+    latex_equation: |
+      \text{NPV}_{\text{myopic}}(T=3) = \sum_{s=1}^{3} \frac{\Delta \text{CashFlow}_s}{(1 + r_{\text{hurdle}})^s} < 0 \quad \text{while} \quad \text{NPV}_{\text{ACC}}(T=81, r_{\text{SRTP}}=2\%) = +\text{NZD } 35.25\text{B}
+    parameters: "Truncates 78 years of human-capital returns (ages 4–81) and applies punitive 6%–8% hurdle rates to early childhood care"
+    proof_bridge: "Judging an 81-year human capability investment over a 3-year parliamentary cash window systematically rejects every high-return preventative program (B:01, B:02) while rubber-stamping reactive prisons and hospitals."
+    citations:
+      - "Stein, J. C. (1989). Efficient capital markets, inefficient firms: A model of myopic corporate behavior. Quarterly Journal of Economics, 104(4), 655–669."
+      - "New Zealand Treasury (2024). Circular 2024/15 & CBAx Long-Horizon Actuarial Counter-Framework (Countered by Card B:07)."
+
+  - id: "H:02"
+    monograph_ref: "Doc 1B §3.3 • Doc 2: PolicyExperiment_LeeSeshadri_4Region.m"
+    equation_title: "Siloed Agency Principal-Agent Distortion & Compliance Deadweight Loss"
+    latex_equation: |
+      \sum_{m=1}^{M} C_{\text{admin},m}\big(\text{Silo}_m\big) = 0.32 \, G_{\text{total}}, \qquad \text{Pr}\big(\text{Child Falls Between Silos } m \cap m'\big) = 1 - (1 - p_{\text{drop}})^M \uparrow
+    parameters: "M = 6+ uncoordinated ministries/agencies | Consumes ~32% in administrative deadweight loss before reaching Gate 1–2 whānau"
+    proof_bridge: "Splitting a child's needs across six separate agency budgets creates a Tragedy of the Anticommons where each silo defends its KPI while vulnerable whānau fall through the cracks (Countered by N:01 & N:04)."
+    citations:
+      - "Holmstrom, B., & Milgrom, P. (1991). Multitask principal-agent analyses: Incentive contracts, asset ownership, and job design (Nobel Prize 2016/2020)."
+      - "New Zealand Productivity Commission (2015). More Effective Social Services: Inquiry into Siloed Commissioning."
+
+  - id: "H:03"
+    monograph_ref: "Doc 1B §3.2 • Doc 2: NZ_4Region_Master.m"
+    equation_title: "Trans-Tasman Human-Capital Arbitrage & Fiscal Externality Drain"
+    latex_equation: |
+      \text{Migrate}_{\text{AUS}} = 1 \iff \sum_{j=22}^{65} \beta^{j-22} \Big[ u\big(w_{\text{AUS}} h_3 - p_{h,\text{SYD}}^r\big) - u\big(w_{\text{NZ}} h_3 - 3.1 p_{h,\text{AKL}}^r\big) \Big] > c_{\text{mig}}
+    parameters: "SS0 Metro Graduate Exile Rate = 19.3%–23.4% | NZ pays 100% of ages 0–21 education cost; Australia captures 40 years of PAYE/TFP"
+    proof_bridge: "When NZ taxes young wages heavily while leaving urban housing at 3.1× income and seeding zero youth equity, Sydney/Melbourne poaches 1 in 5 trained graduates free of charge (Countered by B:03 + B:05)."
+    citations:
+      - "Bhagwati, J., & Hamada, K. (1974). The brain drain, international integration of markets for professionals and unemployment. Journal of Development Economics, 1(1), 19–42."
+      - "Gibson, J., & McKenzie, D. (2012). The economic consequences of 'brain drain' of the best and brightest: Microeconomic evidence from five countries. Economic Journal, 122(561), 339–375."
+
+  - id: "H:04"
+    monograph_ref: "Doc 1B §4.4 • Doc 2: Solve_SS2_2050_5050Rule.m"
+    equation_title: "The Austerity False Trilemma: Super Age Hike vs. PAYE Creep"
+    latex_equation: |
+      \text{Under SS0 }(h_3^{\text{low}}, \tau_a = 0)\!:\quad \tau_y^{\text{PAYE}}(2050) = 28.22\% \;\;\text{or}\;\; \text{Age}_{\text{Super}} \uparrow 67\text{–}70 \;\;\text{or}\;\; \frac{B_{\text{gov}}}{Y} \longrightarrow 200\%
+    parameters: "SS0 Austerity Drift: PAYE 22.0% → 28.2% or Super Age → 67–70 | SS2 Counter (B:06): PAYE cut to 18.5% & Super kept at Age 65!"
+    proof_bridge: "Raising the pension age to 67–70 is a regressive tax on manual workers and short-lived cohorts caused solely by leaving 22% of children stunted and NZD 1.6T in land untaxed (Countered by B:06 + K:06)."
+    citations:
+      - "Diamond, P. A. (1977). A framework for social security analysis. Journal of Public Economics, 8(3), 275–298 (Nobel Prize 2010)."
+      - "Chetty, R., Stepner, M., Abraham, S., et al. (2016). The association between income and life expectancy in the United States. JAMA, 315(16), 1750–1766."
+
+  - id: "H:05"
+    monograph_ref: "Doc 1B §4.1 • Data: data/earn_plus_own_10tiers.csv"
+    equation_title: "Capital-Income Tax Disharmony & Speculative Portfolio Skew"
+    latex_equation: |
+      \tau_{\text{eff}}\big(\text{Leveraged Land } z_\ell\big) \approx 0\% \;\ll\; \tau_{\text{eff}}\big(\text{Wages & Productive R\&D } z_h\big) \in [28\%, 39\%] \implies \frac{K_{\text{land}}}{K_{\text{productive}}} \uparrow
+    parameters: "Top 0.25% Speculator (20:20, NZD 100M+ passive land) captures tax-free capital gains while crowding out 19/20 productive builders"
+    proof_bridge: "Exempting speculative land gains while taxing wages and business profits distorts the national capital stock into non-tradable housing inflation and starved firm CapEx (Countered by B:05)."
+    citations:
+      - "Chamley, C. (1986), & Judd, K. L. (1985) vs. Straub, L., & Werning, I. (2020). Positive long-run capital taxation: Chamley–Judd revisited. American Economic Review, 110(1), 86–119."
+      - "Guvenen, F., et al. (2023). Use it or lose it: Efficiency and redistributional effects of wealth taxation. Quarterly Journal of Economics, 138(2), 835–894."
+
+  # ============================================================================
+  # MODULE 6: ELECTRIFICATION & GRID FIRMING PACK (E:01 - E:03)
+  # ============================================================================
+  - id: "E:01"
+    monograph_ref: "Doc 1B §5.2 • Rules: rules/game_changer_tutorial.md"
+    equation_title: "First-Order Partial-Equilibrium Electrification Cost-Savings Identity"
+    latex_equation: |
+      \Delta \text{OPEX}_{\text{PE}} = \sum_{s=1}^{4} N_s \big( E_{\text{fossil},s} - E_{\text{elec},s} \big) = +\text{NZD } 11.0\text{B/yr}, \qquad \text{CapEx}_{\text{Sectors 1–4}} = \text{NZD } 36.2\text{B–}47.5\text{B}
+    parameters: "4 Sectors (Homes, Schools/Marae, Commercial, Industry) | 3.3–4.3 yr payback | −10.0 MtCO₂e/yr | Vulnerable to H:01 Crowd-Out Claim"
+    proof_bridge: "In Easy Mode (partial equilibrium), electrifying homes, schools, and industry saves NZD 11B/yr; however, without solving for μ*(s), orthodox critics claim the NZD 36B–48B CapEx crowds out social investment."
+    citations:
+      - "Rewiring Aotearoa (2025). Electric Homes & Machine Count: Partial-Equilibrium Cost-Savings Audit Across New Zealand Households."
+      - "Energy Efficiency and Conservation Authority (EECA, 2025). New Zealand Energy End-Use Database."
+
   - id: "E:02"
     monograph_ref: "Doc 1B §5.2 • Doc 2: QEA_2026.m"
     equation_title: "Second-Order Precautionary Capital Release Under Solar Endowment"
@@ -44,4 +495,15 @@ study_cards:
       - "Farmer, L. E., & Toda, A. A. (2017). Discretizing nonlinear, non-Gaussian Markov processes with exact conditional moments. Quantitative Economics, 8(2), 651–683."
       - "Aiyagari, S. R. (1994). Uninsured idiosyncratic risk and aggregate saving. Quarterly Journal of Economics, 109(3), 659–684."
       - "Rewiring Aotearoa (2025–2026). Electric Homes, Farms, & Community Hubs Empirical Cost-Savings Dataset."
+
+  - id: "E:03"
+    monograph_ref: "Doc 1B §5.3 • Doc 2: QEA_2026.m"
+    equation_title: "Dry-Year Hydro Storage Buffer via Distributed & Farm-Pond Solar"
+    latex_equation: |
+      S_{\text{hydro},t+1} = S_{\text{hydro},t} + \text{Inflow}_t - \Big( D_{\text{grid},t} - G_{\text{rooftop+pond}}(pv=5) \Big) \ge S_{\min}^{\text{dry-year}} \implies I_{\text{LNG}}(\text{NZD } 6.2\text{B}) = 0
+    parameters: "19,000+ Farm Dairy Sheds & Irrigation Ponds + Bottom-50% Whānau Solar | Cancels NZD 6.2B LNG import terminal (−3.2 MtCO₂e)"
+    proof_bridge: "Generating distributed daytime power across 19,000 farm ponds and 1.1M homes preserves South Island hydro lake levels for winter peaks, eliminating the dry-year deficit and canceling the NZD 6.2B LNG terminal."
+    citations:
+      - "Transpower New Zealand (2025). Whakamana i Te Mauri Hiko: Security of Supply & Dry-Year Hydro Firming Scenarios."
+      - "Tiemann, M. (June 2026). Firming the Economic Grid: Distributed Solar Endowments vs. Imported LNG in an 8-PType OLG Economy."
   

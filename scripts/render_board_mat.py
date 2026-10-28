@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Foils & Founders: Printable SVG & HTML Board Mat Renderer
-=========================================================
+Foils & Founders: Printable SVG & HTML Board Mat Renderer (Overflow-Fixed)
+==========================================================================
 Generates a print-ready SVG (900mm x 600mm aspect ratio: 1800x1220 px)
-and an HTML preview wrapper in output/ showing:
-  - Zone 1: The Rawlsian D20 Reef & Vigintile Compass (B:00)
-  - Zone 2: The 3 Interlocking Subsystem Bays (Sub-Zones A, B, and C)
-  - Zone 3: The 8-Slot Texas Hold'em River (Variant B Persistent Royalties)
-  - Zone 4: The 20-Turn OLG Clock & Chasing Finland Cohesion Race Track
+and an HTML preview wrapper in output/ with:
+  - Stacked Bay Titles + Maori Subtitles (zero horizontal collision)
+  - Strictly bounded Sub-Zone A, B, and C text lines
+  - 3-Year/Turn OLG Clock where every turn = 1 NZ Parliamentary Term (no redundant red election boxes)
 
 Author: Michael Tiemann / IGWelfare-Game
 License: GPL-3.0-or-later / MIT
@@ -52,14 +51,15 @@ def build_board_svg() -> str:
     # ==========================================================================
     svg.append('<rect x="30" y="86" width="1740" height="122" rx="10" fill="#0F2942" stroke="#00B4D8" stroke-width="2"/>')
     svg.append(
-        '<text x="48" y="108" fill="#00B4D8" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold">'
+        '<text x="45" y="108" fill="#00B4D8" font-family="Helvetica, Arial, sans-serif" font-size="13.5" font-weight="bold">'
         'ZONE 1: THE RAWLSIAN D20 BIRTH &amp; ENDOGENOUS HAZARD COMPASS (20 WEALTH VIGINTILES)</text>'
     )
     svg.append(
-        '<text x="1750" y="108" text-anchor="end" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="13">'
+        '<text x="1755" y="108" text-anchor="end" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="12.5">'
         'Cover Red/Amber Reefs by Locking Subsystems 1, 2, &amp; 3 Below ("Make Your Own Luck")</text>'
     )
 
+    # 20 D20 cells: 45 + 20*83 + 19*2 = 45 + 1660 + 38 = 1743 (12px inside x=1770 right border)
     cell_w = 83
     start_x = 45
     for d in range(1, 21):
@@ -77,7 +77,7 @@ def build_board_svg() -> str:
         svg.append(f'<rect x="{cx}" y="{cy}" width="{cell_w}" height="56" rx="6" fill="{fill}" stroke="{stroke}" stroke-width="2"/>')
         svg.append(
             f'<text x="{cx + cell_w/2}" y="{cy + 26}" text-anchor="middle" fill="#FFFFFF" '
-            f'font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold">d20: {d}</text>'
+            f'font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold">d20: {d}</text>'
         )
         svg.append(
             f'<text x="{cx + cell_w/2}" y="{cy + 46}" text-anchor="middle" fill="#E0FBFC" '
@@ -85,47 +85,53 @@ def build_board_svg() -> str:
         )
 
     svg.append(
-        '<text x="295" y="194" text-anchor="middle" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold">'
-        'BOTTOM REEF (1-6): Triggers T:00/T:01/T:05 | Closed by BAY 1 (B:01+B:02)</text>'
+        '<text x="310" y="194" text-anchor="middle" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
+        'BOTTOM REEF (1-6): T:00/T:01/T:05 | Closed by BAY 1 (B:01+B:02)</text>'
     )
     svg.append(
-        '<text x="950" y="194" text-anchor="middle" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold">'
-        'ELECTION AUDIT (1-8 on Turns 3,6,9,12,15,18): Triggers H:01/H:02 | Closed by BAY 3 (B:07)</text>'
+        '<text x="955" y="194" text-anchor="middle" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
+        '3-YR TERM AUDIT (1-8): Triggers H:01/H:02 on Unshielded Stakes | Closed by BAY 3 (B:07)</text>'
     )
     svg.append(
-        '<text x="1605" y="194" text-anchor="middle" fill="#FFB703" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold">'
+        '<text x="1585" y="194" text-anchor="middle" fill="#FFB703" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
         'TOP REEF (19-20): T:02/T:04 | Closed by BAY 2 (B:05)</text>'
     )
 
     # ==========================================================================
-    # ZONE 2: THE THREE INTERLOCKING SUBSYSTEM BAYS (y = 222 to 707)
+    # ZONE 2: THE THREE INTERLOCKING SUBSYSTEM BAYS (y = 220 to 710)
     # ==========================================================================
     bays = [
         {
             "x": 30,
             "title": "BAY 1: FRONT LIFTING FOIL",
-            "maori": "Te Korowai Mokopuna (Human Capability)",
-            "recipe": "REQUIRED: B:01 (First 2000 Days) + B:02 (Tuakana-Teina) + 1 Amplifier (N:01, N:02, C:02, C:03)",
-            "judo": "JUDO COUNTERS: Play B:01+N:02 vs. T:00/T:01 | Play C:02 or K:05 vs. T:05 Outrage",
-            "lock": "LOCKED REWARD: Covers D20 Reef 1-6 (No Life Impossible!) + Awards +5 Legacy Mana Bonus",
+            "maori": "Te Korowai Mokopuna — Early Human Capability",
+            "recipe": "RECIPE: B:01 (First 2000 Days) + B:02 (Tuakana-Teina) + 1 Amp (N:01, N:02, C:02, C:03)",
+            "judo1": "Play B:01+N:02 (or K:01) vs. T:00/T:01",
+            "judo2": "Play C:02 or K:05 vs. T:05 Outrage Mill",
+            "lock1": "LOCKED REWARD: Covers D20 Reef 1-6 (No Life Impossible!)",
+            "lock2": "+ Awards +5 Legacy Mana Bonus to Enacting Coalition!",
             "color": "#2A9D8F",
         },
         {
             "x": 625,
             "title": "BAY 2: WING-SAIL POWER PLANT",
-            "maori": "Te Aka Matua (Capital &amp; Clean Energy Rotation)",
-            "recipe": "REQUIRED: B:05 (Use-It-Or-Lose-It) + B:03 (Youth Grant) + 1 Engine (E:01, E:02, C:05)",
-            "judo": "JUDO COUNTERS: Play B:05+N:05 or K:02 vs. T:02/T:04/H:05 | Play B:03 vs. H:03 Exile",
-            "lock": "LOCKED REWARD: Covers D20 Reef 19-20 + Stops Sydney Brain Drain + Adults Earn +1 Wealth/Turn",
+            "maori": "Te Aka Matua — Capital &amp; Clean Energy Rotation",
+            "recipe": "RECIPE: B:05 (Use-It-Or-Lose-It) + B:03 (Youth Grant) + 1 Engine (E:01, E:02, C:05)",
+            "judo1": "Play B:05+N:05 (or K:02) vs. T:02/T:04/H:05",
+            "judo2": "Play B:03 vs. H:03 Sydney Brain Drain",
+            "lock1": "LOCKED REWARD: Covers D20 Reef 19-20 + Ends Brain Drain",
+            "lock2": "+ Working Adults Earn +1 Wealth Every Turn!",
             "color": "#00B4D8",
         },
         {
             "x": 1220,
             "title": "BAY 3: REAR T-FOIL STABILIZER",
-            "maori": "Nga Kete o te Wananga (Actuarial &amp; Fiscal Governance)",
-            "recipe": "REQUIRED: B:07 (ACC Time-Bend) + B:06 (2050 50/50 Rule) + 1 Proof (N:03, N:04, B:04, B:08)",
-            "judo": "JUDO COUNTERS: Play B:07+N:03 vs. H:01 Cash Myopia | Play N:01/N:04 vs. H:02 Silos",
-            "lock": "LOCKED REWARD: Cancels Election Audits + PAYE Cut to 18.5% (+1W/Turn) + Super @ 65 (K:06)",
+            "maori": "Nga Kete o te Wananga — Actuarial &amp; Fiscal Governance",
+            "recipe": "RECIPE: B:07 (ACC Time-Bend) + B:06 (2050 50/50 Rule) + 1 Proof (N:03, N:04, B:04, B:08)",
+            "judo1": "Play B:07+N:03 (or K:03/K:04) vs. H:01 Myopia",
+            "judo2": "Play N:01/N:04 vs. H:02 Agency Silos",
+            "lock1": "LOCKED REWARD: Cancels H:01 Cash-Myopia Audits Forever",
+            "lock2": "+ PAYE Cut to 18.5% (+1W/Turn) &amp; Super @ 65 (K:06)!",
             "color": "#D4A359",
         },
     ]
@@ -133,86 +139,104 @@ def build_board_svg() -> str:
     for b in bays:
         bx = b["x"]
         bw = 550
-        svg.append(f'<rect x="{bx}" y="222" width="{bw}" height="485" rx="12" fill="#0B1F36" stroke="{b["color"]}" stroke-width="3"/>')
+        svg.append(f'<rect x="{bx}" y="220" width="{bw}" height="490" rx="12" fill="#0B1F36" stroke="{b["color"]}" stroke-width="3"/>')
+
+        # Stacked Title (y=243) and Maori Subtitle (y=261) -> Zero Horizontal Collision!
         svg.append(
-            f'<text x="{bx + 18}" y="248" fill="{b["color"]}" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold">'
+            f'<text x="{bx + 18}" y="243" fill="{b["color"]}" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold">'
             f'{b["title"]}</text>'
         )
         svg.append(
-            f'<text x="{bx + bw - 18}" y="248" text-anchor="end" fill="#F4C97E" font-family="Georgia, serif" font-size="14" font-style="italic">'
+            f'<text x="{bx + 18}" y="259" fill="#F4C97E" font-family="Georgia, serif" font-size="12.5" font-style="italic">'
             f'{b["maori"]}</text>'
         )
         svg.append(
-            f'<text x="{bx + 18}" y="268" fill="#E0FBFC" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
+            f'<text x="{bx + 18}" y="276" fill="#E0FBFC" font-family="Helvetica, Arial, sans-serif" font-size="10.8" font-weight="bold">'
             f'{b["recipe"]}</text>'
         )
         svg.append(
-            f'<text x="{bx + 18}" y="286" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="11">'
-            f'Political Drag Cost: [2P: 1.5 Wealth] | [3-4P: 2.0 Wealth] | [5-6P: 3.0 Wealth + 3 Co-Stakers (unless K:07)]</text>'
+            f'<text x="{bx + 18}" y="291" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="10.2">'
+            f'Political Drag: [2P: 1.5W] • [3-4P: 2.0W] • [5-6P: 3.0W + 3 Co-Stakers (unless K:07)]</text>'
         )
 
-        # Sub-Zone A: Staking & Incubation
-        svg.append(f'<rect x="{bx+16}" y="298" width="{bw-32}" height="135" rx="8" fill="#102E4A" stroke="#00B4D8" stroke-width="1.5"/>')
+        # Sub-Zone A: Staking & Incubation (y=292, height=132, width=518)
+        svg.append(f'<rect x="{bx+16}" y="300" width="{bw-32}" height="124" rx="8" fill="#102E4A" stroke="#00B4D8" stroke-width="1.5"/>')
         svg.append(
-            f'<text x="{bx+28}" y="318" fill="#00B4D8" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold">'
-            f'SUB-ZONE A: CONTINGENT MANA STAKING &amp; INCUBATION (UPRIGHT 0-DEG TOKENS)</text>'
+            f'<text x="{bx+26}" y="317" fill="#00B4D8" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
+            f'SUB-ZONE A: CONTINGENT MANA STAKING (UPRIGHT 0-DEG TOKENS)</text>'
         )
         for slot_i in range(3):
-            sx = bx + 32 + slot_i * 165
-            svg.append(f'<rect x="{sx}" y="328" width="150" height="94" rx="6" fill="#0A1E32" stroke="#457B9D" stroke-dasharray="5,4"/>')
+            sx = bx + 30 + slot_i * 166
+            svg.append(f'<rect x="{sx}" y="325" width="152" height="89" rx="6" fill="#0A1E32" stroke="#457B9D" stroke-dasharray="5,4"/>')
             svg.append(
-                f'<text x="{sx+75}" y="375" text-anchor="middle" fill="#8ECAE6" font-family="Helvetica, Arial, sans-serif" font-size="11">'
+                f'<text x="{sx+76}" y="370" text-anchor="middle" fill="#8ECAE6" font-family="Helvetica, Arial, sans-serif" font-size="10.5">'
                 f'Card / Upright Mana #{slot_i+1}</text>'
             )
 
-        # Sub-Zone B: 1-Turn Emergency / Jeopardy Box
+        # Sub-Zone B: 1-Turn Emergency / Jeopardy Box (y=434, height=142, width=518)
         svg.append(
-            f'<rect x="{bx+16}" y="444" width="{bw-32}" height="135" rx="8" fill="#3B1018" stroke="#FF4D4D" stroke-width="2" stroke-dasharray="8,5"/>'
+            f'<rect x="{bx+16}" y="434" width="{bw-32}" height="142" rx="8" fill="#3B1018" stroke="#FF4D4D" stroke-width="2" stroke-dasharray="8,5"/>'
         )
         svg.append(
-            f'<text x="{bx+28}" y="466" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold">'
-            f'SUB-ZONE B: 1-TURN EMERGENCY / JEOPARDY BOX (TIP MANA 90-DEG SIDEWAYS!)</text>'
+            f'<text x="{bx+26}" y="454" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
+            f'SUB-ZONE B: 1-TURN EMERGENCY BOX (TIP MANA 90-DEG SIDEWAYS!)</text>'
         )
         svg.append(
-            f'<text x="{bx+28}" y="485" fill="#FFD6D6" font-family="Helvetica, Arial, sans-serif" font-size="11">'
-            f'If D20 Reef Roll or Feral Spoiler hits: Place T/H Trap here. Save within 1 Turn or Forfeit Staked Mana!</text>'
+            f'<text x="{bx+26}" y="471" fill="#FFD6D6" font-family="Helvetica, Arial, sans-serif" font-size="10">'
+            f'If D20 Reef or Feral Spoiler hits: Place T/H Trap below. Save in 1 Turn or Forfeit Stake!</text>'
         )
-        svg.append(f'<rect x="{bx+28}" y="495" width="160" height="72" rx="6" fill="#24080D" stroke="#FF4D4D"/>')
+
+        # Left Box: Trap/Boss Slot (x = bx+26, width = 140)
+        svg.append(f'<rect x="{bx+26}" y="480" width="140" height="84" rx="6" fill="#24080D" stroke="#FF4D4D"/>')
         svg.append(
-            f'<text x="{bx+108}" y="535" text-anchor="middle" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold">'
+            f'<text x="{bx+96}" y="518" text-anchor="middle" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold">'
             f'TRAP / BOSS SLOT</text>'
         )
-        svg.append(f'<rect x="{bx+204}" y="495" width="318" height="72" rx="6" fill="#182B3A" stroke="#2A9D8F"/>')
         svg.append(
-            f'<text x="{bx+363}" y="523" text-anchor="middle" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold">'
+            f'<text x="{bx+96}" y="536" text-anchor="middle" fill="#FFD6D6" font-family="Helvetica, Arial, sans-serif" font-size="9.5">'
+            f'(T:00-T:05 / H:01-H:06)</text>'
+        )
+
+        # Right Box: Empirical Shield / Judo Counter Slot (x = bx+176, width = 346)
+        svg.append(f'<rect x="{bx+176}" y="480" width="346" height="84" rx="6" fill="#182B3A" stroke="#2A9D8F"/>')
+        svg.append(
+            f'<text x="{bx+349}" y="498" text-anchor="middle" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold">'
             f'EMPIRICAL SHIELD / JUDO COUNTER SLOT</text>'
         )
         svg.append(
-            f'<text x="{bx+363}" y="543" text-anchor="middle" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="10.5">'
-            f'{b["judo"]}</text>'
+            f'<text x="{bx+349}" y="515" text-anchor="middle" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="9.8">'
+            f'• {b["judo1"]}</text>'
         )
         svg.append(
-            f'<text x="{bx+363}" y="560" text-anchor="middle" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="10">'
-            f'Feral Backfire: Countering Spoiler = +1 Mana to Crew &amp; -2 Mana Whakama to Spoiler!</text>'
+            f'<text x="{bx+349}" y="531" text-anchor="middle" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="9.8">'
+            f'• {b["judo2"]}</text>'
+        )
+        svg.append(
+            f'<text x="{bx+349}" y="550" text-anchor="middle" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="9.2">'
+            f'Feral Backfire: Countering = +1M to Crew &amp; -2M Whakama to Spoiler!</text>'
         )
 
-        # Sub-Zone C: Locked Foil Plinth
-        svg.append(f'<rect x="{bx+16}" y="590" width="{bw-32}" height="104" rx="8" fill="#123524" stroke="#80ED99" stroke-width="2"/>')
+        # Sub-Zone C: Locked Foil Plinth (y=586, height=110, width=518)
+        svg.append(f'<rect x="{bx+16}" y="586" width="{bw-32}" height="110" rx="8" fill="#123524" stroke="#80ED99" stroke-width="2"/>')
         svg.append(
-            f'<text x="{bx+28}" y="614" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold">'
+            f'<text x="{bx+26}" y="607" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold">'
             f'SUB-ZONE C: LOCKED HYDROFOIL / KIATO PLINTH (REEF CLEARED!)</text>'
         )
         svg.append(
-            f'<text x="{bx+28}" y="638" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold">'
-            f'{b["lock"]}</text>'
+            f'<text x="{bx+26}" y="627" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="10.8" font-weight="bold">'
+            f'{b["lock1"]}</text>'
         )
         svg.append(
-            f'<text x="{bx+28}" y="662" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="11.5">'
-            f'Bystander Forfeit Check: Any player with 0 Mana staked when locked forfeits -2 Mana (SS1) / -3 Mana (SS2)!</text>'
+            f'<text x="{bx+26}" y="644" fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="10.8" font-weight="bold">'
+            f'{b["lock2"]}</text>'
         )
         svg.append(
-            f'<text x="{bx+28}" y="682" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="11">'
-            f'Multiplier Status: [Any 2 Bays Locked = SS1 (2x Mana!)] | [All 3 Bays + Capstone = SS2 (3x Mana!)]</text>'
+            f'<text x="{bx+26}" y="664" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="10">'
+            f'Bystander Forfeit: 0 Mana staked when locked = -2 Mana (SS1) / -3 Mana (SS2)!</text>'
+        )
+        svg.append(
+            f'<text x="{bx+26}" y="682" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="9.8">'
+            f'Regime Multipliers: [Any 2 Bays = SS1 (2x Mana!)] • [All 3 Bays + Cap = SS2 (3x Mana!)]</text>'
         )
 
     # ==========================================================================
@@ -220,11 +244,11 @@ def build_board_svg() -> str:
     # ==========================================================================
     svg.append('<rect x="30" y="724" width="1740" height="244" rx="12" fill="#0D233A" stroke="#F4C97E" stroke-width="2.5"/>')
     svg.append(
-        '<text x="48" y="750" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold">'
+        '<text x="46" y="750" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="15.5" font-weight="bold">'
         'ZONE 3: THE TEXAS HOLD\'EM RIVER — PERSISTENT INSTITUTIONAL INFRASTRUCTURE (VARIANT B / ROMER N:05)</text>'
     )
     svg.append(
-        '<text x="1750" y="750" text-anchor="end" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold">'
+        '<text x="1754" y="750" text-anchor="end" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold">'
         'Expose Card to River = Collect +1 Generosity (Wealth) Immediately! | Enacted Cards Stay &amp; Earn Royalties</text>'
     )
 
@@ -257,12 +281,12 @@ def build_board_svg() -> str:
         svg.append(f'<rect x="{rx+10}" y="{ry+134}" width="{r_w-20}" height="46" rx="5" fill="#0F2C3F" stroke="#2A9D8F"/>')
         svg.append(
             f'<text x="{rx + r_w/2}" y="{ry + 151}" text-anchor="middle" fill="#FFFFFF" '
-            f'font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold">'
+            f'font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold">'
             f'VARIANT B ROYALTY CAP / TURN</text>'
         )
         svg.append(
             f'<text x="{rx + r_w/2}" y="{ry + 170}" text-anchor="middle" fill="#F4C97E" '
-            f'font-family="Helvetica, Arial, sans-serif" font-size="11">'
+            f'font-family="Helvetica, Arial, sans-serif" font-size="10.5">'
             f'[ Roy 1 ]   [ Roy 2 ]   [ N:05 ]</text>'
         )
 
@@ -271,8 +295,8 @@ def build_board_svg() -> str:
     # ==========================================================================
     svg.append('<rect x="30" y="984" width="1740" height="206" rx="12" fill="#0F2942" stroke="#2A9D8F" stroke-width="2"/>')
     svg.append(
-        '<text x="48" y="1008" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold">'
-        'ZONE 4A: 20-TURN OLG LIFECYCLE CLOCK (dt = 3 YEARS/TURN: 2026 TO 2086) — RED TURNS = PARLIAMENTARY ELECTION AUDIT (H:01)</text>'
+        '<text x="46" y="1008" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="14.5" font-weight="bold">'
+        'ZONE 4A: 20-TURN OLG LIFECYCLE CLOCK (dt = 3 YEARS / 1 PARLIAMENTARY TERM PER TURN: 2026 TO 2086)</text>'
     )
 
     t_w = 81
@@ -280,24 +304,23 @@ def build_board_svg() -> str:
         tx = 46 + (t - 1) * (t_w + 4.5)
         ty = 1018
         yr = 2026 + (t - 1) * 3
-        is_elec = (t % 3 == 0)
-        is_2050 = (t == 8)
-        t_fill = "#5C1620" if is_elec else ("#5C4408" if is_2050 else "#091A2B")
-        t_stroke = "#FF4D4D" if is_elec else ("#F4C97E" if is_2050 else "#00B4D8")
-        tag = "ELECTION!" if is_elec else ("2050 RULE" if is_2050 else f"Age +{t*3}y")
+        is_2050 = (t == 9)  # Turn 9 = 2050 (2026 + 8*3 = 2050)
+        t_fill = "#5C4408" if is_2050 else "#091A2B"
+        t_stroke = "#F4C97E" if is_2050 else "#00B4D8"
+        tag = "2050 TARGET!" if is_2050 else f"Age +{t*3}y"
 
         svg.append(f'<rect x="{tx}" y="{ty}" width="{t_w}" height="58" rx="6" fill="{t_fill}" stroke="{t_stroke}" stroke-width="1.8"/>')
         svg.append(
-            f'<text x="{tx + t_w/2}" y="{ty + 20}" text-anchor="middle" fill="#FFFFFF" '
-            f'font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold">T{t} ({yr})</text>'
+            f'<text x="{tx + t_w/2}" y="{ty + 22}" text-anchor="middle" fill="#FFFFFF" '
+            f'font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold">T{t} ({yr})</text>'
         )
         svg.append(
-            f'<text x="{tx + t_w/2}" y="{ty + 42}" text-anchor="middle" fill="#F4C97E" '
+            f'<text x="{tx + t_w/2}" y="{ty + 43}" text-anchor="middle" fill="#F4C97E" '
             f'font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold">{tag}</text>'
         )
 
     svg.append(
-        '<text x="48" y="1102" fill="#00B4D8" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold">'
+        '<text x="46" y="1102" fill="#00B4D8" font-family="Helvetica, Arial, sans-serif" font-size="14.5" font-weight="bold">'
         'ZONE 4B: "CHASING FINLAND" SOCIAL COHESION MATCH RACE (C:06) &amp; THREE-PILLAR SCRABBLE MULTIPLIER</text>'
     )
 
@@ -313,11 +336,11 @@ def build_board_svg() -> str:
         svg.append(f'<rect x="{mx}" y="1114" width="{mw}" height="62" rx="7" fill="{mfill}" stroke="{mstroke}" stroke-width="2"/>')
         svg.append(
             f'<text x="{mx + mw/2}" y="1139" text-anchor="middle" fill="#FFFFFF" '
-            f'font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold">{mtitle}</text>'
+            f'font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold">{mtitle}</text>'
         )
         svg.append(
             f'<text x="{mx + mw/2}" y="1161" text-anchor="middle" fill="#E0FBFC" '
-            f'font-family="Helvetica, Arial, sans-serif" font-size="10.5">{msub}</text>'
+            f'font-family="Helvetica, Arial, sans-serif" font-size="10.2">{msub}</text>'
         )
 
     svg.append('</svg>')

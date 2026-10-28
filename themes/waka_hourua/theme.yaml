@@ -116,6 +116,11 @@ card_overrides:
     type: "Cautionary Trap — Eroding Mauri, Kotahitanga, & Tikanga Pono"
     flavor_text: "When a waka leaves its young cold and hungry in the bilge, false navigators whisper in the dark that the other hull is the enemy—until the lashings are cut from within. Teach the tamariki to read the true stars early, and no lie can turn the crew against itself."
     
+  "T:06":
+    name: "Te Moka Whakawai — The Trickle-Down Mirage & Coerced Hoe"
+    type: "Cautionary Trap — Regressive Extraction & Whānau Exhaustion"
+    flavor_text: "They promised the feast on the upper deck would trickle down to the bilge, while chaining the paddlers to double shifts with an empty gourd."
+
   "C:04":
     name: "Te Whakaruruhau o Tangaroa (Coastal, Grid, & Marae Armor)"
     type: "Legendary Infrastructure — Te Urunga Steering Stabilizer"

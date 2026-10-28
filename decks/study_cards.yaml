@@ -196,6 +196,19 @@ study_cards:
       - "Finnish National Agency for Education (EDUFI, 2024). Monilukutaito (Multiliteracy) Cross-Curricular Epistemic Inoculation Framework."
       - "Berentson-Shaw, J. (2018). A Matter of Fact: Talking Truth in a Post-Truth World. Bridget Williams Books (BWB Texts, ISBN 9781988545387)."
 
+  - id: "T:06"
+    monograph_ref: "Doc 1A §3.7 & Doc 1B §4.2 • Rules: rules/T_06_tutorial.md"
+    equation_title: "Laffer Fiscal Deficit Identity & Coerced-Labor Parental Time Crowd-Out"
+    latex_equation: |
+      \frac{d\mathcal{R}}{d(1-\tau_{\text{top}})} = Y_{\text{top}} \left( \varepsilon_{\text{real}} - \frac{1-\tau}{\tau} \right) < 0, \qquad \frac{d h_2}{d \ell_{\text{coerced}}} = \frac{\partial h_2}{\partial i_c}\underbrace{w_{\min}(1 - \tau_{\text{abate}})}_{\approx 0 \text{ at corner}} - \frac{\partial h_2}{\partial \tau_c} \omega_1 w_1 h_1 < 0
+    parameters: "Empirical ε_real ≈ 0.15–0.25 ≪ (1−τ)/τ ≈ 1.50 | Hope & Limberg (2022): Δg_GDP ≈ 0.00%, Top-1% Share +0.8 pp | Coerced hours cut τ_c at Gate 1"
+    proof_bridge: "Because real top-earner elasticity (ε_real ≈ 0.20) is a fraction of the Laffer self-financing threshold, trickle-down cuts starve the fiscus and inflate land rents—while coercing low-wage parents into extra hours strips developmental time (τ_c) from Gate 1 children."
+    citations:
+      - "Piketty, T., Saez, E., & Stantcheva, S. (2014). Optimal taxation of top labor incomes: A tale of three elasticities. American Economic Journal: Economic Policy, 6(1), 230–271."
+      - "Straub, L., & Werning, I. (2020). Positive long-run capital taxation: Chamley–Judd revisited. American Economic Review, 110(1), 86–119."
+      - "Hope, D., & Limberg, J. (2022). The economic consequences of major tax cuts for the rich (50-year panel across 18 OECD countries). Socio-Economic Review, 20(2), 539–559."
+      - "Guvenen, F., Kambourov, G., Kuruscu, B., Ocampo, S., & Chen, D. (2023). Use it or lose it: Efficiency and redistributional effects of wealth taxation. Quarterly Journal of Economics, 138(2), 835–894."
+
   # ============================================================================
   # MODULE 2: CLIMATE & RESILIENCE EXPANSION (C:01 - C:06)
   # ============================================================================

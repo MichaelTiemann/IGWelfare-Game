@@ -311,6 +311,24 @@ cards:
     flavor_text: "Finland shares a 1,340 km border with the world's largest disinformation factory, yet leads the world in societal trust—because they vaccinated their children's minds in primary school instead of policing the wreckage at Parliament."
     empirical_anchor: "OSI Media Literacy Index (2017–2026: Finland #1); Koi Tū Centre for Informed Futures (Gluckman & Sridhar, 2023–2026); UNESCO/Sopra Steria Global Disinformation Cost Audit; Zak & Knack (2001).; Berentson-Shaw (2018, BWB: A Matter of Fact)."
     
+  - id: "T:06"
+    name: "The Voodoo Supply-Side Mirage (The Coerced-Wage Trap)"
+    type: "Cautionary Trap — Regressive Tax-Cut & Wage-Coercion Dogma"
+    gate_or_phase: "All Gates — Macro Fiscal & Labor Allocation"
+    cost_or_requirement: "Triggered when top-tier income/capital tax cuts are paired with benefit austerity & wage de-unionization (1981 Reagan / 1991 ECA)."
+    co2e_impact:
+      category: "hazard"
+      badge_text: "🔥 Defunds Grid & Transit"
+      note: "Starves public grid/transit CapEx while locking coerced low-wage households into inefficient ICE vehicles and uninsulated rentals."
+    effects:
+      - label: "First-Order Effect (The Asymmetric Incentive Contradiction)"
+        rule: "Claims the wealthy only produce if given more money (top tax cuts & untaxed capital gains) while wage-earners only work if given less (benefit cuts & coercive precarity). Because elasticity e_ETI ≈ 0.20 is far below the Laffer peak, top cuts blow out sovereign debt (+NZD 6.5B/yr revenue hole) and bid up land prices (z_l)."
+      - label: "Second-Order Effect (Parental Time Strip & Bargaining Collapse)"
+        rule: "Coercive double-shift low-wage work strips parental time (tau_c) at Gates 1–2 and transfers 8.5% of GDP from labor to passive rentiers, pushing Vigintiles 1–6 into stunting (i_c = 0). Countered by B:05 (Guvenen Use-It-Or-Lose-It Split) + B:01 (In-Kind ECE) + B:03 (Youth Equity Floor)."
+    flavor_text: "A curious dogma where millionaires require lavish carrots to lift a finger, yet nurses and factory workers require the stick of poverty to get out of bed."
+    empirical_anchor: "Piketty, Saez, & Stantcheva (2014, AEJ: Economic Policy); Straub & Werning (2020, AER: Chamley-Judd refuted); Guvenen et al. (2023, QJE); Hope & Limberg (2022, Socio-Economic Review: 50-year audit of 18 OECD nations); Stockman (1981, The Atlantic)."
+    synergy_links: ["B:01", "B:03", "B:05", "B:06", "H:04", "H:05", "T:04"]
+
   # ----------------------------------------------------------------------------
   # MODULE 2: CLIMATE & RESILIENCE EXPANSION — RISING SEAS & SHIFTING WINDS (C:01 - C:06)
   # ----------------------------------------------------------------------------

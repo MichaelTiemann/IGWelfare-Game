@@ -75,7 +75,7 @@ $$
 > **Want to inspect the full derivations or run the GPU code yourself?**
 > * **For the Formal Econometric & OLG Derivations:** Head over to **Document 1B (*Technical & Econometric Appendix*)** in [`github.com/MichaelTiemann/IGWelfare`](https://github.com/MichaelTiemann/IGWelfare).
 > * **For the Executable VFI Toolkit GPU Code (`MATLAB` / RTX 5090):** Head over to **Document 2 (*[`NZ_4Region_Master.m`](https://github.com/MichaelTiemann/IGWelfare/blob/main/NZ_4Region_Master.m), [`PolicyExperiment_LeeSeshadri_4Region.m`](https://github.com/MichaelTiemann/IGWelfare/blob/main/PolicyExperiment_LeeSeshadri_4Region.m), & [`QEA_2026.m`](https://github.com/MichaelTiemann/IGWelfare/blob/main/QEA_2026.m)*)** in [`github.com/MichaelTiemann/IGWelfare`](https://github.com/MichaelTiemann/IGWelfare).
-> * **Want to "Play the Nerd Card" at the physical table?** Render the **Fold-Over Study Deck** ([`decks/study_cards.yaml`](decks/study_cards.yaml) via [`scripts/render_study_cards.py`](scripts/render_study_cards.py))—putting the exact MathJax Bellman/CES/KFE equation, calibrated parameters, tabletop proof bridge, and peer-reviewed academic citations on the landscape back of every single card in the 44-card deck!  The maths and the science is the card art!
+> * **Want to "Play the Nerd Card" at the physical table?** Render the **Fold-Over Study Deck** ([`decks/study_cards.yaml`](decks/study_cards.yaml) via [`scripts/render_study_cards.py`](scripts/render_study_cards.py))—putting the exact MathJax Bellman/CES/KFE equation, calibrated parameters, tabletop proof bridge, and peer-reviewed academic citations on the landscape back of every single card in the 45-card deck!  The maths and the science is the card art!
 
 ---
 

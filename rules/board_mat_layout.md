@@ -28,7 +28,7 @@ Spanning the top $95\text{ mm}$ of the mat is a 20-cell horizontal bar (`1` thro
 | D20 Cells | Visual Styling & Reef State in `SS0` | Birth Roll Effect ($J=0$) | Phase IV Hazard Roll Effect | How Players "Make Their Own Luck" (Reef Cover) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Cells `1–4`** *(+ `5–6` dashed for `H:06` GUiNZ)* | **Crimson Reef Zone ("The Impossible Corner"):** Marked with Dunedin Study $22\%$ ($1\text{–}4$) and GUiNZ $30\%$ ($1\text{–}6$) boundary brackets. | Newborn receives a **Stunted Trajectory Token** ($-50\%$ earnings, no Age-18 Kaupapa unlock, $+1$ Hull Drag) unless privately bailed out. | Triggers **`T:00` (Cash Leakage)**, **`T:01` (Late Remediation)**, or **`T:05` (Algorithmic Outrage)** against unshielded staked Mana! | Completing **Bay 1 (Front Foil: `B:01` + `B:02` + Amp)** slides the **Pounamu Reef Cover** over Cells `1–6`—permanently abolishing the Impossible Corner! |
-| **Cells `7–18`** *(`1–8` marked with Ballot Icon)* | **Teal Clear Channel ("Working & Founding Majority"):** Dashed overlay on Cells `1–8` for **Every-3rd-Turn Election Audits**. | Normal birth launch (`5–12`: 1–2 Wealth/turn; `13–18`: 2–3 Wealth/turn, subject to Age-21 `H:03` Sydney Brain Drain if Bay 2 is open). | On **Turns 3, 6, 9, 12, 15, 18**, rolling `1–8` triggers **`H:01` (Myopic 3-Year Cash Truncation)** or **`H:02` (Agency Silos)**! | Completing **Bay 3 (Rear T-Foil: `B:07` + `B:06` + Proof)** locks the **Actuarial Shield** over the Ballot Bracket—canceling `H:01` audits forever! |
+| **Cells `7–18`** *(`1–8` marked with Ballot Icon)* | **Teal Clear Channel ("Working & Founding Majority"):** Dashed overlay on Cells `1–8` for **Every-3rd-Turn Election Audits**. | Normal birth launch (`5–12`: 1–2 Wealth/turn; `13–18`: 2–3 Wealth/turn, subject to Age-21 `H:03` Sydney Brain Drain if Bay 2 is open). | Every turn (1 parliamentary term = 3 years), rolling `1–8` triggers **`H:01` (Myopic 3-Year Cash Truncation)** or **`H:02` (Agency Silos)**! | Completing **Bay 3 (Rear T-Foil: `B:07` + `B:06` + Proof)** locks the **Actuarial Shield** over the Ballot Bracket—canceling `H:01` audits forever! |
 | **Cells `19–20`** | **Amber-Gold Reef Zone ("The Lavoisier & Land-Bubble Reef"):** Represents the Top-5% patrimonial balance sheet (`20:01`–`20:20`). | Born with **4 Wealth** (+ Dynasty Endowment in `SS0`), but exposed to sovereign debt collapse if `SS2` fails by Turn 20. | When any player holds $>8$ Wealth while $\tau_a = 0$, rolling `19–20` triggers **`T:02` (Housing Capitalization)** or **`T:04` (Lavoisier Trap)**! | Completing **Bay 2 (Wing-Sail: `B:05` + `B:03` + Engine)** slides the **Kauri Reef Cover** over Cells `19–20`—rotating passive dirt into builders! |
 
 ---
@@ -71,8 +71,8 @@ Running across the middle of the mat ($860\text{ mm} \times 135\text{ mm}$) are 
 The bottom $110\text{ mm}$ of the mat houses two parallel horizontal tracks:
 1. **Track 4A — The 20-Turn Intergenerational Clock ($\Delta t = 3\text{ Years/Turn}$, `2026` $\to$ `2086`):**
    * 20 sequential boxes (`Turn 1: 2026` through `Turn 20: 2086`).
-   * **Turn 8 (`2050`)** is highlighted in Gold as the **2050 50/50 Protocol Target (`B:06`)**.
-   * **Turns `3, 6, 9, 12, 15, 18`** are badged in Crimson as **Parliamentary Election Audit Turns (`Roll D20 1–8 vs. H:01`)**.
+   * **Turn 9 (`2050`)** is highlighted in Gold as the **2050 50/50 Protocol Target (`B:06`)**.
+   * Because each 3-year turn equals one NZ parliamentary term, unshielded multi-turn stakes face the **`H:01` 3-Year Term Audit (`D20 Rolls 1–8`)** until Bay 3 (`B:07`) is locked.
 2. **Track 4B — The Economic Sailing Race / Social Cohesion Track (`C:06`, `80.0` $\to$ `126.0`):**
    * A graduated regatta track where the **Aotearoa Catamaran/Waka Marker** races against foreign benchmark vessels:
      * **`81.0`:** Aotearoa `SS0` Start ($\Gamma = 0.5\times$ Hull Drag; $+0.25$ pts/turn in `SS0`).

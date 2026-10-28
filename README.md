@@ -23,6 +23,8 @@ Why doesn't the public know that? Because the proof is locked inside 5-dimension
 
 ## 1. Why a Card Game? (Rule Zero: The Rawlsian D20 Test)
 
+> *"Not all lives are easy, but none should be impossible."*
+
 Pick up a 20-sided die (`1` to `20`, representing the 20 wealth vigintiles of Aotearoa New Zealand). Imagine you are behind John Rawls's **Veil of Ignorance** (`B:00`), rolling to see which family balance sheet you are born into:
 
 * **In the Orthodox Status Quo (`SS0` — Displacement Mode):**

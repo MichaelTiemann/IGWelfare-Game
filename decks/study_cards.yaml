@@ -21,7 +21,7 @@ study_cards:
     latex_equation: |
       \mathcal{W}(\mathcal{P}) = \sum_{k=1}^{20} \pi_k \, \mathbb{E}_0 \left[ \sum_{j=1}^{J} \beta^{j-1} \psi_j \, u\big(c_j(s), \ell_j(s)\big) + \beta^J \mathcal{B}(a_J, pv_J) \;\middle|\; s_1 \in \mathcal{V}_k,\, \mathcal{P} \right], \quad \pi_k = \frac{1}{20}
     parameters: "20 Vigintiles (π_k = 5.0% each) | 8 PTypes × 4 Regions | CRRA σ = 2.2 | Ex-Ante Aggregate Welfare Gain (SS2 vs. SS0) = +20.49% CE"
-    proof_bridge: "Before knowing whether you roll a Nat 1 (Bottom 5% hardship corner) or a Nat 20 (Top 5% dynasty), every rational citizen maximizes expected lifetime utility across all 20 birth vigintiles."
+    proof_bridge: "Not all lives are easy, but none should be impossible. Before knowing whether you roll a Nat 1 (Bottom 5% hardship corner) or a Nat 20 (Top 5% dynasty), every rational citizen maximizes expected lifetime utility across all 20 birth vigintiles."
     citations:
       - "Rawls, J. (1971). A Theory of Justice. Harvard University Press (The Original Position & Veil of Ignorance)."
       - "Harsanyi, J. C. (1955). Cardinal welfare, individualistic ethics, and interpersonal comparisons of utility. Journal of Political Economy, 63(4), 309–321."

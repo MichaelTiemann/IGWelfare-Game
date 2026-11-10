@@ -46,6 +46,7 @@ def build_front_card_html(
     raw_card: Dict[str, Any],
     palettes: Dict[str, Dict[str, str]],
     card_overrides: Dict[str, Any],
+    theme_cfg: Dict[str, Any],
     themes_dir: Path,
     search_order: List[str],
     co2_pos: str,
@@ -68,7 +69,7 @@ def build_front_card_html(
     badge_bg = palette.get("badge_bg", "#0369a1")
     badge_txt = palette.get("badge_text", "#ffffff")
 
-    co2_html = get_co2e_badge_html(card)
+    co2_html = get_co2e_badge_html(card, theme_cfg)
     gate_phase = html.escape(str(card.get("gate_or_phase", "")))
     gate_span = f'<span class="gate-tag">{gate_phase}</span>' if gate_phase else ""
 
@@ -369,7 +370,7 @@ def render_study_deck_html(
                 front_card, study_entry, palettes, card_overrides, orient, standalone_copyright
             )
             front_html = build_front_card_html(
-                front_card, palettes, card_overrides, themes_dir, search_order, co2_pos, out_path
+                front_card, palettes, card_overrides, theme_cfg, themes_dir, search_order, co2_pos, out_path
             )
             batch.append((back_html, front_html))
 
@@ -499,6 +500,11 @@ def render_study_deck_html(
     .co2-computed {{ background: #dcfce7; color: #166534; border: 0.3mm solid #86efac; }}
     .co2-indirect {{ background: #e0f2fe; color: #075985; border: 0.3mm solid #7dd3fc; }}
     .co2-hazard {{ background: #fee2e2; color: #991b1b; border: 0.3mm solid #fca5a5; }}
+    .pillar-badge {{ font-size: 5.3pt; letter-spacing: 0.01em; }}
+    .pillar-p1 {{ background: #f3e8ff; color: #581c87; border: 0.3mm solid #d8b4fe; }}
+    .pillar-p2 {{ background: #fef3c7; color: #92400e; border: 0.3mm solid #fcd34d; }}
+    .pillar-p3 {{ background: #ffe4e6; color: #9f1239; border: 0.3mm solid #fda4af; }}
+    .pillar-p4 {{ background: #e0e7ff; color: #3730a3; border: 0.3mm solid #a5b4fc; }}
     .gate-tag {{ font-family: var(--font-mono); font-size: 5.4pt; color: #475569; font-weight: 600; }}
     .card-title {{ font-family: var(--font-heading); font-size: 8.2pt; font-weight: 800; color: #0f172a; line-height: 1.15; margin-bottom: 0.4mm; }}
     .card-type {{ font-size: 5.8pt; font-weight: 600; color: #334155; }}

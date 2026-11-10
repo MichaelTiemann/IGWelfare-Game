@@ -1,9 +1,14 @@
 theme_id: waka_hourua
 theme_name: Te Waka Hourua — Being, Becoming, & Crossing Over
-version: '2026.10'
+version: '2026.11'
 license: CC-BY-SA-4.0
 fallback_chain:
 - generic
+capture_pillars:
+  1: 'Pou I · Kōrero'
+  2: 'Pou II · Whenua'
+  3: 'Pou III · Whānau'
+  4: 'Pou IV · Tāwāhi'
 lexicon_replacements:
   The Five-Crew Hydrofoil Formation: Te Waka Hourua — The Five-Crew Double-Hulled Voyaging Formation
   One Crew, One Foiling Vessel: Kotahitanga — Two Hulls Lashed by One Kīato (Te Waka Hourua)
@@ -19,9 +24,9 @@ lexicon_replacements:
   up on foils: sailing across Te Moana-nui-a-Kiwa
   Engage the Rear T-Foil Stabilizer: Engage Te Urunga & Ngā Kete o te Wānanga (The Steering Paddle & Three Baskets)
   gets up on the wing-sail: catches the winds of Tāwhirimātea in Te Rā (the voyaging sail)
-  Front Lifting Foil: Teihu & He Kākano i Rangiātea (The Sacred Bow & Seed)
-  front lifting foil: sacred bow (Teihu)
-  front foil: sacred bow (Teihu)
+  Front Lifting Foil: Te Ihu & He Kākano i Rangiātea (The Sacred Bow & Seed)
+  front lifting foil: sacred bow (Te Ihu)
+  front foil: sacred bow (Te Ihu)
   Wing-Sail Power Plant: Te Rā & Tūrangawaewae (The Voyaging Sail & Standing Place)
   wing-sail: voyaging sail (Te Rā)
   Rear T-Foil Stabilizer: Te Urunga & Ngā Kete o te Wānanga (The Steering Paddle & Three Baskets)
@@ -29,6 +34,9 @@ lexicon_replacements:
   Bend the Accounting Daggerboard: Read the Stars with Te Urunga (The Navigator's Steering Paddle)
   Single-Lens Pitch-Pole: Capsize in Heavy Seas (Unbalanced Kīato)
   Pitch-Pole Demo: Unbalanced Waka Demo
+  Capture Pillars: Ngā Pou Here (Capture Pillars)
+  Capture Pillar: Pou Here (Capture Pillar)
+  The Plutocrat's Crown: Te Karauna Kaiapo (The Hoarder's Crown)
 card_overrides:
   B:00:
     name: Te Tatau o Rangiātea (The Rawlsian D20 of Whakapapa)
@@ -43,8 +51,8 @@ card_overrides:
         exiled across the Tasman. Roll 19–20: Surrounded by 200% Crown debt and broken whakapapa. Result: No matter
         what you roll, the waka founders.'
     - label: Te Waka Hourua Roll (SS1 -> SS2 — Sailing into Te Ao Mārama)
-      rule: 'Roll 1–20: All 20 whānau wealth groups thrive (+24.70% national wellbeing gain, Kaumātua Super kept
-        at Age 65, PAYE cut to 18.25%). Roll any number; the waka sails true.'
+      rule: 'Roll 1–20: All 20 whānau wealth groups thrive (+24.70% national wellbeing gain, Kaumātua Super lowered
+        to Age 64 in SS2, PAYE cut to 18.25%). Roll any number; the waka sails true.'
     - label: 'Confirming the Fumble (Nat 1 Sub-Roll: 01:01 to 01:20)'
       rule: In SS0, all 20 sub-slices of the Bottom 5% face 52%–92% hardship risk in Te Pō and cost NZD 44k–180k/yr
         in reactive care/prisons. In SS2, all 20 faces are rescued (+23.5% to +38.4% CE gain, state care cut 94%,
@@ -74,57 +82,83 @@ card_overrides:
       back down for all his siblings.
   B:06:
     name: 'Tūrangawaewae: Kaikōrero, Ringa Raupā, & Enterprise Builder'
-    type: 'Evolved Rangatiratanga — Gate 3: Standing Tall at Home (Ages 20–35)'
+    type: 'Evolved Rangatiratanga — Gate 4: Standing Tall at Home (Ages 20–35)'
     flavor_text: Ka pū te ruha, ka hao te rangatahi — As the old net is laid aside with honor, the new net goes
       fishing in home waters.
-  B:11:
-    name: Te Waka Hourua (The Double-Hulled Voyaging Waka)
-    type: Legendary Taonga — Lashed Dual-Hull Architecture (Kīato)
-    effects:
-    - label: Lashing the Kīato (Cross-Beams)
-      rule: Conventional orthodoxy sails a single, waterlogged hull in Te Pō. When you lash together Teihu (Sacred
-        Bow of Dual-Gate Whānau Capability, B:01 + B:02), Te Rā (Voyaging Sail of Kaitiaki Enterprise & Tūrangawaewae,
-        B:05 + B:03), and Te Urunga (Steering Paddle of 2050 Stewardship, B:06 + B:07), your Waka Hourua rises onto
-        the ocean swell.
-    - label: Effect
-      rule: Slash reactive social trauma and Crown remediation drag (Exits 1, 2, 4) by 75% (from NZD 17.7B–28.5B/yr
-        down to NZD 4.2B/yr). Every birth cohort now generates a +NZD 16.1k/yr Net Surplus for their mokopuna.
-    flavor_text: One hull is Pākehā systems science; the other hull is Tikanga and Whakapapa. Lash them together
-      with strong kīato, and no ocean on earth is too wide to cross.
   B:08:
     name: Kaitiakitanga o te Whenua (Stewarding Land & Enterprise)
     type: Continuous Tikanga — Lens 3 Rebalance (Ka Hao te Rangatahi)
     flavor_text: Whenua is meant to nourish the living and the yet-to-be-born—not sit locked in speculative vaults
       while our grandchildren leave for Australia.
+  B:09:
+    name: Te Whakapapa Ledger (ACC Actuarial Time-Bend)
+    type: Instant — Tohunga Whakatere Waka Star-Reading
+  B:11:
+    name: Te Waka Hourua (The Double-Hulled Voyaging Waka)
+    type: Legendary Taonga — Lashed Dual-Hull Architecture (Kīato)
+    effects:
+    - label: Lashing the Kīato (Cross-Beams)
+      rule: Conventional orthodoxy sails a single, waterlogged hull in Te Pō. When you lash together Te Ihu (Sacred
+        Bow of Dual-Gate Whānau Capability, B:01 + B:03), Te Rā (Voyaging Sail of Kaitiaki Enterprise & Tūrangawaewae,
+        B:06 + B:08), and Te Urunga (Steering Paddle of 2050 Stewardship, B:09 + B:14/B:15), your Waka Hourua rises
+        onto the ocean swell.
+    - label: Effect
+      rule: Slash reactive social trauma and Crown remediation drag (Exits 1, 2, 4) by 75% (from NZD 17.7B–28.5B/yr
+        down to NZD 4.2B/yr). Every birth cohort now generates a +NZD 28.1k–31.3k/yr Net Surplus for their mokopuna.
+    flavor_text: One hull is Pākehā systems science; the other hull is Tikanga and Whakapapa. Lash them together
+      with strong kīato, and no ocean on earth is too wide to cross.
   B:15:
     name: Ngā Kete o te Wānanga (The 2050 50/50 Kaitiaki Protocol)
     type: Legendary Engine — Phase 2 Harvest for Mokopuna
     flavor_text: Half the harvest pays down the debts of the past; half builds the whare and the grid for our mokopuna—while
-      honoring every kaumātua at Age 65.
-  B:09:
-    name: Te Whakapapa Ledger (ACC Actuarial Time-Bend)
-    type: Instant — Tohunga Whakatere Waka Star-Reading
+      honoring every kaumātua and kuia at Age 64.
   B:16:
     name: He Tāngata, He Tāngata, He Tāngata (Lifting the Mauri of the Nation)
     type: Mythic Tikanga Victory — Restoration of Mana Motuhake & Mauri Ora
     flavor_text: 'Ui mai koe ki ahau he aha te mea nui o te ao, Māku e kī atu he tāngata, he tāngata, he tāngata
       — Ask me what is the greatest thing in the world; I will reply: it is people, it is people, it is people.'
-  T:05:
-    name: 'Te Tara-ā-Whare: Fighting Over the Catch Instead of Fishing'
-    type: Cautionary Trap — Misallocating Rangatahi Pūmanawa (Talent)
-    flavor_text: When fighting over old land titles pays ten times more than weaving a new net or building a new
-      waka, the sharpest minds stop fishing—and the whole village goes hungry.
+  # --- Suite 2 (T:00–T:10) Waka Hourua Pou Overrides ---
+  T:00:
+    name: 'Te Waka Kāwana Mataku: The Molesworth Street Cycle-Lane Paralysis'
+    type: Orthodoxy Hazard — Pou I (Kōrero & Leadership Myopia)
   T:01:
     name: 'Te Hau Kōrero Teka: The Ill Wind of Deceit & Division'
-    type: Cautionary Trap — Eroding Mauri, Kotahitanga, & Tikanga Pono
+    type: Cautionary Trap — Pou I (Eroding Mauri, Kotahitanga, & Tikanga Pono)
     flavor_text: When a waka leaves its young cold and hungry in the bilge, false navigators whisper in the dark
       that the other hull is the enemy—until the lashings are cut from within. Teach the tamariki to read the true
       stars early, and no lie can turn the crew against itself.
   T:02:
     name: Te Moka Whakawai — The Trickle-Down Mirage & Coerced Hoe
-    type: Cautionary Trap — Regressive Extraction & Whānau Exhaustion
+    type: Cautionary Trap — Pou III (Regressive Extraction & Whānau Exhaustion)
     flavor_text: They promised the feast on the upper deck would trickle down to the bilge, while chaining the paddlers
       to double shifts with an empty gourd.
+  T:03:
+    name: 'Te Kaute Whāiti: The ''Solve Debt First'' Spreadsheet Boomerang'
+    type: Cautionary Trap — Pou III (Cutting the Paddlers to Lighten the Hull)
+  T:04:
+    name: 'Te Rere Ohorere: The Day-1 Single-Shot Reef Gamble'
+    type: Coopetitive Temptation — Pou I (Queue-Jump vs. Fleet Congestion)
+  T:05:
+    name: 'Te Tara-ā-Whare: Fighting Over the Catch Instead of Fishing'
+    type: Cautionary Trap — Pou II (Misallocating Rangatahi Pūmanawa)
+    flavor_text: When fighting over old land titles pays ten times more than weaving a new net or building a new
+      waka, the sharpest minds stop fishing—and the whole village goes hungry.
+  T:06:
+    name: 'Te Kete Pakaru: Regional Tax Leakage & Offshore Caterer Siphon'
+    type: Spatial & Procurement Trap — Pou IV (Bleeding Mauri Off the Board)
+  T:07:
+    name: 'Te Tai Hoki-Rua: The Two-Term ''Stop-Go'' Political Pendulum'
+    type: Political Stability Hazard — Pou I (Six-Year Scissor-Blade)
+  T:08:
+    name: 'Te Tuanui Tāke-Kore: Compassion Without Whenua Sovereignty'
+    type: Cautionary Trap — Pou II (Single-Hull Capsize at 96.0)
+  T:09:
+    name: 'Te Kūiti Whānau: The Primate-City Demographic Collapse'
+    type: Cautionary Trap — Pou III (Uncooled Rents & Empty Cradles)
+  T:10:
+    name: 'Te Mirumiru Whenua 1989: The Unstabilized Surplus Bubble'
+    type: End-Game Cautionary Trap — Pou II (Whenua Speculation Overwhelms the Harvest)
+  # --- Suites 3 & 4 (C & K) Waka Hourua Overrides ---
   C:03:
     name: Te Whakaruruhau o Tangaroa (Coastal, Grid, & Marae Armor)
     type: Legendary Infrastructure — Te Urunga Steering Stabilizer
@@ -135,19 +169,50 @@ card_overrides:
     name: 'Te Kaumātua & Kuia Navigator: Keepers of Ngā Kete o te Wānanga (Ages 64+ in SS2)'
     type: Wayfinder Lifecycle Identity — Crossing Over & Passing Down the Three Baskets (Lens 3)
   K:10:
-    name: 'Te Tiriti & Te Waka Hourua: The Five-Crew Voyaging Formation'
+    name: 'Te Tiriti & Te Waka Hourua: The Big Table Voyaging Formation'
     type: Legendary Kotahitanga Enchantment — Tangata Whenua & Tangata Tiriti Synergy
     effects:
     - label: Two Hulls, One Waka Hourua (Kotahitanga)
-      rule: 'While Te Tiriti & Te Waka Hourua (K:07) is active, Tangata Whenua (Rangatiratanga hull) and Tangata
-        Tiriti (Kāwanatanga hull) sail lashed together: every Persona at the table shares its Innate Kaupapa Ability
-        with all other players.'
+      rule: 'While Te Tiriti & Te Waka Hourua (K:10) is active, Tangata Whenua (Rangatiratanga hull) and Tangata
+        Tiriti (Kāwanatanga hull) sail lashed together: every Wayfinder at the table shares its Innate Kaupapa Ability
+        with co-stakers, and Big Table Political Drag drops from 3.0 to 2.0 Wealth.'
     - label: Good Ancestors for Our Mokopuna
-      rule: 'Restore Aotearoa''s Social Credit & Trust Rating (C:06) to #1 in the World, permanently lock in B:06
-        (Ngā Kete o te Wānanga 2050 Protocol), and unlock B:09 (He Tāngata) and N:06 (The Aotearoa Synthesis).'
+      rule: 'Restore Aotearoa''s Social Credit & Trust Rating (C:02) to 126.0 (#1 in the World), add +4 to Political
+        Stability D20 checks against T:07, and unlock B:16 (He Tāngata) and N:09 (The Aotearoa Synthesis).'
     flavor_text: Nā tō rourou, nā taku rourou ka ora ai te iwi — With your food basket and my food basket, the people
-      will thrive. When all five crews paddle as one Waka Hourua, Aotearoa crosses the deepest sea.
+      will thrive. When all crews paddle as one Waka Hourua, Aotearoa crosses the deepest sea.
+  # --- Suites 6 & 8 (H:01–H:10 & P:06) Waka Hourua Pou Overrides ---
+  H:01:
+    name: 'Te Matapō Takiwā Poto: The Three-Year Cash Blindfold'
+    type: Orthodoxy Boss — Pou I (Short-Horizon Fiscal Truncation)
+  H:02:
+    name: 'Ngā Pouaka Wāwāhi o Pōneke: The Bureaucratic Silo Bottleneck'
+    type: Orthodoxy Boss — Pou I (Six Ministries, 32% Red-Tape Drag)
   H:03:
     name: Te Maru o Mua — The Broken 1972 Safety-Net Illusion (Dunedin vs. GUiNZ)
-    type: Orthodoxy Boss Hazard — Structural Whānau & Housing Erosion
+    type: Orthodoxy Boss — Pou III (Structural Whānau & Housing Erosion)
     flavor_text: Measuring today's mokopuna against the shelter of 1972 hides the storm that stripped the roof away.
+  H:04:
+    name: 'Te Āwhiowhio Rere Tāwāhi: The Trans-Tasman Rangatahi Walkout'
+    type: Orthodoxy Boss — Pou IV (20-Year Whakapapa Investment Lost Abroad)
+  H:05:
+    name: 'Te Taumaha Kaumātua: The ''Raise Super to 70!'' Trap'
+    type: Orthodoxy Boss — Pou III (Robbing Mokopuna of Their Kuia & Koroua)
+  H:06:
+    name: 'Te Pana Kaiako: Urban Rent Displacement of Kaiako & Aunties'
+    type: Orthodoxy Boss — Pou III (Pricing Caregivers Out of Their Rohe)
+  H:07:
+    name: 'Te Hokinga Mirumiru: Landlord Capture of Rising Wages'
+    type: Orthodoxy Endgame Boss — Pou II (Speculative Whenua Re-Inflation)
+  H:08:
+    name: 'Ngā Kāhui Tāhae: Domestic Duopoly & Farm-Gate Extraction'
+    type: Orthodoxy Boss — Pou II (Cartel Tollbooths Across Aotearoa)
+  H:09:
+    name: 'Te Ruataki Waonga: The 3.0%-of-GDP Geopolitical Defense Shock'
+    type: External Macro Shock Boss — Pou IV (The Mirror-Cost Hull Test)
+  H:10:
+    name: 'Te Maumau Pūtea Ohorere: Unmentored Grant Dissipation (42% Leak)'
+    type: Implementation Hazard — Pou IV (Pouring Capital Ahead of Tuakana–Teina)
+  P:06:
+    name: 'Te Tai Āwhā o Tāwāhi: Davos Contagion & Breaking-News Boss'
+    type: Write-In Macro Shock Boss — Pou IV (Global Liquidity & Bond Stress Test)

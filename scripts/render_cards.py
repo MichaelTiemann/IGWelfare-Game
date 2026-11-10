@@ -45,8 +45,16 @@ def find_card_asset(themes_dir: Path, search_order: List[str], card_id: str) -> 
     return None
 
 
-def get_co2e_badge_html(card: Dict[str, Any]) -> str:
-    """Renders explicit CO2e badge if present on a Climate Extension card, else Mana/Kickback pill."""
+DEFAULT_PILLAR_SHORT_LABELS: Dict[int, str] = {
+    1: "Pillar I · Narrative",
+    2: "Pillar II · Land/Cartel",
+    3: "Pillar III · Squeeze",
+    4: "Pillar IV · Offshore",
+}
+
+
+def get_co2e_badge_html(card: Dict[str, Any], theme_cfg: Optional[Dict[str, Any]] = None) -> str:
+    """Renders explicit CO2e badge if present on a Climate Extension card, else Pillar/Kickback or Mana pill."""
     co2_obj = card.get("co2e_impact") or {}
     display = co2_obj.get("display", "")
     status = co2_obj.get("status", "na")
@@ -56,9 +64,23 @@ def get_co2e_badge_html(card: Dict[str, Any]) -> str:
         )
         return f'<span class="co2-badge {css_mod}">🌱 {html.escape(str(display))}</span>'
 
+    kickback = card.get("feral_kickback_wealth")
+    pillar_raw = card.get("capture_pillar")
+    if kickback is not None and pillar_raw is not None:
+        p_idx = int(pillar_raw)
+        theme_pillars = (theme_cfg or {}).get("capture_pillars", {})
+        p_short = (
+            theme_pillars.get(p_idx)
+            or theme_pillars.get(str(p_idx))
+            or DEFAULT_PILLAR_SHORT_LABELS.get(p_idx, f"Pillar {p_idx}")
+        )
+        return (
+            f'<span class="co2-badge pillar-badge pillar-p{p_idx}">'
+            f'{html.escape(str(p_short))} &bull; +{kickback}W</span>'
+        )
+
     cid = str(card.get("id", "")).strip()
     pfx = cid.split(":")[0] if ":" in cid else "B"
-    kickback = card.get("feral_kickback_wealth")
     if pfx in ("T", "H") and kickback is not None:
         return f'<span class="co2-badge co2-hazard">⚡ Mode B: +{kickback}W</span>'
     mtier = card.get("mana_tier")
@@ -162,10 +184,14 @@ def render_deck_html(
         badge_bg = palette.get("badge_bg", "#0369a1")
         badge_txt = palette.get("badge_text", "#ffffff")
 
-        co2_html = get_co2e_badge_html(card)
+        border_col = palette.get("border", "#0284c7")
+        header_bg = palette.get("header_bg", "#e0f2fe")
+        badge_bg = palette.get("badge_bg", "#0369a1")
+        badge_txt = palette.get("badge_text", "#ffffff")
+
+        co2_html = get_co2e_badge_html(card, theme_cfg)
         gate_phase = html.escape(str(card.get("gate_or_phase", "")))
         gate_span = f'<span class="gate-tag">{gate_phase}</span>' if gate_phase else ""
-
         if co2_pos == "top-right":
             top_right_slot = co2_html or gate_span
             bottom_right_slot = gate_span if co2_html else ""
@@ -314,7 +340,11 @@ def render_deck_html(
     .co2-computed {{ background: #dcfce7; color: #166534; border: 0.3mm solid #86efac; }}
     .co2-indirect {{ background: #e0f2fe; color: #075985; border: 0.3mm solid #7dd3fc; }}
     .co2-hazard {{ background: #fee2e2; color: #991b1b; border: 0.3mm solid #fca5a5; }}
-    .gate-tag {{
+    .pillar-badge {{ font-size: 5.3pt; letter-spacing: 0.01em; }}
+    .pillar-p1 {{ background: #f3e8ff; color: #581c87; border: 0.3mm solid #d8b4fe; }}
+    .pillar-p2 {{ background: #fef3c7; color: #92400e; border: 0.3mm solid #fcd34d; }}
+    .pillar-p3 {{ background: #ffe4e6; color: #9f1239; border: 0.3mm solid #fda4af; }}
+    .pillar-p4 {{ background: #e0e7ff; color: #3730a3; border: 0.3mm solid #a5b4fc; }}    .gate-tag {{
       font-family: var(--font-mono);
       font-size: 5.4pt;
       color: #475569;

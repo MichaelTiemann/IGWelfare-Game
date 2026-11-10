@@ -666,6 +666,8 @@ cards:
   mana_tier: 0
   base_mana: 0
   feral_kickback_wealth: 2
+  capture_pillar: 1
+  capture_pillar_label: 'Pillar 1: Narrative & Short-Termism'
   a3_game_sheet: 2
   a3_slot: 8
   type: Orthodoxy Hazard — Ministerial Limo / Pedestrian Panic
@@ -698,6 +700,8 @@ cards:
   mana_tier: 1
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 1
+  capture_pillar_label: 'Pillar 1: Narrative & Short-Termism'
   a3_game_sheet: 2
   a3_slot: 9
   type: Cautionary Trap — Epistemic & Social Cohesion Erosion (Bites Turn 1+)
@@ -735,6 +739,8 @@ cards:
   mana_tier: 1
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 3
+  capture_pillar_label: 'Pillar 3: Family & Wage Squeeze'
   a3_game_sheet: 2
   a3_slot: 10
   type: Cautionary Trap — Regressive Tax Dogma & Coerced-Wage Present Bias (Bites Turns 1–2)
@@ -773,6 +779,8 @@ cards:
   mana_tier: 1
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 3
+  capture_pillar_label: 'Pillar 3: Family & Wage Squeeze'
   a3_game_sheet: 3
   a3_slot: 1
   type: Cautionary Trap — Closed-Loop Sovereign Accounting Fallacy (Bites Turns 1–2)
@@ -812,6 +820,8 @@ cards:
   mana_tier: 1
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 1
+  capture_pillar_label: 'Pillar 1: Narrative & Short-Termism'
   a3_game_sheet: 3
   a3_slot: 2
   type: Coopetitive Temptation & Implementation Hazard — Queue-Jump vs. Reset Risk (Bites Turn 1)
@@ -849,6 +859,8 @@ cards:
   mana_tier: 1
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 2
+  capture_pillar_label: 'Pillar 2: Land Hoarding & Cartels'
   a3_game_sheet: 3
   a3_slot: 3
   type: Cautionary Trap — Gate-5 Talent & Credit Misallocation (Bites Turns 2–4)
@@ -887,6 +899,8 @@ cards:
   mana_tier: 1
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 4
+  capture_pillar_label: 'Pillar 4: Offshore Escape & External Shocks'
   a3_game_sheet: 3
   a3_slot: 4
   type: Spatial & Procurement Leakage Trap — Uncoordinated Regional Play (Bites Turns 2–5)
@@ -926,6 +940,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 1
+  capture_pillar_label: 'Pillar 1: Narrative & Short-Termism'
   a3_game_sheet: 3
   a3_slot: 5
   type: Political Stability Hazard — Electoral Duty-Cycle Attrition (Bites Turns 3, 6, 9, 12, 15)
@@ -965,6 +981,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 2
+  capture_pillar_label: 'Pillar 2: Land Hoarding & Cartels'
   a3_game_sheet: 3
   a3_slot: 6
   type: 'Cautionary Trap — Single-Lens Pitch-Pole: Lens 1 Without Lens 3 (Bites Mid-SS1)'
@@ -996,6 +1014,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 3
+  capture_pillar_label: 'Pillar 3: Family & Wage Squeeze'
   a3_game_sheet: 3
   a3_slot: 7
   type: Cautionary Trap — Housing Stress & Fertility Implosion (Bites Turns 5–8)
@@ -1028,6 +1048,8 @@ cards:
   mana_tier: 3
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 2
+  capture_pillar_label: 'Pillar 2: Land Hoarding & Cartels'
   a3_game_sheet: 3
   a3_slot: 8
   type: End-Game Cautionary Trap — 'First-World Problem' of Unstabilized Abundance (Bites in SS2)
@@ -2110,6 +2132,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 1
+  capture_pillar_label: 'Pillar 1: Narrative & Short-Termism'
   a3_game_sheet: 6
   a3_slot: 8
   type: Orthodoxy Boss — Universal Fiscal Horizon Truncation (#1 Systemic Wall)
@@ -2146,6 +2170,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 1
+  capture_pillar_label: 'Pillar 1: Narrative & Short-Termism'
   a3_game_sheet: 6
   a3_slot: 9
   type: Orthodoxy Boss — Central Agency Fragmentation & 32% Red-Tape Tax
@@ -2180,6 +2206,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 3
+  capture_pillar_label: 'Pillar 3: Family & Wage Squeeze'
   a3_game_sheet: 6
   a3_slot: 10
   type: Orthodoxy Boss — Structural Drift & Outdated Policy Calibration
@@ -2216,6 +2244,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 4
+  capture_pillar_label: 'Pillar 4: Offshore Escape & External Shocks'
   a3_game_sheet: 7
   a3_slot: 1
   type: Orthodoxy Boss — Age-21 Graduate Exile & Sovereign CapEx Loss
@@ -2252,6 +2282,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 3
+  capture_pillar_label: 'Pillar 3: Family & Wage Squeeze'
   a3_game_sheet: 7
   a3_slot: 2
   type: Orthodoxy Boss — Intergenerational Vise & Saver Penalty
@@ -2289,6 +2321,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 3
+  capture_pillar_label: 'Pillar 3: Family & Wage Squeeze'
   a3_game_sheet: 7
   a3_slot: 3
   type: Orthodoxy Boss — Spatial Care & Educator Displacement Bottleneck
@@ -2325,6 +2359,8 @@ cards:
   mana_tier: 3
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 2
+  capture_pillar_label: 'Pillar 2: Land Hoarding & Cartels'
   a3_game_sheet: 7
   a3_slot: 4
   type: Orthodoxy Endgame Boss — Asset-Class Capture of Rising Wages
@@ -2361,6 +2397,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 2
+  capture_pillar_label: 'Pillar 2: Land Hoarding & Cartels'
   a3_game_sheet: 7
   a3_slot: 5
   type: Orthodoxy Boss — Sectoral Rent-Extraction Across Checkouts, Grids, Banks & Yards
@@ -2397,6 +2435,8 @@ cards:
   mana_tier: 3
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 4
+  capture_pillar_label: 'Pillar 4: Offshore Escape & External Shocks'
   a3_game_sheet: 7
   a3_slot: 6
   type: External Macro Shock Boss — The Ultimate Mirror-Cost Stress Test
@@ -2435,6 +2475,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 3
+  capture_pillar: 4
+  capture_pillar_label: 'Pillar 4: Offshore Escape & External Shocks'
   a3_game_sheet: 7
   a3_slot: 7
   type: Program-Specific Implementation Hazard — Sequencing & Skill-Mismatch Trap
@@ -2822,6 +2864,8 @@ cards:
   mana_tier: 2
   base_mana: 0
   feral_kickback_wealth: 4
+  capture_pillar: 4
+  capture_pillar_label: 'Pillar 4: Offshore Escape & External Shocks'
   a3_game_sheet: 8
   a3_slot: 8
   type: Write-In Hazard / Boss Card — Live Macroeconomic or Political Stress Test

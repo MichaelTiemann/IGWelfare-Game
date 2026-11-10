@@ -23,7 +23,7 @@ tokens:
     quantity_per_table: 20
     shape: "Meeple / Rounded Disc (22mm)"
     side_a_ss0:
-      label: "Stunted / Hardship Corner (i_c = 0)"
+      label: "Struggling / Hardship Corner (i_c = 0)"
       color: "#dc2626"
       icon: "🔴"
       mechanic: "Enters on d20 roll 1–4 (22.0% Dunedin share) without B:01. Inflicts NZD 105k–180k/yr hull drag across Exits 1, 2, 4."
@@ -71,7 +71,7 @@ tokens:
       label: "Mana Eroded / Outrage Drag (T:05)"
       color: "#7c2d12"
       icon: "🌪️"
-      mechanic: "Spawned when cohorts are left stunted or exiled (H:03). Drops trust to 40.0% and adds +25.0% Exit 4 justice drag (~NZD 2B/yr)."
+      mechanic: "Spawned when cohorts are left struggling or exiled (H:03). Drops trust to 40.0% and adds +25.0% Exit 4 justice drag (~NZD 2B/yr)."
     side_b_ss2:
       label: "Mana Created / Whanaungatanga & Care"
       color: "#0d9488"
@@ -103,7 +103,7 @@ lifecycle_gates:
     waka_title: "He Kākano i Rangiātea (Being)"
     key_cards: ["B:00", "B:01", "N:02", "K:01"]
     ss0_outcome: "22.0% Dunedin / 14.3% GUiNZ trapped in Hardship Corner (i_c = 0)."
-    ss2_outcome: "NZD 13.0k/yr in-kind wraparound compresses stunting to 1.5% and crowds in +NZD 15.3k private parental care."
+    ss2_outcome: "NZD 13.0k/yr in-kind wraparound compresses hardship to 1.5% and crowds in +NZD 15.3k private parental care."
 
   - id: "GATE:02"
     name: "GATE 2 • (Ages 12–14)\nRANGATAHI NAVIGATION"
@@ -127,7 +127,7 @@ lifecycle_gates:
     waka_title: "Kaitiakitanga & Whānau Flourishing"
     key_cards: ["B:04", "B:05", "E:02", "E:03"]
     ss0_outcome: "High precautionary hoarding against z2 energy shocks; PAYE climbing toward 28.2%; cramped working-age leisure."
-    ss2_outcome: "PAYE cut to 18.5% (-3.5 pp); +3.2% to +9.6% real wages; pv=5 Solar Endowment frees leisure and working capital."
+    ss2_outcome: "PAYE cut to 18.25% (-3.5 pp); +3.2% to +9.6% real wages; pv=5 Solar Endowment frees leisure and working capital."
 
   - id: "GATE:05"
     name: "GATE 5 • (Ages 65+)\nKAUMĀTUA & CROSSING OVER"
@@ -167,7 +167,7 @@ capital_tracks:
     name: "1. Financial & Actuarial Capital\n    (Crown & Household Ledger)"
     ss0_baseline: "-NZD 17.7B/yr Drag | 200% Debt Path | 22.0% → 28.2% PAYE"
     ss1_milestone: "Year 5 ACC Breakeven: 1.2x Direct (NZD 10.7B) / 3.8x Total (NZD 35.3B)"
-    ss2_victory: "<40% Crown Debt | -60 to -100 bps Rates | 18.5% PAYE (-3.5 pp Cut)"
+    ss2_victory: "<40% Crown Debt | -60 to -100 bps Rates | 18.25% PAYE (-3.5 pp Cut)"
     primary_cards: ["B:05", "B:06", "B:07", "N:03"]
 
   - id: "CAP:02"
@@ -224,7 +224,7 @@ obligations_matrix:
   - creditor: "3. TO WORKING WHĀNAU"
     subtitle: "All 4 Regions (Rural to Metro)"
     ss0_breach: "3.1x Urban Rents + 2.8x Rural Fuel Penalty + PAYE Climbing to 28.2%"
-    ss2_fulfillment: "Rents Cooled -10.5% + Solar EV Relief (C:05) + PAYE Cut to 18.5%"
+    ss2_fulfillment: "Rents Cooled -10.5% + Solar EV Relief (C:05) + PAYE Cut to 18.25%"
   - creditor: "4. TO ACTIVE BUILDERS"
     subtitle: "Operating Firms & Bondholders"
     ss0_breach: "High Corporate Tax + Precautionary Hoarding + OCR Volatility"

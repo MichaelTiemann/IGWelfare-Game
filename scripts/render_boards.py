@@ -165,7 +165,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
           <div class="mat-header">
             <div>
               <div class="mat-title">WHĀNAU &amp; WAYFINDER LEDGER — PLAYER {player_num}</div>
-              <div class="mat-sub">Connect Your Macro Persona (K:01–K:06) to Your Rawlsian D20 Birth Cohort (B:00)</div>
+              <div class="mat-sub">Connect Your Macro Wayfinder (K:01–K:09) to Your Rawlsian D20 Birth Cohort (B:00)</div>
             </div>
             <div class="d20-box">
               <div class="d20-label">B:00 D20 ROLL</div>
@@ -177,17 +177,17 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
           <div class="mat-grid-3">
             <div class="care-slot">
               <div class="slot-pill">GATE 1 • TAMARIKI (0–5)</div>
-              <div class="slot-desc">Attach B:01 (NZD 13k In-Kind) + N:02 Readiness to flip 🔴 &rarr; 🟢 &amp; spawn +15.3k Care</div>
+              <div class="slot-desc">Attach B:01 (NZD 13k In-Kind) + N:03 Readiness to flip 🔴 &rarr; 🟢 &amp; spawn +15.3k Care</div>
               <div class="token-drop">🎯 Drop TOK:01 Meeple</div>
             </div>
             <div class="care-slot">
               <div class="slot-pill">GATE 2 • RANGATAHI (12–14)</div>
-              <div class="slot-desc">Pair Tuakana + Teina (B:02 / C:03) + C:02 Monilukutaito to block Job Shocks &amp; T:05</div>
+              <div class="slot-desc">Pair Tuakana + Teina (B:03 / C:04) + C:05 Monilukutaito to block Job Shocks &amp; T:01</div>
               <div class="token-drop">🎯 Drop Paired TOK:01</div>
             </div>
             <div class="care-slot">
               <div class="slot-pill">GATE 3 • LAUNCH (20–35)</div>
-              <div class="slot-desc">Seed with NZD 62k+ Youth Grant (B:03) + Cooled Rents (B:05) to block Exit 3 Abroad</div>
+              <div class="slot-desc">Seed with NZD 62k+ Youth Grant (B:05/B:06) + Cooled Rents (B:08) to block Exit 3 Abroad</div>
               <div class="token-drop">🎯 Drop TOK:01 + ⚡ TOK:02</div>
             </div>
           </div>
@@ -196,20 +196,20 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
             <div class="ledger-panel">
               <div class="panel-heading">OBLIGATIONS LEDGER (TO WHOM &amp; HOW MUCH)</div>
               <ul class="ledger-list">
-                <li><strong>To Mokopuna (0–20):</strong> &#9744; Stunted (i_c=0) <em>vs.</em> &#9744; Thriving + NZD 62k Seed + Solar</li>
-                <li><strong>To Kaumātua (65+):</strong> &#9744; H:04 Age-70 Cut <em>vs.</em> &#9744; NZ Super at 65 (B:06) + K:06 Wisdom</li>
-                <li><strong>To Working Whānau:</strong> &#9744; 3.1x Rent / 28.2% PAYE <em>vs.</em> &#9744; Rents -10.5% / 18.5% PAYE</li>
-                <li><strong>My Capital Track (B:05):</strong> &#9744; Passive Dirt (z_l) <em>vs.</em> &#9744; Active Builder (z_h: 19/20 Win!)</li>
+                <li><strong>To Mokopuna (0–20):</strong> &#9744; Struggling (i_c=0, h1–h2) <em>vs.</em> &#9744; Thriving + NZD 62k Seed + Solar</li>
+                <li><strong>To Kaumātua (64+):</strong> &#9744; H:05 Age-70 Cut <em>vs.</em> &#9744; NZ Super @ Age 64 (B:15) + K:09 Wisdom</li>
+                <li><strong>To Working Whānau:</strong> &#9744; 3.1x Rent / 28.2% PAYE <em>vs.</em> &#9744; Rents -10.5% / 18.25% PAYE (C:10)</li>
+                <li><strong>My Capital Track (B:08):</strong> &#9744; Passive Dirt (z_l) <em>vs.</em> &#9744; Active Builder (z_h: 19/20 Win!)</li>
               </ul>
             </div>
             <div class="ledger-panel">
               <div class="panel-heading">MANA &amp; PASSING OVER INHERITANCE (END OF TURN)</div>
               <div class="mana-boxes">
-                <div class="mana-col mana-bad">🌪️ <strong>Mana Eroded (T:05 / Drag)</strong><br/><span>Track unbuffered Exits 1–4</span></div>
-                <div class="mana-col mana-good">✨ <strong>Mana Created (Ako / K:07)</strong><br/><span>Lifts Cohesion 100.0 &rarr; 126.0</span></div>
+                <div class="mana-col mana-bad">🌪️ <strong>Mana Eroded (T:01 / T:07)</strong><br/><span>Track unbuffered Exits 1–4</span></div>
+                <div class="mana-col mana-good">✨ <strong>Mana Created (Ako / K:10)</strong><br/><span>Lifts Cohesion 100.0 &rarr; 126.0</span></div>
               </div>
               <div class="passing-over-box">
-                <strong>Passing Over Ritual (Gate 5 &rarr; Next Gen):</strong> Recycle NZD 1.6T Estate Wave (B:05 &rarr; B:03 NZD 62k Seeds), leave paid-off Solar (pv=5, E:02), &amp; pass 🧺 <strong>Ngā Kete Tokens (1.8x Skill Multiplier)</strong> to your rising Mokopuna!
+                <strong>Passing Over Ritual (Gate 5 &rarr; Next Gen):</strong> Recycle NZD 1.6T Estate Wave (B:07/B:08 &rarr; B:05/B:06 NZD 62k+ Seeds), leave paid-off Solar (pv=5, E:02), &amp; pass 🧺 <strong>Ngā Kete Tokens (1.8x Skill Multiplier)</strong> to your rising Mokopuna!
               </div>
             </div>
           </div>
@@ -750,7 +750,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
         </div>
         <div class="banner-right">
           <div><strong>Phase Track:</strong> &#9744; SS0 Status Quo &rarr; &#9744; SS1 Year-5 Audit (3.8x) &rarr; &#9744; SS2 2050 50/50 Harvest</div>
-          <div><strong>Victory (B:09 / N:06):</strong> Stunting &le; 1.5% &bull; Cohesion 126.0 &bull; Super @ 65 &bull; PAYE 18.5% (+20.5% CE)</div>
+          <div><strong>Victory (B:16 / N:09):</strong> Struggling &le; 1.5% &bull; Cohesion 126.0 &bull; Super @ 64 &bull; PAYE 18.25% (+24.70% CE)</div>
         </div>
       </header>
 

@@ -3,9 +3,9 @@
 Foils & Founders: The Aotearoa Deck — A3 Landscape 5x2 Stacked-Bond Card Renderer
 ==================================================================================
 Compiles `decks/cards.yaml` + a visual theme (`generic`, `waka_hourua`, or
-`foils_pakeha`) into a 5-Sheet A3 Landscape (420mm x 297mm) HTML/PDF document
-with 10 cards per sheet (5 columns x 2 rows = 50 slots: 43 canonical cards +
-7 write-in P:?? deck wildcards).
+`foils_pakeha`) into an 8-Sheet A3 Landscape (420mm x 297mm) HTML/PDF document
+with 10 cards per sheet (5 columns x 2 rows = 80 slots: 100% A3 utilization
+across Suites B, T, C, K, N, H, E, and P).
 
 Usage:
   python3 scripts/render_cards.py --theme generic --co2-pos top-right --out build/generic.html
@@ -28,54 +28,7 @@ from render_common import (
     resolve_theme_config,
 )
 
-# Default CO2e badges for all 43 canonical cards if not explicitly overridden on a card
-DEFAULT_CO2E_BADGES: Dict[str, Dict[str, str]] = {
-    "B:00": {"display": "Veil of Ignorance", "status": "indirect_enabler"},
-    "B:01": {"display": "Low-Carbon Readiness", "status": "indirect_enabler"},
-    "B:02": {"display": "Resilient Rangatahi", "status": "indirect_enabler"},
-    "B:03": {"display": "Green-Collar Talent", "status": "indirect_enabler"},
-    "B:04": {"display": "-75% Fiscal Drag", "status": "indirect_enabler"},
-    "B:05": {"display": "Unchains Clean CapEx", "status": "indirect_enabler"},
-    "B:06": {"display": "Funds C:04 Grid Pool", "status": "indirect_enabler"},
-    "B:07": {"display": "2.0% Real SRTP", "status": "indirect_enabler"},
-    "B:08": {"display": "Coupled Climate-OLG", "status": "indirect_enabler"},
-    "B:09": {"display": "Net-Zero Prosperity", "status": "computed"},
-    "T:00": {"display": "+Limo Emissions", "status": "hazard_increase"},
-    "T:01": {"display": "Stalls Just Transition", "status": "hazard_increase"},
-    "T:02": {"display": " Urban Sprawl Trap", "status": "hazard_increase"},
-    "T:03": {"display": "Primate-City Crush", "status": "hazard_increase"},
-    "T:04": {"display": "Stalls Clean-Tech R&D", "status": "hazard_increase"},
-    "T:05": {"display": "Paralyzes Climate Action", "status": "hazard_increase"},
-    "C:01": {"display": "USD 1,200 / tCO2e", "status": "computed"},
-    "C:02": {"display": "+1 Clean-Tech Pivot", "status": "indirect_enabler"},
-    "C:03": {"display": "Marae & School Hubs", "status": "indirect_enabler"},
-    "C:04": {"display": "1.65x Grid & Coast Armor", "status": "computed"},
-    "C:05": {"display": "-2.8x Rural Fuel Burden", "status": "computed"},
-    "C:06": {"display": "126.0 Trust Lifeboat", "status": "indirect_enabler"},
-    "K:01": {"display": "Kaitiaki Seed R&D", "status": "indirect_enabler"},
-    "K:02": {"display": "Clean-Tech Venture", "status": "indirect_enabler"},
-    "K:03": {"display": "-60 bps Green Spread", "status": "indirect_enabler"},
-    "K:04": {"display": "QEA-2026 GPU Solver", "status": "indirect_enabler"},
-    "K:05": {"display": "Pūrākau Cohesion", "status": "indirect_enabler"},
-    "K:06": {"display": "Solar Bequest (pv=5)", "status": "indirect_enabler"},
-    "K:07": {"display": "Kotahitanga Compact", "status": "indirect_enabler"},
-    "N:01": {"display": "-75% Clean-Tech Friction", "status": "indirect_enabler"},
-    "N:02": {"display": "3x Adaptive Skill", "status": "indirect_enabler"},
-    "N:03": {"display": "Books Avoided Damage", "status": "indirect_enabler"},
-    "N:04": {"display": "Polycentric Microgrids", "status": "indirect_enabler"},
-    "N:05": {"display": "Non-Rival Clean IP", "status": "indirect_enabler"},
-    "N:06": {"display": "-14.8 MtCO2e / yr", "status": "computed"},
-    "H:01": {"display": "Blocks Green CapEx", "status": "hazard_increase"},
-    "H:02": {"display": "Siloed Grid Red Tape", "status": "hazard_increase"},
-    "H:03": {"display": "Exiles Grid Engineers", "status": "hazard_increase"},
-    "H:04": {"display": "Locks Retiree Dirt", "status": "hazard_increase"},
-    "H:05": {"display": "Speculative Land Drain", "status": "hazard_increase"},
-    "E:01": {"display": "-10.0 MtCO2e / yr", "status": "computed"},
-    "E:02": {"display": "-14.8 MtCO2e / yr", "status": "computed"},
-    "E:03": {"display": "-3.2 MtCO2e (No LNG)", "status": "computed"},
-}
-
-DECK_ORDER = ["B", "T", "C", "K", "N", "H", "E"]
+DECK_ORDER = ["B", "T", "C", "K", "N", "H", "E", "P"]
 
 
 def find_card_asset(themes_dir: Path, search_order: List[str], card_id: str) -> Optional[Path]:
@@ -93,18 +46,26 @@ def find_card_asset(themes_dir: Path, search_order: List[str], card_id: str) -> 
 
 
 def get_co2e_badge_html(card: Dict[str, Any]) -> str:
-    card_id = str(card.get("id", "")).strip()
-    co2_obj = card.get("co2e_impact") or DEFAULT_CO2E_BADGES.get(card_id, {})
+    """Renders explicit CO2e badge if present on a Climate Extension card, else Mana/Kickback pill."""
+    co2_obj = card.get("co2e_impact") or {}
     display = co2_obj.get("display", "")
     status = co2_obj.get("status", "na")
-    if not display or status == "na":
-        return ""
-    css_mod = "co2-computed"
-    if status == "hazard_increase":
-        css_mod = "co2-hazard"
-    elif status == "indirect_enabler":
-        css_mod = "co2-indirect"
-    return f'<span class="co2-badge {css_mod}">🌱 {html.escape(display)}</span>'
+    if display and status != "na":
+        css_mod = "co2-hazard" if status == "hazard_increase" else (
+            "co2-indirect" if status == "indirect_enabler" else "co2-computed"
+        )
+        return f'<span class="co2-badge {css_mod}">🌱 {html.escape(str(display))}</span>'
+
+    cid = str(card.get("id", "")).strip()
+    pfx = cid.split(":")[0] if ":" in cid else "B"
+    kickback = card.get("feral_kickback_wealth")
+    if pfx in ("T", "H") and kickback is not None:
+        return f'<span class="co2-badge co2-hazard">⚡ Mode B: +{kickback}W</span>'
+    mtier = card.get("mana_tier")
+    bmana = card.get("base_mana")
+    if mtier is not None and bmana is not None:
+        return f'<span class="co2-badge co2-indirect">✦ Tier {mtier} • {bmana}M</span>'
+    return ""
 
 
 def build_wildcard_html(
@@ -164,7 +125,10 @@ def render_deck_html(
     co2_pos: str,
     out_path: Path,
 ) -> str:
-    cards: List[Dict[str, Any]] = deck_data.get("cards", [])
+    cards: List[Dict[str, Any]] = sorted(
+        deck_data.get("cards", []),
+        key=lambda c: (int(c.get("a3_game_sheet", 99)), int(c.get("a3_slot", 99))),
+    )
     active_theme_name = theme_cfg.get("theme_name", theme_id)
     typo = theme_cfg.get("typography", {})
     font_heading = typo.get("heading_font", "'Inter', system-ui, sans-serif")

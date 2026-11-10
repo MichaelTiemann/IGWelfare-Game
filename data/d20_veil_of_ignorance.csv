@@ -1,4 +1,4 @@
-sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_nzd_k,baseline_net_worth_nzd_m,ss0_stunting_risk_pct,ss0_annual_crown_drag_nzd_k,ss2_stunting_risk_pct,ss2_adult_fiscal_swing_nzd_k,ss2_welfare_ce_avg_pct,ss2_welfare_ce_active_zh_pct,ss2_welfare_ce_passive_zl_pct,ss2_post_reform_net_worth_nzd_m,ss2_net_worth_retained_avg_pct,ss2_net_worth_retained_active_zh_pct,destiny_note
+sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_nzd_k,baseline_net_worth_nzd_m,ss0_hardship_risk_pct,ss0_annual_crown_drag_nzd_k,ss2_hardship_risk_pct,ss2_adult_fiscal_swing_nzd_k,ss2_welfare_ce_avg_pct,ss2_welfare_ce_active_zh_pct,ss2_welfare_ce_passive_zl_pct,ss2_post_reform_net_worth_nzd_m,ss2_net_worth_retained_avg_pct,ss2_net_worth_retained_active_zh_pct,destiny_note
 01:01,1,P0.00-0.25,OT Residential Care / Abuse Tier,18,-0.015,92.0,-180.0,12.0,14.2,38.4,38.4,38.4,0.062,100.0,100.0,Kept in Whanau Wraparound + NZD 62k Seed
 01:02,1,P0.25-0.50,OT Kin / Foster Care Tier,22,-0.012,89.0,-145.0,8.5,14.6,36.8,36.8,36.8,0.062,100.0,100.0,Exits State Care Pipeline + NZD 62k Seed
 01:03,1,P0.50-0.75,Emergency Motel Housing,25,-0.010,86.0,-125.0,6.5,15.0,35.2,35.2,35.2,0.062,100.0,100.0,Stable Social/Co-op Home + NZD 62k Seed
@@ -13,7 +13,7 @@ sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_n
 01:12,1,P2.75-3.00,Supported Living Hardship,43,0.000,68.0,-70.0,2.3,16.5,26.7,26.7,26.7,0.062,100.0,100.0,Launches into Thriving Skill Tier (h6)
 01:13,1,P3.00-3.25,Precarious Casual Work,45,0.000,66.0,-66.0,2.1,16.6,26.2,26.2,26.2,0.062,100.0,100.0,Crowds in +NZD 15.3k Parental Care
 01:14,1,P3.25-3.50,Auckland Rent-Crushed Q1,47,0.000,64.0,-62.0,1.9,16.7,25.7,25.7,25.7,0.062,100.0,100.0,Rent Cooled -10.5% + Deposit Seed
-01:15,1,P3.50-3.75,Large City Hardship Renter,48,0.000,62.0,-58.0,1.8,16.8,25.3,25.3,25.3,0.062,100.0,100.0,18.5% PAYE + High Regional Wage
+01:15,1,P3.50-3.75,Large City Hardship Renter,48,0.000,62.0,-58.0,1.8,16.8,25.3,25.3,25.3,0.062,100.0,100.0,18.25% PAYE + High Regional Wage
 01:16,1,P3.75-4.00,Rural Transport-Stressed,49,0.000,60.0,-55.0,1.7,16.9,25.0,25.0,25.0,0.062,100.0,100.0,Regional Enterprise Owner Track
 01:17,1,P4.00-4.25,Tier 1 Hardship Anchor,50,0.000,58.0,-52.0,1.6,17.0,24.6,24.6,24.6,0.062,100.0,100.0,Tier 1 Benchmark (NZD 50k + 0 -> 62k)
 01:18,1,P4.25-4.50,Minimum-Wage Shift Family,52,0.002,56.0,-49.0,1.5,17.1,24.2,24.2,24.2,0.065,100.0,100.0,Young Homeownership Track (41.5%)
@@ -21,7 +21,7 @@ sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_n
 01:20,1,P4.75-5.00,P5.0 Hardship Ceiling,56,0.006,52.0,-44.0,1.3,17.3,23.5,23.5,23.5,0.072,100.0,100.0,65%+ Thriving Launch Cohort
 02:00,2,P05.00-10.00,Tier 1 Vigintile 2 (Q1 Hardship Renter),50,0.000,56.0,-38.0,2.8,14.5,24.6,24.6,24.6,0.062,100.0,100.0,Tier 1 Anchor: Exits Hardship Corner + NZD 62k Seed
 03:00,3,P10.00-15.00,Vigintile 3 (GUiNZ 14.3% Hardship Edge),60,0.015,48.0,-26.0,2.4,15.0,23.2,23.2,23.2,0.078,520.0,520.0,First-2000-Days Wraparound + Free ECE (B:01)
-04:00,4,P15.00-20.00,Vigintile 4 (Dunedin 22% Risk Boundary),70,0.035,40.0,-16.0,2.0,15.4,21.8,21.8,21.8,0.095,271.4,271.4,Exits Dunedin 22% Stunting Corner at Gate 1 & 2
+04:00,4,P15.00-20.00,Vigintile 4 (Dunedin 22% Risk Boundary),70,0.035,40.0,-16.0,2.0,15.4,21.8,21.8,21.8,0.095,271.4,271.4,Exits Dunedin 22% Hardship Corner at Gate 1 & 2
 05:00,5,P20.00-25.00,Vigintile 5 (Lower-Wage Service Renter),80,0.055,28.0,-8.5,1.7,15.8,20.5,20.5,20.5,0.112,203.6,203.6,Tuakana-Teina Protected + Rent Cooled -10.5%
 06:00,6,P25.00-30.00,Vigintile 6 (Young Regional Family),90,0.075,22.0,-3.5,1.5,16.1,19.4,19.4,19.4,0.130,173.3,173.3,4-Region Transport & Solar Relief (C:05 + E:02)
 07:00,7,P30.00-35.00,Tier 2 Vigintile 7 (Q2 Young Saver),100,0.100,18.0,1.2,1.4,16.5,18.4,18.4,18.4,0.148,148.0,148.0,Tier 2 Benchmark: NZD 62k Youth Grant + Home Deposit
@@ -33,7 +33,7 @@ sub_roll_id,parent_d20_face,nz_percentile_band,archetype_label,baseline_income_n
 13:00,13,P60.00-65.00,Vigintile 13 (Established Provincial Owner),265,0.830,6.5,18.5,0.9,23.2,9.8,11.0,7.6,0.878,105.8,107.5,Universal NZ Super Secured at Age 65 (B:06)
 14:00,14,P65.00-70.00,Vigintile 14 (Metro Professional Owner),285,0.940,5.5,21.0,0.8,24.8,9.0,10.3,6.6,0.985,104.8,106.6,Zero Brain Drain: Children Build Domestic Careers
 15:00,15,P70.00-75.00,Tier 4 Vigintile 15 (Stats NZ Mean),300,1.000,4.5,23.5,0.8,26.5,8.4,9.8,5.9,1.040,104.0,106.0,Tier 4 Benchmark (Mean NW = NZD 1.041M; +8.4% CE)
-16:00,16,P75.00-80.00,Vigintile 16 (Senior Engineer / Clinician),330,1.300,3.8,27.0,0.7,29.5,7.1,8.9,4.3,1.335,102.7,104.8,Builder Tax Cut (18.5% PAYE) Outweighs Land Cooling
+16:00,16,P75.00-80.00,Vigintile 16 (Senior Engineer / Clinician),330,1.300,3.8,27.0,0.7,29.5,7.1,8.9,4.3,1.335,102.7,104.8,Builder Tax Cut (18.25% PAYE) Outweighs Land Cooling
 17:00,17,P80.00-85.00,Vigintile 17 (Commercial Farm / SME Equity),365,1.650,3.0,31.0,0.7,33.5,5.8,8.0,2.7,1.668,101.1,103.2,Firm Working Capital Unchained (B:05 + E:02)
 18:00,18,P85.00-90.00,Tier 5 Vigintile 18 (Upper Professional),400,2.000,2.4,35.0,0.6,38.0,4.6,7.2,1.1,1.980,99.0,101.5,Tier 5 Benchmark: Both Builders (+7.2%) & Landlords (+1.1%) Win
 19:00,19,P90.00-95.00,Vigintile 19 (Pre-Top-5% Enterprise Owner),450,2.500,1.9,38.5,0.6,43.0,3.3,6.5,-0.5,2.450,98.0,100.4,19th Face of D20: Strong Net Gain (+3.3% Avg / +6.5% zh)

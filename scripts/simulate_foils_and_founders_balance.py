@@ -46,7 +46,7 @@ class PlayerState:
     forfeit_mana: float = 0.0
     river_tiers_enacted: List[int] = field(default_factory=list)
     ages: List[int] = field(default_factory=lambda: [12, 1])
-    stunted_flags: List[bool] = field(default_factory=lambda: [False, False])
+    struggling_flags: List[bool] = field(default_factory=lambda: [False, False])
 
 
 def roll_d20_birth(rng: np.random.Generator, front_foil_active: bool, guinz_drift: bool = True) -> Tuple[float, bool]:
@@ -73,13 +73,13 @@ def simulate_single_game(
     n_p = len(strategies)
     players: List[PlayerState] = []
     for s in strategies:
-        w0, stunted = roll_d20_birth(rng, front_foil_active=False)
-        players.append(PlayerState(strategy=s, mana=cfg.seed_mana, wealth=w0 * 2.0, stunted_flags=[False, stunted]))
+        w0, struggling = roll_d20_birth(rng, front_foil_active=False)
+        players.append(PlayerState(strategy=s, mana=cfg.seed_mana, wealth=w0 * 2.0, struggling_flags=[False, struggling]))
 
     subsystems_done = [False, False, False]  # [Front Foil, Wing-Sail, Rear T-Foil]
     ss_regime = 0
     ss2_turn = cfg.n_turns + 1
-    stunted_births = sum(1 for p in players for st in p.stunted_flags if st)
+    struggling_births = sum(1 for p in players for st in p.struggling_flags if st)
 
     finland_cohesion = cfg.finland_start
     nz_cohesion = cfg.nz_start
@@ -107,15 +107,15 @@ def simulate_single_game(
                     p.wealth = max(0.0, p.wealth - 1.5)
                 if p.ages[c_idx] >= 30:
                     p.ages[c_idx] = 0
-                    _, is_stunted = roll_d20_birth(rng, front_foil_active=front_foil)
-                    p.stunted_flags[c_idx] = is_stunted
-                    if is_stunted:
-                        stunted_births += 1
+                    _, is_struggling = roll_d20_birth(rng, front_foil_active=front_foil)
+                    p.struggling_flags[c_idx] = is_struggling
+                    if is_struggling:
+                        struggling_births += 1
 
             adult_count = sum(1 for a in p.ages if a >= 6)
             regime_wealth_bonus = (0.8 if wing_sail else 0.0) + (0.8 if rear_foil else 0.0)
-            stunt_penalty = 0.5 if any(p.stunted_flags) and not front_foil else 1.0
-            p.wealth += adult_count * (1.2 + regime_wealth_bonus) * stunt_penalty
+            hardship_penalty = 0.5 if any(p.struggling_flags) and not front_foil else 1.0
+            p.wealth += adult_count * (1.2 + regime_wealth_bonus) * hardship_penalty
 
         # --- PHASE II: River Exposure & Feral Spoiler Plays ---
         for p in players:
@@ -251,7 +251,7 @@ def simulate_single_game(
         "ss1_reached": float(ss_regime >= 1),
         "ss2_reached": float(ss_regime == 2),
         "ss2_turn": float(ss2_turn),
-        "stunted_births": float(stunted_births),
+        "struggling_births": float(struggling_births),
         "combined_score": combined_score,
         "per_capita_score": combined_score / n_p,
         "beat_finland": float(nz_cohesion > finland_cohesion),

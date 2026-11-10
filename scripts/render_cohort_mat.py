@@ -48,11 +48,11 @@ def build_character_track_svg(y_top: int, char_label: str, sub_label: str) -> li
         if j <= 5:
             fill = "#123524" if j in (0, 1, 4) else "#0F292A"
             stroke = "#80ED99" if j in (0, 1, 4) else "#2A9D8F"
-            stage_tag = "B:01 GATE" if j <= 1 else ("B:02 GATE" if j == 4 else "TAMARIKI")
+            stage_tag = "B:01 GATE" if j <= 1 else ("B:03 GATE" if j == 4 else "TAMARIKI")
         else:
             fill = "#4A151B" if j == 7 else "#102E4A"
             stroke = "#FF4D4D" if j == 7 else "#00B4D8"
-            stage_tag = "H:03 CHECK!" if j == 7 else ("B:03 GRANT" if j == 6 else "EARNING")
+            stage_tag = "H:04 CHECK!" if j == 7 else ("B:05/06 GRANT" if j == 6 else "EARNING")
 
         lines.append(f'<rect x="{bx}" y="{ry1}" width="{box_w}" height="{box_h}" rx="6" fill="{fill}" stroke="{stroke}" stroke-width="1.8"/>')
         lines.append(
@@ -85,7 +85,7 @@ def build_character_track_svg(y_top: int, char_label: str, sub_label: str) -> li
         elif j == 7:
             lines.append(
                 f'<text x="{bx + box_w/2}" y="{ry1 + 71}" text-anchor="middle" fill="#FFD6D6" '
-                f'font-family="Helvetica, Arial, sans-serif" font-size="8.5">1d6: 1-2 Sydney</text>'
+                f'font-family="Helvetica, Arial, sans-serif" font-size="8.5">d20: 1-5 Sydney</text>'
             )
 
     # Column 16 (Row 1): Birth Vigintile & Trajectory Token Box
@@ -101,7 +101,7 @@ def build_character_track_svg(y_top: int, char_label: str, sub_label: str) -> li
     )
     lines.append(
         f'<text x="{sx + status_w/2}" y="{ry1 + 64}" text-anchor="middle" fill="#80ED99" '
-        f'font-family="Helvetica, Arial, sans-serif" font-size="9.5">Stunt / Thrive</text>'
+        f'font-family="Helvetica, Arial, sans-serif" font-size="9.5">h1-h2 / h6-h7</text>'
     )
 
     # Render Row 2: j = 15 to 29 (15 boxes)
@@ -119,7 +119,7 @@ def build_character_track_svg(y_top: int, char_label: str, sub_label: str) -> li
         else:
             fill = "#3D2B08"
             stroke = "#F4C97E"
-            stage_tag = "ELDER (K:06)"
+            stage_tag = "ELDER (K:09)"
             sub_note = "+1 Exp Token!" if j < 28 else "Succession!"
 
         lines.append(f'<rect x="{bx}" y="{ry2}" width="{box_w}" height="{box_h}" rx="6" fill="{fill}" stroke="{stroke}" stroke-width="1.8"/>')
@@ -156,7 +156,7 @@ def build_character_track_svg(y_top: int, char_label: str, sub_label: str) -> li
     )
     lines.append(
         f'<text x="{sx + status_w/2}" y="{ry2 + 71}" text-anchor="middle" fill="#80ED99" '
-        f'font-family="Helvetica, Arial, sans-serif" font-size="8.5">B:02 Bequest</text>'
+        f'font-family="Helvetica, Arial, sans-serif" font-size="8.5">B:07/E:02 Beq</text>'
     )
 
     return lines
@@ -187,14 +187,14 @@ def build_cohort_svg() -> str:
         build_character_track_svg(
             84,
             "CHARACTER SLOT A (GENERATION 1 — E.G., START AT AGE 36 [j=12] OR AGE 66 [j=22])",
-            "Full Agency at j=6..29 | Unlocks K:06 Experience Token/Turn at j=21 (Age 63+)",
+            "Full Agency at j=6..29 | Unlocks K:09 Experience Token/Turn &amp; K_whanau at Age 64+ (B:15)",
         )
     )
     svg.extend(
         build_character_track_svg(
             358,
             "CHARACTER SLOT B (GENERATION 2 — E.G., START AT AGE 3 [j=1] OR AGE 21 [j=7])",
-            "Absorbs B:01/B:02 Buffs at j=0..5 | Watch Age-21 Sydney Brain-Drain Check at j=7!",
+            "Absorbs B:01/B:03 Buffs at j=0..5 | Watch Age-21 H:04 Brain-Drain Check at j=7!",
         )
     )
 
@@ -204,7 +204,7 @@ def build_cohort_svg() -> str:
     svg.append('<rect x="30" y="632" width="465" height="386" rx="10" fill="#0E273C" stroke="#2A9D8F" stroke-width="2.5"/>')
     svg.append(
         '<text x="48" y="658" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold">'
-        'KAUPAPA PERSONA COMMAND ZONE (K:01-K:07)</text>'
+        'KAUPAPA WAYFINDER COMMAND ZONE (K:01-K:10)</text>'
     )
     svg.append(
         '<text x="48" y="678" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="11">'
@@ -217,7 +217,7 @@ def build_cohort_svg() -> str:
     )
     svg.append(
         '<text x="150" y="818" text-anchor="middle" fill="#E0FBFC" font-family="Helvetica, Arial, sans-serif" font-size="11">'
-        '(Character A: K:01-K:06)</text>'
+        '(Wayfinder: K:01-K:09)</text>'
     )
     svg.append(
         '<text x="150" y="842" text-anchor="middle" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="10">'
@@ -225,7 +225,7 @@ def build_cohort_svg() -> str:
     )
     svg.append(
         '<text x="150" y="856" text-anchor="middle" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="10">'
-        'B:02 Succession is active!</text>'
+        'B:03/E:05 Echo is active!</text>'
     )
 
     svg.append('<rect x="272" y="692" width="205" height="255" rx="8" fill="#081726" stroke="#00B4D8" stroke-width="2" stroke-dasharray="6,4"/>')
@@ -243,15 +243,15 @@ def build_cohort_svg() -> str:
     )
     svg.append(
         '<text x="374" y="856" text-anchor="middle" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="10">'
-        'Age 12 (j=4) with B:02!</text>'
+        'Super-64 + N:08 TFR Unlock!</text>'
     )
     svg.append(
         '<text x="262" y="972" text-anchor="middle" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold">'
-        'K:06 Elder Dividend (j=21..29): +1 Free Lifetime Experience Token/Turn!</text>'
+        'K:09 Elder Dividend (Age 64+): +1 Free Experience Token/Turn + K_whanau!</text>'
     )
     svg.append(
         '<text x="262" y="992" text-anchor="middle" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="10.5">'
-        '(Cuts N:01-N:05, B:04, or B:08 deployment cost by 100%)</text>'
+        '(Cuts N:01-N:08, B:10, or E:02 deployment cost by 100%)</text>'
     )
 
     # Bay 2: Available Mana Pool & Contingent Liability Reference
@@ -301,7 +301,7 @@ def build_cohort_svg() -> str:
     )
     svg.append(
         '<text x="542" y="978" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="11">'
-        '5. At 0 Mana: Fund B:01 care or co-tap K:07 to restore +1 Mana.</text>'
+        '5. At 0 Mana: Fund B:01 care or co-tap K:10 to restore +1 Mana.</text>'
     )
 
     # Bay 3: Liquid Wealth, Generosity, & Dynasty Endowment Treasury

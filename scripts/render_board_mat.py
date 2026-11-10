@@ -66,11 +66,11 @@ def build_board_svg() -> str:
         cx = start_x + (d - 1) * (cell_w + 2)
         cy = 118
         if d <= 4:
-            fill, stroke, label = "#6B111B", "#FF4D4D", "SS0 STUNT"
+            fill, stroke, label = "#6B111B", "#FF4D4D", "SS0 CORNER"
         elif d <= 6:
-            fill, stroke, label = "#521924", "#FF8080", "H:06 DRIFT"
+            fill, stroke, label = "#521924", "#FF8080", "H:03 GUiNZ"
         elif d >= 19:
-            fill, stroke, label = "#5C3A08", "#F77F00", "T:02/T:04"
+            fill, stroke, label = "#5C3A08", "#F77F00", "T:05/T:10"
         else:
             fill, stroke, label = "#113F48", "#2A9D8F", "CLEAR"
 
@@ -86,15 +86,15 @@ def build_board_svg() -> str:
 
     svg.append(
         '<text x="310" y="194" text-anchor="middle" fill="#FF8080" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
-        'BOTTOM REEF (1-6): T:00/T:01/T:05 | Closed by BAY 1 (B:01+B:02)</text>'
+        'BOTTOM REEF (1-6): i_c=0 & T:01/T:07 | Closed by BAY 1 (B:01+B:03)</text>'
     )
     svg.append(
         '<text x="955" y="194" text-anchor="middle" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
-        '3-YR TERM AUDIT (1-8): Triggers H:01/H:02 on Unshielded Stakes | Closed by BAY 3 (B:07)</text>'
+        'EVERY-3RD-TURN ELECTION: D20 Stability vs. T:07/H:01 | Shielded by BAY 3 (B:09+K:10)</text>'
     )
     svg.append(
         '<text x="1585" y="194" text-anchor="middle" fill="#FFB703" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
-        'TOP REEF (19-20): T:02/T:04 | Closed by BAY 2 (B:05)</text>'
+        'TOP REEF (19-20): T:05/T:10 | Closed by BAY 2 (B:05)</text>'
     )
 
     # ==========================================================================
@@ -105,9 +105,9 @@ def build_board_svg() -> str:
             "x": 30,
             "title": "BAY 1: FRONT LIFTING FOIL",
             "maori": "Te Korowai Mokopuna — Early Human Capability",
-            "recipe": "RECIPE: B:01 (First 2000 Days) + B:02 (Tuakana-Teina) + 1 Amp (N:01, N:02, C:02, C:03)",
-            "judo1": "Play B:01+N:02 (or K:01) vs. T:00/T:01",
-            "judo2": "Play C:02 or K:05 vs. T:05 Outrage Mill",
+            "recipe": "RECIPE: B:01 (First 2000 Days) + B:03 (Tuakana-Teina) + 1 Amp (B:02, N:03, C:04, C:05)",
+            "judo1": "Play B:01+B:03+N:03 (or K:01) vs. H:03/T:07",
+            "judo2": "Play C:05 or K:02 vs. T:01 Outrage Drag",
             "lock1": "LOCKED REWARD: Covers D20 Reef 1-6 (No Life Impossible!)",
             "lock2": "+ Awards +5 Legacy Mana Bonus to Enacting Coalition!",
             "color": "#2A9D8F",
@@ -116,9 +116,9 @@ def build_board_svg() -> str:
             "x": 625,
             "title": "BAY 2: WING-SAIL POWER PLANT",
             "maori": "Te Aka Matua — Capital &amp; Clean Energy Rotation",
-            "recipe": "RECIPE: B:05 (Use-It-Or-Lose-It) + B:03 (Youth Grant) + 1 Engine (E:01, E:02, C:05)",
-            "judo1": "Play B:05+N:05 (or K:02) vs. T:02/T:04/H:05",
-            "judo2": "Play B:03 vs. H:03 Sydney Brain Drain",
+            "recipe": "RECIPE: B:08 (LVT/Corp Split) + B:05/B:06 (Youth Grant) + 1 Engine (C:09, E:01, E:02)",
+            "judo1": "Play B:05+N:05 (or K:02) vs. T:05/T:10/H:05",
+            "judo2": "Play B:05/B:06+B:08 vs. H:04 Sydney Brain Drain",
             "lock1": "LOCKED REWARD: Covers D20 Reef 19-20 + Ends Brain Drain",
             "lock2": "+ Working Adults Earn +1 Wealth Every Turn!",
             "color": "#00B4D8",
@@ -127,11 +127,11 @@ def build_board_svg() -> str:
             "x": 1220,
             "title": "BAY 3: REAR T-FOIL STABILIZER",
             "maori": "Nga Kete o te Wananga — Actuarial &amp; Fiscal Governance",
-            "recipe": "RECIPE: B:07 (ACC Time-Bend) + B:06 (2050 50/50 Rule) + 1 Proof (N:03, N:04, B:04, B:08)",
-            "judo1": "Play B:07+N:03 (or K:03/K:04) vs. H:01 Myopia",
-            "judo2": "Play N:01/N:04 vs. H:02 Agency Silos",
+            "recipe": "RECIPE: B:09 (ACC Time-Bend) + B:14/B:15 (50/50 Split) + 1 Proof (N:04, B:10, B:13, E:04)",
+            "judo1": "Play B:09+N:04 (or K:07/K:08) vs. H:01/T:03",
+            "judo2": "Play N:02+N:05 vs. H:02 Wellington Silos",
             "lock1": "LOCKED REWARD: Cancels H:01 Cash-Myopia Audits Forever",
-            "lock2": "+ PAYE Cut to 18.5% (+1W/Turn) &amp; Super @ 65 (K:06)!",
+            "lock2": "+ PAYE Cut to 18.25% (C:10) &amp; Super @ Age 64 (B:15+K:09)!",
             "color": "#D4A359",
         },
     ]
@@ -156,7 +156,7 @@ def build_board_svg() -> str:
         )
         svg.append(
             f'<text x="{bx + 18}" y="291" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="10.2">'
-            f'Political Drag: [2P: 1.5W] • [3-4P: 2.0W] • [5-6P: 3.0W + 3 Co-Stakers (unless K:07)]</text>'
+            f'Political Drag: [2P: 1.5W] • [3-4P: 2.0W] • [5-6P: 3.0W + 3 Co-Stakers (unless K:10)]</text>'
         )
 
         # Sub-Zone A: Staking & Incubation (y=292, height=132, width=518)
@@ -194,7 +194,7 @@ def build_board_svg() -> str:
         )
         svg.append(
             f'<text x="{bx+96}" y="536" text-anchor="middle" fill="#FFD6D6" font-family="Helvetica, Arial, sans-serif" font-size="9.5">'
-            f'(T:00-T:05 / H:01-H:06)</text>'
+            f'(T:00-T:10 / H:01-H:10)</text>'
         )
 
         # Right Box: Empirical Shield / Judo Counter Slot (x = bx+176, width = 346)
@@ -245,7 +245,7 @@ def build_board_svg() -> str:
     svg.append('<rect x="30" y="724" width="1740" height="244" rx="12" fill="#0D233A" stroke="#F4C97E" stroke-width="2.5"/>')
     svg.append(
         '<text x="46" y="750" fill="#F4C97E" font-family="Helvetica, Arial, sans-serif" font-size="15.5" font-weight="bold">'
-        'ZONE 3: THE TEXAS HOLD\'EM RIVER — PERSISTENT INSTITUTIONAL INFRASTRUCTURE (VARIANT B / ROMER N:05)</text>'
+        'ZONE 3: THE TEXAS HOLD\'EM RIVER — PERSISTENT INSTITUTIONAL INFRASTRUCTURE (VARIANT B / ROMER N:06)</text>'
     )
     svg.append(
         '<text x="1754" y="750" text-anchor="end" fill="#80ED99" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold">'
@@ -287,7 +287,7 @@ def build_board_svg() -> str:
         svg.append(
             f'<text x="{rx + r_w/2}" y="{ry + 170}" text-anchor="middle" fill="#F4C97E" '
             f'font-family="Helvetica, Arial, sans-serif" font-size="10.5">'
-            f'[ Roy 1 ]   [ Roy 2 ]   [ N:05 ]</text>'
+            f'[ Roy 1 ]   [ Roy 2 ]   [ N:06 ]</text>'
         )
 
     # ==========================================================================
@@ -321,12 +321,12 @@ def build_board_svg() -> str:
 
     svg.append(
         '<text x="46" y="1102" fill="#00B4D8" font-family="Helvetica, Arial, sans-serif" font-size="14.5" font-weight="bold">'
-        'ZONE 4B: "CHASING FINLAND" SOCIAL COHESION MATCH RACE (C:06) &amp; THREE-PILLAR SCRABBLE MULTIPLIER</text>'
+        'ZONE 4B: "CHASING FINLAND" SOCIAL COHESION MATCH RACE (C:02 / P:07) &amp; THREE-PILLAR SCRABBLE MULTIPLIER</text>'
     )
 
     milestones = [
         (46, 250, "#4A151B", "#FF4D4D", "81.0: AOTEAROA SS0 START", "Hull Drag 0.5x | +0.25/turn"),
-        (308, 250, "#1E3A5F", "#8ECAE6", "83.0 -> 96.0: SCOTLAND", "Stalls at 96.0 (No B:05 Land Tax)"),
+        (308, 250, "#1E3A5F", "#8ECAE6", "83.0 -> 96.0: SCOTLAND", "Stalls at 96.0 (T:08: No B:07/B:08 Tax)"),
         (570, 270, "#163E47", "#00B4D8", "88.0 -> 107.2: FINLAND BOAT", "D20 Roll: 1-5(-0.5) 6-15(+1) 16-20(+2)"),
         (852, 260, "#4F3708", "#FFB703", "90.0 -> 105: 1989 JAPAN", "Turn 7 Land Bubble Crash (-3/turn)"),
         (1124, 290, "#134035", "#2A9D8F", "114.8: AOTEAROA SS1 FOILS", "Scrabble Gamma = 1.0x | +2.60/turn"),

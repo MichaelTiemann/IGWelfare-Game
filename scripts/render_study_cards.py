@@ -11,7 +11,7 @@ Compiles `decks/study_cards.yaml` + `decks/cards.yaml` into A3 Landscape
 
 By default, renders ONLY the cards present in `decks/study_cards.yaml` (padded
 to a multiple of 5 with write-in Study Wildcards) so you can preview 1 sheet
-immediately. Pass `--all-cards` to render all 43 canonical cards.
+immediately. Renders all 80 canonical cards across 16 A3 fold-over study sheets (5 per sheet).
 
 Usage:
   python3 scripts/render_study_cards.py --theme generic --out build/study_generic.html
@@ -21,6 +21,7 @@ Usage:
 
 import argparse
 import html
+import re
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -122,6 +123,67 @@ def build_front_card_html(
     """
 
 
+
+def ascii_eq_to_latex(eq: str) -> str:
+    """Converts readable ASCII-math in study_cards.yaml key_equation into clean LaTeX."""
+    if not eq:
+        return ""
+    s = str(eq).strip()
+    # Protect literal percent signs
+    s = re.sub(r"(?<!\\)%", r"\\%", s)
+    # Operators & arrows
+    for old, new in [
+        ("===", r" \equiv "),
+        ("==>", r" \Longrightarrow "),
+        ("=>", r" \Rightarrow "),
+        ("<->", r" \leftrightarrow "),
+        ("->", r" \to "),
+        ("!=", r" \neq "),
+        (">=", r" \geq "),
+        ("<=", r" \leq "),
+        (">>", r" \gg "),
+        ("<<", r" \ll "),
+        ("≈", r" \approx "),
+        (".*", r" \odot "),
+    ]:
+        s = s.replace(old, new)
+    # Barred symbols before Greek word boundaries
+    for old, new in [
+        ("theta_bar", r"\bar{\theta}"),
+        ("e_bar", r"\bar{e}"),
+        ("g_bar", r"\bar{g}"),
+        ("h_bar", r"\bar{h}"),
+        ("H_bar", r"\bar{H}"),
+        ("U_bar", r"\underline{U}"),
+        ("Churn_bar", r"\overline{\mathrm{Churn}}"),
+        ("chi_bar", r"\bar{\chi}"),
+        ("V_tilde", r"\tilde{V}"),
+        ("M_hat", r"\hat{M}"),
+    ]:
+        s = s.replace(old, new)
+    # Function & Greek tokens
+    greek_map = {
+        "int": r"\int", "sum": r"\sum", "prod": r"\prod", "exp": r"\exp",
+        "min": r"\min", "max": r"\max", "inf": r"\infty",
+        "alpha": r"\alpha", "beta": r"\beta", "gamma": r"\gamma",
+        "delta": r"\delta", "Delta": r"\Delta", "epsilon": r"\epsilon",
+        "zeta": r"\zeta", "eta": r"\eta", "theta": r"\theta", "Theta": r"\Theta",
+        "kappa": r"\kappa", "lambda": r"\lambda", "Lambda": r"\Lambda",
+        "mu": r"\mu", "nu": r"\nu", "xi": r"\xi", "pi": r"\pi", "Pi": r"\Pi",
+        "rho": r"\rho", "varrho": r"\varrho", "sigma": r"\sigma", "Sigma": r"\Sigma",
+        "tau": r"\tau", "phi": r"\phi", "Phi": r"\Phi", "varphi": r"\varphi",
+        "chi": r"\chi", "psi": r"\psi", "Psi": r"\Psi", "omega": r"\omega",
+        "Omega": r"\Omega", "Gamma": r"\Gamma", "ell": r"\ell",
+    }
+    pattern = re.compile(r"(?<!\\)\b(" + "|".join(sorted(greek_map, key=len, reverse=True)) + r")\b")
+    s = pattern.sub(lambda m: greek_map[m.group(1)], s)
+    # Convert ^(expr) to ^{expr} for multi-char exponents
+    s = re.sub(r"\^\(([^()]+)\)", r"^{\1}", s)
+    # Tidy multiplication asterisks between terms
+    s = re.sub(r"\s+\*\s+", lambda _: r" \cdot ", s)
+    return s
+
+
 def get_fold_instruction(orient: str) -> str:
     if orient == "landscape-ccw":
         return "Fold along left crease &bull; Foils &amp; Founders Study Deck"
@@ -156,12 +218,25 @@ def build_study_back_html(
     badge_bg = palette.get("badge_bg", "#0369a1")
     badge_txt = palette.get("badge_text", "#ffffff")
 
-    mono_ref = html.escape(str(study_entry.get("monograph_ref", "Doc 1B • Doc 2 GPU Solver")))
-    eq_title = html.escape(str(study_entry.get("equation_title", "General-Equilibrium Specification")))
-    latex_raw = str(study_entry.get("latex_equation", "")).strip()
-    params_txt = html.escape(str(study_entry.get("parameters", "")))
-    bridge_txt = html.escape(str(study_entry.get("proof_bridge", "")))
-    citations = study_entry.get("citations", [])
+    mono_ref = html.escape(str(
+        study_entry.get("vfi_module") or study_entry.get("monograph_ref") or "Docs 2A/2B • 24-File GPU Solver"
+    ))
+    eq_title = html.escape(str(
+        study_entry.get("economic_concept") or study_entry.get("equation_title") or "General-Equilibrium Specification"
+    ))
+    raw_eq = study_entry.get("latex_equation") or ascii_eq_to_latex(str(study_entry.get("key_equation", "")))
+    latex_raw = str(raw_eq).strip()
+    raw_params = study_entry.get("key_parameters") or study_entry.get("parameters") or ""
+    if isinstance(raw_params, list):
+        params_txt = " &bull; ".join(html.escape(str(x)) for x in raw_params)
+    else:
+        params_txt = html.escape(str(raw_params))
+    bridge_raw = study_entry.get("tabletop_bridge") or study_entry.get("proof_bridge") or ""
+    ev_raw = study_entry.get("empirical_evidence", "")
+    bridge_txt = html.escape(str(bridge_raw))
+    if ev_raw and len(bridge_txt) < 220:
+        bridge_txt = f"{bridge_txt} <br/><em>Evidence:</em> {html.escape(str(ev_raw)[:240])}"
+    citations = study_entry.get("references") or study_entry.get("citations") or []
 
     cites_html = "".join(
         f"<li>{html.escape(str(c))}</li>" for c in citations
@@ -304,30 +379,36 @@ def render_study_deck_html(
         else [str(s.get("id", "")).strip() for s in study_list]
     )
 
-    # Group cards into 5-card core packs per deck prefix, then collect overflows
-    by_prefix: Dict[str, List[str]] = {p: [] for p in DECK_ORDER}
-    for cid in raw_ids:
-        pfx = cid.split(":")[0] if ":" in cid else "B"
-        by_prefix.setdefault(pfx, []).append(cid)
-
     full_packs: List[tuple[str, List[str]]] = []
-    overflow_ids: List[str] = []
-    for pfx in DECK_ORDER:
-        cids = by_prefix.get(pfx, [])
-        num_full = len(cids) // 5
-        for p_idx in range(num_full):
-            chunk = cids[p_idx * 5 : (p_idx + 1) * 5]
-            pack_label = f"Pack {pfx}{p_idx + 1} ({chunk[0]}&ndash;{chunk[-1]})"
-            full_packs.append((pack_label, chunk))
-        rem_cids = cids[num_full * 5 :]
-        overflow_ids.extend(rem_cids)
-
-    # Pack overflow cards into sheets of 5
-    for ov_idx in range(0, len(overflow_ids), 5):
-        chunk = overflow_ids[ov_idx : ov_idx + 5]
-        ov_num = (ov_idx // 5) + 1
-        label_ids = ", ".join(chunk)
-        full_packs.append((f"Overflow Pack {ov_num} ({label_ids})", chunk))
+    if study_list and all("a3_study_sheet" in s for s in study_list):
+        ordered_ids = [
+            str(s["id"]).strip()
+            for s in sorted(
+                study_list,
+                key=lambda x: (int(x.get("a3_study_sheet", 99)), int(x.get("a3_study_slot", 99))),
+            )
+            if str(s["id"]).strip() in set(raw_ids)
+        ]
+        for sh_idx in range(0, len(ordered_ids), 5):
+            chunk = ordered_ids[sh_idx : sh_idx + 5]
+            sh_num = (sh_idx // 5) + 1
+            full_packs.append((f"Study Sheet {sh_num} ({chunk[0]}&ndash;{chunk[-1]})", chunk))
+    else:
+        by_prefix: Dict[str, List[str]] = {p: [] for p in DECK_ORDER}
+        for cid in raw_ids:
+            pfx = cid.split(":")[0] if ":" in cid else "B"
+            by_prefix.setdefault(pfx, []).append(cid)
+        overflow_ids: List[str] = []
+        for pfx in DECK_ORDER:
+            cids = by_prefix.get(pfx, [])
+            num_full = len(cids) // 5
+            for p_idx in range(num_full):
+                chunk = cids[p_idx * 5 : (p_idx + 1) * 5]
+                full_packs.append((f"Pack {pfx}{p_idx + 1} ({chunk[0]}&ndash;{chunk[-1]})", chunk))
+            overflow_ids.extend(cids[num_full * 5 :])
+        for ov_idx in range(0, len(overflow_ids), 5):
+            chunk = overflow_ids[ov_idx : ov_idx + 5]
+            full_packs.append((f"Overflow Pack {(ov_idx // 5) + 1} ({', '.join(chunk)})", chunk))
 
     total_sheets = len(full_packs)
     sheet_blocks: List[str] = []
@@ -692,7 +773,7 @@ def main() -> None:
     parser.add_argument(
         "--all-cards",
         action="store_true",
-        help="Render all 43 cards in cards.yaml instead of only the entries in study_cards.yaml",
+        help="Render all 80 cards in cards.yaml instead of only the entries in study_cards.yaml",
     )
     parser.add_argument(
         "--standalone-copyright",

@@ -279,64 +279,10 @@ def load_joined_cards() -> List[Dict[str, Any]]:
 
 
 
-def ascii_eq_to_latex(eq: str) -> str:
-    """Converts readable ASCII-math in study_cards.yaml key_equation into clean LaTeX."""
-    if not eq:
-        return ""
-    s = str(eq).strip()
-    # Protect literal percent signs
-    s = re.sub(r"(?<!\\)%", r"\\%", s)
-    # Operators & arrows
-    for old, new in [
-        ("===", r" \equiv "),
-        ("==>", r" \Longrightarrow "),
-        ("=>", r" \Rightarrow "),
-        ("<->", r" \leftrightarrow "),
-        ("->", r" \to "),
-        ("!=", r" \neq "),
-        (">=", r" \geq "),
-        ("<=", r" \leq "),
-        (">>", r" \gg "),
-        ("<<", r" \ll "),
-        ("≈", r" \approx "),
-        (".*", r" \odot "),
-    ]:
-        s = s.replace(old, new)
-    # Barred symbols before Greek word boundaries
-    for old, new in [
-        ("theta_bar", r"\bar{\theta}"),
-        ("e_bar", r"\bar{e}"),
-        ("g_bar", r"\bar{g}"),
-        ("h_bar", r"\bar{h}"),
-        ("H_bar", r"\bar{H}"),
-        ("U_bar", r"\underline{U}"),
-        ("Churn_bar", r"\overline{\mathrm{Churn}}"),
-        ("chi_bar", r"\bar{\chi}"),
-        ("V_tilde", r"\tilde{V}"),
-        ("M_hat", r"\hat{M}"),
-    ]:
-        s = s.replace(old, new)
-    # Function & Greek tokens
-    greek_map = {
-        "int": r"\int", "sum": r"\sum", "prod": r"\prod", "exp": r"\exp",
-        "min": r"\min", "max": r"\max", "inf": r"\infty",
-        "alpha": r"\alpha", "beta": r"\beta", "gamma": r"\gamma",
-        "delta": r"\delta", "Delta": r"\Delta", "epsilon": r"\epsilon",
-        "zeta": r"\zeta", "eta": r"\eta", "theta": r"\theta", "Theta": r"\Theta",
-        "kappa": r"\kappa", "lambda": r"\lambda", "Lambda": r"\Lambda",
-        "mu": r"\mu", "nu": r"\nu", "xi": r"\xi", "pi": r"\pi", "Pi": r"\Pi",
-        "rho": r"\rho", "varrho": r"\varrho", "sigma": r"\sigma", "Sigma": r"\Sigma",
-        "tau": r"\tau", "phi": r"\phi", "Phi": r"\Phi", "varphi": r"\varphi",
-        "chi": r"\chi", "psi": r"\psi", "Psi": r"\Psi", "omega": r"\omega",
-        "Omega": r"\Omega", "Gamma": r"\Gamma", "ell": r"\ell",
-    }
-    pattern = re.compile(r"(?<!\\)\b(" + "|".join(sorted(greek_map, key=len, reverse=True)) + r")\b")
-    s = pattern.sub(lambda m: greek_map[m.group(1)], s)
-    # Convert ^(expr) to ^{expr} for multi-char exponents
-    s = re.sub(r"\^\(([^()]+)\)", r"^{\1}", s)
-    # Tidy multiplication asterisks between terms
-    s = re.sub(r"\s+\*\s+", lambda _: r" \cdot ", s)
-    return s
+from render_math import (
+    resolve_card_latex,
+    to_mathtext_lines,
+)
 
 
 def get_mana_badge(card: Dict[str, Any]) -> str:
@@ -386,107 +332,7 @@ def clean_prose_text(text: Any) -> str:
     return s.strip()
 
 
-def extract_braced(s: str, start_idx: int) -> Tuple[str, int]:
-    depth = 0
-    for i in range(start_idx, len(s)):
-        if s[i] == "{" and (i == 0 or s[i - 1] != "\\"):
-            depth += 1
-        elif s[i] == "}" and (i == 0 or s[i - 1] != "\\"):
-            depth -= 1
-            if depth == 0:
-                return s[start_idx + 1 : i], i + 1
-    return s[start_idx + 1 :], len(s)
-
-
-def replace_underbrace_balanced(s: str) -> str:
-    token = r"\underbrace"
-    while token in s:
-        idx = s.find(token)
-        i = idx + len(token)
-        while i < len(s) and s[i].isspace():
-            i += 1
-        if i >= len(s) or s[i] != "{":
-            s = s[:idx] + s[idx + len(token) :]
-            continue
-        expr, next_i = extract_braced(s, i)
-        while next_i < len(s) and s[next_i].isspace():
-            next_i += 1
-        if next_i < len(s) and s[next_i] == "_":
-            next_i += 1
-            while next_i < len(s) and s[next_i].isspace():
-                next_i += 1
-            if next_i < len(s) and s[next_i] == "{":
-                lbl, end_i = extract_braced(s, next_i)
-                s = s[:idx] + f"\\left[{expr}\\right]_{{{lbl}}}" + s[end_i:]
-                continue
-        s = s[:idx] + f"\\left[{expr}\\right]" + s[next_i:]
-    return s
-
-
-def _replace_text_macros(s: str) -> str:
-    def repl(m: re.Match) -> str:
-        inner = m.group(1)
-        inner = inner.replace(r"\&", "+").replace("&", "+")
-        inner = inner.replace("%", r"\%").replace("–", "-").replace("—", "-")
-        inner = inner.replace(" ", r"\ ")
-        return r"\mathrm{" + inner + "}"
-
-    return re.sub(r"\\(?:text|textbf|operatorname)\{([^{}]*)\}", repl, s)
-
-
-def _replace_substack(s: str) -> str:
-    pattern = re.compile(r"\\substack\{([^{}]*)\}")
-    return pattern.sub(lambda m: m.group(1).replace(r"\\", ", "), s)
-
-
-def to_mathtext_lines(latex_str: str) -> List[str]:
-    s = " ".join(latex_str.strip().strip("$").splitlines()).strip()
-    parts: List[str] = [s]
-    if len(s) > 115:
-        if r"\qquad" in s:
-            parts = [p.strip() for p in s.split(r"\qquad", 1)]
-        elif r"\quad" in s:
-            parts = [p.strip() for p in s.split(r"\quad", 1)]
-        elif r"\Longrightarrow" in s and len(s) > 155:
-            idx = s.find(r"\Longrightarrow")
-            parts = [s[:idx].strip(), r"\Longrightarrow " + s[idx + len(r"\Longrightarrow") :].strip()]
-
-    cleaned_lines: List[str] = []
-    for p in parts:
-        line = p
-        line = re.sub(
-            r"\\xrightarrow\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}",
-            lambda m: f"\\overset{{{m.group(1)}}}{{\\longrightarrow}}",
-            line,
-        )
-        line = re.sub(
-            r"\\stackrel\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}\{([^{}]*)\}",
-            lambda m: f"\\overset{{{m.group(1)}}}{{{m.group(2)}}}",
-            line,
-        )
-        line = replace_underbrace_balanced(line)
-        line = _replace_substack(line)
-        for _ in range(3):
-            line = _replace_text_macros(line)
-
-        line = re.sub(r"\\mathbb\{([A-Z])\}", lambda m: f"\\mathbf{{{m.group(1)}}}", line)
-        line = line.replace(r"\middle|", r"\,|\,")
-        line = line.replace(r"\implies", r"\Rightarrow").replace(r"\iff", r"\Leftrightarrow")
-        line = re.sub(r"\\le(?![a-zA-Z])", lambda _: r"\leq", line)
-        line = re.sub(r"\\ge(?![a-zA-Z])", lambda _: r"\geq", line)
-        line = re.sub(r"\\ne(?![a-zA-Z])", lambda _: r"\neq", line)
-        line = line.replace(r"\land", r"\wedge").replace(r"\lor", r"\vee")
-        line = line.replace(r"\big", "").replace(r"\Big", "").replace(r"\bigg", "").replace(r"\Bigg", "")
-        line = line.replace(r"\qquad", r"\ \ \ ").replace(r"\quad", r"\ \ ")
-        line = line.replace("–", "-").replace("—", "-")
-
-        if len(re.findall(r"\\left\b", line)) != len(re.findall(r"\\right\b", line)):
-            line = re.sub(r"\\left\b", "", line)
-            line = re.sub(r"\\right\b", "", line)
-
-        cleaned_lines.append(line.strip())
-
-    return [ln for ln in cleaned_lines if ln]
+# MathText line-splitting and macro normalization imported from render_math.py
 
 
 def render_equation_png(latex_str: str, cid: str = "") -> io.BytesIO:
@@ -636,7 +482,7 @@ def populate_card_slide(prs: Presentation, card: Dict[str, Any], slide_idx: int,
 
     monograph_ref = clean_prose_text(card.get("vfi_module") or card.get("monograph_ref") or "")
     equation_title = clean_prose_text(card.get("economic_concept") or card.get("equation_title") or "")
-    latex_eq = str(card.get("latex_equation") or ascii_eq_to_latex(str(card.get("key_equation", "")))).strip()
+    latex_eq = resolve_card_latex(card, cid)
     raw_params = card.get("key_parameters") or card.get("parameters") or ""
     parameters = clean_prose_text(" • ".join(str(x) for x in raw_params) if isinstance(raw_params, list) else raw_params)
     proof_bridge = clean_prose_text(card.get("tabletop_bridge") or card.get("proof_bridge") or "")
@@ -750,7 +596,7 @@ def main() -> None:
 
     cards = load_joined_cards()
     all_tests = [("SLIDE_01", MASTER_EQ)] + [
-        (str(c["id"]), str(c.get("latex_equation") or ascii_eq_to_latex(str(c.get("key_equation", "")))))
+        (str(c["id"]), resolve_card_latex(c, str(c["id"])))
         for c in cards
     ]
     failures = 0

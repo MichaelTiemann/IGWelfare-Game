@@ -36,13 +36,12 @@
       justify-content: center;
     }
 
-    /* 16:9 Widescreen Viewport Stage */
+    /* 16:9 Widescreen Viewport Stage (Balanced Container-Proportional Midpoint) */
     #deck-viewport {
-      width: 96vw;
-      height: 54vw;
-      max-height: 90vh;
-      max-width: 160vh;
+      width: min(96vw, calc((100vh - 52px) * 16 / 9));
+      aspect-ratio: 16 / 9;
       position: relative;
+      container-type: size;
     }
 
     .slide {
@@ -50,45 +49,49 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(145deg, #071324 0%, #0B1D33 55%, #081C24 100%);
-      border: 3px solid var(--accent, #00B4D8);
-      border-radius: 14px;
-      padding: 1.1% 1.4%;
+      border: 2.5px solid var(--accent, #00B4D8);
+      border-radius: 12px;
+      padding: 0.95% 1.3%;
       flex-direction: column;
+      gap: 0.8%;
       justify-content: space-between;
       box-shadow: 0 18px 50px rgba(0,0,0,0.75);
+      overflow: hidden;
     }
     .slide.active {
       display: flex;
     }
 
-    /* TOP SLIDE HEADER (11% height) */
+    /* TOP SLIDE HEADER (Centered vertically, expands gently if title wraps to 2 lines) */
     .slide-header {
       display: grid;
-      grid-template-columns: 23% 52% 25%;
+      grid-template-columns: 22% 52% 26%;
       align-items: center;
       background: rgba(8, 22, 38, 0.9);
       border-bottom: 2px solid var(--accent);
-      border-radius: 9px;
-      padding: 0.55% 1.1%;
-      height: 11.5%;
+      border-radius: 8px;
+      padding: 0.48% 1.1%;
+      min-height: 11.8%;
+      max-height: 14.5%;
+      flex-shrink: 0;
     }
     .header-left {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
       align-items: flex-start;
     }
     .card-id-pill {
       background: var(--accent);
       color: #04101E;
       font-weight: 900;
-      font-size: clamp(13px, 1.35vw, 24px);
-      padding: 2px 12px;
+      font-size: clamp(10px, 1.38cqw, 24px);
+      padding: 2px 11px;
       border-radius: 6px;
       letter-spacing: 1px;
     }
     .deck-pill {
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.74cqw, 13px);
       color: var(--gold);
       font-weight: 700;
       letter-spacing: 0.6px;
@@ -98,51 +101,54 @@
       padding: 0 8px;
     }
     .header-titles h1 {
-      font-size: clamp(15px, 1.55vw, 28px);
+      font-size: clamp(12px, 1.54cqw, 28px);
       color: #FFFFFF;
-      line-height: 1.15;
+      line-height: 1.12;
     }
     .header-titles .subtitle {
-      font-size: clamp(10px, 0.88vw, 16px);
+      font-size: clamp(8.5px, 0.90cqw, 16px);
       color: var(--gold);
       font-family: Georgia, serif;
       font-style: italic;
       margin-top: 2px;
+      line-height: 1.15;
     }
     .header-right {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 4px;
+      gap: 3px;
       text-align: right;
     }
     .cost-box {
       background: var(--badge-bg);
       border: 1px solid var(--accent);
       color: #FFFFFF;
-      font-size: clamp(9.5px, 0.78vw, 14px);
-      padding: 3px 9px;
+      font-size: clamp(8px, 0.78cqw, 14px);
+      padding: 2.5px 9px;
       border-radius: 5px;
+      line-height: 1.18;
     }
     .mana-box {
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.74cqw, 13px);
       color: #80ED99;
       font-weight: 700;
     }
 
-    /* MIDDLE SPLIT VERTICAL COLUMNS: PLAY LEFT | STUDY RIGHT (64.5% height) */
+    /* MIDDLE SPLIT VERTICAL COLUMNS: PLAY LEFT | STUDY RIGHT */
     .columns-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.2%;
-      height: 64.5%;
-      margin: 0.7% 0;
+      gap: 1.15%;
+      flex: 1 1 auto;
+      min-height: 0;
+      margin: 0;
     }
     .col-panel {
       background: rgba(11, 29, 51, 0.78);
       border: 1.5px solid rgba(168, 218, 220, 0.28);
       border-radius: 10px;
-      padding: 1.4% 1.8%;
+      padding: 1.3% 1.7%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -156,13 +162,13 @@
       background: rgba(15, 25, 42, 0.84);
     }
     .panel-tag {
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.75cqw, 13px);
       font-weight: 800;
       letter-spacing: 1px;
       color: var(--accent);
       border-bottom: 1px solid rgba(255,255,255,0.14);
       padding-bottom: 3px;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     .study-panel .panel-tag {
       color: var(--gold);
@@ -171,14 +177,14 @@
     .lens-box {
       background: rgba(6, 17, 30, 0.75);
       border-radius: 7px;
-      padding: 1.1% 1.6%;
+      padding: 1.05% 1.55%;
       border-left: 3px solid #00B4D8;
     }
     .waka-lens {
       border-left-color: var(--gold);
     }
     .lens-title {
-      font-size: clamp(9.5px, 0.78vw, 14px);
+      font-size: clamp(8px, 0.82cqw, 14.5px);
       font-weight: 800;
       color: #8ECAE6;
       margin-bottom: 2px;
@@ -187,7 +193,7 @@
       color: var(--gold);
     }
     .lens-box p, .mechanic-box p, .study-block p {
-      font-size: clamp(9.5px, 0.78vw, 14.2px);
+      font-size: clamp(8px, 0.82cqw, 14.5px);
       line-height: 1.34;
       color: #E8F1F5;
     }
@@ -196,10 +202,10 @@
       background: rgba(20, 55, 65, 0.48);
       border: 1px solid var(--accent);
       border-radius: 7px;
-      padding: 1.1% 1.6%;
+      padding: 1.05% 1.55%;
     }
     .box-label {
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.71cqw, 12.5px);
       font-weight: 800;
       color: #80ED99;
       letter-spacing: 0.6px;
@@ -211,12 +217,12 @@
       grid-template-columns: 1fr 1fr;
       gap: 4px 10px;
       background: rgba(5, 14, 24, 0.85);
-      padding: 1% 1.5%;
+      padding: 0.95% 1.45%;
       border-radius: 6px;
       border: 1px solid rgba(255,255,255,0.1);
     }
     .impact-item {
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       line-height: 1.25;
       white-space: nowrap;
       overflow: hidden;
@@ -240,25 +246,25 @@
       flex-wrap: wrap;
     }
     .badge-group-title {
-      font-size: clamp(8px, 0.64vw, 11.5px);
+      font-size: clamp(6.5px, 0.66cqw, 11.5px);
       color: var(--text-muted);
       font-weight: 700;
     }
     .syn-pill, .cnt-pill, .none-pill {
-      font-size: clamp(8.5px, 0.66vw, 12px);
+      font-size: clamp(7px, 0.69cqw, 12px);
       font-weight: 800;
       padding: 1px 7px;
       border-radius: 4px;
     }
     .syn-pill { background: #14453D; color: #80ED99; border: 1px solid #2A9D8F; }
     .cnt-pill { background: #4A151B; color: #FF8080; border: 1px solid #FF595E; }
-    .none-pill { color: #6C757D; font-size: clamp(8px, 0.62vw, 11px); }
+    .none-pill { color: #6C757D; font-size: clamp(6.5px, 0.64cqw, 11px); }
 
     /* RIGHT COLUMN STUDY BLOCKS */
     .study-block {
       background: rgba(7, 16, 29, 0.8);
       border-radius: 7px;
-      padding: 1.2% 1.6%;
+      padding: 1.15% 1.55%;
       border-left: 3px solid #A8DADC;
     }
     .evidence-block { border-left-color: #00B4D8; }
@@ -268,8 +274,8 @@
     }
     .cite-list {
       padding-left: 16px;
-      font-size: clamp(9px, 0.74vw, 13.5px);
-      line-height: 1.3;
+      font-size: clamp(7.5px, 0.77cqw, 13.5px);
+      line-height: 1.32;
       color: #F4C97E;
     }
     .cite-list li { margin-bottom: 2px; }
@@ -280,12 +286,12 @@
       gap: 6px;
       flex-wrap: wrap;
       background: rgba(4, 10, 18, 0.9);
-      padding: 0.8% 1.4%;
+      padding: 0.75% 1.35%;
       border-radius: 6px;
       border: 1px solid rgba(0, 180, 216, 0.35);
     }
     .code-hook-label {
-      font-size: clamp(8.5px, 0.66vw, 12px);
+      font-size: clamp(7px, 0.69cqw, 12px);
       font-weight: 700;
       color: #00B4D8;
     }
@@ -293,14 +299,15 @@
       background: #102A42;
       color: #E0FBFC;
       font-family: "SFMono-Regular", Consolas, Menlo, monospace;
-      font-size: clamp(8px, 0.64vw, 11.5px);
+      font-size: clamp(6.5px, 0.67cqw, 11.5px);
       padding: 1px 6px;
       border-radius: 4px;
     }
 
-    /* FULL-WIDTH BOTTOM EQUATION STAGE (22.5% height) */
+    /* FULL-WIDTH BOTTOM EQUATION STAGE (21.8% height) */
     .equation-stage {
-      height: 22.5%;
+      height: 21.8%;
+      flex-shrink: 0;
       width: 100%;
       background: linear-gradient(90deg, #040D1A 0%, #091E32 50%, #040D1A 100%);
       border: 2.5px solid var(--gold);
@@ -310,8 +317,7 @@
       flex-direction: column;
       justify-content: center;
       position: relative;
-      overflow-x: auto;
-      overflow-y: hidden;
+      overflow: hidden;
     }
     .eq-header {
       display: flex;
@@ -323,13 +329,13 @@
       right: 16px;
     }
     .eq-tag {
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       font-weight: 800;
       letter-spacing: 1.1px;
       color: var(--gold);
     }
     .slide-num-badge {
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       color: var(--text-muted);
       font-weight: 700;
     }
@@ -337,14 +343,33 @@
       width: 100%;
       text-align: center;
       color: #FFFFFF;
-      margin-top: 14px;
+      margin-top: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .eq-size-lg { font-size: clamp(14px, 1.48vw, 27px); }
-    .eq-size-md { font-size: clamp(12px, 1.26vw, 23px); }
-    .eq-size-sm { font-size: clamp(10.5px, 1.08vw, 19.5px); }
+    .eq-size-lg { font-size: clamp(11px, 1.7cqw, 27px); }
+    .eq-size-md { font-size: clamp(9.5px, 1.5cqw, 23px); }
+    .eq-size-sm { font-size: clamp(8.5px, 1.3cqw, 19.5px); }
+    
+    .eq-display {
+      overflow: hidden !important;
+    }
+    .eq-display mjx-container {
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+    .eq-display mjx-container > svg {
+      max-width: 100% !important;
+      max-height: 13.5cqh !important;
+      height: auto !important;
+    }
+    @media print {
+      .eq-display mjx-container > svg {
+        max-height: 1.15in !important;
+      }
+    }
+    
 
     /* BOTTOM NAVIGATION TOOLBAR */
     #nav-bar {
@@ -404,6 +429,7 @@
         display: flex !important;
         width: 16in !important;
         height: 9in !important;
+        container-type: size !important;
         page-break-after: always !important;
         break-after: page !important;
         border-radius: 0 !important;
@@ -460,7 +486,7 @@
           <div class="study-block">
             <div class="box-label">CORE EMPIRICAL ANCHORS ACROSS ALL 80 CARDS</div>
             <ul class="cite-list">
-              <li><strong>Dunedin Multidisciplinary Study (Poulton et al. 2015) &amp; GUiNZ (Morton et al. 2023):</strong> 22% ($d20: 1\text{--}4$) to 30% ($d20: 1\text{--}6$) early subsistence corner ($\Pr(i_{c}=0)$) &amp; 80/20 concentration of $50.5B/yr fiscal drag.</li>
+              <li><strong>Dunedin Multidisciplinary Study (Poulton et al. 2015) &amp; GUiNZ (Morton et al. 2023):</strong> 22% ($d20: 1\text{--}4$) to 30% ($d20: 1\text{--}6$) early subsistence corner ($\Pr(i_c=0)$) &amp; 80/20 concentration of $50.5B/yr fiscal drag.</li>
               <li><strong>Cunha, Heckman, &amp; Schennach (2010) &amp; Lee &amp; Seshadri (2019):</strong> Multi-stage CES dynamic complementarity ($\phi_1 = -0.50$) proving 6.8:1 ROI on Gate 1–2 vs. late remediation collapse.</li>
               <li><strong>Guvenen et al. (2023) &amp; Murphy, Shleifer, &amp; Vishny (1991):</strong> Use-It-Or-Lose-It wealth/estate tax shift rotating capital from passive land ($z_\ell$) to high-return builders ($z_h$, <code>20:01</code>–<code>20:19</code>).</li>
               <li><strong>Williamson (2009), Ostrom (2010), &amp; Romer (1990):</strong> Polycentric governance, ACC Year-5 actuarial breakeven ($3.84\times$), and non-rival knowledge spillovers.</li>
@@ -479,7 +505,7 @@
           <span class="slide-num-badge">Slide 1 of 81</span>
         </div>
         <div class="eq-display">
-          $$\mathcal{W}(\mu^\star) = \int_{\mathcal{S}} V_{1}(s) \, d\mu^\star(s) \xrightarrow{\text{SS0} \to \text{SS2}} +20.49\% \text{ CE Welfare}, \qquad \Sigma_{\text{Aotearoa}} = \left( \sum_{i=1}^{P} \mathcal{M}_{i} + \sum_{i=1}^{P} \mathcal{W}_{i} \right) \times \Gamma_{\text{Regime}} \;\; \Big(\bar{\Sigma}_{\text{Target}} \ge 135\text{ pts/player}\Big)$$
+          $$\mathcal{W}(\mu^\star) = \int_{\mathcal{S}} V_1(s) \, d\mu^\star(s) \xrightarrow{\text{SS0} \to \text{SS2}} +20.49\% \text{ CE Welfare}, \qquad \Sigma_{\text{Aotearoa}} = \left( \sum_{i=1}^{P} \mathcal{M}_i + \sum_{i=1}^{P} \mathcal{W}_i \right) \times \Gamma_{\text{Regime}} \;\; \Big(\bar{\Sigma}_{\text{Target}} \ge 135\text{ pts/player}\Big)$$
         </div>
       </footer>
     </section>
@@ -552,8 +578,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:00)</span>
           <span class="slide-num-badge">Slide 2 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$CE_{k}(\Phi) = ( \int V_{k}(a_{1}, h_{1}, z_{1}, j=1; \Phi) d \mu_{1,k}(\Phi) / \int V_{k}(\Phi_{0}) d \mu_{1,k}(\Phi_{0}) )^(1 / (\phi_{nd} \cdot (1 - \sigma_{c}))) - 1$$
+        <div class="eq-display eq-size-md">
+          $$\mathrm{CE}_k(\Phi) = \left(\frac{\int V_k(a_1, h_1, z_1, j=1;\,\Phi)\,d\mu_{1,k}(\Phi)}{\int V_k(\Phi_0)\,d\mu_{1,k}(\Phi_0)}\right)^{\frac{1}{\phi_{\mathrm{nd}}(1 - \sigma_c)}} - 1$$
         </div>
       </footer>
     </section>
@@ -626,8 +652,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:01)</span>
           <span class="slide-num-badge">Slide 3 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$\Theta_{1}(\theta_{c}) = [ \gamma_{1,self} \cdot \theta_{c}^{\phi_{1}} + \gamma_{1,inv} \cdot (i_{c} + G_{ECE,1}^{eff} + \bar{g}_{ECE})^{\phi_{1}} + \gamma_{1,par} \cdot \bar{h}_{p}^{\phi_{1}} ]^{1/\phi_{1}},  \phi_{1} = +0.35$$
+        <div class="eq-display eq-size-sm">
+          $$\Theta_1(\theta_c) = \left[\gamma_{1,\mathrm{self}}\,\theta_c^{\phi_1} + \gamma_{1,\mathrm{inv}}\,(i_c + G_{\mathrm{ECE},1}^{\mathrm{eff}} + \bar{g}_{\mathrm{ECE}})^{\phi_1} + \gamma_{1,\mathrm{par}}\,\bar{h}_p^{\phi_1}\right]^{1/\phi_1}, \quad \phi_1 = +0.35$$
         </div>
       </footer>
     </section>
@@ -701,7 +727,7 @@
           <span class="slide-num-badge">Slide 4 of 81</span>
         </div>
         <div class="eq-display eq-size-lg">
-          $$e_{tot} = ( y_{disp} - \bar{e}_{k} - I_{j in J_{c}} \cdot (1 - s_{sub}) \cdot i_{c} - a' ) / (1 + \tau_{c})$$
+          $$e_{\mathrm{tot}} = \frac{y_{\mathrm{disp}} - \bar{e}_k - \mathbb{I}_{j \in J_c}(1 - s_{\mathrm{sub}})\,i_c - a'}{1 + \tau_c}$$
         </div>
       </footer>
     </section>
@@ -775,7 +801,7 @@
           <span class="slide-num-badge">Slide 5 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$\theta_{c,ret} = \theta_{c} - \delta_{\theta,fade} \cdot (1 - M_{mentor}) \cdot \max(0, \theta_{c} - \theta_{base});  G_{ECE,1}^{eff} = G_{ECE,1} \cdot (1 + \kappa_{down} \cdot M_{mentor} \cdot \bar{\theta}_{J=5})$$
+          $$\begin{aligned}\theta_{c,\mathrm{ret}} &= \theta_c - \delta_{\theta,\mathrm{fade}}(1 - M_{\mathrm{mentor}})\max(0,\,\theta_c - \theta_{\mathrm{base}}) \\G_{\mathrm{ECE},1}^{\mathrm{eff}} &= G_{\mathrm{ECE},1}\left(1 + \kappa_{\mathrm{down}}\,M_{\mathrm{mentor}}\,\bar{\theta}_{J=5}\right)\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -848,8 +874,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:04)</span>
           <span class="slide-num-badge">Slide 6 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$P_{G4  \to  G5} = [ (1 - emig_{t})  \odot  P_{Ret, 3x4},  emig_{t} ]  mapping Launch Tiers (h)  \to  [Adversity, Core Trades, z_{l}, z_{h}, Abroad]$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}P_{G4 \to G5} = \left[(1 - \mathrm{emig}_t) \odot P_{\mathrm{Ret},3\times 4},\;\mathrm{emig}_t\right] \quad \text{mapping Launch Tiers } (h) \\\longrightarrow \left[\text{Adversity},\;\text{Core Trades},\;z_\ell,\;z_h,\;\text{Abroad}\right]\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -922,8 +948,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:05)</span>
           <span class="slide-num-badge">Slide 7 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$E_{t}(h_{1}, M_{mentor}) = E_{grant} \cdot I_{M_{mentor} = 1}  for t in Waves 1..6,  transitioning to universal E_{grant} across Waves 7..13$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}E_t(h_1, M_{\mathrm{mentor}}) &= E_{\mathrm{grant}} \cdot \mathbb{I}_{M_{\mathrm{mentor}} = 1} \quad \text{for } t \in \text{Waves } 1\text{--}6, \\&\text{transitioning to universal } E_{\mathrm{grant}} \text{ across Waves } 7\text{--}13\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -996,8 +1022,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:06)</span>
           <span class="slide-num-badge">Slide 8 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$a_{1} + E  \geq  \xi_{k} \cdot Q_{k}(\tau_{a}, \tau_{b})  (\xi_{k} = 0.20);  P_{emig}(k  \to  Abroad) = 1 - sum_{m=1}^4 P_{t}(k  \to  m | a_{1} + E, h_{1}, z_{1})$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}a_1 + E &\geq \xi_k \cdot Q_k(\tau_a, \tau_b) \quad (\xi_k = 0.20) \\P_{\mathrm{emig}}(k \to \text{Abroad}) &= 1 - \sum_{m=1}^{4} P_t(k \to m \,|\, a_1 + E,\, h_1,\, z_1)\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -1070,8 +1096,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:07)</span>
           <span class="slide-num-badge">Slide 9 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$u_{beq}(a'; \tau_{b}) = b_{1} \cdot ( (1 + (1 - \tau_{b}) \cdot a' / b_{2})^{1 - \eta_{c}} - 1 ) / (1 - \eta_{c});  Estates_{net} = (1 - \tau_{b}) \cdot a'^*$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}u_{\mathrm{beq}}(a';\,\tau_b) &= b_1 \cdot \frac{\left(1 + (1 - \tau_b)\,a' / b_2\right)^{1 - \eta_c} - 1}{1 - \eta_c} \\\mathrm{Estates}_{\mathrm{net}} &= (1 - \tau_b)\,a^{\prime *}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -1144,8 +1170,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:08)</span>
           <span class="slide-num-badge">Slide 10 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$R_{k}(z_{f}; dt) = (1 - \tau_{a})^dt + (1 - \tau_{k}) \cdot [ r(dt) + \max{0, \pi_{k}^*(z_{f}, w_{k}) - (r(dt) + \delta_{k}(dt))} \cdot \lambda_{col} ]$$
+        <div class="eq-display eq-size-sm">
+          $$R_k(z_f;\,\Delta t) = (1 - \tau_a)^{\Delta t} + (1 - \tau_k)\left[r(\Delta t) + \max\left\{0,\;\pi_k^*(z_f, w_k) - \left(r(\Delta t) + \delta_k(\Delta t)\right)\right\}\cdot \lambda_{\mathrm{col}}\right]$$
         </div>
       </footer>
     </section>
@@ -1218,8 +1244,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:09)</span>
           <span class="slide-num-badge">Slide 11 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$V_{k,t0}^{(L)}(H=25; r_{disc}) = C_{k,realized}^{(L)}(t0) + (1 - \alpha_{attr}) \cdot \Phi_{pipe}(t0) \cdot sum_{s=1}^{25} ((1 + g_{cost})/(1 + r_{disc}))^s \cdot (\psi_{k,0})^s \cdot f_{k,t0+s}^{(L)}$$
+        <div class="eq-display eq-size-sm">
+          $$V_{k,t_0}^{(L)}(H=25;\,r_{\mathrm{disc}}) = C_{k,\mathrm{realized}}^{(L)}(t_0) + (1 - \alpha_{\mathrm{attr}})\,\Phi_{\mathrm{pipe}}(t_0)\sum_{s=1}^{25}\left(\frac{1 + g_{\mathrm{cost}}}{1 + r_{\mathrm{disc}}}\right)^{s} (\psi_{k,0})^s\,f_{k,t_0+s}^{(L)}$$
         </div>
       </footer>
     </section>
@@ -1293,7 +1319,7 @@
           <span class="slide-num-badge">Slide 12 of 81</span>
         </div>
         <div class="eq-display eq-size-lg">
-          $$L_{SMM}(\theta) = sum_{m=1}^{15} W_{m} \cdot ( (\hat{M}_{m}(\theta) - M_{m}^{data}) / \max(0.02, |M_{m}^{data}|) )^2$$
+          $$\mathcal{L}_{\mathrm{SMM}}(\theta) = \sum_{m=1}^{15} W_m \left(\frac{\hat{M}_m(\theta) - M_m^{\mathrm{data}}}{\max(0.02,\,|M_m^{\mathrm{data}}|)}\right)^{2}$$
         </div>
       </footer>
     </section>
@@ -1366,8 +1392,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:11)</span>
           <span class="slide-num-badge">Slide 13 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Omega_{fiscal} = (Tax_{GST+Cap+Beq,27} + Tax_{PAYE,28}) - (Burden_{Exits 1,2,4 (Nodes 22,23,25)} + Outlay_{Infra+Health+Super,26})$$
+        <div class="eq-display eq-size-sm">
+          $$\Omega_{\mathrm{fiscal}} = \left(\mathrm{Tax}_{\mathrm{GST+Cap+Beq},27} + \mathrm{Tax}_{\mathrm{PAYE},28}\right) - \left(\mathrm{Burden}_{\mathrm{Exits\,1,2,4}} + \mathrm{Outlay}_{\mathrm{Infra+Health+Super},26}\right)$$
         </div>
       </footer>
     </section>
@@ -1440,8 +1466,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:12)</span>
           <span class="slide-num-badge">Slide 14 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Delta_{syn,w} = CE_{k}(A_{w} U B_{w}) - CE_{k}(A_{w}) - CE_{k}(B_{w}) > 0;  CE^{SS2} = 11.23 pp (Isolated) + 13.47 pp (Wedges 1..4) = +24.70 pp$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}\Delta_{\mathrm{syn},w} &= \mathrm{CE}_k(A_w \cup B_w) - \mathrm{CE}_k(A_w) - \mathrm{CE}_k(B_w) > 0 \\\mathrm{CE}^{\mathrm{SS2}} &= 11.23\text{ pp (Isolated)} + 13.47\text{ pp (Wedges 1--4)} = +24.70\text{ pp}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -1515,7 +1541,7 @@
           <span class="slide-num-badge">Slide 15 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$\Phi(t) = \Phi_{1} + (\Phi_{2} - \Phi_{1}) / (1 + \exp(-\xi_{ramp} \cdot (t - T_{1})));  \tilde{V}_{t+1} = (1 - \lambda_{cred}) \cdot V^{SS1} + \lambda_{cred} \cdot V^{SS2}$$
+          $$\begin{aligned}\Phi(t) &= \Phi_1 + \frac{\Phi_2 - \Phi_1}{1 + \exp\left(-\xi_{\mathrm{ramp}}(t - T_1)\right)} \\\tilde{V}_{t+1} &= (1 - \lambda_{\mathrm{cred}})\,V^{\mathrm{SS1}} + \lambda_{\mathrm{cred}}\,V^{\mathrm{SS2}}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -1589,7 +1615,7 @@
           <span class="slide-num-badge">Slide 16 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$\Delta D_{2050}(reg) = (\omega_{reg} \cdot N_{births}) \cdot (0.50 \cdot \Omega_{reform}) \cdot sum_{\tau=1}^{25} (1 + r_{bond})^{\tau - 1};  \Delta r = -0.006 (-60 bps)$$
+          $$\begin{aligned}\Delta D_{2050}(\mathrm{reg}) &= (\omega_{\mathrm{reg}}\cdot N_{\mathrm{births}})\cdot (0.50\,\Omega_{\mathrm{reform}})\sum_{\tau=1}^{25}(1 + r_{\mathrm{bond}})^{\tau - 1} \\\Delta r &= -0.006 \quad (-60\text{ bps})\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -1662,8 +1688,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:15)</span>
           <span class="slide-num-badge">Slide 17 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$S_{reinv} = 1.65 \cdot (0.50 \cdot \Omega_{reform});  \tau_{l,t}^{req}(A_{super}) = \tau_{l,non-super} - 0.0064 + Ret_{Outlays}(A_{super}) / \bar{H}_{t}$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}S_{\mathrm{reinv}} &= 1.65 \cdot (0.50\,\Omega_{\mathrm{reform}}) \\\tau_{\ell,t}^{\mathrm{req}}(A_{\mathrm{super}}) &= \tau_{\ell,\mathrm{non\text{-}super}} - 0.0064 + \frac{\mathrm{Ret\_Outlays}(A_{\mathrm{super}})}{\bar{H}_t}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -1736,8 +1762,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (B:16)</span>
           <span class="slide-num-badge">Slide 18 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$u_{rel}(Frac_{struggling}, S_{t}) = \chi_{rel} \cdot [ (0.285 - Frac_{struggling}) + 0.015 \cdot (S_{t} - 100) ];  S_{t}: 100.0  \to  118.4  \to  126.0$$
+        <div class="eq-display eq-size-sm">
+          $$\begin{aligned}u_{\mathrm{rel}}(\mathrm{Frac}_{\mathrm{struggling}}, S_t) &= \chi_{\mathrm{rel}}\left[(0.285 - \mathrm{Frac}_{\mathrm{struggling}}) + 0.015\,(S_t - 100)\right] \\S_t &: 100.0 \longrightarrow 118.4 \longrightarrow 126.0\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -1811,7 +1837,7 @@
           <span class="slide-num-badge">Slide 19 of 81</span>
         </div>
         <div class="eq-display eq-size-lg">
-          $$E_{\mu_{k}}[ f(a, h, \theta_{c}, z) ]  \ll  f( E[a], E[h], E[\theta_{c}], E[z] )  (Jensen's Inequality Under Concave Kinks)$$
+          $$\mathbb{E}_{\mu_k}\left[f(a, h, \theta_c, z)\right] \ll f\left(\mathbb{E}[a],\,\mathbb{E}[h],\,\mathbb{E}[\theta_c],\,\mathbb{E}[z]\right)$$
         </div>
       </footer>
     </section>
@@ -1884,8 +1910,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:01)</span>
           <span class="slide-num-badge">Slide 20 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$S_{t} = 100.0 + \zeta_{hardship} \cdot (0.220 - Frac_{struggling},t) + \zeta_{ret} \cdot (0.1093 - Emig_{Nat},t) - \zeta_{churn} \cdot \max(0, Churn_{t} - \overline{\mathrm{Churn}})$$
+        <div class="eq-display eq-size-sm">
+          $$S_t = 100.0 + \zeta_{\mathrm{hardship}}(0.220 - \mathrm{Frac}_{\mathrm{struggling},t}) + \zeta_{\mathrm{ret}}(0.1093 - \mathrm{Emig}_{\mathrm{Nat},t}) - \zeta_{\mathrm{churn}}\max(0,\,\mathrm{Churn}_t - \overline{\mathrm{Churn}})$$
         </div>
       </footer>
     </section>
@@ -1958,8 +1984,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:02)</span>
           <span class="slide-num-badge">Slide 21 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$W_{f} = u_{f}(d_{t}) + \beta_{hyp} \cdot \delta \cdot V'_{f}(a', h', \theta'_{c});  e_{total} = e_{real} + e_{avoidance} + \bar{e}_{gaining}  \ll  e_{Laffer}$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}W_f &= u_f(d_t) + \beta_{\mathrm{hyp}}\,\delta\,V^{\prime}_f(a', h', \theta'_c) \\e_{\mathrm{total}} &= e_{\mathrm{real}} + e_{\mathrm{avoidance}} + \bar{e}_{\mathrm{bargaining}} \ll e_{\mathrm{Laffer}}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -2032,8 +2058,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:03)</span>
           <span class="slide-num-badge">Slide 22 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$K_{whanau}^{net}(i_{c}, z, a, J_{r}, k) = K_{whanau},k(J_{r}, Q_{k}) - \psi_{sandwich} \cdot I_{Super > 65} \cdot I_{distress}(i_{c}, z, a) < 0$$
+        <div class="eq-display eq-size-sm">
+          $$K_{\mathrm{whanau}}^{\mathrm{net}}(i_c, z, a, J_r, k) = K_{\mathrm{whanau},k}(J_r, Q_k) - \psi_{\mathrm{sandwich}}\cdot \mathbb{I}_{\mathrm{Super} > 65}\cdot \mathbb{I}_{\mathrm{distress}}(i_c, z, a) < 0$$
         </div>
       </footer>
     </section>
@@ -2106,8 +2132,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:04)</span>
           <span class="slide-num-badge">Slide 23 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$1 - \phi_{adj} \cdot (\Delta s)^2:  1 - 0.180*(1)^2 = 0.820 (SingleShot)  vs.  1 - 0.180*(1/3)^2 = 0.980 (-88.9\% surge loss)$$
+        <div class="eq-display eq-size-md">
+          $$1 - \phi_{\mathrm{adj}}(\Delta s)^2:\quad 1 - 0.180(1)^2 = 0.820\;\text{(Single-Shot)} \quad\text{vs.}\quad 1 - 0.180\left(\frac{1}{3}\right)^2 = 0.980$$
         </div>
       </footer>
     </section>
@@ -2180,8 +2206,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:05)</span>
           <span class="slide-num-badge">Slide 24 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$P_{G4  \to  G5}: Retained Top-Tier Talent  \to  61\% Node 19 (z_{l} Speculation) vs. 29\% Node 20 (z_{h} Builders) in SS0$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}P_{G4 \to G5}:\quad &\text{Retained Top-Tier Talent in SS0} \\&\longrightarrow 61\%\text{ Node 19 } (z_\ell\text{ Speculation}) \;\text{ vs. }\; 29\%\text{ Node 20 } (z_h\text{ Builders})\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -2254,8 +2280,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:06)</span>
           <span class="slide-num-badge">Slide 25 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$P_{t}(k  \to  m | a_{1}, h_{1}, z_{1}) prop \exp( V_{m,t}(\max(a_{min}, a_{1} - \kappa_{k \to m}), h_{1}, z_{1}, 1) / \varrho_{mig} )$$
+        <div class="eq-display eq-size-md">
+          $$P_t(k \to m \,|\, a_1, h_1, z_1) \propto \exp\left(\frac{V_{m,t}\left(\max(a_{\min},\,a_1 - \kappa_{k \to m}),\,h_1,\,z_1,\,1\right)}{\varrho_{\mathrm{mig}}}\right)$$
         </div>
       </footer>
     </section>
@@ -2328,8 +2354,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:07)</span>
           <span class="slide-num-badge">Slide 26 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$Retained_{Gain}(2 terms off) = (1 - \delta_{\theta,fade})^2 = (1 - 0.22)^2 = 0.6084   \Rightarrow   39.16\% (~39.2\%) compound fade-out!$$
+        <div class="eq-display eq-size-sm">
+          $$\mathrm{Retained\_Gain}(2\text{ terms off}) = (1 - \delta_{\theta,\mathrm{fade}})^2 = (1 - 0.22)^2 = 0.6084 \implies 39.2\%\text{ compound fade-out}$$
         </div>
       </footer>
     </section>
@@ -2402,8 +2428,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:08)</span>
           <span class="slide-num-badge">Slide 27 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Delta G_{ECE} + \Delta T_{k} > 0  with  \Delta \tau_{a} = \Delta \tau_{b} = 0   \Longrightarrow   \tau_{l}  \to  42\%..48\%  &  r_{h,k}^{rent}(Q_{k}) unchanged$$
+        <div class="eq-display eq-size-sm">
+          $$\Delta G_{\mathrm{ECE}} + \Delta T_k > 0 \;\text{ with }\; \Delta\tau_a = \Delta\tau_b = 0 \implies \tau_\ell \to 42\%\text{--}48\% \;\land\; r_{h,k}^{\mathrm{rent}}(Q_k)\text{ unchanged}$$
         </div>
       </footer>
     </section>
@@ -2476,8 +2502,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:09)</span>
           <span class="slide-num-badge">Slide 28 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$S_{f}(n_{f}) = u_{f}(c_{f}(n_{f})) + \beta_{hyp} \cdot \delta \cdot V'_{f}(n_{f}) - \theta_{\tau} \cdot \psi_{time} \cdot n_{f} + \omega_{ECE} \cdot G_{ECE} \cdot n_{f} - \psi_{Q} \cdot Q_{k} \cdot n_{f} < \underline{U}_{f}$$
+        <div class="eq-display eq-size-sm">
+          $$S_f(n_f) = u_f\left(c_f(n_f)\right) + \beta_{\mathrm{hyp}}\,\delta\,V^{\prime}_f(n_f) - \theta_\tau\,\psi_{\mathrm{time}}\,n_f + \omega_{\mathrm{ECE}}\,G_{\mathrm{ECE}}\,n_f - \psi_Q\,Q_k\,n_f < \underline{U}_f$$
         </div>
       </footer>
     </section>
@@ -2550,8 +2576,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (T:10)</span>
           <span class="slide-num-badge">Slide 29 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$Q_{k,t} = sum_{s=1}^{\infty} ( G_{k} / R(\tau_{a}) )^s \cdot d_{land,k,t} + B_{land,k,t}   \Longrightarrow   B_{land,k,t} > 0  whenever  G_{k}  \geq  R(\tau_{a} = 0)$$
+        <div class="eq-display eq-size-sm">
+          $$Q_{k,t} = \sum_{s=1}^{\infty}\left(\frac{G_k}{R(\tau_a)}\right)^{s} d_{\mathrm{land},k,t} + B_{\mathrm{land},k,t} \implies B_{\mathrm{land},k,t} > 0 \;\text{ whenever }\; G_k \geq R(\tau_a = 0)$$
         </div>
       </footer>
     </section>
@@ -2624,8 +2650,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:01)</span>
           <span class="slide-num-badge">Slide 30 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$R_{k}(z_{f}; dt) = (1 - \tau_{a})^dt + (1 - \tau_{k}) \cdot [ r(dt) + \max{0, \pi_{k}^* - (r(dt) + \delta_{k}^{shock}(dt))} \cdot \lambda_{col} ]$$
+        <div class="eq-display eq-size-sm">
+          $$R_k(z_f;\,\Delta t) = (1 - \tau_a)^{\Delta t} + (1 - \tau_k)\left[r(\Delta t) + \max\left\{0,\;\pi_k^* - \left(r(\Delta t) + \delta_k^{\mathrm{shock}}(\Delta t)\right)\right\}\cdot \lambda_{\mathrm{col}}\right]$$
         </div>
       </footer>
     </section>
@@ -2698,8 +2724,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:02)</span>
           <span class="slide-num-badge">Slide 31 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$S_{t} = 100.0 + \zeta_{hardship} \cdot (0.220 - Frac_{struggling},t) + \zeta_{ret} \cdot (0.1093 - Emig_{Nat},t) - \zeta_{churn} \cdot \max(0, Churn_{t} - \overline{\mathrm{Churn}})$$
+        <div class="eq-display eq-size-sm">
+          $$S_t = 100.0 + \zeta_{\mathrm{hardship}}(0.220 - \mathrm{Frac}_{\mathrm{struggling},t}) + \zeta_{\mathrm{ret}}(0.1093 - \mathrm{Emig}_{\mathrm{Nat},t}) - \zeta_{\mathrm{churn}}\max(0,\,\mathrm{Churn}_t - \overline{\mathrm{Churn}})$$
         </div>
       </footer>
     </section>
@@ -2772,8 +2798,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:03)</span>
           <span class="slide-num-badge">Slide 32 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Omega_{reinv} = 0.50 \cdot \max(0, \Omega_{fiscal});  S_{reinv} = \mu_{infra} \cdot \Omega_{reinv}  (\mu_{infra} = 1.65)$$
+        <div class="eq-display eq-size-md">
+          $$\Omega_{\mathrm{reinv}} = 0.50\cdot\max(0,\,\Omega_{\mathrm{fiscal}}), \qquad S_{\mathrm{reinv}} = \mu_{\mathrm{infra}}\cdot \Omega_{\mathrm{reinv}} \quad (\mu_{\mathrm{infra}} = 1.65)$$
         </div>
       </footer>
     </section>
@@ -2846,8 +2872,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:04)</span>
           <span class="slide-num-badge">Slide 33 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$\Psi_{J=5} = -\psi_{unemp} \cdot [ I(z_{p} in Z_{distress}) + \lambda_{psy}(M_{mentor}) ] \cdot (1 - \zeta_{buf} \cdot M_{mentor}) \cdot (1 - 0.55 \cdot K_{whanau}^{eff}) + \kappa_{up} \cdot M_{mentor}$$
+        <div class="eq-display eq-size-sm">
+          $$\Psi_{J=5} = -\psi_{\mathrm{unemp}}\left[\mathbb{I}(z_p \in Z_{\mathrm{distress}}) + \lambda_{\mathrm{psy}}(M_{\mathrm{mentor}})\right](1 - \zeta_{\mathrm{buf}} M_{\mathrm{mentor}})(1 - 0.55\,K_{\mathrm{whanau}}^{\mathrm{eff}}) + \kappa_{\mathrm{up}} M_{\mathrm{mentor}}$$
         </div>
       </footer>
     </section>
@@ -2920,8 +2946,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:05)</span>
           <span class="slide-num-badge">Slide 34 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$ell_{eff} = \max(0, \ell - I_{h}),  I_{h} in linspace(0, 0.30, 3)';  \lambda_{cred}^{actuarial}(t)  \to  1.0 under Monilukutaito epistemic framing$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}\ell_{\mathrm{eff}} &= \max(0,\,\ell - I_h), \quad I_h \in \{0,\,0.15,\,0.30\} \\\lambda_{\mathrm{cred}}^{\mathrm{actuarial}}(t) &\longrightarrow 1.0 \quad \text{under Monilukutaito epistemic framing}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -2994,8 +3020,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:06)</span>
           <span class="slide-num-badge">Slide 35 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$P_{t}(k  \to  m | a_{1}, h_{1}, z_{1}) = \exp(V_{m,t}(\max(a_{min}, a_{1} - \kappa_{k \to m}), h_{1}, z_{1}, 1) / \varrho_{mig}) / [ \exp(V_{Abroad} / \varrho_{mig}) + sum_{r=1}^4 \exp(V_{r,t} / \varrho_{mig}) ]$$
+        <div class="eq-display eq-size-sm">
+          $$P_t(k \to m \,|\, a_1, h_1, z_1) = \frac{\exp\left(V_{m,t}\left(\max(a_{\min},\,a_1 - \kappa_{k \to m}),\,h_1,\,z_1,\,1\right) / \varrho_{\mathrm{mig}}\right)}{\exp(V_{\mathrm{Abroad}} / \varrho_{\mathrm{mig}}) + \sum_{r=1}^{4}\exp(V_{r,t} / \varrho_{\mathrm{mig}})}$$
         </div>
       </footer>
     </section>
@@ -3068,8 +3094,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:07)</span>
           <span class="slide-num-badge">Slide 36 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$e_{tot} = ( y_{disp} + T_{k}(a, y_{lab}) - \bar{e}_{k} - I_{j in J_{c}} \cdot (1 - s_{sub}) \cdot i_{c} - a' ) / (1 + \tau_{c})$$
+        <div class="eq-display eq-size-md">
+          $$e_{\mathrm{tot}} = \frac{y_{\mathrm{disp}} + T_k(a, y_{\mathrm{lab}}) - \bar{e}_k - \mathbb{I}_{j \in J_c}(1 - s_{\mathrm{sub}})\,i_c - a'}{1 + \tau_c}$$
         </div>
       </footer>
     </section>
@@ -3142,8 +3168,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:08)</span>
           <span class="slide-num-badge">Slide 37 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$z_{k}^{eff}(i_{z}) = z_{k,base}(i_{z}) + \Delta \mu_{z,k},  where competition + procurement lift \Delta \mu_{z,SS1} = [+0.024, +0.018, +0.010, +0.006]$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}z_k^{\mathrm{eff}}(i_z) &= z_{k,\mathrm{base}}(i_z) + \Delta\mu_{z,k}, \quad \text{where} \\&\text{competition + procurement lift } \Delta\mu_{z,\mathrm{SS1}} = [+0.024,\,+0.018,\,+0.010,\,+0.006]\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -3216,8 +3242,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (C:09)</span>
           <span class="slide-num-badge">Slide 38 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$z_{k}^{eff}(i_{z}) = z_{k,base}(i_{z}) + \Delta \mu_{z,SS2},   \Delta \mu_{z,SS2} = [+0.0408, +0.0307, +0.0170, +0.0102]  (zero extra GPU grid axes!)$$
+        <div class="eq-display eq-size-md">
+          $$z_k^{\mathrm{eff}}(i_z) = z_{k,\mathrm{base}}(i_z) + \Delta\mu_{z,\mathrm{SS2}}, \qquad \Delta\mu_{z,\mathrm{SS2}} = [+0.0408,\,+0.0307,\,+0.0170,\,+0.0102]$$
         </div>
       </footer>
     </section>
@@ -3291,7 +3317,7 @@
           <span class="slide-num-badge">Slide 39 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$T_{k}^{SS2} = T_{k}^{SS0} + (1 - \psi_{retire,T}) \cdot (T_{k}^{SS1} - T_{k}^{SS0})  (\psi_{retire,T} = 0.850)   \Longrightarrow   \Delta \tau_{l,retire} = -0.0064 (-0.64 pp)$$
+          $$\begin{aligned}T_k^{\mathrm{SS2}} &= T_k^{\mathrm{SS0}} + (1 - \psi_{\mathrm{retire},T})\left(T_k^{\mathrm{SS1}} - T_k^{\mathrm{SS0}}\right) \quad (\psi_{\mathrm{retire},T} = 0.850) \\&\implies \Delta\tau_{\ell,\mathrm{retire}} = -0.0064 \quad (-0.64\text{ pp})\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -3364,8 +3390,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:01)</span>
           <span class="slide-num-badge">Slide 40 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$d^2 \theta_{c}^{ces,2} / (d \theta_{c}^{ret} d X_{m}) = (1 - \phi_{2}) \cdot \gamma_{2,self} \cdot \gamma_{2,m} \cdot (\theta_{c}^{ces,2})^{1 - 2*\phi_{2}} \cdot (\theta_{c}^{ret} \cdot X_{m})^{\phi_{2} - 1} > 0$$
+        <div class="eq-display eq-size-sm">
+          $$\frac{\partial^2 \theta_c^{\mathrm{ces},2}}{\partial \theta_c^{\mathrm{ret}}\,\partial X_m} = (1 - \phi_2)\,\gamma_{2,\mathrm{self}}\,\gamma_{2,m}\,(\theta_c^{\mathrm{ces},2})^{1 - 2\phi_2}(\theta_c^{\mathrm{ret}}\cdot X_m)^{\phi_2 - 1} > 0$$
         </div>
       </footer>
     </section>
@@ -3438,8 +3464,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:02)</span>
           <span class="slide-num-badge">Slide 41 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$tilde{V}_{k,t+1} = (1 - \lambda_{cred}(t)) \cdot V_{k,t+1}^{perm,SS1} + \lambda_{cred}(t) \cdot V_{k,t+1}^{full,SS2}$$
+        <div class="eq-display eq-size-md">
+          $$\tilde{V}_{k,t+1} = \left(1 - \lambda_{\mathrm{cred}}(t)\right)V_{k,t+1}^{\mathrm{perm,SS1}} + \lambda_{\mathrm{cred}}(t)\,V_{k,t+1}^{\mathrm{full,SS2}}$$
         </div>
       </footer>
     </section>
@@ -3512,8 +3538,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:03)</span>
           <span class="slide-num-badge">Slide 42 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$G_{ECE,1}^{eff}  \to  \Theta_{1}  +  GrowingChange  \to  M_{mentor}  +  LFPI (1.60x..2.16x)  \to  \Delta \mu_{z,k}   \Longrightarrow   \psi_{retire,T} = 0.85$$
+        <div class="eq-display eq-size-sm">
+          $$G_{\mathrm{ECE},1}^{\mathrm{eff}} \to \Theta_1 \;+\; \mathrm{GrowingChange} \to M_{\mathrm{mentor}} \;+\; \mathrm{LFPI}\,(1.60\times\text{--}2.16\times) \to \Delta\mu_{z,k} \implies \psi_{\mathrm{retire},T} = 0.85$$
         </div>
       </footer>
     </section>
@@ -3586,8 +3612,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:04)</span>
           <span class="slide-num-badge">Slide 43 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$p_{H}(a, z, Q_{k}) = ( \xi_{hh}(a, Q_{k}) \cdot rh_{k} + (1 - \xi_{hh}) \cdot rr_{k} / (0.5 \cdot \bar{\chi}) ) \cdot (1 + 0.12 \cdot I(a < 0.08 \cdot Q_{k} & z < 0.85))$$
+        <div class="eq-display eq-size-sm">
+          $$p_H(a, z, Q_k) = \left(\xi_{\mathrm{hh}}(a, Q_k)\,\mathrm{rh}_k + (1 - \xi_{\mathrm{hh}})\frac{\mathrm{rr}_k}{0.5\,\bar{\chi}}\right)\left(1 + 0.12\cdot\mathbb{I}(a < 0.08\,Q_k \;\land\; z < 0.85)\right)$$
         </div>
       </footer>
     </section>
@@ -3660,8 +3686,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:05)</span>
           <span class="slide-num-badge">Slide 44 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$d^2 Y_{k} / (d Z_{k} d H_{k}) = (1 - \alpha_{k}) \cdot K_{k}^{\alpha_{k}} \cdot H_{k}^{-\alpha_{k}} > 0;  \Delta CE_{m}(\omega_{ent} = 0.80) > 0 up to NZD 50M$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}\frac{\partial^2 Y_k}{\partial Z_k\,\partial H_k} &= (1 - \alpha_k)\,K_k^{\alpha_k}\,H_k^{-\alpha_k} > 0 \\\Delta\mathrm{CE}_m(\omega_{\mathrm{ent}} = 0.80) &> 0 \quad \text{up to NZD } 50\text{M}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -3734,8 +3760,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:06)</span>
           <span class="slide-num-badge">Slide 45 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$PassThrough(\Delta \tau_{k}, T_{k})  \to  1.0  iff  M_{olig}  \to  1.00  &  \tau_{a,k} synchronized across k in {1..4}$$
+        <div class="eq-display eq-size-md">
+          $$\mathrm{PassThrough}(\Delta\tau_k, T_k) \to 1.0 \iff M_{\mathrm{olig}} \to 1.00 \;\land\; \tau_{a,k}\text{ synchronized across } k \in \{1,\dots,4\}$$
         </div>
       </footer>
     </section>
@@ -3808,8 +3834,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:07)</span>
           <span class="slide-num-badge">Slide 46 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\lambda_{cred}^{actuarial}(t) = \min{ 1, \lambda_{0} + (1 - \lambda_{0}) \cdot \max(0, (V^{(Fiscal)}(H; 0.02) / C^{(Inv)}(t) - 1) / (3.50 - 1)) }$$
+        <div class="eq-display eq-size-sm">
+          $$\lambda_{\mathrm{cred}}^{\mathrm{actuarial}}(t) = \min\left\{1,\; \lambda_0 + (1 - \lambda_0)\cdot\max\left(0,\;\frac{V^{(\mathrm{Fiscal})}(H;\,0.02) / C^{(\mathrm{Inv})}(t) - 1}{3.50 - 1}\right)\right\}$$
         </div>
       </footer>
     </section>
@@ -3883,7 +3909,7 @@
           <span class="slide-num-badge">Slide 47 of 81</span>
         </div>
         <div class="eq-display eq-size-lg">
-          $$Y_{VFI} = sum_{a,h,\theta_{c},z} \mu_{k}(a, h, \theta_{c}, z, j) \cdot f(a, h, \theta_{c}, z)  on 26,901 states/age/region at 0 extra grid axes$$
+          $$Y_{\mathrm{VFI}} = \sum_{a,h,\theta_c,z} \mu_k(a, h, \theta_c, z, j)\cdot f(a, h, \theta_c, z)$$
         </div>
       </footer>
     </section>
@@ -3956,8 +3982,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:09)</span>
           <span class="slide-num-badge">Slide 48 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$K_{whanau}^{eff}(k) = K_{whanau,0}(k) \cdot \Phi_{time}(A_{super}) \cdot \min(1.15, \max(0.50, (p_{super} / 0.18) \cdot (Q_{k,0} / Q_{k})^0.35))$$
+        <div class="eq-display eq-size-sm">
+          $$K_{\mathrm{whanau}}^{\mathrm{eff}}(k) = K_{\mathrm{whanau},0}(k)\cdot \Phi_{\mathrm{time}}(A_{\mathrm{super}})\cdot \min\left(1.15,\;\max\left(0.50,\;\frac{p_{\mathrm{super}}}{0.18}\left(\frac{Q_{k,0}}{Q_k}\right)^{0.35}\right)\right)$$
         </div>
       </footer>
     </section>
@@ -4030,8 +4056,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (K:10)</span>
           <span class="slide-num-badge">Slide 49 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$CE_{Nat}(All 4 Coalitions) = +24.70\% CE   \gg   sum_{c=1}^4 CE_{Nat}(Silo_{c} alone vs. LTFM < 0)  (Strict Core Stability)$$
+        <div class="eq-display eq-size-md">
+          $$\mathrm{CE}_{\mathrm{Nat}}(\text{All 4 Coalitions}) = +24.70\% \;\gg\; \sum_{c=1}^{4} \mathrm{CE}_{\mathrm{Nat}}(\text{Silo}_c\text{ alone vs. LTFM} < 0)$$
         </div>
       </footer>
     </section>
@@ -4104,8 +4130,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:01)</span>
           <span class="slide-num-badge">Slide 50 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$\eta_{k,m}(t) = (1 - \delta_{adopt} \cdot e^(-\lambda_{adopt}*(t - t_{0}))) \cdot [1 - \tau_{fric,\min} - (\tau_{fric,0} - \tau_{fric,\min}) \cdot e^(-\gamma_{learn} \cdot L_{m}(t-1))] \cdot [1 - \phi_{adj} \cdot (\Delta s_{k,m}(t))^2]$$
+        <div class="eq-display eq-size-sm">
+          $$\begin{aligned}\eta_{k,m}(t) &= \left(1 - \delta_{\mathrm{adopt}}\,e^{-\lambda_{\mathrm{adopt}}(t - t_0)}\right)\left[1 - \tau_{\mathrm{fric},\min} - (\tau_{\mathrm{fric},0} - \tau_{\mathrm{fric},\min})\,e^{-\gamma_{\mathrm{learn}} L_m(t-1)}\right] \\&\quad \times \left[1 - \phi_{\mathrm{adj}}\left(\Delta s_{k,m}(t)\right)^2\right]\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -4178,8 +4204,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:02)</span>
           <span class="slide-num-badge">Slide 51 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$G_{ECE,s}^{net} = (1 - \tau_{agency}) \cdot G_{ECE,s}^{gross}:  \tau_{agency} = 0.32 (fragmented silos)  \to   \leq  0.08 (high-trust commissioning)$$
+        <div class="eq-display eq-size-sm">
+          $$G_{\mathrm{ECE},s}^{\mathrm{net}} = (1 - \tau_{\mathrm{agency}})\,G_{\mathrm{ECE},s}^{\mathrm{gross}}:\quad \tau_{\mathrm{agency}} = 0.32\;\text{(fragmented silos)} \longrightarrow \leq 0.08\;\text{(high-trust commissioning)}$$
         </div>
       </footer>
     </section>
@@ -4253,7 +4279,7 @@
           <span class="slide-num-badge">Slide 52 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$\Theta_{s} = [ \gamma_{s,self} \cdot \theta_{c}^{\phi_{s}} + \gamma_{s,inv} \cdot I_{s}^{\phi_{s}} + \gamma_{s,par} \cdot h_{p}^{\phi_{s}} ]^{1/\phi_{s}},  \phi_{1} = +0.35,  \phi_{2} = -0.95$$
+          $$\Theta_s = \left[\gamma_{s,\mathrm{self}}\,\theta_c^{\phi_s} + \gamma_{s,\mathrm{inv}}\,I_s^{\phi_s} + \gamma_{s,\mathrm{par}}\,h_p^{\phi_s}\right]^{1/\phi_s}, \qquad \phi_1 = +0.35,\;\; \phi_2 = -0.95$$
         </div>
       </footer>
     </section>
@@ -4326,8 +4352,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:04)</span>
           <span class="slide-num-badge">Slide 53 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$V_{k,t0}^{(Fiscal)}(H=25; r_{0}.02) / C_{k,realized}^{(Inv)}(t0) = 35.25B / 9.19B = 3.84x > \chi_{target} (3.50) at Year 5$$
+        <div class="eq-display eq-size-sm">
+          $$\frac{V_{k,t_0}^{(\mathrm{Fiscal})}(H=25;\,r = 0.02)}{C_{k,\mathrm{realized}}^{(\mathrm{Inv})}(t_0)} = \frac{35.25\text{B}}{9.19\text{B}} = 3.84\times > \chi_{\mathrm{target}}\;(3.50) \quad \text{at Year 5}$$
         </div>
       </footer>
     </section>
@@ -4400,8 +4426,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:05)</span>
           <span class="slide-num-badge">Slide 54 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$M_{trust}(K_{whanau}^{net}, M_{mentor}) = M_{mentor} \cdot ( 0.45 + 0.55 \cdot \min(1.0, K_{whanau}^+ / 0.35) )$$
+        <div class="eq-display eq-size-md">
+          $$M_{\mathrm{trust}}(K_{\mathrm{whanau}}^{\mathrm{net}}, M_{\mathrm{mentor}}) = M_{\mathrm{mentor}}\cdot\left(0.45 + 0.55\cdot\min\left(1.0,\;\frac{K_{\mathrm{whanau}}^{+}}{0.35}\right)\right)$$
         </div>
       </footer>
     </section>
@@ -4474,8 +4500,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:06)</span>
           <span class="slide-num-badge">Slide 55 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$Y_{k} = Z_{k}(\Gamma_{k}, H_{k}) \cdot K_{k}^{\alpha_{k}} \cdot H_{k}^{1 - \alpha_{k}},  where \Gamma_{k}  \to  z_{h,k} & retained h6–h7 talent compound Z_{k}$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}Y_k &= Z_k(\Gamma_k, H_k)\cdot K_k^{\alpha_k}\,H_k^{1 - \alpha_k}, \\&\text{where } \Gamma_k \to z_{h,k} \;\land\; \text{retained } h_6\text{--}h_7\text{ talent compound } Z_k\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -4548,8 +4574,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:07)</span>
           <span class="slide-num-badge">Slide 56 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$1 - \tau_{fric}(t) = 1 - 0.035 - (0.280 - 0.035) \cdot \exp(-0.450 \cdot L_{m}(t-1));  local adoption: 1 - 0.220 \cdot \exp(-0.350 \cdot (t - t_{k,m}^0))$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}1 - \tau_{\mathrm{fric}}(t) &= 1 - 0.035 - (0.280 - 0.035)\exp\left(-0.450\,L_m(t-1)\right) \\\text{Local adoption} &= 1 - 0.220\exp\left(-0.350\,(t - t_{k,m}^0)\right)\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -4622,8 +4648,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:08)</span>
           <span class="slide-num-badge">Slide 57 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$n^t = n^c \cdot \beta_{hyp}^{1/\epsilon}  (Cao & Li Prop. 5);  S_{f}(n_{f}; Q_{k} down, G_{ECE} up, \Phi_{time}(64) = 1.081)  \geq  \underline{U}_{f}$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}n^t &= n^c \cdot \beta_{\mathrm{hyp}}^{1/\epsilon} \quad \text{(Cao \& Li Prop. 5)} \\S_f\left(n_f;\;Q_k \downarrow,\, G_{\mathrm{ECE}} \uparrow,\, \Phi_{\mathrm{time}}(64) = 1.081\right) &\geq \underline{U}_f\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -4696,8 +4722,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (N:09)</span>
           <span class="slide-num-badge">Slide 58 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$T_{IG} = Q_{h} x Q_{a} x \Pi_{mig}  coupled with  Solve_{Spatial}_{GE}_{Loop}(HH_{1}..4, Firm_{1}..4)   \Longrightarrow   +24.70\% CE (SS2 Pre-NDC)$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}T_{\mathrm{IG}} &= Q_h \times Q_a \times \Pi_{\mathrm{mig}} \quad \text{coupled with } \mathrm{Solve\_Spatial\_GE\_Loop}(\mathrm{HH}_{1..4},\,\mathrm{Firm}_{1..4}) \\&\implies +24.70\%\text{ CE (SS2 Pre-NDC)}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -4770,8 +4796,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:01)</span>
           <span class="slide-num-badge">Slide 59 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$OBEGAL_{cash}(t  \leq  3) < 0  while  V_{Nat, t=5}^{(Fiscal)}(H=25; r_{0}.02) = +NZD 35.25B (3.84x) & Direct Savings = +NZD 10.68B (1.16x)$$
+        <div class="eq-display eq-size-sm">
+          $$\begin{aligned}\mathrm{OBEGAL}_{\mathrm{cash}}(t \leq 3) &< 0, \quad \text{while } V_{\mathrm{Nat},t=5}^{(\mathrm{Fiscal})}(H=25;\,r=0.02) = +\text{NZD } 35.25\text{B}\;(3.84\times) \\&\land\; \text{Direct Savings} = +\text{NZD } 10.68\text{B}\;(1.16\times)\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -4845,7 +4871,7 @@
           <span class="slide-num-badge">Slide 60 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$\Psi_{adolescent} = -\psi_{unemp} \cdot I(i_{c} < 0.01) \cdot (1 - 0.55 \cdot K_{whanau}^{net}) \cdot (1 - 0.80 \cdot M_{trust}),  M_{trust}  \to  0.45 \cdot M_{mentor} without whānau trust$$
+          $$\begin{aligned}\Psi_{\mathrm{adolescent}} &= -\psi_{\mathrm{unemp}}\,\mathbb{I}(i_c < 0.01)(1 - 0.55\,K_{\mathrm{whanau}}^{\mathrm{net}})(1 - 0.80\,M_{\mathrm{trust}}) \\M_{\mathrm{trust}} &\longrightarrow 0.45\,M_{\mathrm{mentor}} \quad \text{without whānau trust}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -4918,8 +4944,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:03)</span>
           <span class="slide-num-badge">Slide 61 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$crowd_{1D}(a_{p}; k) = W_{cell,3} \cdot \psi_{crowd,sev} + (W_{cell,4} - W_{cell,3}) \cdot (0.35 \cdot \psi_{crowd,ahc}),  \psi_{crowd}: 0.14  \to  0.18$$
+        <div class="eq-display eq-size-sm">
+          $$\mathrm{crowd}_{1\mathrm{D}}(a_p;\,k) = W_{\mathrm{cell},3}\,\psi_{\mathrm{crowd,sev}} + (W_{\mathrm{cell},4} - W_{\mathrm{cell},3})(0.35\,\psi_{\mathrm{crowd,ahc}}), \quad \psi_{\mathrm{crowd}}: 0.14 \to 0.18$$
         </div>
       </footer>
     </section>
@@ -4992,8 +5018,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:04)</span>
           <span class="slide-num-badge">Slide 62 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$P_{emig,t}(k  \to  Abroad | a_{1}, h_{1}, z_{1}) = 1 / ( 1 + sum_{r=1}^4 \exp( (V_{r,t}(a_{1} - \kappa_{k \to r}, h_{1}, z_{1}, 1) - V_{Abroad,t}) / 0.180 ) )$$
+        <div class="eq-display eq-size-sm">
+          $$P_{\mathrm{emig},t}(k \to \text{Abroad} \,|\, a_1, h_1, z_1) = \frac{1}{1 + \sum_{r=1}^{4}\exp\left(\left(V_{r,t}(a_1 - \kappa_{k \to r}, h_1, z_1, 1) - V_{\mathrm{Abroad},t}\right) / 0.180\right)}$$
         </div>
       </footer>
     </section>
@@ -5067,7 +5093,7 @@
           <span class="slide-num-badge">Slide 63 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$\psi_{wear}(h, j) = 1.0 + 0.35 \cdot I(age_{j}  \geq  65) \cdot \max(0, (1.00 - h) / 0.55);  1 - s_{j}^{eff}(h, j) = \min(0.99, (1 - s_{j}) \cdot \exp(0.18 \cdot (1 - h)))$$
+          $$\begin{aligned}\psi_{\mathrm{wear}}(h, j) &= 1.0 + 0.35\,\mathbb{I}(\mathrm{age}_j \geq 65)\max\left(0,\;\frac{1.00 - h}{0.55}\right) \\1 - s_j^{\mathrm{eff}}(h, j) &= \min\left(0.99,\;(1 - s_j)\exp\left(0.18(1 - h)\right)\right)\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5140,8 +5166,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:06)</span>
           <span class="slide-num-badge">Slide 64 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$G_{ece,s}^{eff}(Q_{k}) = G_{ece,s} \cdot (Q_{reg,base,k} / Q_{k})^0.35;   \Phi_{home}(p_{super}, Q_{k}) = (p_{super} / 0.18) \cdot (Q_{k,0} / Q_{k})^0.35$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}G_{\mathrm{ece},s}^{\mathrm{eff}}(Q_k) &= G_{\mathrm{ece},s}\cdot \left(\frac{Q_{\mathrm{reg,base},k}}{Q_k}\right)^{0.35} \\\Phi_{\mathrm{home}}(p_{\mathrm{super}}, Q_k) &= \frac{p_{\mathrm{super}}}{0.18}\left(\frac{Q_{k,0}}{Q_k}\right)^{0.35}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5214,8 +5240,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:07)</span>
           <span class="slide-num-badge">Slide 65 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$r_{h,k}^{rent} = (1 + \mu_{maint} - G_{k} / R(\tau_{a})) \cdot Q_{k};  when \tau_{a} = 0 & \delta_{H,Akl} = 0.10, demand subsidies capitalize into Q_{k}$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}r_{h,k}^{\mathrm{rent}} &= \left(1 + \mu_{\mathrm{maint}} - \frac{G_k}{R(\tau_a)}\right)Q_k \\&\text{When } \tau_a = 0 \;\land\; \delta_{H,\mathrm{Akl}} = 0.10,\;\text{demand subsidies capitalize into } Q_k\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5288,8 +5314,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:08)</span>
           <span class="slide-num-badge">Slide 66 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\pi_{k}^*(z_{f}, w_{k}; M_{olig}) depressed in Rural/Small (z_{f}  \to  z_{l}) while consumer price index inflated by M_{olig} = [1.08, 1.07, 1.05, 1.04]$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}\pi_k^*(z_f, w_k;\,M_{\mathrm{olig}}) &\text{ depressed in Rural/Small } (z_f \to z_\ell) \\&\text{while consumer price index inflated by } M_{\mathrm{olig}} = [1.08,\,1.07,\,1.05,\,1.04]\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5362,8 +5388,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:09)</span>
           <span class="slide-num-badge">Slide 67 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Delta G_{def} = +0.018 \cdot Y (+NZD 8.0B/yr, 0x domestic H_{k} return):  CE(SS0 + Def) = -21.69\%  vs.  CE(SS2 + Def) = +21.18\% (Pre-NDC)$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}\Delta G_{\mathrm{def}} &= +0.018\,Y \quad (+\text{NZD } 8.0\text{B/yr}) \\\mathrm{CE}(\mathrm{SS0} + \mathrm{Def}) &= -21.69\% \quad \text{vs.} \quad \mathrm{CE}(\mathrm{SS2} + \mathrm{Def}) = +21.18\%\;\text{(Pre-NDC)}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5436,8 +5462,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (H:10)</span>
           <span class="slide-num-badge">Slide 68 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$When h_{1} in {h_{1}, h_{2}} & Q_{k} = 3.10:  a_{1} + E < 0.20 \cdot Q_{k}  &  R_{k}(z_{l}) dominates   \Longrightarrow   42\% grant dissipation (NZD 3.8B waste)$$
+        <div class="eq-display eq-size-sm">
+          $$\begin{aligned}\text{When } h_1 \in \{h_1, h_2\} \;\land\; Q_k = 3.10:\quad &a_1 + E < 0.20\,Q_k \;\land\; R_k(z_\ell)\text{ dominates} \\&\implies 42\%\text{ grant dissipation (NZD } 3.8\text{B waste)}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5510,8 +5536,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (E:01)</span>
           <span class="slide-num-badge">Slide 69 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$e_{tot} = ( y_{disp} - \bar{e}_{k}(t) - I_{j in J_{c}} \cdot (1 - s_{sub}) \cdot i_{c} - a' ) / (1 + \tau_{c}),  \Delta \bar{e}_{k} < 0 relaxes i_{c}^* = 0$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}e_{\mathrm{tot}} &= \frac{y_{\mathrm{disp}} - \bar{e}_k(t) - \mathbb{I}_{j \in J_c}(1 - s_{\mathrm{sub}})\,i_c - a'}{1 + \tau_c} \\\Delta\bar{e}_k &< 0 \implies \text{relaxes } i_c^* = 0\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5584,8 +5610,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (E:02)</span>
           <span class="slide-num-badge">Slide 70 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Delta A_{prec} = sum_{k} \omega_{HH,k} \cdot [ \int a_{fin} d \mu_{k}(\sigma_{z2} = 0.25) - \int a_{fin} d \mu_{k}^*(\sigma_{z2}  \to  0, pv = 5) ]  \geq  CapEx_{grid}$$
+        <div class="eq-display eq-size-md">
+          $$\Delta A_{\mathrm{prec}} = \sum_{k} \omega_{\mathrm{HH},k}\left[\int a_{\mathrm{fin}}\,d\mu_k(\sigma_{z_2} = 0.25) - \int a_{\mathrm{fin}}\,d\mu_k^*(\sigma_{z_2} \to 0,\,\mathrm{pv}=5)\right] \geq \mathrm{CapEx}_{\mathrm{grid}}$$
         </div>
       </footer>
     </section>
@@ -5658,8 +5684,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (E:03)</span>
           <span class="slide-num-badge">Slide 71 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$sum_{k=1}^4 \omega_{F,k} \int (k_{f} - a_{f}) d \Gamma_{k,t} + B_{gov,t} = sum_{k=1}^4 \omega_{HH,k,t} \int a_{fin} d \mu_{k,t} + B_{t}^*   \Longrightarrow   \Delta r = -60..-100 bps$$
+        <div class="eq-display eq-size-sm">
+          $$\sum_{k=1}^{4} \omega_{F,k}\int (k_f - a_f)\,d\Gamma_{k,t} + B_{\mathrm{gov},t} = \sum_{k=1}^{4} \omega_{\mathrm{HH},k,t}\int a_{\mathrm{fin}}\,d\mu_{k,t} + B_t^* \implies \Delta r = -60\text{ to }-100\text{ bps}$$
         </div>
       </footer>
     </section>
@@ -5733,7 +5759,7 @@
           <span class="slide-num-badge">Slide 72 of 81</span>
         </div>
         <div class="eq-display eq-size-md">
-          $$T_{k,t}^{Mix} = (1 - s_{k,m}(t)) \cdot T_{k}^{Waiter}(G_{m,0}) + s_{k,m}(t) \cdot T_{k}^{Active}(G_{k,m}^{eff}(t))  (avoids Jensen's bias on \phi_{2} = -0.95 & 0.20*Q_{k} at 0 extra GPU axes!)$$
+          $$T_{k,t}^{\mathrm{Mix}} = \left(1 - s_{k,m}(t)\right)\,T_k^{\mathrm{Waiter}}(G_{m,0}) + s_{k,m}(t)\,T_k^{\mathrm{Active}}\left(G_{k,m}^{\mathrm{eff}}(t)\right)$$
         </div>
       </footer>
     </section>
@@ -5806,8 +5832,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (E:05)</span>
           <span class="slide-num-badge">Slide 73 of 81</span>
         </div>
-        <div class="eq-display eq-size-md">
-          $$Jump2_{SS2}(t) = sum_{w=1}^{13} \Delta s_{m}(w) \cdot K_{mat}(t - w - T_{gen,m})  (discrete wave convolution Years 1–13  \to  Years 21.5–35; +20.86\% CE repeal-proof)$$
+        <div class="eq-display eq-size-lg">
+          $$\mathrm{Jump2}_{\mathrm{SS2}}(t) = \sum_{w=1}^{13} \Delta s_m(w)\cdot K_{\mathrm{mat}}(t - w - T_{\mathrm{gen},m})$$
         </div>
       </footer>
     </section>
@@ -5880,8 +5906,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (P:01)</span>
           <span class="slide-num-badge">Slide 74 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Omega_{debt} = \alpha_{split} \cdot \Omega_{reform},  \Omega_{reinv} = (1 - \alpha_{split}) \cdot \Omega_{reform},  triggered when B_{gov}/Y  \leq  Debt_{Gate}$$
+        <div class="eq-display eq-size-md">
+          $$\begin{aligned}\Omega_{\mathrm{debt}} &= \alpha_{\mathrm{split}}\cdot \Omega_{\mathrm{reform}}, \qquad \Omega_{\mathrm{reinv}} = (1 - \alpha_{\mathrm{split}})\cdot \Omega_{\mathrm{reform}} \\&\text{triggered when } B_{\mathrm{gov}} / Y \leq \mathrm{Debt\_Gate}\end{aligned}$$
         </div>
       </footer>
     </section>
@@ -5955,7 +5981,7 @@
           <span class="slide-num-badge">Slide 75 of 81</span>
         </div>
         <div class="eq-display eq-size-lg">
-          $$\Psi_{J=5}(rohe) = f( M_{trust}(K_{whanau}^{net}, M_{mentor}),  G_{ECE,s}^{eff}(Q_{k}) )  calibrated to local iwi/community initiatives$$
+          $$\Psi_{J=5}(\text{rohe}) = f\left(M_{\mathrm{trust}}(K_{\mathrm{whanau}}^{\mathrm{net}}, M_{\mathrm{mentor}}),\; G_{\mathrm{ECE},s}^{\mathrm{eff}}(Q_k)\right)$$
         </div>
       </footer>
     </section>
@@ -6028,8 +6054,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (P:03)</span>
           <span class="slide-num-badge">Slide 76 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\Delta CE_{tot} = \Delta CE_{PE} (fixed w, r, Q, \mu_{1})  +  \Delta CE_{GE} (equilibrium w^*, r^*, Q^*)  +  \Delta CE_{IG} (endogenous T_{IG} \mu_{1}^*)$$
+        <div class="eq-display eq-size-md">
+          $$\Delta\mathrm{CE}_{\mathrm{tot}} = \Delta\mathrm{CE}_{\mathrm{PE}}(\text{fixed } w, r, Q, \mu_1) + \Delta\mathrm{CE}_{\mathrm{GE}}(w^*, r^*, Q^*) + \Delta\mathrm{CE}_{\mathrm{IG}}(\text{endogenous } T_{\mathrm{IG}}\,\mu_1^*)$$
         </div>
       </footer>
     </section>
@@ -6102,8 +6128,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (P:04)</span>
           <span class="slide-num-badge">Slide 77 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$\pi_{k}^*(z_{f}, w_{k}) = \alpha_{k} \cdot ((1 - \alpha_{k}) / w_{k})^((1 - \alpha_{k})/\alpha_{k}) \cdot z_{f}^{1 / \alpha_{k}},  amplified by \lambda_{col} = 2.50$$
+        <div class="eq-display eq-size-md">
+          $$\pi_k^*(z_f, w_k) = \alpha_k\left(\frac{1 - \alpha_k}{w_k}\right)^{\frac{1 - \alpha_k}{\alpha_k}} z_f^{1/\alpha_k}, \quad \text{amplified by } \lambda_{\mathrm{col}} = 2.50$$
         </div>
       </footer>
     </section>
@@ -6176,8 +6202,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (P:05)</span>
           <span class="slide-num-badge">Slide 78 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$CE^{SS2}_{full} (+24.92\%) = CE^{SS2}_{pre-NDC} (+24.70\%) + Net_{NDC}_{Biogenic}_{CleanGreen}_{Closure} (Wedge 5 = +1.03\% CE)$$
+        <div class="eq-display eq-size-sm">
+          $$\mathrm{CE}_{\mathrm{full}}^{\mathrm{SS2}}\;(+24.92\%) = \mathrm{CE}_{\mathrm{pre\text{-}NDC}}^{\mathrm{SS2}}\;(+24.70\%) + \Delta\mathrm{CE}_{\mathrm{NDC+Biogenic+CleanGreen}}\;(\text{Wedge 5} = +1.03\%)$$
         </div>
       </footer>
     </section>
@@ -6251,7 +6277,7 @@
           <span class="slide-num-badge">Slide 79 of 81</span>
         </div>
         <div class="eq-display eq-size-lg">
-          $$\Delta CE(Shock | SS2) - \Delta CE(Shock | SS0)  \gg  0  (e.g., +42.87 pp resilience gap under +NZD 8.0B/yr H:09 shock!)$$
+          $$\Delta\mathrm{CE}(\text{Shock} \,|\, \mathrm{SS2}) - \Delta\mathrm{CE}(\text{Shock} \,|\, \mathrm{SS0}) \gg 0$$
         </div>
       </footer>
     </section>
@@ -6324,8 +6350,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (P:07)</span>
           <span class="slide-num-badge">Slide 80 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$Ceiling(Rival) < CE^{SS2}_{Aotearoa}  whenever Rival omits  \geq  1 of {Lens 1 HC, Lens 2 Spatial/Commons, Lens 3 LVT/Actuarial}$$
+        <div class="eq-display eq-size-sm">
+          $$\mathrm{Ceiling}(\mathrm{Rival}) < \mathrm{CE}_{\mathrm{Aotearoa}}^{\mathrm{SS2}} \quad \text{whenever Rival omits } \geq 1\text{ of }\{\text{Lens 1 HC},\;\text{Lens 2 Spatial},\;\text{Lens 3 LVT/Actuarial}\}$$
         </div>
       </footer>
     </section>
@@ -6398,8 +6424,8 @@
           <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION (P:08)</span>
           <span class="slide-num-badge">Slide 81 of 81</span>
         </div>
-        <div class="eq-display eq-size-lg">
-          $$y_{top}(\tau) - y_{bot}(\tau) = (1 - s(\tau)) \cdot H_{L} + s(\tau) \cdot H_{R} > 0,  s(\tau) = 0.5 \cdot (1 - cos(\pi \cdot \tau))  (Exact Non-Pinching SVG)$$
+        <div class="eq-display eq-size-md">
+          $$y_{\mathrm{top}}(\tau) - y_{\mathrm{bot}}(\tau) = \left(1 - s(\tau)\right)H_L + s(\tau)H_R > 0, \qquad s(\tau) = \frac{1}{2}\left(1 - \cos(\pi\tau)\right)$$
         </div>
       </footer>
     </section>

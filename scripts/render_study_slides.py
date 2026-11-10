@@ -56,64 +56,11 @@ DECK_COLORS: Dict[str, Dict[str, str]] = {
 
 
 
-def ascii_eq_to_latex(eq: str) -> str:
-    """Converts readable ASCII-math in study_cards.yaml key_equation into clean LaTeX."""
-    if not eq:
-        return ""
-    s = str(eq).strip()
-    # Protect literal percent signs
-    s = re.sub(r"(?<!\\)%", r"\\%", s)
-    # Operators & arrows
-    for old, new in [
-        ("===", r" \equiv "),
-        ("==>", r" \Longrightarrow "),
-        ("=>", r" \Rightarrow "),
-        ("<->", r" \leftrightarrow "),
-        ("->", r" \to "),
-        ("!=", r" \neq "),
-        (">=", r" \geq "),
-        ("<=", r" \leq "),
-        (">>", r" \gg "),
-        ("<<", r" \ll "),
-        ("≈", r" \approx "),
-        (".*", r" \odot "),
-    ]:
-        s = s.replace(old, new)
-    # Barred symbols before Greek word boundaries
-    for old, new in [
-        ("theta_bar", r"\bar{\theta}"),
-        ("e_bar", r"\bar{e}"),
-        ("g_bar", r"\bar{g}"),
-        ("h_bar", r"\bar{h}"),
-        ("H_bar", r"\bar{H}"),
-        ("U_bar", r"\underline{U}"),
-        ("Churn_bar", r"\overline{\mathrm{Churn}}"),
-        ("chi_bar", r"\bar{\chi}"),
-        ("V_tilde", r"\tilde{V}"),
-        ("M_hat", r"\hat{M}"),
-    ]:
-        s = s.replace(old, new)
-    # Function & Greek tokens
-    greek_map = {
-        "int": r"\int", "sum": r"\sum", "prod": r"\prod", "exp": r"\exp",
-        "min": r"\min", "max": r"\max", "inf": r"\infty",
-        "alpha": r"\alpha", "beta": r"\beta", "gamma": r"\gamma",
-        "delta": r"\delta", "Delta": r"\Delta", "epsilon": r"\epsilon",
-        "zeta": r"\zeta", "eta": r"\eta", "theta": r"\theta", "Theta": r"\Theta",
-        "kappa": r"\kappa", "lambda": r"\lambda", "Lambda": r"\Lambda",
-        "mu": r"\mu", "nu": r"\nu", "xi": r"\xi", "pi": r"\pi", "Pi": r"\Pi",
-        "rho": r"\rho", "varrho": r"\varrho", "sigma": r"\sigma", "Sigma": r"\Sigma",
-        "tau": r"\tau", "phi": r"\phi", "Phi": r"\Phi", "varphi": r"\varphi",
-        "chi": r"\chi", "psi": r"\psi", "Psi": r"\Psi", "omega": r"\omega",
-        "Omega": r"\Omega", "Gamma": r"\Gamma", "ell": r"\ell",
-    }
-    pattern = re.compile(r"(?<!\\)\b(" + "|".join(sorted(greek_map, key=len, reverse=True)) + r")\b")
-    s = pattern.sub(lambda m: greek_map[m.group(1)], s)
-    # Convert ^(expr) to ^{expr} for multi-char exponents
-    s = re.sub(r"\^\(([^()]+)\)", r"^{\1}", s)
-    # Tidy multiplication asterisks between terms
-    s = re.sub(r"\s+\*\s+", lambda _: r" \cdot ", s)
-    return s
+from render_math import (
+    get_mathjax_svg_fit_css,
+    pick_eq_size_class,
+    resolve_card_latex,
+)
 
 
 def get_mana_badge(card: Dict[str, Any]) -> str:
@@ -231,7 +178,7 @@ def build_card_slide_html(card: Dict[str, Any], slide_idx: int, total_slides: in
     evidence = format_inline_text(card.get("empirical_evidence") or card.get("empirical_anchor") or "")
     proof_bridge = format_inline_text(card.get("tabletop_bridge", ""))
     vfi_mod = str(card.get("vfi_module", ""))
-    latex_eq = str(card.get("latex_equation") or ascii_eq_to_latex(str(card.get("key_equation", "")))).strip()
+    latex_eq = resolve_card_latex(card, cid)
 
     impact_html = "".join(
         f'<div class="impact-item"><span class="imp-k">▸ </span><span class="imp-v">{format_inline_text(p)}</span></div>'
@@ -241,8 +188,7 @@ def build_card_slide_html(card: Dict[str, Any], slide_idx: int, total_slides: in
     cite_items = "".join(f"<li>{format_inline_text(c)}</li>" for c in citations[:5])
     code_pills = f'<code class="code-pill">{esc(vfi_mod)}</code>' if vfi_mod else ""
 
-    eq_len = len(latex_eq)
-    eq_size_class = "eq-size-sm" if eq_len > 230 else ("eq-size-md" if eq_len > 150 else "eq-size-lg")
+    eq_size_class = pick_eq_size_class(latex_eq)
 
     return f"""
     <section class="slide" data-slide="{slide_idx}" data-card-id="{esc(cid)}"
@@ -372,13 +318,12 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       justify-content: center;
     }}
 
-    /* 16:9 Widescreen Viewport Stage */
+    /* 16:9 Widescreen Viewport Stage (Balanced Container-Proportional Midpoint) */
     #deck-viewport {{
-      width: 96vw;
-      height: 54vw;
-      max-height: 90vh;
-      max-width: 160vh;
+      width: min(96vw, calc((100vh - 52px) * 16 / 9));
+      aspect-ratio: 16 / 9;
       position: relative;
+      container-type: size;
     }}
 
     .slide {{
@@ -386,45 +331,49 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       width: 100%;
       height: 100%;
       background: linear-gradient(145deg, #071324 0%, #0B1D33 55%, #081C24 100%);
-      border: 3px solid var(--accent, #00B4D8);
-      border-radius: 14px;
-      padding: 1.1% 1.4%;
+      border: 2.5px solid var(--accent, #00B4D8);
+      border-radius: 12px;
+      padding: 0.95% 1.3%;
       flex-direction: column;
+      gap: 0.8%;
       justify-content: space-between;
       box-shadow: 0 18px 50px rgba(0,0,0,0.75);
+      overflow: hidden;
     }}
     .slide.active {{
       display: flex;
     }}
 
-    /* TOP SLIDE HEADER (11% height) */
+    /* TOP SLIDE HEADER (Centered vertically, expands gently if title wraps to 2 lines) */
     .slide-header {{
       display: grid;
-      grid-template-columns: 23% 52% 25%;
+      grid-template-columns: 22% 52% 26%;
       align-items: center;
       background: rgba(8, 22, 38, 0.9);
       border-bottom: 2px solid var(--accent);
-      border-radius: 9px;
-      padding: 0.55% 1.1%;
-      height: 11.5%;
+      border-radius: 8px;
+      padding: 0.48% 1.1%;
+      min-height: 11.8%;
+      max-height: 14.5%;
+      flex-shrink: 0;
     }}
     .header-left {{
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
       align-items: flex-start;
     }}
     .card-id-pill {{
       background: var(--accent);
       color: #04101E;
       font-weight: 900;
-      font-size: clamp(13px, 1.35vw, 24px);
-      padding: 2px 12px;
+      font-size: clamp(10px, 1.38cqw, 24px);
+      padding: 2px 11px;
       border-radius: 6px;
       letter-spacing: 1px;
     }}
     .deck-pill {{
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.74cqw, 13px);
       color: var(--gold);
       font-weight: 700;
       letter-spacing: 0.6px;
@@ -434,51 +383,54 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       padding: 0 8px;
     }}
     .header-titles h1 {{
-      font-size: clamp(15px, 1.55vw, 28px);
+      font-size: clamp(12px, 1.54cqw, 28px);
       color: #FFFFFF;
-      line-height: 1.15;
+      line-height: 1.12;
     }}
     .header-titles .subtitle {{
-      font-size: clamp(10px, 0.88vw, 16px);
+      font-size: clamp(8.5px, 0.90cqw, 16px);
       color: var(--gold);
       font-family: Georgia, serif;
       font-style: italic;
       margin-top: 2px;
+      line-height: 1.15;
     }}
     .header-right {{
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 4px;
+      gap: 3px;
       text-align: right;
     }}
     .cost-box {{
       background: var(--badge-bg);
       border: 1px solid var(--accent);
       color: #FFFFFF;
-      font-size: clamp(9.5px, 0.78vw, 14px);
-      padding: 3px 9px;
+      font-size: clamp(8px, 0.78cqw, 14px);
+      padding: 2.5px 9px;
       border-radius: 5px;
+      line-height: 1.18;
     }}
     .mana-box {{
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.74cqw, 13px);
       color: #80ED99;
       font-weight: 700;
     }}
 
-    /* MIDDLE SPLIT VERTICAL COLUMNS: PLAY LEFT | STUDY RIGHT (64.5% height) */
+    /* MIDDLE SPLIT VERTICAL COLUMNS: PLAY LEFT | STUDY RIGHT */
     .columns-container {{
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.2%;
-      height: 64.5%;
-      margin: 0.7% 0;
+      gap: 1.15%;
+      flex: 1 1 auto;
+      min-height: 0;
+      margin: 0;
     }}
     .col-panel {{
       background: rgba(11, 29, 51, 0.78);
       border: 1.5px solid rgba(168, 218, 220, 0.28);
       border-radius: 10px;
-      padding: 1.4% 1.8%;
+      padding: 1.3% 1.7%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -492,13 +444,13 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       background: rgba(15, 25, 42, 0.84);
     }}
     .panel-tag {{
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.75cqw, 13px);
       font-weight: 800;
       letter-spacing: 1px;
       color: var(--accent);
       border-bottom: 1px solid rgba(255,255,255,0.14);
       padding-bottom: 3px;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }}
     .study-panel .panel-tag {{
       color: var(--gold);
@@ -507,14 +459,14 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
     .lens-box {{
       background: rgba(6, 17, 30, 0.75);
       border-radius: 7px;
-      padding: 1.1% 1.6%;
+      padding: 1.05% 1.55%;
       border-left: 3px solid #00B4D8;
     }}
     .waka-lens {{
       border-left-color: var(--gold);
     }}
     .lens-title {{
-      font-size: clamp(9.5px, 0.78vw, 14px);
+      font-size: clamp(8px, 0.82cqw, 14.5px);
       font-weight: 800;
       color: #8ECAE6;
       margin-bottom: 2px;
@@ -523,7 +475,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       color: var(--gold);
     }}
     .lens-box p, .mechanic-box p, .study-block p {{
-      font-size: clamp(9.5px, 0.78vw, 14.2px);
+      font-size: clamp(8px, 0.82cqw, 14.5px);
       line-height: 1.34;
       color: #E8F1F5;
     }}
@@ -532,10 +484,10 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       background: rgba(20, 55, 65, 0.48);
       border: 1px solid var(--accent);
       border-radius: 7px;
-      padding: 1.1% 1.6%;
+      padding: 1.05% 1.55%;
     }}
     .box-label {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.71cqw, 12.5px);
       font-weight: 800;
       color: #80ED99;
       letter-spacing: 0.6px;
@@ -547,12 +499,12 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       grid-template-columns: 1fr 1fr;
       gap: 4px 10px;
       background: rgba(5, 14, 24, 0.85);
-      padding: 1% 1.5%;
+      padding: 0.95% 1.45%;
       border-radius: 6px;
       border: 1px solid rgba(255,255,255,0.1);
     }}
     .impact-item {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       line-height: 1.25;
       white-space: nowrap;
       overflow: hidden;
@@ -576,25 +528,25 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       flex-wrap: wrap;
     }}
     .badge-group-title {{
-      font-size: clamp(8px, 0.64vw, 11.5px);
+      font-size: clamp(6.5px, 0.66cqw, 11.5px);
       color: var(--text-muted);
       font-weight: 700;
     }}
     .syn-pill, .cnt-pill, .none-pill {{
-      font-size: clamp(8.5px, 0.66vw, 12px);
+      font-size: clamp(7px, 0.69cqw, 12px);
       font-weight: 800;
       padding: 1px 7px;
       border-radius: 4px;
     }}
     .syn-pill {{ background: #14453D; color: #80ED99; border: 1px solid #2A9D8F; }}
     .cnt-pill {{ background: #4A151B; color: #FF8080; border: 1px solid #FF595E; }}
-    .none-pill {{ color: #6C757D; font-size: clamp(8px, 0.62vw, 11px); }}
+    .none-pill {{ color: #6C757D; font-size: clamp(6.5px, 0.64cqw, 11px); }}
 
     /* RIGHT COLUMN STUDY BLOCKS */
     .study-block {{
       background: rgba(7, 16, 29, 0.8);
       border-radius: 7px;
-      padding: 1.2% 1.6%;
+      padding: 1.15% 1.55%;
       border-left: 3px solid #A8DADC;
     }}
     .evidence-block {{ border-left-color: #00B4D8; }}
@@ -604,8 +556,8 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
     }}
     .cite-list {{
       padding-left: 16px;
-      font-size: clamp(9px, 0.74vw, 13.5px);
-      line-height: 1.3;
+      font-size: clamp(7.5px, 0.77cqw, 13.5px);
+      line-height: 1.32;
       color: #F4C97E;
     }}
     .cite-list li {{ margin-bottom: 2px; }}
@@ -616,12 +568,12 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       gap: 6px;
       flex-wrap: wrap;
       background: rgba(4, 10, 18, 0.9);
-      padding: 0.8% 1.4%;
+      padding: 0.75% 1.35%;
       border-radius: 6px;
       border: 1px solid rgba(0, 180, 216, 0.35);
     }}
     .code-hook-label {{
-      font-size: clamp(8.5px, 0.66vw, 12px);
+      font-size: clamp(7px, 0.69cqw, 12px);
       font-weight: 700;
       color: #00B4D8;
     }}
@@ -629,14 +581,15 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       background: #102A42;
       color: #E0FBFC;
       font-family: "SFMono-Regular", Consolas, Menlo, monospace;
-      font-size: clamp(8px, 0.64vw, 11.5px);
+      font-size: clamp(6.5px, 0.67cqw, 11.5px);
       padding: 1px 6px;
       border-radius: 4px;
     }}
 
-    /* FULL-WIDTH BOTTOM EQUATION STAGE (22.5% height) */
+    /* FULL-WIDTH BOTTOM EQUATION STAGE (21.8% height) */
     .equation-stage {{
-      height: 22.5%;
+      height: 21.8%;
+      flex-shrink: 0;
       width: 100%;
       background: linear-gradient(90deg, #040D1A 0%, #091E32 50%, #040D1A 100%);
       border: 2.5px solid var(--gold);
@@ -646,8 +599,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       flex-direction: column;
       justify-content: center;
       position: relative;
-      overflow-x: auto;
-      overflow-y: hidden;
+      overflow: hidden;
     }}
     .eq-header {{
       display: flex;
@@ -659,13 +611,13 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       right: 16px;
     }}
     .eq-tag {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       font-weight: 800;
       letter-spacing: 1.1px;
       color: var(--gold);
     }}
     .slide-num-badge {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       color: var(--text-muted);
       font-weight: 700;
     }}
@@ -673,14 +625,15 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       width: 100%;
       text-align: center;
       color: #FFFFFF;
-      margin-top: 14px;
+      margin-top: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
     }}
-    .eq-size-lg {{ font-size: clamp(14px, 1.48vw, 27px); }}
-    .eq-size-md {{ font-size: clamp(12px, 1.26vw, 23px); }}
-    .eq-size-sm {{ font-size: clamp(10.5px, 1.08vw, 19.5px); }}
+    .eq-size-lg {{ font-size: clamp(11px, 1.7cqw, 27px); }}
+    .eq-size-md {{ font-size: clamp(9.5px, 1.5cqw, 23px); }}
+    .eq-size-sm {{ font-size: clamp(8.5px, 1.3cqw, 19.5px); }}
+    {get_mathjax_svg_fit_css('.eq-display', '13.5cqh', '1.15in')}
 
     /* BOTTOM NAVIGATION TOOLBAR */
     #nav-bar {{
@@ -740,6 +693,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
         display: flex !important;
         width: 16in !important;
         height: 9in !important;
+        container-type: size !important;
         page-break-after: always !important;
         break-after: page !important;
         border-radius: 0 !important;

@@ -124,64 +124,10 @@ def build_front_card_html(
 
 
 
-def ascii_eq_to_latex(eq: str) -> str:
-    """Converts readable ASCII-math in study_cards.yaml key_equation into clean LaTeX."""
-    if not eq:
-        return ""
-    s = str(eq).strip()
-    # Protect literal percent signs
-    s = re.sub(r"(?<!\\)%", r"\\%", s)
-    # Operators & arrows
-    for old, new in [
-        ("===", r" \equiv "),
-        ("==>", r" \Longrightarrow "),
-        ("=>", r" \Rightarrow "),
-        ("<->", r" \leftrightarrow "),
-        ("->", r" \to "),
-        ("!=", r" \neq "),
-        (">=", r" \geq "),
-        ("<=", r" \leq "),
-        (">>", r" \gg "),
-        ("<<", r" \ll "),
-        ("≈", r" \approx "),
-        (".*", r" \odot "),
-    ]:
-        s = s.replace(old, new)
-    # Barred symbols before Greek word boundaries
-    for old, new in [
-        ("theta_bar", r"\bar{\theta}"),
-        ("e_bar", r"\bar{e}"),
-        ("g_bar", r"\bar{g}"),
-        ("h_bar", r"\bar{h}"),
-        ("H_bar", r"\bar{H}"),
-        ("U_bar", r"\underline{U}"),
-        ("Churn_bar", r"\overline{\mathrm{Churn}}"),
-        ("chi_bar", r"\bar{\chi}"),
-        ("V_tilde", r"\tilde{V}"),
-        ("M_hat", r"\hat{M}"),
-    ]:
-        s = s.replace(old, new)
-    # Function & Greek tokens
-    greek_map = {
-        "int": r"\int", "sum": r"\sum", "prod": r"\prod", "exp": r"\exp",
-        "min": r"\min", "max": r"\max", "inf": r"\infty",
-        "alpha": r"\alpha", "beta": r"\beta", "gamma": r"\gamma",
-        "delta": r"\delta", "Delta": r"\Delta", "epsilon": r"\epsilon",
-        "zeta": r"\zeta", "eta": r"\eta", "theta": r"\theta", "Theta": r"\Theta",
-        "kappa": r"\kappa", "lambda": r"\lambda", "Lambda": r"\Lambda",
-        "mu": r"\mu", "nu": r"\nu", "xi": r"\xi", "pi": r"\pi", "Pi": r"\Pi",
-        "rho": r"\rho", "varrho": r"\varrho", "sigma": r"\sigma", "Sigma": r"\Sigma",
-        "tau": r"\tau", "phi": r"\phi", "Phi": r"\Phi", "varphi": r"\varphi",
-        "chi": r"\chi", "psi": r"\psi", "Psi": r"\Psi", "omega": r"\omega",
-        "Omega": r"\Omega", "Gamma": r"\Gamma", "ell": r"\ell",
-    }
-    pattern = re.compile(r"(?<!\\)\b(" + "|".join(sorted(greek_map, key=len, reverse=True)) + r")\b")
-    s = pattern.sub(lambda m: greek_map[m.group(1)], s)
-    # Convert ^(expr) to ^{expr} for multi-char exponents
-    s = re.sub(r"\^\(([^()]+)\)", r"^{\1}", s)
-    # Tidy multiplication asterisks between terms
-    s = re.sub(r"\s+\*\s+", lambda _: r" \cdot ", s)
-    return s
+from render_math import (
+    get_mathjax_svg_fit_css,
+    resolve_card_latex,
+)
 
 
 def get_fold_instruction(orient: str) -> str:
@@ -224,8 +170,8 @@ def build_study_back_html(
     eq_title = html.escape(str(
         study_entry.get("economic_concept") or study_entry.get("equation_title") or "General-Equilibrium Specification"
     ))
-    raw_eq = study_entry.get("latex_equation") or ascii_eq_to_latex(str(study_entry.get("key_equation", "")))
-    latex_raw = str(raw_eq).strip()
+    latex_raw = resolve_card_latex(study_entry, cid)
+    eq_multiline_cls = " sb-eq-2line" if r"\\" in latex_raw else ""
     raw_params = study_entry.get("key_parameters") or study_entry.get("parameters") or ""
     if isinstance(raw_params, list):
         params_txt = " &bull; ".join(html.escape(str(x)) for x in raw_params)
@@ -259,7 +205,7 @@ def build_study_back_html(
 
         <div class="sb-eq-frame">
           <div class="sb-eq-title">{eq_title}</div>
-          <div class="sb-eq-math">\\[ {latex_raw} \\]</div>
+          <div class="sb-eq-math{eq_multiline_cls}">\\[ {latex_raw} \\]</div>
         </div>
 
         <div class="sb-params">
@@ -466,7 +412,8 @@ def render_study_deck_html(
     window.MathJax = {{
       tex: {{
         inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-        displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']]
+        displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+        processEscapes: true
       }},
       svg: {{
         fontCache: 'global',
@@ -646,10 +593,10 @@ def render_study_deck_html(
       overflow: hidden;
       padding: 0.4mm 0;
     }}
-    .sb-eq-math mjx-container {{
-      margin: 0 !important;
-      max-width: 100% !important;
+    .sb-eq-math.sb-eq-2line {{
+      font-size: 6.4pt;
     }}
+    {get_mathjax_svg_fit_css('.sb-eq-math', '15mm')}
     .sb-params {{
       font-family: var(--font-mono);
       font-size: 5.9pt;

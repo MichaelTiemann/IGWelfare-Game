@@ -73,16 +73,16 @@ cards:
       player in a tie. Optional Wellington House Rule: ''Most ignorant of Rawls goes first''—hand the die to whoever
       still thinks landlord tax breaks are a growth strategy.'
   - label: Status Quo Roll (SS0 — LTFM Sinkhole)
-    rule: 'Roll 1–4: Caught in the 22% early hardship corner. Roll 5–18: Squeezed by 3.10x metro rents, graduate
-      brain drain, and PAYE climbing toward 28.20%. Roll 19–20: Surrounded by 185% Crown debt and -16.21% CE national
+    rule: 'Roll 1–4: Caught in the 22% early hardship corner. Roll 5–18: Squeezed by 3.1x metro rents, graduate
+      brain drain, and PAYE climbing toward 28%. Roll 19–20: Surrounded by 185% Crown debt and -16% CE national
       drift. No matter what you roll, the board loses.'
   - label: IGWelfare Roll (SS1 -> SS2 — Up on Foils)
-    rule: 'Roll 1–20: Every single median wealth group across all 20 faces wins (+24.70% CE pre-NDC national welfare
-      gain, Universal NZ Super lowered to Age 64 in SS2, and PAYE cut to 18.85%–18.25%). Roll any number; no life
+    rule: 'Roll 1–20: Every single median wealth group across all 20 faces wins (+25% CE pre-NDC national welfare
+      gain, Universal NZ Super lowered to Age 64 in SS2, and PAYE cut to 18.9%–18.3%). Roll any number; no life
       is impossible.'
-  - label: Confirming the Fumble (01:01–01:20) & Confirming the Crit (20:01–20:20)
-    rule: On a Nat 1, all 20 Bottom-5% sub-slices are rescued from a 52%–92% risk of reduced adult skills (+23.5%
-      to +38.4% CE gain, state care cut 94%, and NZD 62k+ Youth Capital Grant at Age 20). On a Nat 20, Active Enterprise
+  - label: Confirming the Fumble (01:01-01:20) & Confirming the Crit (20:01–20:20)
+    rule: On a Nat 1, all 20 Bottom-5% sub-slices are rescued from a 52%–92% risk of reduced adult skills (+24%
+      to +38% CE gain, state care cut 94%, and NZD 62k+ Youth Capital Grant at Age 20). On a Nat 20, Active Enterprise
       Builders (z_h) stay net welfare positive right up to NZD 50M net worth and break even at the NZD 140M NBR
       Rich List median.
   - label: Stochastic Additionality & Political Stability Oracle
@@ -105,7 +105,7 @@ cards:
   lens:
   - Lens 1
   gate_or_phase: Gate 1 (Ages 0–5 — Biological Use-It-Or-Lose-It Window)
-  cost_or_requirement: NZD 13.0k Public Resource / Turn (Stepped in 1/3 Regional Waves or Single-Shot)
+  cost_or_requirement: NZD 13k Public Resource / Turn (Stepped in 1/3 Regional Waves or Single-Shot)
   synergy_links:
   - B:02
   - B:03
@@ -121,12 +121,12 @@ cards:
   - label: Becoming (Dynamic Complementarity & Parental Crowd-In)
     rule: If supported by Te Korowai Mokopuna / Whānau Ora before Age 6, bypass the cash subsistence corner (i_c
       = 0), compress the struggling launch share toward 1.5%, place a Readiness Counter (N:03) granting +2 Productivity
-      on subsequent mentoring/schooling cards, and crowd in +NZD 15.3k/yr of private parental care and time for
+      on subsequent mentoring/schooling cards, and crowd in +NZD 15k/yr of private parental care and time for
       free.
   flavor_text: Honor the sacred seed at age three, or pay NZD 180,000 a year in reactive state care at age fourteen.
     The math was never hard; only the politics was.
   empirical_anchor: 'Dunedin Study (Poulton et al., 2020: 22% early vulnerability cohort); Cunha, Heckman, & Schennach
-    (2010); Barnardos Te Korowai Mokopuna (2026); Document 3 Table A.1 (+2.46% CE isolated).'
+    (2010); Barnardos Te Korowai Mokopuna (2026); Document 3 Table A.1 (+2.5% CE isolated).'
 - id: B:02
   name: Te Māra Kai & Ka Ora, Ka Ako — Farm-to-ECE Preventative Medicine
   deck: base
@@ -156,7 +156,7 @@ cards:
       whānau.
   - label: Subsistence Relief & Paediatric Health Shield
     rule: Lifts squeezed Rural, Small, and urban low-income whānau off the nutrition subsistence floor, slashes
-      avoidable paediatric hospital admissions (Exit 2), and primes local demand for C:09 (1.60x–2.16x Regional
+      avoidable paediatric hospital admissions (Exit 2), and primes local demand for C:09 (1.6x–2.2x Regional
       Food-Hub Procurement).
   flavor_text: A hungry child cannot compound cognitive skill, and a centralized plastic-wrapped ration wastes half
     the rural economy. Feed the tamaiti from the local soil, and both the child and the province thrive.
@@ -174,7 +174,7 @@ cards:
   lens:
   - Lens 1
   gate_or_phase: Gates 2 & 3 (Ages 12–14 — Second Biological Window)
-  cost_or_requirement: 2 Social Cohesion + 1 Creative Agency (Scaled from 17.3% Vanguard to 65.0%+)
+  cost_or_requirement: 2 Social Cohesion + 1 Creative Agency (Scaled from 17% Vanguard to 65%+)
   synergy_links:
   - B:01
   - B:04
@@ -187,16 +187,16 @@ cards:
   - T:07
   effects:
   - label: Halt Adolescent Skill Fade-Out (Wedge 1 Lock)
-    rule: Early childhood gains from B:01 remain perishable (22.0% single-term / 39.2% two-term fade-out) until
-      banked at Ages 12–14. Pairing B:03 with B:01 locks in Wedge 1 (+3.19% CE national synergy) and grants Indestructible
+    rule: Early childhood gains from B:01 remain perishable (22% single-term / 39% two-term fade-out) until
+      banked at Ages 12–14. Pairing B:03 with B:01 locks in Wedge 1 (+3.2% CE national synergy) and grants Indestructible
       against parental job-loss shocks and T:01 disinformation drag.
   - label: Two-Way Ako & Vanguard Grant Fast-Track
     rule: Scaling Stars / Te Kāhui Whetū, Project K, Kura Kaupapa Māori, and Montessori Erdkinder lifts cohorts
-      into the Thriving Launch Tier (65.0% rate) and immediately qualifies mentored adolescents for B:05 (17.3%
+      into the Thriving Launch Tier (65% rate) and immediately qualifies mentored adolescents for B:05 (17%
       Early-Adopter Youth Grant Bridge) at Age 20.
   flavor_text: In teaching the younger sibling to stand against the storm, the older sibling becomes a mountain.
   empirical_anchor: Graeme Dingle Foundation Stars & Project K (2025); Cunha & Heckman (2007); Document 1D Section
-    2; Document 3 Table A.1 (+1.56% CE isolated + +3.19% CE Wedge 1).
+    2; Document 3 Table A.1 (+1.6% CE isolated + +3.2% CE Wedge 1).
 - id: B:04
   name: GrowingChange & Montessori Erdkinder — Youth Ag & Trade Enterprise
   deck: base
@@ -232,7 +232,7 @@ cards:
   empirical_anchor: NC State CEFS Food Youth Initiative (FYI) & GrowingChange (92% non-recidivism); Lillard (2005)
     Montessori Erdkinder; Document 3 Section 1.1.
 - id: B:05
-  name: The 17.3% Early-Adopter Youth Grant Bridge (Waka Mataika Vanguard Seed)
+  name: The 17% Early-Adopter Youth Grant Bridge (Waka Mataika Vanguard Seed)
   deck: base
   module_level: 1
   mana_tier: 2
@@ -256,15 +256,15 @@ cards:
   effects:
   - label: Reward Ready Cohorts on Day 1 (Zero Skill-Mismatch Waste)
     rule: During Waves 1–6 (Years 1–6), immediately award the NZD 62k+ Youth Capital Grant to Age-20 graduates of
-      Aotearoa's existing 17.3% mentoring vanguard (19.6% Rural, 18.5% Small, 15.8% Large, 16.5% Auckland) without
+      Aotearoa's existing 17.3% mentoring vanguard (20% Rural, 19% Small, 16% Large, 16.5% Auckland) without
       waiting for Wave 13.
-  - label: Save NZD 12.9B Gross & Avoid NZD 3.8B Dissipation
+  - label: Save NZD 13B Gross & Avoid NZD 3.8B Dissipation
     rule: Immunizes the table against H:10 (42% unmentored grant waste from Day-1 Single-Shot rushing) while retaining
       ready young founders in NZ up to 4 turns early. Folds seamlessly into universal B:06 coverage across Waves
       7–13.
   flavor_text: Don't starve ready twenty-year-olds for a decade, and don't pour seed capital onto unmentored sand.
     Back the vanguard on Day 1 while the fleet scales behind them.
-  empirical_anchor: Document 1D Section 3.1, Figure 1D.3, Table 1D.3 & Table 1D.4 (-NZD 0.28B/yr cost, NZD 12.9B
+  empirical_anchor: Document 1D Section 3.1, Figure 1D.3, Table 1D.3 & Table 1D.4 (-NZD 0.28B/yr cost, NZD 13B
     phasing saving, NZD 3.8B avoided waste).
 - id: B:06
   name: Tūrangawaewae & Universal Age-20 Youth Capital Grant (Kaikōrero & Creator)
@@ -291,9 +291,9 @@ cards:
   - H:04
   effects:
   - label: Clear the 20% LVR Deposit Cliff (Wedge 2 Ignition)
-    rule: When paired with B:08 (Urban Land Cooling, -7.5% to -10.5%), seeding every mentored 20-year-old with NZD
+    rule: When paired with B:08 (Urban Land Cooling, -7.5% to -11%), seeding every mentored 20-year-old with NZD
       62k+ in ring-fenced home/enterprise equity clears the discrete 20% mortgage and collateral cliff—lifting Auckland
-      young ownership from 28.0% to 41.2% (+2.22% CE Wedge 2).
+      young ownership from 28% to 41% (+2.2% CE Wedge 2).
   - label: Trans-Tasman Brain-Drain Immunity
     rule: Cannot be exiled to the Abroad (Australia/OECD) Zone (reversing graduate outflows by +3,550/yr retained
       builders and lifting real regional wages by +6.8% to +9.6%).
@@ -301,7 +301,7 @@ cards:
     upbringing boards a one-way flight to Sydney or Melbourne. Give rangatahi a tūrangawaewae and a capital
     runway, and they build the next Aotearoa renaissance at home.
   empirical_anchor: Ackerman & Alstott (1999); Kiyotaki & Moore (1997); Document 1D Table 1D.3; Document 3 Table
-    A.1 (+0.89% CE isolated + +2.22% CE Wedge 2).
+    A.1 (+0.89% CE isolated + +2.2% CE Wedge 2).
 - id: B:07
   name: Fast CGT & Estate Liquidity Ramp (3-Year Vanguard Seed)
   deck: base
@@ -349,9 +349,9 @@ cards:
   lens:
   - Lens 2
   - Lens 3
-  gate_or_phase: Waves 1–10 Smooth Ramp (+0.15%/yr LVT & -0.80%/yr Corporate Tax)
-  cost_or_requirement: Coordinate Regional Tax Keys (C:06) to Scale +0.15%/yr Land Value Tax (to 1.50%) in 1-to-1
-    Lockstep with Corporate Tax Cuts (20.0% -> 12.0%)
+  gate_or_phase: Waves 1-10 Smooth Ramp (+0.15%/yr LVT & -0.80%/yr Corporate Tax)
+  cost_or_requirement: Coordinate Regional Tax Keys (C:06) to Scale +0.15%/yr Land Value Tax (to 1.5%) in 1-to-1
+    Lockstep with Corporate Tax Cuts (20% -> 12%)
   synergy_links:
   - B:06
   - B:07
@@ -364,16 +364,16 @@ cards:
   effects:
   - label: 10-Year Smooth Portfolio Rotation (Standalone Boost)
     rule: 'Gives leveraged property owners a predictable 10-year runway to rotate out of passive land hoarding (z_l,
-      Node 19: 14.1% -> 3.9%) without collateral distress—cooling urban housing by -7.5% (SS1) to -10.5% (SS2) and
+      Node 19: 14% -> 3.9%) without collateral distress—cooling urban housing by -7.5% (SS1) to -11% (SS2) and
       housing local Kaiako and kuia (countering H:06).'
   - label: Unchain Productive Builders (Combined with B:07 & B:06)
     rule: Pairing 100% LVT sufficiency with the 20% -> 12% corporate tax cut surges Productive Enterprise Builders
-      (z_h, Node 20) from 6.2%–6.9% to 46.0%–52.9% of the cohort while keeping active builders net welfare positive
+      (z_h, Node 20) from 6.2%–6.9% to 46%–53% of the cohort while keeping active builders net welfare positive
       right up to NZD 50M net worth (breakeven at NZD 140M).
   flavor_text: Tax dormant dirt gently on the way up, cut taxes on real builders step for step, and watch speculative
     hoards turn into high-wage workshops.
   empirical_anchor: Adapting Guvenen et al. (2023, QJE — use-it-or-lose-it book-wealth taxation) to NZ's
-    land-heavy balance sheet via a 1.50% LVT + Corporate Tax Cut; George (1879); Document 1A Part II Aspect 3 &
+    land-heavy balance sheet via a 1.5% LVT + Corporate Tax Cut; George (1879); Document 1A Part II Aspect 3 &
     Technical Specification Section 4.
 - id: B:09
   name: ACC Actuarial Time-Bend (Year-5 Continuation Valuation)
@@ -402,8 +402,8 @@ cards:
   - T:07
   effects:
   - label: Counter Cash-Flow Myopia (H:01)
-    rule: Reveal the 25-Year Forward Liability Ledger. Against NZD 9.19B invested by Year 5, immediately book NZD
-      10.68B in Direct Cost Avoidance (1.16x outlay) and NZD 35.25B in Total Fiscal Return (3.84x outlay; up to
+    rule: Reveal the 25-Year Forward Liability Ledger. Against NZD 9.2B invested by Year 5, immediately book NZD
+      11B in Direct Cost Avoidance (1.2x outlay) and NZD 35B in Total Fiscal Return (3.8x outlay; up to
       4.4x under H:03 GUiNZ baseline) inside a single parliamentary term.
   - label: Political Stability Shield & Compass Draw
     rule: Adds +3 to all D20 Political Stability rolls against T:07 ('Stop-Go' election repeal) during the Years
@@ -411,7 +411,7 @@ cards:
   flavor_text: When you prevent a car crash, ACC doesn't wait thirty years to book the saved hospital bill. Why
     were we treating our children worse than a dented bumper?
   empirical_anchor: NZ Treasury Circular 2024/15 & CBAx Guidance (2025); Williamson (2009); Document 1D Figure 1D.5
-    (+1.86% CE / +NZD 4.4B/yr booked at Yr 5); Document 3 Section 3.1.
+    (+1.9% CE / +NZD 4.4B/yr booked at Yr 5); Document 3 Section 3.1.
 - id: B:10
   name: The 1925 Quantum Leap (OIA 20250878 Micro-VFI Override)
   deck: base
@@ -475,10 +475,10 @@ cards:
   - label: Lift Out of Displacement Mode
     rule: Conventional thinkers plow through heavy water with a straight keel. Once all three coupled foil surfaces
       are active, lift your economy out of Displacement Mode—slashing reactive Fiscal Remediation Drag (Exits 1,
-      2, 4) by 75% (from NZD 17.7B–28.5B/yr down to NZD 4.2B/yr).
+      2, 4) by 75% (from NZD 18B–29B/yr down to NZD 4.2B/yr).
   - label: Cohort Net Fiscal Flip
-    rule: Thriving cohorts shift from net fiscal liabilities into +NZD 28.1k–31.3k/yr Gate-6 net surpluses, driving
-      the J-curve to self-financing cash breakeven at Year 16.8 (Te Kāhui Waka) to Year 18.8–20.0.
+    rule: Thriving cohorts shift from net fiscal liabilities into +NZD 28k–31k/yr Gate-6 net surpluses, driving
+      the J-curve to self-financing cash breakeven at Year 17 (Te Kāhui Waka) to Years 19–20.
   flavor_text: The rules capped how wide the daggerboard could be, but said nothing about whether the board had
     to be straight. Curve the foil, couple the rudder, and fly.
   empirical_anchor: Emirates Team New Zealand 2013 AC72 hydrofoil breakthrough; Document 1D Section 3.2; Document
@@ -509,9 +509,9 @@ cards:
   - K:10
   effects:
   - label: Unlock the 50%+ Supermodular Synergy Prize (Wedges 1–4)
-    rule: Fighting alone against the -16.21% CE LTFM sinkhole pulls every single-lane silo underwater (-9.12% GrowthNZ,
-      -2.40% WellBeing, -0.06% Barnardos, -6.80% Debt-First). Coupling lanes unlocks Wedges 1–4—generating over
-      half of Aotearoa's entire +24.70% CE pre-NDC welfare harvest.
+    rule: Fighting alone against the -16% CE LTFM sinkhole pulls every single-lane silo underwater (-9.1% GrowthNZ,
+      -2.4% WellBeing, -0.06% Barnardos, -6.8% Debt-First). Coupling lanes unlocks Wedges 1–4—generating over
+      half of Aotearoa's entire +25% CE pre-NDC welfare harvest.
   - label: Roll With Advantage on Connected Additionality
     rule: Whenever a player initiates or co-stakes an off-diagonal Coalition Wedge while linked via B:12, roll 2d20
       on the Stochastic Additionality table and take the HIGHER result (or apply the best realized additionality
@@ -532,7 +532,7 @@ cards:
   - Lens 1
   - Lens 2
   - Lens 3
-  gate_or_phase: Turn 5 (Year 15 Plan C) vs. Turn 6–7 (Year 16.8–20 Plan B) vs. Turn 8 (Year 25 Plan A)
+  gate_or_phase: Turn 5 (Year 15 Plan C) vs. Turn 6–7 (Year 17–20 Plan B) vs. Turn 8 (Year 25 Plan A)
   cost_or_requirement: Accumulate Face-Down Audit/Compass Cards via Wave Completions & B:09, or Reach Hard Cash
     Breakeven
   synergy_links:
@@ -546,13 +546,13 @@ cards:
   effects:
   - label: Key 1 — Calling the Early 'We Got This!' Slingshot (Plan C @ Turn 5 / Yr 15)
     rule: At Turn 5+, a player may reveal hidden Audit cards to call Plan C. If all 13 Te Kāhui Waka waves are live,
-      Crown Debt <= 42.0% GDP (41.7% target), and >= 95% of the J-curve is paid off (<= NZD 1.49B tail), ignite
+      Crown Debt <= 42.0% GDP (41.7% target), and >= 95% of the J-curve is paid off (<= NZD 1.5B tail), ignite
       SS2 immediately—claiming the 3x Initiator Multiplier, catching Bystanders (-3 Mana), and unlocking +NZD 190B
-      in extra 60-year welfare (hitting target 13.1 yrs early at Yr 46.9)!
+      in extra 60-year welfare (hitting target 13 yrs early at Yr 47)!
   - label: Grounded on the Shoals (Premature Call Penalty) vs. Key 2 (Plan B Lock)
     rule: 'If a premature Plan C call fails the audit, SS2 aborts and the caller runs aground for 2 turns (Mana
       in Jeopardy, Wayfinder exhausted) while patient rivals sweep Key 2 (Plan B automatic cash breakeven at Yr
-      16.8–20.0: zero bridge, 60.0x peak fiscal ROI, +NZD 104B extra welfare over Plan A).'
+      17–20: zero bridge, 60x peak fiscal ROI, +NZD 104B extra welfare over Plan A).'
   flavor_text: Read the star compass true and slingshot into clear air ten years early; misread the reef on an outgoing
     tide and watch the fleet sail past while you bail.
   empirical_anchor: Document 1D Sections 4 & 5, Figure 1D.5, Figure 1D.6, Table 1D.1 & Table 1D.2.
@@ -581,19 +581,19 @@ cards:
   - H:09
   effects:
   - label: Sink Debt to 21%–22% of GDP & Cut Credit Spreads -60 bps (Standalone Boost)
-    rule: Scaling sufficiency from 0% -> 100% retires NZD 32.09B–35.51B of Crown Debt per wave on the consolidated
+    rule: Scaling sufficiency from 0% -> 100% retires NZD 32B–36B of Crown Debt per wave on the consolidated
       ledger—driving net debt from the 185% LTFM projection down to 21%–22% of GDP and lowering household mortgage
       and SME borrowing rates by -60 bps (+1.25% CE isolated; stacks to -100 bps with E:03).
   - label: Geopolitical Resilience Buffer
     rule: At 100% sufficiency alongside B:15, provides the sovereign balance-sheet headroom to absorb H:09 (+NZD
-      8.0B/yr / 3.0% GDP Defense Shock) at 31.5% debt and +21.18% CE pre-NDC welfare.
+      8.0B/yr / 3.0% GDP Defense Shock) at 32% debt and +21% CE pre-NDC welfare.
   flavor_text: Austerity hawks tried to shrink debt by starving children and ended up at 112% debt anyway. Cure
     the hardship pipeline first, and the surplus melts the debt mountain to 21%.
   empirical_anchor: Barro (1979, J-curve tax smoothing across transition); Romer & Romer (2018, sovereign fiscal
     space); Laubach (2009, debt-to-GDP spread compression); NZ Treasury He Tirohanga Mokopuna (2025); Document 1A
     Part V.
 - id: B:15
-  name: 1.65x Infrastructure, PAYE Cut & Age-64 Super Pool (2050 Right-Half Stabilizer)
+  name: 1.7x Infrastructure, PAYE Cut & Age-64 Super Pool (2050 Right-Half Stabilizer)
   deck: base
   module_level: 1
   mana_tier: 3
@@ -617,18 +617,18 @@ cards:
   - N:08
   - H:05
   effects:
-  - label: 1.65x Public Capital Reinvestment (Standalone Boost)
-    rule: Multiplies allocated surplus dollars by 1.65x into C:03 Sovereign Grid, Water, and Core Health Armor—retiring
+  - label: 1.7x Public Capital Reinvestment (Standalone Boost)
+    rule: Multiplies allocated surplus dollars by 1.7x into C:03 Sovereign Grid, Water, and Core Health Armor—retiring
       temporary spatial cost cushions as regional market wages rise.
-  - label: Full 50/50 Harvest (18.25% PAYE & Universal NZ Super at Age 64!)
+  - label: Full 50/50 Harvest (18.3% PAYE & Universal NZ Super at Age 64!)
     rule: When paired at 100% sufficiency with B:14 (and C:10's 85% T_k transfer retirement), deliver a permanent
-      -3.15 to -3.75 pp working-age PAYE tax cut (22.0% -> 18.85%–18.25%) AND lower Universal NZ Superannuation
+      -3.2 to -3.8 pp working-age PAYE tax cut (22% -> 18.9%–18.3%) AND lower Universal NZ Superannuation
       eligibility from Age 65 to Age 64—releasing a +8.1% Kuia/Koroua caregiving boost (K_whanau), restoring TFR
-      to 2.03, and unlocking players' 3rd Whānau Mat slot!
+      to 2.0, and unlocking players' 3rd Whānau Mat slot!
   flavor_text: Orthodoxy demanded raising the pension age to 70 while taxes climbed past 28%. Together, we cut PAYE
-    to 18.25% and brought dignified retirement forward to 64.
-  empirical_anchor: Document 1D Section 4; Document 3 Exec Overview, Section 2.3, Section 3.5 & Table A.1 (+2.69%
-    CE isolated + +2.46% CE Wedge 4).
+    to 18.3% and brought dignified retirement forward to 64.
+  empirical_anchor: Document 1D Section 4; Document 3 Exec Overview, Section 2.3, Section 3.5 & Table A.1 (+2.7%
+    CE isolated + +2.5% CE Wedge 4).
 - id: B:16
   name: Lifting the Gold from the River (He Tāngata Generational Victory)
   deck: base
@@ -643,7 +643,7 @@ cards:
   - Lens 2
   - Lens 3
   gate_or_phase: SS2 Capstone Victory
-  cost_or_requirement: Struggling Launch Share <= 1.5%, Social Cohesion at 126.0 (C:02), and B:14 + B:15 Active
+  cost_or_requirement: Struggling Launch Share <= 1.5%, Social Cohesion at 126 (C:02), and B:14 + B:15 Active
     at 100% Sufficiency
   synergy_links:
   - B:00
@@ -655,10 +655,10 @@ cards:
   - K:10
   - N:09
   effects:
-  - label: Generational Ascent (+40.9 pp Swing Over the LTFM Sinkhole)
-    rule: 'Claim the SS2 National Regime Multiplier (1.5x + 0.05x per Turn Early) with a +24.70% CE pre-NDC National
-      Welfare Gain (+21.18% Rural, +23.34% Small, +24.68% Large, +27.96% Auckland; converging to +25.19%–25.21%
-      CE / +NZD 60.0B/yr on the wave-convolved Te Kāhui Waka ledger) and #1 Global Social Credit Rating.'
+  - label: Generational Ascent (+41 pp Swing Over the LTFM Sinkhole)
+    rule: 'Claim the SS2 National Regime Multiplier (1.5x + 0.05x per Turn Early) with a +25% CE pre-NDC National
+      Welfare Gain (+21% Rural, +23% Small, +25% Large, +28% Auckland; converging to +25.2%–25%
+      CE / +NZD 60B/yr on the wave-convolved Te Kāhui Waka ledger) and #1 Global Social Credit Rating.'
   flavor_text: 'There is no magic money tree—because we are standing in a river of gold. In the nineteenth century
     we panned for it in Otago gravel; in the twentieth we mistook inflated urban dirt for wealth. Today we know
     the truth: human capability is the only inexhaustible resource on earth. We need only lift it up.'
@@ -730,7 +730,7 @@ cards:
   - label: The Finnish Inoculation Counter-Play (Monilukutaito)
     rule: Following Finland (#1 European Media Literacy Index 2017–2026), couple B:01 (First 2000 Days) + B:03 (Tuakana–Teina
       Mentoring) + C:05 (Cognitive Flexibility) + K:02 (Pūrākau Weaver) to neutralize T:01 and lift Social Cohesion
-      from 100.0 to 126.0 (C:02).
+      from 100 to 126 (C:02).
   flavor_text: Finland shares a 1,340 km border with the world's largest disinformation factory, yet leads the world
     in societal trust—because they inoculated their children's minds in primary school instead of policing the wreckage
     at Parliament.
@@ -765,7 +765,7 @@ cards:
   effects:
   - label: The Asymmetric Dogma & Laffer Revenue Hole
     rule: Claims millionaires only produce if given carrots (top tax cuts; empirical elasticity e_ETI ≈ 0.20 <<
-      1.50 Laffer threshold) while nurses and labourers only work if given the stick of precarity—blowing a +NZD
+      1.5 Laffer threshold) while nurses and labourers only work if given the stick of precarity—blowing a +NZD
       6.5B/yr fiscal hole that bids up passive land (z_l).
   - label: Hyperbolic Employment Shortcut (Boomerangs on K:05 Employers!)
     rule: 'A player with an uncovered Tamariki/Rangatahi in a Waiter region may accept ''Coerced Shift Certainty'':
@@ -804,13 +804,13 @@ cards:
   - H:05
   effects:
   - label: Why a Sovereign Nation Cannot Fire Its Citizens
-    rule: On a 'thin' 3-year corporate spreadsheet, cutting ECE and pushing Super to 70 pencils out at +1.80% CE.
+    rule: On a 'thin' 3-year corporate spreadsheet, cutting ECE and pushing Super to 70 pencils out at +1.8% CE.
       On the Crown's closed-loop ledger, 38%–52% of displaced manual seniors shift onto disability/hospital support,
-      while losing -36.2% of Kuia/aunty care (K_whanau) inflicts sandwich-generation drag (psi_sandwich = 0.35)
+      while losing -36% of Kuia/aunty care (K_whanau) inflicts sandwich-generation drag (psi_sandwich = 0.35)
       on working parents.
-  - label: The Trajectory 3 Boomerang (-6.80% CE & 112% Debt)
+  - label: The Trajectory 3 Boomerang (-6.8% CE & 112% Debt)
     rule: Batch spoilage at the adolescent harmonic bottleneck (phi_2 = -0.95) lifts struggling youth launch to
-      25.4% in Rural and 18.0% in Auckland, driving Crown Debt to 112.0% of GDP and welfare to -6.80% CE (-31.5
+      25% in Rural and 18% in Auckland, driving Crown Debt to 112% of GDP and welfare to -6.8% CE (-32
       pp worse than the integrated plan). Counter with E:04 + B:09 + K:09.
   flavor_text: An MBA turnaround artist can close a factory division and dump the workers onto the state. When the
     Crown cuts human capability, the citizens don't vanish—they reappear in hospital and hardship cells at four
@@ -849,9 +849,9 @@ cards:
     rule: Players holding an Age 3–5 toddler in a late-wave region (e.g., Auckland Wave 3–9) immediately capture
       Turn-1 coverage for THEIR child before the biological gate closes—bypassing the Waiter queue completely!
   - label: Systemic Surge Blowback (Dumped onto the Table)
-    rule: Incurs 28%–32% commissioning friction + 18.0% workforce surge congestion, wastes NZD 3.8B via H:10 (unmentored
+    rule: Incurs 28%–32% commissioning friction + 18% workforce surge congestion, wastes NZD 3.8B via H:10 (unmentored
       grants), quadruples Year-3 capital at risk (-NZD 6.5B/yr vs. -NZD 1.6B/yr), applies a -4 Bottleneck Penalty
-      on Additionality & Political Stability D20 rolls, and delays breakeven to Year 19.3—locking the table out
+      on Additionality & Political Stability D20 rolls, and delays breakeven to Year 19—locking the table out
       of Plan C (B:13)!
   flavor_text: Launching thirty waka blindly through an uncharted pass at midnight gets the front boat onto the
     beach—and leaves the fleet bailing -NZD 6.7 billion a year in the breakers.
@@ -885,11 +885,11 @@ cards:
   effects:
   - label: 61% of Retained Top Graduates Siphoned into Rent-Seeking
     rule: When leveraged land speculation and oligopoly rents (z_l, Node 19) out-yield taxed enterprise, passive
-      rent-seeking captures 14.1% to 16.7% of the entire birth cohort (61% of retained top graduates!), starving
+      rent-seeking captures 14% to 17% of the entire birth cohort (61% of retained top graduates!), starving
       Productive Enterprise Builders (z_h, Node 20) down to just 6.2%–8.1%.
   - label: Growth Penalty & The 8x Builder Flip
     rule: Cuts per-capita GDP growth by -0.3% to -0.78%/yr. Counter by coupling B:08 (10-Yr LVT + 20%->12% Corp
-      Cut) + B:06 (Youth Grant) + C:09 (Food Hubs) to surge z_h builders more than five-fold to 46.0%–52.9% of every
+      Cut) + B:06 (Youth Grant) + C:09 (Food Hubs) to surge z_h builders more than five-fold to 46%–53% of every
       cohort!
   flavor_text: In 1780s France, the great chemist Lavoisier bought a royal tax-farming franchise because rent-seeking
     paid better than science. In 2020s New Zealand, we turned our sharpest minds into property speculators and wondered
@@ -932,7 +932,7 @@ cards:
       locked by C:06.
   - label: Centralized Corporate Caterer Siphon
     rule: Routing school/hospital food budgets through centralized import caterers instead of C:09 Regional Food
-      Hubs forfeits the 1.60x–2.16x provincial multiplier, keeping Rural & Small reliant on SS1 spatial cost cushions
+      Hubs forfeits the 1.6x–2.2x provincial multiplier, keeping Rural & Small reliant on SS1 spatial cost cushions
       and blocking C:10's -0.64 pp PAYE cut.
   flavor_text: Leave regional tax rules uncoordinated and mobile corporate capital and trust domiciles hop the
     boundary line; route public school lunch budgets through offshore caterers and you starve provincial growers
@@ -957,7 +957,7 @@ cards:
   - Lens 2
   - Lens 3
   gate_or_phase: Every-3rd-Turn Political Stability D20 Check (Amplified by Deep Early J-Curve Deficits)
-  cost_or_requirement: Resolved via D20 Political Stability Roll During Years 1–16 Unless Shielded by B:09, K:02,
+  cost_or_requirement: Resolved via D20 Political Stability Roll During Years 1-16 Unless Shielded by B:09, K:02,
     K:10, or Banked via E:05.
   synergy_links:
   - B:03
@@ -968,19 +968,19 @@ cards:
   - K:10
   - N:01
   effects:
-  - label: Mid D20 Roll — 3-Year Flip / 50% Duty-Cycle Friction (~+12.5% CE Linear / +6.58% Sawtooth)
-    rule: When policy flips every 3 years, linear spreadsheets predict a 50% duty-cycle yield (+12.46% CE)—cutting
-      active off-diagonal Wedge Additionality in half (50%) and inflicting a 1-period (22.0%) fade-out sawtooth
-      (+6.58% CE if base foundations also pause).
-  - label: Low D20 Roll — 6-Year (Two-Term) Scissor-Blade (84.6% of Prize Destroyed -> +3.84% CE!)
+  - label: Mid D20 Roll — 3-Year Flip / 50% Duty-Cycle Friction (~+13% CE Linear / +6.6% Sawtooth)
+    rule: When policy flips every 3 years, linear spreadsheets predict a 50% duty-cycle yield (+12% CE)—cutting
+      active off-diagonal Wedge Additionality in half (50%) and inflicting a 1-period (22%) fade-out sawtooth
+      (+6.6% CE if base foundations also pause).
+  - label: Low D20 Roll — 6-Year (Two-Term) Scissor-Blade (85% of Prize Destroyed -> +3.8% CE!)
     rule: 'A 6-Year On / 6-Year Off pendulum catches every birth cohort in the scissor blades: Cohort A gets Ages
-      0–5 ECE then suffers 39.2% two-term adolescent fade-out; Cohort B misses Ages 0–5 completely; young-adult
-      migration credibility collapses; and off-diagonal Wedge Additionality drops to 0% (+3.84% CE)! Spend Mana/Wealth
+      0–5 ECE then suffers 39% two-term adolescent fade-out; Cohort B misses Ages 0–5 completely; young-adult
+      migration credibility collapses; and off-diagonal Wedge Additionality drops to 0% (+3.8% CE)! Spend Mana/Wealth
       on B:09 + K:10 to boost Stability rolls, or pace via N:01 to shrink J-curve reset penalties.'
   flavor_text: Childhood is not a highway project that waits patiently on gravel while a two-term government stands
     down the road crew. Pause for six years, and you lose eighty-five percent of the harvest.
-  empirical_anchor: Document 3 Part IV, Section 4.1–4.2 & Table 4.1 Rows B1 & B2 (+12.46% thin 50% duty cycle vs.
-    +6.58% 1-term sawtooth vs. +3.84% 2-term pendulum).
+  empirical_anchor: Document 3 Part IV, Section 4.1–4.2 & Table 4.1 Rows B1 & B2 (+12% thin 50% duty cycle vs.
+    +6.6% 1-term sawtooth vs. +3.8% 2-term pendulum).
 - id: T:08
   name: The Scottish Devolution Ceiling (Compassion Without Land-Tax Sovereignty)
   deck: traps
@@ -996,7 +996,7 @@ cards:
   lens:
   - Lens 1
   - Lens 2
-  gate_or_phase: 'Turns 4–7 Mid-Game Stall (Chasing Finland Benchmark Ceiling: 96.0)'
+  gate_or_phase: 'Turns 4–7 Mid-Game Stall (Chasing Finland Benchmark Ceiling: 96)'
   cost_or_requirement: Triggered when B:01 (First 2000 Days) + B:03 (Mentoring) Are Enacted While B:07 & B:08 Remain
     at 0% Sufficiency.
   synergy_links:
@@ -1009,7 +1009,7 @@ cards:
   - label: The Devolution Fiscal Ceiling
     rule: You funded universal early years and MCR Pathways mentoring (cutting child hardship 6 points below peer
       regions!), yet left sovereign Land & Estate Tax levers (B:07/B:08) untouched. Middle-earner PAYE climbs toward
-      42%–48%, uncooled urban rents absorb family gains, and progress stalls hard at 96.0 on the Cohesion Track.
+      42%–48%, uncooled urban rents absorb family gains, and progress stalls hard at 96 on the Cohesion Track.
   flavor_text: Compassion without sovereign capital-tax levers forces working nurses and teachers to pay for everything
     twice—once in PAYE, and again in landlord rent.
   empirical_anchor: Scottish Government Child Poverty Delivery Plan (2026–2031); MCR Pathways (2025); Document 1A
@@ -1030,7 +1030,7 @@ cards:
   - Lens 1
   - Lens 3
   gate_or_phase: Mid-to-Late Game Generational Turnover (Blocks 3rd Whānau Slot)
-  cost_or_requirement: Triggered when Schooling Intensity Rises While 3.10x Primate-City Land Speculation & Kuia
+  cost_or_requirement: Triggered when Schooling Intensity Rises While 3.1x Primate-City Land Speculation & Kuia
     Squeeze Remain Unchecked.
   synergy_links:
   - B:08
@@ -1040,7 +1040,7 @@ cards:
   - N:08
   effects:
   - label: TFR Collapses to 0.72 (Empty Tamariki Slots)
-    rule: Young couples are crushed between 3.10x metropolitan housing costs, absent extended-whānau care (K_whanau),
+    rule: Young couples are crushed between 3.1x metropolitan housing costs, absent extended-whānau care (K_whanau),
       and a private tutoring arms race (Hagwon). Total Fertility Rate collapses toward 0.72—locking players out
       of their 3rd Whānau Mat slot and imploding long-run pension solvency. Counter with B:08 + B:15 + N:08 (restoring
       TFR = 2.03).
@@ -1119,7 +1119,7 @@ cards:
   empirical_anchor: Bilal & Känzig (2024, NBER WP 32450 — 12% GDP loss per 1°C); Hallegatte, Rentschler, & Rozenberg
     (2019, Lifelines); Te Waihanga NZ Infrastructure Strategy; Document 1D & Document 2A.
 - id: C:02
-  name: 'Social Credit Rating: 126.0 (The High-Trust Lifeboat)'
+  name: 'Social Credit Rating: 126 (The High-Trust Lifeboat)'
   deck: resilience
   module_level: 2
   mana_tier: 3
@@ -1131,7 +1131,7 @@ cards:
   - Lens 1
   - Lens 2
   - Lens 3
-  gate_or_phase: SS1 (114.8) -> SS2 Convergence (126.0 Victory Threshold)
+  gate_or_phase: SS1 (115) -> SS2 Convergence (126 Victory Threshold)
   cost_or_requirement: Reverse the CPI Trust Slide (91 -> 81) via B:01/B:03 (Early Capability), B:06 (Youth Retention),
     B:08 (Fair Land Tax), and K:10 (Te Tiriti Compact)
   synergy_links:
@@ -1145,7 +1145,7 @@ cards:
   - T:01
   effects:
   - label: High-Trust Macroeconomic Dividend
-    rule: 'Lift Aotearoa''s endogenous Social Cohesion Index from 100.0 (SS0) to 114.8 (SS1 Year 5) and 126.0 (SS2),
+    rule: 'Lift Aotearoa''s endogenous Social Cohesion Index from 100 (SS0) to 115 (SS1 Year 5) and 126 (SS2),
       surpassing Finland (88) and Denmark (90) to reclaim #1 in global institutional integrity.'
   - label: Trust as Hard Economic Infrastructure
     rule: Slashes transaction friction in trade, regional tax synchronization (C:06), and emergency coordination
@@ -1155,7 +1155,7 @@ cards:
   empirical_anchor: Knack & Keefer (1997, QJE); Algan & Cahuc (2010, AER); Transparency International CPI (2025/2026);
     Document 1B Section 5.5.
 - id: C:03
-  name: Sovereign Grid, Water & Health Armor (The 1.65x Ring-Fenced Pool)
+  name: Sovereign Grid, Water & Health Armor (The 1.7x Ring-Fenced Pool)
   deck: resilience
   module_level: 2
   mana_tier: 3
@@ -1178,8 +1178,8 @@ cards:
   - E:03
   - H:07
   effects:
-  - label: 1.65x Lifeline Productivity Multiplier
-    rule: Every surplus unit routed through B:15 into C:03 generates 1.65x in hardened transmission grids, three-waters
+  - label: 1.7x Lifeline Productivity Multiplier
+    rule: Every surplus unit routed through B:15 into C:03 generates 1.7x in hardened transmission grids, three-waters
       catchments, coastal corridors, and core hospital capacity—cutting C:01 physical capital depreciation spikes
       by 75%.
   - label: Immunity to Infrastructure Failure Cascades
@@ -1251,7 +1251,7 @@ cards:
   - T:01
   effects:
   - label: Nelson–Phelps–Schultz Adaptive Pivot
-    rule: Attach to your 65.0%+ Thriving Cohort forged in C:04. Because general executive function and creative
+    rule: Attach to your 65%+ Thriving Cohort forged in C:04. Because general executive function and creative
       agency have their highest marginal return during rapid technological and economic regime shifts, convert every
       Supply-Chain or Macro Shock (C:01) into +1 Frontier Innovation.
   - label: Epistemic Inoculation Enabling Regional Solidarity
@@ -1289,7 +1289,7 @@ cards:
   - label: Nearest-Neighbour Leakage Topology (Why 'Large' Needs Neighbours Most)
     rule: Capital and step-migration flow primarily between adjacent tiers (Rural <-> Small <-> Large <-> Auckland),
       with minimal one-step leakage (-15%) directly between Rural/Small and Auckland. Moving alone in exposed middle-hinge
-      Large Cities (25.9% pop) suffers -60% two-flank leakage outward to Small/Rural and upward to Auckland!
+      Large Cities (26% pop) suffers -60% two-flank leakage outward to Small/Rural and upward to Auckland!
   - label: 4-Key Lockstep Sufficiency Bonus
     rule: Locking adjacent Regional Keys cancels border leakage; uniting all 4 Regional Keys boosts B:07 (CGT/Estate)
       and B:08 (LVT/Corp) to 100% tax sufficiency and awards +1 Cooperative Mana to every participating regional
@@ -1323,9 +1323,9 @@ cards:
   - T:02
   effects:
   - label: Offset the 2.7x–2.8x Provincial Transport & Fuel Burden
-    rule: Recognizes that Rural (16.0% pop) and Small Towns (24.0% pop) carry 2.7x to 2.8x the mandatory transport
+    rule: Recognizes that Rural (16% pop) and Small Towns (24% pop) carry 2.7x to 2.8x the mandatory transport
       and energy subsistence floor (e_bar_k) of metro cities. Bridges squeezed provincial whānau past T:02 (Hyperbolic
-      Low-Skill Shortcut) while Large (25.9%) and Auckland (34.1%) receive -7.5% to -10.5% housing cooling.
+      Low-Skill Shortcut) while Large (26%) and Auckland (34%) receive -7.5% to -11% housing cooling.
   - label: Mutiny Shield & Self-Retiring Spatial Cushion (82%–85% Phase-Down)
     rule: Opponents cannot play 'Urban–Rural Divide' spoilers. Rather than an open-ended subsidy, T_k(y) endogenously
       recedes by 82%–85% as E:01 rural electrification and C:08/C:09 value-add lift provincial market wages w_k—returning
@@ -1370,7 +1370,7 @@ cards:
   empirical_anchor: NZ Commerce Commission Market Studies (Groceries, Residential Building Supplies, Personal Banking,
     2022–2025); Document 3 Section 1.1 & Section 5.2 [Ref 49].
 - id: C:09
-  name: 1.60x–2.16x Regional Food-Hub Procurement ('Good Food Is Medicine!')
+  name: 1.6x–2.2x Regional Food-Hub Procurement ('Good Food Is Medicine!')
   deck: resilience
   module_level: 2
   mana_tier: 2
@@ -1394,18 +1394,18 @@ cards:
   - K:05
   - T:06
   effects:
-  - label: 1.60x–2.16x Local Economic Multiplier
+  - label: 1.6x–2.2x Local Economic Multiplier
     rule: Anchor Ka Ora, Ka Ako school meals, hospitals, and regional retail in decentralized grower-owned food
       hubs and MPI 4-channel value-add (closing the 80/20 pastoral ROA gap, horticulture rotation, and wood/food
       processing) instead of T:06 corporate import caterers.
   - label: Flip Rural & Small from Liability to z_h Engine
-    rule: Bounded by conservative land-inelasticity ceilings (Agglom_Map = [0.68, 0.80, 0.94, 1.00]), surges Productive
-      Enterprise Builders (z_h, Node 20) more than five-fold from 6.2%–8.1% to 46.0%–56.0% of the cohort while expanding
+    rule: Bounded by conservative land-inelasticity ceilings (Agglom_Map = [0.68, 0.80, 0.94, 1.0]), surges Productive
+      Enterprise Builders (z_h, Node 20) more than five-fold from 6.2%–8.1% to 46%–56% of the cohort while expanding
       skilled rural trades (Node 18)!
   flavor_text: When every provincial town processes and serves its own harvest, good food becomes preventative medicine
     for our children and high-wage rocket fuel for the regions.
   empirical_anchor: MPI Fit for a Better World & SOPI (2025/2026) [Ref 29]; NC State CEFS local food-hub multiplier
-    (1.60x–2.16x) [Ref 56]; Document 3 Section 1.2.
+    (1.6x–2.2x) [Ref 56]; Document 3 Section 1.2.
 - id: C:10
   name: Endogenous 85% Geographic Transfer Retirement (-0.64 pp PAYE Dividend)
   deck: resilience
@@ -1435,9 +1435,9 @@ cards:
       provincial wages w_k and slash fossil subsistence e_bar_k, the temporary C:07 Income x Geography cushion
       naturally retires by 82%–85%.
   - label: National -0.64 pp Working-Age PAYE Bonus
-    rule: Returns the saved fiscal outlays to EVERY working-age player across Rural (+21.18% CE), Small (+23.34%),
-      Large (+24.68%), and Auckland (+27.96%) as an extra -0.64 percentage-point PAYE tax cut (deepening B:15 relief
-      all the way to 18.25%)!
+    rule: Returns the saved fiscal outlays to EVERY working-age player across Rural (+21% CE), Small (+23%),
+      Large (+25%), and Auckland (+28%) as an extra -0.64 percentage-point PAYE tax cut (deepening B:15 relief
+      all the way to 18.3%)!
   flavor_text: The truest measure of regional partnership is not permanent cost-of-living patches—it is the day
     thriving provincial enterprises and fair farm-gate markets lift every working household's take-home pay
     nationwide.
@@ -1454,7 +1454,7 @@ cards:
   type: 'Wayfinder Persona — Coalition 1 Anchor: Being & Early Potential (Ages 0–14)'
   lens:
   - Lens 1
-  gate_or_phase: Command Zone (Continuous / Tap — 42.5% Neighbour-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 43% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start (or Unlock at Age 18 / Age 12 if Mentored via B:03)
   synergy_links:
   - B:01
@@ -1472,14 +1472,14 @@ cards:
     rule: Pilot B:01 (First 2000 Days), B:02 (Farm-to-ECE), or B:03 (Mentoring) in Wave 1 (1/3 Rural + Small) at
       50% Wealth drag, ignoring H:02 compliance waste and placing 1 PDSA Learning Counter (+2 to subsequent Additionality
       D20 rolls via N:01/N:07).
-  - label: Coalition 1 Silo Reality (+7.93% Own Silo -> +13.78% Connected)
-    rule: '42.5% of your long-run impact requires neighbor lanes! Co-stake with K:04 (WellBeing) to house Kaiako
-      (Wedge 1x2: +2.27% CE), K:05 (GrowthNZ) to retain h6–h7 youth in domestic jobs (Wedge 1x3: +2.06%), and K:07
-      (Fiscal) to book 3.84x Year-5 ACC returns (Wedge 1x4: +1.53%).'
+  - label: Coalition 1 Silo Reality (+7.9% Own Silo -> +14% Connected)
+    rule: '43% of your long-run impact requires neighbor lanes! Co-stake with K:04 (WellBeing) to house Kaiako
+      (Wedge 1x2: +2.3% CE), K:05 (GrowthNZ) to retain h6–h7 youth in domestic jobs (Wedge 1x3: +2.1%), and K:07
+      (Fiscal) to book 3.8x Year-5 ACC returns (Wedge 1x4: +1.5%).'
   flavor_text: Markets don't lend to three-year-olds, and central silos can't manufacture aroha. We weave the cloak
     with the community first—then invite the other three lanes aboard so our children stay.
-  empirical_anchor: 'Document 1D Section 3.1; Document 3 Sections 1.1–1.2, Section 3.1 & Table A.2 (Row 1: +7.93%
-    own silo, +13.78% connected).'
+  empirical_anchor: 'Document 1D Section 3.1; Document 3 Sections 1.1.2, Section 3.1 & Table A.2 (Row 1: +7.9%
+    own silo, +14% connected).'
 - id: K:02
   name: 'The Pūrākau Weaver: Creative, Storyteller & Epistemic Guardian'
   deck: kaupapa
@@ -1488,7 +1488,7 @@ cards:
   base_mana: 0
   a3_game_sheet: 4
   a3_slot: 10
-  type: Wayfinder Persona — Adolescent Identity & Narrative Firewall (Ages 12–24)
+  type: Wayfinder Persona — Adolescent Identity & Narrative Firewall (Ages 12-2)
   lens:
   - Lens 1
   - Lens 2
@@ -1506,7 +1506,7 @@ cards:
   effects:
   - label: Innate Kaupapa — Akerlof–Kranton Identity & Epistemic Shield (Tap)
     rule: Bridge Story Lens A (Hydrofoil) and Story Lens B (Te Waka Hourua). Boost Gate-2/3 mentoring engagement
-      to 65.0%+ (B:03) and grant target Subsystem immunity to T:01 (Disinformation & Outrage Drag).
+      to 65%+ (B:03) and grant target Subsystem immunity to T:01 (Disinformation & Outrage Drag).
   - label: Stabilize the Civic Horizon
     rule: Spend 1 Mana during any Election Turn to add +2 to the D20 Political Stability roll (countering T:07 'Stop-Go'
       repeal swings) while advancing C:02 (Social Cohesion Index) toward 126.0.
@@ -1545,7 +1545,7 @@ cards:
       cohorts.
   - label: Fast-Track Provincial Graduation
     rule: When co-staking with K:05 (Enterprise) and K:06 (Fair Markets), add +2 to the Wedge (2x3) Additionality
-      D20 roll to hit the full 2.16x local food-hub multiplier and unlock C:10 (-0.64 pp national PAYE cut) one
+      D20 roll to hit the full 2.2x local food-hub multiplier and unlock C:10 (-0.64 pp national PAYE cut) one
       turn early!
   flavor_text: Regions don't need permanent cost-of-living patches when they keep fair value for what they grow.
     Anchor public school and hospital kitchens with local growers, and thriving provinces nourish our tamariki while
@@ -1565,7 +1565,7 @@ cards:
   - Lens 1
   - Lens 2
   - Lens 3
-  gate_or_phase: Command Zone (Continuous / Tap — 43.8% Neighbour-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 44% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start (Promoted Canonical Coalition 2 Leader)
   synergy_links:
   - B:06
@@ -1582,16 +1582,16 @@ cards:
   effects:
   - label: Innate Kaupapa — Clear the 20% LVR Cliff & House Local Kaiako (Tap)
     rule: 'Couple B:08 (Land Cooling), B:06 (Youth Grant), and E:01 (CERF Healthy Homes) to clear the discrete 20%
-      deposit cliff (Wedge 2: +2.22% CE) AND neutralize H:06 by keeping urban Kaiako, kuia, and aunties housed in
+      deposit cliff (Wedge 2: +2.2% CE) AND neutralize H:06 by keeping urban Kaiako, kuia, and aunties housed in
       their own suburbs via (Q_{k,0}/Q_k)^0.35.'
-  - label: Coalition 2 Silo Reality (+5.34% Own Silo -> +9.50% Connected & 3rd Slot Unlock!)
-    rule: '43.8% of your impact comes from neighbor lanes! Partner with K:01 so youth arrive at Age 20 thriving
-      (Wedge 1x2: +2.27%), K:05 to retire 85% of C:07 transfers (Wedge 2x3: +1.21%), and K:07/K:09 in SS2 to lower
+  - label: Coalition 2 Silo Reality (+5.3% Own Silo -> +9.5% Connected & 3rd Slot Unlock!)
+    rule: '44% of your impact comes from neighbor lanes! Partner with K:01 so youth arrive at Age 20 thriving
+      (Wedge 1x2: +2.3%), K:05 to retire 85% of C:07 transfers (Wedge 2x3: +1.2%), and K:07/K:09 in SS2 to lower
       Super to Age 64, restore TFR = 2.03 (N:08), and unlock your 3rd Whānau Mat slot!'
   flavor_text: A house is not a leveraged tax shelter; it is the standing place where mokopuna grow up within walking
     distance of their kuia and their kaiako.
-  empirical_anchor: 'Document 3 Sections 1.1–1.2, Section 2.3, Section 3.2 & Table A.2 (Row 2: +5.34% own silo,
-    +9.50% connected).'
+  empirical_anchor: 'Document 3 Sections 1.1–1.2, Section 2.3, Section 3.2 & Table A.2 (Row 2: +5.3% own silo,
+    +9.5% connected).'
 - id: K:05
   name: 'The Enterprise Wayfinder: GrowthNZ, Founders & Primary Builders'
   deck: kaupapa
@@ -1604,7 +1604,7 @@ cards:
   lens:
   - Lens 2
   - Lens 3
-  gate_or_phase: Command Zone (Continuous / Tap — 64.1% Neighbour-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 64% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start
   synergy_links:
   - B:05
@@ -1623,14 +1623,14 @@ cards:
     rule: Rotate capital out of passive dirt (z_l) into high-growth urban and primary firms (z_h, surging to 46%–56%
       of the cohort while staying net positive up to NZD 50M and breakeven at NZD 140M). May advance 1 Forward Wage
       Bridge to a squeezed Waiter parent to stop them from taking T:02 (Hyperbolic Low-Skill Shortcut)!
-  - label: Coalition 3 Silo Reality (+2.21% Own Silo -> +6.17% Connected)
-    rule: '64.1% of your value depends on neighbours! You cannot scale firms in a skill shortage: co-stake with K:01
-      for a 65% thriving domestic talent pool (Wedge 1x3: +2.06%), K:04/K:03 for de-hoarded land & food-hub scale
-      (Wedge 2x3: +1.21%), and K:07 for -60 bps credit & 18.25% PAYE (Wedge 3x4: +0.69%).'
+  - label: Coalition 3 Silo Reality (+2.2% Own Silo -> +6.2% Connected)
+    rule: '64% of your value depends on neighbours! You cannot scale firms in a skill shortage: co-stake with K:01
+      for a 65% thriving domestic talent pool (Wedge 1x3: +2.1%), K:04/K:03 for de-hoarded land & food-hub scale
+      (Wedge 2x3: +1.2%), and K:07 for -60 bps credit & 18.3% PAYE (Wedge 3x4: +0.69%).'
   flavor_text: '''Where will the jobs come from?'' From young Kiwis who grew up whole, kept a stake in their own
     land, and didn''t get poached to Sydney.'
-  empirical_anchor: 'Murphy, Shleifer, & Vishny (1991); Guvenen et al. (2023); Document 3 Sections 1.1–1.2, Section
-    3.3 & Table A.2 (Row 3: +2.21% own silo, +6.17% connected).'
+  empirical_anchor: 'Murphy, Shleifer, & Vishny (1991); Guvenen et al. (2023); Document 3 Sections 1.1.2, Section
+    3.3 & Table A.2 (Row 3: +2.2% own silo, +6.2% connected).'
 - id: K:06
   name: 'The Fair-Markets & Tax-Compact Mediator: Commerce & Regional Arbitrator'
   deck: kaupapa
@@ -1679,7 +1679,7 @@ cards:
   - Lens 1
   - Lens 2
   - Lens 3
-  gate_or_phase: Command Zone (Continuous / Tap — 74.3% Neighbour-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 74% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start
   synergy_links:
   - B:09
@@ -1698,10 +1698,10 @@ cards:
     rule: Authorize B:09 (Year-5 ACC Continuation Valuation) to defeat H:01 and draw 1 bonus face-down Compass/Audit
       card toward B:13 (Te Kapehu Whetū Launch). Pair B:14 with E:03 (Firmed Grid) to cut domestic interest rates
       by 60 to 100 bps.
-  - label: Coalition 4 Silo Reality (+1.00% Own Silo -> +3.90% Connected; 74.3% from Neighbours!)
-    rule: 'Trying to ''solve debt first'' alone triggers T:03 (-6.80% CE boomerang)! Partnering with K:01 (Wedge
-      1x4: +1.53%), K:04 (Wedge 2x4: +0.69%), and K:05 (Wedge 3x4: +0.69%) closes fiscal inflows so you sink debt
-      to 21%–22% GDP, cut PAYE to 18.25%, and sustain H:09 (3% Defense) if struck!'
+  - label: Coalition 4 Silo Reality (+1.0% Own Silo -> +3.9% Connected; 74% from Neighbours!)
+    rule: 'Trying to ''solve debt first'' alone triggers T:03 (-6.8% CE boomerang)! Partnering with K:01 (Wedge
+      1x4: +1.5%), K:04 (Wedge 2x4: +0.69%), and K:05 (Wedge 3x4: +0.69%) closes fiscal inflows so you sink debt
+      to 21%–22% GDP, cut PAYE to 18.3%, and sustain H:09 (3% Defense) if struck!'
   flavor_text: A sovereign nation cannot fire its citizens to make a 3-year spreadsheet pencil. Close the hardship
     inflows with your neighbours, and the 60-year ledger balances itself.
   empirical_anchor: Williamson (2009); NZ Treasury Circular 2024/15; Document 3 Sections 1.2, 2.2, 3.4 (MBA vs.
@@ -1735,7 +1735,7 @@ cards:
       1 free Additionality D20 re-roll per game and canceling T:03 ('Solve Debt First' thin-spreadsheet bluff).
   - label: Invoke Challenge Mode (Precautionary Capital Release)
     rule: Once per game, unlock E:02 (QEA-2026 Stationary Distribution Shift) without paying Political Drag—proving
-      that eliminating fossil-fuel variance (sigma_{z_2} -> 0) releases NZD 60.8B–91.5B in precautionary savings
+      that eliminating fossil-fuel variance (sigma_{z_2} -> 0) releases NZD 61B–92B in precautionary savings
       to self-finance national electrification!
   flavor_text: Linear spreadsheets erase subsistence corners and harmonic bottlenecks. Put the full probability
     distribution on the GPU, and the answer takes eleven seconds.
@@ -1810,7 +1810,7 @@ cards:
       and Subsystem Political Drag in 5–6 player Big Table games drops from 3.0 to 2.0 Wealth.
   - label: Constitutional Entrenchment Against the 6-Year Pendulum
     rule: Opponents cannot play culture-war spoilers (T:01), adds +4 to all Political Stability D20 checks (locking
-      out T:07's 6-year scissor-blade repeal), lifts Social Cohesion to 126.0 (C:02), and unlocks B:16 & N:09 Mythic
+      out T:07's 6-year scissor-blade repeal), lifts Social Cohesion to 126 (C:02), and unlocks B:16 & N:09 Mythic
       Victory!
   flavor_text: A single hull capsizes in the Southern Ocean. Two hulls lashed together with pono and aroha can cross
     the widest sea on earth.
@@ -1841,13 +1841,13 @@ cards:
   - T:04
   - T:07
   effects:
-  - label: Quadratic Bottleneck Compression (88.9% Less Congestion & 75% Less Yr-3 Risk)
+  - label: Quadratic Bottleneck Compression (89% Less Congestion & 75% Less Yr-3 Risk)
     rule: Because implementation surge penalties scale convexly with step size ((1/3)^2 = 1/9), stepping capacity
-      in regional thirds eliminates 88.9% of workforce surge drag and cuts Year-3 Mirror-Investment capital at risk
+      in regional thirds eliminates 89% of workforce surge drag and cuts Year-3 Mirror-Investment capital at risk
       by 75% (-NZD 1.6B/yr vs. -NZD 6.5B/yr)—slashing early J-curve penalties on D20 Political Stability rolls!
   - label: Fleet Experience Counters (L_m) & Learning Economics by Doing
     rule: Each completed regional echelon places 1 Fleet Experience Counter (L_m), granting +2 to subsequent Additionality
-      D20 rolls and pulling self-financing cash breakeven 2.4 years earlier to Year 16.8!
+      D20 rolls and pulling self-financing cash breakeven 2.4 years earlier to Year 17!
   flavor_text: 'Arrow proved that capability is forged in the doing, not the decreeing. Better still: when you learn
     macroeconomics by doing it on a tabletop first, nobody''s mokopuna has to pay the tuition.'
   empirical_anchor: Arrow (1962, 'The Economic Implications of Learning by Doing'); Christiano, Eichenbaum, &
@@ -1919,9 +1919,9 @@ cards:
     rule: Because Stage-1 early inputs are highly substitutable (phi_1 = +0.35 > 0 in Ages 0–5), B:01 universal
       wraparound rescues vulnerable toddlers regardless of starting hardship; Stage-2 skill then flips to strong
       CES complementarity (phi_2 = -0.95 < 0)—placing a Readiness Counter on every B:01 cohort that multiplies
-      B:03/B:04 mentoring returns by 3x (+3.19% CE Wedge 1) while proving why late crisis remediation fails.
-  - label: +NZD 15.3k/yr Private Parental Crowd-In
-    rule: Raising the marginal productivity of home engagement crowds in +NZD 15.3k/yr of private parental reading,
+      B:03/B:04 mentoring returns by 3x (+3.2% CE Wedge 1) while proving why late crisis remediation fails.
+  - label: +NZD 15k/yr Private Parental Crowd-In
+    rule: Raising the marginal productivity of home engagement crowds in +NZD 15k/yr of private parental reading,
       nutrition, and care per child at zero extra Crown cost—whereas trying to remediate a missed Gate 1 after Age
       15 loses >70% of ROI.
   flavor_text: Early investment doesn't just add a brick to the wall; it changes the geometry of every arch you
@@ -1955,9 +1955,9 @@ cards:
   - label: Match Governance Horizon to the 81-Year Human Asset
     rule: Governing an 81-year human capability asset with a 3-year cash-appropriations rule violates Williamson's
       asset-specificity principle. Aligns Crown budgeting with ACC's 2.0% real SRTP actuarial ledger—permanently
-      canceling H:01 ('Wait 18.8 Years!' Cash-Flow Myopia).
+      canceling H:01 ('Wait 19 Years!' Cash-Flow Myopia).
   - label: Credible Commitment Shield
-    rule: Upgrades B:09's Year-5 audit (1.16x direct / 3.84x total fiscal return) into a statutory covenant, adding
+    rule: Upgrades B:09's Year-5 audit (1.2x direct / 3.8x total fiscal return) into a statutory covenant, adding
       +2 to D20 Political Stability rolls and drawing 1 extra hidden Compass card toward B:13.
   flavor_text: You wouldn't finance a sixty-year hydro dam on a ninety-day payday loan. Stop governing eighty-year
     human lives on a three-year election cashbook.
@@ -1975,7 +1975,7 @@ cards:
   lens:
   - Lens 1
   - Lens 2
-  gate_or_phase: Community Scaling (17.3% Vanguard -> 65.0%+ Universal Reach)
+  gate_or_phase: Community Scaling (17% Vanguard -> 65%+ Universal Reach)
   cost_or_requirement: Pair Universal Crown Funding & Standards with Nested Iwi, Whānau Ora, Marae, Kura &
     Community Co-Stewardship (or 1 K:09 Experience Token)
   synergy_links:
@@ -1991,7 +1991,7 @@ cards:
   - label: Defeat Both NPM Procurement Silos & Privatized Vouchers
     rule: Proves that nested local commons backed by universal Crown funding outperform both siloed NPM ministry
       contracts (H:02) and fragmented voucher markets. Scales B:03 (Tuakana–Teina Mentoring) and C:04 (Marae/School
-      Hubs) smoothly from the 17.3% vanguard to 65.0%+ national reach without bureaucratic quality decay.
+      Hubs) smoothly from the 17% vanguard to 65%+ national reach without bureaucratic quality decay.
   - label: Cross-Table Commons Bonus
     rule: Whenever two players cooperate across the River on a community or food-hub card (C:04, C:09, K:09), both
       players gain +1 Mana (Variant B Commons Dividend).
@@ -2028,9 +2028,9 @@ cards:
     rule: 'Ideas are non-rival: sharing a recipe never shrinks the bowl! Enacted River reforms persist permanently
       as shared infrastructure, raising the Variant B Inverse-Hub Royalty cap from 2 to 3 Mana payouts per card
       per turn.'
-  - label: Non-Rival Domestic Idea Multiplier (1.75x Spillover & ~8x Builder Surge)
+  - label: Non-Rival Domestic Idea Multiplier (1.8x Spillover & ~8x Builder Surge)
     rule: Expanding the pool of thriving domestic founders nearly eight-fold (active high-talent entrepreneurs z_h
-      surging from 6.2%–6.9% to 46.0%–52.9% via B:08 + B:06) triggers a 1.75x Romer knowledge spillover across
+      surging from 6.2%–6.9% to 46%–53% via B:08 + B:06) triggers a 1.8x Romer knowledge spillover across
       urban deep-tech and MPI primary value-add—compounding real wage growth by +6.8% to +9.6% across all regions.
   flavor_text: 'Land is rival: if I hoard the acre, you stand in the street. Ideas are non-rival: every mind we
     rescue from hardship multiplies the blueprints available to every builder in Aotearoa.'
@@ -2096,7 +2096,7 @@ cards:
   - H:06
   effects:
   - label: 'Resolve Household Childbearing Gridlock (TFR: 1.66 -> 2.03)'
-    rule: Fertility collapses when one partner bears unbuffered career/time penalties under 3.10x housing costs
+    rule: Fertility collapses when one partner bears unbuffered career/time penalties under 3.1x housing costs
       (T:09 Seoul Squeeze). Combining universal B:01 ECE, cooled urban housing (B:08), and the +8.1% Age-64 Kuia/Koroua
       caregiving boost (K:09) restores replacement fertility (TFR = 2.03) endogenously!
   - label: Populate Your 3rd Whānau Mat Slot
@@ -2106,7 +2106,7 @@ cards:
   flavor_text: People haven't stopped wanting children; they stopped having a village and a roof they could afford
     at age twenty-eight. Restore the kuia and cool the rent, and the cradles fill themselves.
   empirical_anchor: 'Doepke & Kindermann (2019, Econometrica: ''Bargaining over Babies''); Daruich (2022, Econometrica);
-    Document 3 Section 2.3 & Section 3.5 (Wedge 4: +2.46% CE).'
+    Document 3 Section 2.3 & Section 3.5 (Wedge 4: +2.5% CE).'
 - id: N:09
   name: 'The Unclaimed Medallion: The Aotearoa Synthesis (Nobel Horizon, 203X)'
   deck: nobel
@@ -2138,7 +2138,7 @@ cards:
     rule: Synthesizes Arrow's fleet learning, Coase & Williamson's institutional ledgers, Heckman's dynamic complementarity,
       Ostrom's polycentric marae/community commons, and Romer's non-rival ideas on a single GPU-solved spatial OLG
       board.
-  - label: Generational Proof (+24.70% Pre-NDC / +25.19% Te Kāhui Waka CE)
+  - label: Generational Proof (+24.7% Pre-NDC / +25.2% Te Kāhui Waka CE)
     rule: Doubles all active Variant B Nobel Royalties at endgame scoring and satisfies the theoretical capstone
       for B:16 (Lifting the Gold from the River)—proving every wealth vigintile (1–20) and all 4 regions rise together
       without leaving a single cohort behind.
@@ -2147,7 +2147,7 @@ cards:
   empirical_anchor: Stiglitz, Sen, & Fitoussi (2009); NZ Treasury Living Standards Framework; Document 1A–1D, 2A–2T
     & Document 3 Synthesis.
 - id: H:01
-  name: The Cash-Flow Myopia Trap ('Wait 18.8 Years!' / 3-Year Budget Wall)
+  name: The Cash-Flow Myopia Trap ('Wait 19 Years!' / 3-Year Budget Wall)
   deck: orthodoxy
   module_level: 3
   mana_tier: 2
@@ -2175,11 +2175,11 @@ cards:
   effects:
   - label: The 3-Year Cash Blindfold
     rule: Evaluates 81-year human capability investments strictly inside a 3-year cash window while ignoring +NZD
-      17.7B–28.5B/yr in downstream hospital, state-care, and justice bills. Increases Political Drag on B:01 and
+      18B–29B/yr in downstream hospital, state-care, and justice bills. Increases Political Drag on B:01 and
       B:03 by +1 Wealth and applies a -2 penalty to D20 Political Stability rolls.
   - label: Actuarial Counter-Break
-    rule: Defeated permanently when K:07 or any Steward plays B:09 + N:04—booking 1.16x direct cost avoidance (NZD
-      10.68B) and 3.84x total return (NZD 35.25B) at Year 5 inside a single parliamentary term!
+    rule: Defeated permanently when K:07 or any Steward plays B:09 + N:04—booking 1.2x direct cost avoidance (NZD
+      11B) and 3.8x total return (NZD 35B) at Year 5 inside a single parliamentary term!
   flavor_text: '''Come back in 2045 when those toddlers pay income tax.'' Famous last words of an accounting rule
     that happily signs blank cheques for prisons every Tuesday.'
   empirical_anchor: Public Finance Act short-horizon cash bias vs. NZ Treasury Circular 2024/15; Document 1D Section
@@ -2249,12 +2249,12 @@ cards:
   effects:
   - label: When 1972 Rules Meet 2026 Rents (>45% Transience)
     rule: Calibrates welfare as if families still lived in 1972 (1.2x median house-price-to-income and near-full
-      employment). Today's >45% private-rental transience and 3.10x metro housing stress widen the i_c = 0 early
+      employment). Today's >45% private-rental transience and 3.1x metro housing stress widen the i_c = 0 early
       hardship corner from D20 rolls 1–4 (22% Dunedin baseline) to rolls 1–6 (30% GUiNZ reality), lifting reactive
-      fiscal drag by +NZD 10.8B/yr to NZD 28.5B/yr!
+      fiscal drag by +NZD 11B/yr to NZD 29B/yr!
   - label: 4.4x High-Return Counter-Pivot
     rule: Once exposed via B:10/E:04 and met with B:01 + B:08, rescuing that wider 30% margin raises B:09's Year-5
-      total actuarial return from 3.84x to 4.4x outlay!
+      total actuarial return from 3.8x to 4.4x outlay!
   flavor_text: Governing 2026 renters with 1972 nostalgia is like navigating Cook Strait with a map drawn before
     the earthquake.
   empirical_anchor: 'Dunedin Multidisciplinary Study (1972 cohort: 22%) vs. Growing Up in New Zealand (GUiNZ 2009–2026
@@ -2286,7 +2286,7 @@ cards:
   - T:05
   effects:
   - label: 100% Domestic Cost, Zero Domestic Harvest
-    rule: When unseeded 21-year-olds hit 3.10x Auckland rents and low z_l-starved wages, 19.3% to 23.4% of metro
+    rule: When unseeded 21-year-olds hit 3.1x Auckland rents and low z_l-starved wages, 19% to 23% of metro
       graduates depart across the Tasman—leaving NZ taxpayers holding 100% of Ages 0–20 education & health CapEx
       while gifting 40 years of peak adult PAYE and innovation EBITDA to Australia! (Exile 1 Slot-2 Pakeke to the
       Sydney Zone on a D20 roll of 1–5).
@@ -2296,7 +2296,7 @@ cards:
   flavor_text: No business on earth would spend twenty years funding R&D prototypes and then ship them free of charge
     to its main competitor every graduation day.
   empirical_anchor: 'Stats NZ International Migration Series (2024–2026); Doc 3 Exec Overview (''Closed-Loop Accounting'')
-    & Section 3.3 (Wedge 3: +4.79% CE).'
+    & Section 3.3 (Wedge 3: +4.8% CE).'
 - id: H:05
   name: The 'Actuarial Burden' & Means-Testing Trap ('Raise Super to 70!')
   deck: orthodoxy
@@ -2325,7 +2325,7 @@ cards:
   effects:
   - label: The Double Boomerang of Age-70 Hikes & Means-Testing
     rule: Raising NZ Super to Age 70 shifts 38%–52% of manual/regional seniors onto disability/hardship transfers,
-      withdraws -36.2% of extended-whānau caregiving (K_whanau), and hits prime-age working parents with psi_sandwich
+      withdraws -36% of extended-whānau caregiving (K_whanau), and hits prime-age working parents with psi_sandwich
       = 0.35 elder-care drag! Meanwhile, means-testing Super imposes punitive effective marginal tax rates (EMTRs)
       on life savings (a') and fractures universal political backing.
   - label: MBA + MPP Convergence Counter-Break
@@ -2351,7 +2351,7 @@ cards:
   lens:
   - Lens 1
   - Lens 3
-  gate_or_phase: Auckland (Q = 3.10) & Large Cities (Q = 2.05) Delivery Bottleneck
+  gate_or_phase: Auckland (Q = 3.1) & Large Cities (Q = 2.1) Delivery Bottleneck
   cost_or_requirement: Throttles Urban B:01 & K:09 Yield Until Countered by B:08 (Land Cooling) + K:04
   synergy_links:
   - B:01
@@ -2363,12 +2363,12 @@ cards:
   - N:07
   effects:
   - label: Money Appropriated, Educators Priced Out of Town
-    rule: Even after Parliament funds B:01 (First 2000 Days), uncooled 3.10x Auckland and 2.05x Large-City housing
+    rule: Even after Parliament funds B:01 (First 2000 Days), uncooled 3.1x Auckland and 2.1x Large-City housing
       costs price early-childhood Kaiako, teachers, and extended-whānau aunties/kuia out of high-need urban suburbs—throttling
       effective K_whanau and ECE fidelity via (Q_{k,0}/Q_k)^0.35 (-3 to Wedge 1x2 Additionality D20 rolls)!
   - label: Spatial Co-Location Counter-Break
     rule: Cleared by coupling K:04 (WellBeing & Housing Weaver) + B:08 (10-Yr LVT cooling urban housing -7.5% to
-      -10.5%) + B:06 (Youth Grant), keeping Kaiako and kuia anchored within walking distance of local whānau (+2.27%
+      -11%) + B:06 (Youth Grant), keeping Kaiako and kuia anchored within walking distance of local whānau (+2.3%
       CE Wedge 1x2).
   flavor_text: A voucher isn't an early childhood centre if no teacher can afford to live within forty kilometres
     of the children.
@@ -2405,7 +2405,7 @@ cards:
       lobbies bid every extra dollar of borrowing capacity straight into higher land prices—threatening to trigger
       T:10 (1989 Tokyo Bubble) and erase young-family LVR gains!
   - label: Three-Point Hydrofoil Lockout
-    rule: Defeated permanently by holding B:08 (1.5% LVT) + B:14 (Debt Sinking to 21%–22%) + B:15 (1.65x Ring-Fenced
+    rule: Defeated permanently by holding B:08 (1.5% LVT) + B:14 (Debt Sinking to 21%–22%) + B:15 (1.7x Ring-Fenced
       Infra Pool) at 100% sufficiency—channeling surpluses into productive firms and public lifelines instead of
       land inflation.
   flavor_text: Hand out buyer subsidies without taxing land, and you haven't helped a single first-home buyer—you've
@@ -2444,7 +2444,7 @@ cards:
       cartels impose regional markup wedges M_olig = [1.08, 1.07, 1.05, 1.04]—siphoning -1 Wealth/turn from Rural/Small
       primary producers at the farm gate and inflating build costs by +20% against urban B:06 Youth Grants!
   - label: Pro-Competitive Counter-Break
-    rule: Shattered by pairing K:06 (Fair-Markets Mediator) + C:08 (Monopsony/Duopoly Breaker) + C:09 (1.60x–2.16x
+    rule: Shattered by pairing K:06 (Fair-Markets Mediator) + C:08 (Monopsony/Duopoly Breaker) + C:09 (1.6x–2.2x
       Regional Food Hubs), restoring M_olig -> 1.00 and unlocking C:10's -0.64 pp PAYE cut.
   flavor_text: Two grocery chains at the checkout, four banks on the mortgage, two merchants on the Gib board, and
     one buyer at the farm gate—and Wellington wondered why families couldn't get ahead.
@@ -2478,14 +2478,14 @@ cards:
   - K:07
   - K:10
   effects:
-  - label: Crushes an Unreformed SS0 Hull (-21.69% CE & 200% Debt!)
+  - label: Crushes an Unreformed SS0 Hull (-22% CE & 200% Debt!)
     rule: Lifting defense from ~1.2% to 3.0% of GDP (+NZD 8.0B/yr) has a 0x domestic human-capital return. Loaded
-      onto an unreformed SS0 hull (or fragmented single-silo table), Crown Debt hits the 200.0% sovereign ceiling,
-      PAYE surges to 30.68%, and national welfare collapses to -21.69% CE!
-  - label: Absorbed Cleanly on SS2 Hydrofoils (+21.18% Pre-NDC CE & 31.5% Debt!)
+      onto an unreformed SS0 hull (or fragmented single-silo table), Crown Debt hits the 200% sovereign ceiling,
+      PAYE surges to 31%, and national welfare collapses to -22% CE!
+  - label: Absorbed Cleanly on SS2 Hydrofoils (+21% Pre-NDC CE & 32% Debt!)
     rule: A united table up on SS2 hydrofoils (B:11 + B:14 + B:15) carries the full 3.0% defense load in stride—delivering
-      +21.18% CE pre-NDC (+21.40% full, a +42.87 to +43.09 pp advantage over SS0!), sinking debt from 42.0% down
-      to 31.5% GDP, and STILL cutting PAYE to 19.95%–20.65%!
+      +21.2% CE pre-NDC (+21.4% full, a +42.9 to +43.1 pp advantage over SS0!), sinking debt from 42% down
+      to 32% GDP, and STILL cutting PAYE to 20%–21%!
   flavor_text: Eight billion dollars a year for frigates and missiles sinks a leaking displacement hull; the exact
     same eight billion invested first in our people builds an economy strong enough to carry both.
   empirical_anchor: NZ Defence Capability Plan & Allied 3.0% GDP Benchmark; Document 3 Exec Overview, Part II ('Same
@@ -2517,13 +2517,13 @@ cards:
   - T:04
   effects:
   - label: 42% Capital Dissipation (NZD 3.8B Flushed into Rents & Bad Debt)
-    rule: Handing NZD 62k+ capital grants on Day 1 to the 82.7% of 20-year-olds who never received Gate 1–3 developmental
+    rule: Handing NZD 62k+ capital grants on Day 1 to the 83% of 20-year-olds who never received Gate 1–3 developmental
       scaffolding (reduced or lacking financial/enterprise readiness, h1–h2) suffers 42% capital-mismatch dissipation—wasting
       NZD 3.8B into landlord rent extraction and failed ventures without clearing the 20% LVR cliff!
   - label: Precision Vanguard Counter-Break
-    rule: Completely avoided by sequencing B:05 (17.3% Early-Adopter Youth Grant Bridge in Waves 1–6 at 0% waste)
+    rule: Completely avoided by sequencing B:05 (17% Early-Adopter Youth Grant Bridge in Waves 1–6 at 0% waste)
       while N:01 + N:07 scale B:03 mentoring across Waves 1–6 ahead of Wave-13 universal B:06 launch (saving NZD
-      12.9B gross).
+      13B gross).
   flavor_text: Critics love to shout that twenty-year-olds will blow a capital grant—which is only true if you skipped
     mentoring them at fourteen. Sequence the horse before the cart, and waste drops to zero.
   empirical_anchor: Document 1D Section 3.1 ('Sequencing Youth Grants Behind Mentoring'), Figure 1D.3 & Table 1D.4
@@ -2552,11 +2552,11 @@ cards:
   - K:03
   - K:04
   effects:
-  - label: Cold Cash-Flow Physics (+NZD 11.0B to 15.55B/yr Fuel Savings)
+  - label: Cold Cash-Flow Physics (+NZD 11B to 16B/yr Fuel Savings)
     rule: Front-loads public electrification across Rural+Small first (Waves 1–3, hitting 100% provincial coverage
-      at Year 3 where mandatory fuel/energy floors e_bar_k = 0.048 & 0.036 are 2.25x–3.00x Auckland's 0.016), then
+      at Year 3 where mandatory fuel/energy floors e_bar_k = 0.048 & 0.036 are 2.3x–3.0x Auckland's 0.016), then
       Large (Waves 4–6) and Auckland (Waves 7–9)—compressing e_bar_k by [-28%, -25%, -18%, -14%] and saving ~NZD
-      3,000/yr net (+NZD 12.9B/yr nationally).
+      3,000/yr net (+NZD 13B/yr nationally).
   - label: Healthy Homes & Regional Wage Convergence
     rule: Warm, dry electrified homes slash paediatric respiratory hospital admissions (Exit 2) while cutting farm/SME
       operating costs so C:07 geographic transfers can self-retire by 85% in SS2 (C:10)!
@@ -2587,11 +2587,11 @@ cards:
   - K:08
   - K:09
   effects:
-  - label: Release NZD 60.8B–91.5B in Hoarded Precautionary Buffers (Delta A_prec)
+  - label: Release NZD 61B–92B in Hoarded Precautionary Buffers (Delta A_prec)
     rule: Capital without energy is a statue; labor without energy is a corpse! Converting imported fossil-fuel
       price volatility (sigma_{z_2} = 0.25 -> 0) into household, marae, and 19,000+ farm-pond floating solar + battery
-      endowments releases NZD 60.8B–91.5B in precautionary liquid buffers—100% self-financing national electrification
-      CapEx (NZD 60.2B–75.5B) with zero crowd-out of social investment!
+      endowments releases NZD 61B–92B in precautionary liquid buffers—100% self-financing national electrification
+      CapEx (NZD 60B–76B) with zero crowd-out of social investment!
   - label: 3x Kaumātua Warm-Glow Solar Bequest (wg_2 = 3.0)
     rule: When paired with K:09, elders investing retirement buffers into debt-free family/marae solar roofs earn
       3x Living Bequest Mana while permanently insulating descendants against energy inflation.
@@ -2700,9 +2700,9 @@ cards:
   - T:07
   effects:
   - label: Perishable in Childhood (Ages 0–19) -> Durable After Age 20!
-    rule: 'Distinguishes perishable developing capability (vulnerable to T:07''s 39.2% fade-out before Age 20) from
+    rule: 'Distinguishes perishable developing capability (vulnerable to T:07''s 39% fade-out before Age 20) from
       banked adult human & home equity: once a cohort crosses Age 20 with B:03 + B:06 locked in, place a Durable
-      Equity Seal on that cohort—rendering its +20.86% CE banked payoff permanently immune to future T:07 political
+      Equity Seal on that cohort—rendering its +21% CE banked payoff permanently immune to future T:07 political
       repeal (Doc 3 Table 4.1 Row F)!'
   - label: 2nd-Generation Daruich Wave Echo (Omega_echo)
     rule: 20.5 years (~7 turns) after Wave m launched, that thriving cohort becomes prime-age z_h founders AND warm,
@@ -2711,7 +2711,7 @@ cards:
   flavor_text: Protect the sapling for twenty summers until its roots hit bedrock; after that, no three-year gale
     from Wellington can blow the forest down.
   empirical_anchor: Daruich (2022, Econometrica); Document 1D Section 4 (T_gen ≈ 20.5-yr echo kernel Omega_echo);
-    Document 3 Section 4.2 & Table 4.1 Row F (+20.86% CE post-Yr-20 durability).
+    Document 3 Section 4.2 & Table 4.1 Row F (+21% CE post-Yr-20 durability).
 - id: P:01
   name: Custom Orbital Flight Plan X (Te Kapehu Whetū Modding Card)
   deck: wildcard
@@ -2737,7 +2737,7 @@ cards:
   effects:
   - label: Design Your Own Orbital Slingshot
     rule: 'Test alternative Phase-2 fiscal rules against Plan A (Yr 25), Plan B (Yr 20), and Plan C (Yr 15): e.g.,
-      a Turn-6 hybrid launch at <= 40.0% Crown Debt, a 60/40 Debt-vs-Infra split, or a -3.0 pp early PAYE dividend.'
+      a Turn-6 hybrid launch at <= 40% Crown Debt, a 60/40 Debt-vs-Infra split, or a -3.0 pp early PAYE dividend.'
   - label: Solver Verification Challenge
     rule: Validate your table's custom flight plan in Configure_TimeGrid_Params.m and share winning parameterizations
       back to the open-source repository!
@@ -2867,18 +2867,18 @@ cards:
   - E:03
   - K:03
   effects:
-  - label: Expose the NZD 18.5B Offshore NDC Liability & Exotic-Pine Arbitrage
-    rule: When activated, adds SS0's unfunded NZD 18.5B Paris NDC compliance liability (+45 bps climate spread)
+  - label: Expose the NZD 19B Offshore NDC Liability & Exotic-Pine Arbitrage
+    rule: When activated, adds SS0's unfunded NZD 19B Paris NDC compliance liability (+45 bps climate spread)
       and the exotic monoculture pine ETS land-lock trap (kappa_pine = 1.0 saturating after Year 25) onto the macro
       board.
-  - label: Unlock Wedge 5 (+1.03% CE National / +4.5% Clean-Green Rural Export Premium)
+  - label: Unlock Wedge 5 (+1.0% CE National / +4.5% Clean-Green Rural Export Premium)
     rule: Coupling E:01–E:03 electrification, circular biogenic pricing, and MPI native-forestry/horticulture rotation
-      extinguishes offshore NDC liabilities domestically and lifts SS2 national welfare from +24.70% CE (pre-NDC)
-      to +24.92% CE (+21.40% CE under 3% Defense)!
+      extinguishes offshore NDC liabilities domestically and lifts SS2 national welfare from +25% CE (pre-NDC)
+      to +25% CE (+21% CE under 3% Defense)!
   flavor_text: Build the core hydrofoil on pure household and fiscal physics first; snap in the climate wing whenever
     your table is ready to price carbon and biogenic trade.
   empirical_anchor: NZ Treasury/MfE Paris NDC Liability Estimates; Parliamentary Commissioner for the Environment
-    Forestry/ETS Reviews; Document 3 Wedge 5 (+1.03% CE) & Table A.1.
+    Forestry/ETS Reviews; Document 3 Wedge 5 (+1.0% CE) & Table A.1.
 - id: P:06
   name: Breaking-News Shock & Custom Orthodoxy Boss (Stress-Test Blank)
   deck: wildcard
@@ -2910,7 +2910,7 @@ cards:
     rule: 'Simulate a live crisis: an AI white-collar displacement wave, a sovereign bond-market tantrum, a pandemic
       border closure, a Foot-and-Mouth biosecurity scare, or a strait shipping blockade.'
   - label: Comparative Resilience Audit
-    rule: Score how badly the shock punishes an uncoupled displacement hull versus a high-trust (C:02 = 126.0),
+    rule: Score how badly the shock punishes an uncoupled displacement hull versus a high-trust (C:02 = 126),
       low-debt (21% GDP), cognitively flexible (C:05) Aotearoa!
   flavor_text: We don't know which storm will hit in 2034—only that a foil-borne crew with low debt, local food,
     solar roofs, and agile minds survives storms that sink leaky hulls.
@@ -2941,7 +2941,7 @@ cards:
   - T:10
   effects:
   - label: Race Against Singapore, Denmark, Ireland, or Australia
-    rule: Chart a custom rival yacht alongside Finland, Scotland (96.0 ceiling), South Korea, and 1989 Japan—e.g.,
+    rule: Chart a custom rival yacht alongside Finland, Scotland (96 ceiling), South Korea, and 1989 Japan—e.g.,
       Australia (resource-rich + compulsory super, but trapped in metropolitan land inflation) or Ireland (FDI surge,
       but domestic housing bottleneck).
   - label: Overtake on Coupled Foils

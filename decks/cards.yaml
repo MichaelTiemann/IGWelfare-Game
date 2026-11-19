@@ -297,8 +297,9 @@ cards:
   - label: Trans-Tasman Brain-Drain Immunity
     rule: Cannot be exiled to the Abroad (Australia/OECD) Zone (reversing graduate outflows by +3,550/yr retained
       builders and lifting real regional wages by +6.8% to +9.6%).
-  flavor_text: Give a twenty-year-old a NZD 500-a-week survival flat and you get a barista in Melbourne. Give them
-    a tūrangawaewae and a capital runway, and you get the next Aotearoa renaissance.
+  flavor_text: Price a twenty-year-old out of home with NZD 500-a-week survival rents and twenty years of public
+    upbringing boards a one-way flight to Sydney or Melbourne. Give rangatahi a tūrangawaewae and a capital
+    runway, and they build the next Aotearoa renaissance at home.
   empirical_anchor: Ackerman & Alstott (1999); Kiyotaki & Moore (1997); Document 1D Table 1D.3; Document 3 Table
     A.1 (+0.89% CE isolated + +2.22% CE Wedge 2).
 - id: B:07
@@ -371,8 +372,9 @@ cards:
       right up to NZD 50M net worth (breakeven at NZD 140M).
   flavor_text: Tax dormant dirt gently on the way up, cut taxes on real builders step for step, and watch speculative
     hoards turn into high-wage workshops.
-  empirical_anchor: Guvenen et al. (2023, QJE); Document 1D Section 1 & Table 1D.3 (10-yr +0.15%/yr LVT / -0.80%/yr
-    Corp lockstep); Document 3 Section 1.2 & Section 3.2.
+  empirical_anchor: Adapting Guvenen et al. (2023, QJE — use-it-or-lose-it book-wealth taxation) to NZ's
+    land-heavy balance sheet via a 1.50% LVT + Corporate Tax Cut; George (1879); Document 1A Part II Aspect 3 &
+    Technical Specification Section 4.
 - id: B:09
   name: ACC Actuarial Time-Bend (Year-5 Continuation Valuation)
   deck: base
@@ -587,7 +589,9 @@ cards:
       8.0B/yr / 3.0% GDP Defense Shock) at 31.5% debt and +21.18% CE pre-NDC welfare.
   flavor_text: Austerity hawks tried to shrink debt by starving children and ended up at 112% debt anyway. Cure
     the hardship pipeline first, and the surplus melts the debt mountain to 21%.
-  empirical_anchor: Barro (1979); Document 1D Table 1D.2; Document 3 Part II & Table A.1 (+1.25% CE isolated).
+  empirical_anchor: Barro (1979, J-curve tax smoothing across transition); Romer & Romer (2018, sovereign fiscal
+    space); Laubach (2009, debt-to-GDP spread compression); NZ Treasury He Tirohanga Mokopuna (2025); Document 1A
+    Part V.
 - id: B:15
   name: 1.65x Infrastructure, PAYE Cut & Age-64 Super Pool (2050 Right-Half Stabilizer)
   deck: base
@@ -614,8 +618,8 @@ cards:
   - H:05
   effects:
   - label: 1.65x Public Capital Reinvestment (Standalone Boost)
-    rule: Multiplies allocated surplus dollars by 1.65x into C:03 Sovereign Grid, Water, and Core Health Armor—slashing
-      ongoing public transfer dependency as regional wages rise.
+    rule: Multiplies allocated surplus dollars by 1.65x into C:03 Sovereign Grid, Water, and Core Health Armor—retiring
+      temporary spatial cost cushions as regional market wages rise.
   - label: Full 50/50 Harvest (18.25% PAYE & Universal NZ Super at Age 64!)
     rule: When paired at 100% sufficiency with B:14 (and C:10's 85% T_k transfer retirement), deliver a permanent
       -3.15 to -3.75 pp working-age PAYE tax cut (22.0% -> 18.85%–18.25%) AND lower Universal NZ Superannuation
@@ -920,19 +924,22 @@ cards:
   - K:03
   - K:06
   effects:
-  - label: Adjacency Tax Leakage (Exposed Middle-Hinge Squeeze on 'Large')
-    rule: Per Labrousse spatial adjacency (Rural <-> Small <-> Large <-> Auckland), one-step capital leakage between
-      Rural/Small and Auckland is low (-15%), whereas moving alone in Large Regional Cities triggers a severe two-flank
-      bleed (-60% tax sufficiency lost outward to Small/Rural and upward to Auckland) until C:06 locks adjacent
-      keys!
+  - label: Spatial Step-Adjacency Tax-Base Bleed (-15% Flank vs. -60% Two-Flank)
+    rule: Combining fiscal-competition tax flight (Zodrow & Mieszkowski, 1986; Agrawal et al., 2024) with the 4x4
+      spatial step-migration friction matrix adapted from Labrousse & Perdereau (2026) (Rural <-> Small <-> Large
+      <-> Auckland), uncoordinated regional wealth/corporate tax shifts suffer low one-flank bleed at the ends
+      (-15% in Rural/Auckland) but severe two-flank mobile firm and trust leakage (-60%) in Large Cities unless
+      locked by C:06.
   - label: Centralized Corporate Caterer Siphon
     rule: Routing school/hospital food budgets through centralized import caterers instead of C:09 Regional Food
-      Hubs forfeits the 1.60x–2.16x provincial multiplier, keeping Rural & Small dependent on SS1 fiscal transfers
+      Hubs forfeits the 1.60x–2.16x provincial multiplier, keeping Rural & Small reliant on SS1 spatial cost cushions
       and blocking C:10's -0.64 pp PAYE cut.
-  flavor_text: Raise land taxes in one city alone and mobile capital hops the boundary line; buy plastic-wrapped
-    school lunches from offshore supply chains and provincial towns never graduate off welfare.
-  empirical_anchor: Labrousse & Perdereau (2026) spatial incidence & step-migration friction; NC State CEFS local
-    procurement audit; Document 3 Sections 1.1–1.2.
+  flavor_text: Leave regional tax rules uncoordinated and mobile corporate capital and trust domiciles hop the
+    boundary line; route public school lunch budgets through offshore caterers and you starve provincial growers
+    of the 2x local multiplier that lets regional wages stand tall.
+  empirical_anchor: Zodrow & Mieszkowski (1986) & Agrawal, Brueckner, & Brülhart (2024, fiscal competition);
+    spatial step-migration matrix adapted from Labrousse & Perdereau (2026, JME); Jackson (2025, CLES anchor
+    procurement); Document 2B.
 - id: T:07
   name: The Two-Term 'Stop-Go' Pendulum (Half-Additionality vs. 6-Yr Scissor-Blade)
   deck: traps
@@ -1098,18 +1105,19 @@ cards:
   - C:05
   - P:05
   effects:
-  - label: Macroeconomic Capital Destruction Reality Check
-    rule: 'Reveal the non-linear global shock damage function (Bilal & Känzig, 2024): unbuffered supply-chain, seismic,
-      and extreme weather shocks destroy 2%–5% of unarmored physical capital K_t per decade and depress unbuffered
-      GDP by >12%.'
+  - label: Quantify Unbuffered Climate & Lifeline Capital Destruction
+    rule: Exposes how unmitigated climate warming depresses GDP by greater than 12% per 1°C (Bilal & Känzig,
+      2024) while unarmored seismic and supply-chain lifeline cascades destroy 2%–5% of physical capital K_t per
+      decade (Hallegatte et al., 2019; Te Waihanga). Forces unpriced physical attrition onto the Crown balance
+      sheet.
   - label: Asymmetric Foil Advantage
     rule: Displacement-mode players relying on deferred maintenance or passive floodplain dirt take 3x Unbuffered
       Event Damage. Players holding B:09 (ACC Forward Accounting) and C:03 (Sovereign Grid, Water & Health Armor)
       earn Double Value on prevented infrastructure cascades.
   flavor_text: Orthodox models assumed local shocks would shave a percent off the margin. Then supply chains snapped
     and cyclones hit unmaintained lifelines—proving resilience IS the macroeconomy.
-  empirical_anchor: Bilal & Känzig (2024, NBER WP 32450); Weitzman (2009); Hallegatte et al. (2019); Document 1B
-    Section 5.1.
+  empirical_anchor: Bilal & Känzig (2024, NBER WP 32450 — 12% GDP loss per 1°C); Hallegatte, Rentschler, & Rozenberg
+    (2019, Lifelines); Te Waihanga NZ Infrastructure Strategy; Document 1D & Document 2A.
 - id: C:02
   name: 'Social Credit Rating: 126.0 (The High-Trust Lifeboat)'
   deck: resilience
@@ -1213,8 +1221,8 @@ cards:
     rule: Combines Graeme Dingle (Project K & Stars), Kura Kaupapa Māori / Kura-ā-Iwi, Pasifika Tuakana academies,
       and Montessori Erdkinder so rangatahi take 0 trajectory damage from family job-loss or displacement shocks—directly
       seeding C:05 (Cognitive Flexibility).
-  flavor_text: True civil defence isn't locked in a central bunker. It lives on the marae and in the local schoolhouse—keeping
-    the lights on in a storm and funding mentors in peacetime.
+  flavor_text: True civil resilience pairs a hardened national grid with every local marae and schoolhouse—keeping
+    whānau warm and connected in a storm while funding youth mentors in peacetime.
   empirical_anchor: Ostrom (2010); Kenny & Phibbs (2015, Christchurch Marae disaster response); Rewiring Aotearoa
     Schools/Marae audit; QEA_2026.m Sector 2.
 - id: C:05
@@ -1278,7 +1286,7 @@ cards:
   - K:06
   - T:06
   effects:
-  - label: Nearest-Neighbor Leakage Topology (Why 'Large' Needs Neighbors Most)
+  - label: Nearest-Neighbour Leakage Topology (Why 'Large' Needs Neighbours Most)
     rule: Capital and step-migration flow primarily between adjacent tiers (Rural <-> Small <-> Large <-> Auckland),
       with minimal one-step leakage (-15%) directly between Rural/Small and Auckland. Moving alone in exposed middle-hinge
       Large Cities (25.9% pop) suffers -60% two-flank leakage outward to Small/Rural and upward to Auckland!
@@ -1315,12 +1323,13 @@ cards:
   - T:02
   effects:
   - label: Offset the 2.7x–2.8x Provincial Transport & Fuel Burden
-    rule: Recognizes that Rural (16.0% pop) and Small Towns (24.0% pop) carry 2.7x to 2.8x the mandatory transport/fuel
-      burden of metro cities. Bridges squeezed provincial whānau past T:02 (Hyperbolic Low-Skill Shortcut) while
-      Large (25.9%) and Auckland (34.1%) receive -7.5% to -10.5% housing cooling.
-  - label: Mutiny Shield & Launchpad to Self-Reliance
-    rule: Opponents cannot play 'Urban–Rural Divide' spoilers. Unlike permanent charity, C:07 is a launchpad built
-      to retire by 82%–85% once C:08 + C:09 + E:01 upgrade provincial wages!
+    rule: Recognizes that Rural (16.0% pop) and Small Towns (24.0% pop) carry 2.7x to 2.8x the mandatory transport
+      and energy subsistence floor (e_bar_k) of metro cities. Bridges squeezed provincial whānau past T:02 (Hyperbolic
+      Low-Skill Shortcut) while Large (25.9%) and Auckland (34.1%) receive -7.5% to -10.5% housing cooling.
+  - label: Mutiny Shield & Self-Retiring Spatial Cushion (82%–85% Phase-Down)
+    rule: Opponents cannot play 'Urban–Rural Divide' spoilers. Rather than an open-ended subsidy, T_k(y) endogenously
+      recedes by 82%–85% as E:01 rural electrification and C:08/C:09 value-add lift provincial market wages w_k—returning
+      a -0.64 pp PAYE dividend nationwide!
   flavor_text: A transition that punishes a rural nurse for driving to work while rewarding an urban speculator
     for sitting on dirt isn't a policy—it's a mutiny waiting to happen.
   empirical_anchor: Stats NZ HES Regional Transport Energy Audit (2025); Labrousse & Perdereau (2026); Document
@@ -1421,16 +1430,17 @@ cards:
   - K:03
   - K:07
   effects:
-  - label: Graduate Regions Off Transfer Dependency (82%–85% T_k Retired)
-    rule: Because thriving provincial z_h enterprises and solar-electrified farms now earn high endogenous market
-      wages, 82% to 85% of C:07's temporary SS1 geographic transfer top-up retires automatically—shrinking gross
-      ongoing public outlays from NZD 8.06B/yr in SS1 down to NZD 6.52B/yr in SS2!
+  - label: Endogenous Regional Wage Convergence (-82% to -85% T_k Phase-Down)
+    rule: As C:08 anti-monopsony rules, C:09 regional value-add hubs, and E:01 rural electrification raise
+      provincial wages w_k and slash fossil subsistence e_bar_k, the temporary C:07 Income x Geography cushion
+      naturally retires by 82%–85%.
   - label: National -0.64 pp Working-Age PAYE Bonus
     rule: Returns the saved fiscal outlays to EVERY working-age player across Rural (+21.18% CE), Small (+23.34%),
       Large (+24.68%), and Auckland (+27.96%) as an extra -0.64 percentage-point PAYE tax cut (deepening B:15 relief
       all the way to 18.25%)!
-  flavor_text: The truest measure of regional policy is not how much welfare a province receives—it is the day a
-    thriving province pays the whole nation back with a tax cut.
+  flavor_text: The truest measure of regional partnership is not permanent cost-of-living patches—it is the day
+    thriving provincial enterprises and fair farm-gate markets lift every working household's take-home pay
+    nationwide.
   empirical_anchor: Document 3 Section 1.2, Part II ('Same Dollar Outlay'), Section 3.4 & Table 5.2 (82%–85% T_k
     retirement = -0.64 pp PAYE cut).
 - id: K:01
@@ -1444,7 +1454,7 @@ cards:
   type: 'Wayfinder Persona — Coalition 1 Anchor: Being & Early Potential (Ages 0–14)'
   lens:
   - Lens 1
-  gate_or_phase: Command Zone (Continuous / Tap — 42.5% Neighbor-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 42.5% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start (or Unlock at Age 18 / Age 12 if Mentored via B:03)
   synergy_links:
   - B:01
@@ -1537,8 +1547,9 @@ cards:
     rule: When co-staking with K:05 (Enterprise) and K:06 (Fair Markets), add +2 to the Wedge (2x3) Additionality
       D20 roll to hit the full 2.16x local food-hub multiplier and unlock C:10 (-0.64 pp national PAYE cut) one
       turn early!
-  flavor_text: Stop treating provincial towns like charity wards. Connect local growers to local school tables,
-    and the regions will feed our children and fund a tax cut for the cities.
+  flavor_text: Regions don't need permanent cost-of-living patches when they keep fair value for what they grow.
+    Anchor public school and hospital kitchens with local growers, and thriving provinces nourish our tamariki while
+    lifting take-home pay across the whole motu.
   empirical_anchor: NC State CEFS Farm-to-ECE, FYI & GrowingChange [Ref 56]; MPI Fit for a Better World [Ref 29];
     Document 3 Sections 1.1–1.2.
 - id: K:04
@@ -1554,7 +1565,7 @@ cards:
   - Lens 1
   - Lens 2
   - Lens 3
-  gate_or_phase: Command Zone (Continuous / Tap — 43.8% Neighbor-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 43.8% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start (Promoted Canonical Coalition 2 Leader)
   synergy_links:
   - B:06
@@ -1593,7 +1604,7 @@ cards:
   lens:
   - Lens 2
   - Lens 3
-  gate_or_phase: Command Zone (Continuous / Tap — 64.1% Neighbor-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 64.1% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start
   synergy_links:
   - B:05
@@ -1613,7 +1624,7 @@ cards:
       of the cohort while staying net positive up to NZD 50M and breakeven at NZD 140M). May advance 1 Forward Wage
       Bridge to a squeezed Waiter parent to stop them from taking T:02 (Hyperbolic Low-Skill Shortcut)!
   - label: Coalition 3 Silo Reality (+2.21% Own Silo -> +6.17% Connected)
-    rule: '64.1% of your value depends on neighbors! You cannot scale firms in a skill shortage: co-stake with K:01
+    rule: '64.1% of your value depends on neighbours! You cannot scale firms in a skill shortage: co-stake with K:01
       for a 65% thriving domestic talent pool (Wedge 1x3: +2.06%), K:04/K:03 for de-hoarded land & food-hub scale
       (Wedge 2x3: +1.21%), and K:07 for -60 bps credit & 18.25% PAYE (Wedge 3x4: +0.69%).'
   flavor_text: '''Where will the jobs come from?'' From young Kiwis who grew up whole, kept a stake in their own
@@ -1650,8 +1661,9 @@ cards:
   - label: Trust-Busting Enforcement
     rule: Counter H:08 (Oligopoly & Farm-Gate Monopsony Extraction) on sight when paired with C:08, guaranteeing
       100% pass-through of B:08 corporate tax cuts and C:07 cost-of-living relief to households and growers.
-  flavor_text: Free markets aren't free when four cartels toll every bridge and adjacent regions race to the bottom.
-    Set fair rules across all four regions, and builders win on merit.
+  flavor_text: Markets aren't fair or open when four cartels toll every bridge and uncoordinated regions undercut
+    their neighbours. Set transparent, nationwide rules across all the regions, and productive builders thrive
+    alongside the communities they serve.
   empirical_anchor: Labrousse & Perdereau (2026); NZ Commerce Commission Market Studies [Ref 49]; Document 3 Section
     1.1.
 - id: K:07
@@ -1667,7 +1679,7 @@ cards:
   - Lens 1
   - Lens 2
   - Lens 3
-  gate_or_phase: Command Zone (Continuous / Tap — 74.3% Neighbor-Dependent in Doc 3)
+  gate_or_phase: Command Zone (Continuous / Tap — 74.3% Neighbour-Dependent in Doc 3)
   cost_or_requirement: Select at Game Start
   synergy_links:
   - B:09
@@ -1686,7 +1698,7 @@ cards:
     rule: Authorize B:09 (Year-5 ACC Continuation Valuation) to defeat H:01 and draw 1 bonus face-down Compass/Audit
       card toward B:13 (Te Kapehu Whetū Launch). Pair B:14 with E:03 (Firmed Grid) to cut domestic interest rates
       by 60 to 100 bps.
-  - label: Coalition 4 Silo Reality (+1.00% Own Silo -> +3.90% Connected; 74.3% from Neighbors!)
+  - label: Coalition 4 Silo Reality (+1.00% Own Silo -> +3.90% Connected; 74.3% from Neighbours!)
     rule: 'Trying to ''solve debt first'' alone triggers T:03 (-6.80% CE boomerang)! Partnering with K:01 (Wedge
       1x4: +1.53%), K:04 (Wedge 2x4: +0.69%), and K:05 (Wedge 3x4: +0.69%) closes fiscal inflows so you sink debt
       to 21%–22% GDP, cut PAYE to 18.25%, and sustain H:09 (3% Defense) if struck!'
@@ -1763,8 +1775,8 @@ cards:
     rule: Emit 1 free Lifetime Experience Token every turn (cutting any N:01–N:08 or B:10/E:02 cost by 100%). Rejects
       Super means-testing (avoiding punitive EMTRs on saving a'); in SS2 at Super Age 64 (B:15), boosts K_whanau
       caregiving by +8.1% (with 28% avoided ACC/disability offset)!
-  flavor_text: 'Universal Super is not legacy overhead—it is the retainer fee for Aotearoa''s greatest off-balance-sheet
-    quality-assurance network: our kuia, koroua, and aunties.'
+  flavor_text: Universal Super honours a lifetime of contribution while protecting the material security and
+    unhurried time that let kaumātua, kuia, and aunties weave intergenerational aroha through every whānau.
   empirical_anchor: De Nardi (2004); Mead (2016); Document 3 Section 2.3 (Phi_super equation), Section 3.4 (MBA
     + MPP Convergence against means-testing & Age-70 hike) & Section 3.5.
 - id: K:10
@@ -1838,8 +1850,8 @@ cards:
       D20 rolls and pulling self-financing cash breakeven 2.4 years earlier to Year 16.8!
   flavor_text: 'Arrow proved that capability is forged in the doing, not the decreeing. Better still: when you learn
     macroeconomics by doing it on a tabletop first, nobody''s mokopuna has to pay the tuition.'
-  empirical_anchor: 'Arrow (1962, RES: ''The Economic Implications of Learning by Doing''); Nobel Prize in Economics
-    (1972); Document 1D Sections 1–3 & Table 1D.4.'
+  empirical_anchor: Arrow (1962, 'The Economic Implications of Learning by Doing'); Christiano, Eichenbaum, &
+    Evans (2005, convex investment adjustment costs); Nobel Prize in Economics (1972); Document 1D Te Kāhui Waka Rollout.
 - id: N:02
   name: Ronald Coase's Transaction-Cost Scalpel (Nobel Prize, 1991)
   deck: nobel
@@ -1854,8 +1866,8 @@ cards:
   - Lens 2
   - Lens 3
   gate_or_phase: SS0 -> SS1 Governance Architecture (Counters H:02 Silos)
-  cost_or_requirement: Replace Fragmented Ministry Contracting with High-Trust Commissioning (or 1 K:09 Experience
-    Token)
+  cost_or_requirement: Replace Fragmented NPM Ministry Contracting with Unified Crown Stewardship & Relational
+    Frontline Commissioning (or 1 K:09 Experience Token)
   synergy_links:
   - B:08
   - B:10
@@ -1866,17 +1878,21 @@ cards:
   - T:05
   - H:02
   effects:
-  - label: Slash Bureaucratic Friction from 32% to <= 8%
-    rule: Exposes why six fragmented Wellington ministries burn 32% of social budgets on inter-agency compliance
-      before a dollar reaches a child. Compresses institutional overhead to <= 8%, neutralizing H:02 ('Wellington
-      Knows Best' Bottleneck) and reducing Subsystem Political Drag by -0.5 Wealth.
-  - label: Internalize Reactive Deadweight
-    rule: Forces unpriced downstream social externalities onto the active decision table—imposing 2x deadweight
-      penalties on Feral Spoilers who block early prevention in favor of late crisis remediation.
-  flavor_text: When transaction costs are suffocating, neither markets nor central ministries can strike the obvious
-    bargain. Cut the red tape at the root, and let people who know the child do the work.
-  empirical_anchor: Coase (1937, 'The Nature of the Firm'; 1960, 'The Problem of Social Cost'); Nobel Prize in Economics
-    (1991); Document 1A Part II & Document 3 Section 1.1.
+  - label: Slash Intra-State Contracting Friction from 32% to <= 8%
+    rule: Exposes why six fragmented ministries writing arms-length New Public Management contracts burn 32% of
+      social budgets on inter-agency compliance before a dollar reaches a child. Unites non-delegable Crown
+      stewardship with high-trust frontline partnership, compressing overhead to <= 8%, neutralizing H:02, and
+      reducing Subsystem Political Drag by -0.5 Wealth.
+  - label: Internalize Unbargainable Social Costs
+    rule: Because toddlers and unborn cohorts cannot strike private market bargains (Coase, 1960), Crown
+      administrative stewardship forces unpriced downstream externalities onto the active decision table—imposing
+      2x deadweight penalties on Feral Spoilers who block early prevention in favor of late crisis remediation.
+  flavor_text: Markets cannot strike a bargain with a three-year-old, and six ministries writing arms-length
+    contracts with each other aren't a market—they're a 32% transaction-cost tax. Unite Crown responsibility with
+    high-trust frontline care so public stewardship actually reaches the whānau.
+  empirical_anchor: Coase (1937, 'The Nature of the Firm'; 1960, 'The Problem of Social Cost' — high transaction
+    costs require administrative coordination); Nobel Prize in Economics (1991); Document 1A Part II & Document 3
+    Section 1.1.
 - id: N:03
   name: James Heckman's Dynamic Complementarity Engine (Nobel Prize, 2000)
   deck: nobel
@@ -1899,18 +1915,20 @@ cards:
   - T:02
   - T:07
   effects:
-  - label: Readiness Counters & 3x Downstream Mentoring Yield
-    rule: Because early executive function and adolescent mentoring are CES complements (phi_1 = -0.50 < 0, phi_2
-      = -0.95), place a Readiness Counter on every B:01 cohort—multiplying the skill return of B:03 (Tuakana–Teina
-      Mentoring) and B:04 (GrowingChange) by 3x (+3.19% CE Wedge 1)!
+  - label: Two-Stage Dynamic Complementarity (phi_1 = +0.35 -> phi_2 = -0.95)
+    rule: Because Stage-1 early inputs are highly substitutable (phi_1 = +0.35 > 0 in Ages 0–5), B:01 universal
+      wraparound rescues vulnerable toddlers regardless of starting hardship; Stage-2 skill then flips to strong
+      CES complementarity (phi_2 = -0.95 < 0)—placing a Readiness Counter on every B:01 cohort that multiplies
+      B:03/B:04 mentoring returns by 3x (+3.19% CE Wedge 1) while proving why late crisis remediation fails.
   - label: +NZD 15.3k/yr Private Parental Crowd-In
     rule: Raising the marginal productivity of home engagement crowds in +NZD 15.3k/yr of private parental reading,
       nutrition, and care per child at zero extra Crown cost—whereas trying to remediate a missed Gate 1 after Age
       15 loses >70% of ROI.
   flavor_text: Early investment doesn't just add a brick to the wall; it changes the geometry of every arch you
     build for the next sixty years.
-  empirical_anchor: Cunha & Heckman (2007, AER); Cunha, Heckman, & Schennach (2010, Econometrica); Nobel Prize in
-    Economics (2000); Document 3 Section 2.1 & Table A.1.
+  empirical_anchor: Cunha, Heckman, & Schennach (2010, Econometrica — phi_1 > 0 early substitutability, phi_2 < 0
+    later complementarity); Cunha & Heckman (2007, 2010); Nobel Prize in Economics (2000); ChildCES_aprimeFn.m
+    (phi_1 = 0.35, phi_2 = -0.95).
 - id: N:04
   name: Oliver Williamson's Actuarial Ledger (Nobel Prize, 2009 — Part I)
   deck: nobel
@@ -1958,7 +1976,8 @@ cards:
   - Lens 1
   - Lens 2
   gate_or_phase: Community Scaling (17.3% Vanguard -> 65.0%+ Universal Reach)
-  cost_or_requirement: Devolve Delivery to Iwi, Whānau Ora, Marae, Kura & Local Trusts (or 1 K:09 Experience Token)
+  cost_or_requirement: Pair Universal Crown Funding & Standards with Nested Iwi, Whānau Ora, Marae, Kura &
+    Community Co-Stewardship (or 1 K:09 Experience Token)
   synergy_links:
   - B:01
   - B:03
@@ -1969,15 +1988,16 @@ cards:
   - N:02
   - H:02
   effects:
-  - label: Defeat Both Leviathan Silos & Privatized Atomization
-    rule: Proves that self-governing local commons outperform both distant central ministries (H:02) and fragmented
-      voucher markets. Scales B:03 (Tuakana–Teina Mentoring) and C:04 (Marae/School Hubs) smoothly from the 17.3%
-      vanguard to 65.0%+ national reach without bureaucratic quality decay.
+  - label: Defeat Both NPM Procurement Silos & Privatized Vouchers
+    rule: Proves that nested local commons backed by universal Crown funding outperform both siloed NPM ministry
+      contracts (H:02) and fragmented voucher markets. Scales B:03 (Tuakana–Teina Mentoring) and C:04 (Marae/School
+      Hubs) smoothly from the 17.3% vanguard to 65.0%+ national reach without bureaucratic quality decay.
   - label: Cross-Table Commons Bonus
     rule: Whenever two players cooperate across the River on a community or food-hub card (C:04, C:09, K:09), both
       players gain +1 Mana (Variant B Commons Dividend).
-  flavor_text: There was never a binary choice between a blind central bureaucracy and a cold auction block. Communities
-    have governed shared lifelines for a thousand years.
+  flavor_text: Public stewardship was never a binary choice between a siloed procurement contract and a cold
+    voucher auction. When the Crown backs local communities with high-trust resources, shared lifelines endure
+    for generations.
   empirical_anchor: Ostrom (1990, Governing the Commons; 2010 AER Nobel Lecture); Whānau Ora Commissioning Evaluations;
     Document 1B Section 5.4.
 - id: N:06
@@ -2008,9 +2028,10 @@ cards:
     rule: 'Ideas are non-rival: sharing a recipe never shrinks the bowl! Enacted River reforms persist permanently
       as shared infrastructure, raising the Variant B Inverse-Hub Royalty cap from 2 to 3 Mana payouts per card
       per turn.'
-  - label: 1.75x Endogenous Knowledge Spillover
-    rule: Doubling the pool of thriving domestic founders (z_h surging to 46.0%–52.9%) triggers a 1.75x Romer knowledge
-      spillover across urban deep-tech and MPI primary value-add—compounding real wage growth by +6.8% to +9.6%.
+  - label: Non-Rival Domestic Idea Multiplier (1.75x Spillover & ~8x Builder Surge)
+    rule: Expanding the pool of thriving domestic founders nearly eight-fold (active high-talent entrepreneurs z_h
+      surging from 6.2%–6.9% to 46.0%–52.9% via B:08 + B:06) triggers a 1.75x Romer knowledge spillover across
+      urban deep-tech and MPI primary value-add—compounding real wage growth by +6.8% to +9.6% across all regions.
   flavor_text: 'Land is rival: if I hoard the acre, you stand in the street. Ideas are non-rival: every mind we
     rescue from hardship multiplies the blueprints available to every builder in Aotearoa.'
   empirical_anchor: 'Romer (1990, JPE: ''Endogenous Technological Change''); Nobel Prize in Economics (2018); Document
@@ -2164,7 +2185,7 @@ cards:
   empirical_anchor: Public Finance Act short-horizon cash bias vs. NZ Treasury Circular 2024/15; Document 1D Section
     3.2 & Figure 1D.5; Document 3 Section 3.1.
 - id: H:02
-  name: The 'Wellington Knows Best' Bureaucratic Silo Bottleneck
+  name: The Siloed NPM Procurement Bottleneck ('Six Ministries, Six Contracts')
   deck: orthodoxy
   module_level: 3
   mana_tier: 2
@@ -2192,9 +2213,10 @@ cards:
     rule: Splits a single struggling whānau across six separate departmental contracts—consuming 32% of nominal
       appropriations in central compliance paperwork while 12–14-year-olds fall through the gap during family job-loss
       shocks (-2 to Additionality D20 rolls on Wedge 1).
-  - label: Polycentric Counter-Break
-    rule: Neutralized by devolving commissioning to high-trust Iwi, Whānau Ora, Barnardos, and school/marae hubs
-      (K:01 + C:04 + N:02 + N:05), recovering 24 cents on every public dollar directly into frontline wraparound.
+  - label: Countered by Unified Crown Stewardship & Relational Commissioning
+    rule: Neutralized by N:02 + N:05—retaining non-delegable Crown funding, equity standards, and closed-loop
+      accountability while replacing fragmented inter-agency tender churn with high-trust relational partnerships
+      across Iwi, Whānau Ora, Barnardos, schools, Kura, and Marae hubs.
   flavor_text: Six agencies wrote six strategy documents about the same child, held forty steering-group meetings
     in Thorndon, and forgot to buy the kid shoes.
   empirical_anchor: NZ Productivity Commission 'More Effective Social Services' (2015); Whānau Ora Review (2019);
@@ -2535,7 +2557,7 @@ cards:
       at Year 3 where mandatory fuel/energy floors e_bar_k = 0.048 & 0.036 are 2.25x–3.00x Auckland's 0.016), then
       Large (Waves 4–6) and Auckland (Waves 7–9)—compressing e_bar_k by [-28%, -25%, -18%, -14%] and saving ~NZD
       3,000/yr net (+NZD 12.9B/yr nationally).
-  - label: Healthy Homes & Provincial Graduation
+  - label: Healthy Homes & Regional Wage Convergence
     rule: Warm, dry electrified homes slash paediatric respiratory hospital admissions (Exit 2) while cutting farm/SME
       operating costs so C:07 geographic transfers can self-retire by 85% in SS2 (C:10)!
   flavor_text: You don't need a single climate slogan to see why sending fifteen billion dollars a year overseas

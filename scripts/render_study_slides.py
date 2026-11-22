@@ -247,7 +247,7 @@ def build_card_slide_html(card: Dict[str, Any], slide_idx: int, total_slides: in
             <p>{proof_bridge}</p>
           </div>
           <div class="code-hook-bar">
-            <span class="code-hook-label">24-File GPU Solver Module:</span>
+            <span class="code-hook-label">5-Sector GPU Solver Module:</span>
             {code_pills}
           </div>
         </div>

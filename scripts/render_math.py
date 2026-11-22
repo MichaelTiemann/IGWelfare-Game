@@ -502,13 +502,13 @@ def ascii_eq_to_latex(eq: str) -> str:
 
 
 def resolve_card_latex(card_or_study: Dict[str, Any], cid: str | None = None) -> str:
-    """Primary entry point for all 3 renderers."""
+    """Primary entry point for all 3 renderers (Wave 2: YAML key_equation_latex is #1 source of truth)."""
     card_id = (cid or str(card_or_study.get("id", ""))).strip()
-    if card_id in CANONICAL_EQUATIONS:
-        return CANONICAL_EQUATIONS[card_id]
-    explicit = card_or_study.get("latex_equation")
+    explicit = card_or_study.get("key_equation_latex") or card_or_study.get("latex_equation")
     if explicit:
         return str(explicit).strip()
+    if card_id in CANONICAL_EQUATIONS:
+        return CANONICAL_EQUATIONS[card_id]
     return ascii_eq_to_latex(str(card_or_study.get("key_equation", ""))).strip()
 
 
@@ -521,6 +521,8 @@ def pick_eq_size_class(latex_eq: str) -> str:
 
     def _vis_len(ln: str) -> int:
         s = re.sub(r"\\(begin|end)\{[^}]+\}", "", ln)
+        s = s.replace(r"\lbrack", "[").replace(r"\rbrack", "]")
+        s = s.replace(r"\lbrace", "{").replace(r"\rbrace", "}")
         s = re.sub(r"\\(mathrm|text|mathbf|mathcal|mathbb)\{([^}]*)\}", r"\2", s)
         s = re.sub(r"\\[A-Za-z]+", "X", s)
         s = re.sub(r"[{}_^]", "", s)
@@ -661,6 +663,11 @@ def to_mathtext_lines(latex_str: str) -> List[str]:
         for _ in range(3):
             line = _replace_text_macros(line)
 
+        line = line.replace(r"\lbrack", "[").replace(r"\rbrack", "]")
+        line = line.replace(r"\lbrace", r"\{").replace(r"\rbrace", r"\}")
+        line = line.replace(r"\vert", "|").replace(r"\dots", r"\cdots")
+        line = line.replace(r"\nolimits", "")
+        line = line.replace(r"\;", r"\ ").replace(r"\!", "")
         line = re.sub(r"\\mathbb\{([A-Z])\}", lambda m: f"\\mathbf{{{m.group(1)}}}", line)
         line = line.replace(r"\tfrac", r"\frac")
         line = line.replace(r"\middle|", r"\,|\,")

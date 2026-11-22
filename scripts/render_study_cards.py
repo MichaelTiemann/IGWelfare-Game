@@ -42,6 +42,7 @@ from render_common import (
 )
 from render_math import (
     get_mathjax_svg_fit_css,
+    pick_eq_size_class,
     resolve_card_latex,
 )
 
@@ -179,7 +180,7 @@ def build_study_back_html(
     badge_txt = palette.get("badge_text", "#ffffff")
 
     mono_raw = str(
-        study_entry.get("vfi_module") or study_entry.get("monograph_ref") or "Docs 2A/2B • 24-File GPU Solver"
+        study_entry.get("vfi_module") or study_entry.get("monograph_ref") or "Docs 2A/2B • 5-Sector GPU Solver"
     ).strip()
     mono_ref = html.escape(mono_raw)
 
@@ -187,7 +188,8 @@ def build_study_back_html(
         study_entry.get("economic_concept") or study_entry.get("equation_title") or "General-Equilibrium Specification"
     ))
     latex_raw = resolve_card_latex(study_entry, cid)
-    eq_multiline_cls = " sb-eq-2line" if r"\\" in latex_raw else ""
+    size_cls = pick_eq_size_class(latex_raw)
+    eq_multiline_cls = (" sb-eq-2line" if r"\\" in latex_raw else "") + f" {size_cls}"
 
     raw_params = study_entry.get("key_parameters") or study_entry.get("parameters") or ""
     if isinstance(raw_params, list):
@@ -220,7 +222,7 @@ def build_study_back_html(
     rot_class = "rot-ccw" if orient == "landscape-ccw" else (
         "rot-cw" if orient == "landscape-cw" else "rot-180"
     )
-    dense_cls = " sb-dense" if is_dense_card else ""
+    dense_cls = ""  # Post-MathJax JS guard adds .sb-dense only if scrollHeight > clientHeight
 
     # Ditch folding instructions on cards with over-full program lists or dense text!
     omit_fold = is_overfull_footer or is_dense_card
@@ -644,7 +646,7 @@ def render_study_deck_html(
       border: 0.35mm solid #94a3b8;
       border-left: 1.2mm solid var(--card-border);
       border-radius: 1.1mm;
-      padding: 0.9mm 1.8mm;
+      padding: 1.1mm 2.0mm;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -657,19 +659,31 @@ def render_study_deck_html(
       text-transform: uppercase;
       letter-spacing: 0.03em;
       color: var(--badge-bg);
-      margin-bottom: 0.3mm;
+      margin-bottom: 0.45mm;
     }}
     .sb-eq-math {{
-      font-size: 7.2pt;
-      line-height: 1.08;
+      font-size: 8.2pt;
+      line-height: 1.12;
       text-align: center;
       overflow: hidden;
-      padding: 0.2mm 0;
+      padding: 0.4mm 0;
+    }}
+    .sb-eq-math.eq-size-lg {{
+      font-size: 8.5pt;
+    }}
+    .sb-eq-math.eq-size-md {{
+      font-size: 7.8pt;
+    }}
+    .sb-eq-math.eq-size-sm {{
+      font-size: 7.1pt;
     }}
     .sb-eq-math.sb-eq-2line {{
-      font-size: 6.2pt;
+      font-size: 7.2pt;
     }}
-    {get_mathjax_svg_fit_css('.sb-eq-math', '13.5mm')}
+    {get_mathjax_svg_fit_css('.sb-eq-math', '18.5mm')}
+    .sb-eq-math.sb-eq-2line mjx-container > svg {{
+      max-height: 22.5mm !important;
+    }}
     .sb-params {{
       font-family: var(--font-mono);
       font-size: 5.6pt;
@@ -768,8 +782,11 @@ def render_study_deck_html(
     .study-landscape-canvas.sb-dense .sb-eq-frame {{
       padding: 0.7mm 1.5mm;
     }}
-    .study-landscape-canvas.sb-dense .sb-eq-math svg {{
-      max-height: 11.0mm !important;
+    .study-landscape-canvas.sb-dense .sb-eq-math mjx-container > svg {{
+      max-height: 14.5mm !important;
+    }}
+    .study-landscape-canvas.sb-dense .sb-eq-math.sb-eq-2line mjx-container > svg {{
+      max-height: 18.0mm !important;
     }}
     .study-landscape-canvas.sb-dense .sb-params {{
       font-size: 5.2pt;
@@ -791,8 +808,11 @@ def render_study_deck_html(
     }}
 
     /* Tier 2 Ultra-Dense Safety Net (triggered by JS if MathJax equation + citations still push height) */
-    .study-landscape-canvas.sb-ultra-dense .sb-eq-math svg {{
-      max-height: 9.2mm !important;
+    .study-landscape-canvas.sb-ultra-dense .sb-eq-math mjx-container > svg {{
+      max-height: 12.0mm !important;
+    }}
+    .study-landscape-canvas.sb-ultra-dense .sb-eq-math.sb-eq-2line mjx-container > svg {{
+      max-height: 15.0mm !important;
     }}
     .study-landscape-canvas.sb-ultra-dense .sb-params,
     .study-landscape-canvas.sb-ultra-dense .sb-bridge {{

@@ -165,7 +165,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
           <div class="mat-header">
             <div>
               <div class="mat-title">WHĀNAU &amp; WAYFINDER LEDGER — PLAYER {player_num}</div>
-              <div class="mat-sub">Connect Your Macro Wayfinder (K:01–K:09) to Your Rawlsian D20 Birth Cohort (B:00)</div>
+              <div class="mat-sub">Link Wayfinder (K:01–K:09) to B:00 Birth Roll &amp; Tradeable 50/25/25% Gate Tranches (B:01–B:06)</div>
             </div>
             <div class="d20-box">
               <div class="d20-label">B:00 D20 ROLL</div>
@@ -749,7 +749,7 @@ def render_boards_html(board_data: dict, theme_cfg: dict, theme_id: str) -> str:
           <div class="banner-sub">{fmt(sub_banner)}</div>
         </div>
         <div class="banner-right">
-          <div><strong>Phase Track:</strong> &#9744; SS0 Status Quo &rarr; &#9744; SS1 Year-5 Audit (3.8x) &rarr; &#9744; SS2 2050 50/50 Harvest</div>
+          <div><strong>Phase Track:</strong> &#9744; SS0 Status Quo &rarr; &#9744; SS1 Year-5 Audit (3.8x) &rarr; &#9744; SS2 Plan A/B 50/50 Harvest</div>
           <div><strong>Victory (B:16 / N:09):</strong> Struggling &le; 1.5% &bull; Cohesion 126.0 &bull; Super @ 64 &bull; PAYE 18.25% (+24.70% CE)</div>
         </div>
       </header>

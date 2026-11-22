@@ -94,7 +94,7 @@ def build_board_svg() -> str:
     )
     svg.append(
         '<text x="1585" y="194" text-anchor="middle" fill="#FFB703" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold">'
-        'TOP REEF (19-20): T:05/T:10 | Closed by BAY 2 (B:05)</text>'
+        'TOP REEF (19-20): T:05/T:10 | Closed by BAY 2 (B:08)</text>'
     )
 
     # ==========================================================================
@@ -117,7 +117,7 @@ def build_board_svg() -> str:
             "title": "BAY 2: WING-SAIL POWER PLANT",
             "maori": "Te Aka Matua — Capital &amp; Clean Energy Rotation",
             "recipe": "RECIPE: B:08 (LVT/Corp Split) + B:05/B:06 (Youth Grant) + 1 Engine (C:09, E:01, E:02)",
-            "judo1": "Play B:05+N:05 (or K:02) vs. T:05/T:10/H:05",
+            "judo1": "Play B:08+C:08 (or K:06) vs. T:05/T:10/H:07",
             "judo2": "Play B:05/B:06+B:08 vs. H:04 Sydney Brain Drain",
             "lock1": "LOCKED REWARD: Covers D20 Reef 19-20 + Ends Brain Drain",
             "lock2": "+ Working Adults Earn +1 Wealth Every Turn!",

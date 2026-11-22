@@ -147,10 +147,24 @@ def render_deck_html(
     co2_pos: str,
     out_path: Path,
 ) -> str:
-    cards: List[Dict[str, Any]] = sorted(
+    base_sorted: List[Dict[str, Any]] = sorted(
         deck_data.get("cards", []),
         key=lambda c: (int(c.get("a3_game_sheet", 99)), int(c.get("a3_slot", 99))),
     )
+    cards: List[Dict[str, Any]] = []
+    booster_copies: List[Dict[str, Any]] = []
+    for base_c in base_sorted:
+        n_cop = max(1, int(base_c.get("copies", 1)))
+        c1 = dict(base_c)
+        c1["_copy_idx"] = 1
+        c1["_copy_total"] = n_cop
+        cards.append(c1)
+        for cp_i in range(2, n_cop + 1):
+            cx = dict(base_c)
+            cx["_copy_idx"] = cp_i
+            cx["_copy_total"] = n_cop
+            booster_copies.append(cx)
+    cards.extend(booster_copies)
     active_theme_name = theme_cfg.get("theme_name", theme_id)
     typo = theme_cfg.get("typography", {})
     font_heading = typo.get("heading_font", "'Inter', system-ui, sans-serif")
@@ -178,11 +192,6 @@ def render_deck_html(
                 card["type"] = ov["type"]
             if "flavor_text" in ov:
                 card["flavor_text"] = ov["flavor_text"]
-
-        border_col = palette.get("border", "#0284c7")
-        header_bg = palette.get("header_bg", "#e0f2fe")
-        badge_bg = palette.get("badge_bg", "#0369a1")
-        badge_txt = palette.get("badge_text", "#ffffff")
 
         border_col = palette.get("border", "#0284c7")
         header_bg = palette.get("header_bg", "#e0f2fe")
@@ -226,7 +235,7 @@ def render_deck_html(
         <article class="card" style="--card-border: {border_col}; --header-bg: {header_bg}; --badge-bg: {badge_bg}; --badge-txt: {badge_txt};">
           <header class="card-header">
             <div class="header-top">
-              <span class="pdd-badge">{html.escape(cid)}</span>
+              <div class="badge-group"><span class="pdd-badge">{html.escape(cid)}</span>{f'<span class="tranche-pill">⧉ {card["_copy_idx"]}/{card["_copy_total"]} • 50/25/25%</span>' if card.get("_copy_total", 1) > 1 else ''}</div>
               <div class="header-right">{top_right_slot}</div>
             </div>
             <h2 class="card-title">{html.escape(str(card.get("name", "")))}</h2>
@@ -318,6 +327,22 @@ def render_deck_html(
       align-items: center;
       margin-bottom: 0.8mm;
       gap: 1mm;
+    }}
+    .badge-group {{
+      display: flex;
+      align-items: center;
+      gap: 1.0mm;
+    }}
+    .tranche-pill {{
+      font-family: var(--font-mono);
+      font-size: 5.2pt;
+      font-weight: 700;
+      background: #fef9c3;
+      color: #854d0e;
+      border: 0.25mm solid #fde047;
+      padding: 0.35mm 1.1mm;
+      border-radius: 0.9mm;
+      white-space: nowrap;
     }}
     .pdd-badge {{
       font-family: var(--font-mono);
@@ -494,9 +519,11 @@ def main() -> None:
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(html_out, encoding="utf-8")
-    total_cards = len(deck_data.get("cards", []))
+    unique_cards = len(deck_data.get("cards", []))
+    expanded_cards = sum(max(1, int(c.get("copies", 1))) for c in deck_data.get("cards", []))
+    pad_wildcards = (10 - expanded_cards % 10) % 10
     print(
-        f"[OK] Rendered {total_cards} canonical cards + {(10 - total_cards % 10) % 10} wildcards "
+        f"[OK] Rendered {unique_cards} unique cards ({expanded_cards} total w/ tranches) + {pad_wildcards} wildcards "
         f"(theme='{args.theme}', co2_pos='{args.co2_pos}') -> {args.out}"
     )
 

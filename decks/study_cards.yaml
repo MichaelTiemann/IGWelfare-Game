@@ -8,7 +8,7 @@
 # ==============================================================================
 
 metadata:
-  companion_to: cards.yaml (Version 2026.11 — 80-Card Master Deck)
+  companion_to: cards.yaml (Version 2026.11 — 80 Unique Canonical Cards / 100-Card Tranche Play Shoe)
   version: '2026.11'
   author: Michael Tiemann
   license: CC-BY-SA-4.0
@@ -153,7 +153,8 @@ study_cards:
     launch from 23.5% to 65.0%.
   tabletop_bridge: 'B:03 is the lock on B:01''s vault: without Ages 12–14 mentoring, early childhood gains
     erode and family unemployment shocks scar the cohort; with it, Wedge 1 locks in and youth qualify immediately
-    for B:05 Early-Adopter Grants.'
+    for B:05 Early-Adopter Grants. [Wave 3 Tranche: 7x copies, 50%/+25%/+25% tradeable stack on Gate 3 Mentoring
+    Bridge.]'
   references:
   - Bailey et al. (2017) [Ref 15]
   - Gluckman (2011) & Graeme Dingle [Ref 18]
@@ -185,7 +186,8 @@ study_cards:
     92% non-recidivism while channeling non-university youth directly into Node 18 (Skilled Trades) and Node
     20 (z_h Builders).
   tabletop_bridge: 'Bridges B:03 peer mentoring into provincial enterprise: immunizes youth against T:02 (Hyperbolic
-    Low-Skill Shift), shrinks Exit 4 justice drag, and supplies skilled operators for C:09 Regional Food Hubs.'
+    Low-Skill Shift), shrinks Exit 4 justice drag, and supplies skilled operators for C:09 Regional Food Hubs.
+    [Wave 3 Tranche: 3x copies, 50%/+25%/+25% tradeable stack on Gate 4 Launch Bridge (cross-stacks w/ B:05).]'
   references:
   - Sanford / GrowingChange & CEFS FYI [Ref 56]
   - SIA & ACC ISSC/LOPE (2025) [Ref 38]
@@ -214,7 +216,8 @@ study_cards:
     immediately in Waves 1–6 retains ready founders at trivial cost (-NZD 0.28B/yr) until Wave-1 mentored cohorts
     turn 20 in Waves 7–13.
   tabletop_bridge: 'Creates the signature early-game ''Use-It-Or-Lose-It'' scramble: players who secure B:03
-    mentoring in Turns 1–2 unlock B:05 capital at Age 20 up to four turns ahead of universal B:06 coverage.'
+    mentoring in Turns 1–2 unlock B:05 capital at Age 20 up to four turns ahead of universal B:06 coverage.
+    [Wave 3 Tranche: 3x copies, 50%/+25%/+25% tradeable stack on Gate 4 Launch Bridge (cross-stacks w/ B:04).]'
   references:
   - Doc 1D Sec 3.1, Fig 1D.3 & Tables 1D.3–1D.4
   - Kiyotaki, Michaelides, & Nikolov (2024) [Ref 4]
@@ -239,8 +242,9 @@ study_cards:
     without providing seed equity. Together, B:06 + B:08 ignite Wedge 2 (+2.33% CE in Doc 2B Table 19) and—coupled
     with thriving h6–h7 skills—drive Wedge 3 (+5.20% CE Nat., +5.63% Akl), cutting youth brain drain from 19.3%–23.4%
     in metro cities to <8% and retaining ~3,550 skilled graduates/yr.
-  tabletop_bridge: Evolving a mentored youth into B:06 clears the discrete 20% LVR cliff (when paired with
-    B:08) and grants hard immunity against H:04 (exile to the Sydney/Abroad Zone).
+  tabletop_bridge: 'Evolving a mentored youth into B:06 clears the discrete 20% LVR cliff (when paired with
+    B:08) and grants hard immunity against H:04 (exile to the Sydney/Abroad Zone). [Wave 3 Tranche: 4x copies,
+    50%/+25%/+25% tradeable stack on Gate 5 Youth Capital Grant.]'
   references:
   - Kiyotaki et al. (2024) [Ref 4]
   - Labrousse & Perdereau (2025) [Ref 23]
@@ -336,8 +340,9 @@ study_cards:
     s26G(1)(e) & CBAx Nov 2025 Guidance) to early hardship prevention books NZD 10.68B in direct cost avoidance
     (1.16x) and NZD 35.25B in total return (3.84x; 4.26x–4.45x under GUiNZ MetroSqueeze) by Year 5—driving
     household/firm reform credibility lambda_cred(t) -> 1 inside Bellman continuation values.
-  tabletop_bridge: Defeats H:01 (3-Year Cash-Flow Myopia), adds +3 to D20 Political Stability checks against
-    T:07 repeal, and awards a secret face-down Audit card toward B:13 (SS2 Orbital Launch).
+  tabletop_bridge: Defeats H:01 Cash-Book Myopia inside Years 1–8 (+3 Stability & 1 secret B:13 Star-Compass
+    peek), or if drawn Turn 7+ audits matured cohorts for -30 bps sovereign spread and +2.5 Mana toward Key
+    2 (Plan B).
   references:
   - NZ Treasury Circular 2024/15 & CBAx (Nov 2025) [Ref 33, 34]
   - ACC Financial Condition Report (Nov 2025) [Ref 35]
@@ -1467,9 +1472,8 @@ study_cards:
     kuia, parents, and 79,000 FTEs of NZ for-purpose volunteers [Ref 30] at zero [Ref 47]. Compute_ThreeTier_NationalAccounts_Ledger.m
     (Tier 2 Y_AW [Ref 58]) deducts defensive remediation (-Y_{G,k}^{rem}) and values unpaid whānau/volunteer
     care—proving Super at Age 64 (+8.1% care, 28% ACC/disability offset) beats Age-70 austerity.
-  tabletop_bridge: 'Dormant when Slot 3 is empty, explosive when holding a Slot-3 Elder: converts the K_whanau
-    pool into cross-table ''Aunty''s House'' shields for Variant B royalties, emits 1 free Experience Token/turn,
-    and unlocks +8.1% care at Super Age 64!'
+  tabletop_bridge: Emits 1 Wisdom Token/turn (-50% Nobel/Solver cost, upgrading to 100% free while Slot-3 Kaumātua/Kuia
+    is active) and shields any player's youth via 'Aunty's House' for Variant B Mana royalties.
   references:
   - Waring (1988/1999) [Ref 47] & Gronau (1977) [Ref 28]
   - 'JBWere NZ For-Purpose Report (2026: 79,000 volunteer FTEs) [Ref 30]'

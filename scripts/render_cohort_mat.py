@@ -194,7 +194,7 @@ def build_cohort_svg() -> str:
         build_character_track_svg(
             358,
             "CHARACTER SLOT B (GENERATION 2 — E.G., START AT AGE 3 [j=1] OR AGE 21 [j=7])",
-            "Absorbs B:01/B:03 Buffs at j=0..5 | Watch Age-21 H:04 Brain-Drain Check at j=7!",
+            "Stacks Tradeable 50/25/25% Tranches (B:01-B:06) | Watch Age-21 H:04 Check at j=7!",
         )
     )
 
@@ -251,7 +251,7 @@ def build_cohort_svg() -> str:
     )
     svg.append(
         '<text x="262" y="992" text-anchor="middle" fill="#A8DADC" font-family="Helvetica, Arial, sans-serif" font-size="10.5">'
-        '(Cuts N:01-N:08, B:10, or E:02 deployment cost by 100%)</text>'
+        '(50% Nobel/Solver discount; 100% FREE while Elder j>=21 is active!)</text>'
     )
 
     # Bay 2: Available Mana Pool & Contingent Liability Reference

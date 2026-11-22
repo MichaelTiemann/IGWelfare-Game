@@ -1,5 +1,5 @@
 # Shooting the Moon: The Plutocrat's Crown, Strategic Ambiguity, & Global Market Contagion
-**Companion Coopetitive Rules for *Foils & Founders: The Aotearoa Deck* (v2026.11c)**
+**Companion Coopetitive Rules for *Foils & Founders: The Aotearoa Deck* (v2026.11 — 100-Card Tranche Edition)**
 
 In *Foils & Founders*, constructive players cooperate across the shared River to lift Aotearoa onto all three coupled hydrofoil surfaces (`SS0 -> SS1 -> SS2`) while competing for the **Mana Laureate** and productive **Enterprise Wealth ($z_h$)**. Yet just as in New Zealand's real political economy—and just as in *Hearts*—a player may instead attempt to **Shoot the Moon** via rentier state capture.
 
@@ -31,7 +31,9 @@ For four decades, New Zealand's tax and credit settings quietly nudged ordinary 
    * Holding a single Pillar looks identical whether you are a constructive Finisher building a cash runway for mid-game River launches or a prospective Plutocrat laying your first stone.
 2. **The Smooth Portfolio Rotation ($z_\ell \rightarrow z_h$ Pivot):**
    * Mirroring `B:08`'s predictable 10-year portfolio rotation runway, at the start of any turn while you hold **exactly 1 Pillar**, you may voluntarily **liquidate (discard) it** to help fund a constructive River card play—gaining **+2 Wealth** toward that card's cost and **+1 *Mana*** (counting as active *mana* circulation for the 2-turn Use-It-Or-Lose-It rule).
-3. **Showing Your Hand (Escalating to Pillar 2+):**
+3. **Coasian Tranche Ransom (Hostage Leverage on `B:01`–`B:06`):**
+   * In the 100-card Tranche Shoe (`6x B:01`, `3x B:02`, `7x B:03`, `3x B:04`, `3x B:05`, `4x B:06`), holding a scarce `50%` first-tranche card needed by an uncovered *whānau* lets you ransom it across the table for **~2 Wealth** in legitimate Coasian seed capital—funding your Vault runway without revealing whether you plan to pivot or escalate!
+4. **Showing Your Hand (Escalating to Pillar 2+):**
    * Attempting to place a **2nd distinct Pillar** into your Vault permanently locks out voluntary rotation for the rest of the game and opens the **Civic Watchdog Window**.
 
 ---

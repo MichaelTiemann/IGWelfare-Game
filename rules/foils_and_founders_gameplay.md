@@ -1,5 +1,5 @@
 # FOILS & FOUNDERS: GAMEPLAY & COOPETITIVE MECHANICS GUIDE
-*Companion to `cards.yaml` (80-Card Master Deck, v2026.11), `study_cards.yaml`, & `rules.md`*  
+*Companion to `cards.yaml` (80 Canonical Cards / 100-Card Tranche Play Shoe, v2026.11), `study_cards.yaml`, & `rules.md`*  
 **Author:** Michael Tiemann (`mdtiemann@gmail.com`) | **License:** CC-BY-SA-4.0  
 **Repository:** `https://github.com/MichaelTiemann/IGWelfare`
 
@@ -11,8 +11,8 @@
 
 Most policy games fail in one of two ways: either they preach a pre-scripted moral where players march in lockstep, or they reward zero-sum monopoly hoarding until the board collapses. *Foils & Founders* is built on the exact mathematical tension of Aotearoa New Zealand's spatial Overlapping Generations (OLG) economy:
 
-1. **You Cannot Win on a Sinking Hull (The `-16.21% CE` LTFM Sinkhole):** Under Status Quo (`SS0`) fiscal drift, unprevented early childhood hardship (`22%–30%`), `3.10x` metropolitan housing costs, `19.3%–23.4%` metro graduate brain drain, and `61%` top-talent capture in passive land speculation (`z_l`) drag Crown Debt toward `185%–200%` of GDP and working-age PAYE toward `28.2%–32.0%`. Every single policy silo fighting alone finishes **net negative** over 60 years (`-9.12%` GrowthNZ-only, `-6.80%` Solve-Debt-First, `-2.40%` WellBeing-only, `-0.06%` Barnardos-only).
-2. **Over Half the Prize Lives Between Our Lanes (`+13.47%` of `+24.70% CE`):** Uniting the **Four Coalitions** (`K:01` Barnardos/Iwi Early Years, `K:04` WellBeing & Housing Justice, `K:05` GrowthNZ Enterprise Builders, and `K:07` Sovereign Fiscal Stewards) unlocks `+24.70% CE` pre-NDC national welfare (`+25.19% CE` on the wave-convolved *Te Kāhui Waka* ledger), sinks Crown Debt to `21%–22%` of GDP, cuts PAYE from `22.0%` to **`18.25%`**, and lowers Universal NZ Superannuation from Age 65 (`SS1`) to **Age 64 (`SS2`)**!
+1. **You Cannot Win on a Sinking Hull (The `-16.21% CE` LTFM Sinkhole):** Under Status Quo (`SS0`) fiscal drift, unprevented early childhood hardship (`22%–30%`), `3.10x` metropolitan housing costs, `19.3%–23.4%` metro graduate brain drain, and `61%` top-talent capture in passive land speculation (`z_l`) drag Crown Debt toward `185%–200%` of GDP and working-age PAYE toward `28.2%–32.0%`. Measured against that `-16.21% CE` sinkhole, no single policy silo can rescue the waka alone (`Document 3` Table A.2 isolated vs. connected: `+3.22%` vs. `+12.39%` Children, Iwi & Youth; `+4.17%` vs. `+9.34%` Whānau & Housing; `+2.16%` vs. `+7.43%` Enterprise Builders; `+1.68%` vs. `+5.59%` Fiscal Stewards—and `-6.80%` under `T:03` *Solve-Debt-First* austerity!).
+2. **Over Half the Prize Lives Between Our Lanes (`+13.47%` of `+24.70% CE`):** Uniting the **Four Coalitions** (`K:01` Children, Iwi & Youth, `K:04` WellBeing & Housing Justice, `K:05` GrowthNZ Enterprise Builders, and `K:07` Sovereign Fiscal Stewards) unlocks `+24.70% CE` pre-NDC national welfare (`+25.19% CE` on the wave-convolved *Te Kāhui Waka* ledger), sinks Crown Debt to `21%–22%` of GDP, cuts PAYE from `22.0%` to **`18.25%`**, and lowers Universal NZ Superannuation from Age 65 (`SS1`) to **Age 64 (`SS2`)**!
 3. **Asymmetric Urgency Creates the Wrestling Scramble:** Even when players agree on the 60-year destination, rolling different **Regions**, **Starting Child Ages**, and **Wealth Vigintiles (`B:00`)** creates fierce short-term positional scrambles over *who gets covered in Wave 1 vs. Wave 9*, *who pays Political Drag vs. who collects Mana Royalties*, and *when to gamble on launching Phase 2 (`SS2`)*.
 4. **Cardboard Before Cabinet (`N:01` & `T:00`):** As Kenneth Arrow (`N:01`) proved, capability is forged in the doing—and when citizens, students, and Ministers burn through their `28%` Wave-1 commissioning friction on a tabletop in 45 minutes, nobody's *mokopuna* has to pay the tuition in real life.
 
@@ -45,7 +45,7 @@ Never conflate private cash with civic standing:
 Every player places a **Command Zone Wayfinder Persona (`K:01–K:09`)** beside a **3-Slot *Whānau* Mat** spanning the human lifecycle:
 * **Slot 1 — *Being* (`Tamariki & Rangatahi`, Ages `0–17`):** Consumes household/public investment across **Gate 1 (`Ages 0–5`)** and **Gates 2–3 (`Ages 6–17`)**. Generates `0` cash Wealth now, but determines your future adult skill tier (`Struggling h1–h2`, `Core h3–h5`, or `Thriving h6–h7`).
 * **Slot 2 — *Becoming* (`Pakeke`, Ages `18–63`):** Your household economic engine. Generates **Wealth** each turn (`1 Wealth` if Struggling/`z_l` wage-squeezed, `2 Wealth` if Core Trades `Node 18`, `3 Wealth` if Thriving `z_h` Builder `Node 20`), pays PAYE taxes, and faces the Age-21 `H:04` Brain-Drain check upon entering Slot 2.
-* **Slot 3 — *Crossing Over* (`Kaumātua & Kuia`, Ages `64–89` in `SS2` / `65–89` in `SS0–SS1`):** Receives Universal NZ Superannuation, unlocks the **Off-Balance-Sheet `K_whanau` Pool (`K:09`)**, emits **1 free Lifetime Experience Token per turn**, and leaves a De Nardi Estate (`B:07` / `E:02` solar bequest) upon reaching the **Age-90 Rebirth Horizon**.
+* **Slot 3 — *Crossing Over* (`Kaumātua & Kuia`, Ages `64–89` in `SS2` / `65–89` in `SS0–SS1`):** Receives Universal NZ Superannuation, unlocks the **Off-Balance-Sheet `K_whanau` Pool (`K:09`)**, upgrades `K:09`'s **1/turn Lifetime Experience Token from 50% discount to 100% FREE**, and leaves a De Nardi Estate (`B:07` / `E:02` solar bequest) upon reaching the **Age-90 Rebirth Horizon**.
 
 #### Why Default Coopetitive Play Uses **2-of-3 Active Slots ("Playing Out of Your Hand")**
 * **Standard Mode (`2-of-3` Asymmetric *Whānau* — Recommended for 3–6 Players):** At Setup, each player populates **only 2 of their 3 slots**, leaving **1 generational slot empty**. That structural gap mirrors modern demographic reality and forces dynamic cross-table (*out-of-hand*) alliances:
@@ -74,14 +74,14 @@ Before anyone chooses a policy strategy, every player picks up **`B:00` (*Te Tat
 3. **Step 3 — Roll Starting `2-of-3` *Whānau* Ages:**
    * Roll `1d20` for configuration: `1–10` `[Slot 1 + Slot 2]` (roll `1d6` for child starting age: `1–2` = **Age 1**, `3–4` = **Age 4**, `5–6` = **Age 12**; adult starts at **Age 30**); `11–16` `[Slot 2 (Age 42) + Slot 3 (Age 66)]`; `17–20` `[Slot 1 (Age 11) + Slot 3 (Age 67)]`.
 4. **Step 4 — Draft Wayfinder Personas (`K:01–K:09`) & Deal Opening Hands:**
-   * In **Rawlsian Turn Order** (lowest Birth Vigintile roll drafts first!), each player claims 1 Wayfinder Persona for their Command Zone and draws **5 cards** from the shuffled Playable Deck (`B:01–B:15`, `C:02–C:10`, `N:01–N:08`, `E:01–E:05`, plus active `P` mods; `B:16`, `K:10`, and `N:09` sit face-up as Capstone Milestones).
+   * In **Rawlsian Turn Order** (lowest Birth Vigintile roll drafts first!), each player claims 1 Wayfinder Persona for their Command Zone and draws **5 cards** from the shuffled **100-Card Tranche Play Shoe** (`6x B:01`, `3x B:02`, `7x B:03`, `3x B:04`, `3x B:05`, `4x B:06` stacked at **`50% / +25% / +25%`** per gate and **freely tradeable** across players so a `+25%` duplicate can be swapped into a neighbor's `+50%` first slot, plus singletons `B:07–B:15`, `C:02–C:10`, `N:01–N:08`, `E:01–E:05`, and active `P` mods; `B:16`, `K:10`, and `N:09` sit face-up as Capstone Milestones).
    * Place `H:01` (*Cash-Flow Myopia*) and `H:02` (*Wellington Silos*) face-up in the Orthodoxy Row; shuffle `H:03–H:10` and `T:01–T:10` into the **Headwind & Trap Deck** (or deal 2 to each player's secret Feral Hand in **Mode B**).
 
 ---
 
 ## 4. Turn Sequence & The 20-Turn ($\Delta t = 3\text{ Yr}$) Lifecycle Clock
 
-Each of the **20 turns** represents **3 calendar years** (`Turn 1 = Years 1–3`, `Turn 2 = Years 4–6`, ..., `Turn 5 = Years 13–15 [Plan C Window]`, `Turn 6 = Years 16–18 [Year 16.8 Cash Breakeven]`, `Turn 7 = Years 19–21 [Plan B Window & Wave-1 Echo]`, `Turn 20 = Year 60`):
+Each of the **20 turns** represents **3 calendar years** (`Turn 1 = Years 1–3`, `Turn 2 = Years 4–6`, ..., `Turn 5 = Years 13–15 [Plan A Window]`, `Turn 6 = Years 16–18 [Year 16.8 Cash Breakeven]`, `Turn 7 = Years 19–21 [Plan B Window & Wave-1 Echo]`, `Turn 20 = Year 60`):
 
 1. **Phase A — Sunrise & Biological Aging (`+3 Years`):**
    * Advance the Turn Marker and age every active character on all *Whānau* Mats by **`+3 years`**.
@@ -115,7 +115,7 @@ Whenever a subsystem (`B:01` ECE, `B:03` Mentoring, or `E:01` Electrification) i
 | :--- | :--- | :--- |
 | **Step Size & Order** | Advances **`1/3` regional capacity per wave**: `Rural + Small` first (`Waves 1–3`), then `Large` (`Waves 4–6`), then `Auckland` (`Waves 7–9`). *(Electrification `E:01` hits `100%` `Rural + Small` at Turn 1 / Year 3!)* | Jumps straight to **`3/3` national coverage on Turn 1** across all 4 regions simultaneously. |
 | **Workforce & Commissioning Friction** | Quadratic surge penalty drops **`88.9%`** ($\phi_{\mathrm{adj}}(\frac{1}{3})^2 = 0.02$ vs. $0.18$); PDSA learning ($\gamma_{\mathrm{learn}} = 0.45$) lifts delivery yield from `72%` (`Wave 1`) to **`>95%` (`Wave 7`)**, averaging **`95.5%–96.8%`** across `SS1`! | Suffers `28%` Day-1 uncalibrated friction + `18%` workforce bottleneck (`~18.5%` permanent `SS1` haircut) and triggers **`H:10`** (`42%` / `NZD 3.8B` unmentored grant waste). |
-| **Early J-Curve Risk & Stability Modifier** | Year-3 capital at risk cut **`75%`** (`-NZD 1.6B/yr`); places **+1 Fleet Experience Counter (`L_m`)** per completed echelon (`+2` to next Additionality D20 roll) and pulls cash breakeven 2.4 yrs earlier to **Year 16.8**! | Quadruples Year-3 deficit (`-NZD 6.5B/yr`), inflicts **`-4` on Additionality & Political Stability D20 rolls** during Turns `1–5`, delays breakeven to **Year 19.3**, and **locks out `Plan C` (`B:13`)**! |
+| **Early J-Curve Risk & Stability Modifier** | Year-3 capital at risk cut **`75%`** (`-NZD 1.6B/yr`); places **+1 Fleet Experience Counter (`L_m`)** per completed echelon (`+2` to next Additionality D20 roll) and pulls cash breakeven 2.4 yrs earlier to **Year 16.8**! | Quadruples Year-3 deficit (`-NZD 6.5B/yr`), inflicts **`-4` on Additionality & Political Stability D20 rolls** during Turns `1–5`, delays breakeven to **Year 19.3**, and **locks out `Plan A` (`B:13`)**! |
 | **Why Someone Still Tempts `T:04`!** | Waiters holding an Age `3–5` toddler in `Auckland` risk missing Gate 1 unless they buy a `2-Wealth` private bridge or trade for an early Vanguard slot! | An `Auckland` toddler parent captures immediate Turn-1 public coverage for *their* child—dumping the `-4` macro stability risk onto everyone else! |
 
 ### 5.2 Fast Starters vs. Patient Followers & The `17.3%` Vanguard Grant Bridge (`B:05`)
@@ -141,9 +141,9 @@ The four Coalitions cannot inspect exact deterministic synergy payouts before co
 
 | Off-Diagonal Wedge Cell | Linked Coalitions & Core Cards | **Headwind (`1–5`)** *(0.65x Yield)* | **Baseline (`6–15`)** *(1.00x Canonical)* | **Tailwind (`16–20`)** *(1.35x Breakthrough)* |
 | :--- | :--- | :---: | :---: | :---: |
-| **Wedge `1x2` (`Kaiako` & LVR Co-Location)** | `K:01` (Barnardos) $\times$ `K:04` (WellBeing): `B:01+B:08` | `+1.5% CE` (`+2 Mana`) | **`+2.27% CE`** (`+3 Mana`, clears `H:06`!) | `+3.1% CE` (`+4 Mana` + `1 Audit` card) |
-| **Wedge `1x3` (Thriving Talent $\times$ `z_h` Firms)** | `K:01` (Barnardos) $\times$ `K:05` (GrowthNZ): `B:03+B:06+B:08` | `+1.3% CE` (`+2 Mana`) | **`+2.06% CE`** (`+3 Mana`, clears `H:04`!) | `+2.8% CE` (`+4 Mana` + `+1 Wealth/turn`) |
-| **Wedge `1x4` (Year-5 ACC Continuation Ledger)** | `K:01` (Barnardos) $\times$ `K:07` (Fiscal): `B:01+B:09+N:04` | `+1.0% CE` (`+2 Mana`) | **`+1.53% CE`** (`+3 Mana`, `3.84x` audit!) | `+2.1% CE` (`+4 Mana`, `4.4x` GUiNZ ROI!) |
+| **Wedge `1x2` (`Kaiako` & LVR Co-Location)** | `K:01` (Children/Iwi) $\times$ `K:04` (WellBeing): `B:01+B:08` | `+1.5% CE` (`+2 Mana`) | **`+2.27% CE`** (`+3 Mana`, clears `H:06`!) | `+3.1% CE` (`+4 Mana` + `1 Audit` card) |
+| **Wedge `1x3` (Thriving Talent $\times$ `z_h` Firms)** | `K:01` (Children/Iwi) $\times$ `K:05` (GrowthNZ): `B:03+B:06+B:08` | `+1.3% CE` (`+2 Mana`) | **`+2.06% CE`** (`+3 Mana`, clears `H:04`!) | `+2.8% CE` (`+4 Mana` + `+1 Wealth/turn`) |
+| **Wedge `1x4` (Year-5 ACC Continuation Ledger)** | `K:01` (Children/Iwi) $\times$ `K:07` (Fiscal): `B:01+B:09+N:04` | `+1.0% CE` (`+2 Mana`) | **`+1.53% CE`** (`+3 Mana`, `3.84x` audit!) | `+2.1% CE` (`+4 Mana`, `4.4x` GUiNZ ROI!) |
 | **Wedge `2x3` (De-Hoarded Land & Food Hubs)** | `K:04`/`K:03` $\times$ `K:05` (GrowthNZ): `B:08+C:08+C:09` | `+0.8% CE` (`+2 Mana`) | **`+1.21% CE`** (`+3 Mana`, `1.6x–2.16x` hub!) | `+1.7% CE` (`+4 Mana`, unlocks `C:10` early!) |
 | **Wedge `2x4` (Super-64, `K_whanau` & `TFR 2.03`)** | `K:04`/`K:09` $\times$ `K:07` (Fiscal): `B:15+K:09+N:08` | `+0.5% CE` (`+2 Mana`) | **`+0.69% CE`** (`+3 Mana` + **3rd Slot Unlock!**) | `+1.0% CE` (`+4 Mana` + **3rd Slot + `-0.5%` PAYE**) |
 | **Wedge `3x4` (`-60 to -100 bps` Credit & `18.25%` PAYE)** | `K:05` (GrowthNZ) $\times$ `K:07` (Fiscal): `B:14+B:15+E:03` | `+0.5% CE` (`+2 Mana`) | **`+0.69% CE`** (`+3 Mana`, debt $\to 21\%$!) | `+1.0% CE` (`+4 Mana` + `+1 Audit` card) |
@@ -160,13 +160,13 @@ Scalable tax levers **`B:07` (3-Yr Fast CGT/Estate Ramp)** and **`B:08` (10-Yr L
 Provincial players (`Rural` 16% + `Small` 24% = **40% of Aotearoa**) are never consigned to permanent welfare dependency. Completing the **4-Card Provincial Graduation Chain** transforms `Rural` and `Small` into high-wage `z_h` engines and gifts a tax cut to the *entire* nation:
 1. **`C:07` (*Income $\times$ Geography Bridge*) + `E:01` (*Waves 1–3 Rural/Small Electrification*):** Cushions the `2.74x` mandatory fuel burden and cuts provincial household energy bills by `~NZD 3,000/yr` net (`-28%` / `-25%` off $\bar{e}_k$) by Turn 1!
 2. **`B:02` (*Te Māra Kai / Farm-to-ECE*) + `B:04` (*GrowingChange Youth Ag Enterprise*):** Boosts preschool vegetable intake `+24%–33%`, cuts youth recidivism (`92%` non-recidivism), and blocks `T:06` (*Corporate Import Caterer Siphon*).
-3. **`C:08` (*Wholesale Monopsony & Retail Duopoly Breaker*) + `C:09` (`1.60x–2.16x` *Regional Food Hubs*):** Shatters `H:08` farm-gate monopsony and grocery/supply cartels (`M_olig -> 1.00`), shifting provincial jobs from `z_l` to `z_h` (`\Delta\mu_z = +0.041` Rural, `+0.031` Small).
+3. **`C:08` (*Wholesale Monopsony & Retail Duopoly Breaker*) + `C:09` (`1.60x–2.16x` *Regional Food Hubs*):** Shatters `H:08` farm-gate monopsony and grocery/supply cartels (`M_olig -> 1.00`), shifting provincial jobs from `z_l` to `z_h` ($\Delta\mu_z = +0.041$ Rural, $+0.031$ Small).
 4. **Capstone `C:10` (*Endogenous `85%` Transfer Retirement*):** Because provincial households now earn thriving `z_h` wages, **`85%` of `C:07`'s temporary `SS1` transfer retires automatically in `SS2`**—shrinking public outlays from `NZD 8.06B/yr` to `NZD 6.52B/yr` and rewarding **every player at the table** with an extra **`-0.64 pp` working-age PAYE cut** (`18.89% -> 18.25%`)!
 
 ### 6.4 Off-Balance-Sheet *Whānau* Accounting (`K_whanau` & `K:09` *Aunty's House*)
 Standard GDP ledgers count a paid crash-ward bed as "output" while valuing a grandmother's daily care at zero (`Marilyn Waring`, 1988). On the tabletop, the **`K_whanau` Pool** is decisive infrastructure—with sharp asymmetric incentives:
 * **Empty Slot 3 (`0` Direct Yield):** If your `Slot 3` (*Kaumātua/Kuia*) is empty, you cannot tap the `K_whanau` Pool directly for yourself.
-* **Active Slot 3 (`K:09` *Aunty's House* Royalties):** Any player holding an active `Slot 3` Elder may tap `K_whanau` to shield **any neighbor's** `Slot 1` child against Gate-1 hardship or Gate-2/3 unemployment shocks (`\Psi_{J=5}`), collecting **`+2 Mana` Variant B Royalties** while boosting school mentoring trust `M_trust` from `45%` to `100%`!
+* **Active Slot 3 (`K:09` *Aunty's House* Royalties):** Any player holding an active `Slot 3` Elder may tap `K_whanau` to shield **any neighbor's** `Slot 1` child against Gate-1 hardship or Gate-2/3 unemployment shocks ($\Psi_{J=5}$), collecting **`+2 Mana` Variant B Royalties** while boosting school mentoring trust `M_trust` from `45%` to `100%`!
 * **The Two-Phase Superannuation Rule (`H:05` Trap vs. `B:15` Age-64 Sweet Spot):**
   * *If `H:05` / `T:03` pushes Super to Age 70:* `K_whanau` drops **`-36.2%`**, `52%–68%` of manual elders leak onto disability support, and distressed households flip to **negative net care (`K_whanau^net < 0`, Sandwich-Generation Reversal)**—imposing `-1 Wealth/turn` caregiver drag on `Slot 2` working parents!
   * *Under IGWelfare (`SS1` Super protected at **65** $\to$ `SS2` lowered to **Age 64** via `B:15`):* Universal Super is never means-tested (preserving saving incentives `a'`), and lowering eligibility to **Age 64** in `SS2` releases a **`+8.1%` *Kuia/Koroua* caregiving boost** (`28%` offset by avoided ACC/disability claims), triggering `N:08` to unlock everyone's 3rd *Whānau* slot!
@@ -196,7 +196,7 @@ $$\mathrm{Roll}_{\mathrm{Stability}} = 1\mathrm{d}20 - \mathrm{Penalty}_{\text{J
 
 | Modified D20 Roll | Electoral Regime Outcome | Impact on Subsystems, Additionality & Cohorts |
 | :---: | :--- | :--- |
-| **`12+` (Mandate Renewed!)** | **Full Continuity (`\lambda_{\mathrm{cred}} = 1.0`)** | All active subsystems advance uninterrupted; Zone B staked Mana stays upright; Social Cohesion (`C:02`) gains `+3.0`. |
+| **`12+` (Mandate Renewed!)** | **Full Continuity ($\lambda_{\mathrm{cred}} = 1.0$)** | All active subsystems advance uninterrupted; Zone B staked Mana stays upright; Social Cohesion (`C:02`) gains `+3.0`. |
 | **`6–11` (3-Yr Flip Friction)** | **50% Duty-Cycle Sawtooth (`T:07` Mid)** | **Off-Diagonal Wedge Additionality is cut in HALF (`0.50x`)** until the next election (`~+12.5% CE` linear ceiling; `+6.58% CE` if base levers also pause, inflicting `22.0%` 1-term fade-out on unmentored `Slot 1` children). |
 | **`1–5` (6-Yr Scissor-Blade!)** | **Two-Term Repeal (`T:07` Low -> `+3.84% CE`!)** | Unfinished `SS1` waves freeze for **2 turns (6 years)**! Zone B Mana on unbanked subsystems tips sideways into **Jeopardy**; `Slot 1` youth under Age 20 without a `B:03` lock suffer **`39.2%` two-term fade-out** (`1 - 0.78^2`); and **Off-Diagonal Wedge Additionality drops to `0%`** (`84.6%` of the generational prize destroyed)! |
 
@@ -210,18 +210,18 @@ Crossing from **Phase 1 (`SS1` Incubation & Reallocation)** into **Phase 2 (`SS2
 
 Throughout `Turns 1–5`, whenever a player completes a regional wave echelon, unlocks **`B:09`**, or hits a **`16–20` Tailwind** on a Coalition Wedge, they draw **1 secret face-down Orbital Audit / Compass Card** (`+0.5%` to `+2.0%` verified fiscal cushion) into their private hand. Only by pooling clues—or peeking via **`B:10` / `E:04`**—does anyone know the exact total across the table!
 
-### 8.1 Two Keys to Ignite `SS2` (`Plans C, B, & A`)
+### 8.1 Two Keys to Ignite `SS2` (`Plans A, B, & C`)
 
-* **Key 1 — Calling the Early `"We Got This!"` Slingshot (`Plan C` @ Turn 5 / Year 15):**
-  * During Phase C of **Turn 5** (or Turn 6 prior to hard cash breakeven), any bold player may step forward as **Launch Caller**, staking `2 Mana` into Zone B to declare *"We Got This!"* Other players must immediately declare **Co-Sponsor** (`1 Mana` stake) or **Skeptical Bystander** (`0` stake).
-  * **Reveal & Audit:** Flip all face-down Orbital Audit cards and check the three statutory `Plan C` gates:
+* **Key 1 — Calling the Early Slingshot (`Plan A` @ Turn 5 / Year 15):**
+  * During Phase C of **Turn 5** (or Turn 6 prior to hard cash breakeven), any bold player may step forward as **Launch Caller**, staking `2 Mana` into Zone B to call **Launch Plan A**! Other players must immediately declare **Co-Sponsor** (`1 Mana` stake) or **Skeptical Bystander** (`0` stake).
+  * **Reveal & Audit:** Flip all face-down Orbital Audit cards and check the three statutory `Plan A` gates:
     1. All **13 *Te Kāhui Waka* waves** are active on the board;
     2. Consolidated **Core Crown Debt $\le 42.0\%$ of GDP** (`41.7%` target); and
     3. Revealed Audit cushions + realized Wedge yields cover **$\ge 95\%$ of the cumulative J-curve** (leaving $\le \text{NZD } 1.49\text{B}$ tail).
-  * **If the `Plan C` Launch Succeeds (`+NZD 190B` Slingshot!):** `SS2` ignites immediately at Turn 5 (10 years ahead of `Plan A`), unlocking **`B:14`** + **`B:15`** (`18.25%` PAYE & **Universal Super at Age 64**!) and crossing the 60-year welfare target **13.1 years early**! The Launch Caller claims the **`3x` Initiator Mana Multiplier**, Co-Sponsors claim **`2x`**, and **Skeptical Bystanders suffer `-3 Mana` Forfeit** (and miss Turn-5 `SS2` tax-cut royalties)!
+  * **If the `Plan A` Launch Succeeds (`+NZD 190B` Slingshot!):** `SS2` ignites immediately at Turn 5 (10 years ahead of `Plan C`), unlocking **`B:14`** + **`B:15`** (`18.25%` PAYE & **Universal Super at Age 64**!) and crossing the 60-year welfare target **13.1 years early**! The Launch Caller claims the **`3x` Initiator Mana Multiplier**, Co-Sponsors claim **`2x`**, and **Skeptical Bystanders suffer `-3 Mana` Forfeit** (and miss Turn-5 `SS2` tax-cut royalties)!
   * **If the Call Is Premature ("Grounded on the Shoals!"):** Cutting taxes before the J-curve matures violates the `42%` debt gate! `SS2` aborts; the premature Caller's staked Mana tips into **Jeopardy**, their Wayfinder is **exhausted for 2 turns**, Crown Debt takes `+2%` penalty drag, and patient rivals wait cleanly for Key 2!
-* **Key 2 — Hard Cash-Flow Breakeven Lock (`Plan B` @ Turn 6–7 / Year 16.8–20.0, or `Plan A` @ Turn 8 / Year 25):**
-  * Once annual fiscal savings + tax revenues exceed ongoing reform outlays (`Year 16.8` under *Te Kāhui Waka* $\to$ `Year 20` statutory `Plan B`), `SS2` unlocks **automatically with zero audit risk** (`NZD 0` bridge financing, `60.0x` peak fiscal ROI, `+NZD 104B` extra welfare over conservative Year-25 `Plan A`), awarding standard `2x` Zone-B Mana conversion to all active stewards.
+* **Key 2 — Hard Cash-Flow Breakeven Lock (`Plan B` @ Turn 6–7 / Year 16.8–20.0, or `Plan C` @ Turn 8 / Year 25):**
+  * Once annual fiscal savings + tax revenues exceed ongoing reform outlays (`Year 16.8` under *Te Kāhui Waka* $\to$ `Year 20` statutory `Plan B`), `SS2` unlocks **automatically with zero audit risk** (`NZD 0` bridge financing, `60.0x` peak fiscal ROI, `+NZD 104B` extra welfare over conservative Year-25 `Plan C`), awarding standard `2x` Zone-B Mana conversion to all active stewards.
 
 ---
 
@@ -235,7 +235,7 @@ $$\mathrm{Score}_i = \Bigl(\mathrm{Mana}_{\text{Zone A},i} + \mathrm{Royalties}_
 1. **The Shared Hull Regime Multiplier ($\mathcal{M}_{\mathrm{Regime}}$):**
    * **Sunk in `SS0` LTFM Drift (`-16.21% CE` / `-21.69%` under `H:09` Defense):** $\mathcal{M}_{\mathrm{Regime}} = \mathbf{0.5\times}$ *(No individual hoarder wins on a broken nation—if Struggling Launch stays $>15\%$ or Crown Debt $>100\%$, there is no individual winner; the table loses to Orthodoxy!)*
    * **Stable `SS1` Foil-Borne (`+15.04% CE` National):** $\mathcal{M}_{\mathrm{Regime}} = \mathbf{1.0\times}$
-   * **Full `SS2` Harvest (`+24.70% CE` Pre-NDC / `+25.19%` *Te Kāhui Waka*, Debt `21%–22%`, Super `64`, Cohesion `126.0`):** $\mathcal{M}_{\mathrm{Regime}} = \mathbf{1.5\times} + \mathbf{0.05\times}$ **per Turn Early** (`+0.25x = 1.75x` under `Plan C`!). *(Bonus `+0.25x` Resilience Badge if the crew also absorbed **`H:09` `3.0%` GDP Defense Shock** at `+21.18% CE` and `31.5%` debt!)*
+   * **Full `SS2` Harvest (`+24.70% CE` Pre-NDC / `+25.19%` *Te Kāhui Waka*, Debt `21%–22%`, Super `64`, Cohesion `126.0`):** $\mathcal{M}_{\mathrm{Regime}} = \mathbf{1.5\times} + \mathbf{0.05\times}$ **per Turn Early** (`+0.25x = 1.75x` under `Plan A`!). *(Bonus `+0.25x` Resilience Badge if the crew also absorbed **`H:09` `3.0%` GDP Defense Shock** at `+21.18% CE` and `31.5%` debt!)*
 2. **Inverse-Hub Mana Royalties (`Variant B` Anti-Snowball Engine):**
    * Whenever Player B uses a River card or `K:09` *Aunty's House* shield founded by Player A, the **Shared Commons (`N:06`)** mints **Mana Royalties** to Player A (capped at `2 payouts/card/turn`, or `3` with `N:06` *Paul Romer*).
    * **Inverse-Hub Scaling:** Founding rare outer-edge or provincial cluster cards (`C:08`, `C:09`, `C:10`, `B:05`, `E:02`) pays **`+2 Mana` per neighbor tap**, whereas crowded central hub cards (`B:01`, `B:08`) pay **`+1 Mana` per tap**—preventing Turn-1 snowballing so rural and specialist stewards race neck-and-neck with early-years founders!
@@ -256,7 +256,7 @@ In Solo or pure Co-Op play, place rival yacht markers on the **0–130 Cohesion 
 ## 10. Worked 2-Turn Tabletop Walkthrough (4 Players, `2-of-3` *Whānau* Mode)
 
 * **Setup Rolls (`B:00`):**
-  * **Player 1 (`Vigintile 2`, `Rural`, `[Slot 1 Age 4 + Slot 2 Age 30]`, `1 Wealth`):** Drafts **`K:01` (*Catalytic Steward — Barnardos/Iwi*)** first under Rawls's Maximin rule.
+  * **Player 1 (`Vigintile 2`, `Rural`, `[Slot 1 Age 4 + Slot 2 Age 30]`, `1 Wealth`):** Drafts **`K:01` (*Catalytic Steward — Children, Iwi & Youth*)** first under Rawls's Maximin rule.
   * **Player 2 (`Vigintile 6`, `Auckland`, `[Slot 1 Age 4 + Slot 2 Age 30]`, `2 Wealth`):** Drafts **`K:04` (*Whānau & Housing Justice Weaver*)**. *Urgent Crunch:* Holds an Age-4 toddler in Wave-3 `Auckland`!
   * **Player 3 (`Vigintile 13`, `Large` [Wellington], `[Slot 2 Age 42 + Slot 3 Age 66]`, `2 Wealth`, Empty `Slot 1`):** Drafts **`K:09` (*Kaumātua & `K_whanau` Anchor*)**.
   * **Player 4 (`Vigintile 20` -> Sub-roll `16` Active `z_h` Founder, `Small` Town, `[Slot 2 Age 39 + Slot 3 Age 65]`, `4 Wealth`, Empty `Slot 1`):** Drafts **`K:05` (*Enterprise Wayfinder — GrowthNZ*)**.

@@ -125,7 +125,7 @@ def build_front_card_html(
     <article class="card front-card" style="--card-border: {border_col}; --header-bg: {header_bg}; --badge-bg: {badge_bg}; --badge-txt: {badge_txt};">
       <header class="card-header">
         <div class="header-top">
-          <span class="pdd-badge">{html.escape(cid)}</span>
+          <div class="badge-group"><span class="pdd-badge">{html.escape(cid)}</span>{f'<span class="tranche-pill">⧉ 1/{int(card["copies"])} • 50/25/25%</span>' if int(card.get("copies", 1)) > 1 else ''}</div>
           <div class="header-right">{top_right_slot}</div>
         </div>
         <h2 class="card-title">{html.escape(str(card.get("name", "")))}</h2>
@@ -543,6 +543,22 @@ def render_study_deck_html(
       align-items: center;
       margin-bottom: 0.8mm;
       gap: 1mm;
+    }}
+    .badge-group {{
+      display: flex;
+      align-items: center;
+      gap: 1.0mm;
+    }}
+    .tranche-pill {{
+      font-family: var(--font-mono);
+      font-size: 5.2pt;
+      font-weight: 700;
+      background: #fef9c3;
+      color: #854d0e;
+      border: 0.25mm solid #fde047;
+      padding: 0.35mm 1.1mm;
+      border-radius: 0.9mm;
+      white-space: nowrap;
     }}
     .pdd-badge {{
       font-family: var(--font-mono);

@@ -101,11 +101,18 @@ cards:
   base_mana: 1
   a3_game_sheet: 1
   a3_slot: 2
+  copies: 6
+  tranche_schedule:
+  - 0.5
+  - 0.25
+  - 0.25
+  tranche_slot: Gate 1–2 Tamariki (cross-stacks w/ B:02)
   type: Cohort Identity — Gate 1 Early Childhood Foundation (Ages 0–5)
   lens:
   - Lens 1
   gate_or_phase: Gate 1 (Ages 0–5 — Biological Use-It-Or-Lose-It Window)
-  cost_or_requirement: NZD 13k Public Resource / Turn (Stepped in 1/3 Regional Waves or Single-Shot)
+  cost_or_requirement: 'NZD 13k Public Resource / Turn (Stepped in 1/3 Regional Waves or Single-Shot) [Tranche
+    (6 in deck): 1st=50%, 2nd=+25%, 3rd=+25% on Gate 1–2 Tamariki (cross-stacks w/ B:02) • Tradeable]'
   synergy_links:
   - B:02
   - B:03
@@ -115,18 +122,19 @@ cards:
   - H:06
   effects:
   - label: Early Hardship Corner & Biological Use-It-Or-Lose-It
-    rule: 'Characters age +3 years per turn. If a Tamariki ages past Age 5 (Turn 2) without Whānau Wraparound active
-      in their region, roll B:00: on 1–4 (22%; or 1–6 under H:03), attach a Struggling Trajectory token (permanently
-      capping adult earnings and driving 57%–81% of late-game Hospital, Care, and Justice hull drag).'
+    rule: 'Characters age +3 years per turn. If a Tamariki ages past Age 5 (Turn 2) without Whānau Wraparound
+      active in their region, roll B:00: on 1–4 (22%; or 1–6 under H:03), attach a Struggling Trajectory token
+      (permanently capping adult earnings and driving 57%–81% of late-game Hospital, Care, and Justice hull
+      drag).'
   - label: Becoming (Dynamic Complementarity & Parental Crowd-In)
-    rule: If supported by Te Korowai Mokopuna / Whānau Ora before Age 6, bypass the cash subsistence corner (i_c
-      = 0), compress the struggling launch share toward 1.5%, place a Readiness Counter (N:03) granting +2 Productivity
-      on subsequent mentoring/schooling cards, and crowd in +NZD 15k/yr of private parental care and time for
-      free.
-  flavor_text: Honor the sacred seed at age three, or pay NZD 180,000 a year in reactive state care at age fourteen.
-    The math was never hard; only the politics was.
-  empirical_anchor: 'Dunedin Study (Poulton et al., 2020: 22% early vulnerability cohort); Cunha, Heckman, & Schennach
-    (2010); Barnardos Te Korowai Mokopuna (2026); Document 3 Table A.1 (+2.5% CE isolated).'
+    rule: If supported by Te Korowai Mokopuna / Whānau Ora before Age 6, bypass the cash subsistence corner
+      (i_c = 0), compress the struggling launch share toward 1.5%, place a Readiness Counter (N:03) granting
+      +2 Productivity on subsequent mentoring/schooling cards, and crowd in +NZD 15k/yr of private parental
+      care and time for free.
+  flavor_text: Honor the sacred seed at age three, or pay NZD 180,000 a year in reactive state care at age
+    fourteen. The math was never hard; only the politics was.
+  empirical_anchor: 'Dunedin Study (Poulton et al., 2020: 22% early vulnerability cohort); Cunha, Heckman,
+    & Schennach (2010); Barnardos Te Korowai Mokopuna (2026); Document 3 Table A.1 (+2.5% CE isolated).'
 - id: B:02
   name: Te Māra Kai & Ka Ora, Ka Ako — Farm-to-ECE Preventative Medicine
   deck: base
@@ -135,13 +143,20 @@ cards:
   base_mana: 1
   a3_game_sheet: 1
   a3_slot: 3
+  copies: 3
+  tranche_schedule:
+  - 0.5
+  - 0.25
+  - 0.25
+  tranche_slot: Gate 1–2 Tamariki (cross-stacks w/ B:01)
   type: Cohort Enhancement — Gate 1–2 Nutrition & Whānau Food Security (Ages 0–12)
   lens:
   - Lens 1
   - Lens 2
   gate_or_phase: Gates 1 & 2 (Ages 0–12)
-  cost_or_requirement: Pair with B:01 (First 2000 Days) + Local Sourcing (C:09) Instead of Corporate Import Caterers
-    (T:06)
+  cost_or_requirement: 'Pair with B:01 (First 2000 Days) + Local Sourcing (C:09) Instead of Corporate Import
+    Caterers (T:06) [Tranche (3 in deck): 1st=50%, 2nd=+25%, 3rd=+25% on Gate 1–2 Tamariki (cross-stacks w/
+    B:01) • Tradeable]'
   synergy_links:
   - B:01
   - B:04
@@ -151,17 +166,17 @@ cards:
   - T:06
   effects:
   - label: Good Food Is Medicine
-    rule: Provide universal fresh, locally grown meals and māra kai (food gardens) across early learning and primary
-      schools—boosting children's vegetable intake by +24% to +33% and sending home garden produce with 46% of participating
-      whānau.
+    rule: Provide universal fresh, locally grown meals and māra kai (food gardens) across early learning and
+      primary schools—boosting children's vegetable intake by +24% to +33% and sending home garden produce
+      with 46% of participating whānau.
   - label: Subsistence Relief & Paediatric Health Shield
     rule: Lifts squeezed Rural, Small, and urban low-income whānau off the nutrition subsistence floor, slashes
       avoidable paediatric hospital admissions (Exit 2), and primes local demand for C:09 (1.6x–2.2x Regional
       Food-Hub Procurement).
-  flavor_text: A hungry child cannot compound cognitive skill, and a centralized plastic-wrapped ration wastes half
-    the rural economy. Feed the tamaiti from the local soil, and both the child and the province thrive.
-  empirical_anchor: Ka Ora, Ka Ako Healthy School Lunches evaluations; NC State CEFS Farm-to-ECE empirical audit
-    (+24%–33% vegetable intake, 46% take-home produce); Document 3 Section 1.1.
+  flavor_text: A hungry child cannot compound cognitive skill, and a centralized plastic-wrapped ration wastes
+    half the rural economy. Feed the tamaiti from the local soil, and both the child and the province thrive.
+  empirical_anchor: Ka Ora, Ka Ako Healthy School Lunches evaluations; NC State CEFS Farm-to-ECE empirical
+    audit (+24%–33% vegetable intake, 46% take-home produce); Document 3 Section 1.1.
 - id: B:03
   name: Tuakana–Teina Navigator — Gate 2–3 Adolescent Mentoring
   deck: base
@@ -170,11 +185,18 @@ cards:
   base_mana: 1
   a3_game_sheet: 1
   a3_slot: 4
+  copies: 7
+  tranche_schedule:
+  - 0.5
+  - 0.25
+  - 0.25
+  tranche_slot: Gate 3 Mentoring Bridge
   type: Cohort Becoming — Gate 2–3 Peer Mentor & Fade-Out Lock (Ages 12–14)
   lens:
   - Lens 1
   gate_or_phase: Gates 2 & 3 (Ages 12–14 — Second Biological Window)
-  cost_or_requirement: 2 Social Cohesion + 1 Creative Agency (Scaled from 17% Vanguard to 65%+)
+  cost_or_requirement: '2 Social Cohesion + 1 Creative Agency (Scaled from 17% Vanguard to 65%+) [Tranche (7
+    in deck): 1st=50%, 2nd=+25%, 3rd=+25% on Gate 3 Mentoring Bridge • Tradeable]'
   synergy_links:
   - B:01
   - B:04
@@ -188,15 +210,15 @@ cards:
   effects:
   - label: Halt Adolescent Skill Fade-Out (Wedge 1 Lock)
     rule: Early childhood gains from B:01 remain perishable (22% single-term / 39% two-term fade-out) until
-      banked at Ages 12–14. Pairing B:03 with B:01 locks in Wedge 1 (+3.2% CE national synergy) and grants Indestructible
-      against parental job-loss shocks and T:01 disinformation drag.
+      banked at Ages 12–14. Pairing B:03 with B:01 locks in Wedge 1 (+3.2% CE national synergy) and grants
+      Indestructible against parental job-loss shocks and T:01 disinformation drag.
   - label: Two-Way Ako & Vanguard Grant Fast-Track
     rule: Scaling Stars / Te Kāhui Whetū, Project K, Kura Kaupapa Māori, and Montessori Erdkinder lifts cohorts
       into the Thriving Launch Tier (65% rate) and immediately qualifies mentored adolescents for B:05 (17%
       Early-Adopter Youth Grant Bridge) at Age 20.
   flavor_text: In teaching the younger sibling to stand against the storm, the older sibling becomes a mountain.
-  empirical_anchor: Graeme Dingle Foundation Stars & Project K (2025); Cunha & Heckman (2007); Document 1D Section
-    2; Document 3 Table A.1 (+1.6% CE isolated + +3.2% CE Wedge 1).
+  empirical_anchor: Graeme Dingle Foundation Stars & Project K (2025); Cunha & Heckman (2007); Document 1D
+    Section 2; Document 3 Table A.1 (+1.6% CE isolated + +3.2% CE Wedge 1).
 - id: B:04
   name: GrowingChange & Montessori Erdkinder — Youth Ag & Trade Enterprise
   deck: base
@@ -205,12 +227,20 @@ cards:
   base_mana: 2
   a3_game_sheet: 1
   a3_slot: 5
+  copies: 3
+  tranche_schedule:
+  - 0.5
+  - 0.25
+  - 0.25
+  tranche_slot: Gate 4 Launch Bridge (cross-stacks w/ B:05)
   type: Cohort Becoming — Adolescent Hands-On Enterprise Bridge (Ages 12–17)
   lens:
   - Lens 1
   - Lens 2
   gate_or_phase: Gate 3 (Ages 12–17)
-  cost_or_requirement: Pair B:03 (Tuakana–Teina Mentoring) with Rural/Provincial Land or Marae/School Hubs (C:04)
+  cost_or_requirement: 'Pair B:03 (Tuakana–Teina Mentoring) with Rural/Provincial Land or Marae/School Hubs
+    (C:04) [Tranche (3 in deck): 1st=50%, 2nd=+25%, 3rd=+25% on Gate 4 Launch Bridge (cross-stacks w/ B:05)
+    • Tradeable]'
   synergy_links:
   - B:02
   - B:03
@@ -220,17 +250,17 @@ cards:
   - K:05
   effects:
   - label: Reclaiming Potential from the Justice Pipeline (92% Non-Recidivism)
-    rule: Engage adolescents aged 12–17 in real-world regenerative farming, food-hub logistics, and skilled trades
-      (modeled on CEFS Food Youth Initiative / GrowingChange and Montessori Erdkinder). Slashes youth justice burden
-      (Exit 4) with 92% non-recidivism.
+    rule: Engage adolescents aged 12–17 in real-world regenerative farming, food-hub logistics, and skilled
+      trades (modeled on CEFS Food Youth Initiative / GrowingChange and Montessori Erdkinder). Slashes youth
+      justice burden (Exit 4) with 92% non-recidivism.
   - label: Provincial Builder Pipeline
-    rule: Graduates launch at Age 20 pre-qualified as skilled regional tradespeople (Node 18) and productive primary-sector
-      founders (z_h, Node 20)—blocking T:02 (Hyperbolic Low-Skill Shortcut) and feeding directly into C:09 (Regional
-      Food Hubs).
+    rule: Graduates launch at Age 20 pre-qualified as skilled regional tradespeople (Node 18) and productive
+      primary-sector founders (z_h, Node 20)—blocking T:02 (Hyperbolic Low-Skill Shortcut) and feeding directly
+      into C:09 (Regional Food Hubs).
   flavor_text: A fourteen-year-old doesn't learn agency from a worksheet; they learn it when a community trusts
     them to run a real enterprise and feed real neighbours.
-  empirical_anchor: NC State CEFS Food Youth Initiative (FYI) & GrowingChange (92% non-recidivism); Lillard (2005)
-    Montessori Erdkinder; Document 3 Section 1.1.
+  empirical_anchor: NC State CEFS Food Youth Initiative (FYI) & GrowingChange (92% non-recidivism); Lillard
+    (2005) Montessori Erdkinder; Document 3 Section 1.1.
 - id: B:05
   name: The 17% Early-Adopter Youth Grant Bridge (Waka Mataika Vanguard Seed)
   deck: base
@@ -239,12 +269,20 @@ cards:
   base_mana: 2
   a3_game_sheet: 1
   a3_slot: 6
+  copies: 3
+  tranche_schedule:
+  - 0.5
+  - 0.25
+  - 0.25
+  tranche_slot: Gate 4 Launch Bridge (cross-stacks w/ B:04)
   type: Targeted Endowment — Waves 1–6 Transitional Capital Bridge (Age 20)
   lens:
   - Lens 1
   - Lens 2
   gate_or_phase: Gate 4 Launch (Waves 1–6 / Turns 1–2, Folding into B:06 by Wave 13)
-  cost_or_requirement: -NZD 0.28B/yr Public Outlay (Funded via B:07 Fast CGT/Estate Ramp; Requires Mentored Cohort)
+  cost_or_requirement: '-NZD 0.28B/yr Public Outlay (Funded via B:07 Fast CGT/Estate Ramp; Requires Mentored
+    Cohort) [Tranche (3 in deck): 1st=50%, 2nd=+25%, 3rd=+25% on Gate 4 Launch Bridge (cross-stacks w/ B:04)
+    • Tradeable]'
   synergy_links:
   - B:03
   - B:04
@@ -255,17 +293,17 @@ cards:
   - H:10
   effects:
   - label: Reward Ready Cohorts on Day 1 (Zero Skill-Mismatch Waste)
-    rule: During Waves 1–6 (Years 1–6), immediately award the NZD 62k+ Youth Capital Grant to Age-20 graduates of
-      Aotearoa's existing 17.3% mentoring vanguard (20% Rural, 19% Small, 16% Large, 16.5% Auckland) without
+    rule: During Waves 1–6 (Years 1–6), immediately award the NZD 62k+ Youth Capital Grant to Age-20 graduates
+      of Aotearoa's existing 17.3% mentoring vanguard (20% Rural, 19% Small, 16% Large, 16.5% Auckland) without
       waiting for Wave 13.
   - label: Save NZD 13B Gross & Avoid NZD 3.8B Dissipation
-    rule: Immunizes the table against H:10 (42% unmentored grant waste from Day-1 Single-Shot rushing) while retaining
-      ready young founders in NZ up to 4 turns early. Folds seamlessly into universal B:06 coverage across Waves
-      7–13.
-  flavor_text: Don't starve ready twenty-year-olds for a decade, and don't pour seed capital onto unmentored sand.
-    Back the vanguard on Day 1 while the fleet scales behind them.
-  empirical_anchor: Document 1D Section 3.1, Figure 1D.3, Table 1D.3 & Table 1D.4 (-NZD 0.28B/yr cost, NZD 13B
-    phasing saving, NZD 3.8B avoided waste).
+    rule: Immunizes the table against H:10 (42% unmentored grant waste from Day-1 Single-Shot rushing) while
+      retaining ready young founders in NZ up to 4 turns early. Folds seamlessly into universal B:06 coverage
+      across Waves 7–13.
+  flavor_text: Don't starve ready twenty-year-olds for a decade, and don't pour seed capital onto unmentored
+    sand. Back the vanguard on Day 1 while the fleet scales behind them.
+  empirical_anchor: Document 1D Section 3.1, Figure 1D.3, Table 1D.3 & Table 1D.4 (-NZD 0.28B/yr cost, NZD
+    13B phasing saving, NZD 3.8B avoided waste).
 - id: B:06
   name: Tūrangawaewae & Universal Age-20 Youth Capital Grant (Kaikōrero & Creator)
   deck: base
@@ -274,12 +312,19 @@ cards:
   base_mana: 2
   a3_game_sheet: 1
   a3_slot: 7
+  copies: 4
+  tranche_schedule:
+  - 0.5
+  - 0.25
+  - 0.25
+  tranche_slot: Gate 5 Youth Capital Grant
   type: Evolved Identity & Universal Endowment — Gate 4 Launch (Ages 20–35)
   lens:
   - Lens 2
   - Lens 3
   gate_or_phase: Gate 4 (Waves 7–13 -> 100% Universal at Wave 13 / Year 13)
-  cost_or_requirement: Evolved from B:03/B:04 Mentored Cohort + B:07 Estate/CGT Recycle (NZD 62,000+ Equity Seed)
+  cost_or_requirement: 'Evolved from B:03/B:04 Mentored Cohort + B:07 Estate/CGT Recycle (NZD 62,000+ Equity
+    Seed) [Tranche (4 in deck): 1st=50%, 2nd=+25%, 3rd=+25% on Gate 5 Youth Capital Grant • Tradeable]'
   synergy_links:
   - B:03
   - B:05
@@ -291,17 +336,17 @@ cards:
   - H:04
   effects:
   - label: Clear the 20% LVR Deposit Cliff (Wedge 2 Ignition)
-    rule: When paired with B:08 (Urban Land Cooling, -7.5% to -11%), seeding every mentored 20-year-old with NZD
-      62k+ in ring-fenced home/enterprise equity clears the discrete 20% mortgage and collateral cliff—lifting Auckland
-      young ownership from 28% to 41% (+2.2% CE Wedge 2).
+    rule: When paired with B:08 (Urban Land Cooling, -7.5% to -11%), seeding every mentored 20-year-old with
+      NZD 62k+ in ring-fenced home/enterprise equity clears the discrete 20% mortgage and collateral cliff—lifting
+      Auckland young ownership from 28% to 41% (+2.2% CE Wedge 2).
   - label: Trans-Tasman Brain-Drain Immunity
     rule: Cannot be exiled to the Abroad (Australia/OECD) Zone (reversing graduate outflows by +3,550/yr retained
       builders and lifting real regional wages by +6.8% to +9.6%).
   flavor_text: Price a twenty-year-old out of home with NZD 500-a-week survival rents and twenty years of public
     upbringing boards a one-way flight to Sydney or Melbourne. Give rangatahi a tūrangawaewae and a capital
     runway, and they build the next Aotearoa renaissance at home.
-  empirical_anchor: Ackerman & Alstott (1999); Kiyotaki & Moore (1997); Document 1D Table 1D.3; Document 3 Table
-    A.1 (+0.89% CE isolated + +2.2% CE Wedge 2).
+  empirical_anchor: Ackerman & Alstott (1999); Kiyotaki & Moore (1997); Document 1D Table 1D.3; Document 3
+    Table A.1 (+0.89% CE isolated + +2.2% CE Wedge 2).
 - id: B:07
   name: Fast CGT & Estate Liquidity Ramp (3-Year Vanguard Seed)
   deck: base
@@ -402,16 +447,17 @@ cards:
   - T:07
   effects:
   - label: Trim-Tab Counter to Cash-Book Myopia (H:01)
-    rule: Turning onto hydrofoils kicks the stern—cash OBEGAL lags True Solvency by 11 years (Yr 14 vs. Yr 3.3).
-      Against NZD 9.2B invested by Year 5, this zero-cash trim tab books NZD 11B in Direct Cost Avoidance (1.2x)
-      and NZD 35B in Total Fiscal Return (3.8x; 4.4x under H:03) inside one parliamentary term!
-  - label: Political Stability Shield & Compass Draw
-    rule: Adds +3 to all D20 Political Stability rolls against T:07 ('Stop-Go' repeal) during the Years 1–8 stern-kick
-      panic window, and draws 1 secret face-down Audit Card toward B:13 (Te Kapehu Whetū Launch).
-  flavor_text: When you prevent a car crash, ACC doesn't wait thirty years to book the saved hospital bill. Why
-    were we treating our children worse than a dented bumper?
-  empirical_anchor: NZ Treasury Circular 2024/15 & CBAx Guidance (2025); Williamson (2009); Document 1D Figure 1D.5
-    (+1.9% CE / +NZD 4.4B/yr booked at Yr 5); Document 3 Section 3.1.
+    rule: Turning onto hydrofoils kicks the stern—cash OBEGAL lags True Solvency by 11 years (Yr 14 vs. Yr
+      3.3). Against NZD 9.2B invested by Year 5, this zero-cash trim tab books NZD 11B in Direct Cost Avoidance
+      (1.2x) and NZD 35B in Total Fiscal Return (3.8x; 4.4x under H:03) inside one parliamentary term!
+  - label: Stability Shield & Compass Draw (or Late Audit Dividend)
+    rule: 'Years 1–8: +3 to D20 Stability rolls vs. T:07 repeal and draw 1 secret B:13 Star-Compass Audit Card.
+      If played Turn 7+ (after the stern kick): auditing matured cohorts locks -30 bps sovereign spread and
+      scores +2.5 Mana toward Key 2 (Plan B).'
+  flavor_text: When you prevent a car crash, ACC doesn't wait thirty years to book the saved hospital bill.
+    Why were we treating our children worse than a dented bumper?
+  empirical_anchor: NZ Treasury Circular 2024/15 & CBAx Guidance (2025); Williamson (2009); Document 1D Figure
+    1D.5 (+1.9% CE / +NZD 4.4B/yr booked at Yr 5); Document 3 Section 3.1.
 - id: B:10
   name: The 1925 Quantum Leap (OIA 20250878 Micro-VFI Override)
   deck: base
@@ -1752,7 +1798,8 @@ cards:
   - Lens 1
   - Lens 3
   gate_or_phase: Slot 3 Elder Activation (Dormant Without Elder; Explosive When Holding Slot 3!)
-  cost_or_requirement: Universal NZ Super Protected at Age 65 (SS1) -> Lowered to Age 64 (SS2 via B:15; Never Means-Tested!)
+  cost_or_requirement: Universal NZ Super Protected at Age 65 (SS1) -> Lowered to Age 64 (SS2 via B:15; Never
+    Means-Tested!)
   synergy_links:
   - B:03
   - B:15
@@ -1766,17 +1813,18 @@ cards:
   - H:06
   effects:
   - label: Marilyn Waring Uncounted Whānau & Volunteer Pool (Slot 3 Multiplier!)
-    rule: 'Standard GDP counts prisons as growth while pricing kuia, parents, and 79,000 FTEs of NZ volunteers at
-      zero! While YOU hold an active Slot 3 Kaumātua/Kuia, tap K_whanau^eff = K_0 * Phi_time(A_super) * (Q_{k,0}/Q_k)^0.35
-      to shield ANY player''s youth (''Aunty''s House'') for Variant B Mana royalties and block sandwich drag!'
+    rule: Standard GDP counts prisons as growth while pricing kuia, parents, and 79,000 FTEs of NZ volunteers
+      at zero! While YOU hold an active Slot 3 Kaumātua/Kuia, tap K_whanau^eff = K_0 * Phi_time(A_super) *
+      (Q_{k,0}/Q_k)^0.35 to shield ANY player's youth ('Aunty's House') for Variant B Mana royalties and block
+      sandwich drag!
   - label: Ngā Kete Wisdom Token & The Age-64 Kuia Dividend
-    rule: Emit 1 free Lifetime Experience Token every turn (cutting any N:01–N:08 or B:10/E:02 cost by 100%). Rejects
-      Super means-testing; in SS2 at Super Age 64 (B:15), boosts uncounted whānau & volunteer care by +8.1% (with
-      28% avoided ACC/disability offset)!
+    rule: Emit 1 Lifetime Experience Token/turn cutting any N:01–N:08 or B:10/E:02 cost by 50% (upgraded to
+      100% FREE while you hold an active Slot 3 Kaumātua/Kuia!). Rejects Super means-testing; at Super Age
+      64 (B:15), boosts uncounted whānau & volunteer care by +8.1% (28% ACC/disability offset)!
   flavor_text: Universal Super honours a lifetime of contribution while protecting the material security and
     unhurried time that let kaumātua, kuia, and aunties weave intergenerational aroha through every whānau.
-  empirical_anchor: Waring (1988, Counting for Nothing / If Women Counted) [Ref 47]; JBWere For-Purpose Report (2026,
-    79,000 volunteer FTEs) [Ref 30]; De Nardi (2004); Mead (2016); Document 2B Section 5.6.
+  empirical_anchor: Waring (1988, Counting for Nothing / If Women Counted) [Ref 47]; JBWere For-Purpose Report
+    (2026, 79,000 volunteer FTEs) [Ref 30]; De Nardi (2004); Mead (2016); Document 2B Section 5.6.
 - id: K:10
   name: Kotahitanga & Te Tiriti Big Table Crew (The Two-Hulled Kīato Keystone)
   deck: kaupapa

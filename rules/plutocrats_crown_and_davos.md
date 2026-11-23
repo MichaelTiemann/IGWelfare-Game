@@ -52,7 +52,7 @@ Count the number of **distinct Capture Pillars ($k$)** in your Vault during Phas
 ### B. Phase II Lobbying & Eroding Civic Judo-Blocks
 To attempt your **2nd, 3rd, or 4th Pillar**, pay **$k$ Wealth upfront** in lobbying capital (where $k \in \{1, 2, 3\}$ is the number of distinct Pillars you *already* hold). Before the card locks, any Steward with `>= 1` *Mana* may pay `1` Wealth to call a **Civic Judo-Block** on `B:00` (the D20):
 * **Counter-Card Bonus (`+4`):** If the defending Steward taps an active River/Wayfinder card—or discards a hand card—listed in that Trap/Boss card's `synergy_links`, add **+4** to the D20 roll.
-* **Coalition Defense Bonus (`+4`):** A second Steward may spend `1` Wealth or tap a linked card to add another **+4** *(essential when stopping Pillar 4!)*.
+* **Coalition Defence Bonus (`+4`):** A second Steward may spend `1` Wealth or tap a linked card to add another **+4** *(essential when stopping Pillar 4!)*.
 * **Domino Erosion Thresholds:**
   * **Stopping Pillar 2 ($1 \rightarrow 2$):** Roll **10+** on D20 *(needs **6+** with a `synergy_link` counter—75% block)*.
   * **Stopping Pillar 3 ($2 \rightarrow 3$):** Roll **13+** on D20 *(needs **9+** with a counter—60% block)*.

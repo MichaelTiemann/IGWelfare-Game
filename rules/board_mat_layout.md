@@ -13,7 +13,7 @@
 
 The **Foils & Founders Central Macro Mat** is formatted for standard tabletop and workshop printing at **$900\text{ mm} \times 600\text{ mm}$ ($36'' \times 24''$)** (rendered at $1800 \times 1220\text{ px}$ in `scripts/render_board_mat.py`), paired with individual **Multi-Generational Cohort Command Mats** ($280\text{ mm} \times 180\text{ mm}$ / A4 landscape).
 
-Every zone on the mat displays **dual-lens bilingual typography** honoring the two hulls of *Te Waka Hourua* (`STORIES.md`):
+Every zone on the mat displays **dual-lens bilingual typography** honouring the two hulls of *Te Waka Hourua* (`STORIES.md`):
 * **Hull A (Systems Engineering / America's Cup Hydrofoil):** Deep Pacific Navy (`#0B1D33`), Foiling Cyan (`#00B4D8`), and Titanium Silver.
 * **Hull B (*Te Waka o Whānau* / Te Ao Māori & Moana Pasifika *Pūrākau*):** Kauri Gold (`#D4A359`), Pounamu Green (`#2A9D8F`), and Kokowai Ochre (`#E76F51`).
 * **Hazard & Emergency States:** Subsistence/Jeopardy Crimson (`#D62828`) and Lavoisier Speculation Amber (`#F77F00`).

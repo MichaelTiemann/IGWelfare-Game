@@ -18,7 +18,7 @@ New Zealand possesses two of the world's crown-jewel longitudinal birth-cohort s
    * **The Degraded Welfare & Housing Reality:** By the time the GUiNZ cohort was born in 2009–2010—and tracked through the *Now We Are 8*, *Now We Are 12*, and *Now We Are 15* waves—New Zealand's social safety net and housing market had undergone a structural phase shift:
      * **The 1991 *Mother of All Budgets* ("Ruthanasia"):** Abolished the universal Family Benefit, slashed core benefit rates by up to 25%, and replaced income-related state housing rents with market-rent accommodation supplements—subsidizing private landlords while locking low-income whānau into deep abatement traps.
      * **The Untaxed Land Speculation Wave (`T:04` / `H:05`):** An untaxed NZD 1.6T residential property pool inflated Auckland and metro house-price-to-income multipliers to **`3.10x`** rural baselines, turning private rental housing into a precarious, high-churn sector.
-     * **Residential Transience (`>45%` Churn):** Over **45% of GUiNZ children** born into private rentals moved two or more times before starting primary school at age 5, repeatedly severing connections to Plunket nurses, early childhood education (`ECE`) centres, and neighborhood peer networks.
+     * **Residential Transience (`>45%` Churn):** Over **45% of GUiNZ children** born into private rentals moved two or more times before starting primary school at age 5, repeatedly severing connections to Plunket nurses, early childhood education (`ECE`) centres, and neighbourhood peer networks.
 
 ### Why Orthodox Fiscal Baselines Fail (`H:06`)
 

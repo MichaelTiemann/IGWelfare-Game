@@ -490,9 +490,9 @@ study_cards:
     + B_gov = sum omega_HH int a_fin d mu + B^*), locking 50% of post-breakeven cohort surpluses into debt
     retirement operationalizes Public Finance Act 1989 s26G(1)(a)&(e)—compressing sovereign and mortgage/SME
     credit spreads by -60 bps (+1.25% CE isolated) and creating the fiscal armor needed to carry a 3.0%-of-GDP
-    defense shock at 31.5% debt.
+    defence shock at 31.5% debt.
   tabletop_bridge: Scaling B:14 from 0% to 100% sufficiency lowers borrowing costs across the board and pairs
-    50/50 with B:15 to block T:10 (Tokyo Land Bubble) and survive H:09 (Defense Shock).
+    50/50 with B:15 to block T:10 (Tokyo Land Bubble) and survive H:09 (Defence Shock).
   references:
   - Kiyotaki et al. (2024) [Ref 4]
   - NZ Treasury LTFS 2025 [Ref 31]
@@ -520,7 +520,7 @@ study_cards:
     pushing Super to 70 triggers exponential manual morbidity decay (lambda_morb = 0.18/yr) and sandwich drag,
     whereas dropping to 60 hits a 39.8% dependency wall. Age 64 (paired with 50% ring-fenced 1.65x infrastructure
     answering the Sept 2026 Moa Point failure review and -0.64 pp from 85% T_k retirement) hits the exact global
-    welfare peak (+2.69% CE Layer 10 + +2.62% CE Wedge 4) while honoring Te Tiriti hauora equity.'
+    welfare peak (+2.69% CE Layer 10 + +2.62% CE Wedge 4) while honouring Te Tiriti hauora equity.'
   tabletop_bridge: At 100% sufficiency alongside B:14, B:15 funds C:03 Lifeline Armor, cuts PAYE to 18.25%,
     lowers Universal NZ Super to Age 64, and triggers N:08 to unlock players' 3rd Whānau Mat slot!
   references:
@@ -1408,7 +1408,7 @@ study_cards:
     the Years 1–8 NMP cash OBEGAL stern kick via B:09 (3.84x Year-5 OCL release) while K:01–K:05 close hardship
     inflows sinks debt to 21%–22% GDP and carries 3.0% GDP Defence (+21.18% CE).'
   tabletop_bridge: Steers B:09 (ACC Audit), B:13 (Orbital Launch verification), B:14/B:15 (50/50 Surplus Split),
-    and E:03 (OCR rate cuts)—thriving when financing neighbors rather than rationing them.
+    and E:03 (OCR rate cuts)—thriving when financing neighbours rather than rationing them.
   references:
   - Treasury LTFS 2025 & OIA 20250878 [Ref 31, 32]
   - CBAx & Circular 2024/15 [Ref 33, 34]
@@ -1955,7 +1955,7 @@ study_cards:
     to +4.0% per Crown dollar'
   empirical_evidence: Scalar models assume NZD 1 of nominal Crown ECE funding buys identical real hours of
     qualified teaching in South Auckland (Q = 3.10) and Southland (Q = 1.05). In reality, speculative urban
-    rents price early-childhood Kaiako, speech therapists, and kuia/aunties out of high-need metro neighborhoods—throttling
+    rents price early-childhood Kaiako, speech therapists, and kuia/aunties out of high-need metro neighbourhoods—throttling
     both G_{ece,s}^{eff} and K_whanau^{eff} until land-tax rebalancing (B:08) cools urban housing.
   tabletop_bridge: Applies a -3 bottleneck penalty to urban Wedge (1x2) Additionality D20 rolls even after
     B:01 is funded—proving mechanically why Barnardos (K:01) needs WellBeing Housing Justice (K:04 + B:08)!
@@ -2025,7 +2025,7 @@ study_cards:
   - Doc 2B Sec 5.5 & 7.4
   - Doc 2T Sec 4.5
 - id: H:09
-  name: The 3.0%-of-GDP (+NZD 8.0B/yr) Geopolitical Defense Shock
+  name: The 3.0%-of-GDP (+NZD 8.0B/yr) Geopolitical Defence Shock
   deck: orthodoxy
   a3_study_sheet: 14
   a3_study_slot: 1
@@ -2370,7 +2370,7 @@ study_cards:
     spread'
   - 'Exotic monoculture pine ETS arbitrage trap: kappa_pine = 1.0 saturating after Year 25 while locking rural
     land in z_l'
-  - '3% Defense + Climate comparison: +21.18% CE (pre-NDC) -> +21.40% CE (with Wedge 5 Clean-Green +4.5% Rural
+  - '3% Defence + Climate comparison: +21.18% CE (pre-NDC) -> +21.40% CE (with Wedge 5 Clean-Green +4.5% Rural
     export premium)'
   empirical_evidence: 'Architecturally isolating Paris NDC accounting, biogenic methane, CBAM border adjustments,
     and exotic-pine-to-native/horticulture rotation into P:05 proves two crucial truths at once: (1) Aotearoa''s

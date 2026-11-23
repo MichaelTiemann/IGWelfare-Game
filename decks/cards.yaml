@@ -131,7 +131,7 @@ cards:
       (i_c = 0), compress the struggling launch share toward 1.5%, place a Readiness Counter (N:03) granting
       +2 Productivity on subsequent mentoring/schooling cards, and crowd in +NZD 15k/yr of private parental
       care and time for free.
-  flavor_text: Honor the sacred seed at age three, or pay NZD 180,000 a year in reactive state care at age
+  flavor_text: Honour the sacred seed at age three, or pay NZD 180,000 a year in reactive state care at age
     fourteen. The math was never hard; only the politics was.
   empirical_anchor: 'Dunedin Study (Poulton et al., 2020: 22% early vulnerability cohort); Cunha, Heckman,
     & Schennach (2010); Barnardos Te Korowai Mokopuna (2026); Document 3 Table A.1 (+2.5% CE isolated).'
@@ -629,13 +629,13 @@ cards:
       ledger—driving net debt from the 185% LTFM projection down to 21%–22% of GDP and lowering household mortgage
       and SME borrowing rates by -60 bps (+1.25% CE isolated; stacks to -100 bps with E:03).
   - label: Geopolitical Resilience Buffer
-    rule: At 100% sufficiency alongside B:15, provides the sovereign balance-sheet headroom to absorb H:09 (+NZD
-      8.0B/yr / 3.0% GDP Defense Shock) at 32% debt and +21% CE pre-NDC welfare.
-  flavor_text: Austerity hawks tried to shrink debt by starving children and ended up at 112% debt anyway. Cure
-    the hardship pipeline first, and the surplus melts the debt mountain to 21%.
+    rule: At 100% sufficiency alongside B:15, provides the sovereign balance-sheet headroom to absorb H:09
+      (+NZD 8.0B/yr / 3.0% GDP Defence Shock) at 32% debt and +21% CE pre-NDC welfare.
+  flavor_text: Austerity hawks tried to shrink debt by starving children and ended up at 112% debt anyway.
+    Cure the hardship pipeline first, and the surplus melts the debt mountain to 21%.
   empirical_anchor: Barro (1979, J-curve tax smoothing across transition); Romer & Romer (2018, sovereign fiscal
-    space); Laubach (2009, debt-to-GDP spread compression); NZ Treasury He Tirohanga Mokopuna (2025); Document 1A
-    Part V.
+    space); Laubach (2009, debt-to-GDP spread compression); NZ Treasury He Tirohanga Mokopuna (2025); Document
+    1A Part V.
 - id: B:15
   name: 1.7x Infrastructure, PAYE Cut & Age-64 Super Pool (2050 Right-Half Stabilizer)
   deck: base
@@ -1257,15 +1257,15 @@ cards:
   - N:05
   effects:
   - label: 99% Civil-Defence Continuity & +NZD 250M/yr Classroom Dividend
-    rule: Equipping 2,500 schools and 800 marae with solar + BESS microgrids guarantees 99% power, water, and shelter
-      continuity during grid blackouts while freeing +NZD 250M/yr in energy OPEX directly into classroom teaching
-      and B:03 peer mentoring.
+    rule: Equipping 2,500 schools and 800 marae with solar + BESS microgrids guarantees 99% power, water, and
+      shelter continuity during grid blackouts while freeing +NZD 250M/yr in energy OPEX directly into classroom
+      teaching and B:03 peer mentoring.
   - label: Forge Grit & Whanaungatanga
     rule: Combines Graeme Dingle (Project K & Stars), Kura Kaupapa Māori / Kura-ā-Iwi, Pasifika Tuakana academies,
       and Montessori Erdkinder so rangatahi take 0 trajectory damage from family job-loss or displacement shocks—directly
       seeding C:05 (Cognitive Flexibility).
-  flavor_text: True civil resilience pairs a hardened national grid with every local marae and schoolhouse—keeping
-    whānau warm and connected in a storm while funding youth mentors in peacetime.
+  flavor_text: '"Local marae and kura microgrids don''t replace a hardened national grid (C:03)—they complement
+    it, keeping classroom lights, kitchens, and community lifelines warm when trunk lines sway."'
   empirical_anchor: Ostrom (2010); Kenny & Phibbs (2015, Christchurch Marae disaster response); Rewiring Aotearoa
     Schools/Marae audit; QEA_2026.m Sector 2.
 - id: C:05
@@ -2497,7 +2497,7 @@ cards:
   empirical_anchor: NZ Commerce Commission Market Studies (2022–2025) [Ref 49]; Document 3 Section 1.1 & Section
     5.2.
 - id: H:09
-  name: The 3.0%-of-GDP (+NZD 8.0B/yr) Geopolitical Defense Shock
+  name: The 3.0%-of-GDP (+NZD 8.0B/yr) Geopolitical Defence Shock
   deck: orthodoxy
   module_level: 3
   mana_tier: 3
@@ -2513,8 +2513,8 @@ cards:
   - Lens 2
   - Lens 3
   gate_or_phase: Mid/Late-Game Geopolitical Stress Test (1.2% -> 3.0% of GDP = +1.8% GDP / +NZD 8.0B/yr)
-  cost_or_requirement: External Alliance/Security Demand Matching the EXACT Annual Cost of the 5-Pillar SS1 Plan,
-    with 0x Domestic Capability Offset!
+  cost_or_requirement: External Alliance/Security Demand Matching the EXACT Annual Cost of the 5-Pillar SS1
+    Plan, with 0x Domestic Capability Offset!
   synergy_links:
   - B:11
   - B:12
@@ -2525,17 +2525,17 @@ cards:
   - K:10
   effects:
   - label: Crushes an Unreformed SS0 Hull (-22% CE & 200% Debt!)
-    rule: Lifting defense from ~1.2% to 3.0% of GDP (+NZD 8.0B/yr) has a 0x domestic human-capital return. Loaded
-      onto an unreformed SS0 hull (or fragmented single-silo table), Crown Debt hits the 200% sovereign ceiling,
-      PAYE surges to 31%, and national welfare collapses to -22% CE!
+    rule: Lifting defence from ~1.2% to 3.0% of GDP (+NZD 8.0B/yr) has a 0x domestic human-capital return.
+      Loaded onto an unreformed SS0 hull (or fragmented single-silo table), Crown Debt hits the 200% sovereign
+      ceiling, PAYE surges to 31%, and national welfare collapses to -22% CE!
   - label: Absorbed Cleanly on SS2 Hydrofoils (+21% Pre-NDC CE & 32% Debt!)
-    rule: A united table up on SS2 hydrofoils (B:11 + B:14 + B:15) carries the full 3.0% defense load in stride—delivering
+    rule: A united table up on SS2 hydrofoils (B:11 + B:14 + B:15) carries the full 3.0% defence load in stride—delivering
       +21.2% CE pre-NDC (+21.4% full, a +42.9 to +43.1 pp advantage over SS0!), sinking debt from 42% down
       to 32% GDP, and STILL cutting PAYE to 20%–21%!
-  flavor_text: Eight billion dollars a year for frigates and missiles sinks a leaking displacement hull; the exact
-    same eight billion invested first in our people builds an economy strong enough to carry both.
-  empirical_anchor: NZ Defence Capability Plan (2025) [Ref 59]; Document 2A Section 2.5 (Sector 5 FX leakage offset
-    by E:01–E:03 oil-import savings); Document 3 Table A.3.
+  flavor_text: Eight billion dollars a year for frigates and missiles sinks a leaking displacement hull; the
+    exact same eight billion invested first in our people builds an economy strong enough to carry both.
+  empirical_anchor: NZ Defence Capability Plan (2025) [Ref 59]; Document 2A Section 2.5 (Sector 5 FX leakage
+    offset by E:01–E:03 oil-import savings); Document 3 Table A.3.
 - id: H:10
   name: The Unmentored Grant & Rush-Procurement Waste Hazard (42% Leak)
   deck: orthodoxy
@@ -2587,7 +2587,8 @@ cards:
   - Lens 1
   - Lens 2
   gate_or_phase: Consecutive Provincial-First Waves (Rural+Small Waves 1–3 -> Large 4–6 -> Auckland 7–9)
-  cost_or_requirement: ~NZD 3.0B Front-Loaded CERF Household & Enterprise Kick-Start (-Inv 5; Zero Raid on B:01/B:03)
+  cost_or_requirement: ~NZD 3.0B Front-Loaded CERF Household & Enterprise Kick-Start (-Inv 5; Zero Raid on
+    B:01/B:03)
   synergy_links:
   - B:01
   - C:04
@@ -2599,17 +2600,18 @@ cards:
   - K:04
   effects:
   - label: 3x Clean-Exergy Work Jump (+NZD 11B to 16B/yr Fuel Savings)
-    rule: Imported oil wastes two-thirds of its energy as heat (30% useful work), whereas domestic electric motors
-      and heat pumps deliver 88% (~3x exergy)! Electrifying Rural+Small first (Waves 1–3, where fuel floors are
-      2.3x–3.0x Auckland's) cuts ~NZD 20B/yr of oil imports to ~NZD 5.5B/yr and saves ~NZD 3,000/yr per home.
-  - label: End the Time-Energy Squeeze & Restore Uncounted Care
-    rule: Slashing mandatory power and fuel bills frees squeezed parents from extra survival shifts—restoring Marilyn
-      Waring uncounted whānau care, cutting kids' respiratory admissions (Exit 2), and retiring 85% of C:07 cushions
-      in SS2 (C:10)!
+    rule: Imported oil wastes two-thirds of its energy as heat (30% useful work), whereas domestic electric
+      motors and heat pumps deliver 88% (~3x exergy)! Electrifying Rural+Small first (Waves 1–3, where fuel
+      floors are 2.3x–3.0x Auckland's) cuts ~NZD 20B/yr of oil imports to ~NZD 5.5B/yr and saves ~NZD 3,000/yr
+      per home.
+  - label: Healthy Homes & Regional Wage Convergence
+    rule: Slashing mandatory power and fuel bills frees squeezed parents from extra survival shifts—restoring
+      Marilyn Waring uncounted whānau care, cutting kids' respiratory admissions (Exit 2), and retiring 85%
+      of C:07 cushions in SS2 (C:10)!
   flavor_text: You don't need a single climate slogan to see why sending fifteen billion dollars a year overseas
     to burn imported oil is worse than owning the sun on your own roof.
-  empirical_anchor: Keen, Ayres, & Standish (2019, 3x exergy) [Ref 9]; Labrousse & Perdereau (2026) [Ref 23]; Waring
-    (1988) [Ref 47]; Rewiring Aotearoa (2024–2026) [Ref 46]; Document 2A Section 2.4.
+  empirical_anchor: Keen, Ayres, & Standish (2019, 3x exergy) [Ref 9]; Labrousse & Perdereau (2026) [Ref 23];
+    Waring (1988) [Ref 47]; Rewiring Aotearoa (2024–2026) [Ref 46]; Document 2A Section 2.4.
 - id: E:02
   name: Energy as Endowment (QEA-2026 Precautionary Capital Release)
   deck: energy
@@ -2915,14 +2917,14 @@ cards:
   effects:
   - label: Expose the NZD 19B Offshore NDC Liability & Exotic-Pine Arbitrage
     rule: When activated, adds SS0's unfunded NZD 19B Paris NDC compliance liability (+45 bps climate spread)
-      and the exotic monoculture pine ETS land-lock trap (kappa_pine = 1.0 saturating after Year 25) onto the macro
-      board.
+      and the exotic monoculture pine ETS land-lock trap (kappa_pine = 1.0 saturating after Year 25) onto the
+      macro board.
   - label: Unlock Wedge 5 (+1.0% CE National / +4.5% Clean-Green Rural Export Premium)
-    rule: Coupling E:01–E:03 electrification, circular biogenic pricing, and MPI native-forestry/horticulture rotation
-      extinguishes offshore NDC liabilities domestically and lifts SS2 national welfare from +24.7% CE (pre-NDC)
-      to +24.9% CE (+21.4% CE under 3% Defense)!
-  flavor_text: Build the core hydrofoil on pure household and fiscal physics first; snap in the climate wing whenever
-    your table is ready to price carbon and biogenic trade.
+    rule: Coupling E:01–E:03 electrification, circular biogenic pricing, and MPI native-forestry/horticulture
+      rotation extinguishes offshore NDC liabilities domestically and lifts SS2 national welfare from +24.7%
+      CE (pre-NDC) to +24.9% CE (+21.4% CE under 3% Defence)!
+  flavor_text: Build the core hydrofoil on pure household and fiscal physics first; snap in the climate wing
+    whenever your table is ready to price carbon and biogenic trade.
   empirical_anchor: NZ Treasury/MfE Paris NDC Liability Estimates; Parliamentary Commissioner for the Environment
     Forestry/ETS Reviews; Document 3 Wedge 5 (+1.0% CE) & Table A.1.
 - id: P:06

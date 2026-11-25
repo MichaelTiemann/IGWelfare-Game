@@ -1533,13 +1533,21 @@ study_cards:
     congestion and cuts early fiscal exposure by 75%, keeping Crown Debt''s Year-6 apogee to just 43.36% of
     GDP (vs. 42.0% baseline). Pedagogically, Foils & Founders applies Arrow''s theorem to civic governance:
     citizens and Ministers learn general-equilibrium physics by doing on cardboard first.'
-  tabletop_bridge: Each completed regional wave places 1 Fleet Experience Counter (L_m), adding +2 to subsequent
-    Additionality D20 rolls and shielding the table from early J-curve Political Stability penalties.
+  tabletop_bridge: Rewards 1/3 regional wave steps with +1 Fleet Experience Counter (+2 to next B:12 D20 roll)
+    while avoiding T:04's -18.5% Day-1 surge haircut and NZD 3.8B unmentored grant waste.
   references:
   - Arrow (1962, RES; 1972 Nobel)
   - Lucas (1967) & Hayashi (1982)
   - Doc 1D Sec 1–3
   - Doc 2B Sec 7.6 & Sec 8 (#24)
+  title: Arrow–Deming Learning-by-Doing & 3–5 Yr PDSA Engine (1972)
+  mathematical_operator: \eta_{k,m}(t) = \bigl(1-\delta_{\mathrm{adopt}}e^{-\lambda_{\mathrm{adopt}}\Delta
+    t}\bigr)\bigl[1-\tau_{\mathrm{fric},\min}-(\tau_0-\tau_{\min})e^{-\gamma_{\mathrm{learn}}\mathcal{L}_m}\bigr]\bigl[1-\phi_{\mathrm{adj}}(\Delta
+    s_{k,m})^2\bigr]
+  model_calibration: 'Unites Arrow (1962) cumulative fleet learning (gamma_learn = 0.45, tau_fric: 0.280 ->
+    0.035) with Deming–Fixsen 3–5 yr educator staffing cycles [Ref 54]. Stepping in 1/3 regional waves cuts
+    quadratic adjustment drag 88.9% (phi_adj * (1/3)^2 = 0.020 vs. 0.180), lifting SS1 delivery yield to 95.5%–96.8%.'
+  script_and_doc_anchor: Plot_Doc1D_TeKahuiWakaSequencing.m • Doc 1D & Doc 2B §7.6 [Ref 54]
 - id: N:02
   name: Ronald Coase's Transaction-Cost Scalpel (Nobel Prize, 1991)
   deck: nobel
@@ -1712,14 +1720,24 @@ study_cards:
     scrapping horizons—when frontline practitioners iterate inside PDSA coaching loops across one natural staffing-turnover
     cycle. Consequently, Wave 2 (''Large'') and Wave 3 (''Auckland'') followers inherit >95% proven fidelity
     at lower fiscal risk.'
-  tabletop_bridge: 'Amplifies the strategic trade-off between fast starters and patient followers: Wave-1 vanguards
-    get early biological coverage, while Wave 2–3 followers enjoy >95% PDSA certainty and fuse at Turn 5–6
-    (Year 16)!'
+  tabletop_bridge: Lets players submit atomic multi-card/Tax-Key/Tranche package bids ('Assume X -> Deliver
+    U') with zero exposure risk, caps Spoiler tranche ransoms at 1W, and auto-fires AMBER 70/30 debt-sinking
+    shock stabilisers.
   references:
   - Deming (1950 / 1986 / 1993) & Tiemann (2023) [Ref 54]
   - Fixsen et al. (2005)
   - Doc 1D Sec 3.1
   - Doc 2B Sec 6.3 Coda & Sec 7.6
+  title: Milgrom–Wilson Combinatorial Clearinghouse & Shock Core (2020)
+  mathematical_operator: \mathbf{u}^{\star} \in \mathcal{C}_{\mathrm{clear}}(\lambda,\psi_{\mathrm{backlog}})
+    \iff \int \phi_r\bigl(s;\mathbf{u}^{\star}+\Delta\mathbf{u}_{\mathrm{Amber}}(\lambda)\bigr)d\mu_k(s) \ge
+    u_{\mathrm{crit},r}(\psi_{\mathrm{backlog}})
+  model_calibration: '4,000-assembly ABM homotopy (psi_backlog: 1/16x in 1972 -> 1.0x in 2026): Thin scalar
+    OBEGAL bargaining collapses from 85.9% viable closure (1972) -> 34.3% (1995) -> 4.5% (2010) -> 0.0% (2026,
+    88.0% Fool''s Gold mirages unraveling to -51.6!). Thick combinatorial clearing hits 98.8% viable 15/15
+    closure (73.7% overall & 88.0% Fiscal Cost-Hawk closure under a 30% CBAx haircut) and 99.9% 1.25-sigma
+    shock survival.'
+  script_and_doc_anchor: Compute_ThickVsThin_Auction_ABM.m • Doc 2T, Doc 1F & Doc 2B §7.4 [Ref 60]
 - id: N:08
   name: Doepke–Kindermann Alloparental & Fertility Bargaining Engine
   deck: nobel
@@ -2207,6 +2225,10 @@ study_cards:
   - Document 2T Sec 1–4
   - Cunha et al. (2010) [Ref 11]
   - Kiyotaki et al. (2024) [Ref 4]
+  model_calibration: 'Evaluates 26,901 household states/age/region at zero extra GPU grid axes, proving why
+    f(E[s]) != E[f(s)] as deferred infrastructure & housing backlog rises from psi = 1/16x (1972: 85.9% Thin
+    scalar viability) to psi = 1.0x (2026: 0.0% Thin viability vs. 98.8% Thick combinatorial clearing; Table_Doc2T_BacklogHomotopy).'
+  script_and_doc_anchor: Compute_ThickVsThin_Auction_ABM.m • Document 2T & Doc 2A §3.2 [Ref 60]
 - id: E:05
   name: The 20.5-Year Generational Wave Echo (Omega_echo & Durable Banking)
   deck: energy

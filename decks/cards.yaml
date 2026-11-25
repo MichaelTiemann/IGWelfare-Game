@@ -1319,8 +1319,8 @@ cards:
   - Lens 2
   - Lens 3
   gate_or_phase: SS1 Tax Ramp Coordination (Rural <-> Small <-> Large <-> Auckland)
-  cost_or_requirement: Assemble Regional Tax Keys Across Adjacent Regions via Side-Payments, Wave Priority, or K:06
-    Mediation
+  cost_or_requirement: Assemble Regional Tax Keys Across Adjacent Regions via Side-Payments, Wave Priority,
+    or K:06 Mediation
   synergy_links:
   - B:07
   - B:08
@@ -1328,17 +1328,19 @@ cards:
   - C:05
   - K:06
   - T:06
+  - N:07
   effects:
   - label: Nearest-Neighbour Leakage Topology (Why 'Large' Needs Neighbours Most)
     rule: Capital and step-migration flow primarily between adjacent tiers (Rural <-> Small <-> Large <-> Auckland),
-      with minimal one-step leakage (-15%) directly between Rural/Small and Auckland. Moving alone in exposed middle-hinge
-      Large Cities (26% pop) suffers -60% two-flank leakage outward to Small/Rural and upward to Auckland!
+      with minimal one-step leakage (-15%) directly between Rural/Small and Auckland. Moving alone in exposed
+      middle-hinge Large Cities (26% pop) suffers -60% two-flank leakage outward to Small/Rural and upward
+      to Auckland!
   - label: 4-Key Lockstep Sufficiency Bonus
     rule: Locking adjacent Regional Keys cancels border leakage; uniting all 4 Regional Keys boosts B:07 (CGT/Estate)
       and B:08 (LVT/Corp) to 100% tax sufficiency and awards +1 Cooperative Mana to every participating regional
       steward.
-  flavor_text: Rural valleys rarely leak straight to Queen Street in a single leap, but regional cities get bled
-    from both flanks if they march alone. Lock the four keys together, and every dollar stays on the board.
+  flavor_text: Rural valleys rarely leak straight to Queen Street in a single leap, but regional cities get
+    bled from both flanks if they march alone. Lock the four keys together, and every dollar stays on the board.
   empirical_anchor: Labrousse & Perdereau (2026) spatial step-migration friction; Grimes & Young (2011); Document
     3 Exec Overview & Part I.
 - id: C:07
@@ -1772,19 +1774,20 @@ cards:
   - E:05
   - N:01
   - N:06
+  - N:07
   effects:
   - label: 'Side-by-Side Wedge Algebra: Bundling (A ⊕ B)  ||  Sequencing (A ≺ B)'
-    rule: 'Render both wedges side-by-side: Topkis supermodularity (u_A^T H_AB u_B > 0: why uniting B:12 lanes beats
-      solo play) alongside Quantum wedge non-commutativity ([G_B, G_A] = 2(G_B ^ G_A) != 0: why Gate 1/2 before
-      Age-20 Grants avoids NZD 3.8B waste). Tap for 1 Additionality re-roll & cancel T:03!'
+    rule: 'Render both wedges side-by-side: Topkis supermodularity (u_A^T H_AB u_B > 0: why uniting B:12 lanes
+      beats solo play) alongside Quantum wedge non-commutativity ([G_B, G_A] = 2(G_B ^ G_A) != 0: why Gate
+      1/2 before Age-20 Grants avoids NZD 3.8B waste). Tap for 1 Additionality re-roll & cancel T:03!'
   - label: 5-Sector Exergy & Precautionary Unlocker (Tap)
-    rule: Once per game, unlock E:02 without Political Drag—proving that 3x Keen–Ayres electric exergy (88% vs.
-      30% fossil work) and zero oil-shock variance release NZD 61B–92B in precautionary savings to self-finance
+    rule: Once per game, unlock E:02 without Political Drag—proving that 3x Keen–Ayres electric exergy (88%
+      vs. 30% fossil work) and zero oil-shock variance release NZD 61B–92B in precautionary savings to self-finance
       the grid!
-  flavor_text: 'Topkis''s lattice proves who must stand together; Heisenberg''s wedge proves which gate must fire
-    first. Put all five sectors on the GPU, and eleven seconds of math replaces forty years of guesswork.'
-  empirical_anchor: Topkis (1998); Heisenberg, Born, & Jordan (1925); Keen, Ayres, & Standish (2019); Waring (1988);
-    Kirkby (2017–2026 VFI Toolkit); Document 2B Section 7.7.1.
+  flavor_text: Topkis's lattice proves who must stand together; Heisenberg's wedge proves which gate must fire
+    first. Put all five sectors on the GPU, and eleven seconds of math replaces forty years of guesswork.
+  empirical_anchor: Topkis (1998); Heisenberg, Born, & Jordan (1925); Keen, Ayres, & Standish (2019); Waring
+    (1988); Kirkby (2017–2026 VFI Toolkit); Document 2B Section 7.7.1.
 - id: K:09
   name: The Kaumātua, Kuia & Off-Balance-Sheet Whānau Anchor (K_whanau Steward)
   deck: kaupapa
@@ -1862,21 +1865,21 @@ cards:
     the widest sea on earth.
   empirical_anchor: Topkis (1998); Nash (1950); STORIES.md; Document 1A Part VI Coda; Document 3 Part V.
 - id: N:01
-  name: Kenneth Arrow's Learning-by-Doing (Nobel Prize, 1972)
+  name: 'Kenneth Arrow & W. Edwards Deming: Wave Learning & PDSA Engine (1972)'
   deck: nobel
   module_level: 3
   mana_tier: 2
   base_mana: 2
   a3_game_sheet: 5
   a3_slot: 9
-  type: Nobel Engine — Te Kāhui Waka Fleet Pacing & Tabletop Pedagogy
+  type: Nobel Laureate & Staffing-Cycle Engine — Phased Rollout
   lens:
   - Lens 1
   - Lens 2
   - Lens 3
   gate_or_phase: Waves 1–13 Stepped Rollout (Counters T:04 Single-Shot Surge)
-  cost_or_requirement: Step Subsystem Rollouts in 1/3 Regional Echelons (Rural+Small -> Large -> Auckland; or 1
-    K:09 Experience Token)
+  cost_or_requirement: Step Subsystem Rollouts in 1/3 Regional Echelons (Rural+Small -> Large -> Auckland;
+    or 1 K:09 Experience Token)
   synergy_links:
   - B:01
   - B:05
@@ -1887,17 +1890,18 @@ cards:
   - T:04
   - T:07
   effects:
-  - label: Quadratic Bottleneck Compression (89% Less Congestion & 75% Less Yr-3 Risk)
-    rule: Because implementation surge penalties scale convexly with step size ((1/3)^2 = 1/9), stepping capacity
-      in regional thirds eliminates 89% of workforce surge drag and cuts Year-3 Mirror-Investment capital at risk
-      by 75% (-NZD 1.6B/yr vs. -NZD 6.5B/yr)—slashing early J-curve penalties on D20 Political Stability rolls!
-  - label: Fleet Experience Counters (L_m) & Learning Economics by Doing
-    rule: Each completed regional echelon places 1 Fleet Experience Counter (L_m), granting +2 to subsequent Additionality
-      D20 rolls and pulling self-financing cash breakeven 2.4 years earlier to Year 17!
-  flavor_text: 'Arrow proved that capability is forged in the doing, not the decreeing. Better still: when you learn
-    macroeconomics by doing it on a tabletop first, nobody''s mokopuna has to pay the tuition.'
-  empirical_anchor: Arrow (1962, 'The Economic Implications of Learning by Doing'); Christiano, Eichenbaum, &
-    Evans (2005, convex investment adjustment costs); Nobel Prize in Economics (1972); Document 1D Te Kāhui Waka Rollout.
+  - label: Te Kāhui Waka Wave Thirds (89% Less Surge Drag!)
+    rule: 'Stepping B:01, B:03, & E:01 in 1/3 regional waves (Rural+Small -> Large -> Auckland) cuts convex
+      adjustment bottlenecks 89% (phi_adj: 0.18 -> 0.02) and places +1 Fleet Experience Counter (+2 to next
+      B:12 Additionality D20 roll) per completed region!'
+  - label: Deming–Fixsen 3–5 Yr Educator PDSA Loop
+    rule: Matching NZ's ~5.5-yr kaiako/mentor staffing cycle drives commissioning friction from 28% down to
+      3.5% (gamma_learn = 0.45), lifting SS1 delivery yield above 96% and immunizing mentored hubs against
+      T:04!
+  flavor_text: 'Arrow proved that capability is forged in the doing, not the decreeing. Better still: when
+    you learn macroeconomics by doing it on a tabletop first, nobody''s mokopuna has to pay the tuition.'
+  empirical_anchor: Arrow (1962, RES Learning-by-Doing; 1972 Nobel); Deming (1986, 1993 PDSA) [Ref 54]; Christiano,
+    Eichenbaum, & Evans (2005); Document 1D Te Kāhui Waka Rollout.
 - id: N:02
   name: Ronald Coase's Transaction-Cost Scalpel (Nobel Prize, 1991)
   deck: nobel
@@ -2083,40 +2087,40 @@ cards:
   empirical_anchor: 'Romer (1990, JPE: ''Endogenous Technological Change''); Nobel Prize in Economics (2018); Document
     3 Section 1.2 & foils_and_founders_gameplay.md Variant B.'
 - id: N:07
-  name: Deming–Fixsen 3–5 Year Practitioner Staffing-Cycle Engine
+  name: 'Paul Milgrom & Robert Wilson: Combinatorial Package Clearinghouse (2020)'
   deck: nobel
-  module_level: 3
+  module_level: 2
   mana_tier: 2
   base_mana: 2
   a3_game_sheet: 6
   a3_slot: 5
-  type: Implementation Science Engine — Educator Tenure & PDSA Fidelity Curve
+  type: Nobel Laureate Engine — Contingent Package Auction & Shock Core
   lens:
   - Lens 1
   - Lens 2
-  gate_or_phase: Waves 1–7 -> Year-16 Asymptotic Trajectory Fusion
-  cost_or_requirement: Pair with N:01 (Te Kāhui Waka Fleet) Across 2+ Regional Waves (or 1 K:09 Experience Token)
+  - Lens 3
+  gate_or_phase: All Phases • Multi-Party Package Clearing & Green/Amber/Red Shock Core
+  cost_or_requirement: 2 Wealth (or 1 K:09 Experience Token) • Enact to River
   synergy_links:
-  - B:01
-  - B:03
-  - B:13
-  - K:01
-  - N:01
-  - T:04
-  - H:06
+  - B:12
+  - C:06
+  - E:04
+  - K:07
+  - K:08
+  - P:02
   effects:
-  - label: 72% -> >95% PDSA Fidelity Within One Staffing Cycle (3–5 Years)
-    rule: Unlike 25-year heavy-factory scrapping, early-childhood and mentoring teams renew naturally on NZ's ~5.4–5.8
-      year educator tenure cycle—completing 75%–85% of Plan-Do-Study-Act fidelity gains within 3 to 5 years and
-      lifting effective program yield (1 - tau_fric) from 72% in Wave 1 to >95% by Wave 7!
-  - label: Late-Wave Follower Certainty & Year-16 Trajectory Fusion
-    rule: 'Rewards patient Wave 2 (''Large'') and Wave 3 (''Auckland'') followers: while Wave-1 vanguards get an
-      early compounding head start, later waves launch at >95% proven fidelity with near-zero political reset risk,
-      and all regional welfare curves fuse cleanly by Year 16 (Turn 5–6)!'
-  flavor_text: A school is not a blast furnace bolted to concrete for thirty years; coach one cohort of kaiako well,
-    and within five years the whole profession carries the craft.
-  empirical_anchor: Deming (1986, Out of the Crisis); Fixsen et al. (2005, Implementation Research); Education Counts
-    NZ Teacher Tenure Audit (~5.4–5.8 yrs); Document 1D Section 3.1 & Figure 1D.2.
+  - label: Cure the 'Fool's Gold' Mirage (99% Closure!)
+    rule: 1972 scalar splits cleared 86% of deals; by 2026 (1.0x backlog), scalar OBEGAL hits 0% real closure
+      (88% 'Fool's Gold' mirages!). Contingent Package Bids ('Assume X -> Deliver U') co-stake 2+ cards, Tax
+      Keys, or Tranches in 1 atomic action and cap Spoiler ransoms at 1W!
+  - label: Fiscal-Hawk Flip & Amber Shock Stabiliser
+    rule: Cross-lane savings flip Fiscal Hawks from 0% to 88%–99.9% viable closure (even after a 30% CBAx haircut!).
+      On C:01/H:09 shocks, auto-fires AMBER Two-Key stabilisers (70/30 debt tilt) for 99.9% survival without
+      Plenary recall!
+  flavor_text: '"When policies are complements, bidding one item at a time strands every builder on the reef;
+    pricing the whole package lets fiscal hawks and social stewards sign the same contract."'
+  empirical_anchor: Milgrom & Wilson (2020 Nobel); Milgrom (2004); Topkis (1998); Cramton, Shoham, & Steinberg
+    (2006) [Ref 60]; Compute_ThickVsThin_Auction_ABM.m (Document 2T & Document 1F).
 - id: N:08
   name: Doepke–Kindermann Alloparental & Fertility Bargaining Engine
   deck: nobel
@@ -2706,18 +2710,19 @@ cards:
   - T:03
   - T:07
   - H:03
+  - N:07
   effects:
   - label: Making Numbers Work vs. Making Numbers Pencil
-    rule: 'Exposes the Jensen''s Inequality trap of ''thin'' linear spreadsheets (E[f(X)] != f(E[X])): scalar averages
-      erase the i_c = 0 Stone-Geary hardship cliff, the discrete 20% LVR collateral wall, and Goldratt''s harmonic
-      bottleneck (phi_2 = -0.95). Immediately cancels T:03 (''Solve Debt First'' MBA Spreadsheet Boomerang)!'
+    rule: 'Exposes the Jensen''s Inequality trap of ''thin'' linear spreadsheets (E[f(X)] != f(E[X])): scalar
+      averages erase the i_c = 0 Stone-Geary hardship cliff, the discrete 20% LVR collateral wall, and Goldratt''s
+      harmonic bottleneck (phi_2 = -0.95). Immediately cancels T:03 (''Solve Debt First'' MBA Spreadsheet Boomerang)!'
   - label: Pre-Flight Telemetry Check
-    rule: Peek at all unrevealed face-down B:13 Audit cards across the table OR add +2 to any off-diagonal Additionality
-      D20 roll by targeting resources straight at the binding vigintile/regional cliff.
+    rule: Peek at all unrevealed face-down B:13 Audit cards across the table OR add +2 to any off-diagonal
+      Additionality D20 roll by targeting resources straight at the binding vigintile/regional cliff.
   flavor_text: A person with their head in the oven and their feet in the freezer has a very comfortable 'average'
     temperature on a Treasury spreadsheet.
-  empirical_anchor: Jensen (1906); Goldratt (1984, The Goal); Farmer & Toda (2017); Document 2T ('Thick vs. Thin
-    Models') & Document 3 Exec Overview.
+  empirical_anchor: Jensen (1906); Goldratt (1984, The Goal); Farmer & Toda (2017); Document 2T ('Thick vs.
+    Thin Models') & Document 3 Exec Overview.
 - id: E:05
   name: The 20.5-Year Generational Wave Echo (Omega_echo & Durable Banking)
   deck: energy
@@ -2815,17 +2820,19 @@ cards:
   - K:02
   - K:10
   - N:05
+  - N:07
   effects:
   - label: Sharpen a Matakahi Wedge, Joiner Club, or Citizen Compact
-    rule: 'Inscribe a real rohe or civic catalyst: a Te Ōhanga Māori matakahi wedge, an NZD 500 Joiner Passport club
-      (cutting mortality risk 50% at 26x ROI!), or a Citizens'' Assembly contingent deal (''Assume X -> Deliver U'').
-      Define its Gate (1–4), Cost, and neighbour link.'
+    rule: 'Inscribe a real rohe or civic catalyst: a Te Ōhanga Māori matakahi wedge, an NZD 500 Joiner Passport
+      club (cutting mortality risk 50% at 26x ROI!), or a Citizens'' Assembly contingent deal (''Assume X ->
+      Deliver U''). Define its Gate (1–4), Cost, and neighbour link.'
   - label: Ostrom Commons Equivalence
-    rule: Counts as a valid community hub alongside C:04 and N:05 for triggering Variant B cross-table Mana royalties.
-  flavor_text: Every valley and harbour in Aotearoa holds wisdom that never made it into a Wellington cabinet paper.
-    Write yours onto the table.
-  empirical_anchor: Document 1E (Joiner Passport, 25.5x gearing); Document 1F (Citizens' Assemblies & Matakahi Socket);
-    Ostrom (2010); Putnam (2000) & Levine (2006).
+    rule: Counts as a valid community hub alongside C:04 and N:05 for triggering Variant B cross-table Mana
+      royalties.
+  flavor_text: Every valley and harbour in Aotearoa holds wisdom that never made it into a Wellington cabinet
+    paper. Write yours onto the table.
+  empirical_anchor: Document 1E (Joiner Passport, 25.5x gearing); Document 1F (Citizens' Assemblies & Matakahi
+    Socket); Ostrom (2010); Putnam (2000) & Levine (2006).
 - id: P:03
   name: 'Track-5 Classroom Pull Request #1 (Student Policy Design Spec)'
   deck: wildcard

@@ -1,11 +1,3 @@
-# ==============================================================================
-# FOILS & FOUNDERS: THE AOTEAROA DECK — EMPIRICAL SOURCES & CITATION REGISTRY
-# Path: metadata/empirical_sources.yaml
-# Companion to decks/cards.yaml & decks/study_cards.yaml (Version 2026.11 — 80 Cards)
-# License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
-# Repository: https://github.com/MichaelTiemann/IGWelfare
-# ==============================================================================
-
 schema_version: '2026.11'
 companion_deck_version: '2026.11'
 card_count_expected: 80
@@ -771,3 +763,14 @@ numbered_reference_registry:
   59: Ministry of Defence & New Zealand Defence Force [NZDF] (April 2025). 2025 Defence Capability Plan (NZD
     12B 4-yr uplift; path from ~1% toward >2%-3% of GDP, high import-propensity Sector 5 procurement).
   60: RESERVED — Empirical Slot for Future Module Extensions.
+references:
+  Ref 60:
+    authors: Topkis (1998); Milgrom & Roberts (1990); Milgrom (2004); Cramton, Shoham, & Steinberg (2006)
+    nobel: 2020 Sveriges Riksbank Prize in Economic Sciences (Paul Milgrom & Robert Wilson)
+    script: Compute_ThickVsThin_Auction_ABM.m (Table_Doc2T_BacklogHomotopy_1972to2026)
+    cards:
+    - N:07
+    - K:08
+    - B:12
+    - E:04
+    - P:02

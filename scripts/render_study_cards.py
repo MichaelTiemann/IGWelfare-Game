@@ -11,7 +11,7 @@ Compiles `decks/study_cards.yaml` + `decks/cards.yaml` into A3 Landscape
 
 By default, renders ONLY the cards present in `decks/study_cards.yaml` (padded
 to a multiple of 5 with write-in Study Wildcards) so you can preview 1 sheet
-immediately. Pass `--all-cards` to render all 43 canonical cards.
+immediately. Renders all 80 canonical cards across 16 A3 fold-over study sheets (5 per sheet).
 
 Usage:
   python3 scripts/render_study_cards.py --theme generic --out build/study_generic.html
@@ -21,6 +21,7 @@ Usage:
 
 import argparse
 import html
+import re
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -39,12 +40,31 @@ from render_common import (
     load_yaml,
     resolve_theme_config,
 )
+from render_math import (
+    get_mathjax_svg_fit_css,
+    pick_eq_size_class,
+    resolve_card_latex,
+)
+
+
+def clip_at_sentence_or_word(text: str, limit: int) -> str:
+    """Clips text cleanly at a sentence or word boundary without mid-word cuts."""
+    cleaned = re.sub(r"\s+", " ", text).strip()
+    if len(cleaned) <= limit:
+        return cleaned
+    window = cleaned[:limit]
+    dot_pos = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
+    if dot_pos >= int(limit * 0.55):
+        return window[: dot_pos + 1]
+    word_cut = window.rsplit(" ", 1)[0].rstrip(",;:-")
+    return f"{word_cut}…"
 
 
 def build_front_card_html(
     raw_card: Dict[str, Any],
     palettes: Dict[str, Dict[str, str]],
     card_overrides: Dict[str, Any],
+    theme_cfg: Dict[str, Any],
     themes_dir: Path,
     search_order: List[str],
     co2_pos: str,
@@ -67,7 +87,10 @@ def build_front_card_html(
     badge_bg = palette.get("badge_bg", "#0369a1")
     badge_txt = palette.get("badge_text", "#ffffff")
 
-    co2_html = get_co2e_badge_html(card)
+    try:
+        co2_html = get_co2e_badge_html(card, theme_cfg)
+    except TypeError:
+        co2_html = get_co2e_badge_html(card)
     gate_phase = html.escape(str(card.get("gate_or_phase", "")))
     gate_span = f'<span class="gate-tag">{gate_phase}</span>' if gate_phase else ""
 
@@ -102,7 +125,7 @@ def build_front_card_html(
     <article class="card front-card" style="--card-border: {border_col}; --header-bg: {header_bg}; --badge-bg: {badge_bg}; --badge-txt: {badge_txt};">
       <header class="card-header">
         <div class="header-top">
-          <span class="pdd-badge">{html.escape(cid)}</span>
+          <div class="badge-group"><span class="pdd-badge">{html.escape(cid)}</span>{f'<span class="tranche-pill">⧉ 1/{int(card["copies"])} • 50/25/25%</span>' if int(card.get("copies", 1)) > 1 else ''}</div>
           <div class="header-right">{top_right_slot}</div>
         </div>
         <h2 class="card-title">{html.escape(str(card.get("name", "")))}</h2>
@@ -141,7 +164,7 @@ def build_study_back_html(
     """
     Renders the top-row Back Face (79mm x 138mm slot containing a 138mm x 79mm
     rotated Landscape blackboard with MathJax equation, parameters, proof bridge,
-    academic citations, and right-justified Doc 1B/2 reference in the footer).
+    academic citations, and full multi-line Doc 1B/2 program list in the footer).
     """
     cid = str(card_front.get("id", study_entry.get("id", "B:??"))).strip()
     cname = str(card_front.get("name", "Write-In Study Card")).strip()
@@ -156,12 +179,41 @@ def build_study_back_html(
     badge_bg = palette.get("badge_bg", "#0369a1")
     badge_txt = palette.get("badge_text", "#ffffff")
 
-    mono_ref = html.escape(str(study_entry.get("monograph_ref", "Doc 1B • Doc 2 GPU Solver")))
-    eq_title = html.escape(str(study_entry.get("equation_title", "General-Equilibrium Specification")))
-    latex_raw = str(study_entry.get("latex_equation", "")).strip()
-    params_txt = html.escape(str(study_entry.get("parameters", "")))
-    bridge_txt = html.escape(str(study_entry.get("proof_bridge", "")))
-    citations = study_entry.get("citations", [])
+    mono_raw = str(
+        study_entry.get("vfi_module") or study_entry.get("monograph_ref") or "Docs 2A/2B • 5-Sector GPU Solver"
+    ).strip()
+    mono_ref = html.escape(mono_raw)
+
+    eq_title = html.escape(str(
+        study_entry.get("economic_concept") or study_entry.get("equation_title") or "General-Equilibrium Specification"
+    ))
+    latex_raw = resolve_card_latex(study_entry, cid)
+    size_cls = pick_eq_size_class(latex_raw)
+    eq_multiline_cls = (" sb-eq-2line" if r"\\" in latex_raw else "") + f" {size_cls}"
+
+    raw_params = study_entry.get("key_parameters") or study_entry.get("parameters") or ""
+    if isinstance(raw_params, list):
+        params_plain = " • ".join(str(x) for x in raw_params)
+        params_txt = " &bull; ".join(html.escape(str(x)) for x in raw_params)
+    else:
+        params_plain = str(raw_params).strip()
+        params_txt = html.escape(params_plain)
+
+    bridge_raw = str(study_entry.get("tabletop_bridge") or study_entry.get("proof_bridge") or "").strip()
+    ev_raw = str(study_entry.get("empirical_evidence", "")).strip()
+    citations = study_entry.get("references") or study_entry.get("citations") or []
+    cites_plain_len = sum(len(str(c)) for c in citations)
+
+    # Check total text pressure before deciding whether to append Evidence or ditch fold instructions
+    base_char_load = len(params_plain) + len(bridge_raw) + cites_plain_len + len(mono_raw)
+    is_overfull_footer = len(mono_raw) > 54
+    is_dense_card = base_char_load > 520 or (is_overfull_footer and base_char_load > 430)
+
+    bridge_txt = html.escape(bridge_raw)
+    if ev_raw and len(bridge_raw) < 165 and not is_dense_card:
+        ev_budget = max(90, 320 - len(bridge_raw))
+        ev_clean = html.escape(clip_at_sentence_or_word(ev_raw, ev_budget))
+        bridge_txt = f"{bridge_txt} <br/><em>Evidence:</em> {ev_clean}"
 
     cites_html = "".join(
         f"<li>{html.escape(str(c))}</li>" for c in citations
@@ -170,13 +222,27 @@ def build_study_back_html(
     rot_class = "rot-ccw" if orient == "landscape-ccw" else (
         "rot-cw" if orient == "landscape-cw" else "rot-180"
     )
-    fold_txt = get_fold_instruction(orient)
-    if standalone_copyright:
-        fold_txt = f"{fold_txt} &bull; {COPYRIGHT_CARD_HTML}"
+    dense_cls = ""  # Post-MathJax JS guard adds .sb-dense only if scrollHeight > clientHeight
+
+    # Ditch folding instructions on cards with over-full program lists or dense text!
+    omit_fold = is_overfull_footer or is_dense_card
+    if omit_fold:
+        fold_span = (
+            f'<span class="sb-fold-note">{COPYRIGHT_CARD_HTML}</span>'
+            if standalone_copyright
+            else ""
+        )
+        footer_cls = "sb-footer sb-footer-full"
+    else:
+        fold_txt = get_fold_instruction(orient)
+        if standalone_copyright:
+            fold_txt = f"{fold_txt} &bull; {COPYRIGHT_CARD_HTML}"
+        fold_span = f'<span class="sb-fold-note">{fold_txt}</span>'
+        footer_cls = "sb-footer"
 
     return f"""
     <div class="study-back-slot" style="--card-border: {border_col}; --header-bg: {header_bg}; --badge-bg: {badge_bg}; --badge-txt: {badge_txt};">
-      <div class="study-landscape-canvas {rot_class}">
+      <div class="study-landscape-canvas {rot_class}{dense_cls}">
         <header class="sb-header">
           <span class="pdd-badge">{html.escape(cid)}</span>
           <span class="sb-card-name">{html.escape(cname)}</span>
@@ -184,7 +250,7 @@ def build_study_back_html(
 
         <div class="sb-eq-frame">
           <div class="sb-eq-title">{eq_title}</div>
-          <div class="sb-eq-math">\\[ {latex_raw} \\]</div>
+          <div class="sb-eq-math{eq_multiline_cls}">\\[ {latex_raw} \\]</div>
         </div>
 
         <div class="sb-params">
@@ -200,8 +266,8 @@ def build_study_back_html(
           <ul class="sb-cite-list">{cites_html}</ul>
         </div>
 
-        <footer class="sb-footer">
-          <span class="sb-fold-note">{fold_txt}</span>
+        <footer class="{footer_cls}">
+          {fold_span}
           <span class="sb-mono-ref">📐 {mono_ref}</span>
         </footer>
       </div>
@@ -304,30 +370,36 @@ def render_study_deck_html(
         else [str(s.get("id", "")).strip() for s in study_list]
     )
 
-    # Group cards into 5-card core packs per deck prefix, then collect overflows
-    by_prefix: Dict[str, List[str]] = {p: [] for p in DECK_ORDER}
-    for cid in raw_ids:
-        pfx = cid.split(":")[0] if ":" in cid else "B"
-        by_prefix.setdefault(pfx, []).append(cid)
-
     full_packs: List[tuple[str, List[str]]] = []
-    overflow_ids: List[str] = []
-    for pfx in DECK_ORDER:
-        cids = by_prefix.get(pfx, [])
-        num_full = len(cids) // 5
-        for p_idx in range(num_full):
-            chunk = cids[p_idx * 5 : (p_idx + 1) * 5]
-            pack_label = f"Pack {pfx}{p_idx + 1} ({chunk[0]}&ndash;{chunk[-1]})"
-            full_packs.append((pack_label, chunk))
-        rem_cids = cids[num_full * 5 :]
-        overflow_ids.extend(rem_cids)
-
-    # Pack overflow cards into sheets of 5
-    for ov_idx in range(0, len(overflow_ids), 5):
-        chunk = overflow_ids[ov_idx : ov_idx + 5]
-        ov_num = (ov_idx // 5) + 1
-        label_ids = ", ".join(chunk)
-        full_packs.append((f"Overflow Pack {ov_num} ({label_ids})", chunk))
+    if study_list and all("a3_study_sheet" in s for s in study_list):
+        ordered_ids = [
+            str(s["id"]).strip()
+            for s in sorted(
+                study_list,
+                key=lambda x: (int(x.get("a3_study_sheet", 99)), int(x.get("a3_study_slot", 99))),
+            )
+            if str(s["id"]).strip() in set(raw_ids)
+        ]
+        for sh_idx in range(0, len(ordered_ids), 5):
+            chunk = ordered_ids[sh_idx : sh_idx + 5]
+            sh_num = (sh_idx // 5) + 1
+            full_packs.append((f"Study Sheet {sh_num} ({chunk[0]}&ndash;{chunk[-1]})", chunk))
+    else:
+        by_prefix: Dict[str, List[str]] = {p: [] for p in DECK_ORDER}
+        for cid in raw_ids:
+            pfx = cid.split(":")[0] if ":" in cid else "B"
+            by_prefix.setdefault(pfx, []).append(cid)
+        overflow_ids: List[str] = []
+        for pfx in DECK_ORDER:
+            cids = by_prefix.get(pfx, [])
+            num_full = len(cids) // 5
+            for p_idx in range(num_full):
+                chunk = cids[p_idx * 5 : (p_idx + 1) * 5]
+                full_packs.append((f"Pack {pfx}{p_idx + 1} ({chunk[0]}&ndash;{chunk[-1]})", chunk))
+            overflow_ids.extend(cids[num_full * 5 :])
+        for ov_idx in range(0, len(overflow_ids), 5):
+            chunk = overflow_ids[ov_idx : ov_idx + 5]
+            full_packs.append((f"Overflow Pack {(ov_idx // 5) + 1} ({', '.join(chunk)})", chunk))
 
     total_sheets = len(full_packs)
     sheet_blocks: List[str] = []
@@ -342,7 +414,7 @@ def render_study_deck_html(
                 front_card, study_entry, palettes, card_overrides, orient, standalone_copyright
             )
             front_html = build_front_card_html(
-                front_card, palettes, card_overrides, themes_dir, search_order, co2_pos, out_path
+                front_card, palettes, card_overrides, theme_cfg, themes_dir, search_order, co2_pos, out_path
             )
             batch.append((back_html, front_html))
 
@@ -385,7 +457,8 @@ def render_study_deck_html(
     window.MathJax = {{
       tex: {{
         inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-        displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']]
+        displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+        processEscapes: true
       }},
       svg: {{
         fontCache: 'global',
@@ -399,6 +472,28 @@ def render_study_deck_html(
               if (svg) {{
                 svg.style.maxWidth = '100%';
                 svg.style.height = 'auto';
+              }}
+            }});
+            // Post-MathJax overflow guard: drop fold instructions first, then compact if needed
+            document.querySelectorAll('.study-landscape-canvas').forEach(canvas => {{
+              const cites = canvas.querySelector('.sb-citations');
+              const isOverflowing = () => (
+                canvas.scrollHeight > canvas.clientHeight + 1 ||
+                (cites && cites.scrollHeight > cites.clientHeight + 1)
+              );
+              if (isOverflowing()) {{
+                const foldNote = canvas.querySelector('.sb-fold-note');
+                const footer = canvas.querySelector('.sb-footer');
+                if (foldNote && !foldNote.textContent.includes('©')) {{
+                  foldNote.style.display = 'none';
+                  if (footer) footer.classList.add('sb-footer-full');
+                }}
+              }}
+              if (isOverflowing()) {{
+                canvas.classList.add('sb-dense');
+              }}
+              if (isOverflowing()) {{
+                canvas.classList.add('sb-ultra-dense');
               }}
             }});
           }});
@@ -449,6 +544,22 @@ def render_study_deck_html(
       margin-bottom: 0.8mm;
       gap: 1mm;
     }}
+    .badge-group {{
+      display: flex;
+      align-items: center;
+      gap: 1.0mm;
+    }}
+    .tranche-pill {{
+      font-family: var(--font-mono);
+      font-size: 5.2pt;
+      font-weight: 700;
+      background: #fef9c3;
+      color: #854d0e;
+      border: 0.25mm solid #fde047;
+      padding: 0.35mm 1.1mm;
+      border-radius: 0.9mm;
+      white-space: nowrap;
+    }}
     .pdd-badge {{
       font-family: var(--font-mono);
       font-size: 7.5pt;
@@ -471,6 +582,11 @@ def render_study_deck_html(
     .co2-computed {{ background: #dcfce7; color: #166534; border: 0.3mm solid #86efac; }}
     .co2-indirect {{ background: #e0f2fe; color: #075985; border: 0.3mm solid #7dd3fc; }}
     .co2-hazard {{ background: #fee2e2; color: #991b1b; border: 0.3mm solid #fca5a5; }}
+    .pillar-badge {{ font-size: 5.3pt; letter-spacing: 0.01em; }}
+    .pillar-p1 {{ background: #f3e8ff; color: #581c87; border: 0.3mm solid #d8b4fe; }}
+    .pillar-p2 {{ background: #fef3c7; color: #92400e; border: 0.3mm solid #fcd34d; }}
+    .pillar-p3 {{ background: #ffe4e6; color: #9f1239; border: 0.3mm solid #fda4af; }}
+    .pillar-p4 {{ background: #e0e7ff; color: #3730a3; border: 0.3mm solid #a5b4fc; }}
     .gate-tag {{ font-family: var(--font-mono); font-size: 5.4pt; color: #475569; font-weight: 600; }}
     .card-title {{ font-family: var(--font-heading); font-size: 8.2pt; font-weight: 800; color: #0f172a; line-height: 1.15; margin-bottom: 0.4mm; }}
     .card-type {{ font-size: 5.8pt; font-weight: 600; color: #334155; }}
@@ -503,12 +619,14 @@ def render_study_deck_html(
       left: 50%;
       width: 138mm;
       height: 79mm;
-      padding: 2.4mm 3.2mm 1.8mm 3.2mm;
+      padding: 2.2mm 3.0mm 1.6mm 3.0mm;
       border-top: 2.2mm solid var(--card-border);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 0.8mm;
       background: #ffffff;
+      box-sizing: border-box;
     }}
     .rot-ccw {{ transform: translate(-50%, -50%) rotate(-90deg); }}
     .rot-cw  {{ transform: translate(-50%, -50%) rotate(90deg); }}
@@ -523,27 +641,28 @@ def render_study_deck_html(
       display: flex;
       align-items: center;
       background: var(--header-bg);
-      padding: 1.2mm 2mm;
-      border-radius: 1.2mm;
+      padding: 1.0mm 1.8mm;
+      border-radius: 1.1mm;
       border-left: 1.4mm solid var(--card-border);
-      gap: 2mm;
+      gap: 1.8mm;
       flex-shrink: 0;
     }}
     .sb-card-name {{
       font-family: var(--font-heading);
-      font-size: 8.6pt;
+      font-size: 8.3pt;
       font-weight: 800;
       color: #0f172a;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      min-width: 0;
     }}
     .sb-eq-frame {{
       background: #f8fafc;
       border: 0.35mm solid #94a3b8;
       border-left: 1.2mm solid var(--card-border);
-      border-radius: 1.2mm;
-      padding: 1.2mm 2mm;
+      border-radius: 1.1mm;
+      padding: 1.1mm 2.0mm;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -551,92 +670,175 @@ def render_study_deck_html(
     }}
     .sb-eq-title {{
       font-family: var(--font-mono);
-      font-size: 6pt;
+      font-size: 5.7pt;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       color: var(--badge-bg);
-      margin-bottom: 0.5mm;
+      margin-bottom: 0.45mm;
     }}
     .sb-eq-math {{
-      font-size: 7.4pt;
-      line-height: 1.1;
+      font-size: 8.2pt;
+      line-height: 1.12;
       text-align: center;
       overflow: hidden;
       padding: 0.4mm 0;
     }}
-    .sb-eq-math mjx-container {{
-      margin: 0 !important;
-      max-width: 100% !important;
+    .sb-eq-math.eq-size-lg {{
+      font-size: 8.5pt;
+    }}
+    .sb-eq-math.eq-size-md {{
+      font-size: 7.8pt;
+    }}
+    .sb-eq-math.eq-size-sm {{
+      font-size: 7.1pt;
+    }}
+    .sb-eq-math.sb-eq-2line {{
+      font-size: 7.2pt;
+    }}
+    {get_mathjax_svg_fit_css('.sb-eq-math', '18.5mm')}
+    .sb-eq-math.sb-eq-2line mjx-container > svg {{
+      max-height: 22.5mm !important;
     }}
     .sb-params {{
       font-family: var(--font-mono);
-      font-size: 5.9pt;
-      line-height: 1.22;
+      font-size: 5.6pt;
+      line-height: 1.18;
       background: #eff6ff;
       border: 0.25mm solid #bfdbfe;
-      padding: 1mm 1.6mm;
+      padding: 0.8mm 1.4mm;
       border-radius: 0.8mm;
       color: #1e3a8a;
       flex-shrink: 0;
     }}
     .sb-bridge {{
-      font-size: 6.2pt;
-      line-height: 1.24;
+      font-size: 5.9pt;
+      line-height: 1.20;
       color: #0f172a;
       background: #f0fdf4;
       border-left: 1mm solid #16a34a;
-      padding: 1mm 1.6mm;
+      padding: 0.8mm 1.4mm;
       border-radius: 0.8mm;
       flex-shrink: 0;
     }}
     .sb-citations {{
       border-top: 0.25mm solid #cbd5e1;
-      padding-top: 0.8mm;
+      padding-top: 0.6mm;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       overflow: hidden;
+      min-height: 9mm;
     }}
     .sb-cite-heading {{
       font-family: var(--font-mono);
-      font-size: 5.5pt;
+      font-size: 5.3pt;
       font-weight: 800;
       color: #475569;
       text-transform: uppercase;
-      margin-bottom: 0.4mm;
+      margin-bottom: 0.3mm;
+      flex-shrink: 0;
     }}
     .sb-cite-list {{
       list-style: disc;
-      padding-left: 3.2mm;
-      font-size: 5.5pt;
-      line-height: 1.2;
+      padding-left: 3.0mm;
+      margin: 0;
+      font-size: 5.3pt;
+      line-height: 1.16;
       color: #334155;
     }}
     .sb-footer {{
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 2mm;
       font-family: var(--font-mono);
       border-top: 0.25mm solid #cbd5e1;
-      padding-top: 0.6mm;
+      padding-top: 0.5mm;
       flex-shrink: 0;
+      min-width: 0;
+    }}
+    .sb-footer.sb-footer-full {{
+      justify-content: flex-end;
     }}
     .sb-fold-note {{
-      font-size: 5.0pt;
+      font-size: 4.9pt;
       color: #64748b;
+      white-space: nowrap;
+      flex-shrink: 0;
     }}
+    /* Allows multi-line wrapping & automatic height expansion for over-full .m program lists! */
     .sb-mono-ref {{
       font-family: var(--font-mono);
-      font-size: 5.4pt;
+      font-size: 5.1pt;
       font-weight: 700;
+      line-height: 1.18;
       color: #1e293b;
       background: #f1f5f9;
-      padding: 0.3mm 1.4mm;
+      padding: 0.3mm 1.3mm;
       border-radius: 0.8mm;
       border: 0.25mm solid #cbd5e1;
-      white-space: nowrap;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      text-align: right;
+      max-width: 100%;
+    }}
+    .sb-footer.sb-footer-full .sb-mono-ref {{
+      width: 100%;
+      text-align: left;
+    }}
+
+    /* Tier 1 Auto-Compact for dense cards (e.g. K:07) */
+    .study-landscape-canvas.sb-dense {{
+      padding: 1.8mm 2.6mm 1.3mm 2.6mm;
+      gap: 0.55mm;
+    }}
+    .study-landscape-canvas.sb-dense .sb-eq-frame {{
+      padding: 0.7mm 1.5mm;
+    }}
+    .study-landscape-canvas.sb-dense .sb-eq-math mjx-container > svg {{
+      max-height: 14.5mm !important;
+    }}
+    .study-landscape-canvas.sb-dense .sb-eq-math.sb-eq-2line mjx-container > svg {{
+      max-height: 18.0mm !important;
+    }}
+    .study-landscape-canvas.sb-dense .sb-params {{
+      font-size: 5.2pt;
+      line-height: 1.14;
+      padding: 0.65mm 1.2mm;
+    }}
+    .study-landscape-canvas.sb-dense .sb-bridge {{
+      font-size: 5.4pt;
+      line-height: 1.14;
+      padding: 0.65mm 1.2mm;
+    }}
+    .study-landscape-canvas.sb-dense .sb-cite-list {{
+      font-size: 5.0pt;
+      line-height: 1.12;
+    }}
+    .study-landscape-canvas.sb-dense .sb-mono-ref {{
+      font-size: 4.8pt;
+      line-height: 1.14;
+    }}
+
+    /* Tier 2 Ultra-Dense Safety Net (triggered by JS if MathJax equation + citations still push height) */
+    .study-landscape-canvas.sb-ultra-dense .sb-eq-math mjx-container > svg {{
+      max-height: 12.0mm !important;
+    }}
+    .study-landscape-canvas.sb-ultra-dense .sb-eq-math.sb-eq-2line mjx-container > svg {{
+      max-height: 15.0mm !important;
+    }}
+    .study-landscape-canvas.sb-ultra-dense .sb-params,
+    .study-landscape-canvas.sb-ultra-dense .sb-bridge {{
+      font-size: 4.9pt;
+      line-height: 1.10;
+      padding: 0.5mm 1.0mm;
+    }}
+    .study-landscape-canvas.sb-ultra-dense .sb-cite-list {{
+      font-size: 4.75pt;
+      line-height: 1.08;
     }}
   </style>
 </head>
@@ -692,7 +894,7 @@ def main() -> None:
     parser.add_argument(
         "--all-cards",
         action="store_true",
-        help="Render all 43 cards in cards.yaml instead of only the entries in study_cards.yaml",
+        help="Render all 80 cards in cards.yaml instead of only the entries in study_cards.yaml",
     )
     parser.add_argument(
         "--standalone-copyright",

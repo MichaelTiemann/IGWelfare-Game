@@ -19,8 +19,8 @@ At the start of a workshop or game session, each player selects one **Primary Wa
 | :---- | :---- | :---- | :---- |
 | **`K:01`** | **The Catalytic Steward** | Philanthropists, Iwi Trusts, & Community Leaders | Halves pilot cost of **`B:01`** (First 2000 Days) & **`B:02`** (*Tuakana–Teina*); unlocks **`B:07`** (ACC Time-Bend). |
 | **`K:02`** | **The Enterprise Wayfinder** | Venture Catalysts, Founders, & Growth Investors | Powers **`B:05`** (Use-It-Or-Lose-It Rebalancer) & **`B:03`** (Age-20 Renaissance Founder); stops Brain Drain (**`H:03`**). |
-| **`K:03`** | **The Sovereign Helmsman** | Policy-Makers, Ministers, Treasury, & RBNZ Officials | Executes **`B:07`** (ACC Time-Bend), **`B:08`** (1925 Quantum Leap), & **`B:06` / `C:04`** (2050 50/50 Stabilizer). |
-| **`K:04`** | **The "1925 Moment" Architect** | Quantitative Economists & Open-Source Researchers | Unlocks the **`N:01` – `N:06`** Nobel Archive and **`B:08`** (OIA 20250878 Override); pairs with **`K:06`**. |
+| **`K:03`** | **The Sovereign Helmsman** | Policy-Makers, Ministers, Treasury, & RBNZ Officials | Executes **`B:07`** (ACC Time-Bend), **`B:10`** (1925 Quantum Leap), & **`B:06` / `C:04`** (2050 50/50 Stabilizer). |
+| **`K:08`** | **The "1925 Moment" Architect** | Quantitative Economists & Open-Source Researchers | Unlocks the **`N:01` – `N:06`** Nobel Archive and **`B:10`** (OIA 20250878 Override); pairs with **`K:06`**. |
 | **`K:05`** | **The *Pūrākau* Weaver** | Creatives, Storytellers, & Cultural Catalysts | Supercharges **`B:02`** & **`C:03`** (Gate 2 Mentoring) and **`B:03`** (Gate 3 Renaissance); lifts **`C:06`** (Social Credit 126.0). |
 | **`K:06`** | **The *Kaumātua* & Founder's Dividend** | Thriving Retirees & Elder Mentors (Ages 65+) | Generates **1 Lifetime Experience Token/turn** when NZ Super is kept at Age 65 (**`B:06`**); counters **`H:04`**. |
 | **`K:07`** | ***Te Tiriti*** **& The Big Table Crew** | All Five Partner Crews Operating Together | Shares all **Innate *Kaupapa* Abilities** across the table; unlocks **`B:09`** (*He Tāngata*) & **`N:06`** (*The Aotearoa Synthesis*). |
@@ -36,7 +36,7 @@ At the start of a workshop or game session, each player selects one **Primary Wa
   * *Proof Before Scale:* Spend **1 Catalytic R\&D Token** to pilot **`B:01` (Tamariki of the First 2000 Days — *Te Korowai Mokopuna* / *Whānau Ora*)** or **`B:02` / `C:03` (*Tuakana–Teina* & Graeme Dingle Foundation Mentoring)** in one region at **50% cost**. Once piloted, the Crown can scale that card nationally on the next turn without paying "Untested Policy" friction penalties.  
 * **Dual-Class / *Kotahitanga* Synergies:**  
   * *Paired with **`K:05` (The Pūrākau Weaver — Artist as Community Leader)**:* Turn statistical nodes into lived community trust. Double the uptake of early-years wraparound and adolescent mentoring (reaching **65.0%+** of Years 8–10) and make your cohort immune to **Central Bureaucracy Red Tape (`H:02`)**.  
-  * *Paired with **`K:04` (The "1925 Moment" Architect — Philanthropist as Economist)**:* Anchor philanthropic evaluations in **cardinal adult outcomes** (earnings, mental health, avoided state care) rather than arbitrary test scores—instantly unlocking **`B:07` (ACC Actuarial Time-Bend)** and **`N:03` (Williamson's Actuarial Ledger)** for national scaling.  
+  * *Paired with **`K:08` (The "1925 Moment" Architect — Philanthropist as Economist)**:* Anchor philanthropic evaluations in **cardinal adult outcomes** (earnings, mental health, avoided state care) rather than arbitrary test scores—instantly unlocking **`B:07` (ACC Actuarial Time-Bend)** and **`N:03` (Williamson's Actuarial Ledger)** for national scaling.  
 * **Flavor Text:** *"Markets don't lend to three-year-olds, and bureaucracies can't manufacture trust. We bring the aroha, the patience, and the proof that makes national transformation undeniable."*
 
 ### `K:02` — The Enterprise Wayfinder: Venture Catalyst, Founder, & Growth Investor
@@ -53,17 +53,17 @@ At the start of a workshop or game session, each player selects one **Primary Wa
 
 * **Type:** Wayfinder Persona — Actuarial Governance & Macro Stability (All 3 Lenses)  
 * **Innate *Kaupapa* (Tap Ability):**  
-  * *Bridge the OIA 20250878 Gap:* Play **`B:08` (The 1925 Quantum Leap)** to couple micro-cohort social outcomes directly to the Crown's macroeconomic Long-Term Fiscal Model (`LTFM`). Book **3.84x Verified Actuarial Breakeven by Year 5** (1.16x from direct cost avoidance alone via **`B:07`**) and engage **`B:06` (The 2050 50/50 Stabilizer)**.  
+  * *Bridge the OIA 20250878 Gap:* Play **`B:10` (The 1925 Quantum Leap)** to couple micro-cohort social outcomes directly to the Crown's macroeconomic Long-Term Fiscal Model (`LTFM`). Book **3.84x Verified Actuarial Breakeven by Year 5** (1.16x from direct cost avoidance alone via **`B:07`**) and engage **`B:06` (The 2050 50/50 Stabilizer)**.  
 * **Dual-Class / *Kotahitanga* Synergies:**  
   * *Paired with **`K:01` (The Catalytic Steward)**:* Adopt **`N:04` (Ostrom's Polycentric Commons)**—funding proven community wraparound at national scale while slashing **NZD 17.7B–28.5B/yr** in reactive Oranga Tamariki, hospital, and justice hull drag down to **NZD 4.2B/yr (`B:04`)**.  
-  * *Paired with **`K:04` (The "1925 Moment" Architect)**:* Replace blunt OCR monetary hammering and reactive austerity with **Energy & Housing Firming (`C:04`, `C:05`)**, cutting domestic interest rates by **60 bps**, keeping **Universal NZ Super at Age 65**, and delivering a **\-3.5 percentage-point PAYE tax cut** in `SS2`.  
+  * *Paired with **`K:08` (The "1925 Moment" Architect)**:* Replace blunt OCR monetary hammering and reactive austerity with **Energy & Housing Firming (`C:04`, `C:05`)**, cutting domestic interest rates by **60 bps**, keeping **Universal NZ Super at Age 65**, and delivering a **\-3.5 percentage-point PAYE tax cut** in `SS2`.  
 * **Flavor Text:** *"For forty years, our rulebook forced us to count investment in children as debt and infrastructure neglect as thrift. Give us the right actuarial compass, and we will steer Aotearoa into clear air."*
 
-### `K:04` — The "1925 Moment" Architect: Quantitative Economist & Open-Source Researcher
+### `K:08` — The "1925 Moment" Architect: Quantitative Economist & Open-Source Researcher
 
 * **Type:** Wayfinder Persona — *A System of Profound Knowledge* & GPU Proof (System-Wide)  
 * **Innate *Kaupapa* (Tap Ability):**  
-  * *Inspect the 8-PType Engine:* Reveal the hidden general-equilibrium feedback loops across **Rural, Small, Large, Auckland, and Abroad (`C:05`)**. Neutralize any "Ideological Bluff" or "Zero-Sum Myth" card played by the Orthodoxy Deck (`H:01` – `H:05`) by citing empirical Dunedin Study elasticities and the **11 Historical Precedents**.  
+  * *Inspect the 5-Sector x 8-PType Engine:* Reveal the hidden general-equilibrium feedback loops across **Rural, Small, Large, Auckland, and Abroad (`C:05`)**. Neutralize any "Ideological Bluff" or "Zero-Sum Myth" card played by the Orthodoxy Deck (`H:01` – `H:05`) by citing empirical Dunedin Study elasticities and the **11 Historical Precedents**.  
 * **Dual-Class / *Kotahitanga* Synergies:**  
   * *Paired with **`K:02` (The Enterprise Wayfinder — Founder as Economist)**:* Combine **`N:01` (Coase)**, **`N:03` (Williamson)**, **`N:04` (Ostrom)**, and **`N:05` (Romer)** to prove that lowering transaction costs and unlocking non-rival human capability generates a **\+20.49% National Welfare Gain** and **NZD 1,510.7B in 60-year cash GDP (`B:08`, `B:09`)**.  
   * *Paired with **`K:06` (The Kaumātua & Founder's Dividend)**:* Synthesize 60 years of lived entrepreneurial and civic history into open-source code and interactive Sankey diagrams—reducing the deployment cost of all **Phase 1 (`SS1`)** and **Phase 2 (`SS2`)** reforms by **100%**.  

@@ -36,13 +36,14 @@ DEFAULT_THEME_CONFIG = {
         "mono_font": "'JetBrains Mono', 'Fira Code', monospace",
     },
     "deck_palettes": {
-        "B": {"name": "Base Game — Up on Foils", "border": "#0284c7", "header_bg": "#e0f2fe", "badge_bg": "#0369a1", "badge_text": "#ffffff"},
+        "B": {"name": "Base Policy & Lifecycle", "border": "#0284c7", "header_bg": "#e0f2fe", "badge_bg": "#0369a1", "badge_text": "#ffffff"},
         "T": {"name": "Cautionary Traps", "border": "#d97706", "header_bg": "#fef3c7", "badge_bg": "#b45309", "badge_text": "#ffffff"},
-        "C": {"name": "Climate & Resilience", "border": "#059669", "header_bg": "#d1fae5", "badge_bg": "#047857", "badge_text": "#ffffff"},
-        "K": {"name": "Wayfinders & Kaupapa", "border": "#7c3aed", "header_bg": "#ede9fe", "badge_bg": "#6d28d9", "badge_text": "#ffffff"},
-        "N": {"name": "Nobel Laureate Archive", "border": "#ca8a04", "header_bg": "#fef9c3", "badge_bg": "#a16207", "badge_text": "#ffffff"},
+        "C": {"name": "Resilience, Spatial & Food-Hubs", "border": "#059669", "header_bg": "#d1fae5", "badge_bg": "#047857", "badge_text": "#ffffff"},
+        "K": {"name": "Wayfinders & Whānau Personas", "border": "#7c3aed", "header_bg": "#ede9fe", "badge_bg": "#6d28d9", "badge_text": "#ffffff"},
+        "N": {"name": "Nobel & Staffing-Cycle Engines", "border": "#ca8a04", "header_bg": "#fef9c3", "badge_bg": "#a16207", "badge_text": "#ffffff"},
         "H": {"name": "Orthodoxy Boss Deck", "border": "#dc2626", "header_bg": "#fee2e2", "badge_bg": "#b91c1c", "badge_text": "#ffffff"},
-        "E": {"name": "Electrification & Grid", "border": "#0d9488", "header_bg": "#ccfbf1", "badge_bg": "#0f766e", "badge_text": "#ffffff"},
+        "E": {"name": "Energy & Epistemic Operators", "border": "#0d9488", "header_bg": "#ccfbf1", "badge_bg": "#0f766e", "badge_text": "#ffffff"},
+        "P": {"name": "Open-Source Wildcards & Sockets", "border": "#475569", "header_bg": "#f1f5f9", "badge_bg": "#334155", "badge_text": "#ffffff"},
     },
 }
 

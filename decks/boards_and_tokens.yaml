@@ -3,7 +3,7 @@
 # Companion to "Intergenerational Welfare, Capital Allocation, and Human Potential in NZ"
 # Author: Michael Tiemann (mdtiemann@gmail.com)
 # License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
-# Repository: https://github.com/MichaelTiemann/IGWelfare-Game
+# Repository: [https://github.com/MichaelTiemann/IGWelfare-Game](https://github.com/MichaelTiemann/IGWelfare-Game)
 # ==============================================================================
 
 metadata:
@@ -12,6 +12,7 @@ metadata:
   author: "Michael Tiemann"
   license: "CC-BY-SA-4.0"
   sheet_size: "A3 Landscape (420mm x 297mm)"
+  companion_deck: "80 Canonical Cards + 20-Card Lifecycle Tranche Booster (100-Card Play Shoe)"
   copyright_notice: "© 2026 Michael Tiemann. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
 
 # ------------------------------------------------------------------------------
@@ -19,79 +20,79 @@ metadata:
 # ------------------------------------------------------------------------------
 tokens:
   - id: "TOK:01"
-    name: "Cohort Meeples (Tamariki → Rangatahi → Kaumātua)"
+    name: "Cohort Meeples & Lifecycle Tranches (Tamariki → Rangatahi → Kaumātua)"
     quantity_per_table: 20
     shape: "Meeple / Rounded Disc (22mm)"
     side_a_ss0:
-      label: "Stunted / Hardship Corner (i_c = 0)"
+      label: "Struggling / Hardship Corner (i_c = 0)"
       color: "#dc2626"
       icon: "🔴"
-      mechanic: "Enters on d20 roll 1–4 (22.0% Dunedin share) without B:01. Inflicts NZD 105k–180k/yr hull drag across Exits 1, 2, 4."
+      mechanic: "Enters on d20 roll 1–4 (1–6 under H:03 GUiNZ) without B:01/B:02. Inflicts NZD 105k–180k/yr hull drag across Exits 1, 2, 4."
     side_b_ss2:
-      label: "Thriving Launch & Readiness (h6–h7)"
+      label: "Thriving Launch & Tranche Stack (h6–h7 • 50/25/25%)"
       color: "#16a34a"
       icon: "🟢"
-      mechanic: "Flipped by B:01 (Te Korowai Mokopuna) + B:02 (Tuakana–Teina). Generates +NZD 16.1k/yr net adult fiscal surplus."
+      mechanic: "Stacked via tradeable B:01/B:02 + B:03 tranches (1st=50%, 2nd=+25%, 3rd=+25%). Generates +NZD 16k/yr net adult fiscal surplus."
 
   - id: "TOK:02"
-    name: "Financial & Physical Capital Discs (z_l / a_prec → z_h / pv=5)"
+    name: "Financial, Exergy, & Physical Capital Discs (z_l / a_prec → z_h / pv=5)"
     quantity_per_table: 24
     shape: "Hex / Coin Disc (22mm)"
     side_a_ss0:
       label: "Dormant Dirt & Precautionary Hoard (z_l / a_prec)"
       color: "#64748b"
       icon: "🪨"
-      mechanic: "Locked in NZD 1.6T untaxed property pool or hoarded against z2 fuel shocks. Inflates metro rents 3.1x and triggers T:04."
+      mechanic: "Locked in NZD 1.6T untaxed land pool or hoarded against z2 fuel shocks. Inflates metro rents 3.1x and triggers T:05."
     side_b_ss2:
-      label: "Active Builder & Solar Endowment (z_h / pv=5)"
+      label: "Active Builder & 3x Clean Exergy Endowment (z_h / pv=5)"
       color: "#d97706"
       icon: "⚡"
-      mechanic: "Flipped by B:05 (Use-It-Or-Lose-It) or E:02 (Energy as Endowment). Funds firms, B:03 Youth Grants, and 1.7x grids (C:04)."
+      mechanic: "Flipped by B:08 (LVT/Corp Lockstep) or E:01/E:02 (3x Clean Exergy). Funds firms, B:05/B:06 Youth Grants, & 1.65x grids (C:03)."
 
   - id: "TOK:03"
-    name: "Obligation & Ledger Cubes (To Whom & How Much)"
+    name: "Obligation & Actuarial Ledger Cubes (To Whom & How Much)"
     quantity_per_table: 20
     shape: "Square Cube (22mm)"
     side_a_ss0:
       label: "Unfunded Liability & Hull Drag"
       color: "#1e293b"
       icon: "🩸"
-      mechanic: "Owed to Future Mokopuna (200% Crown Debt path), Banks (+60 bps spread), Foreign Oil Cartels (NZD 20B/yr), & Reactive Care."
+      mechanic: "Owed to Future Mokopuna (185%–200% Debt path), Banks (+60 bps spread), Imported Fossil Fuels, & Reactive Remediation."
     side_b_ss2:
       label: "Actuarial Asset & 50/50 Sinking Cube"
       color: "#0284c7"
       icon: "🛡️"
-      mechanic: "Flipped by B:07 (3.8x Year-5 ACC return) & B:06 (50% Debt Sinking -60 bps / 50% Resilient Infrastructure)."
+      mechanic: "Flipped by B:09 (3.8x Year-5 ACC audit) & B:14/B:15 (50% Debt Sinking -60 bps / 50% 1.65x Infrastructure & 18.25% PAYE)."
 
   - id: "TOK:04"
     name: "Mana, Ako, & Social Cohesion Stars"
     quantity_per_table: 16
     shape: "Star Token (22mm)"
     side_a_ss0:
-      label: "Mana Eroded / Outrage Drag (T:05)"
+      label: "Mana Eroded / Outrage Drag (T:01)"
       color: "#7c2d12"
       icon: "🌪️"
-      mechanic: "Spawned when cohorts are left stunted or exiled (H:03). Drops trust to 40.0% and adds +25.0% Exit 4 justice drag (~NZD 2B/yr)."
+      mechanic: "Spawned when cohorts are left struggling or exiled (H:04). Drops trust to 40% and adds +25% Exit 4 justice drag (~NZD 2B/yr)."
     side_b_ss2:
       label: "Mana Created / Whanaungatanga & Care"
       color: "#0d9488"
       icon: "✨"
-      mechanic: "Created by B:01 (+NZD 15.3k parental care crowd-in), B:02 (Ako), C:02 (Monilukutaito), & K:07. Drives Cohesion 100.0 → 126.0."
+      mechanic: "Created by B:01 (+NZD 15.3k parental care crowd-in), B:03 (Ako), C:05 (Monilukutaito), & K:10. Drives Cohesion 100.0 → 126.0."
 
   - id: "TOK:05"
-    name: "Ngā Kete o te Wānanga (Knowledge & Legacy Baskets)"
+    name: "Ngā Kete o te Wānanga (Wisdom & Legacy Baskets)"
     quantity_per_table: 12
     shape: "Basket / Octagon Token (22mm)"
     side_a_ss0:
       label: "Exiled / Siloed IP (Exit 3 Brain Drain)"
       color: "#475569"
       icon: "📦"
-      mechanic: "Lost when 19.3%–23.4% of metro graduates emigrate to Australia (H:03) or elders are trapped in survival mode (H:04)."
+      mechanic: "Lost when 19%–23% of metro graduates emigrate to Australia (H:04) or elders face Age-70 sandwich drag (H:05 / T:03)."
     side_b_ss2:
-      label: "Open-Source Wisdom & Tech Multiplier (K:06 + N:05)"
+      label: "Open-Source Wisdom & Tech Multiplier (K:09 + N:06)"
       color: "#7c3aed"
       icon: "🧺"
-      mechanic: "Generated by dignified Kaumātua (K:06, Age 65+) and retained Founders (B:03). Multiplies next generation human capital by 1.8x!"
+      mechanic: "Generated by dignified Kaumātua (K:09, Age 64+ via B:15) and retained Founders (B:06). Cuts Nobel cost 100% & scales 1.8x!"
 
 # ------------------------------------------------------------------------------
 # 2. THE LIFECYCLE RIVER (5 GATES + 4 EXITS ON A3 SHEET 1)
@@ -99,65 +100,65 @@ tokens:
 lifecycle_gates:
   - id: "GATE:01"
     name: "GATE 1 • (Ages 0–5)\nFIRST 2000 DAYS"
-    foils_title: "Front Lifting Foil (Stage 1)"
+    foils_title: "Front Lifting Foil (Stage 1 • 6x B:01 + 3x B:02)"
     waka_title: "He Kākano i Rangiātea (Being)"
-    key_cards: ["B:00", "B:01", "N:02", "K:01"]
-    ss0_outcome: "22.0% Dunedin / 14.3% GUiNZ trapped in Hardship Corner (i_c = 0)."
-    ss2_outcome: "NZD 13.0k/yr in-kind wraparound compresses stunting to 1.5% and crowds in +NZD 15.3k private parental care."
+    key_cards: ["B:00", "B:01", "B:02", "N:03", "K:01"]
+    ss0_outcome: "22% Dunedin / 30% GUiNZ (H:03) trapped in Hardship Corner (i_c = 0)."
+    ss2_outcome: "NZD 13k/yr in-kind wraparound + Māra Kai cuts hardship to 1.5% and crowds in +NZD 15.3k parental care."
 
   - id: "GATE:02"
     name: "GATE 2 • (Ages 12–14)\nRANGATAHI NAVIGATION"
-    foils_title: "Front Foil Strut (Stage 2)"
+    foils_title: "Front Foil Strut (Stage 2 • 7x B:03 Tranches)"
     waka_title: "Te Pikinga o Tāne & Tuakana–Teina (Becoming)"
-    key_cards: ["B:02", "C:02", "C:03", "T:05"]
-    ss0_outcome: "Only 17.3% mentored; unbuffered family job shocks and T:05 disinformation erode school engagement."
-    ss2_outcome: "65.0%+ mentored via Stars, Project K, Kura-ā-Iwi, & Montessori; immune to job shocks and T:05 outrage drag."
+    key_cards: ["B:03", "B:04", "C:04", "C:05", "T:01"]
+    ss0_outcome: "Only 17% mentored; unbuffered family job shocks and T:01 disinformation erode school engagement."
+    ss2_outcome: "65%+ mentored via Stars, Project K, Kura-ā-Iwi, & Montessori; immune to job shocks and T:01 outrage drag."
 
   - id: "GATE:03"
     name: "GATE 3 • (Ages 20–35)\nYOUNG ADULT LAUNCH"
-    foils_title: "Wing-Sail Power Plant (Launch)"
+    foils_title: "Wing-Sail Power Plant (3x B:05 + 4x B:06)"
     waka_title: "Tūrangawaewae & Ka Hao te Rangatahi"
-    key_cards: ["B:03", "B:05", "T:04", "H:03"]
-    ss0_outcome: "3.1x metro rent crush; 19.3%–23.4% graduate brain drain to Australia; top talent diverted to rent-seeking (T:04)."
-    ss2_outcome: "Universal NZD 62k+ Youth Capital Grant seed; homeownership 28.0% → 41.5%; 3,550/yr graduates retained."
+    key_cards: ["B:05", "B:06", "B:08", "T:05", "H:04"]
+    ss0_outcome: "3.1x metro rent crush; 19%–23% graduate brain drain to Australia (H:04); talent diverted to land banking (T:05)."
+    ss2_outcome: "Universal NZD 62k+ Youth Capital Grant seed; homeownership 28% → 41%; 3,550/yr graduates retained."
 
   - id: "GATE:04"
-    name: "GATE 4 • (Ages 36–64)\nMID-CAREER STEWARDSHIP"
-    foils_title: "Full Foil Flight & Grid Firming"
+    name: "GATE 4 • (Ages 36–63)\nMID-CAREER STEWARDSHIP"
+    foils_title: "Full Foil Flight & 5-Sector Exergy"
     waka_title: "Kaitiakitanga & Whānau Flourishing"
-    key_cards: ["B:04", "B:05", "E:02", "E:03"]
-    ss0_outcome: "High precautionary hoarding against z2 energy shocks; PAYE climbing toward 28.2%; cramped working-age leisure."
-    ss2_outcome: "PAYE cut to 18.5% (-3.5 pp); +3.2% to +9.6% real wages; pv=5 Solar Endowment frees leisure and working capital."
+    key_cards: ["B:08", "C:09", "C:10", "E:01", "E:02"]
+    ss0_outcome: "High precautionary hoarding against z2 energy shocks; PAYE climbing toward 28.2%; squeezed working-age leisure."
+    ss2_outcome: "PAYE cut to 18.25% (-3.75 pp); +3.2%–9.6% real wages; 3x clean exergy & pv=5 Solar Endowment free working capital."
 
   - id: "GATE:05"
-    name: "GATE 5 • (Ages 65+)\nKAUMĀTUA & CROSSING OVER"
+    name: "GATE 5 • (Ages 64+)\nKAUMĀTUA & CROSSING OVER"
     foils_title: "Rear T-Foil Stabilizer & Bequest"
     waka_title: "Ngā Kete o te Wānanga &\nHawaiki Anamata"
-    key_cards: ["B:06", "K:06", "N:05", "H:04"]
-    ss0_outcome: "Orthodoxy demands raising Super age to 67–70 (H:04); wealth locked in passive dirt until accidental death bequests."
-    ss2_outcome: "Universal NZ Super kept at 65; elders pass down Ngā Kete wisdom tokens (1.8x multiplier), Solar PV, & Youth Grant seeds."
+    key_cards: ["B:14", "B:15", "K:09", "N:06", "H:05"]
+    ss0_outcome: "Orthodoxy demands raising Super age to 67–70 (H:05); wealth locked in passive dirt until late estate transfers."
+    ss2_outcome: "Universal NZ Super lowered to Age 64 (+8.1% Kuia care); elders pass Ngā Kete wisdom tokens (1.8x) & Solar seeds."
 
 exits_and_drains:
   - id: "EXIT:01"
     name: "EXIT 1 • STATE CARE & HARM"
     subtitle: "Oranga Tamariki Reactive Pipeline"
     ss0_drain: "5,500 children in care @ NZD 180k/yr + NZD 181k lifetime harm drag"
-    ss2_target: "Cut by >94.0% (under 300 entries nationally via B:01 + K:01)"
+    ss2_target: "Cut by >94% (under 300 entries nationally via B:01 + K:01)"
   - id: "EXIT:02"
     name: "EXIT 2 • AVOIDABLE HOSPITAL NIGHTS"
     subtitle: "Paediatric & Adult Health Drag"
-    ss0_drain: "Cold/damp housing & early stress drive 57.0%–81.0% of adult hospital nights"
-    ss2_target: "Slashed via B:01 warm wraparound + E:01/E:02 bottom-half whānau solar"
+    ss0_drain: "Cold/damp housing & early stress drive 57%–81% of adult hospital nights"
+    ss2_target: "Slashed via B:01/B:02 warm wraparound + E:01/E:02 whānau electrification"
   - id: "EXIT:03"
     name: "EXIT 3 • TRANS-TASMAN BRAIN DRAIN"
     subtitle: "Skilled Graduate Exile (Abroad)"
-    ss0_drain: "19.3%–23.4% of metro graduates exiled to Sydney/Melbourne (H:03)"
-    ss2_target: "Compressed to 7.6% natural circulation; +3,550/yr builders retained (B:03)"
+    ss0_drain: "19%–23% of metro graduates exiled to Sydney/Melbourne (H:04)"
+    ss2_target: "Compressed to 7.6% natural circulation; +3,550/yr builders retained (B:06 + B:08)"
   - id: "EXIT:04"
     name: "EXIT 4 • JUSTICE & POLARISATION"
-    subtitle: "Corrections & T:05 Outrage Drag"
-    ss0_drain: "NZD 150k/prisoner-yr + 25.0% T:05 polarisation drag (NZD 17.7B–28.5B/yr Exits 1–4)"
-    ss2_target: "Total remediation drag slashed 75.0% down to NZD 4.2B/yr (B:04 + B:07)"
+    subtitle: "Corrections & T:01 Outrage Drag"
+    ss0_drain: "NZD 150k/prisoner-yr + 25% T:01 polarisation drag (NZD 18B–28B/yr Exits 1–4)"
+    ss2_target: "Sector-4A Baumol drag slashed 75% down to NZD 4.2B/yr (B:04 + B:09 + B:10)"
 
 # ------------------------------------------------------------------------------
 # 3. THE SEVEN CAPITALS & OBLIGATIONS TRACKS (DASHBOARD ON A3 SHEET 1)
@@ -165,67 +166,67 @@ exits_and_drains:
 capital_tracks:
   - id: "CAP:01"
     name: "1. Financial & Actuarial Capital\n    (Crown & Household Ledger)"
-    ss0_baseline: "-NZD 17.7B/yr Drag | 200% Debt Path | 22.0% → 28.2% PAYE"
-    ss1_milestone: "Year 5 ACC Breakeven: 1.2x Direct (NZD 10.7B) / 3.8x Total (NZD 35.3B)"
-    ss2_victory: "<40% Crown Debt | -60 to -100 bps Rates | 18.5% PAYE (-3.5 pp Cut)"
-    primary_cards: ["B:05", "B:06", "B:07", "N:03"]
+    ss0_baseline: "-NZD 18B/yr Drag | 185%–200% Debt | 22.0% → 28.2% PAYE"
+    ss1_milestone: "Year 5 ACC Breakeven (B:09): 1.2x Direct (NZD 11B) / 3.8x Total (NZD 35B)"
+    ss2_victory: "21%–22% Crown Debt | -60 to -100 bps Rates | 18.25% PAYE (Plan A Yr 15)"
+    primary_cards: ["B:08", "B:09", "B:13", "B:14", "B:15"]
 
   - id: "CAP:02"
-    name: "2. Built Environment &\n    Grid Infrastructure"
-    ss0_baseline: "3.1x Metro Rent Crush | Brittle Grid | NZD 6.2B LNG Boondoggle"
-    ss1_milestone: "Rents Cooled -7.5% | Schools & Marae Solar Microgrids (NZD 1.2B–1.5B)"
-    ss2_victory: "1.7x Coastal & Grid Armor (C:04) | Rents -10.5% | +NZD 15.6B/yr Energy Savings"
-    primary_cards: ["C:04", "E:01", "E:02", "E:03"]
+    name: "2. Built Environment &\n    Lifeline Infrastructure"
+    ss0_baseline: "3.1x Metro Rent Crush | Brittle Lifelines | NZD 240B Uninsured Gap"
+    ss1_milestone: "Rents Cooled -7.5% | Schools & Marae Solar Microgrids (C:04 + E:01)"
+    ss2_victory: "1.65x Ostrom Armor (+NZD 180B NPV, C:03) | Rents -10.5% | +NZD 16B/yr Exergy"
+    primary_cards: ["C:03", "C:04", "E:01", "E:02", "E:03"]
 
   - id: "CAP:03"
-    name: "3. Domestic &\n    Whānau Care Capital"
-    ss0_baseline: "Stone–Geary Subsistence Corner (i_c = 0) | Crushed Working-Age Leisure"
-    ss1_milestone: "+NZD 15.3k/yr Crowded-In Parental Care (NZD 8.7k Cash + 6.5k Time)"
-    ss2_victory: "Expanded Lifespan Leisure (leisure_h) + Warm Intergenerational Solar Homes"
-    primary_cards: ["B:01", "N:02", "E:02"]
+    name: "3. Uncounted Whānau &\n    Civic Care Capital"
+    ss0_baseline: "Subsistence Corner (i_c = 0) | Waring Care Priced at Zero | H:05 Sandwich Drag"
+    ss1_milestone: "+NZD 15.3k/yr Crowded-In Parental Care | Aunty's House Shield (K:09)"
+    ss2_victory: "Age-64 Super (+8.1% Kuia Care) + 25.5x Joiner Passport Civic Trust (P:02)"
+    primary_cards: ["B:01", "K:09", "N:03", "N:08", "P:02"]
 
   - id: "CAP:04"
-    name: "4. Natural & Ecological Capital\n    (Kaitiakitanga & CO2e)"
-    ss0_baseline: "+1°C Bilal–Känzig Shock (USD 1,200/tCO2e) | 20B/yr Imported Fossil Fuels"
-    ss1_milestone: "-10.0 MtCO2e/yr (E:01) | No Imported LNG Terminal (-3.2 MtCO2e)"
-    ss2_victory: "-14.8 MtCO2e/yr (5-Sector Solar + 19k Farm Ponds) | Resilient Catchments"
-    primary_cards: ["C:01", "C:04", "E:01", "E:02", "E:03"]
+    name: "4. Natural & Exergy Capital\n    (Kaitiakitanga & CO2e)"
+    ss0_baseline: "0.30 Fossil Thermal Conversion | Imported Fuel Drain | Hazard Exposure"
+    ss1_milestone: "3x Clean Exergy (0.88 Useful Work, E:01) | Waves 1–3 Rural/Small Relief"
+    ss2_victory: "-15 MtCO2e/yr (5-Sector Electrification + C:03 Lifelines + P:05 Socket)"
+    primary_cards: ["C:01", "C:03", "E:01", "E:02", "P:05"]
 
   - id: "CAP:05"
     name: "5. Social & Epistemic Capital\n    (Trust & Cohesion)"
-    ss0_baseline: "Index 100.0 (81/100 CPI Slide; 40.0% Govt Trust; T:05 Outrage Tax)"
-    ss1_milestone: "Index 114.8 | Finnish Monilukutaito Inoculation at Gates 1 & 2"
-    ss2_victory: "Index 126.0 (#1 Global Trust Rating — Surpassing Finland & Denmark)"
-    primary_cards: ["B:02", "C:02", "C:06", "T:05"]
+    ss0_baseline: "Index 100.0 (81/100 CPI Slide; 40% Govt Trust; T:01 Outrage Tax)"
+    ss1_milestone: "Index 114.8 | Finnish Monilukutaito Inoculation at Gates 1 & 2 (C:05)"
+    ss2_victory: "Index 126.0 (#1 Global Trust Rating — Surpassing Finland & Denmark, C:02)"
+    primary_cards: ["B:03", "C:02", "C:05", "K:02", "T:01"]
 
   - id: "CAP:06"
     name: "6. Cultural & Pūrākau Capital\n    (Te Tiriti & Creative IP)"
-    ss0_baseline: "Siloed Hulls | Alienated Rangatahi | Cultural Talent Drained Abroad"
-    ss1_milestone: "Two Hulls Lashed by Kīato (K:07) | Kura-ā-Iwi & Pasifika Academies"
-    ss2_victory: "Aotearoa Creative & Kaikōrero Renaissance (B:03 + K:05 + K:07)"
-    primary_cards: ["B:03", "C:03", "K:05", "K:07"]
+    ss0_baseline: "Siloed Hulls (H:02) | Alienated Rangatahi | Cultural Talent Drained Abroad"
+    ss1_milestone: "Two Hulls Lashed by Kīato (B:12 + K:10) | Kura-ā-Iwi & Māra Kai Hubs"
+    ss2_victory: "Aotearoa Creative & Matakahi Co-Governance Renaissance (K:02 + K:10 + P:02)"
+    primary_cards: ["B:02", "B:12", "C:04", "K:02", "K:10"]
 
   - id: "CAP:07"
-    name: "7. Technology &\n    Collective Intelligence Capital"
-    ss0_baseline: "Lavoisier Syndrome (T:04: Top Minds in z_l Property Speculation)"
-    ss1_milestone: "Talent Cutoff Flipped to Builders (z_h) | 8-PType GPU Solver Online (B:08)"
-    ss2_victory: "65.0% Thriving Launch | +3.2%–9.6% Real Wages | 1.8x Romer Multiplier (N:05)"
-    primary_cards: ["B:05", "B:08", "K:02", "K:04", "N:05", "T:04"]
+    name: "7. Technology &\n    5-Sector Intelligence Capital"
+    ss0_baseline: "Lavoisier Syndrome (T:05: 61% Top Minds in z_l Land Speculation)"
+    ss1_milestone: "Talent Flipped to z_h (88%) | 5-Sector Quantum/Topkis GPU Solver (B:10 + K:08)"
+    ss2_victory: "65% Thriving Launch | +3.2%–9.6% Real Wages | 1.8x Romer Multiplier (N:06)"
+    primary_cards: ["B:08", "B:10", "K:05", "K:08", "N:06", "T:05"]
 
 obligations_matrix:
   - creditor: "1. TO TAMARIKI & MOKOPUNA"
     subtitle: "Future Generations (Ages 0–20)"
-    ss0_breach: "22.0% Stunting + 200% Crown Debt + Unbuffered Climate Damage"
-    ss2_fulfillment: "1.5% Stunting + NZD 62k Youth Capital Seed + 1.7x Armored Grid"
+    ss0_breach: "22%–30% Stunting + 185%–200% Debt + Unbuffered Lifeline Gap"
+    ss2_fulfillment: "1.5% Stunting + NZD 62k+ Youth Capital Seed + 1.65x Armored Grid"
   - creditor: "2. TO KAUMĀTUA & KUIA"
-    subtitle: "Retiring Elders (Ages 65+)"
-    ss0_breach: "Threatened Super Age Hike to 67–70 (H:04) + Exiled Grandchildren"
-    ss2_fulfillment: "Universal NZ Super Solvent at 65 + Retained Whānau + Honored Wisdom (K:06)"
+    subtitle: "Retiring Elders (Ages 64+)"
+    ss0_breach: "Threatened Super Hike to 67–70 (H:05) + Exiled Grandchildren (H:04)"
+    ss2_fulfillment: "Universal NZ Super Solvent at Age 64 (B:15) + Honoured K:09 Wisdom"
   - creditor: "3. TO WORKING WHĀNAU"
-    subtitle: "All 4 Regions (Rural to Metro)"
-    ss0_breach: "3.1x Urban Rents + 2.8x Rural Fuel Penalty + PAYE Climbing to 28.2%"
-    ss2_fulfillment: "Rents Cooled -10.5% + Solar EV Relief (C:05) + PAYE Cut to 18.5%"
+    subtitle: "All 4 Regions (Rural to Auckland)"
+    ss0_breach: "3.1x Urban Rents + 2.7x Rural Fuel Penalty + PAYE Climbing to 28.2%"
+    ss2_fulfillment: "Rents Cooled -10.5% + E:01 Solar/EV Relief + PAYE Cut to 18.25% (C:10)"
   - creditor: "4. TO ACTIVE BUILDERS"
     subtitle: "Operating Firms & Bondholders"
-    ss0_breach: "High Corporate Tax + Precautionary Hoarding + OCR Volatility"
-    ss2_fulfillment: "19/20 Top-5% Builders Win (20:01–20:19) + -60 to -100 bps Lower Rates"
+    ss0_breach: "20% Corp Tax + Precautionary Hoarding + OCR Volatility"
+    ss2_fulfillment: "19/20 Top-5% Builders Win (20:01–20:19) + 12% Corp Tax & -60 to -100 bps Rates"

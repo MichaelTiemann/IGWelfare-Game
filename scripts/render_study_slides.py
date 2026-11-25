@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Foils & Founders: 45-Slide Widescreen Study Deck Renderer (16:9 HTML + Print PDF)
+Foils & Founders: 81-Slide Widescreen Study Deck Renderer (16:9 HTML + Print PDF)
 =================================================================================
-Reads `decks/study_cards.yaml` (44 cards) and prepends Slide 1 (Title & Rule Zero
-Architecture) to generate a 45-slide interactive HTML5/MathJax presentation:
+Joins `decks/cards.yaml` + `decks/study_cards.yaml` (80 cards) and prepends Slide 1 (Title & Rule Zero
+Architecture) to generate a 81-slide interactive HTML5/MathJax presentation:
   - Layout per Card Slide (1920x1080 16:9 aspect ratio):
       * Top Banner: Card ID, Deck Badge, Title, Subtitle, Cost, & Mana Tier
       * Upper-Left Vertical Panel: Tabletop Play Text (Dual Narratives, Effect,
@@ -13,7 +13,7 @@ Architecture) to generate a 45-slide interactive HTML5/MathJax presentation:
       * Full-Width Bottom Stage (Left-to-Right): High-visibility MathJax LaTeX
         Display Equation spanning the entire horizontal width of the slide.
   - Controls: Left/Right Arrow keys, Spacebar, Slide Picker, or Cmd+P to export
-    all 45 slides as a widescreen Landscape PDF.
+    all 81 slides as a widescreen Landscape PDF.
 
 Author: Michael Tiemann / IGWelfare-Game
 License: GPL-3.0-or-later / MIT
@@ -21,11 +21,13 @@ License: GPL-3.0-or-later / MIT
 
 from __future__ import annotations
 import html
+import re
 from pathlib import Path
 from typing import Any, Dict, List
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
+CARDS_YAML = ROOT / "decks" / "cards.yaml"
 DECK_YAML = ROOT / "decks" / "study_cards.yaml"
 OUT_DIR = ROOT / "output"
 OUT_HTML = OUT_DIR / "foils_and_founders_study_slides.html"
@@ -48,34 +50,39 @@ DECK_COLORS: Dict[str, Dict[str, str]] = {
     "K": {"name": "Wayfinder Kaupapa Persona", "accent": "#F4C97E", "bg": "#241B0B", "badge": "#4A3512"},
     "N": {"name": "Nobel & Institutional Archive", "accent": "#B5838D", "bg": "#1F162B", "badge": "#3D2652"},
     "H": {"name": "Orthodoxy Boss Hazard", "accent": "#F77F00", "bg": "#2B1808", "badge": "#572F0D"},
-    "E": {"name": "Clean Energy & Grid Endowment", "accent": "#80ED99", "bg": "#0B261C", "badge": "#164A36"},
+    "E": {"name": "Energy & Epistemic Operators", "accent": "#80ED99", "bg": "#0B261C", "badge": "#164A36"},
+    "P": {"name": "Open-Source Wildcards & Sockets", "accent": "#94A3B8", "bg": "#111827", "badge": "#334155"},
 }
 
 
-def get_mana_badge(card_id: str) -> str:
-    prefix = card_id.split(":")[0]
+
+from render_math import (
+    get_mathjax_svg_fit_css,
+    pick_eq_size_class,
+    resolve_card_latex,
+)
+
+
+def get_mana_badge(card: Dict[str, Any]) -> str:
+    cid = str(card.get("id", "X:00"))
+    prefix = cid.split(":")[0]
+    kickback = card.get("feral_kickback_wealth")
     if prefix in ("T", "H"):
-        return "Hazard / Feral Spoiler (-2M Whakamā if Countered)"
-    if card_id in TIER_1_HUBS:
-        return "Tier 1 Foundational Hub • Base: 1 Mana (High-Freq Royalty)"
-    if card_id in TIER_2_BRIDGES:
-        return "Tier 2 Structural Bridge • Base: 2 Mana"
-    if card_id in TIER_3_CAPSTONES:
-        return "Tier 3 Capstone Unlocker • Base: 4–5 Mana (2x SS1 / 3x SS2)"
+        kb = f" • Mode B: +{kickback}W" if kickback is not None else ""
+        return f"Hazard / Orthodoxy Boss{kb}"
+    mtier = card.get("mana_tier")
+    bmana = card.get("base_mana")
+    if mtier is not None and bmana is not None:
+        return f"Tier {mtier} • Base: {bmana} Mana (2x SS1 / 3x SS2)"
     return "Wayfinder / Policy Asset • Base: 2 Mana"
 
 
 def esc(text: Any) -> str:
-    if text is None:
-        return ""
-    return html.escape(str(text), quote=True)
+    return "" if text is None else html.escape(str(text), quote=True)
 
 
 def format_inline_text(text: Any) -> str:
-    """Escapes HTML while preserving inline $...$ LaTeX for MathJax."""
-    if not text:
-        return ""
-    return html.escape(str(text), quote=False)
+    return "" if not text else html.escape(str(text), quote=False)
 
 
 def build_title_slide_html(total_slides: int) -> str:
@@ -102,7 +109,7 @@ def build_title_slide_html(total_slides: int) -> str:
           <div class="panel-tag">LEFT VERTICAL PANEL • TABLETOP GAMEPLAY ARCHITECTURE</div>
           <div class="lens-box foil-lens">
             <div class="lens-title">&#9973; Hull A — Up on Foils (Systems &amp; Hydrofoil Engineering)</div>
-            <p>Lift Aotearoa from high-drag <strong>SS0 Displacement Mode</strong> (81.0 Cohesion, 22%–30% child hardship corner, approaching 200% Debt/GDP) onto <strong>SS1</strong> (2x Mana) and <strong>SS2 Hydrofoils</strong> (3x Mana, 126.0 Cohesion, 18.5% PAYE, Super @ 65) by interlocking three Subsystems: <strong>1. Front Foil (B:01+B:02)</strong>, <strong>2. Wing-Sail (B:05+B:03+E:02)</strong>, and <strong>3. Rear T-Foil (B:07+B:06)</strong>.</p>
+            <p>Lift Aotearoa from high-drag <strong>SS0 Displacement Mode</strong> (81.0 Cohesion, 22%–30% child hardship corner, approaching 200% Debt/GDP) onto <strong>SS1</strong> (2x Mana) and <strong>SS2 Hydrofoils</strong> (3x Mana, 126.0 Cohesion, 18.25% PAYE, Super @ Age 64) by interlocking three Subsystems: <strong>1. Front Foil (B:01+B:03)</strong>, <strong>2. Wing-Sail (B:08+B:05/B:06+C:09+E:01/E:02)</strong>, and <strong>3. Rear T-Foil (B:09+B:14/B:15)</strong>.</p>
           </div>
           <div class="lens-box waka-lens">
             <div class="lens-title">&#128758; Hull B — Te Waka Hourua (Double-Hulled Voyaging &amp; Mana)</div>
@@ -119,10 +126,10 @@ def build_title_slide_html(total_slides: int) -> str:
           <div class="panel-tag">RIGHT VERTICAL PANEL • EMPIRICAL &amp; OLG MODEL ARCHITECTURE</div>
           <div class="study-block">
             <div class="box-label">8-PTYPE &times; 4-REGION GENERAL EQUILIBRIUM GPU ENGINE</div>
-            <p>Every card in this 45-slide deck compiles a formal theorem and calibrated parameter from the companion <strong>IGWelfare</strong> MATLAB/Python codebase (<code>NZ_4Region_Master.m</code>, <code>PolicyExperiment_LeeSeshadri_4Region.m</code>, <code>QEA_2026.m</code>) and empirical longitudinal microdata.</p>
+            <p>Every card in this 81-slide deck compiles a formal theorem and calibrated parameter from the companion <strong>IGWelfare</strong> MATLAB/Python codebase (<code>NZ_4Region_Master.m</code>, <code>PolicyExperiment_LeeSeshadri_4Region.m</code>, <code>QEA_2026.m</code>) and empirical longitudinal microdata.</p>
           </div>
           <div class="study-block">
-            <div class="box-label">CORE EMPIRICAL ANCHORS ACROSS THE 44 CARDS</div>
+            <div class="box-label">CORE EMPIRICAL ANCHORS ACROSS ALL 80 CARDS</div>
             <ul class="cite-list">
               <li><strong>Dunedin Multidisciplinary Study (Poulton et al. 2015) &amp; GUiNZ (Morton et al. 2023):</strong> 22% ($d20: 1\\text{{--}}4$) to 30% ($d20: 1\\text{{--}}6$) early subsistence corner ($\\Pr(i_c=0)$) &amp; 80/20 concentration of $50.5B/yr fiscal drag.</li>
               <li><strong>Cunha, Heckman, &amp; Schennach (2010) &amp; Lee &amp; Seshadri (2019):</strong> Multi-stage CES dynamic complementarity ($\\phi_1 = -0.50$) proving 6.8:1 ROI on Gate 1–2 vs. late remediation collapse.</li>
@@ -131,7 +138,7 @@ def build_title_slide_html(total_slides: int) -> str:
             </ul>
           </div>
           <div class="code-hook-bar">
-            <span><strong>Navigation:</strong> Use <code>&larr;</code> / <code>&rarr;</code> keys, click the bottom controls, or press <code>Cmd+P</code> to save all 45 slides to PDF.</span>
+            <span><strong>Navigation:</strong> Use <code>&larr;</code> / <code>&rarr;</code> keys, click the bottom controls, or press <code>Cmd+P</code> to save all 81 slides to PDF.</span>
           </div>
         </div>
       </div>
@@ -152,56 +159,36 @@ def build_title_slide_html(total_slides: int) -> str:
 
 def build_card_slide_html(card: Dict[str, Any], slide_idx: int, total_slides: int) -> str:
     cid = str(card.get("id", "X:00"))
-    deck_code = str(card.get("deck", cid.split(":")[0]))
+    deck_code = cid.split(":")[0] if ":" in cid else "B"
     theme = DECK_COLORS.get(deck_code, DECK_COLORS["B"])
 
-    title = format_inline_text(card.get("title", ""))
-    subtitle = format_inline_text(card.get("subtitle", ""))
-    cost = format_inline_text(card.get("cost", "0"))
-    mana_info = get_mana_badge(cid)
+    title = format_inline_text(card.get("name") or card.get("title") or cid)
+    subtitle = format_inline_text(card.get("type") or card.get("subtitle") or "")
+    cost = format_inline_text(card.get("cost_or_requirement") or card.get("cost") or "")
+    mana_info = get_mana_badge(card)
 
-    narr = card.get("narratives", {}) or {}
-    up_on_foils = format_inline_text(narr.get("up_on_foils", ""))
-    te_waka = format_inline_text(narr.get("te_waka", ""))
+    effects = card.get("effects") or []
+    eff_1 = f"<strong>{esc(effects[0].get('label',''))}:</strong> {format_inline_text(effects[0].get('rule',''))}" if len(effects) >= 1 else ""
+    eff_2 = f"<strong>{esc(effects[1].get('label',''))}:</strong> {format_inline_text(effects[1].get('rule',''))}" if len(effects) >= 2 else ""
+    flavor = format_inline_text(card.get("flavor_text", ""))
 
-    effect = format_inline_text(card.get("tabletop_effect", ""))
-    impact = card.get("impact", {}) or {}
-    synergies: List[str] = card.get("synergy_cards", []) or []
-    counters: List[str] = card.get("counters", []) or []
+    synergies: List[str] = card.get("synergy_links") or card.get("synergy_cards") or []
+    key_params: List[str] = card.get("key_parameters") or []
+    citations: List[str] = card.get("references") or []
+    evidence = format_inline_text(card.get("empirical_evidence") or card.get("empirical_anchor") or "")
+    proof_bridge = format_inline_text(card.get("tabletop_bridge", ""))
+    vfi_mod = str(card.get("vfi_module", ""))
+    latex_eq = resolve_card_latex(card, cid)
 
-    study = card.get("study", {}) or {}
-    citations: List[str] = study.get("primary_citations", []) or []
-    evidence = format_inline_text(study.get("empirical_evidence", ""))
-    proof_bridge = format_inline_text(study.get("proof_bridge", ""))
-    code_refs: List[str] = study.get("codebase_refs", []) or []
-    latex_eq = str(study.get("latex_equation", "")).strip()
+    impact_html = "".join(
+        f'<div class="impact-item"><span class="imp-k">▸ </span><span class="imp-v">{format_inline_text(p)}</span></div>'
+        for p in key_params[:4]
+    )
+    syn_pills = "".join(f'<span class="syn-pill">{esc(s)}</span>' for s in synergies) or '<span class="none-pill">None</span>'
+    cite_items = "".join(f"<li>{format_inline_text(c)}</li>" for c in citations[:5])
+    code_pills = f'<code class="code-pill">{esc(vfi_mod)}</code>' if vfi_mod else ""
 
-    # Build impact pills
-    impact_items = []
-    for k, v in impact.items():
-        label = k.replace("_", " ").upper()
-        impact_items.append(
-            f'<div class="impact-item"><span class="imp-k">{esc(label)}:</span> '
-            f'<span class="imp-v">{format_inline_text(v)}</span></div>'
-        )
-    impact_html = "".join(impact_items)
-
-    # Build synergy & counter pills
-    syn_pills = "".join(f'<span class="syn-pill">+{esc(s)}</span>' for s in synergies) or '<span class="none-pill">None</span>'
-    cnt_pills = "".join(f'<span class="cnt-pill">&#9876; {esc(c)}</span>' for c in counters) or '<span class="none-pill">None</span>'
-
-    # Build citations list
-    cite_items = "".join(f"<li>{format_inline_text(c)}</li>" for c in citations)
-    code_pills = "".join(f'<code class="code-pill">{esc(cr)}</code>' for cr in code_refs)
-
-    # Dynamic equation font-size hint based on LaTeX string length
-    eq_len = len(latex_eq)
-    if eq_len > 260:
-        eq_size_class = "eq-size-sm"
-    elif eq_len > 180:
-        eq_size_class = "eq-size-md"
-    else:
-        eq_size_class = "eq-size-lg"
+    eq_size_class = pick_eq_size_class(latex_eq)
 
     return f"""
     <section class="slide" data-slide="{slide_idx}" data-card-id="{esc(cid)}"
@@ -209,86 +196,66 @@ def build_card_slide_html(card: Dict[str, Any], slide_idx: int, total_slides: in
       <header class="slide-header">
         <div class="header-left">
           <span class="card-id-pill">{esc(cid)}</span>
-          <span class="deck-pill">{esc(deck_code)} DECK • {esc(theme['name'].upper())}</span>
+          <span class="deck-pill">{esc(deck_code)} SUITE • {esc(theme['name'].upper())}</span>
         </div>
         <div class="header-titles">
           <h1>{title}</h1>
           <p class="subtitle">{subtitle}</p>
         </div>
         <div class="header-right">
-          <div class="cost-box"><strong>Cost / Gate:</strong> {cost}</div>
+          <div class="cost-box"><strong>Cost / Req:</strong> {cost}</div>
           <div class="mana-box">{esc(mana_info)}</div>
         </div>
       </header>
 
       <div class="columns-container">
-        <!-- LEFT VERTICAL COLUMN: PLAY TEXT -->
         <div class="col-panel play-panel">
-          <div class="panel-tag">PLAY SIDE (FRONT) • NARRATIVES, TABLETOP EFFECT &amp; SYNERGIES</div>
-
+          <div class="panel-tag">PLAY SIDE (FRONT) • MECHANICS, CALIBRATED PARAMETERS &amp; SYNERGIES</div>
           <div class="lens-box foil-lens">
-            <div class="lens-title">&#9973; Up on Foils Lens (Systems &amp; Hydrofoil Engineering)</div>
-            <p>{up_on_foils}</p>
+            <div class="lens-title">&#9973; Primary Mechanic</div>
+            <p>{eff_1}</p>
           </div>
-
           <div class="lens-box waka-lens">
-            <div class="lens-title">&#128758; Te Waka Hourua Lens (Whānau &amp; Intergenerational Voyaging)</div>
-            <p>{te_waka}</p>
+            <div class="lens-title">&#128758; Coupled / Second-Order Mechanic</div>
+            <p>{eff_2 or flavor}</p>
           </div>
-
           <div class="mechanic-box">
-            <div class="box-label">TABLETOP GAMEPLAY MECHANIC</div>
-            <p>{effect}</p>
+            <div class="box-label">FLAVOR &amp; POLITICAL-ECONOMY INSIGHT</div>
+            <p>&ldquo;{flavor}&rdquo;</p>
           </div>
-
-          <div class="impact-grid">
-            {impact_html}
-          </div>
-
+          <div class="impact-grid">{impact_html}</div>
           <div class="badges-footer">
             <div class="badge-group">
               <span class="badge-group-title">SYNERGY LINKS (RIVER COMBOS):</span>
               {syn_pills}
             </div>
-            <div class="badge-group">
-              <span class="badge-group-title">COUNTERS / DEFENDS AGAINST:</span>
-              {cnt_pills}
-            </div>
           </div>
         </div>
 
-        <!-- RIGHT VERTICAL COLUMN: STUDY TEXT -->
         <div class="col-panel study-panel">
           <div class="panel-tag">STUDY SIDE (FOLD-OVER BACK) • EMPIRICAL EVIDENCE &amp; PROOF BRIDGE</div>
-
           <div class="study-block">
             <div class="box-label">PRIMARY ACADEMIC &amp; EMPIRICAL CITATIONS</div>
-            <ul class="cite-list">
-              {cite_items}
-            </ul>
+            <ul class="cite-list">{cite_items}</ul>
           </div>
-
           <div class="study-block evidence-block">
-            <div class="box-label">CALIBRATED EMPIRICAL EVIDENCE (AOTEAROA &amp; COMPARATIVE COHORTS)</div>
+            <div class="box-label">CALIBRATED EMPIRICAL EVIDENCE ({esc(card.get('economic_concept', ''))})</div>
             <p>{evidence}</p>
           </div>
-
           <div class="study-block bridge-block">
-            <div class="box-label">THEOREM-TO-TABLETOP PROOF BRIDGE ("WHY THE RULE WORKS")</div>
+            <div class="box-label">THEOREM-TO-TABLETOP PROOF BRIDGE</div>
             <p>{proof_bridge}</p>
           </div>
-
           <div class="code-hook-bar">
-            <span class="code-hook-label">OLG Codebase Hooks:</span>
+            <span class="code-hook-label">5-Sector GPU Solver Module:</span>
             {code_pills}
           </div>
         </div>
       </div>
 
-      <!-- FULL-WIDTH HORIZONTAL EQUATION BANNER ACROSS ENTIRE BOTTOM -->
       <footer class="equation-stage">
         <div class="eq-header">
-          <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION ({esc(cid)} — KNOWLEDGE IS POWER)</span>
+          <span class="eq-tag">FORMAL MATHEMATICAL / ECONOMETRIC SPECIFICATION ({esc(cid)})</span>
           <span class="slide-num-badge">Slide {slide_idx} of {total_slides}</span>
         </div>
         <div class="eq-display {eq_size_class}">
@@ -307,7 +274,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
     for idx, card in enumerate(cards, start=2):
         slides_html.append(build_card_slide_html(card, idx, total_slides))
         cid = esc(card.get("id", ""))
-        ctitle = esc(card.get("title", ""))
+        ctitle = esc(card.get("name") or card.get("title") or "")
         options_html.append(f'<option value="{idx}">{idx:02d} — [{cid}] {ctitle}</option>')
 
     all_slides_str = "\n".join(slides_html)
@@ -318,7 +285,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Foils &amp; Founders — 45-Slide Study Deck (Play Left | Study Right | Full-Width Equations)</title>
+  <title>Foils &amp; Founders — 81-Slide Study Deck (Play Left | Study Right | Full-Width Equations)</title>
   <script>
     window.MathJax = {{
       tex: {{
@@ -351,13 +318,12 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       justify-content: center;
     }}
 
-    /* 16:9 Widescreen Viewport Stage */
+    /* 16:9 Widescreen Viewport Stage (Balanced Container-Proportional Midpoint) */
     #deck-viewport {{
-      width: 96vw;
-      height: 54vw;
-      max-height: 90vh;
-      max-width: 160vh;
+      width: min(96vw, calc((100vh - 52px) * 16 / 9));
+      aspect-ratio: 16 / 9;
       position: relative;
+      container-type: size;
     }}
 
     .slide {{
@@ -365,45 +331,49 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       width: 100%;
       height: 100%;
       background: linear-gradient(145deg, #071324 0%, #0B1D33 55%, #081C24 100%);
-      border: 3px solid var(--accent, #00B4D8);
-      border-radius: 14px;
-      padding: 1.1% 1.4%;
+      border: 2.5px solid var(--accent, #00B4D8);
+      border-radius: 12px;
+      padding: 0.95% 1.3%;
       flex-direction: column;
+      gap: 0.8%;
       justify-content: space-between;
       box-shadow: 0 18px 50px rgba(0,0,0,0.75);
+      overflow: hidden;
     }}
     .slide.active {{
       display: flex;
     }}
 
-    /* TOP SLIDE HEADER (11% height) */
+    /* TOP SLIDE HEADER (Centered vertically, expands gently if title wraps to 2 lines) */
     .slide-header {{
       display: grid;
-      grid-template-columns: 23% 52% 25%;
+      grid-template-columns: 22% 52% 26%;
       align-items: center;
       background: rgba(8, 22, 38, 0.9);
       border-bottom: 2px solid var(--accent);
-      border-radius: 9px;
-      padding: 0.55% 1.1%;
-      height: 11.5%;
+      border-radius: 8px;
+      padding: 0.48% 1.1%;
+      min-height: 11.8%;
+      max-height: 14.5%;
+      flex-shrink: 0;
     }}
     .header-left {{
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
       align-items: flex-start;
     }}
     .card-id-pill {{
       background: var(--accent);
       color: #04101E;
       font-weight: 900;
-      font-size: clamp(13px, 1.35vw, 24px);
-      padding: 2px 12px;
+      font-size: clamp(10px, 1.38cqw, 24px);
+      padding: 2px 11px;
       border-radius: 6px;
       letter-spacing: 1px;
     }}
     .deck-pill {{
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.74cqw, 13px);
       color: var(--gold);
       font-weight: 700;
       letter-spacing: 0.6px;
@@ -413,51 +383,54 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       padding: 0 8px;
     }}
     .header-titles h1 {{
-      font-size: clamp(15px, 1.55vw, 28px);
+      font-size: clamp(12px, 1.54cqw, 28px);
       color: #FFFFFF;
-      line-height: 1.15;
+      line-height: 1.12;
     }}
     .header-titles .subtitle {{
-      font-size: clamp(10px, 0.88vw, 16px);
+      font-size: clamp(8.5px, 0.90cqw, 16px);
       color: var(--gold);
       font-family: Georgia, serif;
       font-style: italic;
       margin-top: 2px;
+      line-height: 1.15;
     }}
     .header-right {{
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 4px;
+      gap: 3px;
       text-align: right;
     }}
     .cost-box {{
       background: var(--badge-bg);
       border: 1px solid var(--accent);
       color: #FFFFFF;
-      font-size: clamp(9.5px, 0.78vw, 14px);
-      padding: 3px 9px;
+      font-size: clamp(8px, 0.78cqw, 14px);
+      padding: 2.5px 9px;
       border-radius: 5px;
+      line-height: 1.18;
     }}
     .mana-box {{
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.74cqw, 13px);
       color: #80ED99;
       font-weight: 700;
     }}
 
-    /* MIDDLE SPLIT VERTICAL COLUMNS: PLAY LEFT | STUDY RIGHT (64.5% height) */
+    /* MIDDLE SPLIT VERTICAL COLUMNS: PLAY LEFT | STUDY RIGHT */
     .columns-container {{
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.2%;
-      height: 64.5%;
-      margin: 0.7% 0;
+      gap: 1.15%;
+      flex: 1 1 auto;
+      min-height: 0;
+      margin: 0;
     }}
     .col-panel {{
       background: rgba(11, 29, 51, 0.78);
       border: 1.5px solid rgba(168, 218, 220, 0.28);
       border-radius: 10px;
-      padding: 1.4% 1.8%;
+      padding: 1.3% 1.7%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -471,13 +444,13 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       background: rgba(15, 25, 42, 0.84);
     }}
     .panel-tag {{
-      font-size: clamp(9px, 0.72vw, 13px);
+      font-size: clamp(7.5px, 0.75cqw, 13px);
       font-weight: 800;
       letter-spacing: 1px;
       color: var(--accent);
       border-bottom: 1px solid rgba(255,255,255,0.14);
       padding-bottom: 3px;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }}
     .study-panel .panel-tag {{
       color: var(--gold);
@@ -486,14 +459,14 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
     .lens-box {{
       background: rgba(6, 17, 30, 0.75);
       border-radius: 7px;
-      padding: 1.1% 1.6%;
+      padding: 1.05% 1.55%;
       border-left: 3px solid #00B4D8;
     }}
     .waka-lens {{
       border-left-color: var(--gold);
     }}
     .lens-title {{
-      font-size: clamp(9.5px, 0.78vw, 14px);
+      font-size: clamp(8px, 0.82cqw, 14.5px);
       font-weight: 800;
       color: #8ECAE6;
       margin-bottom: 2px;
@@ -502,7 +475,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       color: var(--gold);
     }}
     .lens-box p, .mechanic-box p, .study-block p {{
-      font-size: clamp(9.5px, 0.78vw, 14.2px);
+      font-size: clamp(8px, 0.82cqw, 14.5px);
       line-height: 1.34;
       color: #E8F1F5;
     }}
@@ -511,10 +484,10 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       background: rgba(20, 55, 65, 0.48);
       border: 1px solid var(--accent);
       border-radius: 7px;
-      padding: 1.1% 1.6%;
+      padding: 1.05% 1.55%;
     }}
     .box-label {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.71cqw, 12.5px);
       font-weight: 800;
       color: #80ED99;
       letter-spacing: 0.6px;
@@ -526,12 +499,12 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       grid-template-columns: 1fr 1fr;
       gap: 4px 10px;
       background: rgba(5, 14, 24, 0.85);
-      padding: 1% 1.5%;
+      padding: 0.95% 1.45%;
       border-radius: 6px;
       border: 1px solid rgba(255,255,255,0.1);
     }}
     .impact-item {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       line-height: 1.25;
       white-space: nowrap;
       overflow: hidden;
@@ -555,25 +528,25 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       flex-wrap: wrap;
     }}
     .badge-group-title {{
-      font-size: clamp(8px, 0.64vw, 11.5px);
+      font-size: clamp(6.5px, 0.66cqw, 11.5px);
       color: var(--text-muted);
       font-weight: 700;
     }}
     .syn-pill, .cnt-pill, .none-pill {{
-      font-size: clamp(8.5px, 0.66vw, 12px);
+      font-size: clamp(7px, 0.69cqw, 12px);
       font-weight: 800;
       padding: 1px 7px;
       border-radius: 4px;
     }}
     .syn-pill {{ background: #14453D; color: #80ED99; border: 1px solid #2A9D8F; }}
     .cnt-pill {{ background: #4A151B; color: #FF8080; border: 1px solid #FF595E; }}
-    .none-pill {{ color: #6C757D; font-size: clamp(8px, 0.62vw, 11px); }}
+    .none-pill {{ color: #6C757D; font-size: clamp(6.5px, 0.64cqw, 11px); }}
 
     /* RIGHT COLUMN STUDY BLOCKS */
     .study-block {{
       background: rgba(7, 16, 29, 0.8);
       border-radius: 7px;
-      padding: 1.2% 1.6%;
+      padding: 1.15% 1.55%;
       border-left: 3px solid #A8DADC;
     }}
     .evidence-block {{ border-left-color: #00B4D8; }}
@@ -583,8 +556,8 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
     }}
     .cite-list {{
       padding-left: 16px;
-      font-size: clamp(9px, 0.74vw, 13.5px);
-      line-height: 1.3;
+      font-size: clamp(7.5px, 0.77cqw, 13.5px);
+      line-height: 1.32;
       color: #F4C97E;
     }}
     .cite-list li {{ margin-bottom: 2px; }}
@@ -595,12 +568,12 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       gap: 6px;
       flex-wrap: wrap;
       background: rgba(4, 10, 18, 0.9);
-      padding: 0.8% 1.4%;
+      padding: 0.75% 1.35%;
       border-radius: 6px;
       border: 1px solid rgba(0, 180, 216, 0.35);
     }}
     .code-hook-label {{
-      font-size: clamp(8.5px, 0.66vw, 12px);
+      font-size: clamp(7px, 0.69cqw, 12px);
       font-weight: 700;
       color: #00B4D8;
     }}
@@ -608,14 +581,15 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       background: #102A42;
       color: #E0FBFC;
       font-family: "SFMono-Regular", Consolas, Menlo, monospace;
-      font-size: clamp(8px, 0.64vw, 11.5px);
+      font-size: clamp(6.5px, 0.67cqw, 11.5px);
       padding: 1px 6px;
       border-radius: 4px;
     }}
 
-    /* FULL-WIDTH BOTTOM EQUATION STAGE (22.5% height) */
+    /* FULL-WIDTH BOTTOM EQUATION STAGE (21.8% height) */
     .equation-stage {{
-      height: 22.5%;
+      height: 21.8%;
+      flex-shrink: 0;
       width: 100%;
       background: linear-gradient(90deg, #040D1A 0%, #091E32 50%, #040D1A 100%);
       border: 2.5px solid var(--gold);
@@ -625,8 +599,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       flex-direction: column;
       justify-content: center;
       position: relative;
-      overflow-x: auto;
-      overflow-y: hidden;
+      overflow: hidden;
     }}
     .eq-header {{
       display: flex;
@@ -638,13 +611,13 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       right: 16px;
     }}
     .eq-tag {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       font-weight: 800;
       letter-spacing: 1.1px;
       color: var(--gold);
     }}
     .slide-num-badge {{
-      font-size: clamp(8.5px, 0.68vw, 12.5px);
+      font-size: clamp(7px, 0.70cqw, 12.5px);
       color: var(--text-muted);
       font-weight: 700;
     }}
@@ -652,14 +625,15 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
       width: 100%;
       text-align: center;
       color: #FFFFFF;
-      margin-top: 14px;
+      margin-top: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
     }}
-    .eq-size-lg {{ font-size: clamp(14px, 1.48vw, 27px); }}
-    .eq-size-md {{ font-size: clamp(12px, 1.26vw, 23px); }}
-    .eq-size-sm {{ font-size: clamp(10.5px, 1.08vw, 19.5px); }}
+    .eq-size-lg {{ font-size: clamp(11px, 1.7cqw, 27px); }}
+    .eq-size-md {{ font-size: clamp(9.5px, 1.5cqw, 23px); }}
+    .eq-size-sm {{ font-size: clamp(8.5px, 1.3cqw, 19.5px); }}
+    {get_mathjax_svg_fit_css('.eq-display', '13.5cqh', '1.15in')}
 
     /* BOTTOM NAVIGATION TOOLBAR */
     #nav-bar {{
@@ -719,6 +693,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
         display: flex !important;
         width: 16in !important;
         height: 9in !important;
+        container-type: size !important;
         page-break-after: always !important;
         break-after: page !important;
         border-radius: 0 !important;
@@ -740,7 +715,7 @@ def build_deck_html(cards: List[Dict[str, Any]]) -> str:
     </select>
     <button class="nav-btn" onclick="nextSlide()">Next (&rarr;) &#9654;</button>
     <button class="nav-btn" onclick="toggleFullScreen()">&#9974; Fullscreen (F)</button>
-    <button class="nav-btn" onclick="window.print()">&#128424; Print / Save 45-Slide PDF</button>
+    <button class="nav-btn" onclick="window.print()">&#128424; Print / Save 81-Slide PDF</button>
   </nav>
 
   <script>
@@ -805,8 +780,11 @@ def main() -> None:
     if not DECK_YAML.exists():
         raise FileNotFoundError(f"Cannot find {DECK_YAML}")
 
-    data = yaml.safe_load(DECK_YAML.read_text(encoding="utf-8"))
-    cards = data.get("cards", [])
+    g_data = yaml.safe_load(CARDS_YAML.read_text(encoding="utf-8"))
+    s_data = yaml.safe_load(DECK_YAML.read_text(encoding="utf-8"))
+    g_by_id = {str(c["id"]): c for c in g_data.get("cards", [])}
+    s_by_id = {str(s["id"]): s for s in s_data.get("study_cards", [])}
+    cards = [{**g_by_id.get(cid, {}), **s_by_id.get(cid, {})} for cid in g_by_id]
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     html_out = build_deck_html(cards)

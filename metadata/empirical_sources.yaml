@@ -1,176 +1,776 @@
-# ==============================================================================
-# FOILS & FOUNDERS: THE AOTEAROA DECK — EMPIRICAL SOURCES & CITATION REGISTRY
-# Path: metadata/empirical_sources.yaml
-# License: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
-# ==============================================================================
-
-schema_version: "2026.10"
-
+schema_version: '2026.11'
+companion_deck_version: '2026.11'
+card_count_expected: 80
 primary_monograph_suite:
-  - id: "DOC_1A"
-    title: "Intergenerational Welfare, Capital Allocation, and Human Potential in New Zealand (4-Region + Abroad Multiphase Edition)"
-    author: "Michael Tiemann"
-    date: "October 2026"
-    repository: "https://github.com/MichaelTiemann/IGWelfare"
-    cards_anchored: ["B:00", "B:01", "B:02", "B:03", "B:04", "B:05", "B:06", "B:07", "B:09", "C:04", "C:05", "C:06"]
-
-  - id: "DOC_1B"
-    title: "Document 1B: Complete Quantitative Answer Key, Sankey Ledgers, & CSV Audit Tables"
-    author: "Michael Tiemann"
-    date: "October 2026"
-    repository: "https://github.com/MichaelTiemann/IGWelfare"
-    cards_anchored: ["B:00", "B:04", "B:05", "B:06", "B:07"]
-
-  - id: "DOC_1C"
-    title: "Document 1C: Strategic Companion, The 1925 Moment, & The Five-Laureate Nobel Synthesis"
-    author: "Michael Tiemann"
-    date: "October 2026"
-    repository: "https://github.com/MichaelTiemann/IGWelfare/blob/main/Document%201C.md"
-    cards_anchored: ["B:04", "B:08", "B:09", "K:01", "K:02", "K:03", "K:04", "K:05", "K:06", "K:07", "N:01", "N:02", "N:03", "N:04", "N:05", "N:06"]
-
-  - id: "QEA_2026"
-    title: "Firming the Economic Grid & QEA_2026.m (Queenstown Electrification Accelerator Lifecycle Model)"
-    author: "Michael Tiemann"
-    date: "June–October 2026"
-    repository: "https://github.com/MichaelTiemann/QEA-2026/blob/main/QEA_2026.m"
-    key_metrics:
-      precautionary_capital_released_nzd_b: "60.8 to 91.5"
-      five_sector_capex_nzd_b: "60.2 to 75.5"
-      annual_cash_savings_nzd_b: 15.55
-      payback_years: "4.5 to 5.2"
-    cards_anchored: ["E:01", "E:02", "E:03"]
-
+- id: DOC_1A
+  title: 'Document 1A: Intergenerational Welfare, Capital Allocation, and Human Potential in New Zealand (5-Sector
+    x 4-Region + Abroad Edition)'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:00
+  - B:01
+  - B:08
+  - B:14
+  - K:10
+  - N:02
+  - T:08
+  - T:09
+  - T:10
+  - H:03
+  - P:07
+- id: DOC_1B
+  title: 'Document 1B: Policy Answer Key, Polycentric Commons, & High-Trust Macroeconomic Integrity'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - C:02
+  - N:05
+- id: DOC_1C
+  title: 'Document 1C: Executive Brief, The 1925 Quantum Moment, & Coupled Hydrofoil Synthesis'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:10
+  - B:11
+  - B:16
+  - K:02
+  - N:04
+  - N:09
+- id: DOC_1D
+  title: 'Document 1D: Te Kāhui Waka 13-Wave Implementation, Vanguard Youth Bridge, & Plans A/B/C Launch Gates'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:03
+  - B:05
+  - B:06
+  - B:07
+  - B:09
+  - B:13
+  - B:15
+  - B:16
+  - C:01
+  - E:01
+  - E:05
+  - K:01
+  - N:01
+  - N:07
+  - T:04
+  - T:05
+  - H:01
+  - H:10
+  - P:01
+- id: DOC_1E
+  title: 'Document 1E: Civic Gearing, The Joiner Passport (25.5x), & Policy Wedge Operators (A ⊕ B vs. A ≺
+    B)'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:10
+  - B:11
+  - B:12
+  - K:08
+  - P:02
+- id: DOC_1F
+  title: 'Document 1F: Contingent Citizens'' Assemblies (K01–K15) & Te Ōhanga Māori Matakahi Socket'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - C:02
+  - K:01
+  - K:10
+  - N:05
+  - P:02
+- id: DOC_2
+  title: 'Document 2: Executive Guide to the 5-Sector Spatial OLG Model & Modular src/ Architecture'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:10
+  - K:08
+  - N:09
+  - P:08
+- id: DOC_2A
+  title: 'Document 2A: Micro-Foundations, 5-Sector Keen–Ayres Exergy Block, Firm & Household Bellman Equations
+    (Sections 1–4)'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:01
+  - B:02
+  - B:03
+  - B:04
+  - B:05
+  - B:06
+  - B:07
+  - B:08
+  - B:10
+  - C:01
+  - C:04
+  - C:05
+  - C:06
+  - C:07
+  - C:08
+  - C:09
+  - C:10
+  - E:01
+  - E:02
+  - E:03
+  - E:04
+  - E:05
+  - H:04
+  - H:06
+  - H:09
+- id: DOC_2B
+  title: 'Document 2B: 6-Gate Fiscal Sankey, Atkinson–Waring Three-Tier Accounts, NMP Trim-Tab Helm, & 11-Layer
+    Attribution (Sections 5–10)'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:00
+  - B:09
+  - B:10
+  - B:11
+  - B:12
+  - B:13
+  - B:14
+  - B:15
+  - B:16
+  - C:03
+  - K:07
+  - K:08
+  - K:09
+  - K:10
+  - N:04
+  - N:08
+  - N:09
+  - T:02
+  - T:03
+  - T:06
+  - T:07
+  - T:10
+  - H:01
+  - H:05
+  - H:07
+  - P:08
+- id: DOC_2T
+  title: 'Document 2T: ''Thick'' vs. ''Thin'' Numbers — Dimension-Free State-Contingent Conditioning on the
+    26,901-Point State Tensor'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:03
+  - C:08
+  - C:09
+  - C:10
+  - E:04
+  - K:03
+  - K:04
+  - K:08
+  - K:09
+  - N:05
+  - T:00
+  - T:03
+  - H:02
+  - H:05
+  - H:06
+  - H:08
+  - P:02
+- id: DOC_3
+  title: 'Document 3: Leaving Our Silos, Lifting All Boats — 4x4 Coalition Matrix, LTFM Sinkhole, & 3.0% GDP
+    Defense Stress Test'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:00
+  - B:01
+  - B:03
+  - B:06
+  - B:12
+  - B:15
+  - B:16
+  - C:06
+  - C:07
+  - C:08
+  - C:09
+  - C:10
+  - E:04
+  - E:05
+  - K:01
+  - K:03
+  - K:04
+  - K:05
+  - K:06
+  - K:07
+  - K:10
+  - T:03
+  - T:05
+  - T:07
+  - T:09
+  - H:01
+  - H:02
+  - H:04
+  - H:05
+  - H:06
+  - H:07
+  - H:08
+  - H:09
+  - P:04
+  - P:05
+  - P:06
+- id: GLOSSARY
+  title: 'GLOSSARY.md: Canonical Lexicon, Plans A/B/C Registry, Three-Tier Accounts, & Control-Theoretic Trim-Tab
+    Definitions'
+  author: Michael Tiemann
+  date: November 2026
+  repository: https://github.com/MichaelTiemann/IGWelfare
+  cards_anchored:
+  - B:09
+  - B:11
+  - B:13
+  - C:03
+  - E:01
+  - K:07
+  - K:08
+  - K:09
+  - P:01
+  - P:02
+- id: QEA_2026
+  title: Firming the Economic Grid & QEA_2026.m (Queenstown Electrification Accelerator Lifecycle Model)
+  author: Michael Tiemann
+  date: June–November 2026
+  repository: https://github.com/MichaelTiemann/QEA-2026/blob/main/QEA_2026.m
+  key_metrics:
+    precautionary_capital_released_nzd_b: 60.8 to 91.5
+    five_sector_capex_nzd_b: 60.2 to 75.5
+    annual_cash_savings_nzd_b: 15.55
+    payback_years: 4.5 to 5.2
+  cards_anchored:
+  - C:04
+  - E:01
+  - E:02
+  - E:03
+  - K:08
 new_zealand_empirical_anchors:
-  - id: "DUNEDIN_STUDY"
-    citation: "Poulton, R., Moffitt, T. E., & Silva, P. A. (2015 / 2023). The Dunedin Multidisciplinary Health and Development Study."
-    institution: "University of Otago"
-    key_finding: "The most disadvantaged 22% of a birth cohort—identifiable as early as age 3—accounts for 57% to 81% of adult hospital nights, long-term welfare receipt, and criminal convictions."
-    cards_anchored: ["B:00", "B:01", "B:08", "H:01"]
-
-  - id: "GUINZ_2020_2023"
-    citation: "Morton, S. M. B., et al. (2020 / 2023). Growing Up in New Zealand: Now We Are Eight / Now We Are Twelve — Life in Early Adolescence."
-    institution: "University of Auckland & Ministry of Social Development"
-    key_finding: "Documents the 14.3% material hardship baseline, metropolitan housing crowding/dampness penalties, and the Ages 12–14 emerging autonomy and adolescent vulnerability gate."
-    cards_anchored: ["B:01", "B:02", "C:03", "H:02"]
-
-  - id: "BARNARDOS_2026"
-    citation: "Danalytics Consulting Ltd (Sept 2026). The Economic Case for a Generational Plan for Children (Te Korowai Mokopuna)."
-    institution: "Barnardos Aotearoa"
-    key_finding: "Poor childhood outcomes cost NZD 17.7B/yr today (~NZD 105,000/yr per hardship child), rising to NZD 28.5B/yr by 2050 (NZD 434B PV at 2% real). Cutting hardship from 14.3% to 1-2% avoids NZD 56B–81B by 2050; Oranga Tamariki care costs ~NZD 180,000 per care-year."
-    cards_anchored: ["B:00", "B:01", "B:04", "B:07", "K:01", "N:01"]
-
-  - id: "GRAEME_DINGLE_2025"
-    citation: "Graeme Dingle Foundation (2024–2025). Research & Evaluation Summary: Kiwi Can, Stars / Te Kāhui Whetū, Project K, & Career Navigator."
-    institution: "Graeme Dingle Foundation & University of Auckland"
-    key_finding: "Structured peer mentoring (Stars Year 12/13 tuakana mentoring Year 9 teina) and wilderness/community self-efficacy (Project K) build resilience, executive function, and school retention."
-    cards_anchored: ["B:02", "C:03", "K:01", "N:04", "H:02"]
-
-  - id: "TREASURY_CBAX_2025"
-    citation: "New Zealand Treasury (Nov 2025). CBAx Tool User Guidance & Treasury Circular 2024/15 (2.0% Real Social Discount Rate & 8.0% Sensitivity Rate); He Tirohanga Mokopuna 2025; OIA 20250878."
-    institution: "The Treasury / Kaitohutohu Kaupapa Rawa"
-    key_finding: "Establishes the 2.0% real social rate of time preference (SRTP), projects 200% of GDP net Crown debt by 2065 under the status quo, and confirms (OIA 20250878) that the legacy LTFM contains no micro-cohort data."
-    cards_anchored: ["B:00", "B:06", "B:07", "B:08", "K:03", "N:03", "H:01"]
-
-  - id: "STATS_NZ_IRD_WEALTH"
-    citation: "Statistics New Zealand (2024) Household Net Worth Survey; Inland Revenue (April 2023) High-Wealth Individuals Research Project Report; Rashbrooke, M. (2021/2024)."
-    institution: "Stats NZ & Inland Revenue (Te Tari Taake)"
-    key_finding: "Median NZ household net worth is NZD 529k; mean is NZD 1.041M; Top 5% threshold is ~NZD 3M; Top 1% is ~NZD 10M; IRD High-Wealth project median is NZD 50M+."
-    cards_anchored: ["B:00", "B:05", "K:02"]
-
-  - id: "REWIRING_AOTEAROA_2024"
-    citation: "Griffith, S., Ellison, J., Pawson, M., & Conway, P. (Aug 2024). Investing in Tomorrow: The Electrification Opportunity."
-    institution: "Rewiring Aotearoa"
-    key_finding: "NZ spends ~NZD 20B/yr on fossil fuels; household electrification saves NZD 10.7B/yr by 2040 and cuts 10 MtCO2e/yr (105 MtCO2e cumulative 2024–2040) by swapping fuels for finance."
-    cards_anchored: ["E:01", "E:02", "E:03"]
-
-  - id: "TE_WAIHANGA_2026"
-    citation: "New Zealand Infrastructure Commission / Te Waihanga (Dec 2025 / March 2026). National Infrastructure Plan / Mahere Tūāhanga ā-Motu."
-    institution: "Te Waihanga"
-    key_finding: "Highlights the cost of deferred maintenance, reactive asset failures, and the necessity of ring-fenced long-term infrastructure funding."
-    cards_anchored: ["B:06", "C:04", "H:05"]
-
-  - id: "SRC:BERENTSON_SHAW_2018"
-    citation: "Berentson-Shaw, J. (2018). A Matter of Fact: Talking Truth in a Post-Truth World. Wellington: Bridget Williams Books (BWB Texts, ISBN 9781988545387)."
-    domain: "Epistemic Resilience, Values-Based Framing, & Science Communication (Cards T:05, C:02, K:07)"
-    key_metrics:
-      - "Demonstrates why raw 'fact-brawling' fails under high polarisation and why shared values + causal metaphors (Up on Foils / Te Waka Hourua) inoculate public discourse against disinformation (T:05)."
-
-  - id: "SRC:GUINZ_2025"
-    citation: "Morton, S. M. B., et al. (2023–2025). Growing Up in New Zealand (GUiNZ): Now We Are 12 & Now We Are 15 Longitudinal Reports. University of Auckland."
-    domain: "Gate 1–2 Hardship Drift, Rental Transience, & Adolescent Mental Health (Cards B:01, B:02, H:06)"
-    key_metrics:
-      - "14.3% acute persistent material hardship + 15.7% private rental squeeze/transience (>45% moved 2+ times before age 5) = 30.0% Gate 1 exposure (Vigintiles 1–6), driving NZD 28.5B/yr unbuffered hull drag (H:06)."
-
-  - id: "TINZ_CPI_2026"
-    citation: "Transparency International (2025/2026) Corruption Perceptions Index & TINZ (2026) National Integrity System Assessment; Controller and Auditor-General (2026)."
-    institution: "Transparency International New Zealand"
-    key_finding: "Documents New Zealand's slide from #1 globally (88/100 in 2021) to #4 equal (81/100 in 2025/2026) behind Denmark (89), Finland (88), and Singapore (84)."
-    cards_anchored: ["B:09", "C:06", "K:07"]
-
+- id: DUNEDIN_STUDY
+  ref_numbers:
+  - 16
+  citation: Caspi, A., Houts, R. M., Belsky, D. W., et al. (2016) Nature Human Behaviour; Poulton, R., Moffitt,
+    T. E., & Silva, P. A. (2015/2020) The Dunedin Multidisciplinary Health and Development Study.
+  institution: University of Otago
+  key_finding: The most disadvantaged 22% of a birth cohort—identifiable as early as age 3—accounts for 57%
+    to 81% of adult hospital nights, long-term welfare receipt, and criminal convictions (model fit = 74.1%).
+  cards_anchored:
+  - B:00
+  - B:01
+  - B:10
+  - B:11
+  - N:02
+  - H:03
+- id: GUINZ_2020_2026
+  ref_numbers:
+  - 17
+  citation: 'Morton, S. M. B., et al. (2020–2025). Growing Up in New Zealand (GUiNZ): Now We Are Eight / Twelve
+    / Fifteen Longitudinal Reports.'
+  institution: University of Auckland & Ministry of Social Development
+  key_finding: 14.3% acute persistent material hardship + 15.7% private rental squeeze/transience (>45% moved
+    2+ times before age 5; 37% dampness) = ~30% Gate 1 exposure (Vigintiles 1–6), driving NZD 28.5B/yr unbuffered
+    hull drag.
+  cards_anchored:
+  - B:01
+  - E:01
+  - K:04
+  - H:03
+  - H:06
+- id: BARNARDOS_2026
+  ref_numbers:
+  - 37
+  citation: Barnardos Aotearoa / Danalytics Consulting Ltd (Sept 2026) Te Korowai Mokopuna (9.1:1 SROI); MartinJenkins
+    (2020) Abuse in Care Financial Cost Audit.
+  institution: Barnardos Aotearoa & Royal Commission into Abuse in Care
+  key_finding: Childhood hardship costs NZD 17.7B/yr today, rising to NZD 28.5B/yr by 2050. Oranga Tamariki
+    custody costs NZD 37.1k–54.7k/child-yr (up to NZD 180k/yr acute residential) and NZD 181k PV lifetime Crown
+    cost per abuse-in-care survivor.
+  cards_anchored:
+  - B:01
+  - B:11
+  - K:01
+  - N:02
+- id: GRAEME_DINGLE_2025
+  ref_numbers:
+  - 18
+  citation: Gluckman, P. D. (2011) Improving the Transition; Graeme Dingle Foundation (2024–2025) Stars / Te
+    Kāhui Whetū & Project K; Berryman, M., & Eley, E. (2019) Te Kotahitanga.
+  institution: Graeme Dingle Foundation, Office of the PMCSA, & University of Waikato
+  key_finding: Structured Tuakana–Teina peer mentoring (Stars) and community/wilderness self-efficacy (Project
+    K) halt 22%–39.2% adolescent skill fade-out and lift thriving h6–h7 launch from 23.5% to 65.0%.
+  cards_anchored:
+  - B:03
+  - C:04
+  - K:02
+  - N:05
+  - P:02
+- id: TREASURY_CBAX_OIA_2026
+  ref_numbers:
+  - 31
+  - 32
+  - 33
+  - 34
+  - 35
+  citation: NZ Treasury He Tirohanga Mokopuna 2025 [Ref 31]; OIA 20250878 & AN 26/01 (Feb 2026) [Ref 32]; CBAx
+    Guidance (Nov 2025) [Ref 33]; Circular 2024/15 & OIA 20250126 (2.0% SRTP) [Ref 34]; ACC Financial Condition
+    Report (Nov 2025) [Ref 35].
+  institution: The Treasury / Kaitohutohu Kaupapa Rawa & ACC
+  key_finding: Establishes the 2.0% real SRTP and NZD 63.6B PBE IFRS 17 ACC Outstanding Claims Liability precedent,
+    projects 185%–200% GDP net debt under status-quo drift, and confirms (OIA 20250878) that the legacy LTFM
+    contains no micro-cohort data.
+  cards_anchored:
+  - B:09
+  - B:10
+  - B:14
+  - C:07
+  - K:07
+  - N:04
+  - T:05
+  - H:01
+  - H:09
+  - P:06
+- id: STATS_NZ_IRD_WEALTH
+  ref_numbers:
+  - 41
+  - 42
+  - 43
+  citation: Inland Revenue (April 2023) High-Wealth Individuals Research Project (HWIRP) [Ref 41]; Stats NZ
+    HES & Net Worth Surveys (2025) [Ref 42]; Rashbrooke, M. (2021) [Ref 43].
+  institution: Stats NZ & Inland Revenue (Te Tari Taake)
+  key_finding: Top-wealth effective economic tax rate is 8.9% vs. 22.0% PAYE; Rural households carry 2.74x
+    metro transport/energy subsistence floors; active z_h builders stay net welfare positive up to NZD 50M
+    and break even at NZD 140M.
+  cards_anchored:
+  - B:00
+  - B:07
+  - C:06
+  - C:07
+  - K:05
+  - T:00
+  - T:05
+  - H:03
+- id: REWIRING_AOTEAROA_EXERGY_2026
+  ref_numbers:
+  - 9
+  - 39
+  - 46
+  citation: Rewiring Aotearoa (March 2024 & June 2026 Update) Household & Farm Electrification [Ref 46]; MBIE
+    Energy in NZ 2025 & Dry-Year Review [Ref 39]; Keen, Ayres, & Standish (2019) [Ref 9].
+  institution: Rewiring Aotearoa & MBIE
+  key_finding: Swapping imported oil (~NZD 19.5B/yr at 30% work efficiency) for domestic electric motors/heat
+    pumps/rooftop-and-pond solar (88% efficiency, ~2.93x exergy) saves ~NZD 3,000/yr per home, frees ~NZD 14.5B/yr
+    FX, and cancels the NZD 6.2B LNG terminal.
+  cards_anchored:
+  - C:04
+  - E:01
+  - E:02
+  - E:03
+  - H:08
+  - H:09
+  - P:05
+- id: TE_WAIHANGA_OSTROM_ASSETS_2026
+  ref_numbers:
+  - 29
+  - 36
+  citation: Independent Review into the Feb 2026 Moa Point Wastewater Plant Failure (Sept 2026) & Te Waihanga
+    30-Year National Infrastructure Plan [Ref 36]; MPI SOPI & Florio/Hall Public Asset Audits [Ref 29].
+  institution: Te Waihanga & Crown Infrastructure Review
+  key_finding: Ring-fencing 50% of post-breakeven surpluses at a 1.65x–1.7x public-capital multiplier cuts
+    shock damage 75%; Ostrom public turnaround (+NZD 93B NPV) beats NZD 50B infrastructure fire-sale (-NZD
+    83B NPV) by +NZD 176.4B.
+  cards_anchored:
+  - B:15
+  - C:01
+  - C:03
+  - C:09
+  - K:03
+- id: WARING_JBWERE_ATKINSON_2026
+  ref_numbers:
+  - 28
+  - 30
+  - 47
+  - 58
+  citation: 'Waring, M. (1988/1999) Counting for Nothing [Ref 47]; JBWere NZ For-Purpose Sector Report (2026:
+    79,000 volunteer FTEs) [Ref 30]; Gronau (1977) [Ref 28]; Atkinson (2005) & Baumol (1967) [Ref 58].'
+  institution: AUT / JBWere New Zealand / Stats NZ Time Use
+  key_finding: Three-Tier National-Accounts Scorecard distinguishes Tier 1 market GDP (Y_SNA) from Tier 2 Atkinson–Waring
+    Inclusive Product (Y_AW, valuing unpaid whānau + 79,000 volunteer FTEs and deducting defensive remediation
+    -Y_{G,k}^{rem}) and Tier 3 CE%, while prevention releases ~65,000 skilled FTEs inside Sector 4A.
+  cards_anchored:
+  - B:10
+  - E:01
+  - K:09
+  - N:08
+  - N:09
+  - T:03
+  - H:05
+- id: COMCOM_CEFS_FOOD_MEDICINE_2026
+  ref_numbers:
+  - 49
+  - 56
+  citation: Duffy (2026) & NZ Commerce Commission Market Studies (Groceries, Building Supplies, Banking, 2022–2025)
+    [Ref 49]; Cosco et al., Bloom et al., & Sanford / NC State CEFS (Farm-to-ECE, GrowingChange, LFPI 1.60x–2.16x)
+    [Ref 56].
+  institution: NZ Commerce Commission & NC State Center for Environmental Farming Systems
+  key_finding: Breaking M_olig = [1.08, 1.07, 1.05, 1.04] cartel/monopsony wedges while anchoring school/hospital
+    kitchens in regional food hubs boosts child vegetable intake +24%–33%, hits 92% youth non-recidivism, generates
+    1.60x–2.16x local multipliers, and retires 85% of SS1 T_k cushions (-0.64 pp PAYE cut).
+  cards_anchored:
+  - B:02
+  - B:04
+  - C:08
+  - C:09
+  - C:10
+  - K:03
+  - K:06
+  - T:06
+  - H:08
+- id: SRC:BERENTSON_SHAW_EDUFI_TINZ
+  ref_numbers:
+  - 44
+  - 45
+  citation: Berentson-Shaw, J. (2018) A Matter of Fact (BWB) & EDUFI Monilukutaito (2024) [Ref 45]; OAG 'New
+    Zealand's Integrity Inheritance' & TI-NZ CPI (2026) [Ref 44].
+  institution: Bridget Williams Books, Finnish National Agency for Education, & Office of the Auditor-General
+  key_finding: 'Values-based causal metaphors + Finnish multiliteracy (Monilukutaito, #1 European Media Literacy
+    Index 2017–2026) inoculate against disinformation drag (T:01) and reverse NZ''s CPI trust slide (96 ->
+    88 -> 81) to S_t = 126.0.'
+  cards_anchored:
+  - B:16
+  - C:02
+  - C:05
+  - K:02
+  - T:01
+- id: NZ_DEFENCE_CAPABILITY_2025
+  ref_numbers:
+  - 59
+  citation: Ministry of Defence & NZDF (April 2025) 2025 Defence Capability Plan (+NZD 12B 4-yr uplift; path
+    toward >2%–3% GDP, high import-propensity Sector 5 procurement) [Ref 59].
+  institution: New Zealand Ministry of Defence
+  key_finding: Lifting defence from ~1.2% to 3.0% GDP (+NZD 8.0B/yr, 55%–70% import content, 0x domestic human-capital
+    return) crushes SS0 (-21.69% CE, 200% debt) but is carried cleanly on SS2 hydrofoils (+21.18% CE pre-NDC,
+    31.5% debt) via ~NZD 14.5B/yr clean-exergy FX savings.
+  cards_anchored:
+  - B:14
+  - E:03
+  - K:07
+  - H:09
+  - P:06
 nobel_and_theoretical_literature:
-  - id: "COASE_1991"
-    citation: "Coase, R. H. (1937) 'The Nature of the Firm'; (1960) 'The Problem of Social Cost'. Nobel Prize in Economic Sciences (1991)."
-    cards_anchored: ["N:01", "H:01", "H:03"]
-
-  - id: "HECKMAN_2000"
-    citation: "Cunha, F., Heckman, J. J., & Schennach, S. M. (2010) 'Estimating the Technology of Cognitive and Noncognitive Skill Formation', Econometrica; Lee, S. Y., & Seshadri, A. (2019) JPE. Nobel Prize (2000)."
-    cards_anchored: ["B:01", "N:02", "H:02"]
-
-  - id: "WILLIAMSON_2009"
-    citation: "Williamson, O. E. (1985) The Economic Institutions of Capitalism; (2009) Nobel Prize Lecture on Transaction Cost Economics."
-    cards_anchored: ["B:07", "N:03", "H:01"]
-
-  - id: "OSTROM_2009"
-    citation: "Ostrom, E. (1990) Governing the Commons; (2009) Nobel Prize Lecture 'Beyond Markets and States: Polycentric Governance of Complex Economic Systems'."
-    cards_anchored: ["B:02", "K:01", "N:04", "H:02"]
-
-  - id: "ROMER_2018"
-    citation: "Romer, P. M. (1990) 'Endogenous Technological Change', JPE. Nobel Prize in Economic Sciences (Oct 2018)."
-    cards_anchored: ["B:03", "K:04", "N:05", "H:03", "H:04"]
-
-  - id: "GUVENEN_2023"
-    citation: "Guvenen, F., Kambourov, G., Kuruscu, B., Ocampo, S., & Chen, D. (2023) 'Use It or Lose It: Efficiency and Redistributional Effects of Wealth Taxation', QJE."
-    cards_anchored: ["B:05", "K:02"]
-
-  - id: "HIRANO_TODA_2025"
-    citation: "Hirano, T., & Toda, A. A. (2025) 'Bubble Necessity Theorem and Land Overvaluation in Unbalanced Growth', JPE / Econometrica."
-    cards_anchored: ["B:05", "T:02", "H:05"]
-
-  - id: "BILAL_KANZIG_2024"
-    citation: "Bilal, A., & Känzig, D. R. (2024) 'The Macroeconomic Impact of Climate Change: Global vs. Local Temperature', NBER Working Paper 32450."
-    key_finding: "+1°C of global temperature rise reduces world GDP by >20% and implies a Social Cost of Carbon exceeding USD 1,200/tCO2e."
-    cards_anchored: ["C:01", "C:04"]
-
-  - id: "KIRKBY_VFI_2025"
-    citation: "Kirkby, R. (2025/2026) VFI Toolkit for MATLAB (vfitoolkit.com) & Incomplete-Markets Precautionary Savings / Housing Portfolio Models."
-    cards_anchored: ["B:08", "E:02", "K:04"]
-
-  - id: "MURPHY_SHLEIFER_VISHNY_1991"
-    citation: "Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991) 'The Allocation of Talent: Implications for Growth', Quarterly Journal of Economics, 106(2), 503–530."
-    key_finding: >
-      When a country has large existing wealth but slow growth, rent-seeking (fighting over existing
-      wealth via speculation, litigation, and lobbying) outcompetes productive entrepreneurship for the
-      ablest talent, permanently lowering the growth rate. Doubling engineering share raises GDP per
-      capita growth by +0.5% to +1.25%/yr, while doubling law/rent-seeking share cuts growth by -0.3%
-      to -0.78%/yr; engineering talent strongly co-moves with primary schooling (+1.02) and physical
-      investment (+0.432).
-    cards_anchored: ["B:03", "B:05", "T:04", "K:02", "H:03"]
-
+- id: ARROW_1972
+  citation: Arrow, K. J. (1962) 'The Economic Implications of Learning by Doing', Review of Economic Studies;
+    Christiano, Eichenbaum, & Evans (2005). Nobel Prize in Economic Sciences (1972).
+  cards_anchored:
+  - B:13
+  - K:01
+  - N:01
+  - N:07
+  - T:00
+  - T:04
+  - P:03
+- id: COASE_1991
+  citation: Coase, R. H. (1937) 'The Nature of the Firm', Economica; (1960) 'The Problem of Social Cost', JLE.
+    Nobel Prize in Economic Sciences (1991).
+  cards_anchored:
+  - K:06
+  - N:02
+  - T:04
+  - H:02
+- id: HECKMAN_2000
+  ref_numbers:
+  - 11
+  - 12
+  - 15
+  citation: Cunha, F., Heckman, J. J., & Schennach, S. M. (2010) Econometrica [Ref 11]; Lee & Seshadri (2019)
+    JPE [Ref 12]; Bailey et al. (2017) [Ref 15]. Nobel Prize in Economic Sciences (2000).
+  cards_anchored:
+  - B:01
+  - B:03
+  - E:04
+  - E:05
+  - K:01
+  - N:03
+  - N:09
+  - T:07
+  - H:10
+- id: WILLIAMSON_2009
+  citation: Williamson, O. E. (1985) The Economic Institutions of Capitalism; (2009) Nobel Prize Lecture 'Transaction
+    Cost Economics'.
+  cards_anchored:
+  - B:09
+  - K:07
+  - N:04
+  - H:01
+- id: OSTROM_2009
+  citation: 'Ostrom, E. (1990) Governing the Commons; (2010) AER Nobel Prize Lecture ''Beyond Markets and States:
+    Polycentric Governance of Complex Economic Systems''.'
+  cards_anchored:
+  - C:03
+  - C:04
+  - K:10
+  - N:05
+  - H:02
+  - P:02
+- id: ROMER_2018
+  citation: Romer, P. M. (1990) 'Endogenous Technological Change', Journal of Political Economy. Nobel Prize
+    in Economic Sciences (2018).
+  cards_anchored:
+  - K:05
+  - N:06
+  - N:09
+  - P:04
+- id: TOPKIS_HEISENBERG_WEDGES
+  citation: Topkis, D. M. (1998) Supermodularity and Complementarity; Heisenberg, Born, & Jordan (1925) Matrix
+    Mechanics & Baker–Campbell–Hausdorff Non-Commutativity.
+  cards_anchored:
+  - B:10
+  - B:12
+  - K:08
+  - K:10
+  - H:10
+- id: KEEN_AYRES_SOE_EXERGY
+  ref_numbers:
+  - 9
+  - 10
+  citation: Keen, S., Ayres, R. U., & Standish, R. (2019) Ecological Economics [Ref 9]; Hassler, Krusell, &
+    Olovsson (2021) JPE & Schmitt-Grohé & Uribe (2003) JIE [Ref 10].
+  cards_anchored:
+  - B:10
+  - E:01
+  - E:02
+  - E:03
+  - K:08
+  - N:09
+  - H:09
+- id: GUVENEN_2023
+  ref_numbers:
+  - 2
+  citation: 'Guvenen, F., Kambourov, G., Kuruscu, B., Ocampo, S., & Chen, D. (2023) ''Use It or Lose It: Efficiency
+    and Redistributional Effects of Wealth Taxation'', QJE [Ref 2].'
+  cards_anchored:
+  - B:08
+  - E:03
+  - K:05
+  - N:06
+  - N:09
+  - T:02
+  - T:05
+  - P:04
+- id: HIRANO_TODA_2025
+  ref_numbers:
+  - 3
+  citation: Hirano, T., & Toda, A. A. (2025) 'Bubble Necessity Theorem', Journal of Political Economy Macroeconomics
+    [Ref 3].
+  cards_anchored:
+  - B:08
+  - T:09
+  - T:10
+  - H:07
+  - P:03
+  - P:07
+- id: MURPHY_SHLEIFER_VISHNY_1991
+  ref_numbers:
+  - 7
+  citation: 'Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991) ''The Allocation of Talent: Implications for
+    Growth'', QJE [Ref 7].'
+  cards_anchored:
+  - K:05
+  - N:06
+  - T:05
+  - P:04
+- id: KIRKBY_VFI_2026
+  citation: Kirkby, R. (2017–2026) VFI Toolkit for MATLAB/GPU (vfitoolkit.com) & Mixed-Horizon Incomplete-Markets
+    Solvers.
+  cards_anchored:
+  - B:10
+  - K:08
+  - P:08
 international_historical_precedents:
-  - id: "SCOTLAND_2026"
-    citation: "Scottish Government (March 2026) Bringing Hope, Building Futures: Tackling Child Poverty Delivery Plan 2026–2031; Joseph Rowntree Foundation (Oct 2026) Poverty in Scotland 2026; MCR Pathways (2025) Annual Impact Report."
-    cards_anchored: ["T:01", "H:05"]
-
-  - id: "KOI_TU_FINLAND_MLI_2026"
-    citation: "Open Society Institute (2017–2026) European Media Literacy Index (Finland #1); Gluckman, P., & Sridhar, H. (2023–2026) Koi Tū: The Centre for Informed Futures Briefings on Disinformation & Social Cohesion; Zak, P. J., & Knack, S. (2001) 'Trust and Growth', Economic Journal."
-    key_finding: >
-      Finland ranks #1 in Europe for disinformation resilience (2017–2026) by embedding multiliteracy
-      (monilukutaito) and critical thinking into basic education (45% of index weight) on top of low
-      early childhood poverty (4.6%). Conversely, unbuffered early executive-function deficits and
-      economic inequality feed disinformation polarization, costing 0.4%–0.5% of GDP (~NZD 2.0B/yr)
-      and depressing institutional trust to 40% in NZ.
-    cards_anchored: ["B:01", "B:02", "T:05", "C:02", "C:06"]
-
-  - id: "DEMING_JAPAN_1950"
-    citation: "Deming, W. E. (Aug 1950) Mt. Hakone JUSE Lecture to Japanese Top Management; (1986) Out of the Crisis; (1993) The New Economics."
-    cards_anchored: ["T:02", "H:05"]
+- id: SCOTLAND_2026
+  ref_numbers:
+  - 51
+  - 52
+  citation: Scottish Government (March 2026) Tackling Child Poverty Delivery Plan 2026–2031; JRF (Oct 2026)
+    Poverty in Scotland 2026; MCR Pathways (2025) [Ref 51]; Corlet Walker et al. WEGo [Ref 52].
+  cards_anchored:
+  - T:08
+  - P:07
+- id: SOUTH_KOREA_DOEPKE_FERTILITY
+  ref_numbers:
+  - 21
+  - 22
+  - 53
+  citation: 'Doepke, Hannusch, Kindermann, & Tertilt (2022) Handbook of Macroeconomics [Ref 21]; Cao & Li (2022)
+    [Ref 22]; Baker, Gruber, & Milligan (2008: Quebec ECE) [Ref 53].'
+  cards_anchored:
+  - K:04
+  - N:08
+  - T:02
+  - T:09
+  - P:07
+- id: DEMING_JAPAN_1950
+  ref_numbers:
+  - 54
+  citation: Deming, W. E. (Aug 1950) Mt. Hakone JUSE Lecture; (1986) Out of the Crisis; (1993) The New Economics;
+    Tiemann, M. (2023) [Ref 54].
+  cards_anchored:
+  - N:07
+  - T:10
+- id: ICELAND_PLANET_YOUTH_JOINER
+  ref_numbers:
+  - 55
+  citation: 'Kristjansson, A. L., et al. (2020) Icelandic Prevention Model (Planet Youth: 42% -> 5% adolescent
+    behavioral morbidity) [Ref 55]; Putnam (2000) & Holt-Lunstad (2010) Joiner Effect (Doc 1E).'
+  cards_anchored:
+  - B:03
+  - B:04
+  - C:04
+  - K:02
+  - P:02
+numbered_reference_registry:
+  1: Ferriere, A., Grübener, P., Navarro, G., & Vardishvili, O. (2025). 'On the Optimal Design of Transfers
+    and Income-Tax Progressivity.' JPE Macroeconomics.
+  2: 'Guvenen, F., Kambourov, G., Kuruscu, B., Ocampo, S., & Chen, D. (2023). ''Use It or Lose It: Efficiency
+    and Redistributional Effects of Wealth Taxation.'' QJE, 138(2), 835-894.'
+  3: Hirano, T., & Toda, A. A. (2025). 'Bubble Necessity Theorem.' Journal of Political Economy Macroeconomics,
+    3(1), 112-145.
+  4: Kiyotaki, N., Michaelides, A., & Nikolov, K. (2024). 'Housing, Credit, and Liquidity Traps in Incomplete-Market
+    OLG Economies.' Review of Economic Dynamics.
+  5: De Nardi, M. (2004). 'Wealth Inequality and Intergenerational Links.' Review of Economic Studies, 71(3),
+    743-768.
+  6: 'Piketty, T., & Saez, E. (2013). ''A Theory of Optimal Inheritance Taxation.'' Econometrica, 81(5), 1851-1886;
+    Piketty, Saez, & Stantcheva (2014) AEJ: Economic Policy.'
+  7: 'Murphy, K. M., Shleifer, A., & Vishny, R. W. (1991). ''The Allocation of Talent: Implications for Growth.''
+    QJE, 106(2), 503-530.'
+  8: 'Straub, L., & Werning, I. (2020). ''Positive Long-Run Capital Taxation: Chamley-Judd Revisited.'' AER,
+    110(1), 86-119; Hope, D., & Limberg, J. (2022) Socio-Economic Review.'
+  9: Keen, S., Ayres, R. U., & Standish, R. (2019). 'A Note on the Role of Energy in Production.' Ecological
+    Economics, 157, 40-46; Ayres, R. U., & Warr, B. (2009). The Economic Growth Engine.
+  10: Hassler, J., Krusell, P., & Olovsson, C. (2021). 'Directed Technical Change as a Response to Natural
+    Resource Scarcity.' JPE, 129(11), 3039-3072; Schmitt-Grohé, S., & Uribe, M. (2003). 'Closing Small Open
+    Economy Models.' JIE, 61(1), 163-185.
+  11: Cunha, F., Heckman, J. J., & Schennach, S. M. (2010). 'Estimating the Technology of Cognitive and Noncognitive
+    Skill Formation.' Econometrica, 78(3), 883-931.
+  12: Lee, S. Y., & Seshadri, A. (2019). 'On the Intergenerational Transmission of Economic Status.' Journal
+    of Political Economy, 127(2), 855-921.
+  13: Fan, X., Seshadri, A., & Taber, C. (2024). 'Estimation of a Life-Cycle Model with Human Capital, Labor
+    Supply, and Retirement.' JPE, 132(4).
+  14: Daruich, D. (2018/2022). 'The Macroeconomic Consequences of Early Childhood Development Policies.' Working
+    Paper & Econometrica (2022).
+  15: Bailey, D., Duncan, G. J., Odgers, C. L., & Yu, W. (2017). 'Persistence and Fadeout in the Impacts of
+    Child and Adolescent Interventions.' Journal of Research on Educational Effectiveness, 10(1), 7-39.
+  16: Caspi, A., Houts, R. M., Belsky, D. W., et al. (2016). 'Childhood Forecasting of a Small Segment of the
+    Population With Large Economic Burden.' Nature Human Behaviour, 1(1), 0005.
+  17: 'Morton, S. M. B., et al. (2020, 2023, 2025). Growing Up in New Zealand: Now We Are Eight / Twelve /
+    Fifteen Longitudinal Cohort Reports. University of Auckland.'
+  18: Gluckman, P. D. (2011) Office of the PMCSA; Graeme Dingle Foundation Stars & Project K Impact Reports
+    (2023-2025); Berryman, M., & Eley, E. (2019) Te Kotahitanga.
+  19: 'Fleming, T., et al. (2020). Youth19 Rangatahi Smart Survey: Mental Health and Wellbeing Report. University
+    of Auckland & Victoria University of Wellington.'
+  20: Green, V. A., et al. (2020) KiVa Anti-Bullying Programme in NZ; Clarkson, T., et al. (2019).
+  21: 'Doepke, M., Hannusch, A., Kindermann, F., & Tertilt, M. (2022). ''The Economics of Fertility: A New
+    Era.'' Handbook of Macroeconomics, Vol. 2.'
+  22: Cao, Q., & Li, M. (2022). 'Present Bias, Maternal Time Constraints, and the Intended-Realized Fertility
+    Gap.' Demographic Economics Working Paper.
+  23: 'Labrousse, C., & Perdereau, Y. (2025). ''Geography versus Income: The Heterogeneous Effects of Carbon
+    Taxation.'' Paris School of Economics.'
+  24: 'Stillman, S., & Maré, D. C. (2008). ''Housing Markets and Migration: Evidence from New Zealand.'' Motu
+    Working Paper 08-06.'
+  25: Greenaway-McGrevy, R., & Phillips, P. C. B. (2023) Auckland Upzoning; Poot, J. (2009) Trans-Tasman Migration;
+    Bushnell, P., & Choy, W. K. (2001) Treasury WP 01/22.
+  26: Rupert, P., & Zanella, G. (2018) Journal of Labor Economics; Compton, J., & Pollak, R. A. (2014) 'Family
+    Proximity, Childcare, and Women's Labor Force Attachment', JUE.
+  27: Coe, N. B., & Van Houtven, C. H. (2009) Journal of Health Economics; Case, A., & Deaton, A. (2020) Deaths
+    of Despair and the Future of Capitalism.
+  28: Gronau, R. (1977). 'Leisure, Home Production, and Work—The Theory of the Allocation of Time Revisited.'
+    JPE, 85(6), 1099-1123; Becker, G. S. (1965) EJ; Aguiar, M., & Hurst, E. (2007) QJE.
+  29: Ministry for Primary Industries (2025) SOPI & Fit for a Better World; Florio, M. (2004/2013) Network
+    Industries and Social Welfare; Hall, D., Lobina, E., & Terhorst, P. (2013).
+  30: 'JBWere New Zealand (2026). The New Zealand For-Purpose Sector Report: Sizing the Uncounted Civic & Philanthropic
+    Commons (115,000 entities; 185,000 paid staff; 79,000 volunteer FTEs; ~8.5% True GDP).'
+  31: 'New Zealand Treasury (2025). He Tirohanga Mokopuna 2025: The Treasury''s Combined Statement on the Long-Term
+    Fiscal Position and Long-Term Insights Briefing.'
+  32: New Zealand Treasury (4 Feb 2026). Official Information Act Response OIA 20250878 ('Contains no data
+    at the micro level') & Analytical Note AN 26/01.
+  33: New Zealand Treasury (Nov 2025). CBAx Tool User Guidance and Spreadsheet Model (2025 Update) & Guide
+    to Social Cost Benefit Analysis.
+  34: New Zealand Treasury (Dec 2024 / March 2025). Treasury Circular 2024/15 (2.0% Real SRTP / 8.0% Sensitivity)
+    & Official Information Act Release OIA 20250126.
+  35: Accident Compensation Corporation [ACC] (Nov 2025). Financial Condition Report 2024/25 (NZD 63.6B PBE
+    IFRS 17 Outstanding Claims Liability Valuation & OCL Releases).
+  36: Independent Review into the Feb 2026 Moa Point Wastewater Plant Failure (Sept 2026); New Zealand Infrastructure
+    Commission / Te Waihanga (2025/2026) 30-Year National Infrastructure Plan.
+  37: Barnardos Aotearoa (2026) Te Korowai Mokopuna SROI Audit; MartinJenkins (2020) Financial Cost of Abuse
+    in Care; Oranga Tamariki Annual Reports.
+  38: Social Investment Agency [SIA] & ACC (2025). Integrated Sensitive Claims (ISSC) and Loss of Potential
+    Earnings (LOPE) Longitudinal Cost Briefing.
+  39: Ministry of Business, Innovation and Employment [MBIE] (2025). Energy in New Zealand 2025 & Electricity
+    Market Performance Review (Dry-Year Hydro Risk & Imported LNG Assessment).
+  40: Reserve Bank of New Zealand [RBNZ] (2025). Financial Stability Report & Loan-to-Value Ratio (LVR) Macroprudential
+    Policy Documentation.
+  41: Inland Revenue Department [Te Tari Taake] (April 2023). High-Wealth Individuals Research Project (HWIRP)
+    Final Report (8.9% effective economic tax rate on top wealth).
+  42: Stats NZ (2025). Household Economic Survey (HES), Household Net Worth Statistics, Child Poverty Statistics
+    (Year Ended June 2024/2025), & Subnational Population Estimates.
+  43: 'Rashbrooke, M. (2021). Too Much Money: How Wealth Disparities Are Unbalancing Aotearoa New Zealand.
+    Bridget Williams Books.'
+  44: Controller and Auditor-General [OAG] (Feb 2026) New Zealand's Integrity Inheritance; Transparency International
+    NZ [TI-NZ] (2026) National Integrity System Gap Analysis & CPI.
+  45: 'Berentson-Shaw, J. (2018) A Matter of Fact: Talking Truth in a Post-Truth World (BWB); Finnish National
+    Agency for Education [EDUFI] (2024) Monilukutaito.'
+  46: Rewiring Aotearoa (March 2024 & June 2026 Update). Electric Homes Technical Report & Investing in Tomorrow
+    (Ellison, Griffith, et al.).
+  47: 'Waring, M. (1988; 2nd ed. 1999). Counting for Nothing: What Men Value and What Women Are Worth (If Women
+    Counted). Bridget Williams Books / University of Toronto Press.'
+  48: Perry, B. / Ministry of Social Development (2025) Material Wellbeing in New Zealand & Household Incomes
+    Report; Welfare Expert Advisory Group [WEAG] (2019) Whakamana Tāngata.
+  49: Duffy, G. (2026) in Facing Up to Our Future; NZ Commerce Commission Market Studies into Retail Grocery,
+    Residential Building Supplies, and Personal Banking (2022-2025).
+  50: Reserved.
+  51: Scottish Government (March 2026) Tackling Child Poverty Delivery Plan 2026-2031; Joseph Rowntree Foundation
+    [JRF] (Oct 2026) Poverty in Scotland 2026; MCR Pathways (2025).
+  52: Corlet Walker, C., Druckman, A., & Jackson, T. (2021/2024) Welfare Systems Without Economic Growth &
+    Wellbeing Economy Governments (WEGo) Policy Synthesis.
+  53: Baker, M., Gruber, J., & Milligan, K. (2008). 'Universal Childcare, Maternal Labor Supply, and Family
+    Well-Being.' JPE, 116(4), 709-745 (Quebec ECE Fiscal Self-Financing).
+  54: Deming, W. E. (1950) Mt. Hakone JUSE Lecture; (1986) Out of the Crisis; (1993) The New Economics; Tiemann,
+    M. (2023) Historical Synthesis of Deming's 1950-1989 Japanese Trajectory.
+  55: Kristjansson, A. L., Mann, M. J., Sigfusson, J., Thorisdottir, I. E., Allegrante, J. P., & Sigfusdottir,
+    I. D. (2020). 'Implementing the Icelandic Prevention Model.' Health Promotion Practice, 21(1), 62-69.
+  56: Cosco, N. G., Moore, R. C., et al. (2022) Farm-to-ECE; Bloom, J. D., et al. / NC State CEFS (2022/2026)
+    Local Food Purchasing Incentive (1.60x-2.16x); Sanford, S. / GrowingChange (92% non-recidivism).
+  57: Reserved.
+  58: 'Atkinson, A. B. (2005) Atkinson Review: Measurement of Government Output and Productivity for the National
+    Accounts; Stiglitz, Sen, & Fitoussi (2009); Baumol, W. J. (1967) AER (''Macroeconomics of Unbalanced Growth'').'
+  59: Ministry of Defence & New Zealand Defence Force [NZDF] (April 2025). 2025 Defence Capability Plan (NZD
+    12B 4-yr uplift; path from ~1% toward >2%-3% of GDP, high import-propensity Sector 5 procurement).
+  60: RESERVED — Empirical Slot for Future Module Extensions.
+references:
+  Ref 60:
+    authors: Topkis (1998); Milgrom & Roberts (1990); Milgrom (2004); Cramton, Shoham, & Steinberg (2006)
+    nobel: 2020 Sveriges Riksbank Prize in Economic Sciences (Paul Milgrom & Robert Wilson)
+    script: Compute_ThickVsThin_Auction_ABM.m (Table_Doc2T_BacklogHomotopy_1972to2026)
+    cards:
+    - N:07
+    - K:08
+    - B:12
+    - E:04
+    - P:02

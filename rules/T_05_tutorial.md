@@ -1,6 +1,6 @@
 # Card Design Tutorial: `T:05` — Disinformation & Polarisation Drag
 
-Finland’s cognitive defense architecture—built in direct response to living alongside a 1,340 km border with Russia—provides the empirical and theoretical link showing why **disinformation is not just a "media issue," but a macroeconomic transaction-cost tax (`T`) that preys on childhood stunting and economic exclusion.**
+Finland’s cognitive defence architecture—built in direct response to living alongside a 1,340 km border with Russia—provides the empirical and theoretical link showing why **disinformation is not just a "media issue," but a macroeconomic transaction-cost tax (`T`) that preys on childhood stunting and economic exclusion.**
 
 Below is the synthesis of the **Empirical Evidence & Economic Theory**, how **Finland vs. New Zealand** compare on the disinformation front, how this maps onto our **`SS0 -> SS1 -> SS2` transition plan** (costs vs. avoided costs), and the resulting card specification for **`T:05 — Disinformation & Outrage Drag (The Polarisation Tax)`**.
 
@@ -48,7 +48,7 @@ To anchor a card in *Foils & Founders* without hand-waving, we combine three emp
 The most remarkable feature of adding **Finnish-style Disinformation Inoculation** to our transition plan is that **it requires almost zero additional fiscal outlay beyond the `NZD 9.19B` 5-year envelope already budgeted for `B:01` and `B:02`**:
 
 1. **Direct Program Cost (Inside the Existing `SS1` Envelope):**
-   * **Gate 1 Socio-Emotional Executive Function (`B:01`):** **Already funded** in our `NZD 13.0k/yr` early childhood wraparound (which Koi Tū explicitly identifies as the #1 neuro-developmental defense against adult radicalization and disinformation susceptibility).
+   * **Gate 1 Socio-Emotional Executive Function (`B:01`):** **Already funded** in our `NZD 13.0k/yr` early childhood wraparound (which Koi Tū explicitly identifies as the #1 neuro-developmental defence against adult radicalization and disinformation susceptibility).
    * **Gate 2 Finnish *Monilukutaito* & *Tuakana–Teina* Civic/Media Inoculation (`B:02` + `C:02`):** Integrating Finland’s open-source *Faktabaari* (FactBar) / phenomenon-based critical-thinking modules into our existing Ages 12–14 school & peer-mentoring gate (`B:02`, budgeted at `NZD 12.1k/yr`) costs less than **NZD 15M–25M/yr nationally** (~NZD 30 per student/yr in teacher training and curriculum materials)—easily absorbed inside the existing `G_ECE,2` educational quality allocation (and completely self-funded by the **NZD 350M/yr** saved from electrifying all 2,500 schools and 800 marae in `E:02`!).
 2. **Avoided Costs & Macroeconomic Dividends (`SS1 -> SS2`):**
    * **Avoided Direct Disinformation & Polarisation Drag (`+NZD 1.6B to 2.2B/yr`):** Prevents the 0.4%–0.5% GDP drag from public-health crises (vaccine/pandemic resistance), infrastructure sabotage/delays (grid, water, and climate armor `C:04`), and policing/security spikes (like the 2022 Parliament occupation and rising anti-social behavior in `Exit 4`).
